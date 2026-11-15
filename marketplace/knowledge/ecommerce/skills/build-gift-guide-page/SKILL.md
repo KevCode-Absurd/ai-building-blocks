@@ -1,6 +1,6 @@
 ---
 name: build-gift-guide-page
-description: "Builds a gift guide page for one gifting moment, organised by recipient and by budget: a short intro, 4 to 8 recipient sections with 3 to 6 picks each, a budget filter in real price bands, copy for every pick written for the giver, gift extras (wrap, note, gift receipt), and delivery cutoff dates by region calculated from the store's own dispatch and courier data. Picks are gated on stock and gross profit, and every cutoff has a buffer the store can keep. Use before Diwali, Raksha Bandhan, Christmas, Black Friday, Valentine's or Mother's Day, or for an evergreen gifting page."
+description: "Builds a gift guide page for one gifting moment, organised by recipient and by budget: a short intro, 4 to 8 recipient sections with 3 to 6 picks each, a budget filter in real price bands, copy for every pick written for the giver, gift extras (wrap, note, gift receipt), and delivery cutoff dates by region calculated from the store's own dispatch and courier data. Picks are gated on stock and gross profit, and every cutoff has a buffer the store can keep. Use before Christmas and the holidays, Black Friday and Cyber Monday, Valentine's, Mother's or Father's Day, Lunar New Year, Eid or a local festival, or for an evergreen gifting page."
 ---
 
 # Gift guide page
@@ -29,7 +29,7 @@ Required (read access, level 1):
 1. **Shopify products export** with price, compare-at price, inventory by variant and product type.
 2. **Gross profit per order** by product (`build-sku-profit-sheet`).
 3. **Last year's gifting-season orders** (same weeks): product, units, order date, gift note used or not, billing versus shipping name.
-4. **Dispatch and delivery data, last 90 days**: order date, dispatch date, delivery date, courier, destination region or pincode zone, shipping method. From the shipping app or courier aggregator export.
+4. **Dispatch and delivery data, last 90 days**: order date, dispatch date, delivery date, courier, destination region or postcode zone, shipping method. From the shipping app or courier aggregator export.
 5. **Stock plan**: what is on hand and what arrives before the season, with dates.
 
 Optional: gift wrap and note costs, reviews that mention gifting, last year's gift guide results.
@@ -45,17 +45,17 @@ If delivery data is missing, do not publish cutoff dates; publish "order by" dat
 
 ## Steps
 
-1. **Choose the recipients.** From last year's gift orders, notes and reviews, list who people buy for (partner, mother, father, sibling, friend, colleague, new parent, host). Keep 4 to 8 groups with real demand. For India add festival-specific groups (brother for Raksha Bandhan, family hampers for Diwali).
-2. **Set the budget bands.** Base bands on the store's real price spread and common gift amounts: for example under 500, 500 to 1,000, 1,000 to 2,500, over 2,500 rupees, or under $25, $25 to $50, $50 to $100, over $100. Every band needs at least 3 picks.
+1. **Choose the recipients.** From last year's gift orders, notes and reviews, list who people buy for (partner, mother, father, sibling, friend, colleague, new parent, host). Keep 4 to 8 groups with real demand. Add festival-specific groups where the store's markets have them (family hampers for Christmas or Eid, teachers at the end of the school year).
+2. **Set the budget bands.** Base bands on the store's real price spread and common gift amounts: for example under $25, $25 to $50, $50 to $100, over $100, or the same steps in the store's own currency (under 20, 20 to 50, 50 to 100, over 100 pounds or euros). Every band needs at least 3 picks.
 3. **Pick the products.** For each recipient, 3 to 6 picks across bands. Prefer products that ship well and suit giving (looks good unwrapped, no sizing risk, or with an easy exchange) [PRD-0013]. Add one ready bundle per main recipient if the shipping saving funds it. Record stock, profit and why it fits.
 4. **Write pick copy for the giver.** One headline line about the recipient's reaction or use ("For the dad who grills every Sunday"), one line about what it is, price, and a gift cue (arrives wrapped, easy exchange, includes a note). The giver is not the user, so write about why the recipient will like it and why it is safe to give. Use a real review that mentions gifting when one exists.
 5. **Write the intro.** Two or three sentences: who the guide helps, how it is organised, and the first cutoff date. Then a jump bar of recipient and budget links.
-6. **Calculate cutoffs.** For each region or zone and shipping method: cutoff = last delivery date wanted minus (processing days at peak + transit days at the 90th percentile from the store's data + 1 to 2 buffer days). Use the 90th percentile, not the average, so most orders arrive. Showing a specific delivery date instead of a vague range can lift conversion, but only when the estimate is padded and usually met [CXP-0010]. Add courier holidays and peak delays. In India set zones by metro, tier 2 and remote pincodes, and note COD and prepaid cutoffs separately if they differ.
+6. **Calculate cutoffs.** For each region or zone and shipping method: cutoff = last delivery date wanted minus (processing days at peak + transit days at the 90th percentile from the store's data + 1 to 2 buffer days). Use the 90th percentile, not the average, so most orders arrive. Showing a specific delivery date instead of a vague range can lift conversion, but only when the estimate is padded and usually met [CXP-0010]. Add courier holidays and peak delays. Set zones by major cities, other areas and remote postcodes (and by country for cross-border orders), and note pay-on-delivery and prepaid cutoffs separately if they differ.
 7. **Write gift extras.** Gift wrap (price or free), gift note (character limit), gift receipt or price-free invoice, ship to a different address, and exchange window after the festival. A gift worth listing for sale has a real value [OFF-0007]; only offer extras the warehouse can do at peak.
 8. **Plan the after-cutoff path.** When cutoffs pass: switch to e-gift cards, express shipping where real, or "arrives after" wording. Prepare the delay message with the cancel option before the peak (`delay-and-stockout-customer-messages`).
 9. **Write the search title.** "[Recipient] gift ideas under [amount]" style titles and sub-collections for searched gift terms help the page rank [SEO-0012]; keep it on the main domain.
 10. **Plan the stock watch.** During the season, check picks daily; replace any sold-out pick within one day. Hold a ready replacement for each section. Pre-build any sale ladder rung linked to the guide in advance [OFF-0068].
-11. **India and US notes.** India: GST-inclusive prices, COD availability per pick, Hindi or regional festival greetings only if the brand voice uses them, and avoid promising delivery to remote pincodes in festival weeks without data. US: holiday cutoffs per carrier and method, and a clear note when the last ground date has passed.
+11. **Market notes.** All markets: prices shown the way the market expects (tax-inclusive in the UK, EU and Australia), payment options per pick, festival greetings in the languages your buyers use only if the brand voice uses them, and no promise of delivery to remote postcodes in peak weeks without data. US: holiday cutoffs per carrier and method, and a clear note when the last ground date has passed. Cross-border: show the customs cutoff and who pays duties.
 
 ## Checks before you hand it over
 
@@ -80,7 +80,7 @@ If delivery data is missing, do not publish cutoff dates; publish "order by" dat
 
 **Cutoff table:**
 
-| Region or zone | Method | Processing days at peak | Transit p90 days | Buffer | Order by | Payment note (COD or prepaid) |
+| Region or zone | Method | Processing days at peak | Transit p90 days | Buffer | Order by | Payment note (pay on delivery or prepaid) |
 |---|---|---|---|---|---|---|
 
 **Assumptions:** extras pricing and packing capacity, where not given, as the figure used, one line each.
@@ -103,4 +103,10 @@ If delivery data is missing, do not publish cutoff dates; publish "order by" dat
 - SEO-0012: sub-collections for searched variants.
 - OFF-0068: pre-build sale ladders and pages before peak.
 
-What makes this skill ours: delivery cutoffs come from the store's own 90th percentile dispatch and transit data with a buffer, not courier promises; every pick is gated on season stock and profit after wrap; recipients come from real gift orders; and India's festival calendar, zones and COD cutoffs are built in.
+What makes this skill ours: delivery cutoffs come from the store's own 90th percentile dispatch and transit data with a buffer, not courier promises; every pick is gated on season stock and profit after wrap; recipients come from real gift orders; and each market's peak calendar, zones and payment cutoffs are built in.
+
+## Selling in India
+
+- Plan for Diwali and Raksha Bandhan, with groups such as brother for Raksha Bandhan and family hampers for Diwali.
+- Rupee bands such as under 500, 500 to 1,000, 1,000 to 2,500 and over 2,500 work for many stores.
+- Set zones by metro, tier 2 and remote pincodes; note COD and prepaid cutoffs separately; show GST-inclusive prices.

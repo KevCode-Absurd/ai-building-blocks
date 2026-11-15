@@ -102,6 +102,18 @@ Move money from Shrink to Grow inside the monthly cash ceiling. Limits (practiti
 
 Each move states the numbers it rests on; no forecast of lift is promised.
 
+### 7. Strategy by conversions, the ROAS trap and the five-gate scale check
+
+**Pick the strategy by monthly conversions per campaign**, so the same data always gives the same verdict: under 15, Maximize Clicks with a CPC cap while traffic quality is fixed; 15 to 29, Maximize Conversion Value; 30 or more with steady ROAS, Target ROAS set 10 to 15% below actual [GAD-0007]. Value bidding is the default for stores, because conversion bidding chases the cheapest orders, such as a cheap tee over a jacket [GAD-6157].
+
+- **Explore versus restrict.** Maximize Conversion Value keeps testing new searches and people; a Target ROAS close to actual explores almost nothing [GAD-6158]. When a campaign stalls on a tight target, rotate it back to Maximize Conversion Value for a spell.
+- **The ROAS trap.** Raising Target ROAS on a cold campaign shrinks bids to warm buyers, so reported ROAS rises while new-customer sales fall [GAD-6166]. Flag any campaign where the target went up and new-customer orders went down.
+- **Overspend override.** If a campaign hits its daily budget on 8 of the last 14 days while ROAS sits below target, set a stepped Target ROAS even under 30 conversions, but only at 15 or more.
+- **Feeder pair** for mid to large accounts: Standard Shopping on a very low target for cold reach beside a high-target Performance Max, judged together on store revenue [GAD-0047] [GAD-6145]. The low target never sits below break-even ROAS.
+- **Bid steps** of 5 to 10%, never above 15%, every 5 to 7 days [GAD-0012].
+
+**Five gates before raising Google spend** (go only if every checkable gate passes): feed clean (no disapproved best sellers); purchase tracking trusted, enhanced conversions on; brand and non-brand in separate campaigns and reports; creative fresh where assets serve (Performance Max asset groups with about 15 or more images and 5 or more videos, refreshed every 4 to 6 weeks, a rule of thumb; feed-only campaigns skip this gate); bid maturity (about 50 conversions a month before a target). Small accounts check the first three and mark the rest not checked, not failed. ROAS usually falls as spend rises; a 4x on a big budget can earn more profit than 6x on a small one, so long as it stays above break-even.
+
 ## Checks before you hand it over
 
 - Every target shows its rule, break-even ROAS and the value basis.
@@ -111,6 +123,8 @@ Each move states the numbers it rests on; no forecast of lift is promised.
 - The change limits in step 6 hold for every campaign.
 - Budgets before and after add up.
 - Nothing is changed in the account; the client approves each line. At level 3, apply only approved lines and log each one.
+- Each campaign's strategy matches its monthly conversion band, or the exception is written.
+- Any raised target is checked against new-customer orders for the ROAS trap.
 
 ## Output
 
@@ -132,6 +146,7 @@ Each move states the numbers it rests on; no forecast of lift is promised.
 - **Raising bids to fix rank lost to quality.** Step 2 routes it to Quality Score.
 - **Adding budget to a losing campaign** [GAD-0032], or **scaling on average cost** [ADC-0049].
 - **Budgets that break the cash limit.** Gate 2 fits the monthly maximum.
+- **Raising Target ROAS to look efficient.** It narrows reach to warm buyers [GAD-6166].
 
 ## Sources
 
@@ -146,5 +161,11 @@ Each move states the numbers it rests on; no forecast of lift is promised.
 - GAD-0042, MEA-0016, MEA-0017: goals, values and auto-apply.
 - GAD-0053: a target above actual starts a spiral.
 - MEA-0024, MEA-0026: first-order and time-bound profit targets.
+- GAD-0012: bid steps 5 to 10%, never over 15%.
+- GAD-0047: feeder structure.
+- GAD-6145: low-target feeder beside high-target PMax.
+- GAD-6157: value bidding in e-commerce.
+- GAD-6158: Maximize Conversion Value explores, tight targets do not.
+- GAD-6166: a raised target shrinks bids to warm buyers.
 
 What makes this skill ours: every target is built from gross profit per purchase with a named rule; budgets fit the client's cash ceiling at Google's monthly maximum; increases must pass a marginal-cost check; change limits stop over-tuning; card conflicts are settled by the cash gate; and every change ships as a numbered approval list.

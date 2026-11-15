@@ -34,7 +34,9 @@ test("the sheet asks the owner's nine questions and five checks against the owne
   assert.match(s, /VERDICT: A or B or TIE, naming the draft the owner would rather pay for/);
   assert.match(s, /GRAFT:/);
   assert.match(s, /## The brief\n\nCut churn/);
-  assert.match(s, /## Draft A \(2 words\)[\s\S]*## Draft B \(2 words\)/);
+  // No word counts on the sheet (15 Nov 2026): they prime the reviewer on length; key.json keeps them.
+  assert.match(s, /## Draft A\n\nDraft one[\s\S]*## Draft B\n\nDraft two/);
+  assert.doesNotMatch(s, /\(\d+ words\)/);
   assert.doesNotMatch(s, /acceptance test/i, "the reviewer judges the owner's brief, not the writer's spec");
   const four: string = sheet("Brief.", ["a", "b", "c", "d"], 2);
   assert.match(four, /VERDICT: A or B or C or D or TIE/);
@@ -61,7 +63,7 @@ test("usage names the owner's brief and prepare warns when given the spec", () =
   const run = spawnSync(process.execPath, [TOOL, "prepare", "--brief", spec, path.join(dir, "d1.md"), path.join(dir, "d2.md"), "--out", path.join(dir, "review")], { encoding: "utf8" });
   assert.equal(run.status, 0);
   assert.match(run.stderr, /owner's original brief, not your spec/);
-  assert.match(readFileSync(path.join(dir, "review", "sheet-2.md"), "utf8"), /## Draft A \(2 words\)\n\nDraft 2/);
+  assert.match(readFileSync(path.join(dir, "review", "sheet-2.md"), "utf8"), /## Draft A\n\nDraft 2/);
 });
 
 test("the checker, clarity, voice, lessons and profiles follow the owner", () => {

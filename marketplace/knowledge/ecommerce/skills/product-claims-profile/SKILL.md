@@ -1,6 +1,6 @@
 ---
 name: product-claims-profile
-description: "Build one product's selling profile, pulled once and reused by every ad, page, email and image prompt: how it works, every claim sorted into proven, supported, customer-reported, opinion or banned (each with its evidence), counted customer quotes, objections with the review that answers each, who buys it, real proof, the product's colours as hex codes from real photos, its visual words, and the top three themes to sell on. Applies category claim rules for supplements, cosmetics and other regulated goods in the US and India. Use before new ads or a page for a product, when copy keeps making claims nobody can back, or before a launch. Read access only."
+description: "Build one product's selling profile, pulled once and reused by every ad, page, email and image prompt: how it works, every claim sorted into proven, supported, customer-reported, opinion or banned (each with its evidence), counted customer quotes, objections with the review that answers each, who buys it, real proof, the product's colours as hex codes from real photos, its visual words, and the top three themes to sell on. Applies category claim rules for supplements, cosmetics and other regulated goods in the US, UK, EU, Canada and Australia. Use before new ads or a page for a product, when copy keeps making claims nobody can back, or before a launch. Read access only."
 ---
 
 # Product claims and proof profile
@@ -44,7 +44,7 @@ One product, one file, with every claim tied to its evidence. Ads, pages and ima
 
 ## Before you start: the gates
 
-1. **Gross profit per purchase is known.** Read it from the store folder or compute it: price paid minus landed cost, shipping and pack, payment fees, returns cost (and RTO cost where COD is offered). Fail: build the profile but mark the theme ranking in step 8 "not ranked: gross profit unknown".
+1. **Gross profit per purchase is known.** Read it from the store folder or compute it: price paid minus landed cost, shipping and pack, payment fees, returns cost (and failed delivery cost where pay on delivery is offered). Fail: build the profile but mark the theme ranking in step 8 "not ranked: gross profit unknown".
 2. **The product can be bought today.** Live, in stock, at the stated price. If stock cover is below reorder lead time, write "Protect: do not push new demand" at the top; the profile still gets built.
 3. **The category is known.** Name it: general goods, apparel, food, dietary or health supplement, cosmetic, personal care, device, or children's product. Regulated categories run step 5 in full. Fail (unclear): treat it as regulated.
 
@@ -84,11 +84,18 @@ General practice, not a ruling; check the official guidance on the day.
 - Cosmetics are judged by intended use. A claim to change the body's structure or function ("regrows hair", "repairs collagen", "heals acne") makes the product a drug in the law's eyes. Sunscreen, anti-dandruff and antiperspirant claims are drug claims with their own rules.
 - Reviews and testimonials: no fake or AI-written reviews, no suppressing bad ones (FTC rule on consumer reviews and testimonials, 2024), and a testimonial result implies it is typical unless the copy says what most buyers can expect.
 
-**India**
-- No advertising that claims to treat the diseases listed under the Drugs and Magic Remedies (Objectionable Advertisements) Act.
-- Cosmetics may not claim drug effects (Drugs and Cosmetics Act and Cosmetics Rules 2020). AYUSH products follow their own rules.
-- Health supplements and nutraceuticals follow FSSAI's regulations and its Advertising and Claims Regulations: health claims need scientific substantiation, disease risk reduction claims need approval, and nothing may claim to cure.
-- All ads must be substantiated under the ASCI Code; misleading ads fall under the Consumer Protection Act 2019 and the CCPA guidelines on misleading advertisements (2022). Influencer posts need clear disclosure.
+**United Kingdom and European Union**
+- Objective claims need documentary evidence held before the ad runs (UK CAP Code, enforced by the ASA; the EU unfair commercial practices rules).
+- Food and supplement health claims must match an authorised claim on the GB or EU nutrition and health claims register, in wording close to the approved text. Claims to prevent, treat or cure a disease are for licensed medicines only.
+- Cosmetics claims must be truthful, evidenced and not imply a medical effect (UK and EU cosmetics rules and the common criteria for cosmetic claims).
+- Influencer and creator posts need a clear "ad" label (ASA and CMA guidance in the UK, and matching rules across the EU).
+
+**Canada and Australia**
+- Canada: natural health products need a Health Canada licence and may claim only what the licence allows; ads must not mislead under the Competition Act.
+- Australia: therapeutic claims fall under the TGA, and misleading claims under the Australian Consumer Law, enforced by the ACCC.
+
+**Other markets**
+- Use your market's labelling, product safety and ad disclosure rules; the five evidence tiers still apply.
 
 **Meta and Google policy.** Copy may not imply the viewer has a condition ("your acne"), and health claims must follow each platform's healthcare policy [GAD-0025].
 
@@ -153,6 +160,14 @@ A theme is one buyer, one problem or desire, and one proven or supported claim. 
 - [LPG-0037]: press logos need the outlet's quote.
 - [LPG-0062]: up to about 80 reviews is where conversion moves most.
 
-Official guidance named in step 5: FTC Health Products Compliance Guidance; FDA rules on structure or function claims and cosmetic versus drug claims; FTC rule on consumer reviews and testimonials; India's Drugs and Magic Remedies Act, Cosmetics Rules 2020, FSSAI Advertising and Claims Regulations, ASCI Code, CCPA misleading advertisement guidelines.
+Official guidance named in step 5: FTC Health Products Compliance Guidance; FDA rules on structure or function claims and cosmetic versus drug claims; FTC rule on consumer reviews and testimonials; UK CAP Code and ASA rulings, the GB and EU nutrition and health claims registers, UK and EU cosmetics claims criteria, CMA influencer guidance, Health Canada natural health product rules, TGA and ACCC guidance.
 
-What makes this skill ours: it sorts every claim into five evidence tiers and refuses to let an ingredient study become a product promise; it applies US and India category rules claim by claim with an allowed rewrite; it pairs each counted objection with a real answering review; and it ranks themes by quote counts and claim strength, gated on the product's gross profit and stock.
+What makes this skill ours: it sorts every claim into five evidence tiers and refuses to let an ingredient study become a product promise; it applies each market's category rules claim by claim with an allowed rewrite; it pairs each counted objection with a real answering review; and it ranks themes by quote counts and claim strength, gated on the product's gross profit and stock.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. India's category rules for step 5:
+- No advertising that claims to treat the diseases listed under the Drugs and Magic Remedies (Objectionable Advertisements) Act.
+- Cosmetics may not claim drug effects (Drugs and Cosmetics Act and Cosmetics Rules 2020). AYUSH products follow their own rules.
+- Health supplements and nutraceuticals follow FSSAI's regulations and its Advertising and Claims Regulations: health claims need scientific substantiation, disease risk reduction claims need approval, and nothing may claim to cure.
+- All ads must be substantiated under the ASCI Code; misleading ads fall under the Consumer Protection Act 2019 and the CCPA guidelines on misleading advertisements (2022). Influencer posts need clear disclosure.

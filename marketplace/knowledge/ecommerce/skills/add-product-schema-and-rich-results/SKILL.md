@@ -104,7 +104,7 @@ After the client publishes: URL Inspection and Request indexing on the sample pa
 
 ### 9. Market notes
 
-- **India:** prices in INR including GST, as shown to the buyer; if COD carries a fee, it is not part of the product price. Return policy markup must match the store's real window, including any no-return categories.
+- **All markets:** price in the store's own currency exactly as shown to the buyer; where prices include VAT (UK, EU) or goods and services tax (Australia), mark up the tax-inclusive price. A fee for paying on delivery is not part of the product price. Return policy markup must match the store's real window per country, including any no-return categories; in the EU and UK the legal cancellation window for distance sales is at least 14 days.
 - **US:** state shipping details per region only if the store's rates really differ by state.
 
 ## Checks before you hand it over
@@ -146,3 +146,7 @@ After the client publishes: URL Inspection and Request indexing on the sample pa
 - SEO-6465: review markup rules and no guaranteed rich results.
 
 What makes this skill ours: it audits and removes the theme and app blocks that clash before adding anything; ratings are marked up only from verified reviews shown on the page; variant, sale and out-of-stock pages are tested, not just one product; and it tells the client plainly what rich results Google no longer shows.
+
+## Selling in India
+
+- Mark up prices in INR including GST, as shown to the buyer. A COD fee is not part of the product price.

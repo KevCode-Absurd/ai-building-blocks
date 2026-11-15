@@ -57,6 +57,7 @@ Pass or fail:
 
 - Branded sending domain set up, not the platform's shared domain. Practitioner default, test it.
 - SPF, DKIM and DMARC records present on the sending domain (free DNS lookup). Gmail and Yahoo require authentication, a DMARC record and one-click unsubscribe for bulk senders, and expect spam complaints under 0.3%.
+- DMARC policy read in context, not reset to a template. No record yet: add one at policy none with a reports address (rua) that goes to its own inbox, and tighten to quarantine, then reject, only once the reports show the store's own mail passing. A record already at quarantine or reject: never lower it to match a checklist. Read recent DMARC reports; if a real sender of the store's mail (the email tool, the store platform, the inbox provider) fails, fix that sender's SPF or DKIM alignment. Lowering the policy is a short stop-gap only when real mail is being blocked, and it is the owner's call. No reports visible: mark the check "not seen" and recommend no policy change.
 - Attribution window short enough for the product and excluding Apple privacy opens and bot clicks; for impulse products, consider 3 days [EML-0013] [EML-0043].
 - Smart sending on for campaigns, off for flows [EML-0043].
 - Reply-to address monitored by a person.

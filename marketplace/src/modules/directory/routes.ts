@@ -4,6 +4,7 @@ import { fail, json, str, type Route, type Ctx } from "../../core/http.ts";
 import type { Env } from "../../env.ts";
 import { AREAS } from "../../core/types.ts";
 import { getRole } from "./roles.ts";
+import { teamStages } from "./team-stages.ts";
 import { getPersona, listPersonas, searchPersonas } from "./service.ts";
 import { agentCard, agentProfile, areaCounts, browseOrder, pickFeatured, relatedAgents, soulMarkdown } from "./views.ts";
 import {executionPlan,checkExecutionDelivery} from './execution.ts';
@@ -60,11 +61,16 @@ export function featuredPayload(everyone: Awaited<ReturnType<typeof listPersonas
   return { total: everyone.length, agents: pickFeatured(everyone, n).map(agentCard) };
 }
 
-/** What /api/agents?vertical=<id> returns: the agents built for one kind of business, in team order (lead first). The
- *  /e-commerce page (src/pages.ts) sends it inside the HTML, so the team paints with real cards. */
-export function verticalPayload(everyone: Awaited<ReturnType<typeof listPersonas>>, verticalId: string) {
+/** What /api/agents?vertical=<id> returns: the agents built for one kind of business, in team order (lead first), and
+ *  the stages of the work with the agents in each (team-stages.ts). With ?q= the agents are only those that match,
+ *  best match first, and total counts them; stages still cover the whole team. The /e-commerce page (src/pages.ts)
+ *  sends the answer without q inside the HTML, so the team paints with real cards. */
+export function verticalPayload(everyone: Awaited<ReturnType<typeof listPersonas>>, verticalId: string, q = "") {
   const team = everyone.filter(p => p.vertical === verticalId).sort((a, b) => a.sort - b.sort || (a.id < b.id ? -1 : 1));
-  return { total: team.length, vertical: verticalId, agents: team.map(agentCard) };
+  const stages = verticalId === "ecommerce" ? teamStages(team) : [];
+  if (!q) return { total: team.length, vertical: verticalId, stages, agents: team.map(agentCard) };
+  const found = searchPersonas(team, q);
+  return { total: found.length, vertical: verticalId, q, team: team.length, stages, agents: found.map(agentCard) };
 }
 
 export const routes: Route[] = [
@@ -106,7 +112,8 @@ export const routes: Route[] = [
       const verticalId = ctx.url.searchParams.get("vertical")?.trim() || "";
       if (verticalId) {
         if (!/^[a-z][a-z0-9-]{1,39}$/.test(verticalId)) return fail(400, "unknown_vertical", "We do not have agents for that kind of business yet. Try vertical=ecommerce.");
-        return json(verticalPayload(everyone, verticalId), 200, PUBLIC_CACHE);
+        if (q.length > 120) return fail(400, "search_too_long", "That search is too long. Try a few words, like \"Meta ads\".");
+        return json(verticalPayload(everyone, verticalId, q), 200, PUBLIC_CACHE);
       }
       if (area && !(AREAS as readonly string[]).includes(area)) return fail(400, "unknown_area", "We do not have that area. Pick one from the list, or clear the filter.");
       if (q.length > 120) return fail(400, "search_too_long", "That search is too long. Try a few words, like \"SEO plan\".");

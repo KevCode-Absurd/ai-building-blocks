@@ -2,7 +2,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {selectOutputStyle,outputPolicyMarkdown,activeOutputContract,OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT} from '../src/modules/runner/output-policy.ts';
+import {selectOutputStyle,outputPolicyMarkdown,activeOutputContract,OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT,HAND_CHECK_RULE} from '../src/modules/runner/output-policy.ts';
 import {buildHousePackage,renderPrompt} from '../src/modules/runner/packages.ts';
 import {buildPack} from '../src/modules/packs/build.ts';
 import {trimmedSeatPack} from '../src/modules/mcp/team-seats.ts';
@@ -69,6 +69,11 @@ test('readiness blocks missing artifacts and tools, while a one-shot job states 
   assert.doesNotMatch(READINESS_RULE,/To confirm|sign-off|approval/i);
   assert.ok(READINESS_RULE.length<=400,'the studio validator caps each checklist line at 400 characters');
   for(const rule of [NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT])assert.match(rule,/blocked handoff/);
+  // In a chat app nothing runs: a check done by hand counts when the output names it as one (METHOD.md); a skipped one still blocks.
+  assert.match(HAND_CHECK_RULE,/a required check done by hand counts as run when your own message names it as a hand check/);
+  assert.match(HAND_CHECK_RULE,/A check that was skipped still blocks a ready-to-use claim/);
+  assert.ok(HAND_CHECK_RULE.length<=400);
+  assert.match(outputPolicyMarkdown(),/- In a chat app, a required check done by hand counts as run/);
 });
 
 test('text-only hosted pipeline cannot promise a native implementation from Markdown',()=>{

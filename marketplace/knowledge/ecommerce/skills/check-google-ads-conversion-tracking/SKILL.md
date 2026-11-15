@@ -1,6 +1,6 @@
 ---
 name: check-google-ads-conversion-tracking
-description: "A pass or fail check of a store's Google Ads conversion tracking against its real orders: which purchase actions exist and which one is primary, whether order values are real and in the right currency, duplicates from the Shopify app, Tag Manager and GA4 imports firing together, enhanced conversions, consent mode, and how Google's purchase count and value compare with Shopify orders day by day. For India it adds cash-on-delivery and return-to-origin adjustments. Ends with a fix list in order and a verdict on whether bidding can be trusted. Read access only. Use before any Google budget change, Smart Bidding switch or audit, after a theme or app change, or when Google and Shopify numbers disagree."
+description: "A pass or fail check of a store's Google Ads conversion tracking against its real orders: which purchase actions exist and which one is primary, whether order values are real and in the right currency, duplicates from the Shopify app, Tag Manager and GA4 imports firing together, enhanced conversions, consent mode, and how Google's purchase count and value compare with Shopify orders day by day. It adds adjustments for cancelled, refunded and returned orders, failed deliveries and pay-on-delivery orders that never pay. Ends with a fix list in order and a verdict on whether bidding can be trusted. Read access only. Use before any Google budget change, Smart Bidding switch or audit, after a theme or app change, or when Google and Shopify numbers disagree."
 ---
 
 # Google Ads conversion tracking check
@@ -31,7 +31,7 @@ Required (read access, level 1):
 4. **How tags are installed**: Shopify Google and YouTube channel app, Google Tag Manager, a tracking app, or hard-coded; Shopify Customer events settings.
 5. **Markets served**, to check consent rules.
 
-Optional: GA4 purchases by day and by source, Tag Assistant recording of a test order, return-to-origin report for India.
+Optional: GA4 purchases by day and by source, Tag Assistant recording of a test order, report of cancellations, refunds, returns and failed deliveries.
 
 Access: read only. Fixes need draft or publish access in Google Ads, Shopify or Tag Manager, and the client's yes for each.
 
@@ -87,15 +87,27 @@ Common causes, checked in this order:
 
 **Check 10, transaction ID sent** with every purchase, so repeats are removed.
 
-### 6. India: cash on delivery and return to origin
+### 6. Returns, refunds and failed deliveries
 
-Google counts a cash-on-delivery order when it is placed, but many are refused or returned to origin. Plan conversion adjustments: upload retractions for cancelled and returned-to-origin orders, matched by transaction ID, on a weekly schedule (Google Ads conversion adjustments, Google Ads Help). If uploads are not possible yet, report Google's figures alongside the store's delivered-order rate and lower targets by that rate. Add GST on the Google Ads invoice to ad cost when judging return.
+Google counts a purchase when it is placed, but some orders are later cancelled, refunded, returned or never delivered; pay-on-delivery orders, where a market offers them, are often refused at the door. Plan conversion adjustments: upload retractions for cancelled and undelivered orders and restatements for partial refunds and returns, matched by transaction ID, on a weekly schedule (Google Ads conversion adjustments, Google Ads Help). If uploads are not possible yet, report Google's figures alongside the store's kept-order rate and lower targets by that rate. If the Google Ads invoice adds VAT or another tax the store cannot claim back, add it to ad cost when judging return.
 
 ### 7. Give the verdict
 
 - **Trust:** checks 1, 5, 9 and 10 pass and the ratio is steady.
 - **Trust with caution:** one of checks 2, 6, 7 or 8 fails; bidding can continue, fixes go first in the list.
 - **Do not bid on this:** check 1, 5, 9 or 10 fails. Pause any target ROAS change or budget increase until fixed, and recheck 7 days after the fix, since Smart Bidding may show Learning for up to 7 days after big changes [MEA-6125].
+
+### 8. Campaign goals, normal gaps and late-data traps
+
+- **Check campaign-level goals too.** A campaign can override the account default and bid on add to cart or a GA4 import. Open each campaign's goal setting.
+- **Add-to-cart bidding exception.** Only a high-ticket store with about 8 to 20 purchases a month may bid on add to cart for signal, and then only until purchases are enough.
+- **Normal gaps.** GA4 against Google Ads differing by 10 to 30% is normal. Investigate above about 40%, a gap that flips direction, a sudden change in a stable gap, or any platform reading exactly zero. Browser-only tracking typically loses 10 to 30% of conversions to blockers, Safari cookie limits and device switching.
+- **Do not judge the last 3 days.** Conversions post back to the click date and keep arriving; line up the conversion action, date basis, time zone, window and scope before comparing.
+- **A tag firing is not a conversion arriving.** Preview proves the tag ran; only the destination platform proves receipt. Absence of a browser tag is not absence of tracking: ask whether a server or native integration (the Shopify Google channel, server-side tagging) already sends purchases.
+- **Shopify checkout change.** Shopify removed Additional Scripts and script tags on the Thank you and Order status pages for all remaining stores on 26 August 2026. Tracking that stopped in late August 2026 should be checked there first.
+- **Refund asymmetry.** Google supports conversion adjustments for refunds; where those are not uploaded, high-return stores read Google value too high.
+- **Server-side tagging** is a practitioner default above about 50,000 a month of Google spend, not a must below it.
+- Label every finding observed, reported or inferred.
 
 ## Checks before you hand it over
 
@@ -104,8 +116,10 @@ Google counts a cash-on-delivery order when it is placed, but many are refused o
 - Each of the 10 checks has pass or fail and the evidence (screenshot or row).
 - The verdict follows the rule in step 7, not judgment alone.
 - Each fix names where it is made and who makes it.
-- India stores have a cash-on-delivery and return-to-origin plan.
+- Stores with real levels of returns, refunds or failed deliveries have an adjustment plan.
 - No setting was changed during the check.
+- Campaign-level goals were opened for every spending campaign, not only the account default.
+- No verdict rests on the last 3 days of data.
 
 ## Output
 
@@ -121,8 +135,9 @@ Google counts a cash-on-delivery order when it is placed, but many are refused o
 - **GA4 import left as the primary purchase.** Step 1 moves it to secondary [MEA-0017].
 - **Two primary purchases from the app and Tag Manager.** Step 5 finds them.
 - **A fixed value on every purchase.** Step 2 fails it [MEA-0016].
-- **Counting refused cash-on-delivery orders as sales.** Step 6 retracts them.
+- **Counting refused, undelivered or refunded orders as sales.** Step 6 retracts them.
 - **Changing bids the same week as fixing tags.** Step 7 waits for the recheck.
+- **Calling a 20% GA4 gap broken.** Up to about 30% is normal; investigate patterns, not size alone.
 
 ## Sources
 
@@ -133,4 +148,9 @@ Google counts a cash-on-delivery order when it is placed, but many are refused o
 - MEA-6125: primary versus secondary actions; learning after changes.
 - MEA-6126: enhanced conversions send hashed buyer data.
 
-What makes this skill ours: it reconciles Google with the store's own orders day by day on conversion time, with a hard rule that Google can never exceed the store; the verdict is rule-based and tells the client when not to bid; and India's cash-on-delivery and return-to-origin orders are retracted instead of counted as sales.
+What makes this skill ours: it reconciles Google with the store's own orders day by day on conversion time, with a hard rule that Google can never exceed the store; the verdict is rule-based and tells the client when not to bid; and cancelled, refunded and undelivered orders are retracted instead of counted as sales.
+
+## Selling in India
+
+- COD orders are counted by Google when placed, but many are refused or come back as RTO. Upload retractions for them weekly, matched by transaction ID, or lower targets by the delivered-order rate until uploads work.
+- Add GST on the Google Ads invoice to ad cost when judging return, unless the store claims it back.

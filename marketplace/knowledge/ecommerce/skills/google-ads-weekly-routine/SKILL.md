@@ -93,10 +93,21 @@ Budget steps stay at about 20% or less on Google [GAD-0042].
 - A change proposed twice and not made gets decided this week: do it, drop it or rescope it.
 - Write the change list (three at most) for the client's yes.
 
-### India and US notes
+### Market notes
 
-- India: count cash-on-delivery orders only once delivered when judging profit; if Google is still counting refused orders, use the store's delivered rate to adjust check 1. Watch festival weeks (Diwali, Raksha Bandhan) when click costs and conversion rates both move; compare with the same week last year where possible. Add GST on Google invoices to cost.
+- Pay-on-delivery and festival markets: count pay-on-delivery orders only once delivered when judging profit; if Google is still counting refused orders, use the store's delivered rate to adjust check 1. Watch the store's festival and peak weeks (Boxing Day, Singles' Day, Ramadan, local holidays) when click costs and conversion rates both move; compare with the same week last year where possible. Add any VAT or goods and services tax on Google invoices to cost unless the store reclaims it.
 - US: watch Black Friday to Cyber Monday, when Google can get less efficient while Meta improves in one data set [GAD-0050]; prepare feeds and promotions rather than chasing inflated returns.
+
+### When results dip: the drill before any change
+
+When revenue or ROAS falls, diagnose before touching anything [GAD-6208]:
+
+1. **Read change history** and widen the range to 90 to 180 days in a weekly view, on conversion time. Do not use this on campaigns under about 30 conversions a month; that is noise.
+2. **Business level first.** Revenue = sessions x conversion rate x order value: find which moved. If Google is only 10 to 35% of ad spend, check Meta and other channels, the site, an ended sale or offer, and seasonality before blaming Google.
+3. **Google level.** Sort campaigns by cost; the cause is almost always in the top five. Find the inflection date, then the ad group or asset group [GAD-6204].
+4. **The tree.** Cost per sale = cost per click / conversion rate; clicks = impressions x click-through. Rising cost per click alone is not a problem if conversion rate rose. Conversion rate fell: tracking, page change, audience or search term mix, learning reset, promo ended [GAD-6219]. Impressions fell: lost to budget or to rank [GAD-6213]. Cost per click rose: Quality Score parts, new rivals in auction insights [GAD-6214] [GAD-6220].
+5. **By campaign type.** Performance Max: warm drift, brand exclusion broken, disapprovals or stock-outs, target raised [GAD-0037]. Shopping: title changes, Merchant Center warnings, rival price cuts. Search: search term mix, new competitor, target squeeze, Display switched on.
+6. **Decide fix, wait or ignore**, default to a fix not a rebuild, one change at a time, and write one sentence: "down because X fell, driven by Y, caused by Z".
 
 ## Checks before you hand it over
 
@@ -107,6 +118,7 @@ Budget steps stay at about 20% or less on Google [GAD-0042].
 - No bid or budget change is proposed in a week tracking failed.
 - Last week's changes are marked with their effect.
 - No change was applied without the client's yes.
+- Any dip note ends with the one-sentence cause and a fix, wait or ignore call.
 
 ## Output
 
@@ -133,6 +145,7 @@ Budget steps stay at about 20% or less on Google [GAD-0042].
 - **Raising budget on a campaign that is not spending its budget.** Check 5 loosens the target instead [GAD-0023].
 - **Missing a stock-out.** Check 3 flags low cover a week ahead [GAD-0037].
 - **Brand making the account look fine.** Check 1 reads non-brand on its own [GAD-0003].
+- **Rebuilding after one bad week.** Read change history and the drill first.
 
 ## Sources
 
@@ -148,5 +161,17 @@ Budget steps stay at about 20% or less on Google [GAD-0042].
 - GAD-0050: Black Friday efficiency on Google versus Meta.
 - GAD-0053: cut an over-high target ROAS firmly.
 - MEA-0009: small revenue dips are often noise.
+- GAD-6204: top-down triage by spend.
+- GAD-6208: read change history, 90 to 180 days weekly.
+- GAD-6213: impressions and clicks falling below budget means bid strength.
+- GAD-6214: rising CPC with flat conversion rate.
+- GAD-6219: conversion rate fall checklist.
+- GAD-6220: compare top search terms before and after.
 
-What makes this skill ours: six checks in a fixed 30-minute order, each with one allowed change, so the account is not over-managed; brand is read apart and results are judged against the store's own break-even on conversion-time columns; tracking failure freezes all bid changes for the week; and India festival weeks and cash-on-delivery refusals are built into the reading.
+What makes this skill ours: six checks in a fixed 30-minute order, each with one allowed change, so the account is not over-managed; brand is read apart and results are judged against the store's own break-even on conversion-time columns; tracking failure freezes all bid changes for the week; and festival weeks and pay-on-delivery refusals are built into the reading.
+
+## Selling in India
+
+- Count COD orders only once delivered; if Google still counts refused orders, adjust check 1 with the delivered rate.
+- Watch festival weeks (Diwali, Raksha Bandhan), when click costs and conversion rates both move.
+- Add GST on Google invoices to cost.

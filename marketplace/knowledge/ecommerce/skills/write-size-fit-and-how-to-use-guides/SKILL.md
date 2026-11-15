@@ -18,7 +18,7 @@ description: "Writes size and fit guides for apparel, footwear and fitted goods,
 ## Not for
 
 - Returns policy, portal and the push to exchange: `set-up-returns-and-exchanges`.
-- What returns and failed COD deliveries cost by product and pincode: `returns-and-rto-cost-analysis`.
+- What returns and failed deliveries cost by product and region: `returns-and-rto-cost-analysis`.
 - The full post-purchase email series: `write-post-purchase-emails` (this skill hands it the how-to content).
 - Garment measurement specs for the factory: `write-product-spec-sheet-for-factory`.
 - Gallery images showing fit and scale: `pdp-image-gallery-rebuild`.
@@ -33,7 +33,7 @@ Required (read access, level 1):
 4. **Reviews export** with any fit or size answers (many review apps collect a "fit" rating).
 5. **Sales by variant** for the same period.
 
-Optional: post-purchase survey answers, model measurements and size worn for product photos, RTO reasons for COD orders in India.
+Optional: post-purchase survey answers, model measurements and size worn for product photos, reasons for refused or failed deliveries.
 
 If real measurements are missing, the guide cannot be written for that product; ask the client to measure 3 pieces per size and record the average. Placing guides on the theme needs draft access (level 2) on a duplicate theme; the client approves before publishing.
 
@@ -47,13 +47,13 @@ If real measurements are missing, the guide cannot be written for that product; 
 
 1. **Find the problem products.** Rank products by size or misuse returns per 100 orders and by ticket count. Take the top 5 to 10. Read the free-text reasons by hand and paste exact phrases [AVT-0007]: "runs small in the shoulders", "didn't know to charge it first".
 2. **Read the exchange pattern.** For fit returns, note which way buyers exchange (size up or down) per product. If most exchanges on a product go one size up, that product runs small; write that in its fit note.
-3. **Write the size table.** Follow the large-sample sizing checklist: conventional sizes (S, M, L), numeric sizes where used, measurements in both centimetres and inches, international conversions where the store sells abroad, and a table per product type, ideally per product [CXP-6161]. In India add the common size labels buyers know (for example UK sizes for footwear) only if they map correctly.
+3. **Write the size table.** Follow the large-sample sizing checklist: conventional sizes (S, M, L), numeric sizes where used, measurements in both centimetres and inches, international conversions where the store sells abroad, and a table per product type, ideally per product [CXP-6161]. For each market, add the size labels buyers there know (US, UK and EU shoe sizes all differ) only if they map correctly.
 4. **Write how to measure.** Three to five steps with a simple diagram brief: what to measure, with what, and how to read it. Add a "compare with a piece you own" method, which buyers find easier than body measuring (practitioner default, test it).
 5. **Write per-product fit notes.** One to two lines: "Runs small: most buyers size up", "Relaxed fit: take your usual size", "Fabric has no stretch". Add model height, measurements and size worn next to on-model photos [CXP-6161]. Add a between-sizes rule and say which way to go and why. For "less than expected" returns, the fit note states the limit as a measured number ("fits a 14-inch laptop"), names who it is not for and links the better-fit product in the range; `write-product-page-copy` reuses it in the details and FAQ. An unmeasured limit is left off the page and named under Gaps, never as a bracket on the page.
 6. **Write the how-to guide** (for products that need use instructions). Steps: what is in the box, first setup, first use, routine, care, storage. Then "what to expect": how long until results, what feels normal at first. Products without an instant effect do better with an early frame that sets the timeline [CXP-0003]. Then "mistakes to avoid" from the misuse returns and tickets, and "when to contact us".
 7. **Place each block.** Size guide link right next to the size picker, opening over the page and closing back to it with the Back button, with a support or chat link inside the guide [CXP-6161]. Fit note under the product title or above the size picker. How-to summary on the product page; full guide on a help page; the steps also go in the delivery or post-purchase email, handed to `write-post-purchase-emails`. Dead clicks on size options and quick backs from product pages often mean missing size information [CRO-0023].
 8. **Collect fit data going forward.** Ask the review app to collect a fit rating (runs small, true to size, runs large) and show the summary; a "what almost stopped you" survey catches the next doubts [LPG-0042]. Real buyer photos that show fit and claims carry weight once a product has its first reviews [LPG-0062].
-9. **India and US notes.** India: size and misuse issues also drive COD refusals and RTO; add the fit note and size guide link to the WhatsApp or SMS order confirmation for COD orders where the buyer opted in, and offer a Hindi or regional version of how-to steps if tickets arrive in those languages. US: keep measurements in inches first and centimetres second.
+9. **Market notes.** Size and misuse issues also drive refused deliveries and returns; add the fit note and size guide link to the order confirmation (email, or WhatsApp or SMS where the buyer opted in), and offer versions of the how-to steps in the languages your buyers use if tickets arrive in those languages. EU and Australia: centimetres first, inches second. UK: show both, since buyers use inches for many garments. US: keep measurements in inches first and centimetres second.
 10. **Set the measure.** Record, per product, size or misuse returns per 100 orders, exchanges per 100 orders and related tickets per 100 orders for the last 90 days. Read again after 60 to 90 days of orders. Poor return experiences hurt repeat purchase [CXP-0007], so also watch repeat rate among buyers who exchanged. Guardrail: add-to-cart rate. If it drops after a limit line goes up, move the line below the fold before cutting it (practitioner default, test it).
 
 ## Checks before you hand it over
@@ -108,3 +108,7 @@ If real measurements are missing, the guide cannot be written for that product; 
 - CXP-0007: poor returns hurt repeat purchase.
 
 What makes this skill ours: fit notes come from the direction buyers actually exchange each product, not a generic chart; every size number is measured; how-to guides are written from misuse returns and placed both on the page and in the delivery messages; and returns, exchanges and tickets per 100 orders are baselined so the guide's effect is read in money.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Size and misuse issues also drive COD refusals and RTO; add the fit note and size guide link to the WhatsApp or SMS order confirmation for COD orders where the buyer opted in. Offer a Hindi or regional version of how-to steps if tickets arrive in those languages. Add the size labels Indian buyers know (for example UK sizes for footwear) only if they map correctly.

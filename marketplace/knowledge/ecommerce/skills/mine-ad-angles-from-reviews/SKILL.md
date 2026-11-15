@@ -30,7 +30,7 @@ Required (read access, level 1):
 3. **Live and recent ads**: a Meta Ads Manager export at ad level for the last 90 days (ad name, spend, purchases) or screenshots of each live ad, so you can see which angles already run.
 4. **Stock by SKU** (Shopify inventory export).
 
-Optional: support tickets or chat logs, post-purchase survey answers, return and RTO reasons, and marketplace reviews of the store's own listings. Competitor reviews are fine for spotting gaps, never for quotes in the store's ads.
+Optional: support tickets or chat logs, post-purchase survey answers, return and failed-delivery reasons, and marketplace reviews of the store's own listings. Competitor reviews are fine for spotting gaps, never for quotes in the store's ads.
 
 If the reviews export is missing, ask once; under 30 usable reviews in total, stop and hand off to `customer-interview-script-and-summary` instead. If gross profit is missing, rank on evidence only and mark the table "profit not checked". This job needs no draft or publish access; nothing goes live from it.
 
@@ -51,7 +51,7 @@ Remove duplicates, staff and gifted reviews (flag them, keep them out of counts)
 
 Read reviews yourself and paste exact phrases into the quote bank, errors included. Automated theme tools strip the emotional words that make an ad land [AVT-0007]. Read every 1-star and 2-star review, every review with photos or video, and a random half of the rest.
 
-India note: many reviews mix English with Hindi or a regional language. Keep the original line and add a labelled translation; never present your translation as the buyer's words. COD buyers often review on WhatsApp; use those only with the buyer's permission.
+Language note: many reviews mix languages or are written in the languages your buyers use. Keep the original line and add a labelled translation; never present your translation as the buyer's words. Some buyers review on WhatsApp or other chat apps; use those only with the buyer's permission.
 
 ### 3. Code each review on six fields
 
@@ -141,3 +141,7 @@ US note: a quote used in an ad must be a real review that reflects the buyer's r
 - MCR-6023 (proposed): Meta personal attributes policy.
 
 What makes this skill ours: every count has a stated denominator and is never sold as market share; angles are ranked on gap against the store's own live ads and on gross profit per order and stock, not on mention count; review permissions and regional-language quotes are handled before an angle depends on them; and each angle leaves with a cheap first test, not just a label.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Many reviews mix English with Hindi or a regional language; keep the original and add a labelled translation. COD buyers often review on WhatsApp; use those only with permission.

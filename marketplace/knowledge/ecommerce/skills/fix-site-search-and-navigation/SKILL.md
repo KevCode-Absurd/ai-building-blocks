@@ -61,7 +61,7 @@ Take the top 200 terms and all zero-result terms. Class each:
 | Use case | "for travel", "gift for dad" | Tags, curated collections |
 | Compatibility | "fits iPhone 15" | Compatibility metafield |
 | Abbreviation, misspelling, local word | "moisturiser", regional names | Synonyms |
-| Non-product | "returns", "track order", "COD" | Redirect to the right page |
+| Non-product | "returns", "track order", "pay on delivery" | Redirect to the right page |
 
 Large-site research found 56% of sites fail shoppers' search needs; non-product (66%), abbreviation and symbol (54%), compatibility (44%) and use-case (43%) queries fail most, exact names least (12%) [CRO-6182]. Use this to know where to look; the store's own terms decide what to fix.
 
@@ -73,7 +73,7 @@ Search the top 50 terms and every zero-result term with 3 or more searches. Mark
 
 - **Synonyms:** group words that mean the same thing (local spellings, regional names, slang). Shopify's free Search and Discovery app handles synonyms, filters and boosts; other search apps work the same way.
 - **Product data:** add the missing product type, tags or metafields so problem, feature, use and compatibility terms match.
-- **Redirects:** send policy and service terms (returns, refund, track, shipping, COD, size chart) straight to the right page.
+- **Redirects:** send policy and service terms (returns, refund, track, shipping, payment options, size chart) straight to the right page.
 - **Boosts:** for broad terms, put bestsellers and in-stock items first.
 - **Gaps:** terms for products the store does not sell go to the merchandising team as demand signals, not fixes.
 
@@ -94,9 +94,9 @@ Gross profit at stake per fix a month = monthly searches (or menu sessions) affe
 
 Targets after 4 weeks: zero-result rate on the top 200 terms down (working target: under 5% of searches, practitioner default), searcher conversion up, and no fall in menu click-through. Read before and after; most stores cannot split test search changes.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** add Hindi or regional words written in English letters as synonyms (for example local names for garments or ingredients), and common misspellings; redirect "COD", "cash on delivery" and "pincode" searches to the delivery and payment page.
+- **All markets:** add words from the languages your buyers use as synonyms, including words written in English letters (for example local names for garments or ingredients), and common misspellings; redirect "delivery", "postcode", "payment" and "pay later" searches to the delivery and payment page.
 - **US:** add US and UK spelling pairs (color and colour) and size terms (petite, plus, tall) as filters or synonyms.
 
 ## Checks before you hand it over
@@ -144,4 +144,9 @@ Targets after 4 weeks: zero-result rate on the top 200 terms down (working targe
 - MEA-0037: gross margin is delivered cost.
 - SEO-0004: Shopify product URL and breadcrumb fix.
 
-What makes this skill ours: the store's own search terms are classed into eight query types and run on a phone before anything changes; most fixes are data fixes (synonyms, tags, metafields, redirects) rather than a new search tool; menu gaps are found from search demand; and Hindi and regional words written in English letters are treated as synonyms for Indian stores.
+What makes this skill ours: the store's own search terms are classed into eight query types and run on a phone before anything changes; most fixes are data fixes (synonyms, tags, metafields, redirects) rather than a new search tool; menu gaps are found from search demand; and words from the buyers' own languages, written in English letters, are treated as synonyms.
+
+## Selling in India
+
+- Add Hindi or regional words written in English letters as synonyms (for example local names for garments or ingredients), and common misspellings.
+- Redirect "COD", "cash on delivery" and "pincode" searches to the delivery and payment page.

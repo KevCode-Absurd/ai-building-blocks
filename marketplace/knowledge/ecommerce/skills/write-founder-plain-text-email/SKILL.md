@@ -97,7 +97,8 @@ List the three most likely replies (a complaint, a product question, "remove me"
 
 ### 9. Market notes
 
-- **India:** if the list includes regional language segments, the founder approves any translation; COD buyers in a win-back get the COD and delivery facts stated plainly.
+- **Other languages:** if the list includes segments in other languages, the founder approves any translation; buyers who paid on delivery get the payment and delivery facts stated plainly in a win-back.
+- **UK and EU:** marketing email needs consent (or, in the UK, the soft opt-in for past buyers), a clear sender name and an easy unsubscribe, even in plain text.
 - **US:** plain-text still needs the postal address and an unsubscribe link, and must be identifiable as an ad when it sells [EML-6341].
 
 ## Checks before you hand it over

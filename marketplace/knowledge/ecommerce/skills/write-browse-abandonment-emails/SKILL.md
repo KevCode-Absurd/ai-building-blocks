@@ -69,6 +69,8 @@ Map each product to one type with a tag the flow can split on.
 
 Exit on Added to Cart, Started Checkout or Placed Order.
 
+**Add a site abandon email for visitors who never open a product.** A known visitor who lands on the site but views no product never enters this flow. Give them one short email of their own, 2 to 4 hours after the visit: best sellers, a line offering help to choose, category buttons and one proof point. Exit anyone who views a product, adds to cart, starts checkout or buys, so each person sits only in the flow closest to buying, and let each person in once every 30 days (practitioner default, test it).
+
 ### 3. Decide the offer rule
 
 Default: no money off in browse emails. Browsing is low intent, and codes here teach shoppers to view and wait. Some practitioners give browsers the most generous offers in the funnel [OFF-0009]; this skill allows only one case: the profile has never bought and has an unused welcome offer, so email 2 may remind them of that same offer and its real expiry. No new or bigger code.
@@ -86,8 +88,8 @@ Write two subjects per email. Good shapes: the product name plus the question ("
 
 ### 5. Market notes
 
-- **India:** show the price including GST as on the site, COD availability by pin code if the store limits it, and delivery days for metro and non-metro. If the store sells in regional languages, write the email in the language the shopper's profile records, never by guessing from a name.
-- **US:** postal address and unsubscribe in every email; subject lines must match the content [EML-6341].
+- **Prices and delivery:** show the price as on the site (including VAT in the UK and EU and goods and services tax in Australia; before sales tax in the US), payment option availability by postcode if the store limits it, and delivery days for cities and remote areas. If the store sells in several languages, write the email in the language the shopper's profile records, never by guessing from a name.
+- **Email rules:** US: postal address and unsubscribe in every email; subject lines must match the content [EML-6341]. UK and EU: browse emails need marketing consent and a clear unsubscribe. Canada: CASL consent. Australia: consent, sender ID and unsubscribe.
 
 ### 6. Plan the test
 
@@ -144,3 +146,7 @@ Sources: [size guide URL / review id / claims list line]
 - OFF-0009: offers by funnel stage.
 
 What makes this skill ours: the emails split by the question each product type raises rather than one generic reminder; codes are kept out except the shopper's own unused welcome offer; every fit, result or delivery line is traced to the store's guides, claims list or exact reviews; and identity-matched visitors without consent are left out.
+
+## Selling in India
+
+- Show the price including GST as on the site, COD availability by pin code if the store limits it, and delivery days for metro and non-metro.

@@ -93,7 +93,7 @@ Judge creative at ad set level more than ad level; ad-level credit is less relia
 - **Catalog ad share:** a rising share of dynamic product ads lifts reported ROAS while new customers fall [ADC-0010].
 - **Product economics:** cost-per-purchase bidding sends spend to the easiest-to-sell product, which may have the thinnest margin [ADC-0022].
 - **Creative overlap:** near-duplicate ads are grouped and serve to the same people, so ten variants of one idea add little reach [MCR-0078]. A new colour or pose is not a new ad [MCR-0022]. Count concepts by persona, angle and offer.
-- **Cash on delivery:** in COD markets, check whether the return-to-origin rate moved; Meta counts the order before delivery.
+- **Failed deliveries and unpaid orders:** check whether the share of orders that fail delivery, get refused or have payments reversed moved (pay on delivery stores see this most); Meta counts the order before delivery.
 
 ### 8. Name the cause
 
@@ -158,4 +158,4 @@ File: `meta-deep-dive-<date>.md`.
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: diagnoses one change to one proven cause instead of re-running a 130-check scorecard; starts from Shopify revenue and the change history and rules out a tracking change before blaming demand or creative; splits new from returning customers and checks store causes such as stock-outs, catalog sets, product mix and cash on delivery returns; drops the unsourced "60% similarity score" and fixed CTR and EMQ pass marks in favour of concept counts and the store's own break-even.
+What this skill does that the open-source one did not: diagnoses one change to one proven cause instead of re-running a 130-check scorecard; starts from Shopify revenue and the change history and rules out a tracking change before blaming demand or creative; splits new from returning customers and checks store causes such as stock-outs, catalog sets, product mix and failed deliveries; drops the unsourced "60% similarity score" and fixed CTR and EMQ pass marks in favour of concept counts and the store's own break-even.

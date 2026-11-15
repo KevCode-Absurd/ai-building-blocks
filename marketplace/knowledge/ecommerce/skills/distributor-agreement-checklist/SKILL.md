@@ -1,6 +1,6 @@
 ---
 name: distributor-agreement-checklist
-description: "A filled term sheet for a distributor, reseller or sales agent deal: about 30 terms with the store's position, its walk-away point and the risk on each, a red-flag check of the other side's draft, the margin stack from the store's price to the shelf price, and the questions for the store's lawyer. Covers territory and exclusivity tied to minimum volumes, payment and credit, retail and online pricing, trademark and listing control, stock, returns, reporting and exit with stock buy-back, with India and US notes. Use before signing with any distributor, reseller or export partner, or when a draft contract has arrived."
+description: "A filled term sheet for a distributor, reseller or sales agent deal: about 30 terms with the store's position, its walk-away point and the risk on each, a red-flag check of the other side's draft, the margin stack from the store's price to the shelf price, and the questions for the store's lawyer. Covers territory and exclusivity tied to minimum volumes, payment and credit, retail and online pricing, trademark and listing control, stock, returns, reporting and exit with stock buy-back, with notes for the US, UK and EU. Use before signing with any distributor, reseller or export partner, or when a draft contract has arrived."
 ---
 
 # Distributor agreement checklist
@@ -27,12 +27,12 @@ Required:
 
 1. **The proposal or draft agreement** from the distributor, or notes from the call.
 2. **Wholesale price list** with delivered cost and gross profit per unit from `build-wholesale-price-list-and-terms`.
-3. **Retail price and printed MRP** per SKU, and the shelf price the distributor's retailers would charge.
+3. **Retail price and any printed or recommended retail price** per SKU, and the shelf price the distributor's retailers would charge.
 4. **Trademark status** in each country involved, with registration numbers.
 5. **Supplier terms and lead times**, and current stock.
 6. **Who the store already sells to** in the proposed territory (stockists, marketplaces, its own site).
 
-Optional: the distributor's other brands, their retailer list, references from two of their brands, a credit report or GST return filing status (India, from the public GST search by GSTIN).
+Optional: the distributor's other brands, their retailer list, references from two of their brands, a credit report, or the distributor's company and tax registration status (for example a VAT number check in the EU's VIES service or the UK's register).
 
 If the draft is missing, build the term sheet from the store's side first and send that. Review is read only. Sending the term sheet is the client's call; signing is always the client's own act after legal review.
 
@@ -55,7 +55,7 @@ The model decides which terms below apply. Write it at the top.
 
 ### 2. Build the margin stack
 
-Store price to distributor, distributor margin, retailer margin, shelf price, against the store's retail price. India: work net of GST, with MRP including all taxes on the pack [COG-6264]. Practitioner default distributor margin: 10 to 25% depending on country and service (warehousing, credit, sales team); test it against two other brands' terms if they share them.
+Store price to distributor, distributor margin, retailer margin, shelf price, against the store's retail price. Work net of sales tax or VAT; where the market prints a maximum or recommended retail price on the pack, check it includes all taxes. Practitioner default distributor margin: 10 to 25% depending on country and service (warehousing, credit, sales team); test it against two other brands' terms if they share them.
 
 ### 3. Fill the term sheet
 
@@ -68,7 +68,7 @@ For each term: the store's position, walk-away, risk (high, medium, low).
 3. Minimum purchase per quarter, with a ramp in year one.
 4. Forecast: rolling 3 months, first month binding.
 5. Order lead time and minimum order quantity.
-6. Payment: advance or letter of credit for export; credit limit and days for domestic; interest on late payment. India: if the store is a Udyam-registered micro or small enterprise, buyers must pay within 45 days of accepting goods, with statutory interest after [FIN-6382].
+6. Payment: advance or letter of credit for export; credit limit and days for domestic; interest on late payment. Many markets set late-payment rules between businesses, for example the EU rule of 60 days unless agreed otherwise, with statutory interest, and the UK's statutory interest on late commercial payments.
 7. Retention of title until paid.
 8. Delivery terms (who pays freight, insurance, duty; where risk passes).
 
@@ -79,11 +79,11 @@ For each term: the store's position, walk-away, risk (high, medium, low).
 11. Exclusivity: only if tied to the minimums in term 3, and lost automatically if two quarters are missed.
 12. No active selling outside the territory.
 
-US: territory and customer limits the brand sets on its own are generally lawful [OFF-6384]. India and the EU have their own competition rules on territory and pricing; the lawyer checks.
+US: territory and customer limits the brand sets on its own are generally lawful [OFF-6384]. The EU, the UK and other markets have their own competition rules on territory and pricing (the EU limits bans on passive sales into other territories); the lawyer checks.
 
 **Price and brand**
 
-13. Suggested retail price; no agreement forcing a minimum resale price. US: an agreed minimum is judged case by case federally and banned in some states [OFF-6384]. India: ask the lawyer.
+13. Suggested retail price; no agreement forcing a minimum resale price. US: an agreed minimum is judged case by case federally and banned in some states [OFF-6384]. UK and EU: fixing a minimum resale price is generally banned. Elsewhere, ask the lawyer.
 14. Online sales and marketplaces: only with written permission, per marketplace.
 15. Trademark use under a limited, revocable licence. The distributor never registers the brand, domain, social handles or marketplace brand account in its own name.
 16. Marketing: who pays, approval of materials, no claims beyond the store's approved list.
@@ -129,7 +129,7 @@ Flag in red any of:
 
 ### 5. Write the lawyer questions
 
-Five to eight questions, specific to this draft and country: enforceability of exclusivity and pricing terms, compensation on termination under local law, retention of title, tax and invoicing (India: GST tax invoice with both GSTINs [FIN-6380]; e-invoicing if turnover is over the threshold [FIN-6381]), and dispute forum.
+Five to eight questions, specific to this draft and country: enforceability of exclusivity and pricing terms, compensation on termination under local law, retention of title, tax and invoicing (a VAT invoice with both VAT numbers in the UK and EU; e-invoicing where the country requires it), and dispute forum.
 
 ### 6. Hand over for approval
 
@@ -171,8 +171,18 @@ The client decides what to send. Any binding offer needs the client's fresh yes.
 - OPS-0022: missed partner orders cost the account.
 - FIN-0028: sell-through drives cash.
 - OFF-6384: US territorial and resale price rules.
+
+What makes this skill ours: every term has a walk-away, not just a wish; exclusivity is always tied to minimums that switch it off; the margin stack is checked down to the shelf price; trademark and marketplace accounts stay with the store; and late-payment rules and tax invoicing sit inside the payment terms.
+
+## Selling in India
+
+- Check the distributor's GST return filing status in the public GST search by GSTIN.
+- Work the margin stack net of GST, with MRP including all taxes on the pack [COG-6264].
+- If the store is a Udyam-registered micro or small enterprise, buyers must pay within 45 days of accepting goods, with statutory interest after [FIN-6382].
+- Indian competition rules on territory and resale pricing: ask the lawyer.
+- Invoicing: a GST tax invoice with both GSTINs [FIN-6380]; e-invoicing if turnover is over the threshold [FIN-6381].
+
+Sources for this section:
 - FIN-6382: India MSMED Act 45-day payment.
 - COG-6264: India MRP and pack declarations.
 - FIN-6380, FIN-6381: India GST tax invoice and e-invoicing.
-
-What makes this skill ours: every term has a walk-away, not just a wish; exclusivity is always tied to minimums that switch it off; the margin stack is checked down to the shelf price; trademark and marketplace accounts stay with the store; and India's MSME payment rule and GST invoicing sit inside the payment terms.

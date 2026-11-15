@@ -1,0 +1,16 @@
+{
+  "about": "How you judge results. Every readout uses these, and they change only with your yes.",
+  "main": { "metric": "roas_7d_click", "say": "Return on ad spend, 7-day click", "target": 2.5 },
+  "second": [
+    { "metric": "hook_rate", "say": "3-second video views divided by impressions", "target": 0.3 },
+    { "metric": "hold_rate", "say": "ThruPlays divided by 3-second views", "target": 0.25 },
+    { "metric": "link_ctr", "say": "Link clicks divided by impressions", "target": 0.01 }
+  ],
+  "guardrails": [
+    { "metric": "cost_per_purchase", "say": "Cost per purchase", "max": 45 },
+    { "metric": "refund_rate", "say": "Refunds divided by orders, 30 days", "max": 0.08 }
+  ],
+  "judge_after": { "min_spend": 150, "min_days": 7 },
+  "scale_when": "Beats the main target for 7 days with at least 30 purchases and no guardrail broken",
+  "cut_when": "Spent 3 times the cost-per-purchase guardrail with no purchase, or under half the main target after the minimum spend"
+}

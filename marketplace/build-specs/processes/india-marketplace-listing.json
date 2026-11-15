@@ -1,0 +1,268 @@
+{
+  "id": "india-marketplace-listing",
+  "name": "Indian marketplace listings, from margin to live",
+  "goal": "Listings on Flipkart, Myntra, Nykaa, Ajio or Meesho with a floor price per product that holds after commission, fees, shipping, return to origin (RTO) and TCS, Legal Metrology details on every listing, images to each marketplace's guide, published only with your yes on the exact sheet, and reviewed on profit per delivered order after 30 days.",
+  "starts_from": "A decision to sell on an Indian marketplace (often from a go-to-market plan), new products for one you already sell on, or listings that are rejected or lose money. Amazon.in goes to the Amazon listing process with Garrett; quick commerce (Blinkit, Zepto, Instamart) onboarding is a separate job with Ishita.",
+  "folder": "listings",
+  "metrics": [
+    "Main number: the one you set in context/goals.json, asked first (for most sellers, profit per delivered order, counted on delivered orders, not placed ones).",
+    "Guardrails: RTO rate and return rate per product, and the marketplace's seller ratings.",
+    "Clean publish: every listing passes the marketplace's quality check, with Legal Metrology details matching the pack."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Gather what we know",
+      "agent": "ishita-india-commerce",
+      "access": "read",
+      "gate": "none",
+      "say": "Collects the facts first: which marketplace and why (where your category sells), your GST registration, product data with GS1 barcodes, costs, each marketplace's commission, fee and return terms with the date checked, past settlement reports with their TCS and TDS lines, and for each product the Legal Metrology details (maker or importer, net quantity, MRP, unit sale price, date, origin, customer care) and any BIS or FSSAI need. Writes down the access level for each seller panel. Opening the seller account and entering GST, bank and identity details stay with you.",
+      "needs": [
+        "context/org-context/ (customers, voice, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/learnings.md",
+        "product data export and cost sheet",
+        "marketplace rate cards and settlement reports",
+        "the task that started this job"
+      ],
+      "makes": [
+        "intake.md",
+        "fact-sheet.md"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md names the marketplace, buyers, products, fees and terms with their source and date, the access level and the answered questions; fact-sheet.md lists every product fact and Legal Metrology line with its source."
+    },
+    {
+      "id": "margin",
+      "name": "Margin and floor price per product",
+      "agent": "ishita-india-commerce",
+      "access": "draft",
+      "gate": "none",
+      "say": "Works out profit per delivered order for each product after commission, fixed and collection fees, shipping both ways on RTO, damaged returns, TCS and GST, then sets a floor price and a target. Products that lose money on COD orders are flagged with a prepaid-only or price option.",
+      "needs": [
+        "intake.md",
+        "your cost sheet"
+      ],
+      "makes": [
+        "price-sheet.csv",
+        "price-notes.md"
+      ],
+      "checks": [
+        "margin-check"
+      ],
+      "done_when": "price-sheet.csv gives each product's cost, every fee, RTO allowance, floor and target, and price-notes.md shows the working and names the products not to list."
+    },
+    {
+      "id": "listing-copy",
+      "name": "Listing data and copy",
+      "agent": "georgia-product-copy",
+      "access": "draft",
+      "gate": "none",
+      "say": "Fills the marketplace's own catalog template from real data: titles and key attributes the way that marketplace's buyers search, descriptions that answer real doubts, and the Legal Metrology fields exactly as on the pack. Missing facts become questions, never guesses.",
+      "needs": [
+        "fact-sheet.md",
+        "price-sheet.csv",
+        "the marketplace's current catalog template",
+        "context/org-context/ voice and claims"
+      ],
+      "makes": [
+        "listing.md",
+        "upload/catalog-sheet.csv"
+      ],
+      "checks": [
+        "copy-lint",
+        "proof-check",
+        "india-rules",
+        "compliance-review"
+      ],
+      "done_when": "Every product has every required field and Legal Metrology line filled from a named source, and prices sit at or above their floor."
+    },
+    {
+      "id": "images",
+      "name": "Images for this marketplace",
+      "agent": "tanvi-listing-images",
+      "access": "draft",
+      "gate": "none",
+      "say": "Reworks your image set to the marketplace's current image guide and adds a back-of-pack image where the label details buyers must be able to read are shown. Uses your real product photos; nothing is redrawn by a model, and there is no paid generation without your yes and the cost.",
+      "needs": [
+        "listing.md",
+        "your real product photos and pack artwork",
+        "the marketplace's current image guide"
+      ],
+      "makes": [
+        "images/images.md"
+      ],
+      "checks": [
+        "image-review",
+        "compliance-review"
+      ],
+      "done_when": "images.md lists every image per product with its file, size and the rule it meets, including the back-of-pack image."
+    },
+    {
+      "id": "listing-pack",
+      "name": "Listing pack for your approval",
+      "agent": "ishita-india-commerce",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts the exact upload on one page: each product with its title, price against its floor, profit per delivered order, Legal Metrology lines and images, the product count, and how it will be published. Items your CA or lawyer still needs to confirm (GST rate, BIS or FSSAI) are listed and held back.",
+      "needs": [
+        "upload/catalog-sheet.csv",
+        "listing.md",
+        "price-sheet.csv",
+        "images/images.md"
+      ],
+      "makes": [
+        "listing-pack.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You read the pack. Reply yes with the code to send exactly this sheet to the publish step. The code stops working if any file changes.",
+      "done_when": "listing-pack.md shows every product, price, floor, margin, Legal Metrology line and image, the held items, and the publish route."
+    },
+    {
+      "id": "publish",
+      "name": "Publish the listings",
+      "agent": "ishita-india-commerce",
+      "access": "publish",
+      "gate": "none",
+      "optional": true,
+      "say": "On Flipkart, if you created developer access for your own account, shows you the publish plan and on your yes sends exactly the signed-off products through Flipkart's seller API. Myntra, Nykaa, Ajio and Meesho had no public self-serve seller API we could confirm on 15 November 2026, so for them, and for Flipkart without developer access, this stage has no plan: you upload the signed-off sheet in the marketplace's seller panel yourself, and Ishita reads the result.",
+      "needs": [
+        "listing-pack.md (signed off)",
+        "Flipkart developer access at level 3 on your host, or you in the seller panel"
+      ],
+      "makes": [
+        "publish-record.md"
+      ],
+      "publish": "Through the Flipkart Marketplace Seller API (Listing Management), using developer access you created for your own account: one step per product with exactly the signed-off fields and price. Other Indian marketplaces: you upload the sheet in their seller panel.",
+      "done_when": "publish-record.md lists each call or the upload, its time and its result, or what you uploaded and when."
+    },
+    {
+      "id": "verify",
+      "name": "Check the quality check result",
+      "agent": "ishita-india-commerce",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 2,
+      "say": "Reads which products passed the marketplace's quality check and went live, which were rejected and why, and whether price, stock, images and Legal Metrology lines match the pack. Fixes come back to you as a new, smaller sheet; nothing is resubmitted without a yes.",
+      "needs": [
+        "publish-record.md",
+        "the seller panel or API (read), or your screenshot of the listing status"
+      ],
+      "makes": [
+        "verify.md"
+      ],
+      "checks": [
+        "live-check"
+      ],
+      "done_when": "verify.md lists each product as live and matching, or rejected with its cause and fix."
+    },
+    {
+      "id": "readout",
+      "name": "Day 30 review",
+      "agent": "ishita-india-commerce",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 28,
+      "say": "Reads the first 30 days from settlement reports, not order counts: delivered orders, RTO and return rates by product and pin code, profit per delivered order after every fee and TCS, and seller ratings. Says keep, fix or stop for each product.",
+      "needs": [
+        "settlement and returns reports (read)",
+        "price-sheet.csv",
+        "context/goals.json"
+      ],
+      "makes": [
+        "results/readout.md"
+      ],
+      "checks": [
+        "numbers-check",
+        "readout-review"
+      ],
+      "done_when": "readout.md gives per product delivered orders, RTO rate, profit per delivered order and one call, with dates and sources."
+    },
+    {
+      "id": "learn",
+      "name": "Write down what we learned",
+      "agent": "callum-reporting",
+      "access": "draft",
+      "gate": "none",
+      "say": "Adds a dated lesson to context/learnings.md about this marketplace: which products and prices held their margin, what was rejected and why, and where RTO ate the profit.",
+      "needs": [
+        "results/readout.md",
+        "verify.md",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "results/learning.md"
+      ],
+      "checks": [
+        "learning-review"
+      ],
+      "done_when": "learning.md holds one lesson with its evidence and a confidence level, and the same lesson is appended to context/learnings.md."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every heading in intake.md is filled from a named source, fees carry their date, and missing facts are listed as answered questions, not guesses"
+    },
+    "margin-check": {
+      "kind": "reviewer",
+      "agent": "hemant-store-finance",
+      "passes_when": "every fee, TCS and the RTO cost are counted on delivered orders, floors cover landed cost, and the working is shown"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/listing.md",
+      "passes_when": "the copy checker exits 0 (no banned words, no made-up stats)"
+    },
+    "proof-check": {
+      "kind": "script",
+      "run": "node tools/quality/proof.cjs <folder>/listing.md --sources <folder>/fact-sheet.md --sources context/org --offline",
+      "passes_when": "every figure in the listings is backed by the fact sheet or the Org context"
+    },
+    "india-rules": {
+      "kind": "reviewer",
+      "agent": "ishita-india-commerce",
+      "passes_when": "every listing carries the Legal Metrology details exactly as on the pack, MRP and unit sale price are right, BIS or FSSAI needs are flagged with the rule and check date, and items for your CA or lawyer are named"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "no unproven or restricted claims for the category, images follow the marketplace's guide, and nothing breaks the marketplace's listing policy"
+    },
+    "image-review": {
+      "kind": "reviewer",
+      "agent": "ayaka-ad-design",
+      "passes_when": "the product is the real one, each image meets the marketplace's guide, and the back-of-pack details are readable at phone size"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "sudhir-marketplaces",
+      "passes_when": "every product in the sheet appears in the pack with its price, floor, margin, Legal Metrology lines and images, and nothing differs from the sheet"
+    },
+    "live-check": {
+      "kind": "reviewer",
+      "agent": "tanvi-listing-images",
+      "passes_when": "the live listings match the signed-off pack, and every rejection has a cause and a fix"
+    },
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs context/numbers.json --final <folder>/results/readout.md",
+      "passes_when": "every rate and total in the review recomputes from its own inputs"
+    },
+    "readout-review": {
+      "kind": "reviewer",
+      "agent": "hemant-store-finance",
+      "passes_when": "profit per delivered order matches the settlement reports for the stated dates, TCS is matched, and each call follows the stop rule"
+    },
+    "learning-review": {
+      "kind": "reviewer",
+      "agent": "sudhir-marketplaces",
+      "passes_when": "the lesson is supported by its evidence and the next marketplace job can use it"
+    }
+  }
+}

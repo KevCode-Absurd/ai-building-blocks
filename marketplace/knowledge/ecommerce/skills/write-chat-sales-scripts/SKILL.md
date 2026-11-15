@@ -1,6 +1,6 @@
 ---
 name: write-chat-sales-scripts
-description: "A set of 15 to 25 ready chat replies for the questions buyers ask before they buy, counted from the store's own chat history, each written to answer the question with a checked fact, recommend one product or variant that fits what the buyer said, and ask for the order with one clear next step. Each reply has a short and a full version, a clarifying-question version, one real review that answers the same doubt, the source of every fact, and a rule for when to hand the chat to a person. Works for WhatsApp, Instagram, site chat and Messenger, with India notes for COD, delivery by pincode and regional languages. Use when chat replies are slow, inconsistent or answer without ever asking for the order."
+description: "A set of 15 to 25 ready chat replies for the questions buyers ask before they buy, counted from the store's own chat history, each written to answer the question with a checked fact, recommend one product or variant that fits what the buyer said, and ask for the order with one clear next step. Each reply has a short and a full version, a clarifying-question version, one real review that answers the same doubt, the source of every fact, and a rule for when to hand the chat to a person. Works for WhatsApp, Instagram, site chat and Messenger, with market notes for payment methods, delivery by postcode and the languages your buyers use. Use when chat replies are slow, inconsistent or answer without ever asking for the order."
 ---
 
 # Chat sales scripts
@@ -27,19 +27,19 @@ Required:
 
 1. **Chat history**: the last 200 to 300 pre-purchase chats, from WhatsApp chat export (text file per chat), the Instagram inbox, the helpdesk export or site chat transcripts. Fewer than 100: add support tickets, product page questions and reviews, and mark the ranking "thin".
 2. **Product pages and specs** for the products asked about.
-3. **Policy pages**: shipping times and areas, COD, returns, warranty, payment methods.
+3. **Policy pages**: shipping times and areas, returns, warranty, payment methods (including pay on delivery where offered).
 4. **Reviews export** (CSV with rating, text, date, product, verified flag).
 5. **Approved claims list**, or `product-claims-profile` output if it exists.
 6. **Gross profit per product**, so recommendations lean to products that earn.
 
-Optional: post-purchase survey answers, brand voice notes, regional language needs.
+Optional: post-purchase survey answers, brand voice notes, the languages your buyers use.
 
 Access: read only (level 1) to write the library. Loading quick replies into a live account is level 2 and needs the client's yes; no buyer gets a new script until the client approves the library.
 
 ## Before you start: the gates
 
 1. **Facts are sourced.** Every number, time, ingredient, material and promise in a reply links to a page or document dated within 90 days. Fail: leave that reply out and name the missing fact in one line.
-2. **Claims are allowed.** Health, safety, results and comparison claims need proof the store can show on demand; in India the ASCI Code requires it [ADC-6146]. Fail: rewrite to what the proof says.
+2. **Claims are allowed.** Health, safety, results and comparison claims need proof the store can show on demand; the FTC in the US, the ASA's CAP Code in the UK and EU consumer law all expect it. Fail: rewrite to what the proof says.
 3. **Gross profit per product known.** Pass: step 4 recommends from it. Fail: recommend by fit only and mark it.
 4. **Someone owns hand-offs.** A named person takes chats the scripts must not answer. Fail: hand-off rule says "email us" with a stated reply time.
 
@@ -47,13 +47,13 @@ Access: read only (level 1) to write the library. Loading quick replies into a l
 
 ### 1. Count the questions
 
-Read each chat and tag the buyer's first real question into one type: fit or size; will it work for me; ingredients, material or safety; delivery time, area or cost; COD and payment; returns and warranty; price or discount; comparison with another product; gift; stock or restock; how to use. Count each type and keep the buyer's exact words for the top examples. The "what almost stopped you" answers from a post-purchase survey are the best second source [CRO-0018].
+Read each chat and tag the buyer's first real question into one type: fit or size; will it work for me; ingredients, material or safety; delivery time, area or cost; payment methods; returns and warranty; price or discount; comparison with another product; gift; stock or restock; how to use. Count each type and keep the buyer's exact words for the top examples. The "what almost stopped you" answers from a post-purchase survey are the best second source [CRO-0018].
 
 Keep the types that cover most chats, usually 15 to 25. Price types go to `handle-price-objections-in-chat`.
 
 ### 2. Build the fact sheet
 
-For each type, write the one fact the reply depends on, with source and date: "Delivery to metro pincodes 2 to 4 days (shipping policy, checked 13 Nov)". Where the answer differs by product or pincode, write the lookup rule, not one number.
+For each type, write the one fact the reply depends on, with source and date: "Delivery to major cities 2 to 4 days (shipping policy, checked 13 Nov)". Where the answer differs by product or postcode, write the lookup rule, not one number.
 
 ### 3. Write each reply in three moves
 
@@ -61,7 +61,7 @@ Every reply does three things, in this order:
 
 1. **Answer** in one or two lines with the fact. No warm-up.
 2. **Recommend** one product or variant that fits what the buyer said, with one reason in their words. Where quantity depends on use, tie the choice to their situation (one person or a family, small room or large) [OFF-0018].
-3. **Ask** one question that moves to the order: "Shall I send the link for size M?" or "Want me to check delivery to your pincode?"
+3. **Ask** one question that moves to the order: "Shall I send the link for size M?" or "Want me to check delivery to your postcode?"
 
 Rules:
 
@@ -81,9 +81,9 @@ Give the agent the exact closing actions:
 - Product link with the variant selected and a UTM tag (`utm_medium=chat&utm_content=<agent>`).
 - A cart or invoice link: in Shopify, a draft order sends the buyer a checkout link with the items already in it.
 - On WhatsApp, the catalog item or cart.
-- COD: the agent places nothing on the buyer's behalf without a clear yes and the buyer's address in their own words.
+- Orders placed in chat (including pay on delivery): the agent places nothing on the buyer's behalf without a clear yes and the buyer's address in their own words.
 
-Never ask for card numbers, OTPs or UPI PINs in chat. Payment happens on the checkout or gateway page.
+Never ask for card numbers, one-time passcodes or bank PINs in chat. Payment happens on the checkout or gateway page.
 
 ### 6. Plan the follow-up
 
@@ -95,11 +95,12 @@ Hand the chat to a person, saying so, when the buyer asks for a person, asks a m
 
 ### 8. Languages and tone
 
-Write in the brand's voice (read 5 real brand lines beside 5 of yours). For Hindi, Hinglish or a regional language, a native speaker writes or checks each reply; machine translation alone changes meaning in product facts.
+Write in the brand's voice (read 5 real brand lines beside 5 of yours). For any language other than the brand's main one, a native speaker writes or checks each reply; machine translation alone changes meaning in product facts.
 
-### India and US notes
+### Market notes
 
-- **India:** delivery time by pincode, COD availability and fee, prices including GST, open-box delivery only if the courier offers it. A buyer who chats before a COD order is a good moment to mention prepaid options plainly, never as pressure.
+- **UK, EU and Australia:** prices include VAT or the local sales tax; state the right to cancel or return (14 days for most online orders in the UK and EU) plainly; delivery time by postcode or region.
+- **Anywhere:** if the store offers pay on delivery in a region, state where it is available and any fee. A buyer who chats before a pay-on-delivery order is a good moment to mention prepaid options plainly, never as pressure.
 - **US:** sales tax added at checkout, shipping cut-off times, returns window in days; texting replies to buyers who opted in by SMS follow `sms-and-whatsapp-compliance-setup`.
 
 ## Checks before you hand it over
@@ -147,6 +148,15 @@ Example row (fill with the store's facts):
 - EML-6322: 24-hour window and template categories on WhatsApp.
 - CRO-6361: human path for automated WhatsApp replies.
 - ORG-6365: Instagram automated chats should say they are automated.
-- ADC-6146: India's ASCI Code on substantiated claims.
 
 What makes this skill ours: replies are ranked by the store's own chat counts, every one ends with an order step, each carries a dated fact source and a real review that answers the same doubt, and follow-ups are timed to WhatsApp's 24-hour window instead of paid templates.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- Answer delivery time by pincode, COD availability and fee, prices including GST, and open-box delivery only if the courier offers it.
+- A buyer who chats before a COD order is a good moment to mention prepaid options plainly, never as pressure.
+- Never ask for UPI PINs or OTPs in chat.
+- For Hindi, Hinglish or a regional language, a native speaker writes or checks each reply.
+- Health, safety, results and comparison claims need proof under the ASCI Code [ADC-6146].
+- ADC-6146: India's ASCI Code on substantiated claims.

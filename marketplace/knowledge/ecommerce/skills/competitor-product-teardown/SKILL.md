@@ -25,7 +25,7 @@ description: "A teardown of one rival product the store competes with: its real 
 
 Required:
 
-1. **The rival product:** its product page URL, and marketplace listings (Amazon, Flipkart, Myntra, Nykaa) if it sells there.
+1. **The rival product:** its product page URL, and marketplace listings (Amazon, Walmart, Etsy, eBay, Zalando or the store's local marketplaces) if it sells there.
 2. **The store's matching product** with its gross profit per order, from `build-sku-profit-sheet` or worked out here.
 3. **Rival reviews:** at least 50 if they exist, read from the page or marketplace. Read by hand; do not scrape against a site's terms.
 
@@ -38,7 +38,7 @@ Access: read only (level 1). A test purchase is spending money, so it needs the 
 1. **Own gross profit per order known.** Pass: delivered costs in [MEA-0037]. Fail: compute it first; a plan to beat a rival on price cannot be judged without it.
 2. **Same job.** Pass: the rival sells to the same buyer for the same use. Fail: pick a closer rival or say the products do not really compete.
 3. **Evidence dated.** Every observation gets a date and a link or screenshot. Prices and offers change weekly.
-4. **Comparison law.** Anything the plan says publicly about the rival must be true, clear and provable: US rules allow naming a rival when the comparison is fair [MCR-6020]; India's ASCI code allows it only when what is compared is clear, fairly chosen and provable [MCR-6024].
+4. **Comparison law.** Anything the plan says publicly about the rival must be true, clear and provable: US rules allow naming a rival when the comparison is fair [MCR-6020]; UK and EU rules allow it only when what is compared is like for like, verifiable and not denigrating. Check the rule in each market where the plan will run.
 
 ## Steps
 
@@ -47,7 +47,7 @@ Access: read only (level 1). A test purchase is spending money, so it needs the 
 Record on one date:
 
 - List price, sale price, any "was" price, and how long the sale has run. A "was" price counts only if the item was really sold at it [OFF-6145].
-- **Delivered price:** add shipping, COD fee, platform fee, GST or sales tax shown at checkout. Go to checkout without paying to see it.
+- **Delivered price:** add shipping, any pay-on-delivery fee, platform fee, sales tax or VAT shown at checkout, and duties for cross-border orders. Go to checkout without paying to see it.
 - Bundles, subscriptions, gifts, thresholds, guarantee and return terms, delivery promise.
 - Merchant Center benchmark price for the same GTIN, if both sell a shared product [PRD-6482].
 
@@ -69,11 +69,11 @@ Read reviews by hand and paste exact phrases; automatic summaries lose the words
 | Praise: result | what it did for them |
 | Praise: feature | material, taste, fit, ease |
 | Complaint: product | broke, wrong size, smell |
-| Complaint: service | late, refund trouble, COD hassle |
+| Complaint: service | late, refund trouble, delivery or payment hassle |
 | Failed before | other products they tried first [AVT-0009] |
 | Who they are | "as a nurse", "for my mother" [AVT-0016] |
 
-Count each code against the total of usable reviews. Read 3-star reviews closely: when they pull in opposite directions (too simple, too complex), do not chase either; keep the core simple and offer depth separately [AVT-0008]. On Indian marketplaces, read reviews in Hindi and other languages too, and note delivery and COD complaints separately from product faults.
+Count each code against the total of usable reviews. Read 3-star reviews closely: when they pull in opposite directions (too simple, too complex), do not chase either; keep the core simple and offer depth separately [AVT-0008]. Read reviews in all the languages your buyers use, and note delivery and payment complaints separately from product faults.
 
 ### 4. If possible, buy and test it
 
@@ -94,10 +94,10 @@ For each weak spot, write one move in one of four lanes:
 
 Rank moves by gross profit effect, evidence strength and effort. Name the first move, and any second move that adds to it with its own gross profit effect.
 
-### 7. India and US notes
+### 7. Notes by market
 
-- India: compare COD fee, prepaid discount, delivery days to tier 2 and 3 pincodes, and the return or replacement window; these often decide the sale more than price.
-- US: compare free-shipping thresholds, return windows and any subscription terms; check whether the rival's sale price is genuine before matching it.
+- Everywhere: compare free-shipping thresholds, delivery days to the store's main regions (including rural and remote areas), the return or replacement window and any subscription terms; these often decide the sale more than price.
+- Check whether the rival's sale price is genuine before matching it; in the EU a "was" price must be the lowest of the last 30 days. For cross-border rivals, check who pays duties and taxes at the door.
 
 ## Checks before you hand it over
 
@@ -107,7 +107,7 @@ Rank moves by gross profit effect, evidence strength and effort. Name the first 
 - Weak spots rest on counted evidence or a test purchase, not opinion.
 - Each move shows its effect on the store's gross profit per order.
 - No plan step copies the rival's words, images or claims.
-- Any public comparison passes the US or India comparison rule.
+- Any public comparison passes the comparison rule in each market where it runs.
 
 ## Output
 
@@ -153,6 +153,17 @@ Rank moves by gross profit effect, evidence strength and effort. Name the first 
 - PRD-0002: change one major variable.
 - AVT-0014: same product, win an unserved buyer.
 - ADC-0057: better unit economics win auctions.
-- MCR-6020, MCR-6024: comparison rules in the US and India.
+- MCR-6020: comparison rules in the US.
 
-What makes this skill ours: prices are compared at the door, with COD fees and taxes; review themes are counted and quoted rather than summarised; every way to beat the rival is priced against the store's own gross profit; and India's delivery, COD and multilingual reviews are read as their own signals.
+What makes this skill ours: prices are compared at the door, with delivery fees, duties and taxes; review themes are counted and quoted rather than summarised; every way to beat the rival is priced against the store's own gross profit; and delivery, payment and other-language reviews are read as their own signals.
+
+## Selling in India
+
+- Capture the rival's listings on Flipkart, Myntra or Nykaa as well as Amazon.in.
+- Delivered price includes the COD fee and GST shown at checkout.
+- Compare COD fee, prepaid discount, delivery days to tier 2 and 3 pincodes, and the return or replacement window; these often decide the sale more than price.
+- Read reviews in Hindi and other languages, and log COD complaints apart from product faults.
+- India's ASCI code allows comparisons only when what is compared is clear, fairly chosen and provable [MCR-6024].
+
+Sources for this section:
+- MCR-6024: comparison rules in India.

@@ -1,0 +1,251 @@
+{
+  "id": "pinterest-launch",
+  "kind": "continuation",
+  "name": "Launch signed-off creative on Pinterest",
+  "goal": "Signed-off images or videos become Pinterest ads with keyword-led Pin titles and descriptions, tracked links and a budget and cap you approved, built paused, switched on only with your yes, then read at day 7 and day 21 and turned into a lesson.",
+  "starts_from": "A signed-off job from the image ad process (best for Pinterest, which favours tall images) or the video ad process. It keeps the same folder, so the concepts, files and reviews travel with it.",
+  "folder": "creatives",
+  "metrics": [
+    "Main number: the one you set in context/goals.json, asked first (for most stores, cost per purchase or return on ad spend, judged over at least two weeks because Pinterest buyers plan ahead).",
+    "Pin numbers: outbound click rate, saves and cost per outbound click for each creative.",
+    "Clean launch: what is live matches the approved pack exactly, and every ad passed Pinterest's review or a rejection was handled within a day."
+  ],
+  "stages": [
+    {
+      "id": "pin-copy",
+      "name": "Pin titles, descriptions and keywords",
+      "agent": "marnie-pinterest-ads",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the Pin title and description for each signed-off creative from the words people search on Pinterest when they plan (from the keyword and board map), not from ad slogans. Picks the ad group keywords and negatives, and the tracked link for each Pin to the matching product or collection page.",
+      "needs": [
+        "final/ and final/review.md from the creative job",
+        "concepts.md or script.md",
+        "context/org-context/ voice and claims",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "pinterest/pin-copy.md",
+        "pinterest/keywords.csv",
+        "pinterest/utm.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "compliance-review"
+      ],
+      "done_when": "Each creative has its title, description and tracked link, the keyword list has its negatives, and every claim is proven."
+    },
+    {
+      "id": "structure",
+      "name": "Setup check, structure and budget",
+      "agent": "marnie-pinterest-ads",
+      "access": "read",
+      "gate": "none",
+      "say": "Checks the pieces Pinterest ads depend on: the claimed website, the Pinterest tag with checkout events carrying currency and order value, the API for Conversions if you use it, and catalog health for product ads. If tracking fails it stops and writes the developer steps. Then sets the campaign objective, ad groups, targeting, daily budget, end date and the decision rule, inside your money limits.",
+      "needs": [
+        "pinterest/pin-copy.md",
+        "context/limits.json",
+        "warehouse views ads_daily and shop_orders_daily",
+        "Pinterest Ads Manager conversions page (read)"
+      ],
+      "makes": [
+        "pinterest/structure.md"
+      ],
+      "checks": [
+        "tracking-review",
+        "structure-review"
+      ],
+      "done_when": "structure.md gives the setup check result, the objective, ad groups, daily budget in whole units, end date and decision rule, each with its reason, inside your limits."
+    },
+    {
+      "id": "ad-pack",
+      "name": "Ad pack for approval",
+      "agent": "marnie-pinterest-ads",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts each Pin's file, title, description, link and keywords, plus the structure, budget and dates, on one page in the job folder.",
+      "needs": [
+        "final/",
+        "pinterest/pin-copy.md",
+        "pinterest/keywords.csv",
+        "pinterest/structure.md"
+      ],
+      "makes": [
+        "pinterest/ad-pack.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You check the pack. Reply yes with the code to send exactly this to the build step. A new campaign and its cap always need this yes.",
+      "done_when": "ad-pack.md shows each Pin with its file, copy, link, keywords, budget and dates."
+    },
+    {
+      "id": "build",
+      "name": "Build the campaign paused",
+      "agent": "marnie-pinterest-ads",
+      "access": "publish",
+      "gate": "none",
+      "optional": true,
+      "say": "Shows you a build plan, then on your yes creates the Pins, campaign, ad groups and ads exactly as in the pack, with the campaign status set to paused so nothing spends, and reads them back. Pinterest's own MCP server is announced but open only to a small group of alpha partners, so there is no official Pinterest connector in Claude yet. The build needs a Pinterest API tool on your host. Without one, this stage has no plan: Marnie gives you a build sheet, you build it paused in Ads Manager, and she reads it back.",
+      "needs": [
+        "pinterest/ad-pack.md (signed off)",
+        "Pinterest API at level 2 or 3 on your host, or you in Ads Manager"
+      ],
+      "makes": [
+        "pinterest/build-record.md"
+      ],
+      "publish": "Through the Pinterest API v5 with the ads:write and pins:write permissions: Pin, campaign, ad group and ad create steps with campaign status PAUSED set in every plan. Without an API tool, you build it paused in Ads Manager from the build sheet. No money is spent at this stage.",
+      "done_when": "build-record.md lists every object with its id and paused status, read back, matching the pack.",
+      "requires_signed": [
+        "final/*"
+      ]
+    },
+    {
+      "id": "go-live",
+      "name": "Go live",
+      "agent": "marnie-pinterest-ads",
+      "access": "publish",
+      "gate": "none",
+      "optional": true,
+      "say": "Shows you the go-live plan: the exact campaign to switch on, the daily spend, the end date and the cap. On your yes it switches that campaign on, and only that. If you built it in Ads Manager, you can switch it on yourself and this stage records the time.",
+      "needs": [
+        "pinterest/build-record.md"
+      ],
+      "makes": [
+        "pinterest/launch-record.md"
+      ],
+      "publish": "Through the Pinterest API v5: one campaign update step setting status ACTIVE on the exact campaign id. Money starts to be spent from this step.",
+      "done_when": "The campaign reads back as active, and launch-record.md lists the ids, budget, dates and time.",
+      "requires_signed": [
+        "final/*"
+      ]
+    },
+    {
+      "id": "verify",
+      "name": "Check after launch",
+      "agent": "marnie-pinterest-ads",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 1,
+      "say": "One day after go-live, reads every ad back: Pinterest's review result (Pinterest says review can take up to 24 hours), delivery, spend against the cap and checkout events arriving. Records each ad id against its creative in the creative register. It adds its ads to register.json and never replaces lines another channel wrote.",
+      "needs": [
+        "pinterest/launch-record.md",
+        "Pinterest Ads Manager (read)"
+      ],
+      "makes": [
+        "pinterest/verify.md",
+        "register.json"
+      ],
+      "checks": [
+        "launch-verify"
+      ],
+      "done_when": "Every ad is approved or its rejection has a cause and a fix, and register.json maps each Pinterest ad id to its creative and job."
+    },
+    {
+      "id": "day-7",
+      "name": "Day 7: is it delivering?",
+      "agent": "marnie-pinterest-ads",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 6,
+      "say": "Reads impressions, outbound clicks, saves and spend against plan. Makes no scale or cut call yet, because Pinterest buyers often buy days or weeks after they save. Drafts a pause plan only for an ad clearly spending with no clicks.",
+      "needs": [
+        "register.json",
+        "warehouse view ads_daily"
+      ],
+      "makes": [
+        "pinterest/results/day-7.md"
+      ],
+      "done_when": "day-7.md lists each ad's delivery and early signals against plan and any draft fix with its reason."
+    },
+    {
+      "id": "readout",
+      "name": "Day 21 readout",
+      "agent": "jared-performance-marketing",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 14,
+      "say": "Reads the result against the decision rule written before launch: keep, change or stop, quoting the deciding number, its date range and attribution window, and the gap between Pinterest's purchases and shop orders from Pinterest.",
+      "needs": [
+        "warehouse views ads_daily and shop_orders_daily",
+        "pinterest/structure.md",
+        "context/goals.json"
+      ],
+      "makes": [
+        "pinterest/results/readout.md"
+      ],
+      "checks": [
+        "numbers-check",
+        "readout-review"
+      ],
+      "done_when": "readout.md gives one call per ad group with the deciding number, the rule it met, and the gap to shop orders."
+    },
+    {
+      "id": "learn",
+      "name": "Write down what we learned",
+      "agent": "callum-reporting",
+      "access": "draft",
+      "gate": "none",
+      "say": "Adds a dated lesson to context/learnings.md: which concepts, keywords and formats worked on Pinterest, how sure we are, and what to test next. Any change the readout calls for goes to you as a new plan. Lessons from too little spend are marked as hunches.",
+      "needs": [
+        "pinterest/results/readout.md",
+        "register.json",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "pinterest/results/learning.md"
+      ],
+      "checks": [
+        "learning-review"
+      ],
+      "done_when": "learning.md holds one lesson with its evidence and a confidence level, and the same lesson is appended to context/learnings.md."
+    }
+  ],
+  "checks": {
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/pinterest/pin-copy.md",
+      "passes_when": "the copy checker exits 0 (no banned words, no made-up stats, no keyword stuffing flags)"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "no Pinterest ad policy problems, no unproven claims, no restricted wording, and the AI disclosure answer from the creative review is carried over"
+    },
+    "tracking-review": {
+      "kind": "reviewer",
+      "agent": "emre-tracking",
+      "passes_when": "checkout events fire with currency and value, server events are deduplicated by event id if used, and the gap to shop orders is stated with dates"
+    },
+    "structure-review": {
+      "kind": "reviewer",
+      "agent": "jared-performance-marketing",
+      "passes_when": "the budget and dates are inside your limits, the objective fits the goal, and the decision rule was written before launch"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every Pin in the pack has a file, copy, link, keywords, budget and dates, and nothing is missing from the signed-off creative job"
+    },
+    "launch-verify": {
+      "kind": "reviewer",
+      "agent": "jared-performance-marketing",
+      "passes_when": "what is live matches the approved plans exactly, and every rejection has a cause and a fix"
+    },
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs context/numbers.json --final <folder>/pinterest/results/readout.md",
+      "passes_when": "every rate and total in the readout recomputes from its own inputs"
+    },
+    "readout-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "each number matches the warehouse for the stated dates, and the call follows the rule written before launch"
+    },
+    "learning-review": {
+      "kind": "reviewer",
+      "agent": "tendai-ad-creative",
+      "passes_when": "the lesson is supported by its evidence, its confidence fits the spend and sample, and a brief writer can use it"
+    }
+  }
+}

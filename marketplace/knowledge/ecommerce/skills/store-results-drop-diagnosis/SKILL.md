@@ -105,9 +105,9 @@ Estimate the share of the drop each cause explains (conversion rate down 18% exp
 - **Do not:** raise budget on tired creative (it burns faster); change targeting to fix fatigue (it moves the problem); call a platform shift when only one campaign moved; pause a campaign still under target on early signals.
 - Each step: what changes, who, access level, expected effect, and a monitoring line ("check frequency in 3 days; if still above 2, launch the new concepts").
 
-### 7. India and cash-on-delivery stores
+### 7. Failed deliveries and payment problems
 
-Check delivered orders, not placed ones: a rise in return to origin, courier delays or a UPI outage can look like an ad problem. Compare cash-on-delivery share and its RTO rate before and after (practitioner default, test it).
+Check delivered and paid orders, not placed ones: a rise in failed deliveries, courier delays, a payment provider outage or a jump in declined cards can look like an ad problem. Compare the share of orders that failed delivery or payment, by payment method, before and after (practitioner default, test it). Where pay on delivery is offered, check its share and its refusal rate too.
 
 ## Checks before you hand it over
 
@@ -161,3 +161,7 @@ Check delivered orders, not placed ones: a rise in return to origin, courier del
 - [GAD-0036]: targeted fixes before rebuilds.
 
 What makes this skill ours: profit is judged against the store's own break-even, never a return of 1; the store's conversion rate, stock and site are checked before any ad account; patterns are matched in a fixed order with tracking first; and each cause carries its share of the drop and a scored confidence, with cash-on-delivery stores judged on delivered orders.
+
+## Selling in India
+
+- In step 7, compare the COD share and its RTO rate before and after the drop, and check for a UPI outage on the days results fell.

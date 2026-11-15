@@ -27,7 +27,7 @@ Required (read access, level 1):
 
 1. **Shopify Finances summary and Sales report** for the month: Gross sales, Discounts, Returns, Net sales, Shipping charges, Taxes, Total sales; and the **order export** (Created at, Subtotal, Discount Amount, Shipping, Taxes, Refunded Amount, Payment Method, Lineitem sku, Lineitem quantity, Customer ID).
 2. **Landed cost per SKU**, including inbound freight, duty and retail packaging.
-3. **Invoices or exports for variable costs**: courier or 3PL invoices, packaging, payment gateway fees (payouts report), COD fees and RTO charges.
+3. **Invoices or exports for variable costs**: courier or 3PL invoices, packaging, payment gateway fees (payouts report), pay on delivery fees and failed-delivery or return charges.
 4. **Marketing spend**: Meta, Google and other ad account invoices; creator, affiliate and agency costs.
 5. **Fixed costs**: payroll, rent, apps and software, retainers, and the bookkeeping ledger if there is one.
 
@@ -48,7 +48,7 @@ If landed costs are missing, stop: the P&L has no gross profit without them. If 
 - Gross sales (before discounts, excluding tax and shipping).
 - Minus discounts. Coupons reduce revenue; they are not a cost of goods [FIN-0009].
 - Minus returns. Shopify books returns on the refund date [MEA-0011], so a big month's returns land in the next month. Instead, accrue expected returns at the matured return rate on this month's sales, then true up against actual refunds [MEA-0028].
-- Minus failed COD orders if they were counted as sales (India).
+- Minus failed or refused deliveries if they were counted as sales (common with pay on delivery).
 - = **Net sales**; plus **shipping charged** = **Net revenue**. This matches Shopify's net sales plus shipping; total sales includes tax and is not revenue [MEA-0010].
 
 Show the gross-to-net bridge every month; accounting software usually receives only Shopify's net figure, which hides why revenue moved [FIN-0010].
@@ -59,7 +59,7 @@ Units sold x landed cost per unit, minus units returned to sellable stock, plus 
 
 ### 3. Delivery costs and contribution 1
 
-Outbound shipping, pick and pack, shipping cartons, payment gateway fees (including fees on refunded orders, which are not returned on Shopify Payments [FIN-6243]), COD fees, RTO freight and return freight. **Contribution 1 = gross profit minus delivery costs.** This is what each order really earns before marketing [MEA-0037].
+Outbound shipping, pick and pack, shipping cartons, payment gateway fees (including fees on refunded orders, which are not returned on Shopify Payments [FIN-6243]), pay on delivery fees, failed-delivery freight and return freight. **Contribution 1 = gross profit minus delivery costs.** This is what each order really earns before marketing [MEA-0037].
 
 ### 4. Marketing and contribution 2
 
@@ -91,9 +91,17 @@ Rank lines by money at stake: the gap between this month's share and the best of
 - gross margin falling: `negotiate-moq-and-price` or `set-prices-from-costs-and-competitors`;
 - fixed costs creeping: an app and retainer review.
 
-### India and US notes
+### 10. Per order, the target and where a miss comes from
 
-- **India:** revenue is net of GST; GST collected is a liability, and input credit on costs reduces what is paid, so book costs net of claimable GST. COD fees and RTO freight belong in delivery costs. Marketplace tax deductions are not costs if they can be claimed back; confirm with the CA.
+- **Per order:** divide every line by orders as well as by net revenue, so a creep of one or two points (fulfilment rising as courier rates rose) shows. When months bounce, add a three-month trailing average column.
+- **Packing staff on payroll:** if the people who pick and pack are salaried, move their cost into delivery costs as a cost per order (daily wage / parcels per day), so contribution 1 is comparable with a month when a 3PL did the work.
+- **New-customer warning:** marketing per new-customer order = acquisition spend / first orders. If it is higher than contribution 1 per order, the month is buying customers at a loss on the first order; say how many repeat orders recover it (step 7).
+- **Back-solve the target:** contribution 2 needed (% of net revenue) = net profit target % + fixed costs %. Show the gap between this month's contribution 2 and that line.
+- **Trace a miss upward:** a net profit miss comes from fixed costs, marketing or delivery; a contribution 2 miss from marketing or delivery; a gross profit miss from discounts, returns, product cost or shipping charged. Name the line that explains most of the points lost, and keep the layout (where shipping, payment fees and returns sit) the same every month, so the trace is fair.
+
+### Market notes
+
+- **VAT and goods and services tax markets (UK, EU, Australia, Canada and others):** revenue is net of VAT; VAT collected is a liability, and VAT reclaimed on costs reduces what is paid, so book costs net of reclaimable VAT. Pay on delivery fees and failed-delivery freight belong in delivery costs. Marketplace tax deductions are not costs if they can be claimed back; confirm with the accountant.
 - **US:** sales tax collected is not revenue. Marketplace facilitator states collect tax for marketplace sales, so marketplace payouts may already exclude it.
 
 ## Checks before you hand it over
@@ -105,6 +113,9 @@ Rank lines by money at stake: the gap between this month's share and the best of
 - First-order and returning contribution are shown separately.
 - Every estimate is marked, and the share of estimated costs is under 10% of total costs, or the P&L is labelled draft.
 - Each of the three actions has money at stake, owner and hand-off skill.
+- Every line is shown per order as well as per cent of net revenue.
+- The contribution 2 needed for the profit target is shown, and any miss is traced to the line above that explains it.
+- Salaried packing staff sit in delivery costs per order, not in fixed costs.
 
 ## Output
 
@@ -123,8 +134,8 @@ Rank lines by money at stake: the gap between this month's share and the best of
 | Cost of goods (landed) | | | | | | | | |
 | **Gross profit** | | | | | | | | |
 | Outbound shipping and pick-pack | | | | | | | | |
-| Payment and COD fees | | | | | | | | |
-| RTO and return freight | | | | | | | | |
+| Payment and pay on delivery fees | | | | | | | | |
+| Failed-delivery and return freight | | | | | | | | |
 | **Contribution 1** | | | | | | | | |
 | Ad spend by channel | | | | | | | | |
 | Creators, affiliates, spend-linked fees | | | | | | | | |
@@ -142,6 +153,8 @@ Rank lines by money at stake: the gap between this month's share and the best of
 
 **Action list:** Rank, Line, Money at stake per month, Lever, Owner, Hand off to.
 
+**Target and trace:** Profit target %, Fixed costs %, Contribution 2 needed %, Contribution 2 actual %, Gap, Line that explains the gap, Per-order view of that line this month and last.
+
 ## Common mistakes
 
 - **Total sales as revenue.** It includes tax [MEA-0010]. Step 1 starts from gross sales.
@@ -150,6 +163,8 @@ Rank lines by money at stake: the gap between this month's share and the best of
 - **Everything below gross profit lumped as expenses.** Steps 3 to 5 separate delivery, marketing and fixed costs so contribution is visible.
 - **One blended profit line.** Repeat buyers can hide a loss on new ones [MEA-0055]. Step 7 splits it.
 - **A list of ten problems.** Step 9 picks three by money at stake.
+- **Changing the layout between months.** Step 10 keeps it fixed so a miss can be traced.
+- **Packing wages hidden in fixed costs.** Step 10 moves them into delivery cost per order.
 
 ## Sources
 
@@ -166,5 +181,10 @@ Rank lines by money at stake: the gap between this month's share and the best of
 - MEA-0030: keep fixed costs out of contribution.
 - MEA-0037: gross margin uses delivered cost.
 - MEA-0055: split first-time and returning P&Ls.
+- Library item: Store P&L builder (AI Blocks skill), used for the per-order view, packing wages per order, the new-customer warning, the back-solved target and the upward trace in step 10.
 
 What makes this skill ours: returns are accrued to the month that caused them instead of the month Shopify books them; the P&L stops at two contribution lines before fixed costs so spend decisions are not distorted; first-order and returning profit are split; and the month ends with three actions ranked by money, not a list of everything that moved.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Revenue is net of GST; GST collected is a liability, and input credit on costs reduces what is paid, so book costs net of claimable GST. COD fees and RTO freight belong in delivery costs. Minus failed COD orders if they were counted as sales. Confirm marketplace tax deductions with the CA.

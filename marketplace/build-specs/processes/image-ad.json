@@ -1,0 +1,181 @@
+{
+  "id": "image-ad",
+  "name": "Image ad set, from brief to signed-off files",
+  "goal": "A set of on-brand image ads (usually 3 to 5 different concepts, each in 4:5 and 9:16) with the real product and logo, checked for design and claims, ready for the launch team.",
+  "starts_from": "A growth plan task, a creative refresh brief from the results review, a new product or offer, or you asking for new image ads.",
+  "folder": "creatives",
+  "then": [
+    "meta-launch",
+    "pinterest-launch",
+    "snapchat-launch",
+    "google-ads"
+  ],
+  "metrics": [
+    "Main number: the one you set in context/goals.json (for most stores, return on ad spend over 7 days).",
+    "Image numbers: click-through rate, cost per click and cost per purchase for each concept.",
+    "Cost: money spent on image generation for this set, against the estimate you approved."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Gather what we know",
+      "agent": "tendai-ad-creative",
+      "access": "read",
+      "gate": "none",
+      "say": "Collects where the data comes from and what is true before any design starts: who the buyer is, the gap or problem we are solving for them, the proof and claims we hold, the offer, where the ads will run, what past ads taught us, and which files and connectors we can reach. Gaps become questions for you. It also writes channels.json: the launch processes this creative will go to (for example [\"meta-launch\", \"tiktok-ads-launch\"]), from the placements in the task or the growth plan.",
+      "needs": [
+        "context/org-context/ (customers, voice, design, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/learnings.md",
+        "warehouse view creative_performance (last 90 days)",
+        "the task that started this job"
+      ],
+      "makes": [
+        "intake.md",
+        "channels.json"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md names the buyer, the gap, the proof, the offer, the placements, the winning and losing patterns from past ads, and the answered questions."
+    },
+    {
+      "id": "concepts",
+      "name": "Concepts",
+      "agent": "kemal-creative-director",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Proposes 3 to 5 truly different concepts, not colour swaps: each one has an angle, the buyer moment it speaks to, the one message, the visual idea, and the reason past results suggest it can win. Each concept names what it tests, so the results teach us something.",
+      "needs": [
+        "intake.md",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "concepts.md",
+        "cost-estimate.json"
+      ],
+      "checks": [
+        "concept-review"
+      ],
+      "signoff": "You pick the concepts to make and see the generation cost estimate. Reply yes with the code to approve the list and the budget as written, or say which to drop or change.",
+      "done_when": "Each concept has an angle, a message, a visual idea, the test it runs, and a link to the learning or gap behind it.",
+      "spends": "Sets the image generation budget for the set. Nothing is generated until you approve it."
+    },
+    {
+      "id": "copy",
+      "name": "Words on the image",
+      "agent": "kofi-ad-copy",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the headline and any short text that sits on each image, within the character limits for each placement, in the brand voice, with every claim tied to proof.",
+      "needs": [
+        "concepts.md (signed off)",
+        "context/org-context/ voice and claims"
+      ],
+      "makes": [
+        "image-copy.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "copy-review"
+      ],
+      "done_when": "Each concept has its on-image words, under the limits, with claims marked with their proof."
+    },
+    {
+      "id": "design",
+      "name": "Design the images",
+      "agent": "ayaka-ad-design",
+      "access": "draft",
+      "gate": "none",
+      "say": "Generates the scene or background, then lays your real product cutout and your real logo on top with an editing tool at fixed positions, so the product and logo are never redrawn by a model. Adds the words exactly as written. Exports 4:5 and 9:16 for each concept.",
+      "needs": [
+        "concepts.md",
+        "image-copy.md",
+        "your real product photos and logo",
+        "context/org-context/ design rules"
+      ],
+      "makes": [
+        "final/images.md",
+        "spend.json"
+      ],
+      "checks": [
+        "logo-contrast",
+        "design-review",
+        "spend-within-budget"
+      ],
+      "done_when": "Every approved concept has both sizes listed in final/images.md, the logo passes the contrast check, and the text matches image-copy.md exactly.",
+      "budget_from": "concepts"
+    },
+    {
+      "id": "final-review",
+      "name": "Final review and sign-off",
+      "agent": "kemal-creative-director",
+      "access": "draft",
+      "gate": "owner",
+      "say": "A reviewer who did not design the set checks each image against the intake and the design rules: does it stop the scroll, is the product true to life, is the message clear in one second, is it on brand. The compliance reviewer checks ad policy, claims and whether the image must be marked as made with AI. It also writes tags.json (concept, angle, hook type, format, length in seconds, persona, model used) so results can be compared by what was made. Before your sign-off it confirms channels.json, so your yes covers where the creative will run. Each channel gets its own launch job in the same folder.",
+      "needs": [
+        "final/",
+        "intake.md",
+        "concepts.md"
+      ],
+      "makes": [
+        "final/*",
+        "tags.json",
+        "channels.json"
+      ],
+      "checks": [
+        "creative-review",
+        "compliance-review"
+      ],
+      "signoff": "You look at every image. Reply yes with the code to sign off the set. It then goes to the launch team.",
+      "done_when": "review.md records PASS from both reviewers for each image and the AI disclosure answer, and your sign-off covers every file in final/ byte for byte."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every heading in intake.md is filled from a named source, and missing facts are listed as answered questions, not guesses"
+    },
+    "concept-review": {
+      "kind": "reviewer",
+      "agent": "tendai-ad-creative",
+      "passes_when": "the concepts differ in angle or buyer moment, each names its test, and none repeats a pattern that lost before without a reason"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/image-copy.md --limit \"Headline=40\"",
+      "passes_when": "the copy checker exits 0"
+    },
+    "copy-review": {
+      "kind": "reviewer",
+      "agent": "howard-copy-chief",
+      "passes_when": "each line is clear in one second, in the brand voice, and every claim is proven"
+    },
+    "logo-contrast": {
+      "kind": "script",
+      "run": "node tools/quality/check-logo-contrast.cjs <image> --box <logo box>",
+      "passes_when": "every image's logo contrast ratio is at least 3 to 1"
+    },
+    "design-review": {
+      "kind": "reviewer",
+      "agent": "kemal-creative-director",
+      "passes_when": "the product is the real one, the text is exact and readable at phone size, and the design follows the Org context design rules"
+    },
+    "spend-within-budget": {
+      "kind": "script",
+      "run": "node agent/spend.mjs check <folder>",
+      "passes_when": "money spent on generation is at or under the approved estimate"
+    },
+    "creative-review": {
+      "kind": "reviewer",
+      "agent": "kemal-creative-director",
+      "passes_when": "a reviewer who did not make the images finds them on brand, clear and true to the product"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "no policy problems, claims are proven, and the AI disclosure answer is recorded"
+    }
+  }
+}

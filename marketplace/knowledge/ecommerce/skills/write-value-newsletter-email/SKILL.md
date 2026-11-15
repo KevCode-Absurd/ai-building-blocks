@@ -87,7 +87,8 @@ Write two subjects: one plain ("How to store fresh coffee for two weeks"), one c
 
 ### 5. Market notes
 
-- **India:** topics can follow festivals, monsoon or summer care, and regional use (recipes, fabrics, climate). If the list has a Hindi or regional segment, a native speaker writes or checks that version. Prices in rupees as on site.
+- **Any market:** topics can follow local seasons and festivals, weather (summer care, winter care) and regional use (recipes, fabrics, climate); seasons flip between the northern and southern hemispheres. If the list has a segment in another language, a native speaker writes or checks that version. Prices in the store's currency as on site.
+- **UK and EU:** the issue goes only to subscribers who gave consent (or past buyers under the UK soft opt-in) and carries an easy unsubscribe.
 - **US:** the issue sells, so it carries the postal address and unsubscribe and is identifiable as an ad [EML-6341].
 
 ### 6. Judge it right
@@ -148,3 +149,7 @@ Sources: [ticket tag / review id / claims list line]
 - ORG-0025: keep approved language in one library.
 
 What makes this skill ours: every topic comes from the store's own tickets, reviews or product facts; each issue gives the reader something to use today before it sells; claims come only from the approved list kept in one shared file; and the series is sized to what the team can keep up and judged on clicks and revenue per recipient.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Topics can follow Diwali and other festivals, monsoon or summer care, and regional use. If the list has a Hindi or regional segment, a native speaker writes or checks that version. Prices in rupees as on site.

@@ -28,7 +28,7 @@ Required:
 1. **Event offer**: dates, hours, space size, fee, deposit, what is included (table, power, lighting, Wi-Fi), cancellation terms, and the organiser's footfall numbers from past editions, with how they were counted.
 2. **Gross profit per unit** at event prices for the SKUs to bring, from `build-sku-profit-sheet`.
 3. **Stock on hand and reorder points** per SKU.
-4. **Shopify order export** by city and pincode or zip, to see how many buyers live near the event.
+4. **Shopify order export** by city and postcode or ZIP code, to see how many buyers live near the event.
 5. **Quotes** for travel, stay, transport of stock and fixtures, display build or rental.
 
 For trade shows add: the exhibitor list from last year, the buyer types the organiser invites, and the store's wholesale price list from `build-wholesale-price-list-and-terms`.
@@ -37,10 +37,10 @@ If footfall data is missing, ask the organiser in writing; without it, use the c
 
 ## Before you start: the gates
 
-1. **Gross profit per unit at the event.** Pass when it includes card and UPI fees, bags and packaging, and any discount offered at the stall [MEA-0037]. Fail: compute it first.
+1. **Gross profit per unit at the event.** Pass when it includes card and mobile payment fees, bags and packaging, and any discount offered at the stall [MEA-0037]. Fail: compute it first.
 2. **Cash.** Fees, deposits and travel are paid before a single sale. Pass when the cash forecast survives the full cost even if sales are zero. Fail: no-go, or a cheaper format.
 3. **Stock.** Pass when event stock can leave without taking any SKU below its online reorder point.
-4. **Rules.** India: selling from a temporary stall in another state can need GST registration as a casual taxable person before the event; confirm with a chartered accountant. US: many states and cities need a temporary seller's permit to collect sales tax at events; check the event state. Leads: WhatsApp only with opt-in [EML-6320]; follow-up emails to US buyers follow CAN-SPAM [EML-6385].
+4. **Rules.** Tax: selling at a temporary event can need a tax registration or permit where the event is held. US: many states and cities need a temporary seller's permit to collect sales tax at events; check the event state. UK and EU: event sales carry VAT once the business is registered, and selling at an event in another EU country can need a VAT registration there. Canada and Australia charge their goods and services tax on event sales above the registration threshold. Confirm with an accountant. Leads: WhatsApp only with opt-in [EML-6320]; follow-up emails to US buyers follow CAN-SPAM [EML-6385], and UK and EU buyers need consent under the UK and EU privacy and marketing rules.
 
 ## Steps
 
@@ -79,9 +79,9 @@ Realistic sales range: organiser footfall x share who stop x share of stoppers w
 
 ### 6. Set up payments and tax
 
-- Card reader plus UPI QR in India; card reader and mobile wallet in the US. Test both on the venue's network; carry an offline option.
+- Card reader that takes contactless cards and mobile wallets (Apple Pay, Google Pay), plus the local payment app or QR code where buyers expect one. Test both on the venue's network; carry an offline option.
 - Cash float and a closing count.
-- Ring every sale through the store's point-of-sale or a sales log so stock and tax reports stay right. Issue invoices where buyers ask; B2B buyers at trade shows need a GST tax invoice in India [FIN-6380].
+- Ring every sale through the store's point-of-sale or a sales log so stock and tax reports stay right. Issue invoices where buyers ask; B2B buyers at trade shows usually need a proper tax invoice, such as a VAT invoice in the UK and EU, with both business names and tax numbers.
 
 ### 7. Capture leads with consent
 
@@ -135,6 +135,9 @@ Within 7 days: units, revenue, gross profit, total cost, net result, contacts ca
 - OFF-0057: samples pay when requested.
 - EML-6320: WhatsApp opt-in and opt-out rules.
 - EML-6385: CAN-SPAM for follow-up emails.
-- FIN-6380: India GST tax invoice for trade buyers.
 
 What makes this skill ours: the decision uses the low end of a footfall model, not the organiser's best case; the online halo is measured against a city without the event and kept out of break-even; event stock can never starve the website; and tax registration for selling in another state is flagged before booking.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Selling from a temporary stall in another state can need GST registration as a casual taxable person before the event; confirm with a chartered accountant. Carry a UPI QR beside the card reader. B2B buyers at trade shows need a GST tax invoice [FIN-6380: India GST tax invoice for trade buyers].

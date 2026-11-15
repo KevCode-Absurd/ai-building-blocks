@@ -93,9 +93,9 @@ Each row names the person responsible and their backup.
 
 Quarterly (and the week a person or agency leaves): re-run steps 1 to 3 and update the map. Before each peak season, check the backup account's payment method and dataset sharing.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** RBI's e-mandate rules can block recurring card charges, a common cause of sudden payment failures on ad accounts; keep a second method or prepaid funds ready, set up by the client. If a regional agency runs ads, it gets partner access from its own business, never the owner's personal login.
+- **Every market:** bank rules on recurring card charges (for example strong customer authentication in the UK and EU) can block ad account charges and cause sudden payment failures; keep a second method or prepaid funds ready, set up by the client. If an outside agency runs ads, it gets partner access from its own business, never the owner's personal login.
 - **US:** keep a company card rather than a staff member's personal card on the ad account, so ads do not stop when that person leaves.
 
 ## Checks before you hand it over
@@ -138,3 +138,7 @@ Quarterly (and the week a person or agency leaves): re-run steps 1 to 3 and upda
 - SEC-6084: two-factor setting, verification status and the one-admin minimum (proposed card).
 
 What makes this skill ours: the plan starts from who owns each asset, not who can log in; agencies get partner access so they can leave without taking the ad account; the backup set is ready to run with dataset and payment in place; and it draws a hard line between continuity and dodging a restriction.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. RBI's e-mandate rules can block recurring card charges, a common cause of sudden ad account payment failures; keep a second method or prepaid funds ready, set up by the client.

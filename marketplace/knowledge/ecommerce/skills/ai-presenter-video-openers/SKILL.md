@@ -1,6 +1,6 @@
 ---
 name: ai-presenter-video-openers
-description: "Make a batch of about ten short talking-presenter openers to splice onto a video ad body that already sells. Angles come from the account's own opener data and from the product itself, never repeat within a batch, and each line has a cue word that times the reveal of the real product. Presenters (AI-made, staff or freelance) vary in look, setting and delivery pace, never pose as customers, and carry the disclosures Meta, TikTok, the FTC, ASCI and the EU require. The owner approves the lineup and the cost before any generation, every clip passes a product-accuracy check, and the test is sized from target cost per purchase."
+description: "Make a batch of about ten short talking-presenter openers to splice onto a video ad body that already sells. Angles come from the account's own opener data and from the product itself, never repeat within a batch, and each line has a cue word that times the reveal of the real product. Presenters (AI-made, staff or freelance) vary in look, setting and delivery pace, never pose as customers, and carry the disclosures Meta, TikTok, the FTC and the EU require. Each line is scored on clarity, relevance, novelty, specificity and credibility before anything is made, and written in a voice register matched to how sceptical the buyer is. The owner approves the lineup and the cost before any generation, every clip passes a product-accuracy check, and the test is sized from target cost per purchase."
 ---
 
 # Talking-presenter openers for a proven ad body
@@ -74,13 +74,31 @@ Start from what the product is and who buys it, then choose angles that fit; nev
 
 Keep at most one wildcard (a whisper, an exaggeration) per batch, and only if the brand voice allows it.
 
+Match the angle to how much the buyer knows. Problem-agitation openers reach only people who already feel the problem and stall at scale; a contrarian truth works at every awareness level [MCR-6656]. Lead with the problem rather than a label: "agency owners, listen up" feels like an ad, and a batch full of narrow persona call-outs leaves Meta unable to tell who fits which, so the same viewer sees several and none feels personal [MCR-6855] [MCR-6786]. Rewriting a product line into a lesson the viewer wants (a quick label check before buying) lets the opener start as education [MCR-6740].
+
 ### 4. Write each opener
 
 - 3 to 6 seconds, about 8 to 18 spoken words; up to 8 seconds only for a calm read that needs a pause (practitioner default, test it).
 - Three levers: spoken line, on-screen text, visual [MCR-0028]; the opening words carry most of the weight [MCR-0063].
 - One cue word in the line times the product reveal ("...then I found this"). The product shown is the real one from the reference photos.
 - The last half second bridges into the body's first line [MCR-0015] [MCR-0027].
-- No "it's not X, it's Y" lines [MCR-0016]; no "hey guys" openings.
+- No "it's not X, it's Y" lines [MCR-0016]; no "hey guys" openings; never start with "Introducing" or "Meet the".
+- **Time it the same way every time:** spoken words divided by 2.5, plus half a second for each marked pause, rounded to the nearest half second and labelled "estimate". Read each aloud and time it before production; trim anything that runs past the length set above.
+- **Delivery notes per line:** pace (slow, medium, fast), the one stressed word, where the pause goes, and the background sound (silence, room, music).
+- **Pick a voice register per opener**, and keep one register for the whole ad it opens:
+
+| Register | Sounds like | Who may say it | Suits |
+|---|---|---|---|
+| Educator | Calm, a fact or a cause the store can source ("Here's what nobody checks on the label") | Anyone, including an AI presenter | Buyers who want trust |
+| Narrator | Third person, story-led ("She stopped buying the big tub. Here's why.") | Anyone | Brand stories; slower to sell |
+| Casual friend | Direct, warm, like a text ("Quick thing about your morning shake") | Anyone; premium brands may find it too casual | Sceptical buyers |
+| Observer | Passes on a real customer's words, quoted exactly with the source ("One buyer wrote: ...") | Anyone, with the quote on file | Proof-led bodies |
+| Customer | First person, own use ("Two weeks in. Honest take.") | Only a real customer filming their own opener, never a presenter | Sceptical buyers |
+| Founder | First person, why it was made | Only the real founder on their own footage | Trust and origin |
+
+Sceptical buyers often take to friend and customer voices; buyers who want trust often take to educator and founder voices. These are starting points to test, not rules. A batch made only with presenters uses the first four registers.
+
+**Score every line before the lineup.** Rate each 1 to 5 on clarity (a stranger gets it in 3 seconds), relevance (a real problem, not a label), novelty, specificity (a number, a name, an outcome) and credibility (does the presenter look right saying it) [MCR-6668]. Add the five and multiply by 4 for a score out of 100, with the sum shown. Any line with clarity or relevance under 3 is dropped whatever its total; 80 and up goes to the lineup, 60 to 79 is rewritten once, under 60 is cut (starting bands, test them). Rewrites change one lever at a time: the spoken line, the text or the visual.
 
 ### 5. Cast and pace for variety
 
@@ -89,7 +107,7 @@ Keep at most one wildcard (a whisper, an exaggeration) per batch, and only if th
 
 ### 6. Keep AI presenters honest
 
-An AI presenter speaks as the brand or a narrator ("Here's what this does"), never as a buyer ("I bought this for my dad"). No invented reviews or results. Add "AI presenter" on screen where the market requires it and set the platform's AI label: the FTC treats AI testimonials posing as customers as fake reviews; ASCI requires virtual influencers to disclose they are not human; TikTok requires realistic AI content to be labelled; the EU AI Act requires deepfake disclosure. Check current rules. Never copy a real person's face or voice, and keep other brands' names and landmarks out of prompts.
+An AI presenter speaks as the brand or a narrator ("Here's what this does"), never as a buyer ("I bought this for my dad"). No invented reviews or results. Add "AI presenter" on screen where the market requires it and set the platform's AI label: the FTC treats AI testimonials posing as customers as fake reviews, and its 2024 rule bans AI-generated fake testimonials outright [MCR-6045]; virtual influencers must disclose they are not human where local influencer codes say so; TikTok requires realistic AI content to be labelled; the EU AI Act requires deepfake disclosure. Check current rules. Never copy a real person's face or voice, and keep other brands' names and landmarks out of prompts.
 
 ### 7. Approve the lineup and cost, then produce
 
@@ -118,6 +136,7 @@ Reject if lip sync drifts, hands or faces warp, the product's colour, logo, labe
 5. Every claim maps to the facts file; deadlines are real.
 6. The owner approved the lineup and cost before generation.
 7. Every clip passed step 8; rounds and budgets fit the cap.
+8. Every line has a score with its sum, a register a presenter may honestly use, delivery notes and a timed estimate.
 
 ## Output
 
@@ -156,5 +175,16 @@ Reject if lip sync drifts, hands or faces warp, the product's colour, logo, labe
 - [MCR-0076]: larger accounts cut 4 to 5 openers.
 - [MCR-0041]: pre-test cuts as trial reels.
 - [MCR-0079]: test variations in the concept's ad set.
+- [MCR-6045]: the FTC rule bans fake and AI-generated testimonials.
+- [MCR-6656]: match hook type to awareness; contrarian truths work at every level.
+- [MCR-6668]: score hooks on five traits.
+- [MCR-6740]: turn a product hook into a lesson.
+- [MCR-6786]: many narrow persona call-outs blur together.
+- [MCR-6855]: lead with the problem, not a persona label.
 
-What makes this skill ours: openers are only made for a body that hit target cost per purchase; angles come from hook rate and purchases together and from the product itself; AI presenters may never speak as customers and carry market-by-market disclosure; and the owner approves lineup and cost before any generation spend.
+What makes this skill ours: openers are only made for a body that hit target cost per purchase; angles come from hook rate and purchases together and from the product itself; every line is scored before production and spoken in a register the presenter may honestly use; AI presenters may never speak as customers and carry market-by-market disclosure; and the owner approves lineup and cost before any generation spend.
+
+## Selling in India
+
+- The ASCI guidelines require virtual influencers and AI presenters to disclose that they are not human, on screen and in the caption.
+- Check the current ASCI code on the day the ads launch.

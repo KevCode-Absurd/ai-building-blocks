@@ -121,7 +121,7 @@
       "kind": "copy",
       "items": [
         { "ref": "kit:skills/creator-affiliates-and-samples", "use": "build", "when": "When the brief must state what to show, what not to claim and how to disclose" },
-        { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "explore", "when": "When you want a gifting plan, phone script and filming brief drafted from the brand file" },
+        { "ref": "library:creator-gifting-brief", "type": "workflow", "use": "explore", "when": "When you want a gifting plan, phone script and filming brief drafted from the org context" },
         { "ref": "library:creator-filming-brief-writer", "type": "skill", "use": "build", "when": "When the script is approved and the creator needs shoot order and file names" },
         { "ref": "library:ad-and-page-policy-checker", "type": "skill", "use": "check", "when": "When the brief is drafted, to flag policy risks line by line with safer wording" },
         { "ref": "kit:prompts/claims-price-and-disclosure-check", "use": "check", "when": "Before the brief goes out, to check claims and that paid links are disclosed" }

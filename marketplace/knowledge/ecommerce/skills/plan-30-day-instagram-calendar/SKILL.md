@@ -1,6 +1,6 @@
 ---
 name: plan-30-day-instagram-calendar
-description: "A filled 30-day Instagram calendar for a store: every Reel, carousel, photo post and story set dated, with its on-screen hook, first frame, caption, call to action, product, offer and the one number that judges it. Products are picked by gross profit and stock, volume is set by what the team can really make, and selling posts are kept apart from reach posts. Includes India notes (Hinglish and regional captions, COD and prepaid, festival dates) and US notes (holidays, disclosure). Use when a store posts without a plan, before a launch or sale month, or when Instagram reach is flat and nobody knows what to post next."
+description: "A filled 30-day Instagram calendar for a store: every Reel, carousel, photo post and story set dated, with its on-screen hook, first frame, caption, call to action, product, offer and the one number that judges it. Products are picked by gross profit and stock, volume is set by what the team can really make, and selling posts are kept apart from reach posts. Includes market notes (captions in the languages buyers use, payment options, peak seasons and local festivals, disclosure rules). Use when a store posts without a plan, before a launch or sale month, or when Instagram reach is flat and nobody knows what to post next."
 ---
 
 # Thirty-day Instagram calendar
@@ -41,7 +41,7 @@ If Insights are missing (new account), plan from capacity and products alone and
 2. **Stock and delivery.** A product shown in a selling post must be in stock for the whole selling window. Fail: move it to a reach post or a waitlist post.
 3. **Capacity.** The plan fits the hours stated. A calendar the team cannot make is not a plan. Fail: cut volume, never quality.
 4. **Offers are approved and real.** No countdowns that reset, no "last chance" that is not the last chance. Fail: leave the offer out.
-5. **Disclosure.** Any post with a creator or partner who received anything of value carries a plain label in the post [ORG-6405]; in India use an ASCI label [ORG-6406].
+5. **Disclosure.** Any post with a creator or partner who received anything of value carries a plain label in the post [ORG-6405]; use the label your market's ad disclosure rules require (for example "#ad" in the UK under ASA rules) [ORG-6406].
 
 ## Steps
 
@@ -89,9 +89,9 @@ Post natively in the app where the client can; one practitioner programme found 
 
 For each selling week: tease 2 to 3 days before (reach post plus story poll), open on day 1 (Reel plus story set with link sticker), proof mid-week (review or demo), and a true final reminder only if the offer really ends. Each link carries the store's UTM rule.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** write captions in the language the buyers comment in; Hinglish often fits, and a regional-language version can go on the product's top state. Show the price in rupees exactly as on the store. If the store takes COD, say so in selling stories, and mention any prepaid saving the client approved. Mark festival dates (Diwali, Raksha Bandhan, regional new years) and plan gifting posts 2 to 3 weeks before. A "Message us on WhatsApp" story can replace a link for buyers who prefer chat.
+- **Every market:** write captions in the language the buyers comment in; a mixed-language or regional version can go on the product's top region. Show the price in the store's own currency exactly as on the store. Say which payment options the store takes in selling stories (wallets, buy now pay later, pay on delivery where used), and mention any saving the client approved. Mark local festival and holiday dates and plan gifting posts 2 to 3 weeks before. A "Message us on WhatsApp" story can replace a link for buyers who prefer chat.
 - **US:** plan around the store's own peak dates (Mother's Day, Black Friday, holiday gifting). Gifted or paid creator posts need a clear "ad" or "sponsored" label in the post itself [ORG-6405].
 
 ### 10. Set the mid-month review
@@ -147,6 +147,10 @@ On day 15, compare each format against its metric. Keep formats above the accoun
 - ORG-0028: one or two lead-magnet Reels a week.
 - ORG-0029: follower-heavy views mean the hook fails strangers.
 - ORG-6405: FTC disclosure in the post itself.
-- ORG-6406: ASCI labels for India.
+- ORG-6406: local ad label rules.
 
-What makes this skill ours: hero products are chosen by gross profit and stock instead of popularity; volume is set from the team's real hours; every post carries one metric tied to a reach or selling goal; and India gets COD, prepaid and language rules built into the selling posts.
+What makes this skill ours: hero products are chosen by gross profit and stock instead of popularity; volume is set from the team's real hours; every post carries one metric tied to a reach or selling goal; and payment options, languages and local dates are built into the selling posts.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Hinglish captions often fit, with a regional-language version for the product's top state. Show prices in rupees. If the store takes COD, say so in selling stories, with any approved prepaid saving. Mark Diwali, Raksha Bandhan and regional new years. Use an ASCI label on gifted or paid posts [ORG-6406].

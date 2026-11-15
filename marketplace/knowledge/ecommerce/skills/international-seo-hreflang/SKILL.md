@@ -10,7 +10,7 @@ description: "The search set-up for a store selling in more than one country or 
 ## When to use
 
 - The store is adding a second country or language in Shopify Markets.
-- Google shows the US pages to Indian buyers (or the other way round), with the wrong currency.
+- Google shows the US pages to UK or Australian buyers (or the other way round), with the wrong currency.
 - Search Console or a crawler reports hreflang errors ("no return tags", unknown codes).
 - The store plans to translate pages and wants them to rank in that language.
 
@@ -18,7 +18,7 @@ description: "The search set-up for a store selling in more than one country or 
 
 - Opening a country commercially (margin, duties, shipping, payments): use `set-up-markets-and-currencies` first; this skill follows it.
 - Per-country Merchant Center feeds and titles: use `write-product-feed-titles-that-match-searches`.
-- Ad copy in Indian languages: use `write-ad-copy-in-indian-languages`.
+- Ad copy in other languages: use `write-ad-copy-in-indian-languages` only for India, owned by Ishita (`ishita-india-commerce`).
 - General crawl and index issues: use `technical-seo-audit-shopify`.
 
 ## What you need
@@ -29,7 +29,7 @@ Required (read access, level 1):
 2. **Market launch sheet** from `set-up-markets-and-currencies`, including the go or no-go margin check per country.
 3. **Search Console** for the domain property, with country filters on Performance.
 4. **Translation status** per language (Shopify's Translate and Adapt app or the translation app in use).
-5. **Keyword research per country and language**: buyers in the UK, US and India use different words for the same product.
+5. **Keyword research per country and language**: buyers in the UK, US and Australia use different words for the same product.
 
 Optional: Bing Webmaster Tools, a crawler that reports hreflang, GA4 by country.
 
@@ -48,7 +48,7 @@ Domain, subfolder and language settings need draft or publish access as agreed: 
 
 | Option | Use when | Trade-off |
 |---|---|---|
-| Subfolders on one domain (example.com/en-in/) | Default for most stores | All links strengthen one domain; simplest |
+| Subfolders on one domain (example.com/en-gb/) | Default for most stores | All links strengthen one domain; simplest |
 | Country domains (example.in, example.co.uk) | Strong local brand or legal reasons, or the domain is already established | Each domain builds strength alone; more set-up |
 | Separate Shopify store | Different catalogue, prices, fulfilment or legal entity per country | Separate admin; hreflang still links matching pages |
 
@@ -60,25 +60,26 @@ For each market version, set the code: ISO 639-1 language, optionally an ISO 316
 
 | Market | URL pattern | hreflang |
 |---|---|---|
-| India, English | /en-in/ | en-IN |
-| India, Hindi | /hi-in/ | hi-IN |
+| Canada, English | /en-ca/ | en-CA |
+| Canada, French | /fr-ca/ | fr-CA |
+| Germany, German | /de-de/ | de-DE |
 | US, English | / (primary) | en-US |
 | UK, English | /en-gb/ | en-GB |
 | Fallback | / or language chooser | x-default |
 
-Rules: each version lists itself and every other version, or Google ignores the tags [SEO-6462]; use one method (HTML tags from Shopify, or the sitemap) and keep it consistent; x-default points to the page for buyers who match no market. Same-language markets (en-IN and en-US) still need tags when prices, currency or delivery differ.
+Rules: each version lists itself and every other version, or Google ignores the tags [SEO-6462]; use one method (HTML tags from Shopify, or the sitemap) and keep it consistent; x-default points to the page for buyers who match no market. Same-language markets (en-GB and en-US) still need tags when prices, currency or delivery differ.
 
 ### 3. Check canonicals line up
 
-Each market page canonicals to itself, not to the primary-market page. A canonical pointing to the US version tells Google to drop the Indian one [SEO-6464]. Test product, collection, home, blog and policy templates.
+Each market page canonicals to itself, not to the primary-market page. A canonical pointing to the US version tells Google to drop the UK one [SEO-6464]. Test product, collection, home, blog and policy templates.
 
 ### 4. Localise, not just translate
 
 For each language market, list and translate: SEO titles and meta descriptions, H1s, URL handles (where the app supports it), product and collection copy, image alt text, menus, policies, and FAQ answers. Then localise:
 
 - Words buyers really search in that country (from the per-country keyword research): "trainers" in the UK, "sneakers" in the US.
-- Units, sizes and currency in copy (cm and kg in India and the UK, inches and pounds in the US).
-- Delivery promises and COD availability per market, only as true.
+- Units, sizes and currency in copy (cm and kg in most countries, inches and pounds in the US).
+- Delivery promises and payment options (including pay on delivery) per market, only as true.
 - Machine translation is fine as a first draft; a native speaker reviews the top 20 pages by profit and every policy page before publishing.
 
 ### 5. No forced redirects
@@ -96,9 +97,9 @@ Shopify generates sitemaps per international domain (Shopify Help Center, sitema
 - URL Inspection on one page per market: Google's chosen canonical is that market's URL.
 - Search Google from each country (VPN or Search Console country filter) for the brand and a top product: the right version shows.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** English (en-IN) is usually the first market version; add hi-IN or regional languages only with real translated pages and support capacity in that language. Prices shown include GST. If the store also sells on a .in domain, decide whether it becomes the India market domain or redirects to the subfolder.
+- **UK, EU and Australia:** prices shown include VAT or goods and services tax. In countries with more than one language (Canada, Belgium, Switzerland), add each language version only with real translated pages and support capacity in that language. If the store also sells on a country domain (.co.uk, .de, .com.au), decide whether it becomes that market's domain or redirects to the subfolder.
 - **US:** one English version can serve the US and Canada only if prices and currency are the same; otherwise separate markets with en-US and en-CA.
 
 ### 9. Measure
@@ -142,3 +143,9 @@ At 8 to 12 weeks: impressions and clicks per country in Search Console, the shar
 - SEO-6464: canonical signals.
 
 What makes this skill ours: no market gets SEO work until its landed gross profit is positive; a language is published only when its main content is truly translated and reviewed; same-language markets with different prices still get their own tags; and the test log proves reciprocity and Google's chosen canonical for each market.
+
+## Selling in India
+
+- English (en-IN, at /en-in/) is usually the first market version; add hi-IN (/hi-in/) or regional languages only with real translated pages and support in that language.
+- Prices shown include GST; state COD availability only where true.
+- If the store also sells on a .in domain, decide whether it becomes the India market domain or redirects to the subfolder.

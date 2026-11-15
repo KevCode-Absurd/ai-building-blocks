@@ -1,6 +1,6 @@
 ---
 name: mobile-conversion-audit
-description: "A phone-first walk through the whole store the way most buyers see it: arriving from an ad or search, browsing, choosing a variant, adding to cart, paying and tracking the order, on a real mid-range phone over mobile data. Records every blocker with a screenshot, rates it blocker, major or minor, ties it to the store's own mobile versus desktop numbers, and hands over a fix list in order of gross profit at stake, with who fixes it. Covers low-end Android and slow networks for India and iPhone and wallet checkouts for the US. Use when mobile converts far below desktop, after a theme change, or before sending more paid social traffic."
+description: "A phone-first walk through the whole store the way most buyers see it: arriving from an ad or search, browsing, choosing a variant, adding to cart, paying and tracking the order, on a real mid-range phone over mobile data. Records every blocker with a screenshot, rates it blocker, major or minor, ties it to the store's own mobile versus desktop numbers, and hands over a fix list in order of gross profit at stake, with who fixes it. Covers low-end Android and slow networks, iPhone and wallet checkouts, and local payment methods in any market. Use when mobile converts far below desktop, after a theme change, or before sending more paid social traffic."
 ---
 
 # Mobile conversion audit
@@ -29,7 +29,7 @@ Required (read access, level 1):
 2. **Top 5 mobile landing pages** by sessions, and the top 3 traffic sources on mobile.
 3. **Live store URL** and current ads or links that send mobile traffic.
 4. **Gross profit per order**, from `build-sku-profit-sheet` or `store-meta-math`.
-5. **Two real phones:** a mid-range Android (for India, a phone in the price band most buyers own) and an iPhone. Free fallback when a phone is missing: Chrome DevTools device mode with network throttling, labelled as emulated.
+5. **Two real phones:** a mid-range Android (a phone in the price band most of the store's buyers own) and an iPhone. Free fallback when a phone is missing: Chrome DevTools device mode with network throttling, labelled as emulated.
 
 Optional: session recordings filtered to mobile, support tickets mentioning phone or app, review text mentioning the website.
 
@@ -79,7 +79,7 @@ Clear cookies, use mobile data (or throttle to slow 4G), and screen-record each 
 
 **Cart and checkout**
 - Cart drawer opens, shows totals and shipping estimate, and does not trap the back button.
-- Express wallets visible above the form (Shop Pay reports a higher mobile checkout-to-order rate [SET-0008]); keyboard type matches the field (number pad for phone and pincode or zip); address autocomplete works.
+- Express wallets visible above the form (Shop Pay reports a higher mobile checkout-to-order rate [SET-0008]); keyboard type matches the field (number pad for phone and numeric postcode or ZIP); address autocomplete works.
 
 **After purchase**
 - Thank-you and order status pages load and show the delivery estimate and support route.
@@ -99,10 +99,11 @@ Exposure = share of mobile sessions that hit that page or step (from the top lan
 
 Gross profit at stake a month = mobile sessions exposed x severity factor x gross profit per order x mobile conversion. Severity factors are working figures to tune: blocker 0.5, major 0.1, minor 0.02 (practitioner default, test it). The total across all fixes must not exceed the mobile gap from Step 1; scale down if it does. Blockers go first whatever the number. Mark each fix "repair" (ship once checked on the theme copy) or "test" (big changes, where the store has volume; see `design-store-ab-test`).
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** test on a low-memory Android over slow mobile data; check pages in any regional language version; pincode checker usable with the number pad; COD and UPI options visible on the phone checkout; WhatsApp support button does not cover add to cart.
+- **Every market:** test on a low-memory Android over slow mobile data where buyers use them; check pages in each language version; delivery checker usable on the phone; local payment methods (wallets, buy now pay later, bank payments, pay on delivery where used) visible on the phone checkout; chat or WhatsApp support button does not cover add to cart.
 - **US:** test Safari on iPhone with Apple Pay; check the tax and shipping note in the cart; check accessibility basics (contrast, labels on icons), since buyers rely on screen readers too.
+- **UK and EU:** cookie banner does not cover add to cart or checkout on a small screen; prices show VAT included; the European Accessibility Act sets accessibility duties for many online stores selling in the EU.
 
 ## Checks before you hand it over
 
@@ -151,4 +152,8 @@ Gross profit at stake a month = mobile sessions exposed x severity factor x gros
 - SPD-0007: app bars cause layout shift.
 - SPD-6183: Core Web Vitals thresholds at the 75th percentile.
 
-What makes this skill ours: five scripted buyer paths on a real mid-range phone over mobile data, not a resized desktop window; every issue weighted by how many mobile sessions see it and capped by the store's measured mobile gap in gross profit; and India checks (low-end Android, pincode, COD, UPI, WhatsApp buttons) sit beside US Safari and wallet checks.
+What makes this skill ours: five scripted buyer paths on a real mid-range phone over mobile data, not a resized desktop window; every issue weighted by how many mobile sessions see it and capped by the store's measured mobile gap in gross profit; and local checks (low-end Android, delivery checker, local payment methods, chat buttons, cookie banners) sit beside Safari and wallet checks.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Test on a low-memory Android over slow mobile data, any regional language version, a pincode checker usable with the number pad, and COD and UPI options visible on the phone checkout.

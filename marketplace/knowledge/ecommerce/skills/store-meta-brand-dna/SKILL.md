@@ -31,7 +31,7 @@ This skill reads the store like a careful buyer and a careful accountant, and wr
 - The live store URL. You will read: home page, the best-selling product page (by net sales, see step 2), about or founder page, the reviews page or review widget, shipping and returns policy, FAQ.
 - Shopify products CSV export: Title, Variant SKU, Variant Price, Variant Compare At Price, Cost per item, Variant Inventory Qty, Status. WooCommerce: product CSV with SKU, prices and stock, plus cost from the owner.
 - Shopify report "Sales by product variant" for the last 90 days: net quantity, gross sales, discounts, returns, net sales.
-- Per order costs from the owner: average pick, pack and shipping cost, payment fee percentage, return rate by product (or store-wide), and, where cash on delivery is offered, the share of COD orders and the return-to-origin rate.
+- Per order costs from the owner: average pick, pack and shipping cost, payment fee percentage, return rate by product (or store-wide), and the share of orders that fail delivery or are never paid (refused parcels, failed payments, chargebacks; pay on delivery orders where offered).
 - Reorder lead time in days for each product you might advertise.
 
 **Optional, raises confidence**
@@ -48,7 +48,7 @@ This skill reads the store like a careful buyer and a careful accountant, and wr
 
 ## Before you start: the gates
 
-1. **Gross profit per purchase can be computed.** For each candidate product: price actually paid (after the usual discount) minus landed product cost, minus pick, pack and shipping, minus payment fees, minus expected returns cost (return rate times the value lost on a return plus return shipping). In COD markets, also subtract return-to-origin cost (RTO rate times forward plus return shipping). Use delivered cost, not product cost against price [MEA-0037]. Pass: every input is known or an owner estimate, labelled. Fail: rank nothing; ship the rest.
+1. **Gross profit per purchase can be computed.** For each candidate product: price actually paid (after the usual discount) minus landed product cost, minus pick, pack and shipping, minus payment fees, minus expected returns cost (return rate times the value lost on a return plus return shipping). Also subtract failed delivery cost (failed order rate times forward plus return shipping), which matters most where pay on delivery is offered. Use delivered cost, not product cost against price [MEA-0037]. Pass: every input is known or an owner estimate, labelled. Fail: rank nothing; ship the rest.
 2. **Stock and cash limits are stated.** For each product: days of stock cover (units on hand divided by average daily units sold) and reorder lead time. The owner states the most they can spend on Meta per month. Fail: mark every product "stock unknown" and ask before any product goes in the Advertise list.
 3. **Tracking is not needed for this job.** Rank on store data. Use the Ads Manager export only to see what is already advertised, never to rank.
 
@@ -73,7 +73,7 @@ Screen each Advertise product for traffic economics: revenue per landing-page se
 
 ### 3. Record the offer and what it costs
 
-Write down exactly what a buyer gets today: price, compare-at price, bundles, free shipping threshold, gift with purchase, subscription terms, guarantee, returns window, COD availability. For each discount depth on offer, recompute break-even ROAS: a 30% discount can roughly triple it [OFF-0065]. Mark a compare-at price as usable in ads only if the store actually sold at that price; UK and EU price rules require a genuine prior price [OFF-0017].
+Write down exactly what a buyer gets today: price, compare-at price, bundles, free shipping threshold, gift with purchase, subscription terms, guarantee, returns window, payment options (buy now pay later, pay on delivery where offered). For each discount depth on offer, recompute break-even ROAS: a 30% discount can roughly triple it [OFF-0065]. Mark a compare-at price as usable in ads only if the store actually sold at that price; UK and EU price rules require a genuine prior price [OFF-0017].
 
 ### 4. Bank the customer's own words
 
@@ -166,3 +166,7 @@ Meta documentation: Advertising Standards, personal attributes policy.
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
 What this skill does that the open-source one did not: ranks the store's products by gross profit per purchase and stock cover before anything is advertised; banks the customer's exact words from reviews; builds a proof inventory marked verified or not, with a banned-claims list; records the real product photo set that later image work is checked against, and drops numeric voice scores that had no evidence behind them.
+
+## Selling in India
+
+- Where COD is offered, get the COD share and the RTO rate per product. Subtract RTO cost (RTO rate times forward plus return shipping) from gross profit per purchase before ranking.

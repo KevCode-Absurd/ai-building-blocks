@@ -19,7 +19,7 @@ description: "A brand voice guide built from the store's own best lines and its 
 - What the brand says (promise, pillars, proof): use `write-brand-positioning-and-messaging` first.
 - Cleaning one batch of machine-sounding copy: use `machine-copy-scrubber`, which uses this guide.
 - Colours, fonts and image style: use `store-visual-identity-sheet`.
-- Writing ads in Indian languages: use `write-ad-copy-in-indian-languages`, with this guide as input.
+- Writing ads in the other languages your buyers use: write them with a native speaker, with this guide as input.
 
 ## What you need
 
@@ -55,7 +55,7 @@ For the loved set and the disliked set, measure:
 - Reading grade (any free readability checker; aim within grade 6 to 9 for most store copy, practitioner default).
 - Person: we and you, or third person.
 - Contractions, questions, exclamation marks, emoji per 100 words.
-- Local language mix: Hinglish or regional words for India; US or UK spelling.
+- Local language mix: US, UK or Australian spelling, and any local words or mixed language your buyers use.
 - Jargon and claim words.
 
 The gaps between loved and disliked lines become the rules.
@@ -70,6 +70,14 @@ Each trait gets:
 - One loved line as the model.
 
 Write in the buyer's dominant feeling where it fits the trait (relief, pride, frustration with past fixes), naming the real alternatives buyers tried rather than vague ones [AVT-0010].
+
+Give every trait and rule a confidence label from its evidence, and list the sources beside it:
+
+- **Strong:** three or more lines back it, from at least two kinds of source (for example site copy, emails and buyer reviews).
+- **Emerging:** one or two lines, or a pattern you inferred.
+- **Weak:** a single source, or sources that disagree.
+
+Weak rules go into the guide as proposals, not rules. Where sources disagree (the site is formal, the founder's emails are playful), do not average them: log it as an open question with what you found, your recommended resolution and the reason, and the decision you need from the owner, so the owner only confirms or overrides. Open questions that block a trait come first.
 
 ### 4. Build the word list
 
@@ -98,7 +106,7 @@ Limits outrank voice:
 
 - **Meta ads:** carousel guidance is about 80 characters primary text, 20 headline, 18 description [MCR-6041]; put the voice in the first line.
 - **Google search ads:** headlines up to 30 characters, descriptions up to 90 [GAD-6140]; Google rejects gimmicky capitals, repeated punctuation, symbols and phone numbers in ad text [ADC-6142], so a playful voice must stay within that.
-- **SMS:** under 160 characters and emoji-free where possible [EML-0028]; in India, the text must match the DLT-registered template.
+- **SMS:** under 160 characters and emoji-free where possible [EML-0028]; some countries need sender or template registration first, and the text must then match it.
 - **WhatsApp:** template messages must stay within the approved template; service replies can be looser.
 - **Email:** keep a plain-text founder style as part of the mix, about one plain email for every three or four designed ones in one agency's mix [EML-0016].
 - **Product pages:** facts and proof first; voice in headings and the short intro.
@@ -112,14 +120,16 @@ For each of the six channels, take one real line that misses the voice and rewri
 - **Blind match:** mix 10 brand lines written with the guide and 10 rival lines; ask three people outside the team to pick the brand's. Pass: most picks right (practitioner default: 8 of 10, test it). If they cannot tell, the traits are too generic; sharpen step 3.
 - **First-try test:** give the cheat sheet to a writer or AI tool with one brief; check the draft against the markers. Fix any rule that was misread.
 
-### 9. India and US notes
+### 9. Market notes
 
-- India: decide the Hinglish policy (where, how much, Roman or Devanagari script) and which regional languages get translated copy versus written copy; keep prices and COD terms plain in every language.
-- US: decide US spelling, how casual the brand is on sale messages, and how it writes disclosures (#ad, paid partnership) so they are clear, not hidden.
+- Languages: decide which of the languages your buyers use get translated copy versus copy written fresh, and where mixed language is allowed; keep prices, payment and returns terms plain in every language.
+- Spelling and tone: decide US, UK or other spelling, and how casual the brand is on sale messages.
+- Disclosures: decide how the brand writes them (#ad, paid partnership) so they are clear, not hidden, in each market.
 
 ## Checks before you hand it over
 
 - Every trait has a this-not-that rule, a checkable marker and a real model line.
+- Every trait and rule carries a confidence label with its sources; every open question has a recommended answer.
 - Rules come from measured gaps between loved and disliked lines.
 - The word list includes buyer words with their source.
 - Each channel example fits that channel's limits and rules.
@@ -140,7 +150,10 @@ For each of the six channels, take one real line that misses the voice and rewri
 5. Tone by moment table.
 6. Channel table: Channel, Limits, Voice notes, Before line, After line, Character count.
 7. Test results: blind match score, first-try test notes.
-8. Owner and review date.
+8. Open questions: What was found, Recommended answer and why, Decision needed, Blocks which trait.
+9. Owner and review date.
+
+Traits table rows also carry Confidence (strong, emerging, weak) and Sources.
 
 ## Common mistakes
 
@@ -150,6 +163,7 @@ For each of the six channels, take one real line that misses the voice and rewri
 - **Voice that breaks platform rules.** Step 6 puts limits first.
 - **Fake customer voice.** Step 7 bans invented quotes.
 - **A guide nobody tests.** Step 8 runs blind and first-try tests.
+- **Averaging sources that disagree.** Step 3 logs the clash as an open question with a recommended answer.
 
 ## Sources
 
@@ -162,4 +176,11 @@ For each of the six channels, take one real line that misses the voice and rewri
 - EML-0016: plain-text share of the email mix.
 - MCR-6045: no AI-made reviews or testimonials.
 
-What makes this skill ours: traits come from measured gaps between the owner's loved and disliked lines, each with a checkable marker; tone shifts by moment, including delays and complaints; every channel example sits inside that platform's limits and India's DLT and WhatsApp template rules; and the guide must pass a blind test against rival lines before it is handed over.
+What makes this skill ours: traits come from measured gaps between the owner's loved and disliked lines, each with a checkable marker; tone shifts by moment, including delays and complaints; every channel example sits inside that platform's limits and SMS registration and WhatsApp template rules; and the guide must pass a blind test against rival lines before it is handed over.
+
+## Selling in India
+
+- For ads in Indian languages, use `write-ad-copy-in-indian-languages`, with this guide as input.
+- Decide the Hinglish policy: where, how much, and Roman or Devanagari script.
+- SMS text must match the DLT-registered template.
+- Keep prices and COD terms plain in every language.

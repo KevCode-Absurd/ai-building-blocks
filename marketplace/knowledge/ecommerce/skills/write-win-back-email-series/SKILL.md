@@ -1,6 +1,6 @@
 ---
 name: write-win-back-email-series
-description: "Three to four win-back emails written in full for past buyers who have not reordered, with subject lines, preview, body, timing from the store's own reorder gap, the offer ladder (no offer, then help, then the smallest offer that passes the gross profit check, then the last call), and the sunset step that stops marketing email to people who never respond. Separates buyers who had a bad experience (returns, complaints, low ratings) into a fix-first note, splits repeat-use and one-time products, and adds a text and India notes. Use when first-time buyers rarely return, when the win-back flow is one generic coupon, or before cleaning the list."
+description: "Three to four win-back emails written in full for past buyers who have not reordered, with subject lines, preview, body, timing from the store's own reorder gap, the offer ladder (no offer, then help, then the smallest offer that passes the gross profit check, then the last call), and the sunset step that stops marketing email to people who never respond. Separates buyers who had a bad experience (returns, complaints, low ratings) into a fix-first note, splits repeat-use and one-time products, and adds a text and market notes. Use when first-time buyers rarely return, when the win-back flow is one generic coupon, or before cleaning the list."
 ---
 
 # Win-back email series
@@ -49,6 +49,8 @@ If no second orders exist yet (a young store), time the series from product use 
 
 Default start: twice the median days between orders for the product the person bought [EML-0019]. For repeat-use products, test an earlier start: win-backs 30 to 45 days after the last purchase converted about 2.3 times better than at 90 days or more in one platform's benchmark [EML-0050]. For one-time or durable products (furniture, a jacket), there is no reorder gap: start around 90 days with complementary products or new uses instead of "time to restock" (practitioner default, test it).
 
+Two refinements. First, judge each person by their own rhythm where the tool allows: someone who orders every 200 days should not get a code at day 120 [EML-6397]. If the email tool predicts an expected date of next order, start about 5 days after that date passes, once per person [EML-6326], and give customers with high predicted value a better offer that still clears the gross profit check. Second, issue a unique code per person with a real expiry instead of one shared code: it feels personal, cannot leak to coupon sites, and makes each redemption countable.
+
 ### 2. Split the audience
 
 | Group | Who | Series |
@@ -93,7 +95,8 @@ Profiles that clicked nothing, visited nothing and bought nothing through the se
 ### 7. Text and market notes
 
 - **Text:** one SMS at the email-3 offer for SMS opt-ins, at twice the average days between orders [EML-0029], under 160 characters with no emoji, written with `write-sms-and-whatsapp-messages`.
-- **India:** automated WhatsApp journeys out-clicked broadcasts about four to one across Indian brands [EML-0048], so send the win-back as a triggered marketing template to opted-in buyers, not a blast; COD buyers get the COD and delivery facts; DLT template rules apply to SMS.
+- **WhatsApp markets:** where buyers opted in to WhatsApp, send the win-back as a triggered marketing template, not a blast, since triggered journeys out-click broadcasts by a wide margin; buyers who paid on delivery get the payment and delivery facts; any SMS follows the country's sender and template rules.
+- **UK and EU:** win-back emails go to past buyers under consent or the UK soft opt-in only; the sunset step also keeps the list clean for data rules.
 - **US:** postal address, ad identification and unsubscribe in every promo email [EML-6341].
 
 ### 8. Plan the read
@@ -141,15 +144,21 @@ Sources: [what-changed note / review id / ticket tag]
 
 ## Sources
 
+- EML-6397: trigger from each customer's own rhythm, not a fixed day.
+- EML-6326: the email tool's predicted next order date as a trigger.
 - CXP-0016: discount-acquired buyers often have worse lifetime value.
 - EML-0011: engaged definitions exclude privacy opens.
 - EML-0019: win-back starts at twice the purchase interval.
 - EML-0029: SMS win-back timing.
 - EML-0032: one-time unsubscribe spike on dormant lists.
 - EML-0042: unengaged definition and suppression.
-- EML-0048: WhatsApp journeys versus broadcasts in India.
 - EML-0050: win-back timing, escalating offers, experience audit.
 - EML-0061: flow test size.
 - EML-6341: US commercial email rules (proposed).
 
 What makes this skill ours: unhappy buyers are pulled out and sent a fix, not a coupon; the start date comes from the store's own reorder gap per product; offers escalate only to the smallest rung that keeps gross profit above zero; and the series ends in an honest keep-me choice and a sunset rule based on clicks and site activity, not inflated opens.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Automated WhatsApp journeys out-clicked broadcasts about four to one across Indian brands [EML-0048], so send the win-back as a triggered marketing template to opted-in buyers, not a blast. COD buyers get the COD and delivery facts; DLT template rules apply to SMS.
+- EML-0048: WhatsApp journeys versus broadcasts in India.

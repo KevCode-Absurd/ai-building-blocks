@@ -1,6 +1,6 @@
 ---
 name: plan-monthly-email-calendar
-description: "A month of email and SMS (and WhatsApp in India) campaign sends with a date, day, channel, segment, theme, featured products, offer and gross profit goal for each, sized to the store's revenue and list health, tied to stock cover so nothing sold out gets promoted, and checked against the profit plan so discount sends stay within one or two a month. Includes the month's dated moments for India and the US, subscriber exclusions, and an approval column. Use at the start of each month, before a launch or sale month, or when campaigns are planned the day they go out."
+description: "A month of email and SMS (and WhatsApp where buyers use it) campaign sends with a date, day, channel, segment, theme, featured products, offer and gross profit goal for each, sized to the store's revenue and list health, tied to stock cover so nothing sold out gets promoted, and checked against the profit plan so discount sends stay within one or two a month. Includes the month's dated moments for each market the store sells to, subscriber exclusions, and an approval column. Use at the start of each month, before a launch or sale month, or when campaigns are planned the day they go out."
 ---
 
 # Monthly email and SMS calendar
@@ -54,14 +54,16 @@ If the profit plan is missing, allow no more than one discount send and mark the
 
 These bands come from one practitioner's rule; add sends only while opens stay above 30% [EML-0041]. Testing across many brands found 1 to 2 a week under-earns and 5 to 7 lifts unsubscribes and then plateaus [EML-0017] [EML-0063]. Use the store's own last 90 days: if click rate and unsubscribes held when sends rose, hold or add one; if unsubscribes or complaints climbed, step back [EML-0014].
 
-SMS campaigns: about one a week, two for large brands, kept to launches, sales and restocks [EML-0025] [EML-0039]. India WhatsApp broadcasts: two to four a month to opted-in, engaged buyers (practitioner default, test it); automated journeys earn far more per message than broadcasts [EML-0048].
+SMS campaigns: about one a week, two for large brands, kept to launches, sales and restocks [EML-0025] [EML-0039]. WhatsApp broadcasts, where buyers use WhatsApp (much of Europe, Latin America, the Middle East and Asia): two to four a month to opted-in, engaged buyers (practitioner default, test it); automated journeys earn far more per message than broadcasts [EML-0048].
 
 ### 2. Mark the month's moments
 
 List every dated moment first: product launches, restocks, the sale dates from the yearly plan, paydays if the store sees them in orders, and seasonal dates.
 
-- **India:** festival dates move each year; check the current year's calendar for Diwali, Raksha Bandhan, Holi, Eid, Onam, Pongal and regional festivals in the store's main states. Plan for courier cutoffs before each.
-- **US:** Valentine's Day, Mother's Day, Father's Day, back to school, Black Friday and Cyber Monday, holiday shipping cutoffs.
+- **Every market:** holiday and festival dates move each year in many countries; check the current year's calendar for the store's main countries and regions (for example Eid, Lunar New Year, Easter, Hanukkah and local festivals). Plan for courier cutoffs before each.
+- **US and Canada:** Valentine's Day, Mother's Day, Father's Day, back to school, Thanksgiving (October in Canada), Black Friday and Cyber Monday, holiday shipping cutoffs.
+- **UK and EU:** Valentine's Day, Mothering Sunday (March in the UK; Mother's Day falls in May in many EU countries), Easter, summer and winter sales, Singles' Day where buyers shop it, Black Friday and Cyber Monday, Christmas postal cutoffs, Boxing Day.
+- **Australia and New Zealand:** the peak falls in their summer; plan Mother's Day (May), end of financial year sales (June), Click Frenzy, Black Friday, Christmas cutoffs and Boxing Day.
 
 Every quarter should have one moment the store owns, not only the big shared ones [EML-0055].
 
@@ -95,7 +97,7 @@ Default audience is the 90-day engaged segment, sent broad about 80% of the time
 
 ### 6. Set days and times
 
-Spread sends across the week; avoid two sends to the same person on one day. Use the store's own best send hours from the last 90 days. SMS sends in daytime windows (practitioner default: late morning or late afternoon [EML-0025]), and never at night in the recipient's time zone; US federal rules bar telephone solicitation before 8 a.m. or after 9 p.m. local time [EML-6323].
+Spread sends across the week; avoid two sends to the same person on one day. Use the store's own best send hours from the last 90 days. SMS sends in daytime windows (practitioner default: late morning or late afternoon [EML-0025]), and never at night in the recipient's time zone; US federal rules bar telephone solicitation before 8 a.m. or after 9 p.m. local time [EML-6323]. In the UK, EU, Canada and Australia, marketing texts need prior consent and a working opt-out; keep to daytime hours and any local quiet-hour rules.
 
 ### 7. Add the review loop
 
@@ -142,4 +144,8 @@ Week 4 of the calendar holds a 30-minute review: each send's click rate, placed 
 - OFF-0008, OFF-0065: discount limits and break-even.
 - OPS-0019: do not sell into a stock-out.
 
-What makes this skill ours: every send is checked against stock cover before it is planned; offer sends come only from the profit plan's allowed depths; each send carries an attributed gross profit goal that adds up to the month's target; and India's moving festival dates and courier cutoffs are planned from the current year's calendar.
+What makes this skill ours: every send is checked against stock cover before it is planned; offer sends come only from the profit plan's allowed depths; each send carries an attributed gross profit goal that adds up to the month's target; and each market's moving holiday and festival dates and courier cutoffs are planned from the current year's calendar.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Festival dates move each year: check the current year's calendar for Diwali, Raksha Bandhan, Holi, Eid, Onam, Pongal and regional festivals in the store's main states, and plan for courier cutoffs before each. WhatsApp broadcasts to opted-in, engaged buyers run two to four a month (practitioner default, test it).

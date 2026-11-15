@@ -1,6 +1,6 @@
 ---
 name: launch-amazon-ppc
-description: "A launch build sheet for Amazon Sponsored Products: four campaigns (auto research, exact, phrase discovery, product targeting) with ad groups, keywords, negatives, bids worked back from the product's profit, daily budgets, a capped launch spend the client signs off, and a day-by-day check list for the first 14 days with the rule for each decision. Bids come from gross profit after Amazon's fees and the real conversion rate, not from Amazon's suggested bid. Covers Amazon.com and Amazon.in. Use when a product is newly listed and ready for ads, when a first PPC attempt burned money with no structure, or when relaunching a product after a listing rebuild."
+description: "A launch build sheet for Amazon Sponsored Products: four campaigns (auto research, exact, phrase discovery, product targeting) with ad groups, keywords, negatives, bids worked back from the product's profit, daily budgets, a capped launch spend the client signs off, and a day-by-day check list for the first 14 days with the rule for each decision. Bids come from gross profit after Amazon's fees and the real conversion rate, not from Amazon's suggested bid. Works on any Amazon marketplace (US, UK, EU stores, Canada, Australia and beyond). Use when a product is newly listed and ready for ads, when a first PPC attempt burned money with no structure, or when relaunching a product after a listing rebuild."
 ---
 
 # Amazon PPC launch
@@ -12,7 +12,7 @@ description: "A launch build sheet for Amazon Sponsored Products: four campaigns
 - A product has a finished listing and needs its first ads.
 - A first launch spent money across one broad auto campaign with no clear result.
 - A listing was rebuilt and the product is relaunching.
-- The store is adding Amazon.in or Amazon.com as a new marketplace.
+- The store is adding a new Amazon marketplace, such as Amazon.com, Amazon.co.uk, Amazon.de or Amazon.com.au.
 
 ## Not for
 
@@ -54,8 +54,8 @@ Building the campaigns needs draft access (level 2) in the Amazon Ads console; b
 7. **Add negatives so campaigns do not compete.** Add every exact keyword as a negative exact in campaigns 1 and 3. Add obviously wrong words (other product types, "free", "used", "repair" if irrelevant) as negative phrase in campaigns 1 and 3.
 8. **Set budgets from data needs.** A keyword needs roughly 2 / conversion rate clicks before it can be judged (at 10% conversion, 20 clicks; practitioner default, test it). Daily budget per campaign = (keywords x clicks needed / 14 days) x bid. Add the four and compare with the cap / 14. If over, cut keyword count, not bids. Put about half the cap on exact, a quarter on auto, the rest split (practitioner default).
 9. **Name everything.** Format: `SP | ASIN or SKU | type | match | date`, so reports sort cleanly.
-10. **India notes (Amazon.in).** Bids and budgets in rupees with the same formulas. For cash-on-delivery orders, use the delivered share in the conversion rate, since refused orders do not pay: affordable cost per click x delivered share. Ad invoices add GST; a GST-registered seller can usually claim it as input credit, confirm with the accountant. Add Hindi terms written in Latin letters to campaign 3 if the keyword map has them.
-11. **US notes (Amazon.com).** Click prices rise in October to December; re-run the affordable cost per click before Q4 and do not launch a new product into the peak unless the cap allows for it (practitioner default).
+10. **Local marketplace notes.** Bids and budgets in the marketplace's own currency with the same formulas. Where a share of orders is refused, returned unpaid or fails delivery (pay on delivery is one regional option that does this), use the delivered share in the conversion rate: affordable cost per click x delivered share. Ad invoices may add sales tax or VAT; a VAT-registered seller can often reclaim it, confirm with the accountant. Add terms in the other languages your buyers use (for example French on Amazon.ca, or Spanish on Amazon.com) to campaign 3 if the keyword map has them. EU marketplaces each need their own keywords in the local language, not a translated copy of the UK list.
+11. **Peak season notes.** Click prices rise in the run-up to the store's peak seasons (October to December in the US, UK, EU and Canada, with Black Friday and Cyber Monday, Prime Day and local festivals adding their own spikes); re-run the affordable cost per click before each peak and do not launch a new product into it unless the cap allows for it (practitioner default).
 12. **Hand over for approval.** Show the build sheet, the cap and the planned loss. Create campaigns paused. Switch on only after the client's yes.
 
 ## The first 14 days
@@ -112,4 +112,8 @@ Throughout: track ad spend / total sales (TACOS) from Business Reports beside AC
 - GAD-0038: click price matters only against conversion rate.
 - ADC-0023: tie ad targets to stock cover versus lead time.
 
-What makes this skill ours: bids are worked back from gross profit after Amazon's fees, not from suggested bids; the launch loss is a capped sum the client signs; keyword verdicts wait for a click count set by conversion rate; and cash-on-delivery refusals in India cut the affordable bid.
+What makes this skill ours: bids are worked back from gross profit after Amazon's fees, not from suggested bids; the launch loss is a capped sum the client signs; keyword verdicts wait for a click count set by conversion rate; and refused or undelivered orders cut the affordable bid.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. On Amazon.in, set bids and budgets in rupees with the same formulas. For cash-on-delivery orders, multiply the affordable cost per click by the delivered share, since refused orders do not pay. Ad invoices add GST; a GST-registered seller can usually claim it as input credit, confirm with the accountant. Add Hindi terms written in Latin letters to campaign 3 if the keyword map has them.

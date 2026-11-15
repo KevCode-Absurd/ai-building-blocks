@@ -1,6 +1,6 @@
 ---
 name: grow-email-and-sms-list-with-popups
-description: "A sign-up popup plan that grows the email and SMS (or WhatsApp) list without giving away margin or slowing the site: the offer chosen by gross profit per new subscriber, the trigger and page rules for desktop and mobile, a two-step form (email, then phone), every line of copy with the consent wording, a speed check before and after, and a form test sized to traffic. Covers unique codes, subscription stores, India phone-first and WhatsApp opt-in with DLT for SMS, and US SMS consent rules. Use when the sign-up rate is low, when the popup fires on load and covers the page, or before changing the welcome offer."
+description: "A sign-up popup plan that grows the email and SMS (or WhatsApp) list without giving away margin or slowing the site: the offer chosen by gross profit per new subscriber, the trigger and page rules for desktop and mobile, a two-step form (email, then phone), every line of copy with the consent wording, a speed check before and after, and a form test sized to traffic. Covers unique codes, subscription stores, phone-first forms and WhatsApp opt-in where buyers prefer chat, SMS sender registration where a country needs it, and consent rules in the US, UK, EU and Canada. Use when the sign-up rate is low, when the popup fires on load and covers the page, or before changing the welcome offer."
 ---
 
 # Grow the email and SMS list with popups
@@ -37,7 +37,7 @@ If the welcome results are missing, plan the offer cost from the redemption rate
 ## Before you start: the gates
 
 1. **Offer cost known.** Pass when gross profit per first order is known. Fail: use a non-discount offer (early access, a guide, free shipping on first order only if shipping cost is known) until it is.
-2. **Consent set up.** SMS needs recorded consent with disclosure; WhatsApp needs an opt-in that names the business [EML-6320]. India SMS needs DLT-registered header and templates before any send [EML-6324]. Fail: collect email only for now.
+2. **Consent set up.** SMS needs recorded consent with disclosure; WhatsApp needs an opt-in that names the business [EML-6320]. In the UK and EU, marketing email and SMS need opt-in consent with an unticked box; Canada's anti-spam law needs express consent too. Some countries need the SMS sender name and templates registered before any send; check your SMS provider's rules for each country. Fail: collect email only for now.
 3. **Speed budget.** Stores with fewer third-party services score far better on mobile [SPD-0001]. If the form tool adds a new script, another must go or the form must load late.
 4. **Code leakage.** Single shared codes end up on coupon sites. Pass when the tool can issue unique, single-use codes.
 
@@ -74,7 +74,7 @@ Google's page experience guidance asks whether pages avoid intrusive interstitia
 ### 4. Write the consent text
 
 - **US SMS:** put the disclosure above the phone submit button; consent can never be a condition of purchase, and US carriers require double opt-in for cart abandonment texts [EML-6327]. Use the SMS provider's required disclosure (brand name, message frequency, rates may apply, reply STOP to opt out, HELP for help, links to terms and privacy).
-- **India:** phone first is often better than email for Indian shoppers (practitioner default, test it). Add a separate unticked box: "Send me offers and updates from [store] on WhatsApp." SMS promotions go only through DLT-registered headers and templates [EML-6324].
+- **Chat-first markets:** where buyers live on WhatsApp (much of Latin America, Europe, the Middle East and Asia), phone first is often better than email (practitioner default, test it). Add a separate unticked box: "Send me offers and updates from [store] on WhatsApp." Send SMS promotions only through sender names and templates registered where the country requires it.
 - **Email:** say what they will get and how often in one line; link the privacy policy.
 
 ### 5. Check speed before and after
@@ -96,7 +96,7 @@ Most sign-up forms capture 1 to 3% of visitors; well-set forms aim for 8 to 12% 
 - Mobile trigger waits at least 3 to 5 seconds and leaves the product visible.
 - The form never shows on cart, checkout or to existing subscribers.
 - Consent text sits above the phone button, with nothing pre-ticked.
-- India SMS has DLT registration; WhatsApp opt-in names the store.
+- SMS sender registration is done where the country requires it; WhatsApp opt-in names the store.
 - Mobile speed checked before and after, with old popup code removed.
 - The test plan matches the store's traffic.
 - Nothing was published without a client yes.
@@ -126,7 +126,14 @@ Most sign-up forms capture 1 to 3% of visitors; well-set forms aim for 8 to 12% 
 - EML-0047, EML-0058, OFF-0026, OFF-0028, OFF-0036, OFF-0037: offer size and framing.
 - EML-0061: form test size.
 - EML-0034: SMS sign-ups as acquisition.
-- EML-6320, EML-6324, EML-6327: WhatsApp opt-in, India DLT, SMS consent.
+- EML-6320, EML-6327: WhatsApp opt-in, SMS consent.
 - SPD-0001, SPD-0007, SPD-0009: scripts, layout shift and leftover app code.
 
-What makes this skill ours: the offer is chosen by gross profit per subscriber rather than sign-up rate; mobile triggers protect both the product view and search ranking; speed is measured before and after with old popup code removed; and India gets a phone-first form with a WhatsApp opt-in and DLT check.
+What makes this skill ours: the offer is chosen by gross profit per subscriber rather than sign-up rate; mobile triggers protect both the product view and search ranking; speed is measured before and after with old popup code removed; and chat-first markets get a phone-first form with a WhatsApp opt-in and a sender registration check.
+
+## Selling in India
+
+- SMS needs a DLT-registered header and templates before any send [EML-6324].
+- Phone first is often better than email for Indian shoppers (practitioner default, test it), with a separate unticked WhatsApp opt-in box.
+
+Source: EML-6324 (India DLT registration for SMS).

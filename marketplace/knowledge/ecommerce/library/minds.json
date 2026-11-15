@@ -1,0 +1,1613 @@
+[
+  {
+    "slug": "claude-hopkins",
+    "hire_for": "Turn vague product claims into specific, checkable facts and test offers small, judged by what each customer cost you.",
+    "store_questions": [
+      "Read my product page as a salesman at the door: which words like 'premium' or 'best' should go, and what plain fact with a number replaces each?",
+      "What do we do in making this product that rivals also do but never mention, and how would you turn it into the reason to buy?",
+      "Write 10 headlines for my best seller, each aimed at a different kind of buyer, so I can test the top few against each other.",
+      "Design a sample or trial offer that only reaches people who read our story and asked for it, with a code so I can track each one.",
+      "Before I spend my launch budget, split it into a small test with a tracked link per ad and a cost per customer I must hit to scale.",
+      "Am I trying to change a habit with this product, and is each new buyer worth what it costs me to convert them?"
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "georgia-product-copy",
+      "kofi-ad-copy",
+      "gretchen-store-testing"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "eugene-schwartz",
+    "hire_for": "Find the desire your buyers already have, then match the headline to how aware they are and how many claims they have heard.",
+    "store_questions": [
+      "Here are 30 reviews and my product facts: what strong want do buyers already have that this product meets, in their own words?",
+      "How aware is my buyer of the problem and of my brand, and what should the first line of my ad say at that level?",
+      "Every brand in my category makes the same claim. How many times have buyers heard it, and what would be new to them?",
+      "My sales page leads with features. Rebuild the order so the want comes first and each claim is set up before it is made.",
+      "Which claim on my page will buyers not believe at the top, and what has to come before it?",
+      "Give me two very different versions of my landing page to test, not near twins, and say what each one bets on."
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "kofi-ad-copy",
+      "annabel-landing-pages",
+      "funmilayo-customer-research"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "david-ogilvy",
+    "hire_for": "Build product pages and ads on research and real facts, with one big idea that sells and a steady brand voice.",
+    "store_questions": [
+      "Review my best ad and tell me plainly whether it will sell, and why, as a busy shopper reading it once would see it.",
+      "Write 20 headlines for my product page from real product facts, then pick the three I should test first.",
+      "Describe my brand as a person in one paragraph, then mark which of my current ads chip away at that personality.",
+      "Should I run another 20 percent off sale or put the money into ads that build the brand? Show me the trade-off.",
+      "Does my video ad still tell the story with the sound off? List what to change so it does.",
+      "Write a short sales guide for my support team: how to open, what to stress and how to answer the top three objections."
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "kemal-creative-director",
+      "philippa-brand",
+      "georgia-product-copy"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "gary-halbert",
+    "hire_for": "Make sales emails and pages sound like one person talking, with a promise buyers can picture, a bold guarantee and a clear ask.",
+    "store_questions": [
+      "Rewrite my launch email so it sounds like me writing to one friend, not a company, and asks clearly for the order.",
+      "What exactly is the promise on my product page, and could a buyer picture the result? Make it concrete.",
+      "Write a simple, bold guarantee for my best seller that I would be glad to honour, and show me where it goes on the page.",
+      "Which proven ads and emails in my category should I study and copy out by hand, and what makes each one work?",
+      "Tear my sales page apart the way a tough hot-seat group would, and mark every place a reader would stop reading."
+    ],
+    "agents": [
+      "lucia-email-copy",
+      "howard-copy-chief",
+      "brendan-offers"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "joseph-sugarman",
+    "hire_for": "Write long product pages people finish: a true story up top, the honest drawback said first, easy ordering and a small test first.",
+    "store_questions": [
+      "Here is how I found this product. Turn the true story into an opening for my product page that makes buyers read the next line.",
+      "Read my product page and show me where the reader stops sliding down the page, and why.",
+      "What is the honest drawback of my product, and how would you say it first so it builds trust?",
+      "Plan a simple demo video with real people trying my product, for my product page and my ads.",
+      "How many steps does it take to order on my store right now, and which ones would you cut?",
+      "What backend offer should follow the first sale: an add-on, a bundle or a refill plan?"
+    ],
+    "agents": [
+      "georgia-product-copy",
+      "howard-copy-chief",
+      "devon-video-ugc",
+      "annabel-landing-pages"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "john-caples",
+    "hire_for": "Write headlines and subject lines that say what the reader gets, then compare two versions fairly with tracked results.",
+    "store_questions": [
+      "Write 20 headlines for my offer, sorted into self-interest, news and curiosity, ready to test.",
+      "Cover everything but the headline on my homepage: would a stranger know what they get? Rewrite it so they would.",
+      "My ad gets clicks but few sales. Work out why it gets seen but not answered.",
+      "Which one appeal should my product lead with: save money, look good or feel safe? Say why.",
+      "Plan a fair test of two email subject lines: one difference, matched halves of my list, and how to tell a real win from luck.",
+      "Here are my last test results. What should I keep, drop and test next?"
+    ],
+    "agents": [
+      "kofi-ad-copy",
+      "gretchen-store-testing",
+      "lucia-email-copy",
+      "dustin-ad-deployment"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "robert-collier",
+    "hire_for": "Write cart, follow-up and win-back emails that start where the buyer's thoughts already are and add a new reason each time.",
+    "store_questions": [
+      "Rewrite my abandoned cart email so the first line talks about what the shopper wants, not about us or the price.",
+      "Write three openings for the same offer, each aimed at a different kind of buyer on my list.",
+      "My first email gets opened but not answered. Plan a short follow-up series where each email adds a new reason to buy.",
+      "Turn the feature list for my best seller into a word picture the buyer can see themselves in.",
+      "What bait would my lapsed customers bite on, and how does my offer move them a step closer to what they want?",
+      "Write a polite reminder for a subscriber whose payment failed that keeps their goodwill."
+    ],
+    "agents": [
+      "lucia-email-copy",
+      "morag-email-sms",
+      "imogen-retention"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "clayton-makepeace",
+    "hire_for": "Plan long sales pages around the buyer's strongest feeling, with proof beside every claim and each yes the buyer must give mapped.",
+    "store_questions": [
+      "What keeps my buyer awake at night about this problem, and where on my landing page do we touch it?",
+      "Outline my sales page from headline to P.S. before any copy, showing what each section must sell before the next starts.",
+      "List every claim on my page and the proof a doubter would need for each. Mark the ones I can't prove yet.",
+      "Turn my flat feature list into benefits, then give me the benefit of each benefit, two levels deep.",
+      "Check my page against the eight yeses a buyer must give before they buy, and show me where it loses them.",
+      "Turn these plain customer quotes into a headline and a short story for my page."
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "annabel-landing-pages",
+      "brendan-offers"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "dan-kennedy",
+    "hire_for": "Put a clear offer, a true reason to act now and tracking into every ad and email, then follow up the almost-buyers.",
+    "store_questions": [
+      "Where is the offer in my ad, why would someone act today and not next month, and what exactly do I tell them to do?",
+      "Add a real reason to buy now to my promotion, like a true deadline or limited stock, with nothing fake.",
+      "Set up simple tracking so I know which ad, email or post brought each customer.",
+      "What happens to people who added to cart and left? Plan who contacts them next, with what, and when.",
+      "Which of my marketing costs can't show a result, and which should I cut first?",
+      "Who exactly is my product for? Narrow my market and match the message and the channel to it."
+    ],
+    "agents": [
+      "jared-performance-marketing",
+      "kofi-ad-copy",
+      "morag-email-sms",
+      "emre-tracking"
+    ],
+    "stage": "ads"
+  },
+  {
+    "slug": "drayton-bird",
+    "hire_for": "Write a sharp brief, fix the offer before the words and plan what happens after the first email gets no reply.",
+    "store_questions": [
+      "Here is my brief for a new email campaign. What exactly am I saying, to whom, and what is missing?",
+      "Why do my best customers really buy, and could a small change to what I sell make a better offer?",
+      "Is there a person in my emails, or just a brochure? Who should be speaking, and why would buyers believe them?",
+      "Run my next promotion through a direct marketing checklist before it goes out, and list what it misses.",
+      "My first email got no reply. Plan the next three messages as a campaign, not a one-off.",
+      "I'm choosing an agency or freelancer. What should I ask, and how will I count what their work brings in?"
+    ],
+    "agents": [
+      "fiona-account-manager",
+      "lerato-creative-producer",
+      "morag-email-sms",
+      "howard-copy-chief"
+    ],
+    "stage": "agency"
+  },
+  {
+    "slug": "gary-bencivenga",
+    "hire_for": "Back every claim with proof a sceptic would accept, and build a believable offer with a reason for the deal and a strong guarantee.",
+    "store_questions": [
+      "Read my landing page as a 'yeah, sure' sceptic and set the proof I have beside every claim. Which claims should go?",
+      "Audit what I run now: headline, body, bullets, offer, guarantee and free gift. Which part could a challenger beat?",
+      "What am I really selling? What else could my product be to the buyer?",
+      "Give me why us, why it's true and why now for my best seller.",
+      "Build my offer: one thing per ad, a believable reason for the deal, a deluxe option and an honest limit.",
+      "Where is the hungry crowd already looking for this, and how can we prove it small before we bet big?"
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "brendan-offers",
+      "annabel-landing-pages"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "bill-bernbach",
+    "hire_for": "Find one honest idea for your brand and say it in a fresh way, even turning a weakness into the reason to buy.",
+    "store_questions": [
+      "What's the idea behind my brand? Not the facts, the idea. Would anyone notice my ads among all the others in their feed?",
+      "What's the weakness I'm hiding about my product, and could it become the reason to buy?",
+      "If a rival said the plain version of my tagline, could anyone tell us apart? Rewrite it so they could.",
+      "Does the picture in my ad make the same point as the words? Show me where they split.",
+      "Ask me for the facts first, then give me three fresh ways to say the one thing my product does better."
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "tendai-ad-creative",
+      "philippa-brand"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "helen-lansdowne-resor",
+    "hire_for": "Write product copy from the life of the person who really decides to buy, with a useful how-to that sells.",
+    "store_questions": [
+      "Who actually decides to buy my product, and is anyone like them shaping my copy?",
+      "Rewrite my product description around what it does for my buyer's day, not just how it looks on the shelf.",
+      "Write a short numbered routine buyers could try tonight with my product, so my how-to guide sells.",
+      "Would my buyer believe this line, or roll their eyes? Mark the promises my product can't keep.",
+      "Should I use famous or ordinary customers in my testimonials, and who does my buyer trust on this?"
+    ],
+    "agents": [
+      "georgia-product-copy",
+      "funmilayo-customer-research",
+      "pilar-creators"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "shirley-polykoff",
+    "hire_for": "Write warm, one-breath taglines for personal products buyers feel shy about, and answer their private fears in plain words.",
+    "store_questions": [
+      "What private question is my buyer asking about this product, and can it become my headline?",
+      "My product carries a little stigma. How do I promise discretion, not display, in my ads?",
+      "Write five taglines a buyer could say to a friend in one breath.",
+      "What is my buyer afraid will go wrong, and have my product page and ads answered it plainly?",
+      "Who does my buyer already trust on this, like a hairdresser or a pharmacist, and how can my ads borrow that trust honestly?",
+      "Can my campaign idea run for years with new lines? Give me the next five."
+    ],
+    "agents": [
+      "kofi-ad-copy",
+      "philippa-brand",
+      "georgia-product-copy"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "elmer-wheeler",
+    "hire_for": "Find the sizzle and the first ten words that sell, and turn yes-or-no questions into which-one choices in chat and on the page.",
+    "store_questions": [
+      "What's the sizzle in my product: what will buyers see, hear, smell or picture? Rewrite my first ten words around it.",
+      "My chat replies ask 'Do you want it?' Rewrite them to ask 'Which one?' and win a small yes first.",
+      "Give me a ten-second opening line for my live chat, two spares, and the signals that a shopper is ready to buy.",
+      "How can shoppers hold, try or see my product work, on the page or in a video?",
+      "Is this objection honest, a test or a stall? Give me a reply for each of my top three.",
+      "Write three versions of my add-to-cart nudge to test, and tell me how to keep the winner."
+    ],
+    "agents": [
+      "rohan-chat-sales",
+      "kofi-ad-copy",
+      "georgia-product-copy",
+      "darlene-support-lead"
+    ],
+    "stage": "channels"
+  },
+  {
+    "slug": "joanna-wiebe",
+    "hire_for": "Rewrite landing pages and emails from mined customer words, cut claims that fail 'so what, prove it', then test against the control.",
+    "store_questions": [
+      "Mine these reviews by hand: mark the phrases that repeat and surprise, and turn the best into headlines for my landing page.",
+      "Run every claim on my homepage through 'so what, prove it' and tell me what to cut or back up.",
+      "Is the shopper ready for my Add to cart button yet? Build the page backward from the button.",
+      "Lay out my product page as Problem, Promise, Proof, Proposal, using my research to fill each part.",
+      "Audit my welcome email flow as the control before you rewrite it: what works, what to protect and what to fix?",
+      "If my next test loses, what will we have learned? Write the hypothesis before the copy."
+    ],
+    "agents": [
+      "annabel-landing-pages",
+      "funmilayo-customer-research",
+      "gretchen-store-testing",
+      "lucia-email-copy"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "jay-abraham",
+    "hire_for": "Grow sales through all three levers, more buyers, bigger orders and more repeat buying, using assets the store already owns.",
+    "store_questions": [
+      "What am I sitting on that I don't use: past buyers, my email list, a partner brand with the same customers?",
+      "Split my growth into more buyers, bigger orders and more repeat buying. What would a 10 percent gain on each add up to?",
+      "What is a customer worth to me over time, by source, and how much can I afford to pay to win one?",
+      "Who carries the risk in my offer right now? Write a guarantee or trial that moves it to me.",
+      "Plan a referral system my happiest customers would actually use.",
+      "Which other brand already sells to my buyers, and what joint offer could we make together?"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "imogen-retention",
+      "radek-unit-economics",
+      "brendan-offers"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "alex-hormozi",
+    "hire_for": "Build an offer buyers can't compare to rivals: list every worry, stack the fixes, price from the worth and keep scarcity honest.",
+    "store_questions": [
+      "If a buyer put my product next to a rival's, what would they compare? Make my offer one they can't compare.",
+      "List every worry between my buyer and the result they want, then turn each into a bonus, a fix or a guarantee.",
+      "Score my offer on dream outcome, likelihood, time and effort, then fix the weakest part and make the fix visible.",
+      "I want to raise prices. What is my product worth to buyers, and what is my price as a share of that?",
+      "Add a real cap, a real date and a guarantee with the refund sums done. If refunds doubled but sales rose a third, am I better off?",
+      "Is my market starving for this and able to pay, or is the market the problem and not the offer?"
+    ],
+    "agents": [
+      "brendan-offers",
+      "radek-unit-economics",
+      "malcolm-ecommerce-growth"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "russell-brunson",
+    "hire_for": "Map the path from first visit to repeat order: a hook, story and offer, then a value ladder with a subscription rung.",
+    "store_questions": [
+      "What's the next step after someone lands on my store? Map my funnel from first visit to repeat order.",
+      "Build a value ladder for my store: an entry product, the core product, an upsell and a subscription or refill.",
+      "What's the hook, story and offer for my best seller's ad? Would the hook stop someone scrolling?",
+      "Tell my founder story so buyers reach the same insight I did, and cut it to fit a product page.",
+      "My product isn't selling. Before I blame the product, what in the pitch should I test first?",
+      "Which one funnel actually drives my growth, and which others should feed it or stop?"
+    ],
+    "agents": [
+      "brendan-offers",
+      "annabel-landing-pages",
+      "malcolm-ecommerce-growth"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "byron-sharp",
+    "hire_for": "Grow by reaching more light buyers and being easy to notice and buy, judged on buying data, not surveys or loyalty myths.",
+    "store_questions": [
+      "Should I start a loyalty program, or put the money into reaching more new buyers? Use my order data, not a survey.",
+      "How many of my buyers are light buyers who buy once a year, and are my ads reaching people like them at all?",
+      "In which buying moments does my brand come to mind, and in which does it vanish?",
+      "How easy is it to find and buy my product right now, on my store, on marketplaces and in search?",
+      "Which of my brand assets, like colour, logo, pack or sound, are distinctive enough to use in every ad?",
+      "This vendor says their tool has no wasted spend. Who sells this metric, and what would they lose if it didn't matter?"
+    ],
+    "agents": [
+      "jared-performance-marketing",
+      "philippa-brand",
+      "malcolm-ecommerce-growth",
+      "callum-reporting"
+    ],
+    "stage": "ads"
+  },
+  {
+    "slug": "les-binet",
+    "hire_for": "Split ad budget between brand building and sales ads, compare share of voice with share of market, and check sales were really extra.",
+    "store_questions": [
+      "I spend almost everything on retargeting and Shopping ads. How should I split my budget between brand and sales, starting near 60:40?",
+      "What's my share of voice compared with my share of market, and am I underspending?",
+      "Would these sales have happened without the ad? How do I check before I cut or scale?",
+      "Is each of my ads built to build the brand or to trigger a sale, and is it emotional or clear enough for that job?",
+      "Growth has slowed. Should I cut spend? What does the long-run data say beyond this quarter?",
+      "How should I combine a holdout test, modelling and platform attribution to judge my ads?"
+    ],
+    "agents": [
+      "jared-performance-marketing",
+      "emre-tracking",
+      "lindsey-meta-media-buyer",
+      "callum-reporting"
+    ],
+    "stage": "ads"
+  },
+  {
+    "slug": "mark-ritson",
+    "hire_for": "Write the marketing plan in the right order: diagnose, pick the target, set the position and goals, and only then choose tactics.",
+    "store_questions": [
+      "Here is my marketing plan. Is it a strategy or a list of channels? Rebuild it as diagnosis, target, position and objectives.",
+      "Who exactly is my target buyer, and who am I leaving out on purpose?",
+      "Write my position in one sentence a customer would recognise.",
+      "What am I doing for the 95 percent of my market who aren't ready to buy yet?",
+      "Would a viewer name my brand a day after seeing my ad? Which four or five distinctive assets should I use boldly?",
+      "Everyone says I should be on this new platform. Where's the evidence, and why not do both?"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "philippa-brand",
+      "shannon-market-research",
+      "jared-performance-marketing"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "al-ries",
+    "hire_for": "Pick the one word your brand can own in buyers' minds, decide what to give up, and stop stretching one name over everything.",
+    "store_questions": [
+      "First what? What kind of product could my brand be the first of in buyers' minds?",
+      "What one word could my brand own, and does a rival already hold it?",
+      "Should I add these new products under my brand name, or would a new name serve them better?",
+      "What should I give up, in products or buyers, to make my position clearer?",
+      "I'm launching a brand nobody knows. What would a reporter write about it, and how do I get that story first?",
+      "My category is splitting. Should I lead the new branch, and what name would carry it?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "barnaby-wild-bets",
+      "juliet-merchandising"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "jack-trout",
+    "hire_for": "Size up the category leader, find the weakness inside its strength and claim a different idea you can prove.",
+    "store_questions": [
+      "Who leads my category, and what do they own in buyers' minds?",
+      "Where is the leader weak because of its strength, the thing it can't fix because of what it is?",
+      "What are my credentials for the idea I want to own? Show me which proof I have and which I lack.",
+      "Does my ad say something different, or just something nice? Rewrite my slogan to set me apart.",
+      "Brief my designer with the idea settled first: the words, then the pictures that back them.",
+      "My position feels tired. How do I reposition against rivals without a head-on fight with the leader?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "shannon-market-research",
+      "kofi-ad-copy"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "rory-sutherland",
+    "hire_for": "Change how the store feels before changing what it costs: reframe the brief, find what each step signals and test the odd idea.",
+    "store_questions": [
+      "Delivery takes five days and I can't make it faster. What would make the wait feel better, even if it works exactly the same?",
+      "What do my packaging, price and free returns signal to a first-time buyer, and what would it cost a rival to fake them?",
+      "I want to cut handwritten thank-you notes and live chat to save money. What do they do that nobody wrote down?",
+      "What is the opposite of the obvious idea for more repeat orders, and could I test the silly version cheaply this week?",
+      "Which part of my buying journey should be slower, not faster, to make the product feel worth more?",
+      "Am I answering the question in my brief, or the one my shoppers actually have?"
+    ],
+    "agents": [
+      "barnaby-wild-bets",
+      "larissa-store-ux",
+      "latoya-post-purchase",
+      "brendan-offers"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "robert-cialdini",
+    "hire_for": "Use true social proof, real scarcity, authority and giving first on product pages and offers, with an ethics check on each.",
+    "store_questions": [
+      "Which persuasion principle is really at work on my product page, and which one is missing?",
+      "What could I give buyers first that feels personal and unexpected, not a generic gift with strings?",
+      "How should I show what people like my buyer already do, using true numbers from my orders and reviews?",
+      "What is truly unique about my offer, and what do buyers lose by passing? Cut any scarcity that isn't real.",
+      "What will shoppers have just seen right before they reach my price, and how should I change it?",
+      "Am I stacking every principle on one page? Tell me which to keep and which to drop."
+    ],
+    "agents": [
+      "annabel-landing-pages",
+      "gretchen-store-testing",
+      "brendan-offers",
+      "corinne-reviews"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "daniel-kahneman",
+    "hire_for": "Check forecasts, price framing and test results for bias: take the outside view and agree in advance what would prove you wrong.",
+    "store_questions": [
+      "Here is my sales forecast for the holiday season. How did similar launches turn out, and what range should I plan for?",
+      "Would my buyers choose differently if my price or offer were framed as a loss instead of a gain?",
+      "My last A/B test won big on a small sample. Is it settled, and what would I expect to see if I were wrong?",
+      "What's missing from the story I'm telling myself about why sales dropped last month?",
+      "Break my decision to launch a new product line into parts, so each partner scores them alone before we talk.",
+      "Which moments of delivery and unboxing will buyers remember most, and are those moments good?"
+    ],
+    "agents": [
+      "radek-unit-economics",
+      "gretchen-store-testing",
+      "callum-reporting",
+      "hemant-store-finance"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "april-dunford",
+    "hire_for": "Position your product against the alternatives buyers really consider, and turn unique features into value the right buyers want.",
+    "store_questions": [
+      "Compared with what? List what my buyers would use if my product didn't exist, counting only what shows up on real shortlists.",
+      "Map what my product does that those alternatives can't, then ask 'so what' until each has a value a buyer would choose me for.",
+      "Which of my selling points are real value, and which are just objection handlers like free returns or a badge?",
+      "Who cares most about my value? Study why I win sales, not why I lose them.",
+      "Which market frame makes my value easiest to see: what category should my homepage say I'm in?",
+      "A bigger rival says they do what I do. How should my product page answer that?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "annabel-landing-pages",
+      "shannon-market-research"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "marty-neumeier",
+    "hire_for": "Sharpen what makes your brand different with the onliness test and a rival grid, so buyers get a clear gut feeling about you.",
+    "store_questions": [
+      "Who are we, what do we do, and why does it matter? Give me a sharp answer for my store.",
+      "Finish 'We are the only...' for my brand, then swap in a rival's name. Does it still fit?",
+      "Map my rivals the way customers see them, on a grid of the factors that matter. Where is the white space?",
+      "Is this new product line making my brand sharper or blurrier?",
+      "What do customers say about my brand when I'm not in the room? Use these reviews.",
+      "How could I test a risky new idea small, perhaps under a separate name, so the main brand is safe if it fails?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "kemal-creative-director",
+      "barnaby-wild-bets"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "paul-feldwick",
+    "hire_for": "Make ads people would choose to watch, built on distinctive assets that tie the entertainment back to your brand.",
+    "store_questions": [
+      "Would anyone choose to watch my ad? Am I entertaining people in their feed, or boring them?",
+      "What will people remember that ties my ad to my brand: a character, a tune, a look or a name?",
+      "My brand has no big budget. Where's the showman in my plan, and what would get people talking?",
+      "My brief asks for one rational point. Is that really the job?",
+      "If a rival copied my logo tomorrow, what else would still say it's us?"
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "tendai-ad-creative",
+      "devon-video-ugc"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "jonah-berger",
+    "hire_for": "Make your product talkable with triggers, visible use and stories, and remove the barriers that stop buyers switching to you.",
+    "store_questions": [
+      "Why would someone talk about my product? What does sharing it say about them?",
+      "What in my buyer's daily life could remind them of my product, and how do I tie my posts to it?",
+      "How can I make people using my product visible to others, the way a laptop logo faces onlookers?",
+      "Shoppers like my product but stay with what they use now. What is stopping them, before I push harder?",
+      "How can I make my product easier and less risky to try: a sample, a trial or a free swap?",
+      "Score my content plan on social currency, triggers, emotion, public, practical value and stories."
+    ],
+    "agents": [
+      "pilar-creators",
+      "tomas-social-community",
+      "ritika-influencer-outreach",
+      "brendan-offers"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "donald-miller",
+    "hire_for": "Make your homepage clear in eight seconds: the buyer as hero, your brand as guide, a three-step plan and a plain buy button.",
+    "store_questions": [
+      "Can a stranger tell what I sell, how it helps and how to buy within eight seconds on my homepage?",
+      "What does my customer want, in one sentence, and what problem stands in the way on all three levels?",
+      "Who is the hero of my product page, me or the buyer? Rewrite it with my brand as the guide.",
+      "Give me a three-step plan that shows how buying from me works.",
+      "Write a one-liner for my store that someone in a coffee queue could repeat.",
+      "What happens if my buyer doesn't act, and what does life look like if they do?"
+    ],
+    "agents": [
+      "annabel-landing-pages",
+      "larissa-store-ux",
+      "philippa-brand"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "seth-godin",
+    "hire_for": "Pick the smallest audience your store can delight, earn permission to email them and make the product worth talking about.",
+    "store_questions": [
+      "Who is my store for, exactly? Name the smallest group I could serve well enough to keep the shop going.",
+      "Did my subscribers ask to hear from me? Would they complain if my emails stopped?",
+      "Is my product itself worth talking about, or am I using stunts to draw eyes to something ordinary?",
+      "Would anyone miss my brand if it were gone? What change am I trying to make for my buyers?",
+      "Sales are slow. Is this a dip worth pushing through, or a dead end I should quit?",
+      "How can I help my customers connect with each other, so they feel 'people like us buy this'?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "morag-email-sms",
+      "tomas-social-community",
+      "barnaby-wild-bets"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "chip-heath",
+    "hire_for": "Make your message stick with one core idea and a concrete example, and design peak moments into unboxing and first use.",
+    "store_questions": [
+      "What is the core of my brand message, in one sentence a new customer would get?",
+      "Which words on my site only make sense to me? Find the curse of knowledge and make them concrete.",
+      "Where is the peak in my customer's journey, and how can I build one into unboxing or first use?",
+      "What do shoppers expect from my category, and where can I break that script?",
+      "I keep going round on whether to launch this product. Give me two more options besides yes or no, and a tripwire.",
+      "Turn a number from my business, like bottles saved or orders shipped, into a picture a buyer can see."
+    ],
+    "agents": [
+      "latoya-post-purchase",
+      "philippa-brand",
+      "alistair-packaging"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "jeff-bezos",
+    "hire_for": "Work backwards from the customer: write the launch press release first, set goals on inputs you control and move fast on reversible calls.",
+    "store_questions": [
+      "Before I build this new product, write the press release and the hard customer questions. Would a buyer care?",
+      "What need of my buyers will still be true in ten years, and am I investing in it: price, range or fast delivery?",
+      "Is my decision to switch shipping partners a door I can walk back through? How fast should I decide?",
+      "I watch ROAS every day. Which input goals I control, like range, in-stock rate or delivery speed, should I set instead?",
+      "Am I copying a rival's move, or building something my customers asked for in their own words?",
+      "What does this bet cost if it fails and pay if it works, and can my store survive the miss?"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "barnaby-wild-bets",
+      "revathi-product-research"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "sam-walton",
+    "hire_for": "Cut waste so you can charge less, walk rivals' stores with a notepad and ask your front-line team what customers really say.",
+    "store_questions": [
+      "Go through my costs line by line: which ones could I do cheaper so I can charge customers less?",
+      "Walk my top three rivals' stores with a notepad: what do they do better than me, and what should I copy?",
+      "My support team talks to customers every day. What should I ask them this week, and how do I get them talking?",
+      "Everyone in my niche is going one way. What's the other way?",
+      "How should I keep score with my small team, with a friendly contest and a promise if we hit the number?",
+      "A customer got a bad order. How do I make it right fast, with no excuses?"
+    ],
+    "agents": [
+      "radek-unit-economics",
+      "marivic-fulfilment",
+      "darlene-support-lead",
+      "shannon-market-research"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "ingvar-kamprad",
+    "hire_for": "Design products and the range to a price your buyers can afford, cut cost without cutting the quality they need, and keep the range tight.",
+    "store_questions": [
+      "Who is my product for, and can they afford it? Set the target price first, then design the product to hit it.",
+      "Where can I lower the cost of my best seller through design, buying, shipping or materials, without cutting the quality buyers need?",
+      "Could I get the same result from my launch with half the money? Show me how.",
+      "My range has grown to 200 products. Am I spreading myself too thin, and what should I cut?",
+      "Why do we do it this way? Question three habits in my fulfilment that nobody has checked."
+    ],
+    "agents": [
+      "douglas-should-cost",
+      "zhenyu-sourcing",
+      "sabelo-product-portfolio",
+      "maxine-tech-packs"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "sara-blakely",
+    "hire_for": "Test a product idea cheaply with your own money, then win the first big buyer and the shop floor by showing the product in person.",
+    "store_questions": [
+      "Is this a problem I have myself, and who else has it? How do I ask them before I spend?",
+      "What's the cheapest way to test my product idea this month with my own money, while I keep my day job?",
+      "What can I do myself, like a first patent draft or my listings, and what should I pay an expert for?",
+      "Who is the one buyer or stockist who could change everything, and how do I show them the product in person?",
+      "Is my product ten times better than what's out there, or just a bit better? Be honest.",
+      "Where will my customer actually see my product, and how do I win over the staff who sell it there?"
+    ],
+    "agents": [
+      "revathi-product-research",
+      "sipho-product-hunter",
+      "mei-wholesale-sales"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "tobi-lutke",
+    "hire_for": "Keep the store simple for buyers and your team: one hard-to-fake number, fast reversible calls and tools before new hires.",
+    "store_questions": [
+      "Does this new app or feature make my store simpler for the shopper, or just busier?",
+      "What one number should my store steer by that is hard to fake, and how do I review it each week?",
+      "How undoable is this decision to change my store platform or theme? Should I try it now or slow down?",
+      "Before I hire someone new, could AI or a better tool do the work first?",
+      "Which of my processes make something possible, which make it simpler, and which should go?",
+      "Will this change create long-term value for my customers, even if it costs revenue now?"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "facundo-store-setup",
+      "callum-reporting"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "tony-hsieh",
+    "hire_for": "Make service the brand: values you can hire by, support that puts the experience before speed, and ad money moved into service.",
+    "store_questions": [
+      "Write three core values for my store that I could really hire and fire by.",
+      "My support team rushes customers to cut handle time. Should we aim for the best experience instead, and what does it cost?",
+      "What would make a customer tell their friends about my support?",
+      "What is the opposite of what every store in my niche does for service?",
+      "Should I move some ad budget into service, like free returns or faster replies? Show me the trade-off.",
+      "How do I check a new support hire for culture fit as well as skills?"
+    ],
+    "agents": [
+      "darlene-support-lead",
+      "imogen-retention",
+      "latoya-post-purchase"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "yvon-chouinard",
+    "hire_for": "Build products that last, offer repair, find and stop your biggest harm, and grow at a pace you can pay for yourself.",
+    "store_questions": [
+      "Should I launch a cheaper version of my product to win sales? What would it do to the brand?",
+      "What is the most harm my products do, and how do I stop it, step by step down my supply chain?",
+      "Is my product the best I can make? Will it last, and could I offer repair?",
+      "Do I need to grow this fast, or do I just want to? Can I pay for this growth from my own earnings?",
+      "Would a buyer purchase this if they already owned one that worked? How do I sell to that?",
+      "Which green claims on my site cover a harm instead of fixing it?"
+    ],
+    "agents": [
+      "phuong-quality-control",
+      "zhenyu-sourcing",
+      "philippa-brand",
+      "hemant-store-finance"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "estee-lauder",
+    "hire_for": "Launch with samples and demonstrations instead of ad money, pick stockists that make the brand look better and train who sells it.",
+    "store_questions": [
+      "I have no ad budget. Where is my buyer a captive audience with time to try my product, and how do I put samples there?",
+      "What will a first-time buyer take home today: a sample, a gift with purchase or a mini?",
+      "Does this discount make my brand look better or cheaper?",
+      "Is this stockist, marketplace or pop-up the right place for my brand, and what does it say about us?",
+      "How do I show a big stockist there is demand before I ask for the order?",
+      "Write a first-minute script for whoever sells my product, in store or on live video."
+    ],
+    "agents": [
+      "mei-wholesale-sales",
+      "brendan-offers",
+      "darlene-support-lead",
+      "pilar-creators"
+    ],
+    "stage": "channels"
+  },
+  {
+    "slug": "jack-ma",
+    "hire_for": "Build trust strangers can rely on into your offer, win where you know the ground better than big rivals, and grow with small partners.",
+    "store_questions": [
+      "Why would a stranger trust my store with their money? What can I build into checkout to hold that trust, like a guarantee or a delivery promise?",
+      "Where do I know the ground better than the big marketplaces and rivals? Where is my river?",
+      "Who else grows if my store grows: suppliers, creators or small stockists? How do I build that?",
+      "Does my plan pass the ten-year test, or does it only pay this year?",
+      "What do I have, what do I want, and what will I give up to get there?",
+      "Could my store run for a month without me? What has to change first?"
+    ],
+    "agents": [
+      "sudhir-marketplaces",
+      "mei-wholesale-sales",
+      "malcolm-ecommerce-growth"
+    ],
+    "stage": "channels"
+  },
+  {
+    "slug": "anita-roddick",
+    "hire_for": "Turn what your brand stands for into practical action buyers can see: refills, checked suppliers and a cause in your shop window.",
+    "store_questions": [
+      "What does my brand stand for, and could a customer see it on my store today?",
+      "Who made my products and what were they paid? How do I check my suppliers myself instead of trusting a promise?",
+      "What waste can I cut tomorrow: refills, reused boxes or plainer packaging?",
+      "Should my brand take a stand on this issue? Is it brave enough, or only nice, and what might it cost in sales?",
+      "What would I put on my homepage if it wasn't a product?",
+      "Am I training my support team to sell, or to know the products deeply?"
+    ],
+    "agents": [
+      "philippa-brand",
+      "zhenyu-sourcing",
+      "tomas-social-community"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "madam-cj-walker",
+    "hire_for": "Sell by showing and teaching how the product works, and build a trained team of sellers or ambassadors who earn well.",
+    "store_questions": [
+      "Who has the same problem I had, and how do I show them the product working in their own hands?",
+      "Turn my product page into a lesson that teaches care and use, not just a list of what's in the jar.",
+      "Plan an ambassador program where I train customers to sell, and make sure they earn properly.",
+      "What can I start with today, using only what I have, to get the first sales from friends and neighbours?",
+      "How should I run prizes for my ambassadors: for sales, for recruiting and for giving back locally?"
+    ],
+    "agents": [
+      "pilar-creators",
+      "ritika-influencer-outreach",
+      "tomas-social-community"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "dietrich-mateschitz",
+    "hire_for": "Create a new category instead of fighting in a crowded one, own the events where buyers are and hold a premium price as the original.",
+    "store_questions": [
+      "Is there a market for my product yet, or do I have to create one? What would I name the new category?",
+      "Testers disliked my product's name and taste. How should I read bad test results like that?",
+      "Where are my buyers in real life, like events, sports or campuses, and how do I become part of that world, not just a logo on it?",
+      "Should I sponsor this event, or create a small event of my own?",
+      "Copycats are undercutting me. How do I hold my premium price as the original?"
+    ],
+    "agents": [
+      "barnaby-wild-bets",
+      "philippa-brand",
+      "pilar-creators"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "bernard-arnault",
+    "hire_for": "Make each product more desirable: sort the range into stars, rising stars and ones to sell, and guard rarity and quality.",
+    "store_questions": [
+      "Does this new product make my brand more desirable, or just bigger?",
+      "Sort my range into stars, rising stars and products I should drop, and say where the money should go.",
+      "Should I launch a cheaper line? What would it do to desire for the main range?",
+      "Which part of my brand is timeless and which part is modern? Is the balance right?",
+      "Is my quality beyond question down to the smallest detail, like stitching, packaging and the first email?"
+    ],
+    "agents": [
+      "sabelo-product-portfolio",
+      "juliet-merchandising",
+      "philippa-brand"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "coco-chanel",
+    "hire_for": "Design a fashion range around a few signature details, simple lines and real use, and judge each trend as style or passing fashion.",
+    "store_questions": [
+      "Can my customers move, sit and work in this piece? What should come off it?",
+      "What is the one detail that makes my products mine? Would people know they're ours without the label?",
+      "Customers are asking for this season's trend. Is it style or just fashion, and should I make it?",
+      "What humble material, or idea from sport or menswear, could make my next product better?",
+      "Pick three signatures for my brand and show me how to repeat them across the range.",
+      "Should I license my brand name to a partner, and who would control what's made under it?"
+    ],
+    "agents": [
+      "maxine-tech-packs",
+      "juliet-merchandising",
+      "philippa-brand"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "ruth-handler",
+    "hire_for": "Find the next product by watching how buyers really use things, launch a few items, and plan a line that renews each year.",
+    "store_questions": [
+      "What do my customers do with my product when nobody tells them how? Plan how I watch and ask.",
+      "What is on the shelf in my category that buyers don't really want, and what is clearly missing?",
+      "Turn my one hit into a line: which few items do I launch, and what new ones each year?",
+      "A big retailer said no to my product. Who else can I ask, and can I reach buyers directly?",
+      "How much can I lose on this big marketing bet and still be standing?",
+      "What does my product let buyers dream about, and does that frame hold up when I ask them?"
+    ],
+    "agents": [
+      "revathi-product-research",
+      "sabelo-product-portfolio",
+      "funmilayo-customer-research"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "howard-schultz",
+    "hire_for": "Walk the store as a customer, add up the small shortcuts that took the feel out of it, and get back to the core as you grow.",
+    "store_questions": [
+      "Walk through my store as a first-time customer: what do you see and feel from the homepage to the delivery box?",
+      "List the small shortcuts I've taken, like cheaper packaging or canned emails, and what they add up to.",
+      "What was my store for on day one, and am I still doing it?",
+      "What would make my store a place people come back to, not just buy from once?",
+      "Am I opening new product lines because it's right, or because I can? Which should I close?",
+      "Would my team say this is a company that looks after them?"
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "latoya-post-purchase",
+      "darlene-support-lead"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "richard-branson",
+    "hire_for": "Take on the big, lazy player in your niche, launch with a story the press will cover and cap the downside before a bold bet.",
+    "store_questions": [
+      "Who's the big, lazy player in my niche, and what annoys their customers that I could fix?",
+      "Is my product truly different, more fun, more human or better value, or is it a copy with no reason to switch?",
+      "How could my launch make the news without paid ads? Give me three story angles.",
+      "What's the worst case on this bold bet, and how do I cap it, like a right to hand back stock?",
+      "Would this new product line strengthen my brand name or hurt it?",
+      "What do my front-line support people think of this idea, and how do I ask them?"
+    ],
+    "agents": [
+      "margot-pr",
+      "barnaby-wild-bets",
+      "philippa-brand"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "noah-kagan",
+    "hire_for": "Prove a product idea with real pre-sales in a weekend: one-minute maths, ten people to ask and a pay button, not a survey.",
+    "store_questions": [
+      "Do the one-minute maths on my product idea: price, profit per sale and how many sales hit my goal.",
+      "Plan my weekend pre-sale: ten people to ask, what to say, and how I take money before I order stock.",
+      "Who has paid me so far? Is my waitlist proof, or just interest?",
+      "Nobody paid in my pre-sale. What do I change: the offer, the price or the buyer?",
+      "Score my marketing ideas 1 to 5 on impact and ease, and tell me which to stop.",
+      "When someone says no, how do I ask for a referral or offer a smaller deal?"
+    ],
+    "agents": [
+      "revathi-product-research",
+      "sipho-product-hunter",
+      "brendan-offers"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "dieter-rams",
+    "hire_for": "Strip a product, pack or page down to what earns its place, honest and built to last, using his ten design checks.",
+    "store_questions": [
+      "What is my product for, in one sentence, and which parts or features don't serve that purpose?",
+      "If I had to remove one thing from my packaging, what would it be?",
+      "Does my product explain itself without a manual? Where would a buyer get stuck?",
+      "Review my new product design against the ten principles and list what fails.",
+      "Will this product still be right in ten years? What does it cost to make, use and throw away?",
+      "Is any part of my product page or pack there to impress rather than to help?"
+    ],
+    "agents": [
+      "maxine-tech-packs",
+      "alistair-packaging",
+      "larissa-store-ux"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "don-norman",
+    "hire_for": "Find why shoppers fail at checkout and forms: blame the design, not the user, and fix the cues, feedback and error recovery.",
+    "store_questions": [
+      "Shoppers keep failing at my checkout. Walk through it step by step and show me where the design leads them wrong.",
+      "On my product page, what tells a shopper what to do next? Where are the cues missing?",
+      "After a shopper taps Add to cart, how do they know it worked? Is my feedback clear?",
+      "When a shopper makes a mistake, like a wrong size or a bad address, how easily can they recover?",
+      "What does a shopper think my size picker or bundle builder does, and does it match how it works?",
+      "Plan how I watch three real people try to buy from my store, and what to note."
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "yaroslav-shopify-dev",
+      "gretchen-store-testing"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "steve-krug",
+    "hire_for": "Run a cheap monthly test where your team watches three shoppers use the store, then fix the worst problems with the smallest change.",
+    "store_questions": [
+      "If a stranger saw my homepage for five seconds, what would they think it is? What should change?",
+      "Write the script and three tasks for a monthly test where I watch three shoppers use my store.",
+      "Which choice on my product page makes a shopper hesitate?",
+      "Whose words are my menu and buttons in, mine or my customers'? Rewrite the labels.",
+      "Here are the problems from my last test. Which can I fix with the least change before the next round?"
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "gretchen-store-testing",
+      "annabel-landing-pages"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "jakob-nielsen",
+    "hire_for": "Check the store against the ten usability rules and common site conventions, and test with five shoppers per round on real tasks.",
+    "store_questions": [
+      "Check my store against the ten usability heuristics and list the worst problems first.",
+      "Does my store work the way shoppers expect from other sites they use? Where do I break conventions?",
+      "Rewrite my checkout error messages so they say what went wrong in plain words and how to fix it.",
+      "Plan three rounds of tests with five shoppers each, before and after my redesign.",
+      "Run the same tasks on two rival stores. What do they do better that I should borrow?",
+      "What is on my product page that shoppers rarely need?"
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "yaroslav-shopify-dev",
+      "gretchen-store-testing"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "kenya-hara",
+    "hire_for": "Design calm, restrained packaging and product lines that leave room for the buyer, and see the ordinary things you've stopped noticing.",
+    "store_questions": [
+      "Is my packaging simple, or empty in a way that makes room for the buyer? What can I take away?",
+      "Will buyers feel a calm 'this will do', or a quick hunger that fades? Which should my brand aim for?",
+      "What ordinary thing about my product have I stopped seeing, and how could I redesign it?",
+      "What one material or mark could carry my whole brand idea across the range?",
+      "What hidden strength does my craft or region already have that my brand doesn't use?"
+    ],
+    "agents": [
+      "alistair-packaging",
+      "kemal-creative-director",
+      "maxine-tech-packs"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "peep-laja",
+    "hire_for": "Find where and why the store leaks sales with research first, test messages with real buyers and respect sample size in A/B tests.",
+    "store_questions": [
+      "My product page isn't converting. Plan the research in order: where the problems are, what they are, and why.",
+      "Can a stranger say what my landing page is about in five seconds? Score it on clarity, relevance, value and difference.",
+      "Does my ad's promise match the page it lands on? Plan the ad, traffic source and page together.",
+      "My A/B test looks like a winner after three days. Is the sample big enough, and has it run long enough?",
+      "Sort my list of store problems into buckets: fix tracking, investigate, test, or just do it.",
+      "What doubts is my checkout leaving unanswered, and how do I ask buyers what they think?"
+    ],
+    "agents": [
+      "gretchen-store-testing",
+      "annabel-landing-pages",
+      "funmilayo-customer-research",
+      "emre-tracking"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "paul-rand",
+    "hire_for": "Judge or brief a logo that identifies the store simply and distinctly, will last twenty years and doesn't try to explain everything.",
+    "store_questions": [
+      "Does my logo identify my store, or try to explain what I sell? Run it through his seven tests.",
+      "Is my logo simple and distinct from every rival in my category? Could it be simpler?",
+      "Should I redesign my logo, or have people just not lived with it long enough yet?",
+      "What is the one idea behind my brand, and what symbol could carry it?",
+      "Set the rules for my ad layouts, then show me where the play is inside them."
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "ayaka-ad-design",
+      "philippa-brand"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "cole-nussbaumer-knaflic",
+    "hire_for": "Turn store numbers into a clear chart and a one-line message that says what to notice and do next, without overclaiming.",
+    "store_questions": [
+      "Turn my weekly sales spreadsheet into one chart and a message my business partner can act on.",
+      "Who will read my monthly report, and what question should each chart help them answer?",
+      "Write a title and a note for this chart that say what to notice first, without a cause I can't prove.",
+      "Remove the clutter from my dashboard but keep the details I need to check.",
+      "Are the periods and categories in my sales report comparable, like this month against a holiday month?",
+      "Compare two ways to show channel results to my client and pick the clearer one."
+    ],
+    "agents": [
+      "callum-reporting",
+      "radek-unit-economics",
+      "fiona-account-manager"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "sean-ellis",
+    "hire_for": "Check product-market fit with the 'very disappointed' survey, fix first use before buying more ads, and rank tests by ICE score.",
+    "store_questions": [
+      "Write the survey: how would my customers feel if they could no longer buy this? Do I pass 40 percent very disappointed?",
+      "Study my very disappointed customers: who are they, and what do they say the product does for them?",
+      "Should I buy more ads now, or fix product fit and first use first?",
+      "What is the one moment a customer gets the value from my product, and where do new buyers drop off before it?",
+      "Score my growth ideas on impact, confidence and ease from 1 to 10, and pick the top three to test this week.",
+      "Pick a North Star number for my store that grows over time and tracks with revenue."
+    ],
+    "agents": [
+      "imogen-retention",
+      "gretchen-store-testing",
+      "malcolm-ecommerce-growth"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "andrew-chen",
+    "hire_for": "Find the real bottleneck, break blended acquisition cost apart by channel and plan for every ad channel to decay.",
+    "store_questions": [
+      "Is my bottleneck repeat buying, first-time conversion or getting traffic? Draw my funnel in real numbers.",
+      "Break my blended cost per customer apart by channel. Which one is really expensive?",
+      "My best ad channel is getting worse. What happens when rivals copy it, and what is my next channel?",
+      "How many first-time buyers are still buying after 90 days, and what does that say about my product?",
+      "How could I build sharing into the product itself, so growth doesn't depend only on ads?",
+      "Will one more product or feature fix my sales, or is that the next feature fallacy?"
+    ],
+    "agents": [
+      "jared-performance-marketing",
+      "radek-unit-economics",
+      "callum-reporting"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "rand-fishkin",
+    "hire_for": "Research where your buyers really spend attention, show up there in proportion, and make content that helps without a click.",
+    "store_questions": [
+      "Where do my buyers spend their attention: which podcasts, sites, creators and groups do they use more than most people?",
+      "Did I research my channels, or assume them? Pick the one or two that fit my buyers best.",
+      "If nobody clicks through to my store, does my post or answer still help and persuade? Rewrite it so it does.",
+      "How will I see the lift from my content beyond last clicks: brand searches, mentions or conversion rate?",
+      "Which business goal does my content plan tie to? Cut what doesn't connect.",
+      "Are people talking about my product's problem yet, before they search for it? Where can I play early?"
+    ],
+    "agents": [
+      "rustam-ai-answers",
+      "stuart-store-seo",
+      "pilar-creators",
+      "shannon-market-research"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "neil-patel",
+    "hire_for": "Plan store content from what buyers ask in their own words, beat the top result, promote every piece and track the emails it brings.",
+    "store_questions": [
+      "What are my buyers searching for, in their own words, and which questions should my blog answer first?",
+      "Is my buying guide the most detailed, useful answer out there? Show me how to beat the top result.",
+      "Plan a weekly content calendar I can keep up for six months.",
+      "Who should I ask to share my new guide, and how would I word each note?",
+      "How many emails did my last guide bring in, and what is a subscriber worth to me?",
+      "Which numbers in my analytics are vanity numbers I should ignore?"
+    ],
+    "agents": [
+      "stuart-store-seo",
+      "morag-email-sms",
+      "rustam-ai-answers"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "gary-vaynerchuk",
+    "hire_for": "Post content made for each platform, give value several times before asking for the sale, and answer every comment like a shop visitor.",
+    "store_questions": [
+      "Where is my customer's attention right now, and where is it cheaper than what I pay for ads?",
+      "Plan a week of posts made for each platform, not one video copied everywhere.",
+      "What have I given my followers before asking them to buy? Plan four value posts for each sales post.",
+      "How should I reply to comments and messages so each one feels like a customer walking into my shop?",
+      "I've been planning for months and posting nothing. What do I make today?",
+      "Do I really believe in this product? If not, what should I fix before I market it?"
+    ],
+    "agents": [
+      "tomas-social-community",
+      "pilar-creators",
+      "ploy-tiktok-shop"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "mrbeast",
+    "hire_for": "Package product videos so people click and keep watching: title and thumbnail first, a first minute that pays off, then fix one thing.",
+    "store_questions": [
+      "Would I click on this product video? Write the title and describe the thumbnail before we shoot.",
+      "Keep my title under about 50 characters and check the video really delivers its promise.",
+      "Does the first minute of my video deliver what the thumbnail promised?",
+      "Here is where viewers left my last video. What's the one thing to fix on the next one?",
+      "What's the wow moment a viewer can see in my product video, and can they see where the money went?",
+      "Which parts of my video shoot are critical, so that if one fails the whole video fails?"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor",
+      "pilar-creators"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "taiichi-ohno",
+    "hire_for": "Cut waste from order to cash: go and look, make only what the next step pulls, stop and fix defects at once, and ask why five times.",
+    "store_questions": [
+      "Trace the time from a customer's order to cash in my hand. Where does the time go, and what can I cut?",
+      "Why is this stock sitting in my warehouse? Who asked for it? Set up reorders so I make or buy only what sells.",
+      "Orders keep shipping late. Ask why five times with me until we reach the real cause.",
+      "When a packing mistake happens, how do I stop the line at once so it can't reach more customers?",
+      "Write the standard way to pick and pack an order, timed by the best run, and tell me when to change it.",
+      "Which parts or steps should I do myself, and which should I buy in?"
+    ],
+    "agents": [
+      "marivic-fulfilment",
+      "omar-inventory-planning",
+      "phuong-quality-control",
+      "gurdeep-shipping-returns"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "chris-voss",
+    "hire_for": "Prepare hard talks with suppliers, stockists and angry customers: label their fears, ask calm how and what questions, skip the easy split.",
+    "store_questions": [
+      "My supplier wants a 15 percent price rise. What are they afraid of losing, and how do I open the talk?",
+      "Write an accusation audit for my email telling a stockist our launch is late.",
+      "Give me three calibrated 'how' and 'what' questions for my factory call, so they solve my problem with me.",
+      "A buyer said yes too fast. How do I check it's a real yes and not a yes to end the call?",
+      "An angry customer wants a full refund and a public apology. Script my first two replies using labels.",
+      "Am I about to split the difference just to end the discomfort? What might I be missing?"
+    ],
+    "agents": [
+      "wenhao-procurement",
+      "mei-wholesale-sales",
+      "darlene-support-lead"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "roger-fisher",
+    "hire_for": "Negotiate with suppliers and partners on interests, not positions: know your walk-away option, invent packages and agree fair standards.",
+    "store_questions": [
+      "My supplier insists on a 1,000-unit minimum. What interest sits under that demand, and what else could meet it?",
+      "If this supplier deal falls through, what can I really do next, and what will it cost? Check my fallback.",
+      "Invent four packages for my wholesale deal, mixing price, volume, payment terms and exclusivity, before we pick one.",
+      "What independent standard could justify a fair price to both of us, like published freight rates or market prices?",
+      "We agreed in principle. Write the commitment: who signs, what happens next and how we handle the first problem."
+    ],
+    "agents": [
+      "wenhao-procurement",
+      "mei-wholesale-sales",
+      "sheila-inbound-freight"
+    ],
+    "stage": "source"
+  },
+  {
+    "slug": "aswath-damodaran",
+    "hire_for": "Value your store, or one you might buy, by tying a three-sentence story to a few inputs, then give a range, not one number.",
+    "store_questions": [
+      "Value my store: give me the story in three sentences, then the few numbers that follow from it.",
+      "I'm buying a small store at four times profit. Am I valuing it or pricing it, and what story does that price assume?",
+      "How much of my store's profit depends on me, the owner, and what does that do to its value?",
+      "What must my store spend to grow, and does that spending earn more than it costs?",
+      "Give me low, middle and high cases for my store's value and the two inputs that matter most.",
+      "What hurdle rate should a new product line clear before I put money into it?"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "radek-unit-economics"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "michael-porter",
+    "hire_for": "Size up your niche with the five forces, pick a clear position, decide what you will not do and make your activities fit together.",
+    "store_questions": [
+      "Is this niche worth entering? Which of the five forces sets profits here: rivals, buyers, suppliers, new entrants or substitutes?",
+      "What is my position in one sentence: lower cost, a premium, or a narrow group served very well?",
+      "What am I choosing not to do? List what my store should give up.",
+      "Is my difference real, or am I just doing the same things a little better than rivals?",
+      "Map my value chain from design to delivery. Do my activities fit together so a rival can't copy them one at a time?",
+      "Does this new product line deepen my position or blur it?"
+    ],
+    "agents": [
+      "shannon-market-research",
+      "malcolm-ecommerce-growth",
+      "duncan-category-trends"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "clayton-christensen",
+    "hire_for": "Find the job buyers hire your product to do, in what moment, and what they fire to hire you, then design around that.",
+    "store_questions": [
+      "What job is my customer hiring my product to do, and in what moment? Write it with the practical, social and emotional sides.",
+      "Write the interview that walks recent buyers back through the day they decided to buy.",
+      "What did my customers fire, stop doing or stop buying to hire my product?",
+      "Who isn't buying in my category at all, and what do they do instead?",
+      "Where are people building their own workaround for this problem? Show me where to look.",
+      "Did customers use the product again after they bought it? How do I measure whether the job got done?"
+    ],
+    "agents": [
+      "funmilayo-customer-research",
+      "revathi-product-research",
+      "shannon-market-research"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "charlie-munger",
+    "hire_for": "Invert big store decisions: list what would surely make them fail, follow everyone's incentives and know where your knowledge ends.",
+    "store_questions": [
+      "What would make my new product launch fail for sure? Am I doing any of it?",
+      "Who gets paid if I say yes to this agency, app or supplier, and how does that bend what they tell me?",
+      "Design a bonus plan for my team or affiliates. What will people do in response, and what does that cause?",
+      "Is this decision inside my circle of knowledge, or should it go in the too-hard basket?",
+      "What does my target need in plain numbers: how many buyers, at what price, out of how many?",
+      "State the case against my plan better than its critics would."
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "malcolm-ecommerce-growth",
+      "barnaby-wild-bets"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "neil-rackham",
+    "hire_for": "Run wholesale and big-account sales calls with SPIN questions, so buyers state the cost of their problem and the value of your fix.",
+    "store_questions": [
+      "Write my discovery call with a stockist: which situation questions can I skip by doing my homework first?",
+      "What problem questions will find what isn't working in a buyer's current range or supplier?",
+      "Give me implication questions that show what their problem costs them and who else it affects.",
+      "Write need-payoff questions so the buyer states the value of stocking my product in their own words.",
+      "Am I telling or asking on my sales calls? Review this call transcript.",
+      "How big is this corporate gifting sale, and how many meetings should I expect it to take?"
+    ],
+    "agents": [
+      "mei-wholesale-sales",
+      "clayton-new-business",
+      "rohan-chat-sales"
+    ],
+    "stage": "channels"
+  },
+  {
+    "slug": "annie-duke",
+    "hire_for": "Decide whether to keep or quit a product, channel or launch by its future, not its sunk cost, with stop rules set in advance.",
+    "store_questions": [
+      "Should I keep this slow product line or quit it? Fill the table: already spent, still owed, what changes next month.",
+      "My last launch flopped. Was it a bad decision or bad luck? Review what I knew before the result.",
+      "Set stop rules for my new ad channel: a review date and the numbers that would make me quit.",
+      "Which assumption in my plan most needs testing, and what small test would settle it?",
+      "What would I do with the money and time if I stopped this project?"
+    ],
+    "agents": [
+      "sabelo-product-portfolio",
+      "hemant-store-finance",
+      "barnaby-wild-bets"
+    ],
+    "stage": "numbers"
+  },
+  {
+    "slug": "matthew-dixon",
+    "hire_for": "Cut customer effort in support and help stuck buyers decide: one clear recommendation, fewer options and the risk taken off.",
+    "store_questions": [
+      "Where are my customers working too hard: tracking orders, returns or getting an answer?",
+      "Shoppers in chat can't decide between three products. Give me a reply that offers a personal pick and limits the options.",
+      "Is this buyer stuck because they doubt my product, or because they fear choosing wrong? How do I answer each?",
+      "What can I take off the table so the first order feels safe: a trial, an easy swap or a guarantee?",
+      "Should my product page say what not to buy, even from my own range, when a cheaper option fits?",
+      "What do my best support agents do that the average ones don't? Review these tickets."
+    ],
+    "agents": [
+      "darlene-support-lead",
+      "rohan-chat-sales",
+      "latoya-post-purchase"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "rob-fitzpatrick",
+    "hire_for": "Get the truth from customer conversations: ask what people last did and spent, not whether they like your idea.",
+    "store_questions": [
+      "Rewrite my customer interview questions so they ask what people last did, not 'would you buy this?'",
+      "What am I trying to learn from these chats, in one sentence? Help me write it before I talk to anyone.",
+      "Narrow who I should talk to until I can name a person and a place to find them.",
+      "Sort my interview notes: set compliments aside, pin fluff to real moments and trace each feature request to its reason.",
+      "Which scary question am I avoiding about my product idea?",
+      "Did anyone give up something real, like time, an introduction or a pre-order, or only say nice things?"
+    ],
+    "agents": [
+      "funmilayo-customer-research",
+      "revathi-product-research",
+      "sipho-product-hunter"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "bj-fogg",
+    "hire_for": "Turn product use into a habit buyers keep, so they reorder: a tiny first step, an anchor in their day and a quick feeling of success.",
+    "store_questions": [
+      "Buyers of my skincare stop using it after two weeks. At the moment they skip it, what makes it hard to do?",
+      "What is the smallest version of using my product that a buyer could manage even on a tired day?",
+      "What do my buyers already do reliably that using my product could follow, like making morning coffee?",
+      "Write my post-purchase emails as a habit recipe: the anchor, the tiny step and a small celebration.",
+      "My buyers' routine slipped after the holidays. Did the habit fail or did their situation change, and how do I help them restart?"
+    ],
+    "agents": [
+      "imogen-retention",
+      "latoya-post-purchase",
+      "lucia-email-copy"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "ann-handley",
+    "hire_for": "Write newsletters and pages to one real reader, put their biggest worry first and cut every sentence any brand could send.",
+    "store_questions": [
+      "Who is the one person reading my store newsletter? Describe them before I write a word.",
+      "What worry sits under the search that brings people to my buying guide, and is the answer at the top?",
+      "Could this sentence appear in any store's email? Rewrite it the way only I would say it.",
+      "Open my next newsletter with a moment I noticed, not a topic.",
+      "How will my readers write back, and how should I answer the replies?"
+    ],
+    "agents": [
+      "lucia-email-copy",
+      "morag-email-sms",
+      "stuart-store-seo"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "john-carlton",
+    "hire_for": "Write to one hungry buyer using what your support team hears, pass the 'would I bet the business on this' test, then plan the second offer.",
+    "store_questions": [
+      "Who's the one person reading my product page, and what are they already hunting for?",
+      "What do my support team and packers hear customers ask about? Turn it into selling points I've missed.",
+      "Would I send this email if my whole business hung on it? Mark every line that wouldn't pass.",
+      "What's the cheapest way to find out by Friday whether this offer works, using my own list or a small ad spend?",
+      "What's the second offer, right after someone buys?",
+      "Which parts of my week bring in money, and which just eat time I could hand off?"
+    ],
+    "agents": [
+      "howard-copy-chief",
+      "kofi-ad-copy",
+      "brendan-offers"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "joe-girard",
+    "hire_for": "Win repeat orders and referrals: thank every buyer the same day, keep a customer file and treat each complaint as the next sale.",
+    "store_questions": [
+      "What do I do for customers after they buy? Plan what happens in the first week after an order.",
+      "Write a same-day thank-you note for new buyers that feels personal, not like a receipt.",
+      "What should my customer file record after each sale, so later messages talk about what matters to them?",
+      "Here is my complaint pile. How do I move first on each one and turn it into the next sale?",
+      "Why would a buyer come back to me instead of the cheaper store down the road?",
+      "How do I ask happy customers for referrals without being pushy?"
+    ],
+    "agents": [
+      "latoya-post-purchase",
+      "darlene-support-lead",
+      "imogen-retention",
+      "corinne-reviews"
+    ],
+    "stage": "retention"
+  },
+  {
+    "slug": "virgil-abloh",
+    "hire_for": "Make a known product feel fresh with a small edit, a word on the label or a collab, then ship the first version fast.",
+    "store_questions": [
+      "What does everyone already know and love in my category, and what's the smallest change that makes it new?",
+      "Does my next drop speak to both the newcomer and the long-time fan?",
+      "What word or label could I add to my product or pack that makes people look again?",
+      "Which brand, artist or creator outside my field would make a good collab, and what would each side bring?",
+      "This design has sat on my laptop for months. What can I put out this week?",
+      "Who is left out of my brand, and how do I go and ask how they actually use products like mine?"
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "maxine-tech-packs",
+      "ritika-influencer-outreach"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "kat-holmes",
+    "hire_for": "Find who can't use your store and why, from small screens to screen readers and slow connections, and fix the mismatch for everyone.",
+    "store_questions": [
+      "Who tries to buy from my store and can't? List what my checkout demands of eyes, hands, language, time and connection.",
+      "What changes for a shopper on my store in a noisy, slow or unfamiliar setting, like a phone on a train?",
+      "What workaround are customers already using, like emailing their order, that shows a gap in my store?",
+      "Whose expertise is missing from my store design, and how do I bring those shoppers in early?",
+      "Does my other route, like phone ordering, give the same status and convenience as the main one?",
+      "Which habit in my theme or templates keeps creating this problem, and what check stops it?"
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "yaroslav-shopify-dev",
+      "arjun-page-speed"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "george-lois",
+    "hire_for": "Turn a flat brief into one big idea, a striking image fused with a short line, that people pass on for free.",
+    "store_questions": [
+      "What's the big idea for my launch? Say it in one sentence.",
+      "Can a shopper get my ad in one look while scrolling fast? Do the picture and the line make one point?",
+      "Will people pass my ad on for free? What would make the press or strangers share it?",
+      "Give me a thumbnail or cover idea for my product: one striking image and a short line.",
+      "Test panels disliked my bold idea. Is it bad, or just unfamiliar?"
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "ayaka-ad-design",
+      "tendai-ad-creative"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "ben-francis",
+    "hire_for": "Grow through creators, meet-ups and customer talk the way Gymshark did, before you buy reach or sell through other shops.",
+    "store_questions": [
+      "Which ten creators should I send my product to first, and what should I ask them for?",
+      "How do I run a meet-up or pop-up that builds regulars, not just a one-day sales spike?",
+      "My customers keep asking for things I don't sell. How do I turn that into my next product?",
+      "A big retailer wants to stock us. Should I say yes or keep selling only on my own site?",
+      "I'm doing everything in the business. What should I hand over first, and to whom?"
+    ],
+    "agents": [
+      "ritika-influencer-outreach",
+      "pilar-creators",
+      "tomas-social-community"
+    ],
+    "stage": "organic"
+  },
+  {
+    "slug": "emily-weiss",
+    "hire_for": "Turn reviews, comments and content into products and a voice buyers share, the way Glossier grew mostly by word of mouth.",
+    "store_questions": [
+      "I have hundreds of reviews and comments. How do I turn them into a brief for my next product?",
+      "How do I ask customers to help shape a product without letting a vote make the call?",
+      "My captions and emails sound like ads. How do I make them sound like a text to a friend?",
+      "How do I turn my most loyal buyers into a referral or ambassador group?",
+      "What should I publish so people follow my store even when they're not buying?"
+    ],
+    "agents": [
+      "funmilayo-customer-research",
+      "philippa-brand",
+      "tomas-social-community",
+      "corinne-reviews"
+    ],
+    "stage": "research"
+  },
+  {
+    "slug": "neil-blumenthal",
+    "hire_for": "Remove the one fear that stops people buying your product online, with a try-at-home, sample or return offer you can afford, like Warby Parker.",
+    "store_questions": [
+      "People say they need to try my product before buying. What risk-free offer can I afford?",
+      "What frustrates buyers most in my category, and how do I make that my headline offer?",
+      "Can I price lower by selling direct, and will my margins hold up?",
+      "My launch might sell out. What do I set up before it goes live?",
+      "Should I open a showroom or pop-up, and how do I pick the city?"
+    ],
+    "agents": [
+      "brendan-offers",
+      "gurdeep-shipping-returns",
+      "larissa-store-ux",
+      "radek-unit-economics"
+    ],
+    "stage": "store"
+  },
+  {
+    "slug": "michael-dubin",
+    "hire_for": "Say your offer in one funny, true line and launch it with a low-cost video, the way Dollar Shave Club did, with a plan for if it works.",
+    "store_questions": [
+      "Can you write a short, funny launch video script for my product that I can shoot myself?",
+      "How do I say my offer in one line that beats buying it in a shop?",
+      "My brand sounds like everyone else. How do I make it plain, bold and a bit funny?",
+      "If my video takes off, what will break first and how do I get ready?",
+      "My members buy one thing every month. What should I add next, and in what order?"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "kofi-ad-copy",
+      "brendan-offers",
+      "philippa-brand"
+    ],
+    "stage": "creative"
+  },
+  {
+    "slug": "ezra-firestone",
+    "hire_for": "Raise order value and repeat sales: pre-sell content, one-click offers after checkout, email and text, launch build-up, like BOOM.",
+    "store_questions": [
+      "What should I offer buyers the moment after they pay, and at what price?",
+      "Only a small share of my revenue is from repeat buyers. What do I fix first?",
+      "Should my ads go to a product page or to a helpful article first?",
+      "How many emails a week should I send, and who should get texts instead?",
+      "Can I raise my prices, and which ones should I test before I change them?",
+      "How do I build up a new product launch so it sells on day one?"
+    ],
+    "agents": [
+      "imogen-retention",
+      "latoya-post-purchase",
+      "morag-email-sms",
+      "brendan-offers"
+    ],
+    "stage": "retention"
+  }
+]

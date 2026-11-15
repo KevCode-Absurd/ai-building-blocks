@@ -96,10 +96,11 @@ Every Monday (or in the weekly review):
 - Swap the hero only if its stock or score fell, or a planned season starts.
 - During a sale, lead with products that are in the sale and have stock for the whole sale; never feature a product the sale excludes.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** count RTO losses in contribution, so COD-heavy products with high RTO do not take top slots on order count alone. Plan festival collections (Diwali gifting, wedding season) 3 to 4 weeks ahead with stock checked by variant. Products with regional demand can lead regional landing pages.
+- **Every market:** count return and failed-delivery losses in contribution, so products with high returns do not take top slots on order count alone. Plan peak-season collections (Black Friday and Cyber Monday, holiday gifting, local festivals) 3 to 4 weeks ahead with stock checked by variant. Products with regional or country demand can lead their own landing pages.
 - **US:** plan holiday gift collections with shipping cutoff messages; seasonal products leave top slots when their season's demand drops, not when stock runs out.
+- **UK and EU:** show prices with VAT included on the homepage and collections; for multi-country stores, check each country's top products, since best sellers differ by market.
 
 ### 8. Read it after two weeks
 
@@ -148,3 +149,7 @@ Compare with the two weeks before: homepage view-product rate, collection conver
 - SEO-0005: collection page length.
 
 What makes this skill ours: slots go to the products that earn the most profit per view, read on in-stock days; stock cover, size runs and returns can knock a winner out of the first screen; new products get a fair two-week trial; and the plan comes with weekly move rules so the top rows stay right as stock changes.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Count RTO losses in contribution, so COD-heavy products with high RTO do not take top slots. Plan Diwali gifting and wedding season collections 3 to 4 weeks ahead with stock checked by variant.

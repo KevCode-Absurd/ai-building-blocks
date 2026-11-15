@@ -1,0 +1,301 @@
+{
+  "id": "creator-content",
+  "name": "Creator content for ads, from shortlist to signed-off cut",
+  "goal": "Content from vetted creators who fit your buyer, made under a written brief with usage rights you signed, checked for labels and claims, cut into 9:16 and 4:5 ad versions with your real logo and end card, and handed to the Meta launch team.",
+  "starts_from": "A growth plan task, a creative refresh brief that calls for real people on camera, a TikTok Shop push, or you asking for creator content. Creator posts kept only on organic channels go through the weekly social process instead.",
+  "folder": "creatives",
+  "then": "meta-launch",
+  "metrics": [
+    "Main number: the one you set in context/goals.json (for most stores, return on ad spend over 7 days for the ads made from this content).",
+    "Creator numbers: reply rate to outreach, share of creators who delivered on time, and share of posts that passed the label and claims check first time.",
+    "Ad numbers: hook rate, hold rate and click-through rate of each creator cut, against the account's other videos.",
+    "Cost: gifts, fees and usage rights committed, against the budget you approved, and cost per usable ad."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Gather what we know",
+      "agent": "pilar-creators",
+      "access": "read",
+      "gate": "none",
+      "say": "Collects what the creator work needs: who the buyer is and where they watch, the gap we are solving (for example no real people on camera, or a product that needs showing in use), the claims we can prove, the offer, what past creator content and ads taught us, any creators who already tag the brand, and which mail and social connectors we can reach. Missing facts become questions for you.",
+      "needs": [
+        "context/org-context/ (customers, voice, design, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/learnings.md",
+        "warehouse view creative_performance (last 90 days)",
+        "the creator log and TikTok Shop affiliate log, if any",
+        "the task that started this job"
+      ],
+      "makes": [
+        "intake.md"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md names the buyer, the gap, the platforms, the proof we hold, the offer, past creator results, and the questions you answered."
+    },
+    {
+      "id": "shortlist",
+      "name": "Find and vet creators",
+      "agent": "ritika-influencer-outreach",
+      "access": "read",
+      "gate": "none",
+      "say": "Builds a shortlist from creators who already make content in the category, people who tag or review the brand, and TikTok Shop affiliates. Each creator is scored on a written fit checklist: audience matches the buyer, comments show real questions and trust, past sponsored posts were clearly labelled, and the content is good enough to reuse in ads. Red flags are recorded: sudden follower jumps, comments from the same accounts, unlabelled paid posts, claims we could never back. Before any paid offer, the creator is asked for screenshots of their own audience data. Follower count alone never decides.",
+      "needs": [
+        "intake.md",
+        "public creator profiles and posts",
+        "the TikTok Shop affiliate log from the shop manager"
+      ],
+      "makes": [
+        "shortlist.md"
+      ],
+      "checks": [
+        "vetting-review"
+      ],
+      "done_when": "shortlist.md lists each creator with platform, audience fit, score against the checklist, red flags, recent post links and the reason they made the list."
+    },
+    {
+      "id": "offer-plan",
+      "name": "Who to ask, and the budget",
+      "agent": "pilar-creators",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Proposes which creators to approach and what to offer each one: a gift with no obligation to post, a fee, a commission, or a mix, plus the usage rights we want (organic repost only, or paid ads too, which platforms and for how long). It totals the cost of gifts, fees and rights, and checks the cost per usable ad against what ads made this way have earned before.",
+      "needs": [
+        "shortlist.md",
+        "context/goals.json",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "offer-plan.md",
+        "cost-estimate.json"
+      ],
+      "checks": [
+        "offer-review"
+      ],
+      "signoff": "You pick the creators and see each offer, the rights asked for and the total. Reply yes with the code to approve the list and budget as written. Nothing is offered to anyone before this, and you make every payment yourself.",
+      "done_when": "offer-plan.md has, for each creator, the offer, the rights wanted, the cost, and the total for the round with the reason it is worth it.",
+      "spends": "Sets the creator budget for this round: product gifts, fees and paid usage rights. Nothing is committed until a creator's terms are signed off later, and you pay."
+    },
+    {
+      "id": "outreach",
+      "name": "Write the outreach",
+      "agent": "ritika-influencer-outreach",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes one short message per approved creator that fits on a phone screen: why them (one real detail about their work, which you can check), what is offered, and one easy question. No pressure and no fake urgency. It also writes one follow-up for a week later, then we stop; silence is an answer. Gift notes carry the disclosure line, because free product is a material connection under FTC rules and the CMA expects brands to say any resulting content must be labelled.",
+      "needs": [
+        "offer-plan.md (signed off)",
+        "shortlist.md",
+        "context/org-context/ voice"
+      ],
+      "makes": [
+        "outreach.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "outreach-review"
+      ],
+      "done_when": "outreach.md has one first message and one follow-up per approved creator, each naming the channel it goes by, with the offer matching offer-plan.md."
+    },
+    {
+      "id": "send-outreach",
+      "name": "Send the outreach you approve",
+      "agent": "ritika-influencer-outreach",
+      "access": "publish",
+      "gate": "none",
+      "say": "Shows you a plan with each message, its recipient and its channel. On your yes, for email it creates each message as a draft in your mailbox through Google's Gmail connector, which has no send tool, so you press send; or, with the Claude Google Workspace or Microsoft 365 connector, it sends each one only after you confirm that send. Instagram and TikTok direct messages stay manual: the API cannot start a conversation, so you paste them from the plan. Each send is logged.",
+      "needs": [
+        "outreach.md",
+        "a mail connector at level 2 or 3 (see access/gmail-outlook.md)"
+      ],
+      "makes": [
+        "outreach-log.md"
+      ],
+      "publish": "Through the Gmail connector (drafts for you to send) or the Google Workspace or Microsoft 365 connector (each send confirmed by you): the approved first messages, to the approved creators only.",
+      "done_when": "Every approved message is a draft in your mailbox, sent with your confirmation, or on your manual list, and outreach-log.md records each with recipient, channel and date."
+    },
+    {
+      "id": "follow-up",
+      "name": "One follow-up, then stop",
+      "agent": "ritika-influencer-outreach",
+      "access": "publish",
+      "optional": true,
+      "gate": "none",
+      "wait_days": 7,
+      "say": "A week later, re-reads each thread first, then shows you a plan with the one follow-up for each creator who has not replied. On your yes it drafts or sends them the same way as the first messages. Creators who say no or do not reply after this are marked closed and never chased again.",
+      "needs": [
+        "outreach-log.md",
+        "the creator threads (mail connector read access, or what you paste)"
+      ],
+      "makes": [
+        "follow-up-log.md"
+      ],
+      "publish": "Through the same mail connector: one approved follow-up per creator who has not replied, as drafts or sends you confirm.",
+      "done_when": "Every creator has a status of yes, no, closed or follow-up sent, and follow-up-log.md records each follow-up with its date."
+    },
+    {
+      "id": "terms",
+      "name": "Brief and usage rights in writing",
+      "agent": "pilar-creators",
+      "access": "draft",
+      "gate": "owner",
+      "say": "For each creator who said yes, writes the brief and a plain summary of the terms. The brief gives the story in one line, three key points about the viewer, the approved claims with proof, the must-haves and must-nots, what the creator decides, the draft and post dates, and the disclosure for each market (for example Ad said and shown in video, and the platform's paid partnership or content disclosure setting). The terms give the deliverables, fee, usage rights (organic or paid, platforms, length of time), whether we may run the content as a partnership ad from their account, AI disclosure, and that payment follows a passed content check. If we want partnership ads on Meta, the creator must give that permission in their own Instagram or Facebook app; check the current name of the setting in the app. You send the agreement and sign it; contracts and payments stay with you.",
+      "needs": [
+        "follow-up-log.md or outreach-log.md",
+        "offer-plan.md (signed off)",
+        "context/org-context/ claims"
+      ],
+      "makes": [
+        "brief.md",
+        "terms.md",
+        "spend.json"
+      ],
+      "checks": [
+        "brief-review",
+        "spend-within-budget"
+      ],
+      "signoff": "You read each creator's brief and terms, including the rights and the fee. Reply yes with the code to approve them. You then send and sign the agreement yourself.",
+      "done_when": "Each yes creator has a brief and a terms summary with deliverables, dates, fee, rights, partnership ad permission, disclosure per market and the payment condition, and spend.json records the committed cost.",
+      "budget_from": "offer-plan"
+    },
+    {
+      "id": "content-check",
+      "name": "Check what comes back",
+      "agent": "pilar-creators",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 14,
+      "say": "When content arrives, checks each piece against the brief and terms: the product is shown true to life, claims stay inside the approved list, the label is upfront and visible on a phone, in video it is said and shown before the product mention, the platform setting is on, AI use is disclosed, links and codes work, and the signed rights and any partnership ad permission are on file. Fixes are asked for the same day. Payment is held until the check passes, where the agreement allows. You pay.",
+      "needs": [
+        "brief.md",
+        "terms.md (signed off)",
+        "the files and post links the creators sent"
+      ],
+      "makes": [
+        "content/received.md"
+      ],
+      "checks": [
+        "disclosure-review",
+        "content-review"
+      ],
+      "done_when": "received.md lists each piece with its file or link, a pass or the fix asked for, the rights on file, and whether partnership ad permission was granted."
+    },
+    {
+      "id": "edit",
+      "name": "Cut the ad versions",
+      "agent": "cody-video-editor",
+      "access": "draft",
+      "gate": "none",
+      "say": "Follows the video ad process's edit and graphics stages. Keeps the creator's own voice and words, trims to a hook that lands in the first two seconds, adds captions word for word, your real logo laid on by the editing tool (never redrawn by a model), the offer and the end card. Makes a 9:16 version for Reels and Stories and a 4:5 version for feeds, with text inside the safe zones. Only content whose rights allow paid use is cut for ads.",
+      "needs": [
+        "content/received.md",
+        "the creator files that passed",
+        "context/org-context/ design rules",
+        "your logo file"
+      ],
+      "makes": [
+        "final/final-9x16.mp4",
+        "final/final-4x5.mp4",
+        "final/end-card.png",
+        "final/captions.srt"
+      ],
+      "checks": [
+        "graphics-review",
+        "logo-contrast"
+      ],
+      "done_when": "Both versions exist for each piece with paid rights, captions match what the creator said, the logo passes the contrast check, and no text sits in the safe zones."
+    },
+    {
+      "id": "final-review",
+      "name": "Final review and sign-off",
+      "agent": "kemal-creative-director",
+      "access": "draft",
+      "gate": "owner",
+      "say": "A reviewer who did not make the cuts watches them against the intake and the brief: on brand, the hook lands, claims are proven, the product is true, the creator's label survives the edit. The compliance reviewer checks ad policy, the usage rights against the terms, and the AI disclosure answer. The review notes whether each ad can run as a partnership ad from the creator's account or must run from your page under the written licence.",
+      "needs": [
+        "final/",
+        "intake.md",
+        "brief.md",
+        "terms.md"
+      ],
+      "makes": [
+        "final/review.md"
+      ],
+      "checks": [
+        "creative-review",
+        "compliance-review"
+      ],
+      "signoff": "You watch every cut. Reply yes with the code to sign off. The cuts then go to the launch team with the brief, the terms and the review.",
+      "done_when": "review.md records PASS from both reviewers for each cut, the rights and their end date, the partnership ad status and the AI disclosure answer."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every heading in intake.md is filled from a named source, and missing facts are answered questions, not guesses"
+    },
+    "vetting-review": {
+      "kind": "reviewer",
+      "agent": "pilar-creators",
+      "passes_when": "every creator is scored on the written checklist with links, red flags are recorded, and no one is listed on follower count alone"
+    },
+    "offer-review": {
+      "kind": "reviewer",
+      "agent": "radek-unit-economics",
+      "passes_when": "the total adds up, each fee and right has a reason, and the cost per usable ad is compared with past creator ads"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/outreach.md",
+      "passes_when": "the copy checker exits 0"
+    },
+    "outreach-review": {
+      "kind": "reviewer",
+      "agent": "margot-pr",
+      "passes_when": "each message is short, personal, honest about the offer, easy to say no to, and safe if the creator shares it publicly"
+    },
+    "brief-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "claims stay inside the proven list, disclosure is right for each market and platform, usage rights and partnership ad permission are written, and payment depends on a passed check"
+    },
+    "spend-within-budget": {
+      "kind": "script",
+      "run": "node agent/spend.mjs check <folder>",
+      "passes_when": "gifts, fees and rights committed (spend.json) are at or under the approved budget (cost-estimate.json)"
+    },
+    "disclosure-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "every piece has an upfront label visible on a phone, the platform setting is on, AI use is disclosed, and claims stay inside the approved list"
+    },
+    "content-review": {
+      "kind": "reviewer",
+      "agent": "kemal-creative-director",
+      "passes_when": "the product is shown true to life and in use, the brief's key points come through, and the footage is good enough to cut into an ad"
+    },
+    "graphics-review": {
+      "kind": "reviewer",
+      "agent": "ayaka-ad-design",
+      "passes_when": "captions match the creator's words, fonts and colours follow the design rules, and text stays in the safe zones"
+    },
+    "logo-contrast": {
+      "kind": "script",
+      "run": "node tools/quality/check-logo-contrast.cjs <folder>/final/end-card.png --box <logo box>",
+      "passes_when": "the logo contrast ratio is at least 3 to 1"
+    },
+    "creative-review": {
+      "kind": "reviewer",
+      "agent": "kemal-creative-director",
+      "passes_when": "a reviewer who did not make the cuts finds them on brand, on message and true to the product, with the creator's label intact"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "no policy problems, the use matches the signed rights and dates, claims are proven, and the AI disclosure answer is recorded"
+    }
+  }
+}

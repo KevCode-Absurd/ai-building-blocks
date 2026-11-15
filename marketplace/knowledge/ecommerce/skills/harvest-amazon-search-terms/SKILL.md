@@ -61,7 +61,7 @@ Reading reports is level 1. Uploading the bulk sheet needs draft access (level 2
 6. **Write the negatives.** Use negative exact for single wasted terms. Use negative phrase only for a word that is wrong in every search (another product type, "free", "manual", a rival's spare part). Before adding, check each negative against the live keyword list and the brand name: a negative phrase like "case" can block "phone case for kids". Never negate the brand's own name.
 7. **Adjust bids on existing keywords.** For exact keywords past the threshold: cut 20 to 30% when ACOS is above break-even; raise 10 to 15% when ACOS is under target and impressions are low (practitioner default). One bid change per keyword per week, so each result can be traced.
 8. **Feed the listing.** Harvested terms that are not in the title, bullets or search terms field go to the listing owner. Product types that buyers describe in many ways keep producing new long-tail terms worth adding [AMZ-0003]. Search terms stay under 249 bytes [AMZ-6445].
-9. **India notes (Amazon.in).** Expect Hindi words in Latin letters, spelling variants ("kurti", "kurthi") and pincode or city words. Harvest variants that convert; negate city words only if the product ships everywhere and they do not convert. For cash-on-delivery heavy ASINs, use the delivered share of orders when counting orders, since refused orders bring no profit.
+9. **Other Amazon stores (Amazon.co.uk, .de, .ca, .com.au and more).** Expect local spelling variants, words from the other languages buyers use, and city or region words. Harvest variants that convert; negate city words only if the product ships everywhere and they do not convert. Where many orders are paid on delivery, use the delivered share of orders when counting orders, since refused orders bring no profit.
 10. **US notes (Amazon.com).** From October to December, click prices rise; recheck every bid against the affordable cost per click before Black Friday rather than letting old bids run.
 11. **Log and hand over.** Write each change with the reason and the numbers behind it. Compare this week's changes with last week's results: did harvested terms keep their ACOS in exact?
 
@@ -105,3 +105,8 @@ Reading reports is level 1. Uploading the bulk sheet needs draft access (level 2
 - ADC-0023: tie ad spend to stock cover.
 
 What makes this skill ours: verdicts use break-even ACOS from gross profit, not a flat ACOS goal; a term is judged only after a click count set by its own conversion rate; every negative is checked against live keywords and the brand; and winning terms flow back into the listing, not only into ads.
+
+## Selling in India
+
+- On Amazon.in, expect Hindi words in Latin letters, spelling variants ("kurti", "kurthi") and pincode or city words.
+- For COD-heavy ASINs, use the delivered share of orders when counting orders, since refused orders bring no profit.

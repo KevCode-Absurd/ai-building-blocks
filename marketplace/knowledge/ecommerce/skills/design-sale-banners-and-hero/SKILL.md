@@ -40,7 +40,7 @@ Read access is enough to design. Uploading banners to the theme or email platfor
 1. **The offer makes money.** Gross profit per order at the sale price and the break-even return are written down. A 25% sitewide cut on a 60% margin product can need about 50% higher return to hold profit [OFF-0005]. Fail: send it back to the offer owner.
 2. **Stock and team can carry it.** Days of stock cover for the featured products last through the sale, and the warehouse can ship the expected volume. Fail: narrow the offer or the featured products.
 3. **The discount is built and tested.** A test order in Shopify shows the discount applying exactly as the banners will say. Fail: no banner goes live.
-4. **The "was" price is real.** Any compare-at price is a price the store genuinely charged. US and Indian consumer rules both treat invented reference prices as misleading; check with the client's adviser if unsure.
+4. **The "was" price is real.** Any compare-at price is a price the store genuinely charged. Consumer rules in the US, UK, EU and most other markets treat invented reference prices as misleading, and in the EU a "was" price must be the lowest of the last 30 days; check with the client's adviser if unsure.
 
 ## Steps
 
@@ -103,10 +103,10 @@ Write the hour-by-hour schedule: who swaps the hero, the announcement bar, the c
 
 Put every banner beside the offer sheet and the Shopify discount settings, and mark each line pass or fail: offer, terms, eligible products, code, end date and time zone.
 
-### India and US notes
+### Notes by market
 
-- **India:** show prices inclusive of GST; for packaged goods the selling price cannot exceed the MRP on the pack. Festive sales (Diwali, Navratri, Independence Day) run on IST; write the time zone. If COD has a fee or is off during the sale, the terms line says so. Regional-language banners need a native reader.
-- **US:** write the time zone (ET or PT). Black Friday to Cyber Monday offers that change daily need one offer sheet per day.
+- **Tax, time zones and languages:** show prices including VAT or local tax in the UK, EU and Australia; in the US and Canada, sales tax is added at checkout. Write the time zone on every sale end (ET or PT in the US, GMT or BST in the UK, CET in much of Europe, AEST in Australia). If pay on delivery has a fee or is off during the sale, the terms line says so. Banners in other languages need a native reader.
+- **Peak sales:** Black Friday to Cyber Monday offers that change daily need one offer sheet per day; the same goes for Singles' Day, Boxing Day and other multi-day local sales.
 
 ## Checks before you hand it over
 
@@ -158,3 +158,10 @@ Put every banner beside the offer sheet and the Shopify discount settings, and m
 - GAD-6043: no promotional overlays on Google product images.
 
 What makes this skill ours: one locked offer sheet feeds every banner and is checked against a real test checkout; the hero has a weight budget and loads first; the post-sale hero and swap-out times are made before the sale starts; and sale marks stay off the product images that feed Google and Meta.
+
+## Selling in India
+
+- Show prices inclusive of GST; for packaged goods the selling price cannot exceed the MRP on the pack.
+- Festive sales (Diwali, Navratri, Independence Day) run on IST; write the time zone.
+- If COD has a fee or is off during the sale, the terms line says so.
+- Regional-language banners need a native reader.

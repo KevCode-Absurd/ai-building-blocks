@@ -88,7 +88,7 @@ Lay a safe-zone guide (a transparent PNG with the 14% / 35% / 6% bands shaded) o
 
 ### 6. Price, offer and claims, one more time
 
-Every size must carry the same price, same offer wording and same end date as the live page. If a line had to be cut to fit, it must not be the line that makes the offer true (for example "on orders over 999 rupees"). If the qualifying line cannot fit, drop the offer from that size and lead with the product instead.
+Every size must carry the same price, same offer wording and same end date as the live page. If a line had to be cut to fit, it must not be the line that makes the offer true (for example "on orders over 50", in the store's currency). If the qualifying line cannot fit, drop the offer from that size and lead with the product instead.
 
 ### 7. Export and name
 
@@ -96,10 +96,11 @@ Every size must carry the same price, same offer wording and same end date as th
 - Meta files under 30 MB (Meta Ads Guide); Google files under 5,120 KB [GAD-6042]. Aim for under 1 MB anyway so previews load fast.
 - Name: `<adname>_<placement>_<ratio>_<version>.jpg`, for example `ShakerA_story_9x16_v2.jpg`, using the store's naming rule if it has one.
 
-### India and US notes
+### Market notes
 
-- **India:** if the ad shows a price, show the final price the buyer pays, including GST; if the store charges a cash-on-delivery fee, the ad must not imply free COD. Regional-language versions often run longer than English; rebuild the layout for the longest version, never shrink the font to fit.
-- **US:** sales tax is added at checkout, so "from $X" is fine if it matches the page. A discount in the ad needs the same terms as the site.
+- **UK, EU, Australia and other tax-inclusive markets:** if the ad shows a price, show the final price the buyer pays, including VAT or the goods and services tax; if the store charges a pay-on-delivery or other payment fee, the ad must not imply it is free.
+- **Every market:** versions in other languages your buyers use (German, French, Spanish and others) often run longer than English; rebuild the layout for the longest version, never shrink the font to fit.
+- **US and Canada:** sales tax is added at checkout, so "from $X" is fine if it matches the page. A discount in the ad needs the same terms as the site.
 
 ## Checks before you hand it over
 
@@ -151,3 +152,7 @@ Every size must carry the same price, same offer wording and same end date as th
 - OFF-0065: a discount can triple break-even ROAS, so the offer is costed first.
 
 What makes this skill ours: each size is rebuilt from layers against the current 35% bottom band instead of cropped; Google gets a clean image with the words moved to its text fields; the set loads as one ad so delivery is not split; and an offer's qualifying line is never cut to make it fit.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. If the ad shows a price, show the final price including GST; if the store charges a COD fee, the ad must not imply free COD. Hindi and other regional-language versions often run longer than English; rebuild the layout for the longest version.

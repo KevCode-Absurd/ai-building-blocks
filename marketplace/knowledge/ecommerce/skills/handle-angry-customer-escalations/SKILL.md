@@ -1,6 +1,6 @@
 ---
 name: handle-angry-customer-escalations
-description: "An escalation playbook for upset customers: how to read the case before replying, a five-move reply that calms and solves in as few touches as possible, an offer ladder with what each role may give without asking, the triggers that move a case to the support lead or owner (safety, legal threats, chargebacks, public posts, repeat failures), and how to close and log it so the cause gets fixed. Includes reply wording for email, chat, WhatsApp and phone, India COD and language notes and US chargeback timing. Use when a customer is angry, threatens a bad review or chargeback, or when agents either over-refund or argue."
+description: "An escalation playbook for upset customers: how to read the case before replying, a five-move reply that calms and solves in as few touches as possible, an offer ladder with what each role may give without asking, the triggers that move a case to the support lead or owner (safety, legal threats, chargebacks, public posts, repeat failures), and how to close and log it so the cause gets fixed. Includes reply wording for email, chat, WhatsApp and phone, notes on failed deliveries, buyer languages and consumer bodies in any market, and US chargeback timing. Use when a customer is angry, threatens a bad review or chargeback, or when agents either over-refund or argue."
 ---
 
 # Handle angry customers
@@ -104,9 +104,9 @@ Escalation targets: lead replies within 2 business hours, owner within 4 for lev
 
 A case closes only when the fix is verified (tracking shows delivered, refund shows processed) and the customer has the confirmation. Log: reason, root cause owner (product, warehouse, carrier, site, policy), offer given, cost, and whether a review or chargeback followed. Send repeated causes to `turn-support-tickets-into-insights` weekly.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** many angry cases start on WhatsApp or a phone call after a failed COD delivery. Reply in the language they wrote in. Refunds for COD orders go to UPI or bank details collected through a secure form, never in chat. A mention of the consumer helpline or consumer commission is a level 3 trigger: acknowledge, and the owner replies.
+- **All markets:** many angry cases start on WhatsApp or a phone call after a failed delivery. Reply in the language they wrote in. Refunds for pay-on-delivery orders go to bank details collected through a secure form, never in chat. A mention of a consumer body, ombudsman or small claims court (for example Trading Standards or Citizens Advice in the UK, or a state consumer agency in Australia) is a level 3 trigger: acknowledge, and the owner replies.
 - **US:** a chargeback threat is level 2; a filed dispute is level 3, with a short evidence window set by the payment provider. Solving the problem first often prevents the dispute; never refund and also contest the same dispute.
 
 ## Checks before you hand it over
@@ -149,4 +149,10 @@ A case closes only when the fix is verified (tracking shows delivered, refund sh
 - CXP-6301: no intimidation or pressure over reviews (US).
 - OPS-0009: no-approval budget per incident.
 
-What makes this skill ours: offer caps by role come from the store's gross profit per order; safety, legal and review-pressure cases are taken out of agents' hands; the playbook aims for one complete reply rather than a delighted recovery; and India COD, language and consumer-helpline cases are built in.
+What makes this skill ours: offer caps by role come from the store's gross profit per order; safety, legal and review-pressure cases are taken out of agents' hands; the playbook aims for one complete reply rather than a delighted recovery; and failed-delivery, language and consumer-body cases are built in for every market.
+
+## Selling in India
+
+- Many angry cases start on WhatsApp or a phone call after a failed COD delivery.
+- Refunds for COD orders go to UPI or bank details collected through a secure form, never in chat.
+- A mention of the consumer helpline or consumer commission is a level 3 trigger: acknowledge, and the owner replies.

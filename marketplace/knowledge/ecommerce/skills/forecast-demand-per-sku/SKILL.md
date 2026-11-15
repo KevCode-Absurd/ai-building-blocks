@@ -10,7 +10,7 @@ description: "A week-by-week unit forecast for every product for the next 13 wee
 ## When to use
 
 - A buying cycle is due and purchase orders need unit numbers per SKU.
-- Peak season (Diwali, wedding season, Black Friday to Christmas, Mother's Day) is within four months.
+- Peak season (Black Friday to Christmas, Mother's Day, wedding season, Lunar New Year, Ramadan and Eid, or the store's local festivals) is within four months.
 - A sale, launch or ad push is planned and stock must match it.
 - The store keeps running out of some products while others pile up.
 - A 3PL or warehouse needs a volume forecast for staffing.
@@ -60,7 +60,8 @@ With 12+ months: for each week of the year, index = that week's clean units last
 
 Then align moving holidays to their dates this year, not last year's week number:
 
-- **India:** Diwali, Navratri, Durga Puja, Raksha Bandhan, Eid, Onam and Pongal move with the lunar calendar. Wedding seasons (roughly November to February and April to June, varying by region) drive jewellery, ethnic wear and gifting. Marketplace sale weeks pull traffic from DTC for some categories; check last year's pattern for this store.
+- **Moving holidays and seasons in other markets:** Lunar New Year, Ramadan and Eid, Easter, Passover and many local festivals move each year. Wedding seasons (varying by region) drive jewellery, formal wear and gifting. Marketplace sale weeks (Prime Day, Singles' Day, marketplace Black Friday events) pull traffic from DTC for some categories; check last year's pattern for this store.
+- **UK, EU and Australia:** Boxing Day and January sales, Mothering Sunday in the UK (which moves with Easter), end-of-season sales; in Australia and other southern markets the summer season falls over Christmas.
 - **US:** Black Friday to Cyber Monday, the shipping cut-off before Christmas, Mother's Day, back to school, Prime Day weeks. The last weeks of December can carry a cheap ad auction worth a planned offer [ADC-0043].
 
 Peak weeks can run many times the base month; one practitioner saw a product go from about 200 a month to 2,000 and then 4,000 [OPS-0014]. Never forecast a seasonal product with a flat growth rate.
@@ -98,7 +99,7 @@ The high line is the one to check against capacity and cash. The low line is the
 
 ### 8. Sense-check with the owner
 
-Show the top 10 products by forecast units next to last year's same weeks and the last 8 weeks. Ask one question per big gap: "Week 44 base is 3x last year. Is the Diwali push bigger, or is this wrong?" Change only lines with a reason; write the reason in the sheet.
+Show the top 10 products by forecast units next to last year's same weeks and the last 8 weeks. Ask one question per big gap: "Week 47 base is 3x last year. Is the Black Friday push bigger, or is this wrong?" Change only lines with a reason; write the reason in the sheet.
 
 ### 9. Hand the forecast on
 
@@ -144,7 +145,7 @@ For each SKU: error = (actual minus base) / base. Track bias (the average signed
 ## Common mistakes
 
 - **Stockout weeks in the baseline.** Step 2 excludes or scales them.
-- **Last year's week number for a lunar holiday.** Step 3 moves Diwali and others to this year's dates.
+- **Last year's week number for a moving holiday.** Step 3 moves Easter, Lunar New Year, Eid and other moving holidays to this year's dates.
 - **Promotion lift with no dip after.** Step 5 subtracts the pull-forward.
 - **Ad spend treated as linear.** Step 6 uses the last real change in new orders.
 - **One number, no range.** Step 7 gives low, base and high, and says which line each team uses.
@@ -161,4 +162,10 @@ For each SKU: error = (actual minus base) / base. Track bias (the average signed
 - OFF-0008: limit sitewide sales to once or twice a year.
 - COG-6285: Shopify's days-of-inventory method and its limits.
 
-What makes this skill ours: weekly series cleaned of stockout and one-off weeks; lunar Indian holidays moved to this year's dates; promotion lift paired with its pull-forward dip; returning-buyer demand built from cohorts; and a weekly bias tracker that fixes the method, not just the number.
+What makes this skill ours: weekly series cleaned of stockout and one-off weeks; moving holidays shifted to this year's dates in every market; promotion lift paired with its pull-forward dip; returning-buyer demand built from cohorts; and a weekly bias tracker that fixes the method, not just the number.
+
+## Selling in India
+
+- Diwali, Navratri, Durga Puja, Raksha Bandhan, Eid, Onam and Pongal move with the lunar calendar; align them to this year's dates, not last year's week number.
+- Wedding seasons (roughly November to February and April to June, varying by region) drive jewellery, ethnic wear and gifting.
+- Marketplace sale weeks pull traffic from DTC for some categories; check last year's pattern for this store.

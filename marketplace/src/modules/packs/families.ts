@@ -1,7 +1,7 @@
 // Deliverable families of the work method: what each family captures before work, how each stage applies to it, its
 // real candidates, completeness list, craft weights and default context requirements. Pure data and functions, no I/O.
 //
-// One place per sentence: the method itself lives in packs/shared/WORK-METHOD.md; the capture lists live here and
+// One place per sentence: the method itself lives in packs/shared/METHOD.md; the capture lists live here and
 // render into context/README.md; a job skill carries only its family's stage slice and gates with the job's own
 // details filled in.
 import type { ContextRequirement, CraftCriterion, DeliverableFamily, JobType } from "../../core/types.ts";
@@ -20,7 +20,7 @@ export const FAMILY_LABELS: Record<DeliverableFamily, string> = {
   other: "Other work",
 };
 
-/** The rubric group in WORK-METHOD.md's craft table that each family is scored with. */
+/** The rubric group (METHOD.md step 5, "Craft") that each family is scored with. */
 export const RUBRIC_GROUP: Record<DeliverableFamily, string> = {
   web_page: "web_page", ad_creative: "ad_creative", copy: "copy / email", email: "copy / email",
   audit: "audit / analysis", analysis: "audit / analysis", strategy: "strategy / plan", plan: "strategy / plan",
@@ -185,7 +185,7 @@ export const COMPLETENESS: Partial<Record<DeliverableFamily, string[]>> = {
   plan: ["totals that add up", "steps with days relative to the start", "an owner for each step", "cut, keep and scale rules", "break-even shown"],
 };
 
-/** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */
+/** How much brand context a job takes from the org context. A job takes its slice, never the whole file. */
 export const CONTEXT_LEVELS = {
   none: "No brand context: work from the system, files or data.",
   facts: "Facts only: the offer, prices, customers and numbers, each with its source and date.",
@@ -224,7 +224,7 @@ export const CRAFT_WEIGHTS: Record<string, [criterion: string, weight: number][]
 
 /**
  * A family's craft weights as one line ("Does the job for the buyer 30, Brand fidelity 20, ..."), for a job skill whose
- * job type has no craft rubric of its own. WORK-METHOD.md states only the two rows every family shares.
+ * job type has no craft rubric of its own. METHOD.md (step 5, "Craft") states only the two rows every family shares.
  */
 export function craftWeightsLine(family: DeliverableFamily): string {
   return CRAFT_WEIGHTS[RUBRIC_GROUP[family]].map(([criterion, weight]) => `${criterion} ${weight}`).join(", ");
@@ -378,7 +378,7 @@ export const PROVEN_LEVERS: Partial<Record<DeliverableFamily, string[]>> = {
 /**
  * The family gates every job skill of the family carries: the hand-over shape with its word budget, the proven levers
  * when the family has them, and the format's completeness list. The gates for every job (acceptance tests, sourced
- * claims, the buyer can act, access) are in WORK-METHOD.md, step 5.
+ * claims, the buyer can act, access) are in METHOD.md, step 5.
  */
 export function familyGates(family: DeliverableFamily): string[] {
   const levers = PROVEN_LEVERS[family], complete = COMPLETENESS[family];

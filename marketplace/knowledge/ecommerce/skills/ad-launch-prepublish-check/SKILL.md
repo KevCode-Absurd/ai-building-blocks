@@ -107,9 +107,21 @@ Write the cut and keep lines into the launch note so nobody makes them up later:
 
 Send the client: the batch table, the check results, the total test spend for 7 days, the read rule and dates. On their yes, they switch on, or you do at level 3. Log the launch in the decision log used by `daily-ad-account-review`.
 
-### 8. India and cash-on-delivery stores
+### 8. Payment options and chat orders
 
-Check the landing page shows the payment options the ad promises (cash on delivery, UPI) and the price including GST. If ads point to WhatsApp chat instead of the site, add utm-style tracking through the chat link's prefilled text or a separate number, practitioner default, so those orders can be counted.
+Check the landing page shows the payment options the ad promises (cards, wallets, buy now pay later, pay on delivery where offered) and the price the buyer will pay, including VAT or sales tax where the market shows tax-inclusive prices (UK, EU, Australia). If ads point to WhatsApp or Messenger chat instead of the site, add utm-style tracking through the chat link's prefilled text or a separate number, practitioner default, so those orders can be counted.
+
+### 9. Walk the creative as a phone viewer meets it
+
+Step 5 checks the setup. Before switch-on, also walk each finished ad the way a viewer meets it on a phone, sound off:
+
+- **First second:** something moves or changes in frame 1; the product or brand shows early; any words on frame 1 read in about 2 seconds (flag more than 8 words); on a still, note where the eye lands first.
+- **Middle:** the one message fits in one sentence; picture and words agree; flag a hold of more than about 3 seconds with nothing changing.
+- **End:** one next step, and the button matches it. Cut the last 3 seconds in your head: if the message still lands, the ending is padding.
+- **Text limits:** main text should land its point in about the first 125 characters before "more"; headline about 40. Captions on every spoken line.
+- **Versions:** each version differs from the others in one nameable thing (reason, buyer, format or opening). More than 4 versions from one script is a flag.
+
+Sort what you find into **stop-ship** and **worth a look**. Stop-ship holds only wrong facts, wrong product, a wrong or lookalike logo or font, hidden or misspelt words, and the wrong size for the placement. Taste never stops a launch; it goes in worth a look with one suggested fix. Anything you could not check is marked not checked, never passed.
 
 ## Checks before you hand it over
 
@@ -120,6 +132,7 @@ Check the landing page shows the payment options the ad promises (cash on delive
 - Test spend fits the monthly cap; advertised SKUs have the stock for it.
 - The read rule and its dates are written before launch.
 - Everything is paused until the client says yes.
+- Every ad has a creative walk result: stop-ship items (or none), worth-a-look items and anything not checked.
 
 ## Output
 
@@ -139,6 +152,7 @@ Check the landing page shows the payment options the ad promises (cash on delive
 - **Advertising a product that sold out yesterday.** Gate 2 and check 2 look at stock and price on the day.
 - **Flexible ads that hide what worked.** Step 4 turns them off [ADC-0065].
 - **Making up the cut rule after the results.** Step 6 writes it first.
+- **Holding a launch over taste.** Only wrong facts, product, logo, words or size stop an ad.
 
 ## Sources
 
@@ -156,3 +170,7 @@ Check the landing page shows the payment options the ad promises (cash on delive
 - MCR-0079: about 3 variations per new concept in its own ad set.
 
 What makes this skill ours: a placement rule that keeps new ads out of winning ad sets; a 13-point check that includes stock and price on the live page, not just the link; a duplicate test against Meta's own grouping; and the read rule written before launch so results cannot be bent later.
+
+## Selling in India
+
+- The landing page should show cash on delivery and UPI if the ad promises them, and the price including GST.

@@ -74,7 +74,7 @@ function agentFile(pack, persona, agentsMd) {
     "",
     "## Where your files are",
     "",
-    `Your pack is the folder \`${dir}/\`. Every file this brief names (WORK-METHOD.md, toolbox.md, knowledge.md, skills/, prompts/, workflows/, tools/ and the rest) is in that folder: read it from there. The pack is read-only, and a plugin update replaces it.`,
+    `Your pack is the folder \`${dir}/\`. Every file this brief names (METHOD.md, toolbox.md, knowledge.md, skills/, prompts/, workflows/, tools/ and the rest) is in that folder: read it from there. The pack is read-only, and a plugin update replaces it.`,
     "",
     `Do the work in the user's project. Keep your working files, including everything the pack says to put in \`context/\`, in \`${work}/\` there (create it), and run the pack's scripts from that folder, for example \`node "${dir}/tools/prepare-job.mjs" context/brief.md\`. The scripts find the pack themselves and read and write \`context/\` where you run them.`,
     "",

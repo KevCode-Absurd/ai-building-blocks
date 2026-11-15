@@ -46,7 +46,7 @@ Access: level 1 for analysis, level 2 to draft edits. Every live change needs th
 
 ## Steps
 
-Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from the start of the plan.
+Follow the house rules, chiefly **Org context first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the org context (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from the start of the plan.
 
 ### 1. Tracking
 
@@ -79,7 +79,7 @@ The plan uses the whole cap (house rule **Spend plans add up**).
 - Freed money goes the same day to proven receivers where tracking works. What cannot move inside the step limits sits in a reserve of at most 15%, with a release rule the account will hit this month. If no campaign qualifies, freed money goes to relaunched winners and new ads in the proven style, not to Hold campaigns.
 - New ads about 30% of Meta money when profitable, 10% or none when not [ADC-0053].
 - Move limits (practitioner defaults, test them): no more than 20% of the cap moves in a week. Meta receivers rise 20 to 30% every 3 to 4 days; no Meta source fixes a raise size [ADC-0056]. Google rises 10 to 15% when spending its full budget at target; under 80% and missing target, loosen the target instead [GAD-0023]. Cuts happen in one step; prefer targeted fixes to rebuilds [GAD-0036].
-- Cash: cash needed = (daily ad spend + daily landed cost of reorders) x days until order cash lands [FIN-0011]. If the peak week needs more than stated, slow the moves until it fits. COD stores use gross profit per placed order after RTO losses.
+- Cash: cash needed = (daily ad spend + daily landed cost of reorders) x days until order cash lands [FIN-0011]. If the peak week needs more than stated, slow the moves until it fits. Stores with pay-on-delivery orders or high returns use gross profit per placed order after failed-delivery and return losses.
 
 ### 6. Verdicts
 

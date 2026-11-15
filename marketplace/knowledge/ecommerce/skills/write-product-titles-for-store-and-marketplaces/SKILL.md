@@ -1,15 +1,15 @@
 ---
 name: write-product-titles-for-store-and-marketplaces
-description: "Writes a set of titles for each product, one per channel: the store product title and SEO title, the Google Shopping feed title, the Amazon title and the title format for Indian marketplaces such as Flipkart, Myntra, Nykaa and Meesho, each built from the same checked attribute sheet and each within that channel's written rules (length, banned characters, repeated words, promotional text). Front-loads the words buyers search, keeps brand placement right per channel, and returns a sheet with character counts and a pass or fail rule check per title. Use when listing on a new channel, when titles were copied from the supplier, or when feed or marketplace titles get rejected or truncated."
+description: "Writes a set of titles for each product, one per channel: the store product title and SEO title, the Google Shopping feed title, the Amazon title and the title format for other marketplaces such as Walmart, eBay, Etsy, Zalando and bol, each built from the same checked attribute sheet and each within that channel's written rules (length, banned characters, repeated words, promotional text). Front-loads the words buyers search, keeps brand placement right per channel, and returns a sheet with character counts and a pass or fail rule check per title. Use when listing on a new channel, when titles were copied from the supplier, or when feed or marketplace titles get rejected or truncated."
 ---
 
 # Product titles for store and marketplaces
 
-**You get:** a title sheet with, for every product, a store title, an SEO title, a Google Shopping title, an Amazon title and an Indian marketplace title, each with its character count and a pass or fail check against that channel's rules, ready for the client to approve and upload by feed, flat file or seller panel.
+**You get:** a title sheet with, for every product, a store title, an SEO title, a Google Shopping title, an Amazon title and a title for each other marketplace the store sells on (Walmart, eBay, Etsy, Zalando, bol and others), each with its character count and a pass or fail check against that channel's rules, ready for the client to approve and upload by feed, flat file or seller panel.
 
 ## When to use
 
-- The store is about to list on Amazon, Flipkart, Myntra, Nykaa or Meesho.
+- The store is about to list on Amazon, Walmart, eBay, Etsy, Zalando, bol or Mercado Libre.
 - Google Merchant Center or Amazon flags or rewrites titles.
 - Titles are supplier codes or brand names that tell buyers nothing.
 - One product has five different names across channels.
@@ -28,7 +28,7 @@ Required (read access, level 1):
 1. **Shopify products export**: Handle, Title, Vendor, Type, Tags, Option names and values, Variant SKU, barcode, and spec metafields.
 2. **Attribute facts** per product: product type, brand, material, size or capacity, colour, count or pack size, key feature, who it is for.
 3. **Search words**: Google Search Console queries per product, Shopify search terms, Google Ads search terms report, or Amazon search terms report if the store sells there. With none of these, use Google Keyword Planner (free with an Ads account) or marketplace search suggestions.
-4. **Channel rules on the day**: Google's title specification, Amazon's title policy and the category style guide in Seller Central, and each Indian marketplace's listing guidelines from the seller panel.
+4. **Channel rules on the day**: Google's title specification, Amazon's title policy and the category style guide in Seller Central, and each other marketplace's listing guidelines from the seller panel.
 
 Optional: current feed diagnostics, marketplace suppressed listings report, return reasons that show buyers misunderstood the product.
 
@@ -44,15 +44,15 @@ If a channel's current rules cannot be opened, do not write for that channel; no
 ## Steps
 
 1. **Build the attribute sheet.** One row per product (and per variant where titles differ by variant), one column per attribute. Fill from the export and spec metafields. Mark gaps.
-2. **Find the head term per product.** From search data, pick the phrase buyers use most for this product type ("cotton kurta set", "insulated water bottle"). Prefer the buyer's word over the store's internal name. Products with many ways to describe them give more long-tail room [AMZ-0003].
+2. **Find the head term per product.** From search data, pick the phrase buyers use most for this product type ("cotton pyjama set", "insulated water bottle"). Prefer the buyer's word over the store's internal name. Products with many ways to describe them give more long-tail room [AMZ-0003].
 3. **Write the store title.** Human-readable, short: product name plus the one attribute that tells variants apart, usually 3 to 8 words. Example pattern: "Linen Shirt, Relaxed Fit". Brand names are usually not needed on the store's own pages.
 4. **Write the SEO title.** Head term first, a key attribute, then brand: about 60 characters, matching the store's collection title style [SEO-0005]. Use wording from the fan-out searches assistants run, where known [AEO-0016].
 5. **Write the Google Shopping title.** Order attributes by what buyers type: product type, material, colour, fit or size, key feature, then brand last unless the brand is well known and searched [GAD-0009]. Keep the matching words inside the first 70 characters; aim for about 100 to 120 characters total when there are enough true attributes. Lead with search terms proven in the store's own search term reports when available [GAD-0044]. Title, price and main image drive most Shopping performance in one agency's view [GAD-0019], so the title deserves this care. No price, sale or shipping words.
 6. **Write the Amazon title.** Use the attribute order the category style guide gives; a common order is brand, product type, key feature, material, size, colour, pack count. Check character count with spaces, banned characters and repeated words. Check the category style guide in Seller Central, which can be shorter than 200. Pull extra search words into bullets and backend terms in `write-amazon-listing`, not into the title.
-7. **Write the Indian marketplace title.** Flipkart, Myntra, Nykaa and Meesho often build or check titles from attribute fields; fill the attributes in the seller panel first, then write the title in the order the category template shows (usually brand, product type, key attributes, pack or size). Use the English buyer term plus common Indian terms where buyers use them ("kurta", "dupatta", "atta"). No claims like "best" or "No.1".
+7. **Write the other marketplace titles.** Walmart, eBay, Etsy, Zalando, bol and Mercado Libre often build or check titles from attribute fields; fill the attributes in the seller panel first, then write the title in the order the category template shows (usually brand, product type, key attributes, pack or size). Limits differ: eBay allows 80 characters and Etsy 140, so check each one on the day. Use the buyer term of each market and language ("jumper" in the UK, "sweater" in the US; German or Dutch terms on Zalando and bol). No claims like "best" or "No.1".
 8. **Check every title.** For each channel: count characters, scan banned characters, count repeated words, scan for promotional words, compare against the attribute sheet. Record pass or fail.
 9. **Roll out in waves.** Change titles in batches (for example the top 20% of products by sales first), then compare impressions, clicks and conversion for 2 to 4 weeks against the previous period before the rest; big title changes are best rolled out gradually [GAD-0044].
-10. **US notes.** Amazon.com and Google US follow the rules above; state units in the system buyers use (oz, inches) with metric where the category expects both.
+10. **Market notes.** Amazon.com and Google US follow the rules above; state units in the system buyers use (oz and inches in the US, metric in the UK, EU and Australia) with both where the category expects both. Each Amazon marketplace (amazon.co.uk, amazon.de and others) has its own style guide and language; write titles in that language, not a machine translation of the US title.
 
 ## Checks before you hand it over
 
@@ -70,7 +70,7 @@ If a channel's current rules cannot be opened, do not write for that channel; no
 
 **Title sheet:**
 
-| Handle | Head term | Store title | SEO title (chars) | Google title (chars, first-70 check) | Amazon title (chars, banned chars, repeats) | India marketplace title (chars) | Pass or fail per channel |
+| Handle | Head term | Store title | SEO title (chars) | Google title (chars, first-70 check) | Amazon title (chars, banned chars, repeats) | Other marketplace title (chars) | Pass or fail per channel |
 |---|---|---|---|---|---|---|---|
 
 **Attribute sheet:** handle, product type, brand, material, colour, size, pack, key feature, audience, source.
@@ -102,3 +102,7 @@ If a channel's current rules cannot be opened, do not write for that channel; no
 - GAD-0019: title, price and image drive Shopping performance.
 
 What makes this skill ours: every channel's title is built from one checked attribute sheet, so the product is described the same true way everywhere; each title carries a character count and a rule check against rules dated this month; marketplace titles are written only for products that make money after fees; and changes roll out in measured waves.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Flipkart, Myntra, Nykaa and Meesho often build or check titles from attribute fields; fill the attributes in the seller panel first, then write the title in the order the category template shows. Use the English buyer term plus common Indian terms where buyers use them ("kurta", "dupatta", "atta"). Check fee-adjusted profit with `list-on-indian-marketplaces` before writing these titles.

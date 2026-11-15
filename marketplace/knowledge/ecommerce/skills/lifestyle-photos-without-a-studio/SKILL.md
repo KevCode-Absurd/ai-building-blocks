@@ -108,10 +108,11 @@ Edit lightly: straighten, crop, exposure, white balance, the same settings acros
 
 Lifestyle images are for ads, social, email and the product gallery. They are not the Google Shopping main image, which must be a clean product shot without props or overlays [GAD-6043]. As an extra Shopping image or a product page image they help; one agency found soft-background images beat plain white on Shopping click-through [GAD-0019].
 
-### India and US notes
+### Market notes
 
-- **India:** show real Indian homes and use for the buyer: steel tiffins, pressure cookers, regional clothing, monsoon balconies, as fits the product. Festive scenes are worth one slot before Diwali or wedding season. Get consent forms in the language the person reads best.
+- **Every market:** show real homes and real use for the buyer's own country: the kitchens, weather, clothing and rooms they know, as fits the product. Seasonal scenes are worth one slot before the store's peak seasons (Black Friday, holidays, local festivals or wedding season). Get consent forms in the language the person reads best.
 - **US:** a model release from each adult; check that any shared or rented home allows photography for commercial use.
+- **UK and EU:** a signed release as well; under GDPR a person's image is personal data, so record consent and how long you will use the photos.
 
 ## Checks before you hand it over
 
@@ -162,3 +163,7 @@ Lifestyle images are for ads, social, email and the product gallery. They are no
 - MEA-0037: gross margin is the delivered cost to the door.
 
 What makes this skill ours: scenes come from where buyers say they use the product, not from mood; every frame is shot both ways so it works at 9:16 without a crop disaster; consent and home privacy are gates, not afterthoughts; and the plan keeps lifestyle images out of the one slot (the Shopping main image) where they get disapproved.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Show real Indian homes and use: steel tiffins, pressure cookers, regional clothing, monsoon balconies, as fits the product. Festive scenes are worth one slot before Diwali or wedding season.

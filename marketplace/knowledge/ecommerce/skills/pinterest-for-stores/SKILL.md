@@ -75,7 +75,7 @@ Write about two thirds of Pins for products with the highest gross profit, and o
 
 ### 6. Set the posting rhythm
 
-Pinterest advises publishing fresh Pins of your own, frequently and consistently, aiming for original content weekly [ORG-6401]. Start with 3 to 5 new Pins a week (practitioner default, test it), each a new image or video, not the same image re-saved. Pins have no set engagement window and can resurface seasonally [ORG-6401], so publish seasonal Pins 45 to 60 days before the date (practitioner default, test it): festive gifting in India before Diwali and wedding season; in the US, Mother's Day, back to school, Halloween decor and holiday gifting.
+Pinterest advises publishing fresh Pins of your own, frequently and consistently, aiming for original content weekly [ORG-6401]. Start with 3 to 5 new Pins a week (practitioner default, test it), each a new image or video, not the same image re-saved. Pins have no set engagement window and can resurface seasonally [ORG-6401], so publish seasonal Pins 45 to 60 days before the date (practitioner default, test it): in the US and Canada, Mother's Day, back to school, Halloween decor, Black Friday and holiday gifting; in the UK and EU, Christmas, Mother's Day on each country's own date and summer holidays; plus any local festivals and wedding seasons your buyers mark.
 
 ### 7. Measure at 30, 60 and 90 days
 
@@ -83,9 +83,9 @@ Read in Pinterest analytics: impressions, saves, outbound clicks per Pin and per
 
 At 90 days: if Pinterest sessions convert at a cost in team hours the client accepts and gross profit from tracked orders is rising, keep going and consider ads with `test-a-new-ad-channel`. If outbound clicks stay flat after 90 days of weekly Pins, cut to a monthly seasonal batch.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** Pinterest's audience is smaller than Instagram's and leans to fashion, wedding, jewellery and home inspiration. Check catalog availability for India in the account. Prices in the feed must match the store in rupees, including GST. If most orders are COD, Pinterest-tagged sessions may convert lower in GA4 because some orders are cancelled or returned; read delivered orders, not placed orders.
+- **Every market:** Pinterest's audience is smaller than Instagram's in many countries and leans to fashion, wedding, jewellery and home inspiration. Check catalog and shopping ad availability for each country in the account. Prices in the feed must match the store in its own currency, with tax shown as local buyers expect (VAT included in the UK and EU). If many orders are cancelled, refused or returned, Pinterest-tagged sessions may convert lower in GA4; read delivered orders, not placed orders.
 - **US:** Pinterest is a strong planning platform for home, food, events and gifts. Plan holiday Pins early; buyers search weeks before.
 
 ## Checks before you hand it over
@@ -125,3 +125,7 @@ At 90 days: if Pinterest sessions convert at a cost in team hours the client acc
 - ORG-6401: keywords, fresh weekly Pins, 2:3 format, matching links, no engagement window.
 
 What makes this skill ours: it starts with a fit check so stores that will not earn from Pinterest stop early; the catalog reuses the store's existing feed; Pins favour products by gross profit; seasonal lead times and attribution windows are set from Pinterest's own documentation; and the 90-day verdict reads delivered orders, not platform clicks.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Pinterest leans to fashion, wedding, jewellery and home inspiration in India. Check catalog availability for India in the account. Feed prices must match the store in rupees including GST. Publish festive gifting Pins before Diwali and wedding season. If most orders are COD, read delivered orders.

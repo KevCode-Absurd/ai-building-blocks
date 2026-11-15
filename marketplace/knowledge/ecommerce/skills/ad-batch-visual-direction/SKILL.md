@@ -70,6 +70,10 @@ Add two fields that change the most: **setting world** (kitchen, gym, desk, outd
 
 Always locked: the product's real look (label, colour, shape, size), logo, fonts, palette hex codes for type and brand marks. Lock one or two more that the brand's five liked images share (often palette world and mood). Everything else is open to vary.
 
+Every setting gets a value; none is left blank, because a blank setting is one the designer or image model will invent. Defaults are fine. Leave at least three or four settings free so variants have room to differ; a batch with everything locked produces one ad several times.
+
+**Order of authority** when choices clash: what the owner explicitly chose wins; then the settings set here for this batch; then the brand's visual identity sheet; then the theme defaults in step 4. Say so in the spec whenever an owner choice overrides a recommendation, and why the recommendation differed.
+
 ### 3. Choose the main, test and avoid styles
 
 **Path A, from the store's results.**
@@ -100,6 +104,19 @@ A new background colour or pose is not a new ad [MCR-0022], and near-identical a
 - A variant counts as distinct only if it changes at least one big setting and at least two settings in total (practitioner default, test it).
 - Visual change alone still sits inside one concept. For delivery reach, the concept itself (buyer group, angle or offer) must differ; plan that in `store-meta-concepts`. Keep 10 to 15 distinct formats live where the budget can feed them, rather than many copies of one winner [MCR-0036].
 - Borrow cues from far-off industries for fresh looks, as long as it stays clear what the product is [BRD-0003].
+- Meta learns which formats each person responds to, so a batch of only one look (say lo-fi phone shots) never reaches people who ignore that look; spread big settings across the batch so every concept can meet more people [MCR-6657].
+
+**Starting version sets by theme.** When the batch has a known theme, start from three versions that differ on at least two settings, then adjust to the store's results:
+
+| Theme | Version 1 | Version 2 | Version 3 |
+|---|---|---|---|
+| Lifestyle | Aspirational: calm mood, golden hour, premium setting | Relatable: warm mood, everyday room, phone-shot style | Active: energetic mood, outdoors, dynamic diagonal |
+| Problem and solution | Scene-led: the problem moment, product small | Product-led: the product large, problem as an inset | Balanced: split frame, problem left, fix right |
+| Social proof | One real review with a close portrait of the real reviewer | Several real reviews or customer photos in a grid | A real customer using the product, action shot |
+| Offer | Bold offer card, product hero | Bundle laid out flat with unit price | Product in use with an offer band (real end date only) |
+| Features | Annotated product with three callouts | Comparison grid against the usual way | Simple how-it-works diagram |
+
+These are practitioner defaults, not results; they only set where the first batch starts.
 
 ### 5. Fit each placement
 
@@ -110,6 +127,8 @@ A new background colour or pose is not a new ad [MCR-0022], and near-identical a
 ### 6. Write the spec and preview the spread
 
 For each variant, list every setting with lock or vary and its value. Make a contact sheet of quick drafts or reference images, one per variant, and check by eye that no two read as the same ad at thumbnail size.
+
+Run the stamp test on the sheet: shrink every variant to about postage-stamp size side by side. If you cannot say what each one is about, or which job it does, without reading its words, change the layout family, the background or the main picture until you can. Variants that only differ in their words will be grouped as one ad.
 
 ## Checks before you hand it over
 
@@ -131,6 +150,8 @@ For each variant, list every setting with lock or vary and its value. Make a con
 
 ## Common mistakes
 
+- **Blank settings.** Step 2 gives every setting a value and leaves three or four free on purpose.
+- **Variants only the copywriter can tell apart.** Step 6 runs the stamp test.
 - **Calling colour swaps new ads.** Step 4 requires a big-setting change and a new concept for reach.
 - **Picking style by taste.** Step 3 ranks styles on gross profit per ad from the store's own results.
 - **Ranking on thin data.** Step 3 needs 3 times target cost per purchase per style.
@@ -150,6 +171,7 @@ For each variant, list every setting with lock or vary and its value. Make a con
 - [MCR-0022]: a colour or pose change is not a new ad.
 - [MCR-0078]: near-duplicates share one delivery entity.
 - [MCR-0036]: 10 to 15 distinct formats outlast copies of one winner.
+- [MCR-6657]: Meta learns format response per person; mix formats so concepts reach more people.
 - [BRD-0003]: borrow design ideas from distant industries.
 
 What makes this skill ours: styles ranked on gross profit per ad from the store's own results, with production cost and a store-side order check; a spread rule that separates big and small settings so variants count; a truth gate that keeps AI away from products judged on colour, texture or fit; a batch size capped by what the test budget can read.

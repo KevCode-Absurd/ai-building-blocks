@@ -37,7 +37,7 @@ If there is no permission basis, write the copy but mark quotes "permission pend
 ## Before you start: the gates
 
 1. **Reviews are real.** Use only reviews from real buyers. Fake or false reviews and testimonials, and misrepresenting what a reviewer experienced, are banned in the US, with civil penalties for knowing breaches [MCR-6021]. Fail on any doubt about a review: leave it out.
-2. **Permission to refer to the person.** In India, referring to a person in an ad needs their permission [ADC-6146]. Pass when the review terms or a reply from the reviewer covers it.
+2. **Permission to refer to the person.** Many markets expect permission before an ad names or shows a real person, and UK and EU data protection rules treat a reviewer's name and photo as personal data. Pass when the review terms or a reply from the reviewer covers it.
 3. **Claims inside reviews are checked.** A customer may write "cured my eczema". The ad cannot repeat a health or result claim the store cannot prove, even in a quote. Fail: skip that quote or trim it to the part that is a personal experience the store can stand behind, without changing its meaning.
 4. **Gross profit per order known** for any product the copy pushes with an offer [MEA-0037].
 
@@ -69,7 +69,7 @@ Rules for every quote:
 - You may cut words at the start or end, and use "..." for a gap, only when the meaning stays the same. "Didn't think it would work but... my feet were fine after a 10-hour shift" is fine if the review said so.
 - Never join two reviews into one quote. Never change a number or time.
 - Fix nothing but obvious spacing; spelling slips can stay, as they read as real.
-- Translated quotes (a Hindi review in an English ad) are labelled "translated from Hindi", with the original in the register.
+- Translated quotes (a Spanish review in an English ad) are labelled "translated from Spanish", with the original in the register.
 
 Record each trim in the register.
 
@@ -145,7 +145,6 @@ Lead with the set answering the objection most often named in abandoned checkout
 ## Sources
 
 - MCR-6021: FTC bans fake reviews, misrepresented experiences and undisclosed insider reviews.
-- ADC-6146: ASCI needs permission to refer to people; claims need proof.
 - AVT-0007: read reviews by hand and keep exact words.
 - AVT-0009: buyers who spent on failed fixes are the highest intent.
 - AVT-0016: repeated self-identifying phrases mark buyer groups.
@@ -157,3 +156,8 @@ Lead with the set answering the objection most often named in abandoned checkout
 - MEA-0037: margin from delivered cost.
 
 What makes this skill ours: quotes are chosen to answer the store's real objections, not by star rating; every trim is recorded in a quote register that would stand up to a regulator; result claims inside reviews are held to the same proof as the brand's own; and no actor or AI voice is ever made to read a review as their own.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Referring to a person in an ad needs their permission under the ASCI Code, and claims need proof [ADC-6146]. A Hindi review quoted in an English ad is labelled "translated from Hindi", with the original in the register.
+- ADC-6146: ASCI needs permission to refer to people; claims need proof.

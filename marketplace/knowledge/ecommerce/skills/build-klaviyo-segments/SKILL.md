@@ -1,6 +1,6 @@
 ---
 name: build-klaviyo-segments
-description: "The fourteen email and SMS segments a store actually uses, each with its purpose, the exact Klaviyo condition lines to build it, the expected size check, and where it is used (campaign audience, exclusion, flow filter). Covers engaged windows that ignore Apple privacy opens, sunset, buyers by order count, active subscribers to exclude from sales, high intent, at risk, discount-only buyers and do-not-market, with a free path in Shopify Email and India notes for phone-only COD buyers and RTO. Use when taking over an account with dozens of unused segments, before planning campaigns, or when every send goes to the whole list."
+description: "The fourteen email and SMS segments a store actually uses, each with its purpose, the exact Klaviyo condition lines to build it, the expected size check, and where it is used (campaign audience, exclusion, flow filter). Covers engaged windows that ignore Apple privacy opens, sunset, buyers by order count, active subscribers to exclude from sales, high intent, at risk, discount-only buyers and do-not-market, with a free path in Shopify Email and notes for phone-only buyers and failed deliveries. Use when taking over an account with dozens of unused segments, before planning campaigns, or when every send goes to the whole list."
 ---
 
 # Email segments that matter
@@ -85,7 +85,7 @@ If Klaviyo's RFM report is available (500 or more buyers, 180 days of orders, so
 | Segment | Klaviyo definition | Use |
 |---|---|---|
 | EXC Active subscribers | Subscription status equals active (from the subscription app integration) | Exclude from sitewide sales; campaigns can trigger cancels [EML-0001] |
-| EXC Do not market | Open support ticket tag, return in progress, chargeback, or (India) 2 or more RTO tags | Exclude from all marketing |
+| EXC Do not market | Open support ticket tag, return in progress, chargeback, or 2 or more refused or failed-delivery tags | Exclude from all marketing |
 
 Add both exclusions to every campaign by default. Hard bounces are suppressed at once; soft bounces after about four [EML-0042].
 
@@ -98,10 +98,11 @@ Write each segment's size and its share of the list. Sanity checks:
 - Sunset should not exceed the profiles outside Engaged 180.
 - Any segment under 500 profiles is used for flows or small personal sends only, never for split tests.
 
-### 7. Free path and India notes
+### 7. Free path and market notes
 
 - **Shopify Email or other tools:** Shopify customer segments support number of orders, amount spent, last order date, email subscription status and tags; build the purchase segments and exclusions there. Engagement windows need the email tool's own open and click data.
-- **India:** many COD buyers have only a phone. Build parallel WhatsApp or SMS segments keyed on phone, with WhatsApp opt-in as a property. Tag RTO customers from the courier report and keep them in Do not market for promotions.
+- **Phone-first buyers:** in many markets (much of Latin America, Asia, Africa and Southern Europe) buyers give only a phone. Build parallel WhatsApp or SMS segments keyed on phone, with WhatsApp opt-in as a property. Tag customers who refused delivery from the courier report and keep them in Do not market for promotions.
+- **UK and EU:** marketing consent is per channel under GDPR and the e-privacy rules; build email and SMS consent as separate properties.
 
 ## Checks before you hand it over
 
@@ -142,4 +143,9 @@ Write each segment's size and its share of the list. Sanity checks:
 - CXP-0016: discount-acquired buyers repeat less.
 - EML-6325, EML-6326: Klaviyo RFM and predictions, with data floors.
 
-What makes this skill ours: buyer windows come from the store's own reorder gap; engagement ignores Apple privacy opens; active subscribers, open complaints and repeat RTO buyers are excluded from every campaign by default; and each segment carries a size check so tiny segments never feed a split test.
+What makes this skill ours: buyer windows come from the store's own reorder gap; engagement ignores Apple privacy opens; active subscribers, open complaints and buyers who keep refusing delivery are excluded from every campaign by default; and each segment carries a size check so tiny segments never feed a split test.
+
+## Selling in India
+
+- Many COD buyers have only a phone; key segments on phone with WhatsApp opt-in.
+- Tag RTO customers from the courier report and keep them in Do not market.

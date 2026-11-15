@@ -96,6 +96,7 @@ For each message write: subject (under about 45 characters), preview text, a bod
 - Review message: a one-click link to the review form, a prompt to add a photo, and three or four real customer photos as examples.
 - Write only what is true of the reader: never tell a first-time buyer they are "one of our best customers".
 - Every email invites a reply, and a person reads the replies.
+- Build the reorder habit on purpose: name the moment you want the buyer to reach for the product (a time of day, a place, a task), check that the product pays off each time it is used (it works, tastes, feels good or saves time), and make every tips message tie the product to that moment. If buyers get little from each use, say so and send that to the product owner before adding more messages. Offer cues only as ideas to test with buyers, never as proven.
 
 ### 6. Decide incentives with the money gate
 

@@ -1,6 +1,6 @@
 ---
 name: offer-bundle-threshold-design
-description: "Designs a store's free-shipping threshold, bundles, gifts, upsells and discounts from its own order data, and models the change in gross profit per order and per session before recommending any of them. Leads with the offer that already sells, unchanged. Reads the shape of the order value distribution instead of the average, prices each bundle tier from real shipping and product costs, ranks upsells by added profit, and says where each offer goes on the page, in the cart, at checkout and after purchase. When the brief asks for a test, plans one that never tests two prices for one product. Notes for cash-on-delivery markets. Use before a promotion, when order value has stalled, or when the owner wants to add a discount and needs to know what it costs."
+description: "Designs a store's free-shipping threshold, bundles, gifts, upsells and discounts from its own order data, and models the change in gross profit per order and per session before recommending any of them. Leads with the offer that already sells, unchanged. Reads the shape of the order value distribution instead of the average, prices each bundle tier from real shipping and product costs, ranks upsells by added profit, and says where each offer goes on the page, in the cart, at checkout and after purchase. When the brief asks for a test, plans one that never tests two prices for one product. Notes for stores with pay on delivery or high failed-delivery rates. Use before a promotion, when order value has stalled, or when the owner wants to add a discount and needs to know what it costs."
 ---
 
 # Offer, bundle and free-shipping threshold design
@@ -48,13 +48,21 @@ If cost inputs are missing, ask once. Without them, stop: offers cannot be ranke
 
 Find the proven winner in the order data: the pair most often bought together, the pack size most buyers pick, the threshold that already pulls orders over the line. It leads the plan unchanged: same items, same price, same line. Adding a third item to a pair that sells, re-pricing it, or moving a threshold that works is a test against the winner, never the plan itself. Offer an add-on beside the winner, not inside it.
 
+To find which products really go together, count pairs in the order export (90 days, or 180 if the store has under about 1,000 orders). First drop lines that are not chosen products: free gifts, samples, shipping protection, gift wrap. For each pair of products A and B:
+
+- Support = orders containing both.
+- Confidence = orders with both / orders with A (the share of A buyers who also took B).
+- Lift = confidence / (orders with B / all orders). Above 1 means buyers pick the pair more often than chance; about 1 means two best sellers that simply meet often.
+
+Keep only pairs with a support of at least 3 orders, and raise that floor as volume grows. Rank by lift among pairs with enough support, not by raw count. High-lift pairs feed the bundle tiers in step 5 and the upsell ranking; the pair with the most orders stays the proven winner above. Run the same count on triples only when the store has several thousand orders, or the counts are too small to mean anything.
+
 Write the one goal: more orders (conversion) or bigger orders (order value). An offer that wins the goal but loses gross profit is dropped.
 
 Per order: net revenue, units, product cost, fulfilment, fees, return allowance, gross profit. Then gross profit per session = orders / sessions x gross profit per order. Every offer must beat this number [OFF-0015].
 
 ### 2. Plot the order value distribution
 
-Bucket order subtotals in steps of 5 or 10 (or 100 to 200 rupees). Mark each peak and valley. Many stores have two peaks, for example one-item and three-item orders, and the mean sits in the valley. A threshold just above the mean moves only the small group just below it, perhaps 10% of buyers, while giving free shipping to everyone already above it [OFF-0079] [OFF-0013].
+Bucket order subtotals in steps of 5 or 10 in the store's own currency (or a similar small step for currencies with larger numbers). Mark each peak and valley. Many stores have two peaks, for example one-item and three-item orders, and the mean sits in the valley. A threshold just above the mean moves only the small group just below it, perhaps 10% of buyers, while giving free shipping to everyone already above it [OFF-0079] [OFF-0013].
 
 ### 3. Find what one more unit really costs
 
@@ -113,13 +121,13 @@ Shipping protection takes near 30% at a small fee [OFF-0010], but counts only at
 - Checkout: one add-on at most.
 - After purchase: one one-click offer of more of the same or the item that solves the next problem [OFF-0052].
 
-### 10. Cash on delivery markets
+### 10. Pay on delivery and failed deliveries
 
-Show any COD fee or prepaid discount at the product page, not as a checkout surprise, and model each against the store's own return-to-origin rate in `store-meta-math`. A prepaid discount pays when it cuts return-to-origin losses by more than it costs.
+Where the store offers pay on delivery (one regional option) or sees many refused deliveries, show any pay on delivery fee or prepaid discount at the product page, not as a checkout surprise, and model each against the store's own failed-delivery rate in `store-meta-math`. A prepaid discount pays when it cuts failed-delivery losses by more than it costs.
 
 ### 11. Plan the test, only when one is needed
 
-Write a test plan only when the brief asks for one, or when a call is itself a test (a change to the proven winner); otherwise one line on what to watch. Never test two prices for one product; test tiers, framing and thresholds [CRO-0009]. Judge on gross profit per session [OFF-0015], with conversion (and in COD stores the delivered rate) as the guardrail.
+Write a test plan only when the brief asks for one, or when a call is itself a test (a change to the proven winner); otherwise one line on what to watch. Never test two prices for one product; test tiers, framing and thresholds [CRO-0009]. Judge on gross profit per session [OFF-0015], with conversion (and in pay on delivery stores the delivered rate) as the guardrail.
 
 Run both versions on the same days, split at random by visitor, or by region with matched past sales, for 2 to 4 full weeks [CRO-0021]. Use before and after only when no split is possible (too little traffic [CRO-0001]), in matching weeks, with the caveat. Size it with `storefront-conversion-audit`, in relative weeks unless the brief gives dates.
 
@@ -136,6 +144,7 @@ Run both versions on the same days, split at random by visitor, or by region wit
 - One call per decision, point estimate and range in one line, ranked by money per hour of work, each with who does it.
 - Every offer shows gross profit per order and per session, before and after; `numbers.cjs` shows no FAIL.
 - The threshold comes from the distribution; bundle costs use real shipping by units; upsells rank by take x value x margin.
+- Product pairs are picked by lift with a stated minimum support, after gifts and add-on lines were removed.
 - Each discount's break-even ROAS goes to `store-meta-math`; gift and bundle SKUs have stock.
 - No two prices for one product, no fake urgency, and no test plan, budget or section the brief did not ask for.
 - Nothing was switched on without a client yes, asked in your own message.
@@ -154,6 +163,7 @@ Follow the house rule "Write for a busy owner."
 ## Common mistakes
 
 - **Rebuilding the winner.** Turning a pair that sells into a three-item set. Step 1 keeps it and tests changes against it.
+- **Bundling two best sellers because they often meet.** Step 1 ranks pairs by lift, not raw count.
 - **Keep and test at once.** Step 4 makes one call.
 - **Threshold from the mean.** Step 2 uses the distribution's peaks.
 - **Average shipping in bundle maths.** Step 3 prices the nth unit.
@@ -177,3 +187,7 @@ Follow the house rule "Write for a busy owner."
 - CRO-0001, CRO-0021: when a split test is possible; full weekly cycles.
 
 What makes this skill ours: the offer that already sells leads unchanged; every offer is judged on gross profit per session; the threshold comes from the store's own order peaks; and bundle discounts are funded from the real cost of the nth unit.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Bucket order subtotals in steps of 100 to 200 rupees. Show any COD fee or prepaid discount at the product page and model it against the store's RTO rate; a prepaid discount pays when it cuts RTO losses by more than it costs.

@@ -89,7 +89,7 @@ Revenue per recipient needs even more: in web tests it took about six times the 
 
 ### 5. SMS and WhatsApp tests
 
-Sample sizes are the same sums; costs differ. Test send time, offer, and SMS versus image MMS (which costs more per message [EML-0024]). Decide on gross profit per recipient after message cost. In India, test WhatsApp against SMS for the same journey step only among people opted in to both.
+Sample sizes are the same sums; costs differ. Test send time, offer, and SMS versus image MMS (which costs more per message [EML-0024]). Decide on gross profit per recipient after message cost. Where buyers use WhatsApp, test it against SMS for the same journey step only among people opted in to both.
 
 ### 6. Hold out a slice for the big question
 

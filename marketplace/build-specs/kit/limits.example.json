@@ -1,0 +1,13 @@
+{
+  "about": "Your money limits. The agents cannot show you a plan that breaks the daily cap, the step limit, the ad accounts or the end date: the code checks those. The monthly cap is checked by the plan reviewer against the warehouse. Amounts are in your ad account currency, in whole units (50 means 50 dollars, not cents).",
+  "ad_accounts": [
+    "act_REPLACE_ME"
+  ],
+  "currency": "USD",
+  "max_daily_spend": 100,
+  "max_change_pct": 20,
+  "monthly_cap": 3000,
+  "generation_budget_per_job": 25,
+  "ai_disclosure": "ask me each time",
+  "ends_on": "2027-02-15"
+}

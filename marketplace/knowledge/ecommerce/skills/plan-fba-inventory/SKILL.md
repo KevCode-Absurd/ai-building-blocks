@@ -10,7 +10,7 @@ description: "An FBA stock plan for every Amazon product: daily sales from in-st
 ## When to use
 
 - Before each reorder or FBA shipment.
-- Six to ten weeks before Q4, Prime Day, or a big Indian sale period.
+- Six to ten weeks before Q4, Prime Day, or a big local sale period.
 - Storage or aged inventory fees jumped on the last statement.
 - A product ran out at Amazon and lost rank.
 - Amazon lowered the account's capacity limit.
@@ -57,9 +57,17 @@ Reading is level 1. Creating shipments in Send to Amazon is draft work (level 2)
 7. **Tie ads to stock.** When an ASIN's cover drops below its lead time, lower its ad bids or pause it, and do not run deals on it [ADC-0023]. Write this rule into `launch-amazon-ppc` and `harvest-amazon-search-terms` for that ASIN.
 8. **Flag ageing and slow stock.** Units already in an aged band, or that will reach one before they sell at current speed, go to `clear-slow-moving-stock` or a removal order, whichever loses less. Days of inventory remaining = ending stock / average daily sales over 28 days, the same measure Shopify reports use [COG-6285].
 9. **Q4 and big sales.** Move the PO date earlier by the extra receiving time Amazon shows in Q4. Do not send more peak stock than sells by early January: leftover units have already paid the higher October to December storage rate and keep ageing toward the surcharge.
-10. **India notes (Amazon.in FBA).** The same logic applies; fees and storage rates are in rupees on Amazon.in's fee pages. Amazon's fees carry GST, usually claimable as input credit by a registered seller; confirm with the accountant. Pre-packaged goods must carry the Legal Metrology declarations before they are sent [COG-6264]. For big sale periods (festive season), Amazon.in sets inbound cut-off dates; work back from them.
+10. **Other marketplace notes (UK, EU, Canada, Australia and beyond).** The same logic applies; fees and storage rates are in the marketplace's own currency on its fee pages. Amazon's fees carry VAT or goods and services tax in many markets, usually reclaimable by a registered seller; confirm with the accountant. Pre-packaged goods must carry your market's pack declarations and safety marks (for example UKCA or CE) before they are sent [COG-6264]. For big sale periods (Prime Day, Black Friday and the holidays), each marketplace sets inbound cut-off dates; work back from them. Selling across EU countries from one stock pool (Pan-European FBA) can mean VAT registration in each country that holds stock.
 11. **US notes.** Imports no longer enter duty free under the old low-value rule, so small air top-up shipments now carry duty; add it to the air option's cost [COG-6261].
-12. **Hand over.** Show the sheet, the flag list and the purchase orders and shipments that need a yes this week.
+12. **First order for a new or unproven ASIN.** With no sales history, there is no sell rate to plan from. Give the client both views: a small test send (a few weeks of expected sales, enough to read the sell rate and reviews) when cash is tight or demand is unproven, or 3 to 6 months of sales once the sell rate is known, leaning to 6 when the factory lead time is long. Re-order when 2 to 3 months of cover remain, and check the order against the cash forecast first. Ask the factory how many units it can make per month, not only its minimum order; a sell rate the factory cannot keep up with stalls rank as surely as a stockout.
+13. **Build each shipment so nothing is lost.** For every shipment:
+   - **Split it:** where volume allows, send in two shipments a few days apart, so one lost or delayed box does not stop sales.
+   - **Box limits:** check the marketplace's current carton size and weight limits in Seller Central before the factory packs (they differ by country), and write them into the PO so cartons arrive ready.
+   - **Labels:** every unit carries its FNSKU, printed by the factory where possible because Amazon charges per unit to label; every box carries only its own Amazon box label, never taped over. Check ship-from address, destination, weight and size on every box label before the carrier collects; never pick a ship-from address to steer stock to a closer warehouse.
+   - **Carrier:** small parcel for a few boxes, pallets for larger sends, which often cost far less per unit. A printed label does not book a collection: book the pickup and record the time slot.
+   - **Proof:** keep the supplier invoice, packing list, box contents and bill of lading for every shipment; without them, missing units cannot be claimed.
+   - **Tracking:** follow each shipment through in transit, delivered, receiving and closed. Delivered is not checked in. If receiving runs past two weeks outside Q4, open a case with Seller Support and log units sent against units received for the claim list.
+14. **Hand over.** Show the sheet, the flag list and the purchase orders and shipments that need a yes this week.
 
 ## Checks before you hand it over
 
@@ -70,6 +78,9 @@ Reading is level 1. Creating shipments in Send to Amazon is draft work (level 2)
 - Shipment and PO dates are worked back from when cover hits the minimum.
 - Planned units fit the capacity limit by storage type.
 - ASINs below lead-time cover have an ad rule attached.
+- New ASINs show both a test-send size and a full-order size, each with its cash.
+- Each shipment has box limits checked, labels checked, a booked pickup and a proof pack kept.
+- Units sent and units received are logged per shipment for claims.
 - No PO, shipment or fee committed without the client's yes.
 
 ## Output
@@ -82,6 +93,8 @@ Reading is level 1. Creating shipments in Send to Amazon is draft work (level 2)
 
 **Shipment list:** Shipment | Ship date | ASINs and units | Placement option | Placement fee | Expected available date.
 
+**Shipment checklist per send:** Split (yes or no) | Box limits checked | FNSKU labels by | Box labels checked | Carrier and pickup slot | Proof pack kept | Status (in transit, delivered, receiving, closed) | Units sent | Units received | Gap.
+
 ## Common mistakes
 
 - **Averaging sales over stockout days.** Step 1 uses in-stock days only.
@@ -90,6 +103,9 @@ Reading is level 1. Creating shipments in Send to Amazon is draft work (level 2)
 - **Sending everything to FBA.** Step 4 prices a split against holding it all at Amazon.
 - **Ads running on a product about to run out.** Step 7 ties bids to cover.
 - **Peak stock that ages in January.** Step 9 sizes peak sends to what sells.
+- **A full order on an unproven product.** Step 12 offers a small test send first.
+- **Treating delivered as checked in.** Step 13 tracks receiving and opens a case when it runs long.
+- **No proof of what was sent.** Step 13 keeps the paperwork that claims need.
 
 ## Sources
 
@@ -99,7 +115,12 @@ Reading is level 1. Creating shipments in Send to Amazon is draft work (level 2)
 - COG-6285: days of inventory remaining defined.
 - FIN-0005: supplier float equals payment terms minus lead time.
 - MEA-0037 and FIN-0007: what sits in product cost and what sits below it.
-- COG-6264: India packaged-goods declarations.
+- COG-6264: packaged-goods pack declarations.
 - COG-6261: US low-value duty-free entry ended.
+- Library item: Amazon inbound stock planner (AI Blocks skill), used for the first-order sizing, factory capacity question and shipment build checklist in steps 12 and 13.
 
 What makes this skill ours: every fee is read from Amazon on the day because the 2026 fee changes make course figures wrong; cover has both a floor and a ceiling set by fees, not one flat number; it prices a split between FBA and cheaper storage; and it writes the stock-to-ads rule into the ad skills.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. On Amazon.in FBA, fees and storage rates are in rupees. Amazon's fees carry GST, usually claimable as input credit; confirm with the accountant. Pre-packaged goods must carry Legal Metrology declarations before they are sent [COG-6264]. For festive sale periods, Amazon.in sets inbound cut-off dates; work back from them.

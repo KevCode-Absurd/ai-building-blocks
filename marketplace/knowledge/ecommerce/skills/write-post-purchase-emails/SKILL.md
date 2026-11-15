@@ -1,6 +1,6 @@
 ---
 name: write-post-purchase-emails
-description: "The first 30 days of post-purchase emails written in full: a thank-you with one helpful add-on, a reassurance email, a how-to-use email timed to delivery, a check-in that routes problems to support before they become returns, and a review request sent only after the buyer has had time to use the product, with subject lines, preview, body, timing, branches for first and repeat buyers and exit rules. Keeps order and delivery messages free of promotions so they stay transactional, follows Google and FTC review-request rules, and adds India notes for COD and WhatsApp updates. Use when the store sends only order confirmations, or a review ask before the parcel arrives."
+description: "The first 30 days of post-purchase emails written in full: a thank-you with one helpful add-on, a reassurance email, a how-to-use email timed to delivery, a check-in that routes problems to support before they become returns, and a review request sent only after the buyer has had time to use the product, with subject lines, preview, body, timing, branches for first and repeat buyers and exit rules. Keeps order and delivery messages free of promotions so they stay transactional, follows Google and FTC review-request rules, and adds market notes for pay-on-delivery orders, WhatsApp updates and UK and EU email rules. Use when the store sends only order confirmations, or a review ask before the parcel arrives."
 ---
 
 # Post-purchase emails, first 30 days
@@ -39,7 +39,7 @@ If no Delivered event exists, time from Fulfilled at plus the median delivery da
 ## Before you start: the gates
 
 1. **Service before selling.** Open tickets, refunds or failed deliveries pause every email after the thank-you. The flow must be able to read that state or the builder adds a tag.
-2. **Order emails stay transactional.** In the US, a message counts as commercial if its subject reads commercial or the order content is not mainly at the start [EML-6341]. In India, WhatsApp order updates stay utility only with no offer [OPS-6286].
+2. **Order emails stay transactional.** In the US, a message counts as commercial if its subject reads commercial or the order content is not mainly at the start [EML-6341]. In every market, WhatsApp order updates stay utility only with no offer [OPS-6286].
 3. **Review request rules.** No incentive tied to a positive review, no asking only happy buyers, no steering unhappy buyers away from reviewing [CXP-6301]. If reviews feed Google, Google bars any incentive for reviews [CXP-6300].
 4. **Claims.** Results timing and use claims come from the approved claims list.
 
@@ -60,6 +60,8 @@ Most second purchases happen within 30 days of the first [EML-0062]. Build the 3
 Review timing by product (practitioner defaults, test them): quick-use items about 7 days after delivery; clothing and home items 10 to 14 days; skincare, supplements and anything with slow results only when the claims list says a change is usually felt. Never before delivery. If that point falls after day 30, the review email moves to `post-purchase-repeat-sequence`.
 
 Exits: a refund or cancellation stops all; a second order moves the person to the repeat-buyer branch; a review already left skips email 5.
+
+**Teach one habit, and use the wait before delivery.** For products used again and again, ask buyers once in a short survey when and how they use it, compare reorder rates across the answers, and make every how-to and check-in email teach the routine with the best retention, such as pairing the product with something the buyer already does each day [EML-0005]. With few buyers, pick the routine most buyers describe and mark it as unchecked. When delivery takes more than three or four days, use the wait for one or two short notes that confirm the choice and show how to get started, not for cross-sells or a review ask.
 
 ### 2. Pick the one add-on
 
@@ -91,7 +93,8 @@ Two subjects per email. Plain subjects work here: "Your [product] ships [day]", 
 
 ### 6. Market notes
 
-- **India:** for COD orders, email 1 says the amount to keep ready and the delivery window; order and delivery updates on WhatsApp go as utility templates with no offer [OPS-6286], written with `write-sms-and-whatsapp-messages`. Delivery days differ for non-metro pin codes; use the range.
+- **Any market:** for pay-on-delivery orders, email 1 says the amount to keep ready and the delivery window; order and delivery updates on WhatsApp go as utility templates with no offer [OPS-6286], written with `write-sms-and-whatsapp-messages`. Delivery days differ for rural and remote postcodes; use the range.
+- **UK and EU:** order emails need no marketing consent, but emails 2 to 5 that sell need consent or, in the UK, the soft opt-in for past buyers; every email that sells carries an unsubscribe link.
 - **US:** emails 2 to 5 carry the postal address and unsubscribe; the thank-you stays mostly order content so it remains transactional [EML-6341].
 
 ## Checks before you hand it over
@@ -134,6 +137,7 @@ Sources: [delivery data / claims list line / review id]
 
 ## Sources
 
+- EML-0005: push the use routine with the best retention.
 - CXP-0007: poor returns cut repeat buying.
 - CXP-0009: low-effort service and loyalty.
 - CXP-6300: Google bars incentives for reviews (proposed).
@@ -143,4 +147,8 @@ Sources: [delivery data / claims list line / review id]
 - EML-6341: commercial versus transactional email (proposed).
 - OPS-6286: WhatsApp utility versus marketing (proposed).
 
-What makes this skill ours: timing comes from the store's delivery data and each product's time to a felt result; selling pauses whenever there is an open problem; the review ask follows Google and FTC rules, the same ask to every buyer; and order messages stay free of offers so they remain transactional in the US and utility on WhatsApp in India.
+What makes this skill ours: timing comes from the store's delivery data and each product's time to a felt result; selling pauses whenever there is an open problem; the review ask follows Google and FTC rules, the same ask to every buyer; and order messages stay free of offers so they remain transactional in the US, UK and EU and utility on WhatsApp everywhere.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. For COD orders, email 1 says the amount to keep ready and the delivery window. Delivery days differ for non-metro pincodes; use the range. WhatsApp is the main channel for order updates; keep them utility templates with no offer [OPS-6286].

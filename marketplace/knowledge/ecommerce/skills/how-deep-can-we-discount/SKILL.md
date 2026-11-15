@@ -25,11 +25,11 @@ description: "A discount ceiling sheet for every product: the deepest discount e
 
 Required (read access, level 1):
 
-1. **Shopify order export**, last 90 days at least, with line items, discounts, shipping, payment method and refunds: real units per order, discount history and COD share.
+1. **Shopify order export**, last 90 days at least, with line items, discounts, shipping, payment method and refunds: real units per order, discount history and pay-on-delivery share.
 2. **Landed cost per SKU**: purchase price, inbound freight, duty, retail box [FIN-0007]. If missing, run `calculate-landed-cost-per-unit`.
 3. **Delivery cost per order** from the courier or 3PL invoice: pick, pack, packaging and outbound shipping.
-4. **Payment fee rates** by method (cards, UPI, wallets, COD remittance fee).
-5. **Return rate and RTO rate** by product, from the returns app or courier report.
+4. **Payment fee rates** by method (cards, wallets, bank payments, buy now pay later, pay-on-delivery collection fee).
+5. **Return rate and failed-delivery rate** by product, from the returns app or courier report.
 6. **Current ad cost per purchase** (blended or new customer), from Meta Ads Manager and Google Ads exports or `store-meta-math`.
 
 Optional: stock on hand and weeks of cover per SKU, past sale results, and the owner's minimum profit per order.
@@ -38,20 +38,20 @@ If landed cost or delivery cost is missing for a product, mark the row "no ceili
 
 ## Before you start: the gates
 
-1. **Delivered cost is known.** Pass when each row has landed cost, delivery cost, fees and a return and RTO allowance. Product margin alone fails: a 70% "margin" tee can be far thinner once freight, shipping and fees are in [MEA-0023] [MEA-0037]. Fail: build the cost rows first.
-2. **Prices are compared like for like.** Use the price the store keeps: net of GST in India, before sales tax in the US. Fail: restate prices before any maths.
+1. **Delivered cost is known.** Pass when each row has landed cost, delivery cost, fees and a return and failed-delivery allowance. Product margin alone fails: a 70% "margin" tee can be far thinner once freight, shipping and fees are in [MEA-0023] [MEA-0037]. Fail: build the cost rows first.
+2. **Prices are compared like for like.** Use the price the store keeps: net of VAT or goods and services tax in the UK, EU, Australia and other VAT countries, before sales tax in the US and Canada. Fail: restate prices before any maths.
 3. **Cash need is stated.** If the sale is meant to raise cash from stock, say so now. That changes the floor for those products (step 6).
-4. **Legal anchors.** Any "was" or compare-at price must be one the store genuinely charged for a reasonable recent period [OFF-6145]. In India never sell above the printed MRP, which already includes all taxes [COG-6264].
+4. **Legal anchors.** Any "was" or compare-at price must be one the store genuinely charged for a reasonable recent period [OFF-6145]. In the EU, the "was" price shown must be the lowest price in the 30 days before the cut; the UK has similar reference price rules.
 
 ## Steps
 
 ### 1. Build the cost row for each product
 
-Delivered variable cost per unit = landed cost + (delivery cost per order / units per order) + payment fee + return allowance + RTO allowance.
+Delivered variable cost per unit = landed cost + (delivery cost per order / units per order) + payment fee + return allowance + failed-delivery allowance.
 
 - Payment fee is a percentage of the discounted price, so it shrinks a little as the price drops. Keep it as a percentage.
 - Return allowance = return rate x (lost outbound and return shipping + handling + any unsellable unit). Card fees are usually not refunded on a refund, so add them [FIN-6243].
-- RTO allowance (India, COD) = RTO rate x (forward plus return shipping + COD fee + packaging). Use each product's own COD share and RTO rate, not the store average.
+- Failed-delivery allowance (mainly pay-on-delivery orders) = failed-delivery rate x (forward plus return shipping + collection fee + packaging). Use each product's own pay-on-delivery share and failed-delivery rate, not the store average.
 
 Contribution per unit at full price = net price minus delivered variable cost. This is the money each sale adds before ads and fixed costs.
 
@@ -94,11 +94,11 @@ Write one line per product: which mechanic gives the most contribution per order
 
 ### 6. Slow stock: a different floor
 
-For stock that will not sell at full price inside its season or shelf life, the purchase cost is already spent. The floor is the cost to sell one more unit: delivery, fees, returns and RTO, plus the ad cost to move it. Pushing such stock at break-even or a small loss in its own funnel can turn it into cash [FIN-0026]. Mark these rows "cash floor" and hand them to `clear-slow-moving-stock`. Never apply the cash floor to products that sell at full price.
+For stock that will not sell at full price inside its season or shelf life, the purchase cost is already spent. The floor is the cost to sell one more unit: delivery, fees, returns and failed deliveries, plus the ad cost to move it. Pushing such stock at break-even or a small loss in its own funnel can turn it into cash [FIN-0026]. Mark these rows "cash floor" and hand them to `clear-slow-moving-stock`. Never apply the cash floor to products that sell at full price.
 
 ### 7. Market notes
 
-- **India:** discounts raise COD share on many stores, and COD brings RTO. Rerun the RTO allowance at the COD share seen in past sales. A prepaid-only extra discount (for example 5% more on UPI) can pay if it cuts RTO losses by more than it costs; test it. Show the discount against the MRP honestly, never against an inflated MRP. GST is charged on the discounted price when the discount is on the invoice; ask the store's accountant to confirm treatment for gifts and free items.
+- **Pay-on-delivery markets:** discounts raise the pay-on-delivery share on many stores, and that brings failed deliveries. Rerun the failed-delivery allowance at the share seen in past sales. A prepaid-only extra discount (for example 5% more on card or wallet payments) can pay if it cuts failed-delivery losses by more than it costs; test it. Show the discount against a real former price, never an inflated one. Sales tax or VAT is usually charged on the discounted price when the discount is on the invoice; ask the store's accountant to confirm treatment for gifts and free items.
 - **US:** sales tax sits outside the maths. A compare-at price must be a real recent price [OFF-6145]. Marketplace deal prices (Amazon, Walmart) add referral fees that rise and fall with price; include them per channel.
 
 ### 8. Lead with what already worked
@@ -117,8 +117,8 @@ Nothing is switched on: ask for the client's yes in your own message, outside th
 
 ## Checks before you hand it over
 
-- Every row uses delivered cost, with return and RTO allowances by product.
-- Prices are net of GST or before US sales tax, in one currency.
+- Every row uses delivered cost, with return and failed-delivery allowances by product.
+- Prices are net of VAT or goods and services tax, or before US sales tax, in one currency.
 - The break-even lift and break-even ROAS are shown at all five depths.
 - Each ceiling states which minimum profit rule it used.
 - Products with a ceiling under 10% are marked "no discount" with an alternative mechanic.
@@ -141,12 +141,12 @@ Follow the house rule "Write for a busy owner."
 
 One row per SKU: net price, each cost line, delivered cost, contribution at full price, lift needed and break-even ROAS at each depth, the minimum profit rule, deepest safe discount, better mechanic, cash floor flag and stock cover.
 
-**Notes block:** data sources, products with missing costs, and up to three assumption lines (for example the minimum profit per order used). GST treatment carries one line: "accountant check before the sale runs".
+**Notes block:** data sources, products with missing costs, and up to three assumption lines (for example the minimum profit per order used). Sales tax or VAT treatment carries one line: "accountant check before the sale runs".
 
 ## Common mistakes
 
 - **Using product margin.** Step 1 builds delivered cost, so a 70% margin product is not treated as having 70% to give away.
-- **Average RTO for every product.** Step 1 uses each product's own COD share and RTO rate.
+- **Average failed-delivery rate for every product.** Step 1 uses each product's own pay-on-delivery share and failed-delivery rate.
 - **Judging the sale on revenue.** Step 2 shows the extra units needed; if past sales did not deliver that lift, the discount loses money.
 - **One sitewide number.** Step 9 finds the lowest ceiling among included products and excludes the thin ones.
 - **Dropping what worked.** Step 8 keeps the past winner.
@@ -165,6 +165,14 @@ One row per SKU: net price, each cost line, delivered cost, contribution at full
 - OFF-0066: buy-one-get-one versus half off when unit cost is low.
 - FIN-0026: slow stock can be pushed at break-even in its own funnel.
 - OFF-6145: a "was" price must be genuine.
-- COG-6264: India MRP includes all taxes.
 
-What makes this skill ours: each product gets its own ceiling from delivered cost including RTO, not one sitewide guess; the sheet shows the extra units a discount must buy before anyone approves it; slow stock gets a separate cash floor so clearance logic never leaks onto full-price products; and thin products are routed to a gift or bundle instead of being cut out of the promotion.
+What makes this skill ours: each product gets its own ceiling from delivered cost including failed deliveries, not one sitewide guess; the sheet shows the extra units a discount must buy before anyone approves it; slow stock gets a separate cash floor so clearance logic never leaks onto full-price products; and thin products are routed to a gift or bundle instead of being cut out of the promotion.
+
+## Selling in India
+
+- Never sell above the printed MRP, which already includes all taxes [COG-6264]. Show the discount against the MRP honestly, never against an inflated MRP.
+- RTO allowance = RTO rate x (forward plus return shipping + COD fee + packaging), using each product's own COD share and RTO rate.
+- Discounts raise COD share on many stores. A prepaid-only extra discount (for example 5% more on UPI) can pay if it cuts RTO losses by more than it costs; test it.
+- Compare prices net of GST. GST is charged on the discounted price when the discount is on the invoice; ask the accountant about gifts and free items.
+
+Source: COG-6264 (India MRP includes all taxes).

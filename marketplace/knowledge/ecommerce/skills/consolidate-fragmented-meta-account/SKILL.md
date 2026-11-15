@@ -107,10 +107,27 @@ Compare 14 days before and 14 days after the final pause:
 
 Do not panic if a few ads now take most of the spend; that is how budget optimisation behaves [ADC-0014]. If one concept takes about 80%, feed it or cap it as `store-meta-budget` decides [ADC-0061].
 
-### 8. India and US notes
+### 8. Notes by market
 
-- **India:** if most orders are COD, judge before and after on delivered orders (`meta-ads-for-cod-stores`). Separate regional campaigns are worth keeping only where delivery cost, RTO rate or language changes the economics.
-- **US:** finish the merge by mid-October to give the new structure history before Black Friday.
+- **Pay on delivery and regions:** where many orders are paid on delivery, judge before and after on delivered orders (`meta-ads-for-cod-stores`). Separate country or regional campaigns are worth keeping only where delivery cost, failed-delivery rate, currency or language changes the economics.
+- **Peak season:** finish the merge about six weeks before the store's biggest peak (for example by mid-October before Black Friday and Cyber Monday in the US, UK and Europe) to give the new structure history.
+
+### 9. Size the target structure by spend tier
+
+Ask five questions before drawing the target structure: how many product categories, how far apart the margins are, which buyer groups do not overlap, which countries have their own stock or pages, and how many new ads the team makes a month. The answers, not the spend, justify a split [ADC-6194].
+
+| Monthly Meta spend | Target layout | Ads per ad set |
+|---|---|---|
+| Under about 50,000 | One testing campaign (one concept per ad set), an optional scaling campaign fed by post IDs once winners hold about 400 a day, a small existing-customer campaign [ADC-6216] [ADC-6205] | 3 to 5, never 1 |
+| About 50,000 to 250,000 | Add one to three cold campaigns only for a clear commercial reason, such as a separate persona funnel or a high-value category [ADC-6182]; about 100 to 300 new ads a month [ADC-6213] | 5 to 15, up to 20 |
+| Above about 250,000 | Separate promo and advertorial campaigns once each takes a real share of spend, a small catalog campaign judged on incremental return, and a backup account (below) [ADC-0038] | 5 to 15 |
+
+- **Concept = buyer group + angle + offer**, one ad set each.
+- **Merge countries served from one warehouse** into one campaign; filter reports by name rather than splitting accounts. Split accounts only for local-currency billing or a real business need [ADC-6232].
+- **Never open a second account as a ban backup.** Above about 250,000 a month, a second account on the same pixel with a different bid strategy is a deliberate choice; as a hiding place it breaks Meta's account integrity rules [ADC-6225].
+- **Split ad sets by men's and women's ranges** when the gender breakdown shows one range served to the wrong buyers [ADC-6238].
+- **Switch off** flexible ads and automatic creative enhancements on every ad and in advertiser settings, where automated rules can switch them back on [ADC-6185] [ADC-6248].
+- **Name ad sets** buyer group, angle, offer, format, launch date, so the name matches what is inside.
 
 ## Checks before you hand it over
 
@@ -122,6 +139,8 @@ Do not panic if a few ads now take most of the spend; that is how budget optimis
 - The rollback rule is written with its number.
 - The before-and-after uses store new-customer orders.
 - Every pause and switch-on waits for the client's yes.
+- The target structure names the spend tier it was sized for and the business reason for every extra campaign.
+- No extra ad account is proposed as a ban backup.
 
 ## Output
 
@@ -143,6 +162,7 @@ Do not panic if a few ads now take most of the spend; that is how budget optimis
 - **Merging right before a sale.** Gate 3 blocks it [GAD-0036].
 - **Judging the merge on Meta ROAS.** Step 7 reads store new-customer orders [MEA-0025].
 - **Too many ad sets for the budget.** Step 1 sizes them from weekly purchases [ADC-0066].
+- **One ad per ad set.** Meta needs at least 3 ads in a concept ad set to sequence and learn.
 
 ## Sources
 
@@ -160,5 +180,21 @@ Do not panic if a few ads now take most of the spend; that is how budget optimis
 - GAD-0036: restructures reset learning; fix before rebuilding.
 - GAD-0043: split for materially different margins.
 - MEA-0025: acquisition MER as the store-side read.
+- ADC-6182: extra cold campaigns only for a commercial reason.
+- ADC-6185: 2026 settings audit: flexible ads and enhancements off.
+- ADC-6194: segment only for real business differences.
+- ADC-6205: scaling campaign only once winners hold about 400 a day.
+- ADC-6213: 100 to 300 new ads a month at mid spend.
+- ADC-6216: layout under 50k a month.
+- ADC-6225: second account at large spend, not as a backup trick.
+- ADC-6232: do not split countries into accounts.
+- ADC-6238: split by gender range when the breakdown shows it.
+- ADC-6248: enhancements also off at advertiser level.
 
 What makes this skill ours: the number of ad sets is sized from the purchases the budget can buy; every split must name a business reason; old and new run side by side with the old winner paused last and a written rollback number; and the merge is judged on store new-customer orders.
+
+## Selling in India
+
+- If most orders are COD, judge before and after on delivered orders, not placed ones (`meta-ads-for-cod-stores`).
+- Keep separate regional campaigns only where delivery cost, RTO rate or language changes the economics.
+- Finish the merge well before Diwali so the new structure has history going into the peak.

@@ -108,7 +108,7 @@ function check({ trace, spec, pack, final }) {
   if (!trace.trim() || !queries) fails.push('the trace has no queries: log each ask-knowledge query with the question, the card ids used and the call each supports');
   const signals = blockItems(spec, /signal pass/i, /^\s*(?:[-*]\s+|#{1,6}\s+)?signals\b/i);
   const decisions = blockItems(spec, /^\s*(?:[-*]\s+|#{1,6}\s+)?(?:major )?decisions\b/i);
-  if (!signals.found) warns.push('the spec has no "Signal pass": write the three strongest signals in context/spec.md');
+  if (!signals.found) warns.push('the spec has no "Signal pass": write the signals that change the decision in context/spec.md');
   const need = signals.items + decisions.items;
   if (queries && queries < need) fails.push(`the trace has ${queries} quer${queries === 1 ? 'y' : 'ies'} for ${signals.items} signal${signals.items === 1 ? '' : 's'} and ${decisions.items} decision${decisions.items === 1 ? '' : 's'}: run one query per signal and per major decision`);
   const cited = [...new Set(trace.match(CARD_ID) || [])];

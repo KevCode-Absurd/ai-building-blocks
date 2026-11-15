@@ -29,15 +29,15 @@ Required (read access, level 1):
 2. **Gross profit per order** from `build-sku-profit-sheet` (landed cost, shipping, fees, returns).
 3. **Email and SMS tool report** for the month: attributed revenue from flows and campaigns, recipients, unsubscribes.
 
-Optional: subscription export, RTO list (India), marketplace orders by customer.
+Optional: subscription export, failed delivery list (where pay on delivery is offered), marketplace orders by customer.
 
 A store under 12 months old fills the 60 and 90-day rows only and marks the rest "not yet readable". Building the sheet needs read access only; no client approval is needed until actions are taken.
 
 ## Before you start: the gates
 
 1. **Gross profit per order.** Pass when known. Fail: fill revenue rows and leave gross profit rows blank with "needs costs", rather than using product margin, which can overstate true gross margin by a wide gap [MEA-0023].
-2. **Clean orders.** Cancelled, test, staff and fully refunded orders removed. In India, RTO orders removed: a refused COD parcel is not a purchase.
-3. **One customer key.** Email, or phone in one format for COD buyers without email. Duplicate customers make repeat rate look worse than it is.
+2. **Clean orders.** Cancelled, test, staff and fully refunded orders removed. Failed deliveries removed too: a refused or returned-to-sender parcel is not a purchase.
+3. **One customer key.** Email, or phone in one format (with country code) for buyers without email. Duplicate customers make repeat rate look worse than it is.
 4. **Cohort age.** Only cohorts that have had the full window count. A 90-day number needs first orders at least 90 days old.
 
 ## Steps
@@ -91,10 +91,10 @@ Improvements in repeat rate pay out over months, so read them on 60 to 180-day c
 
 At the bottom: date range, orders removed and why, share of customers matched by phone only, months not yet readable, and any number built on revenue because costs were missing.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** remove RTO before every calculation, and report repeat rate for prepaid and COD first orders separately; COD first-time buyers often repeat differently.
-- **US:** if the store sells on Amazon too, repeat buyers may reorder there; the Shopify view will under-count them. Say so in the confidence line.
+- **Pay on delivery:** where the store offers it, remove failed deliveries before every calculation, and report repeat rate for prepaid and pay-on-delivery first orders separately; they often repeat differently.
+- **Marketplaces (any country):** if the store sells on Amazon or another marketplace too, repeat buyers may reorder there; the Shopify view will under-count them. Say so in the confidence line.
 
 ## Checks before you hand it over
 
@@ -104,7 +104,7 @@ At the bottom: date range, orders removed and why, share of customers matched by
 - Gross profit rows use delivered costs, or say "needs costs".
 - Each number has a target from the store's own history and a miss action.
 - Attributed revenue is labelled attributed.
-- RTO, test, staff and cancelled orders are out.
+- Failed deliveries, test, staff and cancelled orders are out.
 - The data-confidence line is filled.
 
 ## Output
@@ -136,3 +136,7 @@ At the bottom: date range, orders removed and why, share of customers matched by
 - FIN-0029: judge repeat improvements on 60 to 180-day cash.
 
 What makes this skill ours: Shopify's returning customer rate is replaced with cohort numbers that only count windows that have closed; returning-customer gross profit sits beside new-customer profit so one cannot hide the other; targets come from the store's own best months, not borrowed benchmarks; and each miss points to the exact skill that fixes it.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Remove RTO orders before every calculation: a refused COD parcel is not a purchase. Report repeat rate for prepaid and COD first orders separately, since COD first-time buyers often repeat differently.

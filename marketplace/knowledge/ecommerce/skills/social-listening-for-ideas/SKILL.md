@@ -30,7 +30,7 @@ Required (read access, level 1):
 3. **Product list** with gross profit per order, from `build-sku-profit-sheet`, to size ideas.
 4. **Last month's memo**, if any, to track themes over time.
 
-Optional: competitor product links, 5 to 10 category creators, marketplace listings (Amazon, Flipkart, Nykaa, Etsy) for the top rival products.
+Optional: competitor product links, 5 to 10 category creators, marketplace listings (Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre) for the top rival products.
 
 This skill reads public pages and the store's own inbox only. It never posts, replies or messages anyone. If inbox access is missing, run the sweep on public sources and note the gap.
 
@@ -45,7 +45,7 @@ This skill reads public pages and the store's own inbox only. It never posts, re
 
 ### 1. Set the search terms
 
-Point listening at pain topics, not brand mentions; brand mentions tell you about the brand, pain topics tell you about the buyer [AVT-0019]. For each topic write 5 to 8 search phrases in the buyer's words: the problem, the fear ("is it safe", "waste of money"), the failed fix ("tried X", "nothing works") and the wish ("I wish there was"). In India, add Hinglish and the top regional language phrasing.
+Point listening at pain topics, not brand mentions; brand mentions tell you about the brand, pain topics tell you about the buyer [AVT-0019]. For each topic write 5 to 8 search phrases in the buyer's words: the problem, the fear ("is it safe", "waste of money"), the failed fix ("tried X", "nothing works") and the wish ("I wish there was"). Add phrasing in the languages your buyers use, including mixed-language slang where buyers write that way.
 
 ### 2. Sweep the sources (time-boxed)
 
@@ -58,7 +58,7 @@ Point listening at pain topics, not brand mentions; brand mentions tell you abou
 
 A timed session (half forums in the buyer's own problem phrasing, half reviews, pasting verbatim text) keeps it focused [AVT-0011]. Skip Quora for this job; answers skew to long tutorials [AVT-0006].
 
-In India, also read YouTube comments on Hindi and regional review videos and reviews on Indian marketplaces. In the US, Reddit, TikTok comments and Amazon reviews usually carry the most.
+Fit the sources to the market: in the US, UK, Canada and Australia, Reddit, TikTok comments and Amazon reviews usually carry the most; in other markets, add YouTube comments on review videos in the local language, local forums and the reviews on the marketplaces buyers there use (for example Zalando or bol in Europe, Mercado Libre in Latin America, Rakuten in Japan).
 
 ### 3. Log every quote
 
@@ -138,3 +138,7 @@ Write the monthly memo. Send product ideas to the client or product owner, ad id
 - ORG-0010: drop low-engagement high-view posts as likely boosted.
 
 What makes this skill ours: listening is aimed at buyer pain, not brand mentions; no idea passes without two independent sources; every quote is kept exact, linked and stripped of personal data; and product ideas carry a rough gross profit case instead of a vibe.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Add Hinglish and the top regional language phrasing to the search phrases. Read YouTube comments on Hindi and regional review videos, and reviews on Indian marketplaces such as Flipkart and Nykaa for the top rival products.

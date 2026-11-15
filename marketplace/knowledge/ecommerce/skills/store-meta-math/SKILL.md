@@ -13,7 +13,7 @@ Five lines every other Meta edition judges against: gross profit per purchase, b
 
 - Before any Meta audit, budget change or scaling call, so there is a break-even line to judge against.
 - Before a sale, a new bundle or a new discount code, because each offer has its own break-even.
-- When the store sells cash on delivery and Meta counts orders that are later refused at the door.
+- When Meta counts orders that later fail: parcels returned undelivered, refused at the door, or with payments that fail or are reversed.
 - When the owner asks how much more they can spend without running out of stock or cash.
 
 ## Not for
@@ -34,7 +34,7 @@ Required (read access, level 1, for everything in this skill):
 5. **Return rate** and return cost per returned order (return postage, handling, share of items that cannot be resold).
 6. **Total ad spend by month across all channels**, and Meta spend on its own.
 
-Required if the store offers cash on delivery: COD share of orders, return-to-origin (RTO) rate on COD orders, COD fee per order, and RTO shipping cost, from the courier or shipping aggregator export.
+Required if more than a few orders fail after they are placed: share of orders that fail (undelivered, refused, payment failed or reversed), by payment method, any fee for the payment method (for example a pay on delivery fee), and return shipping cost on failed parcels, from the courier, shipping app or payment provider export.
 
 Optional: stock per SKU, reorder lead time, cash set aside for ads, and payout timing.
 
@@ -70,13 +70,13 @@ Illustrative: return rate 10%, return postage and handling 7, 20% of returns uns
 
 Repack labour is a product cost; return postage is an overhead in the books but still counts here [FIN-0009].
 
-### 4. Cash on delivery and return to origin (where it applies)
+### 4. Failed deliveries and unpaid orders (where it applies)
 
-Meta records a Purchase when the order is placed, but an RTO order never pays. So the line that matters is gross profit **per placed order**, the same thing Meta counts. Practitioner default, test it against your courier data: work this out separately for prepaid and COD.
+Meta records a Purchase when the order is placed, but a failed order never pays. So the line that matters is gross profit **per placed order**, the same thing Meta counts. Practitioner default, test it against your courier and payment data: work this out separately for orders paid at checkout and orders paid later (pay on delivery, invoice), since the second group fails far more often.
 
-Loss per RTO order = forward shipping + RTO shipping + COD fee + packing + damaged share x landed cost.
+Loss per failed order = forward shipping + return shipping + payment method fee + packing + damaged share x landed cost.
 
-Illustrative, in rupees: delivered COD order profit 450; loss per RTO order 180; COD is 60% of orders with 25% RTO, so 15% of all placed orders come back. Gross profit per placed order = 0.85 x 450 minus 0.15 x 180 = **355.50**, about a fifth below the headline 450.
+Illustrative, in the store's own currency: delivered order profit 450; loss per failed order 180; paid-later orders are 60% of orders with 25% failing, so 15% of all placed orders come back. Gross profit per placed order = 0.85 x 450 minus 0.15 x 180 = **355.50**, about a fifth below the headline 450.
 
 ### 5. Break-even ROAS and break-even cost per purchase
 
@@ -122,7 +122,7 @@ Illustrative: 600 units, 100 safety stock, restock in 40 days gives 12.5 units a
 
 ### 10. Spend ceiling from cash
 
-Ads are paid now; order cash arrives after the gateway payout and, for COD, the courier remittance. Stock-and-loan funded growth can push profit to near zero [FIN-0011].
+Ads are paid now; order cash arrives after the gateway payout and, for pay on delivery, the courier remittance. Stock-and-loan funded growth can push profit to near zero [FIN-0011].
 
 Cash tied up = (daily ad spend + daily landed cost of units you must reorder) x days until order cash lands.
 
@@ -132,7 +132,7 @@ Slow C and D stock is the exception: it may run at break-even or a small loss to
 
 ## Checks before you hand it over
 
-- Gross profit per purchase includes product, inbound freight, fulfilment, payment fees and returns, and RTO where COD exists.
+- Gross profit per purchase includes product, inbound freight, fulfilment, payment fees and returns, and failed delivery losses where they exist.
 - Break-even ROAS uses the same value definition Meta receives.
 - Every discount or bundle in the plan has its own break-even line.
 - Target CAC states which rule set it (first order or 90 day) and why.
@@ -156,7 +156,7 @@ Slow C and D stock is the exception: it may run at break-even or a small loss to
 
 - **Product margin as gross margin.** A 70% "margin" can be 24% once delivered [MEA-0023]. Step 2 builds profit from the door back.
 - **Meta value and break-even on different bases.** Value with tax against profit without tax makes break-even look easy. Step 5 uses Meta's own value definition.
-- **Ignoring RTO.** COD orders that never pay still count in Meta. Step 4 measures profit per placed order.
+- **Ignoring failed orders.** Orders that never pay still count in Meta. Step 4 measures profit per placed order.
 - **Reading returns by refund date.** Returns from a strong month land later and fake a dip [MEA-0011]. The gate accrues them.
 - **Scaling on average CAC.** Step 8 checks the last sale, not the average.
 - **Daily ROAS panic.** Below about 1,000 a day, swings are normal; judge over 7 days or more [ADC-0064].
@@ -177,4 +177,8 @@ Slow C and D stock is the exception: it may run at break-even or a small loss to
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: builds gross profit per purchase from delivered costs, returns and COD return-to-origin losses instead of a single margin percent; splits first-order and 90-day targets and says which wins; adds marginal cost of extra sales; and sets daily spend ceilings from stock cover and cash timing.
+What this skill does that the open-source one did not: builds gross profit per purchase from delivered costs, returns and failed delivery losses instead of a single margin percent; splits first-order and 90-day targets and says which wins; adds marginal cost of extra sales; and sets daily spend ceilings from stock cover and cash timing.
+
+## Selling in India
+
+- COD and RTO are the big case for step 4. Split prepaid and COD, use the courier's RTO rate and COD fee, and work in rupees.

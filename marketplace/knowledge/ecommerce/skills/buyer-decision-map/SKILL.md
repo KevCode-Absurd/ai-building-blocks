@@ -96,6 +96,8 @@ One half-page each: name (their situation, in plain words), share of buyers, the
 
 For every ad with spend in the period, tag which buyer type it speaks to and which of the five slots it covers (names the trigger, shows the feeling, carries the proof, promises the result, answers a blocker). Use the same fields every time so results can be traced to one element [MCR-0051].
 
+While tagging, mark each ad's lead slot (the one the first line or first three seconds carry) and count how many of the four buying slots it covers: trigger, feeling, proof, result. Three common failures to name: all result and no trigger ("you'll love it", with no reason to care now), all proof and no feeling (stacked badges and stats with no pull), and a trigger with no result (names the pain, never closes the loop). As a starting rule to test, each ad should cover at least three of the four; cold audiences should be led by the trigger and the feeling, and retargeting by the proof and the result. If the proof slot is thin across every ad because the store has few reviews, tests or demonstrations, report it as a proof gap for `product-claims-profile` and `build-review-collection-system`, not a creative problem more ads can fix.
+
 ### 8. Check the gaps against results
 
 Join the tags to results, and judge at ad set level where ads share a set, because ad-level credit leans to the last click [ADC-0059]. For each buyer type and each slot, compare: share of buyers (step 5), share of ad spend, and store-side cost per purchase against break-even. Read Meta on 7-day click, not the 1-day view default, which can inflate results [MEA-0042]. Where Meta shows an incremental attribution column, sort by it too [ADC-0008].
@@ -110,9 +112,9 @@ For blockers, one ad per objection works for the bottom of the funnel [MCR-0043]
 
 Set a check that can prove the map wrong: one trigger-led ad and one proof-led ad for the top buyer type, each judged on store-side purchases at about three times target cost per purchase. Hook rate alone does not validate a trigger.
 
-### India and similar markets
+### Low-trust and chat-first markets
 
-Blockers often include trust in delivery, returns and whether cash on delivery is available; code them separately. A short survey sent on WhatsApp after delivery can reach COD buyers who never see the thank-you page, with their consent.
+Blockers often include trust in delivery, returns, duties on cross-border orders, and whether a trusted payment option (pay on delivery, buy now pay later, a local payment method) is available; code them separately. A short survey sent on WhatsApp or SMS after delivery can reach buyers who never see the thank-you page, with their consent.
 
 ## Checks before you hand it over
 
@@ -122,14 +124,15 @@ Blockers often include trust in delivery, returns and whether cash on delivery i
 4. Each gap shows buyer share, spend share and store-side cost per purchase against break-even.
 5. Gap results use store orders when gate 3 failed.
 6. False-winner ads are named with their CTR gap.
-7. No survey, interview invite or call went out without the owner's yes.
+7. Every tagged ad shows its lead slot and how many of the four buying slots it covers; a store-wide proof gap is reported as a proof problem, not a creative one.
+8. No survey, interview invite or call went out without the owner's yes.
 
 ## Output
 
 1. **One-screen summary first:** the buyer types with shares, the three biggest gaps ranked by money, and what to make next.
 2. **Buyer type briefs** (half a page each).
 3. **Codes table:** slot, code, count, share, source mix, best quote.
-4. **Ad tag table:** ad, buyer type, slots covered, spend, store-side purchases, cost per purchase, break-even, verdict.
+4. **Ad tag table:** ad, buyer type, lead slot, slots covered (of four), spend, store-side purchases, cost per purchase, break-even, verdict.
 5. **Gap table:** buyer type or slot, buyer share, spend share, cost per purchase on covering ads, money weight, recommended fill.
 6. **Survey and interview kit:** the questions, the invite text for the owner to approve.
 
@@ -138,6 +141,7 @@ Blockers often include trust in delivery, returns and whether cash on delivery i
 - **Personas from demographics.** Step 5 groups by trigger and situation.
 - **Diagnosing ads by opinion.** Step 8 checks every gap against spend and store-side results.
 - **Trusting high CTR.** Step 8 flags the click gap and purchase shortfall.
+- **Fixing a proof shortage with more ads.** Step 7 sends it to proof and review collection instead.
 - **One interview as a pattern.** Step 5 needs three sources and a share threshold.
 - **Leading interview questions.** Step 2 walks the purchase in order and bans "why did you buy?".
 - **Three interviews treated as truth.** Step 2 aims for about 20 and the survey checks the pattern.
@@ -161,3 +165,7 @@ Blockers often include trust in delivery, returns and whether cash on delivery i
 - [MCR-0043]: one bottom-funnel ad per objection.
 
 What makes this skill ours: every buyer type stands on counted survey, interview and review codes; the five slots are tagged on live ads and checked against store-side cost per purchase versus break-even, not opinion; false winners are caught by the click gap; and gaps are ranked by buyer share times gross profit per purchase.
+
+## Selling in India
+
+- Whether cash on delivery is available is often a blocker; code it on its own. A WhatsApp survey after delivery reaches COD buyers.

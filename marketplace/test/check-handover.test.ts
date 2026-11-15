@@ -1,4 +1,4 @@
-// tools/check-handover.mjs, the hand-over check every pack carries (WORK-METHOD.md, step 5): it fails on anything
+// tools/check-handover.mjs, the hand-over check every pack carries (METHOD.md, step 5): it fails on anything
 // internal or unfinished a reader would see, and on length far beyond a plain answer.
 import { test } from "node:test";
 import assert from "node:assert/strict";

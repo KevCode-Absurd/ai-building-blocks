@@ -94,7 +94,8 @@ const FILE_NAMES: Record<string, string> = {
   "README.md": "Read me first",
   "AGENTS.md": "Instructions for your AI",
   "CLAUDE.md": "Instructions for Claude Code",
-  "WORK-METHOD.md": "How every job is done",
+  "METHOD.md": "How every job is done",
+  "WORK-METHOD.md": "Where the method moved",
   "context/README.md": "What to capture about your business",
   "soul.md": "Personality",
   "personality.md": "How I talk and write",
@@ -270,7 +271,7 @@ export const CLAUDE_MARKETPLACE_NAME = "ai-blocks";
 export const LARGE_ONE_FILE = 300_000;
 
 /**
- * What the agent asks for first, so its first move is to ground the job in the person's real business (WORK-METHOD.md,
+ * What the agent asks for first, so its first move is to ground the job in the person's real business (METHOD.md,
  * step 1) rather than a generic hello. Tailored by the agent's area of work: a website, the numbers, the code or the
  * current document.
  */

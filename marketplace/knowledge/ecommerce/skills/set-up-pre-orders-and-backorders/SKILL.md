@@ -1,6 +1,6 @@
 ---
 name: set-up-pre-orders-and-backorders
-description: "Pre-order and backorder set-up for a store: which products may sell before stock lands, the unit cap per product, the ship date to promise, how payment is taken (full, deposit or at shipping), the wording on the product page, cart, confirmation and update messages, and the delay, cancel and refund rules, all matched to Shopify settings and US and India consumer rules. Use when stock is on the water, a launch is weeks away, a best seller is about to sell out, or past pre-orders caused angry buyers and refund requests."
+description: "Pre-order and backorder set-up for a store: which products may sell before stock lands, the unit cap per product, the ship date to promise, how payment is taken (full, deposit or at shipping), the wording on the product page, cart, confirmation and update messages, and the delay, cancel and refund rules, all matched to Shopify settings and the consumer rules of the markets the store sells to (US, UK, EU, Canada, Australia and others). Use when stock is on the water, a launch is weeks away, a best seller is about to sell out, or past pre-orders caused angry buyers and refund requests."
 ---
 
 # Pre-orders and backorders
@@ -58,7 +58,7 @@ Promised ship date = expected warehouse arrival + receiving days + pick and pack
 
 Buffer: 7 days for air, 14 days for sea or domestic factory runs, as a practitioner default. Show a specific date or week, padded so the store usually beats it; specific delivery dates lift conversion, and accuracy should stay above 90% [CXP-0010]. Lead times from overseas factories can run 20 to 30 days of production plus 30 to 40 days at sea [COG-0008]; never promise from the production date alone.
 
-US rule: a stated ship time needs a reasonable basis, and with no stated time the store must ship within 30 days [CXP-6160]. A pre-order without a stated date is a 30-day promise.
+Market rules: in the US, a stated ship time needs a reasonable basis, and with no stated time the store must ship within 30 days [CXP-6160]; a pre-order without a stated date is a 30-day promise. In the UK and EU, goods must arrive within 30 days unless a different date was agreed, so the pre-order date must be stated before purchase. Australia's consumer law and Canada's provincial rules also expect delivery by the date given. Check your market's rules before opening.
 
 ### 3. Set the cap
 
@@ -74,7 +74,7 @@ Defect allowance: the supplier's real rate, or 3% if unknown; one practitioner s
 | Date 30 to 90 days out | Deposit or no charge until shipping | Fewer refund requests while waiting |
 | Launch with uncertain quantity | No charge until shipping | Buyers can drop out without a refund |
 
-India notes: keep COD off for pre-orders by default; a buyer waiting weeks is more likely to refuse a COD parcel, and every refusal costs two-way shipping. Offer UPI or card prepaid instead. Ask the accountant when GST is due on advance payments and how the invoice is dated. US notes: charging in full at order is allowed, but delay and refund rules in step 7 then apply to money already taken.
+Payment notes: keep pay on delivery off for pre-orders by default where the store offers it; a buyer waiting weeks is more likely to refuse a parcel paid at the door, and every refusal costs two-way shipping. Offer card, wallet or local bank payment upfront instead. Ask the accountant when VAT or sales tax is due on deposits and advance payments (UK and EU VAT is often due when the payment is received) and how the invoice is dated. Charging in full at order is allowed in most markets, but delay and refund rules in step 7 then apply to money already taken; some card schemes also limit how far ahead of shipping a card can be charged.
 
 ### 5. Write the buyer-facing wording
 
@@ -97,9 +97,9 @@ Do not send cold ad traffic to a pre-order page unless the plan says so, and tel
 ### 7. Write the delay, cancel and refund rules
 
 - **Cancel any time before shipping** for a full refund, from a link in every message.
-- **If the date will slip:** tell buyers before the promised date passes, with a new date or the reason there is none, and the right to cancel. For US buyers, silence can count as agreement only for a first delay of 30 days or less; longer or open-ended delays need an automatic cancel if the buyer does not answer, and a second delay needs a fresh yes [CXP-6160].
-- **Refunds** within 7 working days for US buyers, in the original payment method, never as store credit unless the buyer chooses it; no different colour or size sent without the buyer's yes [OPS-6281].
-- **India:** state the cancellation and refund terms on the product page and policy page before purchase, and refund to the original method; check the store's obligations under the Consumer Protection (E-Commerce) Rules, 2020 with the client's adviser.
+- **If the date will slip:** tell buyers before the promised date passes, with a new date or the reason there is none, and the right to cancel. For US buyers, silence can count as agreement only for a first delay of 30 days or less; longer or open-ended delays need an automatic cancel if the buyer does not answer, and a second delay needs a fresh yes [CXP-6160]. In the UK and EU, if the agreed date passes, the buyer may set a new date or cancel and get a full refund.
+- **Refunds** within 7 working days for US buyers, and within 14 days of cancellation in the UK and EU, in the original payment method, never as store credit unless the buyer chooses it; no different colour or size sent without the buyer's yes [OPS-6281].
+- **All markets:** state the cancellation and refund terms on the product page and policy page before purchase, and refund to the original method; check the store's obligations under its market's consumer and e-commerce rules with the client's adviser. UK and EU buyers also keep their 14-day right to cancel after delivery.
 
 Hand the actual delay messages to `delay-and-stockout-customer-messages`.
 
@@ -113,9 +113,9 @@ Before the stock lands: count the pre-orders per SKU, print or queue labels, pla
 - The promised date is arrival + receiving + backlog + buffer, and matches on page, cart and confirmation.
 - The cap is set in the app or inventory and switches to waitlist when hit.
 - The payment method fits the store's provider and the date gap.
-- COD is off for pre-orders in India unless the client chose otherwise in writing.
+- Pay on delivery is off for pre-orders unless the client chose otherwise in writing.
 - Every message has a cancel link and the refund rule.
-- The delay rule meets the US notice rules for US buyers.
+- The delay rule meets the notice rules for each market (US 30-day rule, UK and EU agreed-date rule).
 - Nothing is switched on and no buyer is charged or messaged without the client's yes.
 
 ## Output
@@ -132,7 +132,7 @@ Before the stock lands: count the pre-orders per SKU, print or queue labels, pla
 | Promised ship date | |
 | Cap | Units, with the working |
 | Payment | Full, deposit (amount), at shipping |
-| COD | Off or on, with reason |
+| Pay on delivery | Off or on, with reason |
 | Platform setting | App or Continue selling, with exact setting |
 | Feed availability | Pre-order or backorder, date |
 
@@ -145,7 +145,7 @@ Before the stock lands: count the pre-orders per SKU, print or queue labels, pla
 - **Opening pre-orders on a supplier's quote.** Gate 1 requires confirmed production.
 - **Promising the factory's date.** Step 2 adds transit, receiving, backlog and a buffer.
 - **No cap.** Step 3 limits orders to units that will really arrive.
-- **COD on long pre-orders in India.** Step 4 keeps them prepaid.
+- **Pay on delivery on long pre-orders.** Step 4 keeps them paid upfront.
 - **Store credit instead of refunds.** Step 7 refunds to the original method.
 - **Silence after the order.** Step 5 sets three updates before tracking.
 
@@ -161,4 +161,8 @@ Before the stock lands: count the pre-orders per SKU, print or queue labels, pla
 - COG-0009: defect allowance on bulk orders.
 - ORG-0038: sell-outs only with a fast restock.
 
-What makes this skill ours: pre-orders open only on a confirmed purchase order; the cap is net of defects and units held for in-stock buyers; payment method follows the date gap and keeps COD off in India; and one promised date runs through page, cart, confirmation and updates, with US delay rules built in.
+What makes this skill ours: pre-orders open only on a confirmed purchase order; the cap is net of defects and units held for in-stock buyers; payment method follows the date gap and keeps pay on delivery off; and one promised date runs through page, cart, confirmation and updates, with US, UK and EU delay rules built in.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Keep COD off for pre-orders by default; a buyer waiting weeks is more likely to refuse a COD parcel, and every refusal costs two-way shipping. Offer UPI or card prepaid instead. Ask the accountant when GST is due on advance payments and how the invoice is dated. State the cancellation and refund terms on the product page and policy page before purchase, and check the store's obligations under the Consumer Protection (E-Commerce) Rules, 2020 with the client's adviser.

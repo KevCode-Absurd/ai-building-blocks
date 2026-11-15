@@ -12,7 +12,7 @@ description: "Opens one new country for a Shopify store and proves it works befo
 - The store has organic orders or real demand from one new country and wants to serve it properly.
 - International buyers complain about customs bills on delivery.
 - Foreign visitors abandon at checkout after seeing a currency or charge they did not expect.
-- An India store wants to sell to the US or UK, or a US store to Canada, the UK or India.
+- A store wants to sell from its home country into another: for example a US store into Canada, the UK or Australia, a UK store into the EU or US, or an EU store into the UK.
 
 ## Not for
 
@@ -40,7 +40,7 @@ Checking is level 1. Creating the market and its settings is level 2, built inac
 
 1. **Landed margin per order for that country is positive.** Gross profit = local price minus landed cost minus international shipping minus duties the store pays (if DDP) minus payment and currency fees minus a return allowance. Fail: no-go, or raise the local price and recheck.
 2. **Returns plan exists.** Pass when there is a local return address or a policy to refund without return under a value line. Fail: write it first (`set-up-returns-and-exchanges`).
-3. **Tax and duty obligations confirmed.** Some countries require the seller to register for VAT or GST before selling to consumers there; the accountant confirms. Fail: no-go until confirmed.
+3. **Tax and duty obligations confirmed.** Many countries require the seller to register for VAT or a similar sales tax before selling to consumers there (the EU's One Stop Shop and Import One Stop Shop schemes, UK VAT on parcels up to 135 pounds, Australia's and New Zealand's low-value import tax, US state sales tax once over a state's threshold); the accountant confirms. Fail: no-go until confirmed.
 4. **Cash.** International shipping and duties are paid up front; refunds take longer. The client confirms the cash for one month of expected orders.
 
 ## Steps
@@ -54,7 +54,7 @@ Checking is level 1. Creating the market and its settings is level 2, built inac
 
 Local currency shown on the product page but charged in the store's base currency at checkout confuses buyers. Without Shopify Payments, currency converter apps show local prices only up to the cart and checkout still charges the base currency [SET-0002]. On Shopify Payments, turn on local currency for the market. Otherwise, either sell in the base currency openly or use a gateway that settles in the local currency.
 
-Set rounding to local price endings (for example .99 in the US and UK, whole rupees in India).
+Set rounding to local price endings (for example .99 in the US and UK, .95 or whole euros in parts of the EU, whole yen in Japan).
 
 ### 3. Prices
 
@@ -75,7 +75,7 @@ Create the market's shipping zone with real courier rates and a promise from tra
 
 ### 6. Payments
 
-Turn on the methods buyers there use, which the payment settings list by country. Accelerated checkouts help mobile buyers [SET-0008]. India to abroad: confirm the gateway supports international cards and the settlement currency; COD does not apply. Abroad to India: offer UPI and COD through the India gateway.
+Turn on the methods buyers there use, which the payment settings list by country. Accelerated checkouts help mobile buyers [SET-0008]. Check the local favourites: for example iDEAL in the Netherlands, Bancontact in Belgium, BLIK in Poland, Klarna and other buy now, pay later options in the Nordics, Germany and the UK, Interac in Canada, Afterpay in Australia, Pix in Brazil. Confirm the gateway supports cards from that country and the settlement currency. Pay on delivery rarely works cross-border; offer it only where a local partner collects and remits the cash.
 
 ### 7. Language and pages
 
@@ -133,3 +133,7 @@ Weekly: orders, conversion rate and gross profit per order for the market agains
 - LPG-0063: keep checkout add-ons under about 10% of order value.
 
 What makes this skill ours: a country opens only if landed gross profit per order there is positive after duties, fees and returns; local prices come from that margin rather than a currency converter; duties are collected or clearly disclosed; and the market stays inactive until three test orders from that country pass.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. An India store selling abroad: confirm the gateway supports international cards and the settlement currency; COD does not apply, and export paperwork and GST rules for exports go to the accountant. A store abroad selling into India: offer UPI and COD through an India gateway, round prices to whole rupees, and show prices inclusive of GST.

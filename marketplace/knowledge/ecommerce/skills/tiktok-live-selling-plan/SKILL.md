@@ -1,6 +1,6 @@
 ---
 name: tiktok-live-selling-plan
-description: "A complete live selling plan for one show or a weekly series: products and stock per show, live-only offers checked against profit, a minute-by-minute run of show, the host script with demo, proof, offer and recap loops, disclosure lines, a promotion schedule, staffing roles and a post-show readout. Written for TikTok Shop LIVE, with India notes for Instagram Live and YouTube live. Use before a first live show, when lives draw viewers but few orders, or when a sale or launch should run live."
+description: "A complete live selling plan for one show or a weekly series: products and stock per show, live-only offers checked against profit, a minute-by-minute run of show, the host script with demo, proof, offer and recap loops, disclosure lines, a promotion schedule, staffing roles and a post-show readout. Written for TikTok Shop LIVE, with notes for Instagram Live and YouTube live where TikTok Shop is not open. Use before a first live show, when lives draw viewers but few orders, or when a sale or launch should run live."
 ---
 
 # TikTok LIVE selling plan
@@ -104,10 +104,10 @@ Stable internet, phone on a tripod at eye level, light facing the host, clean ba
 
 Peak concurrent viewers, average watch time, orders, revenue, profit after costs, conversion per product, top 5 questions asked, what to fix. Clip the best 3 moments into short videos with the host's rights in place.
 
-### 9. India and US notes
+### 9. Platform and market notes
 
-- **India:** TikTok is not available in India. Run the same plan on Instagram Live or YouTube live. Instagram lets the brand send a private reply to a comment only during the live broadcast [ORG-6364]. Tagging the store's products in YouTube lives needs the YouTube Partner Program [ORG-6403]. Offer prepaid deals; say plainly whether COD is open for live orders. Host in Hindi or the buyers' regional language where that is how they shop.
-- **US:** live giveaways may fall under state sweepstakes rules; keep "no purchase necessary" routes if prizes are big, and check with counsel.
+- **Where TikTok Shop is not open:** TikTok Shop runs only in some countries, and TikTok itself is blocked in a few. Run the same plan on Instagram Live or YouTube live. Instagram lets the brand send a private reply to a comment only during the live broadcast [ORG-6364]. Tagging the store's products in YouTube lives needs the YouTube Partner Program [ORG-6403]. Say plainly which payment options are open for live orders (cards, wallets, buy now pay later, pay on delivery where offered). Host in the languages your buyers use where that is how they shop.
+- **Giveaways:** prize rules vary by market. In the US, live giveaways may fall under state sweepstakes rules; the UK and many EU countries have their own prize draw rules. Keep "no purchase necessary" routes if prizes are big, and check with counsel.
 
 ## Checks before you hand it over
 
@@ -146,8 +146,8 @@ Peak concurrent viewers, average watch time, orders, revenue, profit after costs
 
 ## Sources
 
-- ADC-6147: ASCI treats false urgency and false scarcity as misleading.
-- ORG-6420: ASCI live-stream labels at start and end.
+- ADC-6147: an advertising standards code treats false urgency and false scarcity as misleading; consumer rules in most markets (FTC in the US, CMA and ASA in the UK, EU consumer law) take the same line.
+- ORG-6420: an advertising standards code asks for live-stream labels at start and end.
 - ORG-6405: FTC: repeat disclosure in live streams.
 - ORG-0005: short frequent shows beat long ones for new sellers.
 - ORG-0007: big-value anchors need 300 to 500 viewers at once.
@@ -156,4 +156,11 @@ Peak concurrent viewers, average watch time, orders, revenue, profit after costs
 - ORG-6364: Instagram private replies on Live only during the broadcast.
 - ORG-6403: YouTube product tagging needs the Partner Program.
 
-What makes this skill ours: every live offer is checked for profit at the live price before the show; anchors and giveaways come with their break-even and crowd-size conditions; disclosure lines are written into the script at start, end and every recap; and Indian stores get the same plan on Instagram Live and YouTube with COD and language notes.
+What makes this skill ours: every live offer is checked for profit at the live price before the show; anchors and giveaways come with their break-even and crowd-size conditions; disclosure lines are written into the script at start, end and every recap; and stores where TikTok Shop is not open get the same plan on Instagram Live and YouTube with payment and language notes.
+
+## Selling in India
+
+- TikTok is not available in India. Run the plan on Instagram Live or YouTube live.
+- Offer prepaid deals and say plainly whether COD is open for live orders.
+- Host in Hindi or the buyers' regional language where that is how they shop.
+- The Advertising Standards Council of India (ASCI) treats false urgency and false scarcity as misleading [ADC-6147] and asks for live-stream labels at start and end [ORG-6420].

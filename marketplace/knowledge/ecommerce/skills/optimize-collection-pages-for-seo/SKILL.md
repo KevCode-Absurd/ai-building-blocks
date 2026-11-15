@@ -52,7 +52,7 @@ Rank by: gross profit per order x organic impressions, then favour collections a
 
 One practitioner's Shopify pattern [SEO-0005], a practitioner default to test:
 
-- **SEO title:** primary keyword first, under 60 characters, then a buyer reason and the brand ("Linen Shirts for Men | Free Returns | Store"). India: add "Online" or "COD Available" only if true for every product.
+- **SEO title:** primary keyword first, under 60 characters, then a buyer reason and the brand ("Linen Shirts for Men | Free Returns | Store"). Add "Online", "Free Returns" or a payment option only if true for every product.
 - **H1:** the keyword as buyers say it, nothing else. One H1 per page; check the theme does not also wrap the logo or a banner in an H1.
 - **Meta description:** 140 to 155 characters, what the range covers, one proof point that is true (range size, delivery promise, return window), no claims you cannot back.
 - **Handle:** short, the keyword, hyphens. Change an existing handle only if it is meaningless; Shopify offers a redirect checkbox when you edit it, and it must stay ticked. Record old and new in the redirect list.
@@ -64,6 +64,10 @@ One practitioner's Shopify pattern [SEO-0005], a practitioner default to test:
 - Visitors from search are already looking to buy; social proof near the top serves them better than education [LPG-0050]. A line with the real review count and rating, from the review app, fits under the intro.
 - Write each collection's copy fresh. The same paragraph across 20 collections reads as filler and helps none of them.
 - Answers must be in the page HTML, not loaded later by an app; content injected after load is often invisible to AI crawlers [AEO-0002]. Test by turning off JavaScript and reloading.
+- **Splitting Shopify's one description field.** Shopify gives a collection one description, so the short intro and the long guide need a theme change: either a marker in the HTML view that the collection template splits on (text before it shows above the grid, text after it below), or a short intro with a read-more block. The client edits a duplicate theme first and checks on a phone before publishing.
+- **Links inside the guide.** 3 to 5 internal links to sibling collections, the parent and buying guides, each with 2 to 4 word link text that names the page it goes to ("linen care guide", not "click here").
+- **Featured reviews without a widget.** Pick three real reviews that mention the collection's keyword or use case, and place them as plain text in the guide or a metafield. A review widget only to show three quotes slows the page. Never change a review's meaning.
+- **FAQ questions from real searches.** Take the 3 to 5 questions from People Also Ask for the keyword and from support tickets, answered from the product facts.
 
 ### 4. Decide filters versus sub-collections
 
@@ -76,6 +80,8 @@ Shopify's default robots.txt blocks tag-filtered (with a plus sign) and sorted c
 | Not searched | Filter only |
 
 Do not mass-produce near-identical collections for every colour and size; pages built only to catch similar searches are doorway pages under Google's spam policies [SEO-6461].
+
+**Finding new collections in the best-selling range.** The same products can be framed for different searches: by buyer (men's, kids'), style (oversized), material, use (running, travel) or price band (under $50). For each framing, build a collection only when the term shows buying intent, collection pages already rank for it, big brands do not hold the whole top five, and keyword difficulty sits under about 35 (lower for a new site; one founder's rule of thumb to test). Reuse existing products; only the framing changes. Ship new collections in batches of 5 to 10 and check indexing and impressions in Search Console before the next batch.
 
 ### 5. Link the page into the store
 
@@ -92,8 +98,9 @@ Do not mass-produce near-identical collections for every colour and size; pages 
 
 ### 7. Market notes
 
-- **India:** if the store sells in Hindi or regional languages, each translated collection needs its own translated title, H1 and copy, not English copy under a translated menu. Price bands in guides use rupees with GST included.
+- **Every market:** if the store sells in the languages your buyers use beyond English, each translated collection needs its own translated title, H1 and copy, not English copy under a translated menu, plus hreflang tags so each country sees its own version. Price bands in guides use the store's own currency, with tax shown the way local buyers expect.
 - **US:** state shipping and return terms only as written in the store's policy pages.
+- **UK, EU and Australia:** price bands in guides include VAT or goods and services tax; do not claim "free returns" beyond what the policy gives.
 
 ### 8. Ship and measure
 
@@ -107,6 +114,8 @@ Hand the sheet for approval; the client publishes. After publishing, request ind
 - No two collections share copy; every claim has a source.
 - Each filter value has a decision from the table, with the reason.
 - Every changed handle is in the redirect list.
+- Each guide has 3 to 5 internal links with descriptive link text; featured reviews are real, unedited and placed without a widget.
+- Every new collection framing passed the intent, ranking and difficulty test, and new pages ship in batches of 5 to 10.
 - Product grid links point to /products/ URLs, and breadcrumbs still work.
 - Nothing was published without the client's yes.
 
@@ -131,6 +140,8 @@ Hand the sheet for approval; the client publishes. After publishing, request ind
 - **Changing handles casually.** Step 2 changes them only with a redirect and a yes.
 - **Duplicate product paths.** Step 5 fixes grid links at the source.
 - **Judging after a week.** Step 8 waits 8 weeks.
+- **One broad collection for a whole range.** Step 4 frames the same products for buyer, style, use and price searches, in tested batches.
+- **A widget for three quotes.** Step 3 places featured reviews as plain text.
 
 ## Sources
 
@@ -146,3 +157,7 @@ Hand the sheet for approval; the client publishes. After publishing, request ind
 - SEO-6464: redirects and rel canonical as canonical signals.
 
 What makes this skill ours: collections are worked in order of gross profit and near-win position; filters become indexable collections only when search, stock and margin all agree; copy is checked to be in the page HTML for AI crawlers; and handle changes always carry a redirect and a client yes.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. If the store sells in Hindi or regional languages, each translated collection needs its own title, H1 and copy. Add "COD Available" to SEO titles only if true for every product. Price bands use rupees with GST included.

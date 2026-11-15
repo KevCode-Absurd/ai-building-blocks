@@ -101,10 +101,10 @@ Run the same lab tests (median of 3) on the published theme and compare with Ste
 
 Add a rule to the store's notes: every new app gets an owner, a purpose, a 30-day review date and a speed check before and after install. Review the inventory every quarter.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** COD verification, pincode checker, WhatsApp chat and one-click checkout apps often each load scripts on every page; keep the ones that earn, limit them to product, cart and checkout-related pages, and check they do not duplicate one another.
-- **US:** consent banners, accessibility overlays and several review or loyalty widgets are common; check whether the theme or one app can cover what three apps do now. Keep any consent tool the store's privacy obligations need.
+- **Every market:** payment and delivery apps (delivery date and address checkers, order verification, buy now pay later badges, WhatsApp or live chat, one-click checkout) often each load scripts on every page; keep the ones that earn, limit them to product, cart and checkout-related pages, and check they do not duplicate one another.
+- **US, UK, EU and beyond:** consent banners, accessibility overlays and several review or loyalty widgets are common; check whether the theme or one app can cover what three apps do now. Keep any consent tool the store's privacy obligations need (in the UK and EU, a cookie consent tool is usually required).
 
 ## Checks before you hand it over
 
@@ -149,3 +149,7 @@ Add a rule to the store's notes: every new app gets an owner, a purpose, a 30-da
 - SPD-6183: Core Web Vitals thresholds at the 75th percentile.
 
 What makes this skill ours: each app's speed cost is measured by blocking its domains and re-running the lab test, not guessed from its reputation; app revenue claims are checked with a holdout or off week; data exports, a theme copy, a full flow test and a 14-day rollback come before any uninstall; and leftover code from apps removed years ago is hunted down file by file.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. COD verification, pincode checker, WhatsApp chat and one-click checkout apps often each load scripts on every page; keep the ones that earn and limit them to product, cart and checkout pages.

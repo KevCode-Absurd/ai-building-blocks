@@ -46,7 +46,7 @@ Access: level 1 for the review. Pausing, budget changes and new ads need a clien
 
 ## Steps
 
-Follow the house rules, chiefly **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Read the plan card's brand brain (winning segment, proven style) before step 1. When a call is new, run `node tools/ask-knowledge.mjs` for it and note the card in `context/trace.md`. Review days are counted from today.
+Follow the house rules, chiefly **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Read the plan card's org context (winning segment, proven style) before step 1. When a call is new, run `node tools/ask-knowledge.mjs` for it and note the card in `context/trace.md`. Review days are counted from today.
 
 ### 1. Tracking and breakages (5 minutes)
 
@@ -105,7 +105,20 @@ Apply each ad set's one rule from the plan card, read on store numbers, never pl
 
 ### 8. Hand over
 
-Send the client a five-line note: store numbers, breakages (or "none"), changes proposed, changes made inside agreed limits, and the next review day. India and cash-on-delivery stores add one line: return-to-origin rate on orders delivered yesterday; a jump is flagged, never acted on in one day.
+Send the client a five-line note: store numbers, breakages (or "none"), changes proposed, changes made inside agreed limits, and the next review day. Stores with pay on delivery or high returns add one line: failed-delivery or return rate on orders due yesterday; a jump is flagged, never acted on in one day.
+
+### 9. Record each proposed change so it can be judged
+
+Before proposing any change to a running campaign, find where a weak total comes from: campaign, then ad set, then ad. Do not pause a whole ad set for one weak ad, and never switch off weak ads in an ad set that is hitting target [ADC-0009].
+
+Use five marks on the ad table, so "no change" has a reason:
+- **Hold** (same as today).
+- **Gather more evidence**: spent under 3 times target, under 3 purchases, or run fewer days than the store's usual buying delay. Give the date to look again.
+- **Investigate**: spend jumped, purchases stopped, or tracking looks broken; tracking goes to `ad-early-warning-watch` first.
+- **Creative refresh**: clicks and cost weakening while offer, page and price are unchanged and frequency is high. Write a replacement brief (hook, angle, proof, format) instead of re-cutting audiences.
+- **Proposed pause**: past the owner's spend limit with 0 or 1 purchases, or above break-even over enough data.
+
+For each proposed change record: the evidence, the setting before, the setting after, the metric that will judge it, the read window, the review date, the undo step, the money at risk and the owner. Note any other change made in the same window, so a result is not blamed on or credited to the wrong edit. One change per ad set per read window.
 
 ## Checks before you hand it over
 
@@ -116,6 +129,8 @@ Send the client a five-line note: store numbers, breakages (or "none"), changes 
 - Pacing is read against the whole budget; no budget was raised.
 - Every verdict label matches its budget change; no ad inside a winning ad set was paused.
 - Every decision, "no change" included, has a log row with a prediction and review day.
+- Every proposed change has a before setting, an undo step and a review date.
+- Other changes in the same window are listed beside each result.
 
 ## Output
 
@@ -135,6 +150,7 @@ Send the client a five-line note: store numbers, breakages (or "none"), changes 
 - **Calling the last Google days a drop.** Step 5 uses conversion-time columns [MEA-0051].
 - **Raising budgets daily.** Step 6 flags Scale for the weekly check.
 - **A log with no predictions.** Step 7 refuses calls that cannot be graded.
+- **Pausing an ad set for one bad ad.** Find the level the weakness comes from first.
 
 ## Sources
 

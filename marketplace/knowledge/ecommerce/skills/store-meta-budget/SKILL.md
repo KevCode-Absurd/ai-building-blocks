@@ -47,7 +47,7 @@ Access: level 1 to analyse and plan. Level 2 to draft edits as unpublished chang
 
 ## Steps
 
-Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision below, and log each query, the card ids and the call in `context/trace.md`. Every figure goes in `context/numbers.json`. Use days relative to the start; a calendar date only when the brief gives one.
+Follow the house rules, chiefly **Org context first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the org context (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision below, and log each query, the card ids and the call in `context/trace.md`. Every figure goes in `context/numbers.json`. Use days relative to the start; a calendar date only when the brief gives one.
 
 ### 1. Tracking
 
@@ -76,7 +76,7 @@ Follow the house rules, chiefly **Brand brain first**, **Map every signal to an 
 - Rank past ads by format (video, static, carousel, creator, founder) and by angle or hook, on store-basis cost at meaningful spend. The cheapest format and angle at scale is the proven style.
 - At least half of all new creative is in the proven style. When one concept carries most spend, shift output toward it rather than starving it [ADC-0061].
 - Volume to feed the budget: new ads needed each week = weekly spend on new ads / (3 x target cost per purchase), because each needs about that much to be judged [ADC-0039]. Name that number.
-- Messaging comes from the brand brain: the customers' own words, the top objection answered, one message per winning segment. No style the owner called tired. Hand the briefs to `store-meta-concepts`.
+- Messaging comes from the org context: the customers' own words, the top objection answered, one message per winning segment. No style the owner called tired. Hand the briefs to `store-meta-concepts`.
 
 ### 5. Budget
 
@@ -111,6 +111,22 @@ One rule per ad set, in one line, read on store numbers, never on Meta's reporte
 - Add a test or holdout only when the brief asks or tracking cannot answer the question.
 - Where cash-on-delivery refusals cost a lot, show profit per prepaid and per cash order and name the checkout lever that hides cash on delivery above an order value [SET-6187].
 
+### 9. Three scenarios, concentration and structure traps
+
+When the owner asks "what if we move money around?", show three plans that each add up to the same total:
+
+- **Freed money first.** Freed budget = Trim cuts + Cut ad sets. It goes first to Scale ad sets, then to new concept tests, never to Hold ad sets without a written reason.
+- **Trim size.** A starting point for a Trim: new budget = current budget x (store-basis target cost / current store-basis cost), so the ad set is funded at the rate it earns.
+- **Three plans.** Conservative puts 50% of the freed money into Scale ad sets, moderate 75% (the default), aggressive 100%. Haircut the projected sales of each extra step by 10 to 20%, because the last sales cost more than the average [ADC-0049]. Projected gains are ceilings, not promises.
+- **Concentration.** No single campaign above about 60% of the period's budget unless it is the only campaign; under budget optimisation about 4% of ads can take about 64% of spend, which is efficient but fragile [ADC-6215]. Say so when one ad takes over half of an ad set's spend, and make sure a replacement concept is in the pipeline.
+- **Revert rule.** If store-basis cost per purchase worsens by more than 30% within 48 hours of a raise, go back to the previous budget; otherwise no edit for 72 hours after a raise.
+
+Structure traps to check before a budget move:
+- **Avoid budget optimisation at very high order value with few orders.** Around 5 orders a day on a big-ticket product, Meta allocates on clicks and hold rate, which barely track return; use ad set budgets [ADC-6183] [ADC-6252].
+- **Do not split out a placement, age band or region because its breakdown ROAS looks higher.** Meta spends on marginal return, so that slice usually has no room to grow; spreading spend to lower-ROAS ads is usually right [ADC-6233].
+- **Budget optimisation or ad set budgets is a risk choice.** Many buyers rotate into budget optimisation for the November and December peak, then back to ad set budgets in the new year to force spend through tests [ADC-6208] [ADC-6188].
+- **No bid strategy testing below about 200,000 a month** of Meta spend; the hour is worth more on creative [ADC-6230] [ADC-6200].
+
 ## Checks before you hand it over
 
 - Tracking: each ad set's gap comes from the brief or store orders, never a midpoint.
@@ -120,6 +136,8 @@ One rule per ad set, in one line, read on store numbers, never on Meta's reporte
 - The whole budget is planned, rows add up, any reserve is 15% or less with a release rule.
 - Every verdict label matches its number; every ad set has one rule on store numbers.
 - `numbers.cjs` shows no FAIL; each decision reads in two plain lines.
+- Each scenario adds to the same total budget, and freed money is placed before new money.
+- No campaign tops about 60% of budget without a stated reason.
 
 ## Output
 
@@ -145,6 +163,8 @@ One rule per ad set, in one line, read on store numbers, never on Meta's reporte
 - **Too little creative in the style that works.** Step 4 sizes weekly volume to the budget.
 - **Parking budget in a big reserve.** Step 5 caps it at 15% with a release rule.
 - **A Cut label on an ad set that still spends.** Step 6 ties labels to numbers.
+- **Splitting a placement or age band off a breakdown report.** Its high ROAS rarely survives more spend [ADC-6233].
+- **Budget optimisation on a big-ticket product with a handful of orders a day.** It optimises on clicks, not return [ADC-6183].
 
 ## Sources
 
@@ -168,5 +188,13 @@ One rule per ad set, in one line, read on store numbers, never on Meta's reporte
 - MEA-0006: event_id dedup.
 - SET-6187: Shopify can hide payment methods at checkout.
 - Meta documentation: learning phase of about 50 optimisation events in 7 days.
+- ADC-6183: avoid budget optimisation at high order value and few orders.
+- ADC-6188: budget optimisation versus ad set budgets is a risk choice.
+- ADC-6200: bid strategy testing only at large spend.
+- ADC-6208: rotate into budget optimisation for Q4.
+- ADC-6215: 4% of ads hold about 64% of spend.
+- ADC-6230: daily tweaks add little.
+- ADC-6233: do not split off a breakdown slice.
+- ADC-6252: high order value, few purchases.
 
 What this skill adds: every call on store numbers, past winners relaunched before anything new, segments ranked on the data instead of guessed floors, creative volume sized to the budget, and a whole-budget plan with labels that match their numbers.

@@ -43,9 +43,10 @@ Missing input: ask once. With no true story, do not invent one or a persona. Off
 
 1. **Truth gate.** Every person, event, quote, number and result is real and documented. No composite or invented narrator, no stock photo passed off as the person, no expert who has not agreed. Fail: stop; get a real story.
 2. **Consent gate.** Written consent from every named person, kept on file.
-3. **Labelling gate.** "Advertisement" or "Sponsored by [brand]" shows at the top in plain words. No fake news mastheads, publication names or comment sections. The FTC's native advertising guidance (US), the CAP Code (UK) and ASCI guidelines (India) all require ads to be recognisable as ads, and ad platforms reject misleading landing pages; check the current text for the market.
+3. **Labelling gate.** "Advertisement" or "Sponsored by [brand]" shows at the top in plain words. No fake news mastheads, publication names or comment sections. The FTC's native advertising guidance (US), the CAP Code (UK), the EU Unfair Commercial Practices Directive and most national ad codes all require ads to be recognisable as ads, and ad platforms reject misleading landing pages; check the current text for the market.
 4. **Typical-results gate.** If the story's result is better than most buyers get, say what typical buyers get, or pick a more typical story.
 5. **Money gate.** Gross profit per purchase known, so the page is judged on profit per visit.
+6. **Readiness gate.** The ad that will send traffic has proved four things at break-even or better (cost per purchase at or under gross profit per purchase): who it speaks to, the problem and desire, the angle, and the mechanism [LPG-0030]. One operator's default, test it: about $1,000 of spend before calling a variable proved; an ad under that is "too early". Score 25 points for each variable proved on the best ad. Build at 75 or more and name any unproved variable as a risk for the page. Below 75, or with no converting ad, test the message on a plain product page first; it is cheaper.
 
 ## Steps
 
@@ -58,7 +59,9 @@ Missing input: ask once. With no true story, do not invent one or a persona. Off
 | Needs permission or expertise | A real expert explains what they see and recommend |
 | Too many options | A buyer's guide comparing honest choices |
 
-Choosing by obstacle follows [LPG-0003]. Commit to one editorial identity for the whole page; a sales letter wearing a news headline converts as neither [LPG-0044].
+Choosing by obstacle follows [LPG-0003]. Commit to one editorial identity for the whole page; a sales letter wearing a news headline converts as neither [LPG-0044]. Pick it from: discovery, expert breakdown, underdog against a big industry, warning, insider, origin story, "I tested them all", or relatable person. A warning warns about one real thing; scarcity appears only when it is real.
+
+Write for one reader: their age, their situation and how long they have had the problem. The same person and the same promise run from the ad, to the headline, to the first image.
 
 ### 2. Find the story's spine
 
@@ -67,6 +70,8 @@ From the interview, in the person's own words: the moment the problem was worst 
 Name failed fixes by category by default ("three different shampoos", "a gym membership"). Name a real product only for a factual, fair statement the person made; comparative claims about named rivals carry legal risk.
 
 If the product works on a cause others miss, name it and map each product feature to it, or the page reads as a scam [LPG-0028]. List the 4 to 6 beliefs a reader must hold before buying ("the problem has a cause", "past fixes missed it", "this works on it", "the risk is low"), and check the draft earns each [LPG-0057].
+
+Before writing, list 3 to 5 core pains and 3 to 5 core desires from the reviews. Repeat those same ones through the page in different forms (the story, the callouts, the close) and add no new pain late. Write the after-state first, then spend most of the words on the before-state. For each failed fix, note what it cost in money or time; the cost is what makes staying put feel worse than trying. The named mechanism must match the real cause one to one.
 
 ### 3. Write it in order
 
@@ -88,22 +93,28 @@ Where cards differ on what opens (some structures open on pain [LPG-0025]), curi
 
 Length follows the ad: an ad that barely sells needs a longer lead before the product appears, about half the page; a long-copy ad that already sold the idea needs a short one [LPG-0029]. Practitioner default, test it: 1,200 to 2,000 words.
 
+Place the ad on this line, from least to most selling: a curiosity image with little text, a short video, a 1 to 2 minute customer-style video, a 4 to 5 minute video sales letter, a 1,000 to 3,000 word story ad. The further left, the longer the lead and the later the product appears. Draft in sections, since a long page written in one go gets cut short, and write ten alternative headlines once the body is done.
+
 ### 4. Edit for flow
 
 - Short sentences, plain words; advertorial copy works at a low reading level [LPG-0047].
 - Mark every sentence where the story stops and the pitch starts; each is a likely exit; rewrite it inside the story [LPG-0012].
 - Buttons: soft wording ("See if it is right for you", "Check today's offer"), at least two, the first after the product is introduced, plus the close [LPG-0011]. A sticky button appears only after the product is introduced, never during the problem [LPG-0013]. A small "skip to the offer" text link near the top is fine for returning visitors.
 - Any deadline or scarcity must be true.
+- Keep the balance at about 70% useful story and information and 30% pitch (practitioner default, test it).
+- About four buttons in all: after the hook, after the mechanism, after the proof, and after the objections and guarantee, each with one line above telling the reader to click, and an honest author line under the first.
 
 ### 5. Build the page
 
 One HTML file with inline CSS, brand colours and fonts as variables in one place, an article layout that still shows the label and brand name, simple line icons, and real photos with consent. No scroll animations that keep text hidden until it moves. Images in WebP under about 200 KB; first image eager [SPD-0002] [SPD-0006]. Optional Shopify page template on a duplicate theme.
 
-India and similar markets (practitioner default, test it): cash on delivery and delivery time near the buttons, written in the language of the ad.
+Markets where trust in delivery is low (practitioner default, test it): payment options such as pay on delivery, the returns promise and delivery time near the buttons, written in the language of the ad.
 
 ### 6. Check against proof and rules
 
 Line by line: each claim, number, quote and result has a source on file; health and beauty claims follow the ad and legal rules; the typical-results line is present where needed; mobile speed meets Core Web Vitals good levels (LCP 2.5 s or less, CLS 0.1 or less).
+
+Score the draft before the client reads it: eight checks worth 12.5 points each. One reader named in the opening; story flow (no pitch breaks left); before-state longer than after-state; a mechanism that matches the cause; every necessary belief moved somewhere; objections answered inside the story, one testimonial each; buttons as in step 4; images that show what the paragraph above says. Full points for a pass, 6 for part, 0 for a fail; story flow scores 0 if the pitch starts before the product is introduced. Show the sum. Honesty (the label, no fake masthead, byline, expert, review or urgency, the typical-results line) sits outside the score: any fail there blocks publishing, whatever the score.
 
 ### 7. Revise
 
@@ -111,7 +122,7 @@ Up to two rounds after the client reads the draft; after that, change only what 
 
 ### 8. Plan the test
 
-The ad starts the story and the page continues it; advertorials beat product pages for cold traffic only when the two match [LPG-0026]. Run the same ad to the advertorial and to the product page; judge on gross profit per session. Watch the click-on rate to the product page or checkout (30 to 40% is one practitioner benchmark [LPG-0002]). Size it with `store-meta-test`.
+The ad starts the story and the page continues it; advertorials beat product pages for cold traffic only when the two match [LPG-0026]. Run the same ad to the advertorial and to the product page; judge on gross profit per session. Watch the click-on rate to the product page or checkout (30 to 40% is one practitioner benchmark [LPG-0002]). Size it with `store-meta-test`. Once it runs, test in this order: format first, then the headline, then where the first proof block sits, then the offer or claim. Test button style only with thousands of visitors a day.
 
 ## Checks before you hand it over
 
@@ -120,6 +131,9 @@ The ad starts the story and the page continues it; advertorials beat product pag
 - Every claim and number has a source; atypical results carry a typical-results line.
 - Named rival products appear only in factual, fair statements.
 - One editorial identity; pitch breaks marked and rewritten.
+- The readiness gate scored 75 or more, with any unproved variable named.
+- One named reader runs from ad to headline to first image; no new pain appears late.
+- The draft score is shown with its working; the honesty line is reported on its own.
 - Offer matches checkout; the page passes the speed levels.
 - The test against the product page is planned with a profit metric. Nothing is published without the client's yes.
 
@@ -131,6 +145,8 @@ The ad starts the story and the page continues it; advertorials beat product pag
 
 **Table "Beliefs":** Belief, Section that earns it, Proof used.
 
+**Readiness and draft score:** the four variables with the ad, spend and status for each, the readiness score, then the eight draft checks with marks and the sum, and the honesty line.
+
 ## Common mistakes
 
 - **Inventing a narrator or expert.** The truth gate stops it.
@@ -139,6 +155,8 @@ The ad starts the story and the page continues it; advertorials beat product pag
 - **Repeating the failed fixes in every section.** They live in one section.
 - **Pitching too early** [LPG-0012].
 - **A page that does not match the ad** [LPG-0026].
+- **Building the page before the angle sold.** The readiness gate checks the ad first [LPG-0030].
+- **A new pain near the end.** Step 2 fixes 3 to 5 pains and repeats only those.
 
 ## Sources
 
@@ -154,3 +172,7 @@ The ad starts the story and the page continues it; advertorials beat product pag
 - SPD-0002, SPD-0006: image weight and loading.
 
 What makes this skill ours: only true, consented tellers, with no personas or composites; a plain advertising label and a typical-results rule are gates; an honest "who it is not for" section and fair handling of named rivals; card conflicts on the opening settled in favour of curiosity over shared pain; and the page is judged against the product page on gross profit per session.
+
+## Selling in India
+
+- ASCI guidelines also require ads to be recognisable as ads. Put cash on delivery and delivery time near the buttons.

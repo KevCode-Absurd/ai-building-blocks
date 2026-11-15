@@ -92,7 +92,7 @@ Percentages are a practitioner default, test them. Two rules come from evidence:
 - Headline 5 to 8 words where possible; past 12 words it reads poorly [ORG-0016].
 - Contrast at least 4.5 to 1 for small text and 3 to 1 for large text (WCAG). Check with any free contrast checker.
 - A discount shows as whichever number is bigger, money saved or percent off [OFF-0017].
-- India: show the price as the store shows it, inclusive of taxes, and a cash-on-delivery badge only if COD is live for that product.
+- Show the price exactly as the store shows it for that market, in its currency (tax-inclusive in the UK, EU and Australia; before sales tax in the US and Canada), and a payment badge (free returns, buy now, pay later, pay on delivery) only if that option is live for that product. Leave room for longer words when the ad runs in the languages your buyers use; German or French text can run a third longer than English.
 
 ### 4. Place the CTA and the proof
 
@@ -161,3 +161,7 @@ Test each wireframe:
 Platform documentation: Meta Ads Guide sizes and Reels safe-zone guidance, TikTok safe-zone overlay, Pinterest and Google Demand Gen image specs, WCAG contrast ratios.
 
 What makes this skill ours: zones measured in pixels inside each platform's safe area and checked to add up; a worked shared box that tells you when one master can serve feed and Reels; a free wireframe render that tests overlap and phone readability before design; an offer zone that only exists once the offer's break-even is known.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Show the price inclusive of taxes, in rupees, as the store shows it, and a cash-on-delivery badge only if COD is live for that product.

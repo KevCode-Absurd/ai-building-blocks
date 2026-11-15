@@ -1,6 +1,6 @@
 ---
 name: build-whatsapp-or-facebook-community
-description: "A buyer community for a store on WhatsApp (Community, group or channel) or a Facebook Group, set up with a written purpose, joining rules, house rules, a moderator rota, a weekly post rhythm, member perks that cost less than they earn, and a 90-day test that compares members' repeat orders with similar buyers who did not join. Picks the platform by market (WhatsApp first in India, Facebook Groups often in the US), keeps joining opt-in only, and plans regional-language posts and COD-to-prepaid nudges for India. Use when the store has repeat-purchase products and wants more second and third orders, a place for launches and feedback, or a home for its best customers."
+description: "A buyer community for a store on WhatsApp (Community, group or channel) or a Facebook Group, set up with a written purpose, joining rules, house rules, a moderator rota, a weekly post rhythm, member perks that cost less than they earn, and a 90-day test that compares members' repeat orders with similar buyers who did not join. Picks the platform by market (WhatsApp first in chat-first markets such as Brazil, Mexico, Spain, Italy, Indonesia and much of Africa and Asia; Facebook Groups often in the US and UK), keeps joining opt-in only, and plans posts in the languages your buyers use and pay-on-delivery to prepaid nudges where they apply. Use when the store has repeat-purchase products and wants more second and third orders, a place for launches and feedback, or a home for its best customers."
 ---
 
 # Customer community on WhatsApp or Facebook
@@ -12,7 +12,7 @@ description: "A buyer community for a store on WhatsApp (Community, group or cha
 - The store sells things people rebuy or collect (consumables, refills, fashion drops, hobby kits) and second orders are the weak point.
 - Loyal buyers keep messaging the brand with photos, tips and questions and there is nowhere to put them.
 - Launches need a warm group for first looks and feedback before the public sees them.
-- In India, buyers already live on WhatsApp and the store wants a channel that is not one-to-one support.
+- Buyers already live on WhatsApp and the store wants a channel that is not one-to-one support.
 
 ## Not for
 
@@ -25,7 +25,7 @@ description: "A buyer community for a store on WhatsApp (Community, group or cha
 
 Required (read access, level 1):
 
-1. **Shopify order export, last 12 months**, with Customer ID, Created at, Total, Line items, Payment method (COD or prepaid in India), Shipping state or city.
+1. **Shopify order export, last 12 months**, with Customer ID, Created at, Total, Line items, Payment method (pay on delivery or prepaid, where offered), Shipping country, state or city.
 2. **Repeat facts**: share of buyers with a second order, median days between first and second order. Use `cohort-repeat-and-ltv-analysis` if not known.
 3. **Gross profit per order** by product, from `build-sku-profit-sheet`.
 4. **Moderator capacity**: who will run it and how many hours a week.
@@ -40,7 +40,7 @@ If repeat facts are missing, compute them from the order export before planning 
 1. **Repeat potential.** Pass when at least one product is rebought or collected. Fail: a community for a one-time purchase rarely pays; suggest a post-purchase email flow instead.
 2. **Gross profit per repeat order is known**, so perks can be priced. Fail: compute it first.
 3. **Moderator hours.** Someone named can give at least 3 to 5 hours a week and reply within one working day (practitioner default, test it). Fail: do not open; an unanswered group hurts trust.
-4. **Consent.** Only people who chose to join are in. Never bulk-add buyers from the order export: it breaks WhatsApp's rules, gets numbers blocked and breaks privacy law (India's Digital Personal Data Protection Act needs clear consent; no legal ruling here). Fail: build an opt-in route first.
+4. **Consent.** Only people who chose to join are in. Never bulk-add buyers from the order export: it breaks WhatsApp's rules, gets numbers blocked and breaks privacy law (GDPR in the UK and EU and most national privacy laws need clear consent; no legal ruling here). Fail: build an opt-in route first.
 5. **Privacy of numbers.** In WhatsApp, check in the app who can see members' phone numbers in the format you choose, and tell members before they join. Fail: use an announcement-only format or a Facebook Group.
 
 ## Steps
@@ -49,9 +49,9 @@ If repeat facts are missing, compute them from the order export before planning 
 
 | Market and buyer | Pick | Why |
 |---|---|---|
-| India, most buyers on WhatsApp | WhatsApp Community with an announcement group plus 1 or 2 topic groups | Buyers already there; announcements reach everyone |
-| India, very large or one-way updates | WhatsApp Channel plus a small buyers group | Channel for drops, group for the top buyers |
-| US or global, buyers on Facebook | Facebook Group with membership questions | Search, threads, member posts |
+| Chat-first market, most buyers on WhatsApp | WhatsApp Community with an announcement group plus 1 or 2 topic groups | Buyers already there; announcements reach everyone |
+| Chat-first market, very large or one-way updates | WhatsApp Channel plus a small buyers group | Channel for drops, group for the top buyers |
+| US, UK or other markets, buyers on Facebook | Facebook Group with membership questions | Search, threads, member posts |
 | Small, high-value buyers | Private group of 50 to 200 top customers | Close feedback loop |
 
 Check WhatsApp's current group and community size limits in the app before planning, since they have changed over time.
@@ -90,7 +90,7 @@ Most posts give value. Content that serves members without selling builds loyalt
 
 ### 7. Design member perks
 
-Prefer early access, restock alerts, member-only bundles and service over deeper discounts. Price each perk: cost per member x members who use it must be below the extra gross profit you expect from members' repeat orders. Expiring points or credits can bring people back; one Indian brand used coins that expire 60 days after purchase, with reminders [CXP-0019]. A fixed weekly budget to fix bad experiences and surprise top buyers is a proven pattern [CXP-0022]. Weight feedback from the most loyal and the most unhappy members over the middle [AVT-0021].
+Prefer early access, restock alerts, member-only bundles and service over deeper discounts. Price each perk: cost per member x members who use it must be below the extra gross profit you expect from members' repeat orders. Expiring points or credits can bring people back; one brand used coins that expire 60 days after purchase, with reminders [CXP-0019]. A fixed weekly budget to fix bad experiences and surprise top buyers is a proven pattern [CXP-0022]. Weight feedback from the most loyal and the most unhappy members over the middle [AVT-0021].
 
 ### 8. Plan the first 30 days
 
@@ -100,10 +100,11 @@ Week 1: invite the top 50 to 100 buyers by gross profit first, then open wider. 
 
 Stage it against a control: start with the top buyers, compare their 90-day reorder rate with similar buyers who were not invited, and widen only if members beat the control [WLD-0007]. Track: joins, share active each week, member reorder rate at 30, 60, 90 days, control reorder rate, gross profit difference, perk cost, moderator hours. For stores under about 10 to 20 million a year, the first-to-second order step is usually where growth is held back [EML-0053], so judge the community mainly on that.
 
-### 10. India and US notes
+### 10. Market notes
 
-- **India:** post in the language members write in; Hindi or a regional language group can sit beside an English one. Announce prepaid-only perks to move COD buyers to prepaid where `returns-and-rto-cost-analysis` shows COD returns cost more. WhatsApp marketing messages sent through the API follow template rules; automated journeys beat broadcasts by a wide margin [EML-0048], so do not turn the group into a broadcast list. Festival first looks fit well.
-- **US:** Facebook Groups suit hobby, parenting, fitness and home buyers; use membership questions and post approval for the first month. Keep SMS separate; group membership is not SMS consent.
+- **Chat-first markets:** post in the language members write in; a group in another of your buyers' languages can sit beside the main one. Where the store offers pay on delivery, announce prepaid-only perks to move those buyers to prepaid if `returns-and-rto-cost-analysis` shows failed deliveries cost more. WhatsApp marketing messages sent through the API follow template rules; automated journeys beat broadcasts by a wide margin [EML-0048], so do not turn the group into a broadcast list. First looks before peak seasons and local festivals fit well.
+- **US and UK:** Facebook Groups suit hobby, parenting, fitness and home buyers; use membership questions and post approval for the first month. Keep SMS separate; group membership is not SMS consent.
+- **EU:** members' phone numbers are personal data; tell members who can see them and use WhatsApp Communities, where numbers are hidden from other members.
 
 ## Checks before you hand it over
 
@@ -136,12 +137,19 @@ Stage it against a control: start with the top buyers, compare their 90-day reor
 ## Sources
 
 - AVT-0021: weight the most loyal and most unhappy customers' feedback.
-- CXP-0019: expiring loyalty coins with reminders in India.
+- CXP-0019: expiring loyalty coins with reminders.
 - CXP-0022: a fixed weekly budget to fix and surprise.
-- EML-0048: WhatsApp journeys beat broadcasts in India.
+- EML-0048: WhatsApp journeys beat broadcasts.
 - EML-0053: first-to-second order is the usual growth limit.
 - ORG-0022: one hero platform plus owned channels.
 - ORG-0031: content-engaged customers show higher lifetime value.
 - WLD-0007: stage retention bets against a control group.
 
-What makes this skill ours: the community has to prove itself on reorder rate against a control group, not on member count; every perk is priced against gross profit; joining is strictly opt-in with phone-number privacy checked; and India gets WhatsApp formats, language groups and COD-to-prepaid perks.
+What makes this skill ours: the community has to prove itself on reorder rate against a control group, not on member count; every perk is priced against gross profit; joining is strictly opt-in with phone-number privacy checked; and each market gets the right platform, language groups and prepaid perks where pay on delivery applies.
+
+## Selling in India
+
+- WhatsApp comes first; a Hindi or regional language group can sit beside an English one.
+- Prepaid-only perks can move COD buyers to prepaid.
+- Consent follows the Digital Personal Data Protection Act.
+- The CXP-0019 coins example and the EML-0048 journeys data came from Indian brands.

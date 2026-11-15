@@ -69,6 +69,22 @@ Twelve structures that keep working in e-commerce, chosen by what the account is
 
 Rules: a format without its proof is not allowed; pick a different one. Never use an AI-made person as a customer, reviewer or founder. Comparisons name "the usual way" unless a claim about a named rival is provable [MCR-0043]. A founder ad does not need the founder on camera; a quote or the founder's evidence works [MCR-0005].
 
+**Native post variants (format 7).** A native static works because it does not read as an ad, and what gives an ad away is marketing language, not polish: lowering the quality of a glossy ad does not make it native [MCR-6728]. Pick the one ordinary object the buyer's own story would leave behind, and fill it only with words from reviews, surveys or support messages:
+
+| Variant | What the picture is | Gate before it is allowed |
+|---|---|---|
+| Sticky note | A 2 to 8 word house rule the old way forced ("NOT in the dishwasher"), stuck where the rule applies | The rule appears in buyers' words |
+| Handwritten note | A list, a sum or a note left for someone, 5 to 20 words on at most 5 lines | Same |
+| Phone note | A streak that keeps resetting, a list of things tried, a running cost, a plan restarted every Monday | Same |
+| Ignored reminders | 1 to 4 phone reminders for a routine the buyer cannot keep | The platform allows images that look like phone notifications; check before building |
+| Circled flaw | A plain photo of a visible flaw on the old thing, with one rough circle or arrow added as a separate step | The flaw is real, at its real size, and buyers name it |
+| Warning card | A hand-made "stop" or "check" in 3 to 9 words about a kind of product, never a named rival | The advice follows from the proof table |
+| Expert-style post | A post-style list of symptoms or signs in a real expert's voice | Only a real, relevant expert who agreed in writing, run from their own page with a clear paid disclosure; this feels organic and can carry cold spend [MCR-6840] |
+
+Never show a health reading (sleep score, glucose, blood pressure), never a body sign beyond hands, feet, arms or legs, and never write first person for a customer who did not say it. Brand-written words on a note are labelled as such in the spec.
+
+**Two more cold formats.** On-brand comedy statics (an absurd, literal take on the problem) build recall and reach colder buyers than product shots; keep one in the mix if the brand voice allows humour [MCR-6622]. Advertorial-style statics (a ranked list of the best options and the ones to avoid) convert cold traffic only when they click through to an education page or carry long teaching copy [MCR-6642].
+
 ### 2. Scan the account's own mix for gaps
 
 1. Tag each ad from the last 90 days with its format number (step 1 list), its awareness stage and its concept, using fixed tags [MCR-0051].
@@ -78,7 +94,21 @@ Rules: a format without its proof is not allowed; pick a different one. Never us
 
 ### 3. Pick the format
 
+First place each candidate format on the funnel, because most failing static programmes make only bottom-funnel statics, launch variants of one concept believing they are new, and judge upper-funnel statics on last-click return [MCR-6886]. A starting map [MCR-6883]:
+
+| Stage | Formats |
+|---|---|
+| Top (unaware, problem aware) | Problem scene, native post and its variants, advertorial-style list, founder note, comedy static |
+| Middle (solution aware) | Comparison, before and after (small and within policy [MCR-6799]), callout diagram, how-it-works steps |
+| Bottom (product and most aware) | Offer card, bundle math, review card or wall, objection answer, product hero |
+
+A product shot on white reaches only the most-aware buyer, and most statics stop at product aware [MCR-6873]. A static reaches cold buyers when it pairs a native or buyer-matched image, a curiosity headline, long story-led primary text and a page whose offer matches the ad [MCR-6874]. For buyers over about 50 on Facebook feeds, long story copy under a static works especially well [MCR-6653].
+
+A static stops the scroll in one of two ways: it looks native to the feed, or it is a loud pattern break. Being first in the category to a familiar format nobody else uses is the strongest version of either [MCR-6875].
+
 Rank gaps by: fills the biggest flagged problem first, then lowest effort, then lowest production cost. Statics cost about a quarter of video, which matters most when returns are thin [MCR-0023]. One recommendation. Add a second format only when it fills a different gap and the budget funds both reads.
+
+Statics are the cheap test bed. Try a new angle, buyer or offer as a static first and give video budget only to ideas that earned spend there; keep a standing warm-audience static test for offers (bundle against discount against gift), judged on gross profit per order, not conversion rate alone [MCR-6888]. The test fails as proof only for ideas that need a demonstration or a story a still cannot carry.
 
 ### 4. Use outside ads for structure only
 
@@ -92,11 +122,11 @@ Study competitors one or two sizes bigger and the ads they have run longest, but
 - **Proof:** the proof table row and its date. Reviews show a name and source [LPG-0037]. Discounts show the bigger number, money or percent [OFF-0017].
 - **Production path:** a free editor (Canva free, Figma free, Photopea), the steps in order, about 30 to 60 minutes.
 
-India: price inclusive of taxes as the site shows it; a cash-on-delivery badge only where COD is live.
+Prices exactly as the site shows them (tax included in the UK, EU and Australia; before sales tax in the US); a pay-on-delivery badge only where that option is live.
 
 ### 6. Batch mode: rebuild several and review
 
-1. Plan 4 to 8 ads, each a different format or concept; no two share format, concept and offer.
+1. Plan 4 to 8 ads, each a different format or concept; no two share format, concept and offer. Before designing, write each ad's buyer, angle and offer; three new statics are only variations unless at least one of those changes [MCR-6877]. Skip micro variations such as a new background colour or a model's pose: a 1% to 2% effect cannot be measured without large test budgets, and Meta groups near-copies as one ad [MCR-6885].
 2. Build 4:5 and 9:16 as separate layouts, never a stretch.
 3. Render each, view at full size and at phone size, and fix before anyone sees it.
 4. Run every file through `prelaunch-ad-check`.
@@ -111,12 +141,14 @@ Launch only with the owner's yes. Then, per format, read at 3 times target cost 
 
 1. The chosen format fills a named gap from the account scan, or the new-account default is stated.
 2. Every format used has its required proof, with source and date.
-3. No AI-made person appears as a customer, reviewer or founder.
-4. No words, photos or art were taken from another brand's ad.
-5. Price, offer and stock match the live page today; offers have break-even recomputed.
-6. Both sizes are separate layouts inside their safe zones, viewed at full and phone size.
-7. Every file passed `prelaunch-ad-check`.
-8. Nothing was uploaded or launched without the owner's yes.
+3. The format's funnel stage is stated, and the batch is not all bottom-funnel unless the store is too small for cold traffic.
+4. Native variants use buyers' own words, pass their gate, and show no health reading or fake first-person customer.
+5. No AI-made person appears as a customer, reviewer or founder.
+6. No words, photos or art were taken from another brand's ad.
+7. Price, offer and stock match the live page today; offers have break-even recomputed.
+8. Both sizes are separate layouts inside their safe zones, viewed at full and phone size.
+9. Every file passed `prelaunch-ad-check`.
+10. Nothing was uploaded or launched without the owner's yes.
 
 ## Output
 
@@ -133,6 +165,9 @@ Launch only with the owner's yes. Then, per format, read at 3 times target cost 
 - **Copying a competitor ad too closely.** Step 4 keeps structure and drops their words and art.
 - **A bundle ad that loses money.** Gate 1 recomputes break-even.
 - **Stretching 4:5 into 9:16.** Step 6 builds each size separately.
+- **Only bottom-funnel statics.** Step 3 maps formats to stages and says what a cold static needs.
+- **A native post full of slogans.** Step 1 fills native variants with buyers' words only.
+- **Calling a colour swap a new ad.** Step 6 requires a new buyer, angle or offer.
 - **Judging formats on Ads Manager ROAS alone.** Step 7 grades on store-side purchases and gross profit per ad.
 
 ## Sources
@@ -153,5 +188,19 @@ Launch only with the owner's yes. Then, per format, read at 3 times target cost 
 - [LPG-0037]: named reviews and press quotes.
 - [OFF-0017]: show the discount as the bigger number.
 - [ADC-0017]: creative hit rate, about 5% is normal.
+- [MCR-6728]: marketing language, not polish, makes an ad look like an ad.
+- [MCR-6840]: expert-style posts run from the expert's own page can carry cold spend.
+- [MCR-6622]: on-brand comedy statics build recall and reach colder buyers.
+- [MCR-6642]: advertorial statics need an education page or long teaching copy.
+- [MCR-6886]: why static programmes fail.
+- [MCR-6883]: static formats by funnel stage.
+- [MCR-6799]: keep before and after small to avoid disapprovals and higher CPMs.
+- [MCR-6873]: product shots on white reach only the most-aware buyer.
+- [MCR-6874]: what a scalable top-of-funnel static pairs together.
+- [MCR-6653]: long story copy on statics for buyers over about 50.
+- [MCR-6875]: native or loud pattern break; be first to an untapped format.
+- [MCR-6888]: statics as the cheap test bed for angles and offers.
+- [MCR-6877]: write buyer, angle and offer before designing.
+- [MCR-6885]: skip micro variations.
 
 What makes this skill ours: formats chosen from a scan of the store's own ad mix rather than taste; a proof requirement per format that blocks fake reviews and unpriced offers; outside ads used for structure only; a format scorecard graded on store-side purchases and hit rate, so the next pick is better.

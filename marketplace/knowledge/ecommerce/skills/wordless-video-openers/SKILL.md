@@ -52,7 +52,19 @@ A wordless opener earns attention with something the eye enjoys, then hands the 
 
 ### 1. List moments that belong to this product
 
-Write 15 physical moments from the product's use, packaging or making. Keep only those that show or hint at a benefit buyers name in reviews. A satisfying clip with no link to the product can win clicks and lose sales; one test saw a satisfying visual at about 10.9% CTR with almost no purchases while a plainer demo converted [MCR-0029]. The opener must filter for buyers [MCR-0026]. Borrow visual ideas from outside the category, not from rivals [MCR-0055].
+Write 15 physical moments from the product's use, packaging or making. Keep only those that show or hint at a benefit buyers name in reviews. A satisfying clip with no link to the product can win clicks and lose sales; one test saw a satisfying visual at about 10.9% CTR with almost no purchases while a plainer demo converted [MCR-0029]. The opener must filter for buyers [MCR-0026]. Borrow visual ideas from outside the category, not from rivals [MCR-0055]. Wordless two-to-three-second sensory close-ups (fabric handled, product squeezed, pack opened) are one of the opener types practitioners rate most highly right now, especially in fashion [MCR-6868].
+
+Tag each moment with the **finish** the eye waits for, because a moment with no finish is just b-roll:
+
+| Finish | The eye waits for | Examples |
+|---|---|---|
+| Level | a pour or fill to settle at its end | a glass filled to its line, a scoop levelled off |
+| Fit | a part to meet its place | a lid clicking, a cap stopping on its thread, a zip closing end to end |
+| Release | something to come away whole | a seal peeling in one piece, a cake leaving its tin |
+| Smooth | a surface to be done | one wipe leaving a clean stripe, water beading and running off |
+| Order | mess to become order | loose things sorted into a tray, four old gadgets swept aside for one |
+
+Pick in focus, in this order: the product out of its pack; something it is made of; the old way it replaces (a row of bottles, a stained pan). A sealed pack turning on a stand is a pack shot, not an opener. A motion nobody described is one a generator will invent, so mark it "inferred" for the owner to confirm. If using the product is nothing to watch (a capsule with water), build the moment from the old way it replaces.
 
 ### 2. Pick ten that vary
 
@@ -62,7 +74,7 @@ Score each 0 to 2 on: tied to a named benefit, readable without sound, true to t
 - **Subject:** a few with hands, most object-only, one or two of the setting.
 - **Energy:** at least three calm, at least three with clear motion.
 
-No two rows may be near-copies. Products with an instant felt effect (cooling, fizz, scent, texture) have the most to show [MCR-0045].
+No two rows may be near-copies, and the ten should cover at least three of the five finishes. Products with an instant felt effect (cooling, fizz, scent, texture) have the most to show [MCR-0045].
 
 ### 3. Write each opener as a shot card
 
@@ -74,12 +86,17 @@ Rules:
 - **Real-time playback.** Slow camera moves are fine; slowed footage is not, because it jars against a phone-style body at the cut (practitioner default, test it). Motion comes from what moves: the camera, the object, the light, the texture.
 - Prefer settling, pouring, rolling, rippling over exploding or shattering, which push generators toward slowed, showy output.
 - Premium products: rough phone footage is fine if the product itself is shown cleanly [MCR-0010].
+- **Shape it in thirds.** Frame 1 is already part done (the pour mid-air, the seal a third up). The first two thirds carry the motion toward its end with the end still in doubt. The finish lands in the last third, then everything holds still for the final half second with the product in view and its printing clear.
+- **Hand over without a jump.** The last frame sits in the place, light and distance of the body's first frame, so the hard cut feels like one video. Ask for a still of the body's first frame; without one, mark the match "to check".
+- **Keep the product's state in order.** It opens once, where it really opens; if the opener shows it open or part used, it stays that way in the body.
+- **Write a material line** for every card, in plain words: thin liquid falls in a clear stream and levels at once; thick liquid folds like a ribbon; powder drops with a little dust and lands as a cone; small solids tumble and stop; fabric hangs by its weight; foam squashes and springs back; hard parts keep their shape and click. State any count that matters ("8 gummies").
+- **Sound:** the motion's own sound and the room only; no music and no voice in the opener.
 
 ### 4. Approve the lineup, then make the clips
 
 Show the owner a table (moment, distance, subject, energy, what happens in five seconds, benefit) with the cost estimate. Nothing is generated before a yes.
 
-- **Any generator:** image-to-video from the store's own product photo as the first frame. Name the setting concretely, add a light cue and a lens cue, ask for photoreal real-time motion, and end with a plain negative line (no slowed footage, no text, no logos, no people speaking). Describe other brands' places or products generically, never by trademark. Use plain wording for hand shots, since close hand actions can trip moderation filters; if a run is flagged, rewrite once, then switch to an object-only moment, then drop it.
+- **Any generator:** image-to-video from the store's own product photo as the first frame. Name the setting concretely, add a light cue and a lens cue, ask for photoreal real-time motion, and end with a plain negative line (no slowed footage, no text, no logos, no people speaking). Describe other brands' places or products generically, never by trademark. Use plain wording for hand shots, since close hand actions can trip moderation filters; if a run is flagged, rewrite once, then switch to an object-only moment, then drop it. Write "real speed" once near the top of the prompt and never the words slow motion, time-lapse, sped up, frozen or a frame rate; say "a steady pour", not "a slow pour". Use plain verbs (pour, settle, roll, peel, click, slide, land). If the tool takes a first and last frame, give it both. Make one clip at the shortest length, check it, then make the rest.
 - **Phone path:** table, window light, phone on a stand, normal speed. Often the most real result for the least money.
 - **Freelancer brief:** the shot card plus reference images.
 
@@ -87,7 +104,7 @@ Keep raw clips. A clip never shows a result the product cannot produce, and gene
 
 ### 5. Optional text
 
-Ask once per batch: no text (default), a short tease, or a benefit line of six words or fewer. Set it in a readable caption style (light text on a dark translucent pill), placed clear of the top and bottom interface areas. Check the clip's real resolution before making the overlay, burn it onto a copy, and keep the raw clip so text can be redone without regenerating.
+Ask once per batch: no text (default), a short tease, or a benefit line of six words or fewer. A tease of 1 to 4 words that leaves a question hanging ("Wait for it", "POV:", or how a buyer's thought begins) usually works best; never a price, offer, claim or call to action in the opener, and never over the thing in focus. Set it in a readable caption style (light text on a dark translucent pill), placed clear of the top and bottom interface areas. Check the clip's real resolution before making the overlay, burn it onto a copy, and keep the raw clip so text can be redone without regenerating.
 
 ### 6. Check realism and product accuracy, frame by frame
 
@@ -122,6 +139,8 @@ Any product fail rejects the clip. An image model may pre-screen frames; a perso
 5. Every clip passed the frame check; rejects are listed with reasons.
 6. Text, if any, is six words or fewer and clear of interface areas.
 7. The current opener runs as control and the keep rule uses purchases.
+8. Every card names its finish, lands it in the last third, holds the last half second still and matches the body's first frame.
+9. No prompt uses slow motion, time-lapse or speed words; inferred motions are marked for the owner.
 
 ## Output
 
@@ -154,5 +173,6 @@ Any product fail rejects the clip. An image model may pre-screen frames; a perso
 - [MCR-0071]: test thumb-stops as named units.
 - [ADC-0059]: judge at ad set level.
 - [MCR-0062]: formats fade once widely copied.
+- [MCR-6868]: wordless sensory close-ups are a highly rated opener type.
 
 What makes this skill ours: every moment must link to a benefit in real reviews and end on the real product; the batch is balanced for variety and approved before spend; a frame-by-frame product and physics check with a free tool rejects drift; and each opener must beat the current one on store-side cost per purchase.

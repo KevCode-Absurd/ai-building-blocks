@@ -1,22 +1,27 @@
-// /e-commerce: the home of the e-commerce team. Public. The team lead and the specialists (GET /api/agents?vertical=
-// ecommerce, lead first), the expert library's totals (GET /api/knowledge/ecommerce), "Ask the library" (GET
+// /e-commerce: the home of the e-commerce team. Public. One search over five tabs, as on useaiblocks.com: the agents
+// (GET /api/agents?vertical=ecommerce, lead first) and the shelves of prompts, skills, tools and minds (shelf.tsx,
+// GET /api/knowledge/ecommerce/shelf). Then the expert library's totals (GET /api/knowledge/ecommerce), "Ask the library" (GET
 // /api/knowledge/ecommerce/ask) and how to start. The Worker sends the first two answers inside the page (src/pages.ts),
 // so the team and the library paint at once. Agents run in the visitor's own AI; nothing here runs a model.
 import { useEffect, useRef, useState } from "preact/hooks";
 import type { ComponentChildren } from "preact";
 import { Badge, Button, Field, Notice, Select, useLoad } from "../../components.tsx";
 import { api, ApiError, peekBoot } from "../../lib/api.ts";
-import { Link } from "../../lib/router.tsx";
+import { Link, replaceAddress } from "../../lib/router.tsx";
 import { ECOMMERCE_TITLE } from "../../../modules/directory/titles.ts";
 import { AgentCard, CardSkeletons, hireHref, Portrait, WorkLine, type AgentCardData } from "./parts.tsx";
+import { isShelfKind, SHELF_BASE, SHELF_KINDS, SHELF_WORDS, ShelfTab, type ShelfKind, type ShelfSummary, type TeamName } from "./shelf.tsx";
 
 const VERTICAL = "ecommerce";
 const TEAM_PATH = `/api/agents?vertical=${VERTICAL}`;
 const LIBRARY_PATH = `/api/knowledge/${VERTICAL}`;
 const MIN_Q = 3, MAX_Q = 300;
 
-/** GET /api/agents?vertical=ecommerce: the team in team order, lead first. */
-interface TeamList { total: number; vertical: string; agents: AgentCardData[] }
+/** A stage of the store's work and the agents in it (src/modules/directory/team-stages.ts). */
+interface Stage { id: string; label: string; summary: string; ids: string[] }
+/** GET /api/agents?vertical=ecommerce: the team in team order, lead first, and the stages. With &q= only the agents
+ *  that match, best first; team is then the size of the whole team. */
+interface TeamList { total: number; vertical: string; q?: string; team?: number; stages: Stage[]; agents: AgentCardData[] }
 
 /** GET /api/knowledge/ecommerce: what the library holds. A 404 means it is not built yet. */
 interface Library {
@@ -47,6 +52,19 @@ const TIER_SHORT: Record<number, string> = { 1: "platform's own guide", 2: "larg
 type LoadState<T> = { data: T | null; error: string | null; loading: boolean; reload: () => void };
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`;
+
+function useDebounced<T>(value: T, ms: number): T {
+  const [v, setV] = useState(value);
+  useEffect(() => { const t = setTimeout(() => setV(value), ms); return () => clearTimeout(t); }, [value, ms]);
+  return v;
+}
+
+type Tab = "agents" | ShelfKind;
+const TABS: Tab[] = ["agents", ...SHELF_KINDS];
+const readTab = (v: string | null): Tab => (v && (v === "agents" || isShelfKind(v)) ? v : "agents");
+
+/** Searches people type for this team, shown as quick picks under the box. */
+const QUICK_FINDS = ["Meta ads", "Find suppliers", "Influencer outreach", "Product page", "Email flows", "Is my market growing"];
 
 /** "2026-11-13" -> "13 Nov 2026"; "2026-06" or a day of "00" -> "Jun 2026". Anything else as it is. */
 function dateWords(iso: string): string {
@@ -81,13 +99,36 @@ export function EcommercePage() {
     () => api<Library>(LIBRARY_PATH).then(l => ({ library: l }), e => { if (e instanceof ApiError && e.status === 404) return { library: null }; throw e; }),
     [], bootLibrary ? { library: bootLibrary } : undefined);
   const lead = team.data?.agents[0] ?? null;
+  const params = typeof location === "undefined" ? new URLSearchParams() : new URLSearchParams(location.search);
+  const [q, setQ] = useState(() => (params.get("q") ?? "").slice(0, 120));
+  const [tab, setTab] = useState<Tab>(() => readTab(params.get("tab")));
+  const search = useDebounced(q.trim(), 220);
+  // Keep the address in step, so a search or a tab can be shared or reloaded.
+  useEffect(() => {
+    if (typeof location === "undefined") return;
+    const sp = new URLSearchParams();
+    if (tab !== "agents") sp.set("tab", tab);
+    if (search) sp.set("q", search);
+    const qs = sp.toString();
+    const next = `/e-commerce${qs ? `?${qs}` : ""}${location.hash}`;
+    if (location.pathname + location.search + location.hash !== next) replaceAddress(next);
+  }, [search, tab]);
+  // How much each shelf holds, and with a search how much of each matches, for the counts on the tabs.
+  const bootShelf = peekBoot<ShelfSummary>(SHELF_BASE);
+  const shelf = useLoad<ShelfSummary | null>(() => api<ShelfSummary>(`${SHELF_BASE}${search ? `?q=${encodeURIComponent(search)}` : ""}`).catch(() => null),
+    [search], search ? undefined : bootShelf ?? undefined);
+  const agentHits = useLoad<TeamList | null>(
+    () => search ? api<TeamList>(`${TEAM_PATH}&q=${encodeURIComponent(search)}`) : Promise.resolve(null), [search]);
+  const names = new Map<string, TeamName>((team.data?.agents ?? []).map(a => [a.id, { id: a.id, name: a.name, title: a.title }]));
+  const shelfCount = (k: ShelfKind): number | null => !shelf.data ? null : search ? shelf.data.found?.[k] ?? null : shelf.data.counts[k];
+  const tabCount = (t: Tab): number | null => t === "agents" ? (search ? agentHits.data?.agents.length ?? null : team.data?.total ?? null) : shelfCount(t);
 
   return (
     <main class="page page-wide dir-ecom">
       <header class="dir-hero">
         <p class="eyebrow">For online stores · Free</p>
         <h1>AI agents for your online store</h1>
-        <p class="lede">A team that knows e-commerce, built from expert sources, free to use in your own AI. Made for Shopify stores in India and the US, with Amazon as a second place to sell.</p>
+        <p class="lede">A team that knows e-commerce, built from expert sources, free to use in your own AI. One agent for every job a store has, from finding a product to keeping customers, for Shopify stores anywhere, on Amazon and other marketplaces.</p>
         <div class="dir-ecom-actions">
           {lead
             ? <Button href={`/agents/${lead.id}`}>Meet {lead.name}, the team lead</Button>
@@ -97,11 +138,31 @@ export function EcommercePage() {
       </header>
 
       <section class="dir-section" id="ecom-team" aria-labelledby="ecom-team-title">
-        <div class="dir-section-head">
-          <h2 id="ecom-team-title">The team</h2>
-          {team.data && team.data.total > 0 && <span class="dir-files-total">{plural(team.data.total, "agent")}</span>}
+        <h2 id="ecom-team-title" class="dir-visually-hidden">Everything for your store</h2>
+        <form class="dir-search dir-ecom-find" role="search" onSubmit={e => e.preventDefault()}>
+          <label class="dir-search-box">
+            <span class="dir-visually-hidden">Search agents, prompts, skills, tools and minds: say the job you need done</span>
+            <svg class="dir-search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" /><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="square" /></svg>
+            <input id="ecom-find" class="input dir-search-input" type="search" value={q} maxLength={120} autoComplete="off" enterKeyHint="search"
+              placeholder="Say the job, like write Meta ad hooks or find a supplier" onInput={e => setQ((e.target as HTMLInputElement).value)} />
+          </label>
+        </form>
+        {!search && (
+          <p class="dir-ecom-quick">Try: {QUICK_FINDS.map((t, i) => <>{i > 0 && " · "}<button type="button" class="dir-link-button" onClick={() => setQ(t)}>{t}</button></>)}</p>
+        )}
+        <div class="dir-ecom-tabs" role="tablist" aria-label="What to show">
+          {TABS.map(t => (
+            <button type="button" role="tab" id={`ecom-tab-${t}`} aria-controls="ecom-panel" aria-selected={tab === t} class={`dir-ecom-tab${tab === t ? " is-on" : ""}`} onClick={() => setTab(t)}>
+              {t === "agents" ? "Agents" : SHELF_WORDS[t].tab}
+              {tabCount(t) !== null && <span class="dir-ecom-tab-n">{tabCount(t)}</span>}
+            </button>
+          ))}
         </div>
-        <TeamSection state={team} />
+        <div id="ecom-panel" role="tabpanel" aria-labelledby={`ecom-tab-${tab}`}>
+          {tab === "agents"
+            ? <TeamSection state={team} search={search} found={agentHits} onClear={() => setQ("")} />
+            : <ShelfTab kind={tab} q={search} team={names} onClear={() => setQ("")} />}
+        </div>
       </section>
 
       <section class="dir-section" id="ecom-library" aria-labelledby="ecom-library-title">
@@ -128,8 +189,12 @@ function OnItsWay(props: { title: string; children: ComponentChildren }) {
   return <div class="dir-ecom-note" role="status"><strong>{props.title}</strong><p>{props.children}</p></div>;
 }
 
-function TeamSection(props: { state: LoadState<TeamList> }) {
+/** The Agents tab: the team lead, then the specialists stage by stage; with a search, the agents who match. */
+function TeamSection(props: { state: LoadState<TeamList>; search: string; found: LoadState<TeamList | null>; onClear: () => void }) {
   const { data, error, reload } = props.state;
+  const { search, found } = props;
+  const [stage, setStage] = useState("");
+
   if (error && !data) return (
     <OnItsWay title="We could not load the team just now">
       Check your connection, then <button type="button" class="dir-link-button" onClick={reload}>try again</button>. Or <Link href="/agents" class="dir-inline-link">browse every agent</Link>.
@@ -142,13 +207,60 @@ function TeamSection(props: { state: LoadState<TeamList> }) {
     </OnItsWay>
   );
   const [lead, ...specialists] = data.agents;
+  const byId = new Map(data.agents.map(a => [a.id, a]));
+  const inStage = (st: Stage) => st.ids.filter(id => id !== lead.id && byId.has(id));
+  const stages = (data.stages ?? []).filter(st => inStage(st).length > 0);
+  const shownStages = stage ? stages.filter(st => st.id === stage) : stages;
+  const placed = new Set(stages.flatMap(st => st.ids));
+  const unplaced = specialists.filter(a => !placed.has(a.id));
+  const result = search ? found.data : null;
+
   return (
     <>
-      <TeamLead agent={lead} specialists={specialists.length} />
-      {specialists.length > 0 && (
+      {!search && <p class="dir-ecom-lede">One agent for each part of the work, from researching the market to keeping customers. Pick a stage, or search above.</p>}
+
+      {search ? (
+        <div class="dir-ecom-found" aria-live="polite">
+          {found.error && <Notice tone="bad" title="We could not search the team">{found.error} <button type="button" class="dir-link-button" onClick={found.reload}>Try again</button></Notice>}
+          {!result && !found.error && <p class="dir-result-line">Looking for "{search}"…</p>}
+          {result && result.agents.length > 0 && (
+            <>
+              <p class="dir-result-line">{plural(result.agents.length, "agent")} for "{search}", best match first. <button type="button" class="dir-link-button" onClick={props.onClear}>Show the whole team</button></p>
+              <div class={`dir-grid${found.loading ? " dir-grid-stale" : ""}`}>{result.agents.map(a => <AgentCard agent={a} headingLevel={3} />)}</div>
+            </>
+          )}
+          {result && result.agents.length === 0 && (
+            <OnItsWay title={`No one on the team matches "${search}"`}>
+              Try fewer words, look in the other tabs above, or <Link href={`/agents?q=${encodeURIComponent(search)}`} class="dir-inline-link">search every agent</Link>. You can also ask {lead.name}, the team lead, who would do it. <button type="button" class="dir-link-button" onClick={props.onClear}>Show the whole team</button>
+            </OnItsWay>
+          )}
+        </div>
+      ) : (
         <>
-          <h3 class="dir-ecom-subhead">The specialists</h3>
-          <div class="dir-grid">{specialists.map(a => <AgentCard agent={a} headingLevel={3} />)}</div>
+          <TeamLead agent={lead} specialists={specialists.length} />
+          {stages.length > 0 && (
+            <div class="dir-chips dir-ecom-stages" role="group" aria-label="Show one stage of the work">
+              <button type="button" class="dir-chip" aria-pressed={!stage} onClick={() => setStage("")}>All stages <span class="dir-chip-n">{specialists.length}</span></button>
+              {stages.map(st => (
+                <button type="button" class="dir-chip" aria-pressed={stage === st.id} onClick={() => setStage(stage === st.id ? "" : st.id)}>
+                  {st.label} <span class="dir-chip-n">{inStage(st).length}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {shownStages.map(st => (
+            <section class="dir-ecom-stage" aria-labelledby={`stage-${st.id}`}>
+              <h3 class="dir-ecom-subhead" id={`stage-${st.id}`}>{st.label}</h3>
+              <p class="dir-ecom-stage-summary">{st.summary}</p>
+              <div class="dir-grid">{inStage(st).map(id => <AgentCard agent={byId.get(id)!} headingLevel={4} />)}</div>
+            </section>
+          ))}
+          {!stage && unplaced.length > 0 && (
+            <>
+              <h3 class="dir-ecom-subhead">More specialists</h3>
+              <div class="dir-grid">{unplaced.map(a => <AgentCard agent={a} headingLevel={4} />)}</div>
+            </>
+          )}
         </>
       )}
     </>

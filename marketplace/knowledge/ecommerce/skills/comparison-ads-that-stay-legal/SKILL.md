@@ -1,6 +1,6 @@
 ---
 name: comparison-ads-that-stay-legal
-description: "Us-versus-them comparison ad concepts plus a claims sheet that holds up to platform review and to advertising law in India and the US. Picks the safest comparison target for each market (a named rival, the category, the old way or the store's own past version), checks that the product really wins on a measurable attribute, compares like with like with dated evidence for both sides, and writes three to five concepts with the exact words, visuals and must-nots for each. Use when the product genuinely beats rivals on price per use, materials, warranty or a test, and the owner wants to say so without a takedown, a rejected ad or a legal letter."
+description: "Us-versus-them comparison ad concepts plus a claims sheet that holds up to platform review and to advertising law in each market where it runs (for example the US, the UK and the EU). Picks the safest comparison target for each market (a named rival, the category, the old way or the store's own past version), checks that the product really wins on a measurable attribute, compares like with like with dated evidence for both sides, and writes three to five concepts with the exact words, visuals and must-nots for each. Use when the product genuinely beats rivals on price per use, materials, warranty or a test, and the owner wants to say so without a takedown, a rejected ad or a legal letter."
 ---
 
 # Us-versus-them comparison ads
@@ -27,7 +27,7 @@ Required:
 
 1. **The attribute the store wins on**, with the store's own proof: spec sheet, lab or test report, warranty page, price per unit maths.
 2. **Rival evidence for the same attribute**: the rival's live product page, label or listing, captured as a dated screenshot with the URL (free path: a full-page screenshot plus a web archive copy).
-3. **Markets the ads will run in** (India, US, both) and platforms.
+3. **Markets the ads will run in** (US, UK, EU countries, Canada, Australia or others) and platforms.
 4. **Gross profit per purchase and target cost per purchase** (`store-meta-math`).
 
 Optional: buyer quotes that mention the rival, creator comparison videos (with usage rights), test results from an independent lab.
@@ -38,7 +38,7 @@ If the store cannot show it wins on a measurable attribute, stop: run a differen
 
 1. **The product really wins.** On the stated attribute, under the same conditions, today. Fail: stop. A comparison that only wins on a cherry-picked test is the most likely to be challenged.
 2. **Both sides have dated evidence.** Fail: drop that line or switch to a category comparison.
-3. **Market rules known.** In the US, naming a rival is allowed and even unflattering comparisons are allowed if truthful and not deceptive, with the basis of comparison clear [MCR-6020]; objective claims need a reasonable basis before they run [MCR-6022]. In India, the ASCI Code allows comparisons only if what is compared is clear, factual, accurate, provable, not chosen for an artificial advantage, and not unfairly denigrating [MCR-6024]. Rivals in both markets can also go to court; that risk is why lines get a lawyer flag.
+3. **Market rules known.** In the US, naming a rival is allowed and even unflattering comparisons are allowed if truthful and not deceptive, with the basis of comparison clear [MCR-6020]; objective claims need a reasonable basis before they run [MCR-6022]. In the UK and EU, comparisons are allowed only if they compare like with like, are verifiable, do not mislead, and do not denigrate the rival or take unfair advantage of its trade mark (the CAP Code in the UK, the EU comparative advertising rules). Canada and Australia also judge the general impression an ad gives. Rivals in every market can also go to court; that risk is why lines get a lawyer flag.
 4. **Profit line known.** Fail: concepts can be drafted, but no test plan.
 
 ## Steps
@@ -51,18 +51,18 @@ List attributes buyers care about (from reviews and objections) and, for each, t
 
 Choose one of four, safest first:
 
-| Target | Example line shape | India | US |
-|---|---|---|---|
-| The old way | "[Product] versus doing it by hand" | safest | safe |
-| The category | "Most [category] use X. Ours uses Y." | safe if factual and not mocking | safe |
+| Target | Example line shape | US | UK, EU and stricter markets |
+| The old way | "[Product] versus doing it by hand" | safe | safest |
+| The category | "Most [category] use X. Ours uses Y." | safe | safe if factual and not mocking |
 | Own past version | "Our new one versus our old one" | safe | safe |
+| A named rival | "[Our product] versus [Rival product]" | allowed if truthful; lawyer flag | like for like and provable only; factual tone; lawyer flag |
 | A named rival | "[Our product] versus [Rival product]" | lawyer flag; factual tone only | allowed if truthful; lawyer flag |
 
-In India, a rival that viewers can identify by pack, colour or slogan counts as named even if the name is hidden. Never use a rival's logo; name the product in plain text only to identify it.
+In every market, and most of all the stricter ones such as the UK and EU, a rival that viewers can identify by pack, colour or slogan counts as named even if the name is hidden, because the rules cover rivals identified by implication. Never use a rival's logo; name the product in plain text only to identify it.
 
 ### 3. Make it like for like
 
-Same size or per-unit basis, same date, same market price (with or without GST stated the same way for both), same variant, same test method. Write the basis on the ad ("price per 100 ml, both bought on [date] on each brand's own site"). A comparison chosen to flatter, such as an old rival price or a different pack size, fails both markets.
+Same size or per-unit basis, same date, same market price (with or without sales tax or VAT stated the same way for both), same variant, same test method. Write the basis on the ad ("price per 100 ml, both bought on [date] on each brand's own site"). A comparison chosen to flatter, such as an old rival price or a different pack size, fails both markets.
 
 ### 4. Build the claims sheet
 
@@ -77,10 +77,10 @@ For each concept write: hook, the single comparison line, the basis line in smal
 ### 6. Must-nots for every concept
 
 - No "best", "number one" or "better" with no attribute; say better at what.
-- No rival product shown broken, dirty or ridiculed unless it is the real result of a fair, recorded test; in India avoid it altogether.
+- No rival product shown broken, dirty or ridiculed unless it is the real result of a fair, recorded test; in stricter markets such as the UK and EU, avoid it altogether.
 - No fake reviews or AI-made "customers" switching from the rival; testimonials must be real experiences [MCR-6021].
 - No rival trademark in the ad's page name, handle or logo area.
-- India: price comparisons state whether GST is included, for both sides.
+- Price comparisons state whether sales tax or VAT is included, for both sides.
 
 ### 7. Plan the test and the recheck
 
@@ -91,7 +91,7 @@ Hand concepts to `write-one-page-creative-brief`. Put the claims sheet recheck o
 - Every comparison line names the attribute and the basis (size, date, market).
 - Both sides of every line have dated evidence with URL or file.
 - Like-for-like is true: same size or unit, variant, date and tax treatment.
-- India concepts use the old way, the category or the store's past version, or carry a lawyer flag.
+- Concepts for stricter markets (UK, EU and others with a no-denigration rule) use the old way, the category or the store's past version, or carry a lawyer flag.
 - No rival logo, no mockery, no "best" without an attribute.
 - Every named-rival line is flagged for the client's lawyer before spend.
 - Each claims row has a recheck date and an owner.
@@ -112,7 +112,7 @@ Hand concepts to `write-one-page-creative-brief`. Put the claims sheet recheck o
 ## Common mistakes
 
 - **Comparing to make the store look good, not to be fair.** Step 3 forces like for like.
-- **Naming rivals in India as freely as in the US.** Step 2 picks a safer target per market.
+- **Naming rivals everywhere as freely as in the US.** Step 2 picks a safer target per market.
 - **A true ad that turns false.** Step 4 sets weekly price rechecks.
 - **"Better" with nothing after it.** Step 6 requires the attribute.
 - **Mocking the rival's product.** Step 5 keeps the tone factual.
@@ -128,6 +128,15 @@ Hand concepts to `write-one-page-creative-brief`. Put the claims sheet recheck o
 - MCR-6020 (proposed): FTC policy on comparative advertising.
 - MCR-6021 (proposed): US rule on fake reviews and testimonials.
 - MCR-6022 (proposed): US substantiation before claims run.
-- MCR-6024 (proposed): ASCI Code on comparisons and substantiation.
 
-What makes this skill ours: the comparison target is chosen per market, with India's stricter rule on denigration and implied rivals handled up front; every line carries dated evidence for both sides and a recheck date, because a rival's price change can make a live ad false; GST is stated the same way on both sides; and the skill stops when the product does not truly win, instead of writing a comparison that invites a challenge.
+What makes this skill ours: the comparison target is chosen per market, with the stricter rules on denigration and implied rivals (UK, EU and others) handled up front; every line carries dated evidence for both sides and a recheck date, because a rival's price change can make a live ad false; tax is stated the same way on both sides; and the skill stops when the product does not truly win, instead of writing a comparison that invites a challenge.
+
+## Selling in India
+
+- The ASCI Code allows comparisons only if what is compared is clear, factual, accurate, provable, not chosen for an artificial advantage, and not unfairly denigrating [MCR-6024].
+- A rival viewers can identify by pack, colour or slogan counts as named. Treat India as a stricter market in step 2: use the old way, the category or the store's past version, or add a lawyer flag.
+- Never show a rival product broken, dirty or ridiculed.
+- Price comparisons state whether GST is included, for both sides.
+
+Sources for this section:
+- MCR-6024 (proposed): ASCI Code on comparisons and substantiation.

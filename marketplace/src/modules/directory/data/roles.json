@@ -2004,6 +2004,22 @@
     ]
   },
   {
+    "id": "snapchat-ads-media-buyer",
+    "name": "Snapchat ads media buyer",
+    "department": "marketing",
+    "summary": "Plans, runs and improves paid Snapchat campaigns for online stores. Fixes the Snap Pixel and Conversions API, tests vertical video and moves budget to what sells.",
+    "aliases": [
+      "snapchat ads",
+      "snap ads",
+      "snapchat ads manager",
+      "snapchat advertising",
+      "snapchat media buyer",
+      "paid snapchat",
+      "snap pixel",
+      "snapchat conversions api"
+    ]
+  },
+  {
     "id": "amazon-ppc-specialist",
     "name": "Amazon PPC specialist",
     "department": "ecommerce",

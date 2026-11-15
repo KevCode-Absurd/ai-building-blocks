@@ -38,14 +38,14 @@ Access: the owner creates the Business Center, ad account and payment method and
 
 ## Before you start: the gates
 
-1. **Buyers can be reached.** TikTok has been blocked in India since 2020, so an India store can only use TikTok ads to sell to countries it ships to. Fail for India-only stores: use Instagram Reels or YouTube Shorts instead.
+1. **Buyers can be reached.** TikTok ads run only in some countries, and some markets block TikTok or limit ad types. Check that the countries the store ships to are open to TikTok ads and to the objective you need. Fail if none are: use Instagram Reels or YouTube Shorts instead.
 2. **Break-even is known.** Fail: compute it first; no budget line can be set.
 3. **Budget can learn.** At least one ad group can be funded to its learning bar (step 5), never below about two times the allowed cost per purchase a day or TikTok's $20 floor [ADC-0063]. Fail: optimise to add to cart and say the read is weaker.
 4. **Native video exists or is briefed.** Resized Meta ads with small text are not enough.
 
 ## Steps
 
-Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (voice, customers' own words, every segment the data ranks with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from launch (Day 1); a calendar date only when the brief gives one.
+Follow the house rules, chiefly **Org context first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the org context (voice, customers' own words, every segment the data ranks with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from launch (Day 1); a calendar date only when the brief gives one.
 
 The account itself (Business Center with a second admin, ad account in the store's own time zone and currency, payment method with a backup, verified details) is set up by the owner and checked by the agent; time zone and currency are fixed once created.
 
@@ -63,7 +63,7 @@ The account itself (Business Center with a second admin, ad account in the store
 
 ### 3. Audiences
 
-- Start from the brand brain's best segments: rank who buys by age band, gender, region and product on store data, each with its number. Name the winner.
+- Start from the org context's best segments: rank who buys by age band, gender, region and product on store data, each with its number. Name the winner.
 - Target broad: country and language set, no age floor or interest the data does not support. If interests are used, two or three parent categories at most; stacking 15 raised cost in one fashion account [ADC-0035].
 - Steer to the winning segment with creative: people who look like it, its words, its problem.
 - Exclude existing customers with a customer file the owner uploads.
@@ -74,7 +74,7 @@ The account itself (Business Center with a second admin, ad account in the store
 - Volume: each ad needs about 3 times the allowed cost to be judged [ADC-0039]. Ads needed for the first two weeks = new-ad budget for those weeks / (3 x allowed cost). Brief that many; 3 to 6 per ad group is the usual range.
 - 9:16, key text inside the safe area, captions on, sound from TikTok's commercial library or original audio.
 - A clear hook in the first seconds; a closing spoken call to action is optional, since paid placements show a button and its effect is contested [MCR-0061].
-- Any AI-made person, voice or scene is labelled as TikTok's ad policy requires and never presented as a real customer. In the US, fake testimonials are banned, including those spoken by AI avatars [MCR-6021].
+- Any AI-made person, voice or scene is labelled as TikTok's ad policy requires and never presented as a real customer. In the US, fake testimonials are banned, including those spoken by AI avatars [MCR-6021]; the UK (ASA and CMA) and EU consumer rules also ban fake reviews and hidden ads.
 - Landing page: the proven page, with the same offer and price as the ad.
 
 ### 5. Budget
@@ -113,6 +113,27 @@ One rule per ad group, in one line, on store numbers, never on TikTok's reported
 
 Run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>` and fix every FAIL. Order the launch steps leverage first: tracking pass, proven concepts, then new styles. A holdout appears only when the brief asks or the two reads disagree.
 
+### 9. Account setup check and layout by budget
+
+Before step 1, run the account setup check. Mark each line done, missing or not sure, with a one-step fix. A missing purchase event or billing address stops the launch.
+
+- **Accounts:** Ads Manager account inside a Business Center (separate from anyone's personal login); the ad account added by ID; each person added separately; the TikTok profile linked to the Business Center and then to the ad account, with the owner holding manage rights and any agency deliver-ads rights only. TikTok Shop linked if the store sells there.
+- **Billing:** complete billing address; a card as main method with a backup method; automatic or manual payment chosen on purpose (manual thresholds can stop winners mid-day).
+- **Team:** smallest role for each person, two-step sign-in, access limited to the company email domain.
+- **Defaults:** location and minimum age set; brand safety on standard inventory; account health good. Per ad: leave "add to ad library" unchecked unless wanted, music sharing off, rights to any music used.
+
+Advice from creators about avoiding bans is not TikTok policy; never use tricks around a ban.
+
+Layout by daily budget (one operator's judgement, keep it as a starting point):
+
+| Daily budget | Ad groups |
+|---|---|
+| Under 50 | One broad ad group at 20 or more with 3 ads |
+| 50 to 99 | One broad ad group at about 50 |
+| 100 to 200 | Two to four ad groups at about 50 each, broad first, the same 3 ads in each |
+
+Rather than thin ad groups, run fewer of them [ADC-0063]. Keep campaign budget optimisation off while testing and switch it on only to scale proven ad groups. Name campaigns product, objective, date. Interests, if used, stay at 2 to 3 broad parent categories [ADC-0035]. Once spend allows, add one retargeting ad group: 30-day visitors minus 30-day buyers, auto refresh on, expansion off. Lookalike seeds: 180-day visitors, people who watched a video to the end, and a consented customer file. A four-week ladder changes one thing a week: broad, then one interest, then lookalikes, then stack the winners. Test Smart+ only later, head to head with the same budget and ads for 7 to 14 days, and keep the one with the lower store-basis cost per purchase.
+
 ## Checks before you hand it over
 
 - A real test order reached TikTok once with the right value; the gap rule comes from the brief or store orders, never a midpoint.
@@ -122,6 +143,8 @@ Run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> -
 - The whole budget is planned; each ad group is funded to its learning bar; any reserve is 15% or less with a release rule.
 - Every verdict label matches its number; each ad group has one rule on store numbers.
 - Every ad uses licensed sound and has AI labels where needed; existing customers are excluded.
+- The setup check is complete with no missing stop items before any spend.
+- Ad group count fits the daily budget table.
 
 ## Output
 
@@ -146,6 +169,7 @@ Settings and the learning-bar working go in an appendix.
 - **Test money spread thin.** Step 5 funds fewer ad groups to the learning bar.
 - **Rules on TikTok's own cost.** Step 7 reads store numbers.
 - **App sounds in ads.** Step 4 uses the commercial library.
+- **Opening several thin ad groups on a small budget.** Fewer, fuller ad groups leave learning sooner [ADC-0063].
 
 ## Sources
 
@@ -161,3 +185,7 @@ Settings and the learning-bar working go in an appendix.
 - ORG-0035: outlier organic posts belong in ads.
 
 What makes this skill ours: the first campaign starts from what already sells, targets the segments the store's data ranks, funds fewer ad groups to learn from Day 1, and is judged on two agreeing store reads, never TikTok's own count.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. TikTok has been blocked in India since 2020, so an India store can only use TikTok ads to sell to other countries it ships to. For India-only stores, the gate fails: use Instagram Reels or YouTube Shorts instead.

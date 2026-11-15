@@ -1,0 +1,346 @@
+[
+  {
+    "n": 1,
+    "title": "Campaigns (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Ads-API/campaigns",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. objective_v2_type values AWARENESS_AND_ENGAGEMENT, SALES, TRAFFIC, APP_PROMOTION, LEADS; promotion types include APP_INSTALL and APP_REENGAGEMENT; old objective field deprecated, rolled out September to December 2024 with backfill in March 2025; campaign daily budget and lifetime spend cap at least 20 USD; delivery stops at the ad account or campaign spend cap; AUCTION or RESERVED buying; 100 campaigns per ad account."
+  },
+  {
+    "n": 2,
+    "title": "Updates to Ads Manager Objectives",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/objectives-overview?language=en_GB",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches (the page returns only a loading shell); confirmed by WebSearch results showing this exact page on 2026-11-15. Five objectives: Awareness and Engagement, Traffic, Leads, App Promotion and Sales; older objectives such as Video Views and Engagement now sit under Awareness and Engagement as performance goals."
+  },
+  {
+    "n": 3,
+    "title": "Snapchat Ad Objectives",
+    "publisher": "Snapchat for Business",
+    "url": "https://forbusiness.snapchat.com/advertising/objectives",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Marketing page grouping goals as awareness, consideration and conversions (App Downloads, Shopify Store Sales, Online Sales, Lead Generation, Brand Awareness); recommends at least 30 USD a day and at least 15 days of running; the first 1 to 4 days are an exploration phase to leave alone; Story Ads hold 1 to 20 ads; Collection Ads have four tappable tiles; Commercials are non-skippable for 6 seconds and up to 3 minutes."
+  },
+  {
+    "n": 4,
+    "title": "Ad Squads (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Ads-API/ad-squads",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch (both halves of the page). bid_strategy AUTO_BID, LOWEST_COST_WITH_MAX_BID, TARGET_COST; MIN_ROAS deprecated 10 February 2025; optimisation goals include PIXEL_PURCHASE, PIXEL_ADD_TO_CART, PIXEL_SIGNUP, LANDING_PAGE_VIEW, APP_INSTALLS, APP_PURCHASE, LEAD_FORM_SUBMISSIONS; placements AUTOMATIC or CUSTOM, positions between friends' stories, before and after publisher stories and Spotlight, in-stream, Chat feed (never alone), Discover feed, Camera and post-capture Lens carousels; INTERSTITIAL_SPOTLIGHT merges into INTERSTITIAL_CONTENT on 15 February 2027; ad squad daily budget minimum 5 units of currency; at least one of iOS or Android targeting required; housing, credit and employment ads use restricted delivery signals."
+  },
+  {
+    "n": 5,
+    "title": "Bidding Strategies Overview (with Auto-Bid and Max Bid)",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/bidding-strategies?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and its Auto-Bid (auto-bidding) and Max Bid (max-bid) pages on 2026-11-15. Three strategies: Auto-Bid gets the most goal actions within budget and suits full delivery without a strict cost target, adjusted about daily; Target Cost makes a best effort to keep average cost per action at or below the amount set, judged by the ad set end date; Max Bid never bids above the amount set, may not spend the budget if too low, and cost per action can exceed it for a while because billing is by impressions."
+  },
+  {
+    "n": 6,
+    "title": "Measurement (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Ads-API/measurement",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Swipe-up attribution windows 1, 7 or 28 days, default 28; view windows none, 1, 3 or 6 hours, 1 or 7 days, default 1 day; 28-day view deprecated; reports by conversion time (default) or impression time; engaged_views (5 seconds or more) from 10 February 2025; conversion source split web, app, offline; metrics final 48 hours after each day in the account time zone; SKAdNetwork 30-day swipe and 24-hour view."
+  },
+  {
+    "n": 7,
+    "title": "Attribution Window Settings",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/attribution-window?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and the Report Metrics page on 2026-11-15. Default 28 days after a click and 1 day after a view for Pixel and MMP conversions, adjustable in reporting; from February 2025 click-through, view-through and engaged-view results can be split in Ads Manager reports; SKAdNetwork default 30-day click, 1-day view."
+  },
+  {
+    "n": 8,
+    "title": "Conversions API: Introduction",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/Introduction",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Server-to-server route for web, app and offline events, direct or through a partner; this page covers version 3 (version 2 scheduled for deprecation in early 2025); events older than 37 days are not eligible; web advertisers should pair it with the Pixel; Snap adds the ScCid click ID to the landing URL."
+  },
+  {
+    "n": 9,
+    "title": "Conversions API: Deduplication",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/Deduplication",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Pixel client_dedup_id must equal CAPI event_id (48-hour window); for PURCHASE, Pixel transaction_id and CAPI custom_data order_id also match (up to 30 days); the dedup id pair wins when both exist; one unique id per conversion (order id, then lead id, then a UUID), never session or user ids or placeholders; if client_dedup_id is left out the Pixel makes a browser-only id that cannot match; event names must match; allow up to 24 hours for diagnostics."
+  },
+  {
+    "n": 10,
+    "title": "Conversions API: Using the API",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/UsingTheAPI",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. v3 endpoints tr.snapchat.com/v3/{PIXEL_ID}/events and /{SNAP_APP_ID}/events with an access token; validate endpoints for test sends; each event needs event_name, event_time, action_source, event_source_url and user_data, plus currency and value for PURCHASE, and at least one match key (em, ph, IP with user agent, or mobile ad id); sc_click_id from ScCid and sc_cookie1 from the _scid cookie."
+  },
+  {
+    "n": 11,
+    "title": "Conversions API: Parameters",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/Parameters",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Email trimmed and lowercased before hashing; phone with country code, no leading 00, digits only; names, city, state, zip and country normalised and hashed; external_id hashing recommended; action_source WEB, OFFLINE or MOBILE_APP; data_processing_options LMU for opted-out iOS users; standard events include PURCHASE, START_CHECKOUT, ADD_CART, VIEW_CONTENT, ADD_BILLING, SIGN_UP, PAGE_VIEW, SUBSCRIBE, START_TRIAL and CUSTOM_EVENT_1 to 5."
+  },
+  {
+    "n": 12,
+    "title": "Conversions API: Best Practices",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/BestPractices",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Run CAPI alongside the Pixel on web (with an MMP on app); send event_id on every event on every route, matching exactly; normalise identifiers before SHA-256 hashing in lowercase hex; keep timestamps accurate."
+  },
+  {
+    "n": 13,
+    "title": "Conversions API: Get Started",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Tokens are made in Ads Manager under Business Details, Conversions API Tokens, Generate Token; only an Organization Admin can see that section; static long-lived tokens that do not expire until deleted; a token works only for pixel and app ids in the same organisation."
+  },
+  {
+    "n": 14,
+    "title": "Introduction to CAPI Gateway; Set Up Events FAQs",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/capi-gateway-setup?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and the Set Up Events FAQs page (events-faq) on 2026-11-15. CAPI Gateway is the recommended set-up for Pixel sites, needing the Pixel ID, admin access, domains, DNS access and a host; a no-code route with Datahash in Events Manager; at least one hashed identifier per event; events from ATT opt-outs carry lmu; Snap advises checking legal needs with counsel and not sending health or other sensitive data."
+  },
+  {
+    "n": 15,
+    "title": "Send Test With Pixel Test Event Tool; Testing with Snap Pixel Helper",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/pixel-test-event-tool?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and the Pixel Helper testing page (pixel-helper-testing) on 2026-11-15. Test Events in Events Manager opens the site with the Pixel in test mode and shows events in near real time; the Snap Pixel Helper Chrome extension shows detection, events and errors; PURCHASE should carry price, currency and transaction_id; Events Manager shows raw Pixel events, not attributed conversions."
+  },
+  {
+    "n": 16,
+    "title": "How to Use the Snapchat Ads App on Shopify",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/shopify-marketing-app?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and the Shopify catalog FAQ (catalog-shopify-faq) on 2026-11-15. The app links the Pixel in one click; Shopify's default Optimized data sharing can pause signal to Snap on low-traffic stores while still looking connected, so set Always on; only an Organization Admin can set up the catalog sync; products must be published to Snap in Shopify; Shopify collections do not map to Snap product sets; an auto-made customer audience appears once 1,000 Snapchatters match."
+  },
+  {
+    "n": 17,
+    "title": "What is Advanced Conversions?",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/advanced-conversions?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and its FAQs and best-practices pages on 2026-11-15 (the pages look three to four years old). A privacy-centred pipeline that links web, offline and app conversions to ad exposure without joining Snap data to other companies' identifiers; covers Pixel, CAPI and MMP events; part of conversions arrive in real time and the rest up to 36 hours later; Snap advises waiting about 72 hours before bid or targeting changes."
+  },
+  {
+    "n": 18,
+    "title": "Snapchat Dynamic Ads",
+    "publisher": "Snapchat for Business (blog)",
+    "url": "https://forbusiness.snapchat.com/blog/introducing-dynamic-ads",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. 15 September 2020. Dynamic Ads build ads from a product catalog and show each viewer products based on their activity; need a catalog (manual, data feed or Shopify) and the Pixel passing item IDs on Page View, View Content, Add to Cart and Purchase that match the catalog; app advertisers need an MMP passing item IDs; templates, with price and promotion fields; ads update when price or stock change."
+  },
+  {
+    "n": 19,
+    "title": "What's required to run Dynamic Ads?; Catalog Formatting and Specifications",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/dynamic-ads-required?language=en_GB",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page, Catalog Formatting (catalog-format) and Set Up Data Feed (data-feed-catalog) on 2026-11-15 (several look three to six years old). Required feed fields id, title, description, link, image_link, availability, price, condition, and brand or mpn or gtin; CSV, TSV, TXT or XML feeds; item_id on Pixel events must match the catalog, with a match rate above 80% counted as ready; Pixel events must match 1,000 Snapchatters; out of stock, discontinued or unavailable products are not used; product limits differ between pages, so check the screen."
+  },
+  {
+    "n": 20,
+    "title": "Snapchat Ad Formats & Specs",
+    "publisher": "Snapchat for Business",
+    "url": "https://forbusiness.snapchat.com/advertising/ad-formats",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Formats: Sponsored Snaps, Single Image or Video, Story Ads, Collection Ads, Commercials, AR Lenses, AR Filters. Single Image or Video, Story and Collection: MP4, MOV, JPG or PNG, 9:16, 720 x 1280, video 3 to 180 seconds, brand name up to 25 characters, headline up to 34. Sponsored Snaps under 10 seconds recommended, chat message up to 500 characters. Commercials MP4 or MOV H.264; Standard 3 to 6 seconds non-skippable; Extended Play 7 to 180 seconds with the first 6 non-skippable. AR Lenses need a visible logo or brand name; Snap adds a SPONSORED label for 2 seconds."
+  },
+  {
+    "n": 21,
+    "title": "Single Image or Video Specifications; Safe Zones for Ads on Snapchat",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/top-snap-specs?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and Safe Zones (safe-zones) on 2026-11-15. 1080 x 1920 canvas at 9:16; images PNG or JPEG at least 720 x 1280, up to 5 MB; video MP4 or MOV, H.264, up to 1 GB; keep the top 150 px and bottom 330 px clear of logos and key text (more with offer details or some attachments); use the Safe Zone toggle in Ads Manager; headlines in all capitals are restricted. Brand name limit shows 32 characters here and 25 on the ad formats page, so use 25."
+  },
+  {
+    "n": 22,
+    "title": "Story Ad, Collection Ad and Commercial Specifications",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/commercial-specs?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing Commercial Specifications, Story Ad Specifications (story-ad-specs) and Collection Ad Specifications (collection-ad-specs) on 2026-11-15. Commercials 1080 x 1920 with audio, first 6 seconds non-skippable; Story Ad tile image 360 x 600 PNG with a 175 px top buffer and a logo on every tile; Collection Ads add 2 to 4 product thumbnails, at least 160 x 160, and the bottom 450 px stays clear; branding before 2 seconds."
+  },
+  {
+    "n": 23,
+    "title": "Lenses Specifications; Lenses Campaigns",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/lens-specs?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page, Lenses Campaigns (purchase-lens) and the Lens Web Builder pages on 2026-11-15. Sponsored Lenses need a visible logo or brand name; SPONSORED label shown about 2 seconds; Lens campaigns bill by CPM in an auction; the AR Lens creative type needs a Face Lens; Lens Web Builder offers a 3D asset library with no creative fee; for First Lens, upload creative at least 5 business days before launch."
+  },
+  {
+    "n": 24,
+    "title": "Single Image or Video Creative Best Practices",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/snap-ads-practices?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and related Snap creative blog posts on 2026-11-15. Put the hero message in the opening frame; brand moments before 2 seconds but not a still logo or packshot as the opener; design for sound on while keeping the message clear with captions; around 5 to 6 seconds suggested; native, user-made looking ads tend to be watched in full; test several variations."
+  },
+  {
+    "n": 25,
+    "title": "Sponsored Snaps",
+    "publisher": "Snapchat for Business",
+    "url": "https://forbusiness.snapchat.com/advertising/sponsored-snaps",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Full-screen image or video ads delivered to the Chat feed; people can reply and the advertiser can set an auto-response; the ad account needs a linked Public Profile; ads promoting social or messaging apps, specific discount offers, and health, employment or credit ads are restricted; under 10 seconds and headlines of 24 to 28 characters advised; Snap's own figures are company-reported."
+  },
+  {
+    "n": 26,
+    "title": "Customer Lists (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/marketing-api/Ads-API/audience-creation/customer-lists",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Customer Lists were formerly Snap Audience Match (SAM); schema EMAIL_SHA256, PHONE_SHA256 or MOBILE_AD_ID_SHA256; email trimmed and lowercased, phone with country code and digits only, lowercase hex SHA-256; retention default lifetime (9999); up to 1,000 Customer List segments per ad account; up to 100,000 identifiers per request; status TOO_FEW_USERS when too small to target."
+  },
+  {
+    "n": 27,
+    "title": "Lookalikes (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/marketing-api/Ads-API/audience-creation/lookalikes",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Lookalikes are built from a first-party Customer List seed; types BALANCE (default), SIMILARITY or REACH; country list required; the lookalike updates as the seed grows; retention up to 180 days."
+  },
+  {
+    "n": 28,
+    "title": "Website Events (Ads API)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/marketing-api/Ads-API/audience-creation/website-events",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Pixel or CAPI event audiences of Snapchatters who triggered chosen events; update over time; retention up to 395 days; eligible events include PURCHASE, START_CHECKOUT, ADD_CART, VIEW_CONTENT, PAGE_VIEW and SIGN_UP."
+  },
+  {
+    "n": 29,
+    "title": "Create a Lookalike Audience; What are Custom Audiences?",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/create-lookalike-audience?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and What are Custom Audiences? (custom-audiences) on 2026-11-15. A lookalike needs a customer list, Pixel or third-party audience first; Similarity is the smallest and closest, Balance mid-size, Reach the largest; custom conversion and mobile app audiences become targetable at 1,000 members."
+  },
+  {
+    "n": 30,
+    "title": "Link an Ad Account to Your Public Profile; How to Create an Ad Account",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/profile-ad-account?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page, How to Create an Ad Account (create-ad-account) and Unlink an Ad Account (unlink-profile-ad-account) on 2026-11-15. Public Profiles are required for advertising and free; a new ad account cannot be made without one; one profile links to up to 100 ad accounts; unlinking a profile with live ads pauses them; only Organization or Business Admins can unlink."
+  },
+  {
+    "n": 31,
+    "title": "Build Your Brand with Public Profiles",
+    "publisher": "Snapchat for Business",
+    "url": "https://forbusiness.snapchat.com/public-profiles",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. A Public Profile is the brand's permanent home on Snapchat: Stories, Spotlight, Highlights, subscribers, links to a site or catalog, Promote to boost posts, and an Insights tab; agencies running ads from their own business account need at least one Public Profile linked; verified profiles show a yellow star; Snap's internal figures (January 2025) are company-reported."
+  },
+  {
+    "n": 32,
+    "title": "Ad Account Roles and Permissions; Organization Roles and Permissions",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/roles-permissions-ad-account?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and Organization Roles (organization-roles-overview) on 2026-11-15. Organisation roles: Organization Admin, Agency Admin, Business Admin, Member, Data Admin. Ad account roles: Account Admin, Agency Member (includes payment methods), Campaign Manager (creates and manages campaigns), Data Manager (audiences), Data Analyst (views and pulls results), Creative Manager; only Organization Admins edit roles; members join the organisation before getting ad account access."
+  },
+  {
+    "n": 33,
+    "title": "Snapchat Ads MCP Server",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/marketing-api/Ads-MCP/Introduction?lang=en-US",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Official server at mcp.snapchat.com/ads; this release is read-only, write access planned; sign in with the Ads Manager business login; an Admin or Business Admin approves each agent for the organisation; each member authorises their own access and sees only what their Ads permissions allow; revoke in accounts.snapchat.com manage-apps or on the consent screen; client ids for Claude, Codex, ChatGPT, Antigravity and Gemini; warns about prompt injection through tool outputs."
+  },
+  {
+    "n": 34,
+    "title": "Brand Partnerships (Creator Ads)",
+    "publisher": "Snap Marketing API (developer docs)",
+    "url": "https://developers.snap.com/marketing-api/Creator-Ads/BrandPartnerships",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Creators tag the brand with Add Paid Partnership and the brand boosts the best posts as ads; creator permission levels Tag Only, Share Snap, Share Snap and Insights, and Tag Only does not allow boosting; ads from tagged content show Paid Partnership with the brand; Ad Partnerships run ads as the creator's profile; content must be 9:16 and not use Snap Library music; Stories expire after 24 hours unless saved."
+  },
+  {
+    "n": 35,
+    "title": "What is Paid Partnership Tagging?; Create Ads Using Creator Content",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/paid-partnership-tagging?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page, Create Ads Using Creator Content (creator-content-ads) and How to Pre-Approve a Creator (Collaborator-Pre-Approvals) on 2026-11-15. The label reads Paid Partnership with the brand; creators must disclose sponsored content and @mentions do not count; brands pre-approve creators for a set period or review each post; tagged Stories or Spotlight posts can become ads in Ads Manager."
+  },
+  {
+    "n": 36,
+    "title": "Snap Advertising Policies",
+    "publisher": "Snap Inc.",
+    "url": "https://snap.com/en-US/ad-policies",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. No last-updated date shown. All ads are reviewed and can be rejected or removed; Snap can ask for proof of claims or licences; Snapchat is 13+ and ads aimed at under-13s are rejected; age floors: alcohol 21+ in the US and 18+, 21+ or 25+ by state in India, no one drinking who looks under 25; dating, weight loss, plastic surgery and non-surgical cosmetic ads 18+; supplements 18+ in the US; gambling needs pre-approval and the legal gambling age; plastic surgery ads may not target India; prescription drugs need pre-approval; vape sales and weapons sales banned; deceptive content including misleading generative AI banned; political ads need paid-for-by disclosures, none in the EU from 1 October 2025."
+  },
+  {
+    "n": 37,
+    "title": "Snap Ads and Regional Considerations FAQs",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/gdpr?language=en_GB",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page on 2026-11-15. Teen accounts (13 to 17) in the EU, UK, Switzerland and Norway get no ads personalised on inferred interests or content history, and Pixel, CAPI and customer list data is not matched to them; only age, language, location and device remain; gender, custom audiences, dynamic product ads and install-state targeting are unavailable; ad sets aimed only at under-18s will not run until changed; the same approach applies to Brazil teens from March 2026."
+  },
+  {
+    "n": 38,
+    "title": "Updating our Advertising in Europe and the UK",
+    "publisher": "Snap Inc. (Values)",
+    "url": "https://values.snap.com/news/updating-our-advertising-in-europe-and-uk-2023",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. 24 July 2023. From 14 August 2023 most targeting and optimisation tools are no longer available for personalising ads to Snapchatters under 18 in the EU and UK."
+  },
+  {
+    "n": 39,
+    "title": "What is Ad Review?; Viewing the Review Status of My Ad",
+    "publisher": "Snapchat Business Help Center",
+    "url": "https://businesshelp.snapchat.com/s/article/ad-review?language=en_US",
+    "checked": "2026-11-15",
+    "supports": "Snap's help centre refuses automated fetches; confirmed by WebSearch results showing this page and Review Status (review-status) on 2026-11-15. Most ads are reviewed within 8 hours but it can take longer, and another page says allow about 24 hours; submit ahead of the start date; editing approved ads or ad sets can send them back to review; the rejection reason shows on the status icon in the Delivery Status column."
+  },
+  {
+    "n": 40,
+    "title": "Disclosures 101 for Social Media Influencers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. November 2019. Disclose any material connection, including free product; put it in the video itself, spoken and on screen, hard to miss and in the same language; plain words such as ad or sponsored; a platform disclosure tool alone may not be enough."
+  },
+  {
+    "n": 41,
+    "title": "ASCI Social Media Disclosure Guidelines",
+    "publisher": "Advertising Standards Council of India",
+    "url": "https://www.ascionline.in/social/guidelines/",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch. Disclose any material connection, including free product or perks; label upfront and prominent, superimposed on images and videos for a minimum time that depends on length; allowed labels include Advertisement, Ad, Sponsored, Collaboration, Partnership, Employee, Free gift, Affiliate; platform tools add to but do not replace the label; virtual influencers must say they are not real people; finance and health influencers must show qualifications; advertiser and influencer share responsibility. Main guideline date not shown on the page."
+  },
+  {
+    "n": 42,
+    "title": "DPDP Rules, 2025 Notified (backgrounder)",
+    "publisher": "Press Information Bureau, Government of India",
+    "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf",
+    "checked": "2026-11-15",
+    "supports": "Opened with WebFetch (PDF saved and text extracted). 17 November 2025. Rules notified 14 November 2025; eighteen-month phased compliance; separate clear consent notice stating the purpose; verifiable parent or guardian consent when a child's data is involved; requests answered within 90 days; penalties for children's obligations up to 200 crore rupees."
+  },
+  {
+    "n": 43,
+    "title": "The Digital Personal Data Protection Act, 2023 (No. 22 of 2023)",
+    "publisher": "Ministry of Electronics and Information Technology, Government of India",
+    "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+    "checked": "2026-11-15",
+    "supports": "meity.gov.in returns HTTP 403 to automated fetches; confirmed by WebSearch results showing this exact document on 2026-11-15. Section 2(f) defines a child as under 18; section 9(3) bars tracking or behavioural monitoring of children and targeted advertising directed at children, with exemptions only as prescribed."
+  }
+]

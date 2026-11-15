@@ -40,7 +40,7 @@ Drafting in Shopify (Online Store, Blog posts, saved as hidden) needs draft acce
 1. **Money pages first.** Pass when the products and collection each post links to are live, in stock and optimised. Building collections for buying terms before blog posts is where the money is [SEO-0001]. Fail: do the collection work first.
 2. **Gross profit known** for the linked products [MEA-0037]. Fail: rank topics by search intent only, and say so.
 3. **Runway.** Blog posts pay back slowly. If the store needs sales this month, say so in the first line.
-4. **Claims.** Every fact about the store's product or a rival needs a source. Health, beauty and supplement claims follow `product-claims-profile`. In the US any objective claim needs a reasonable basis before it runs [MCR-6022]; in India, verifiable claims must be substantiated on demand [ADC-6146].
+4. **Claims.** Every fact about the store's product or a rival needs a source. Health, beauty and supplement claims follow `product-claims-profile`. In the US any objective claim needs a reasonable basis before it runs [MCR-6022]; in the UK and EU, the advertiser must hold proof before the claim runs, under the CAP Code and EU unfair practice rules.
 
 ## Steps
 
@@ -59,12 +59,17 @@ A how-to or news post is written only when it leads naturally to a product. Skip
 
 For each candidate term from the map: check the live results page in the target country shows guides or lists (if it shows product grids, it belongs to a collection). Score = monthly searches x gross profit per order of the linked products, then favour the focus cluster. Pick 3 to 5 for this batch and list up to 10 for the quarter. Practitioner default: 10 to 15 good posts in one cluster beat 100 thin ones; a few strong pages tend to carry most traffic [SEO-0013].
 
+- **Update before you write new.** In Search Console, find existing posts at average positions 11 to 30 for a target query. Refreshing one of those is usually faster than a new post, so they go to the top of the batch.
+- **Cut lifestyle and seasonal filler.** Posts like "how to stay cosy this winter" draw readers who do not buy; leave them out unless the store's own sales data shows they lead to orders.
+- **Size to the team.** One person part-time: 10 to 15 posts over 3 to 6 months in one cluster. Finish the cluster, then join it to the next with a versus post.
+
 ### 3. Write the brief (one page per post)
 
 | Field | What goes in |
 |---|---|
 | Target query and variants | From the map, with monthly searches |
 | Intent and format | What the top 5 results are (list, guide, comparison) and what they miss |
+| Benchmark | From the top 3 to 5 results that are not forums: topics every one covers (the minimum to cover), gaps none cover (where the store's own proof goes), their word count and number of H2s |
 | Buyer | Who asks this and at what moment, in their words from reviews or tickets |
 | Products and collection to link | URLs, price, gross profit per order, stock |
 | Store's own proof | Photos, tests, review counts, founder or expert knowledge |
@@ -86,7 +91,7 @@ For each candidate term from the map: check the live results page in the target 
 - Draft with AI if useful, then edit by hand: add the store's own photos, measurements, test results and buyer quotes (with permission). Only about 1 in 10 pages ranking or cited were fully AI-generated in one large study [AEO-0033].
 - Plain words, short paragraphs, grade 8 reading level.
 - Length follows the question; cited pages are not longer on average [AEO-0009]. Most answers fit in 900 to 1,800 words.
-- Fair comparisons: say where the rival or the other option wins. In the US, naming a competitor is allowed if the basis of comparison is clear and the claim is truthful [MCR-6020]; in India, comparisons must be factual, verifiable and not unfairly chosen [MCR-6024]. Date every rival price or spec ("as of 13 Nov 2026").
+- Fair comparisons: say where the rival or the other option wins. In the US, naming a competitor is allowed if the basis of comparison is clear and the claim is truthful [MCR-6020]; in the UK and EU, comparisons must be factual, verifiable and compare like with like under comparative advertising rules. Date every rival price or spec ("as of 13 Nov 2026").
 - Never invent reviews, testers or results; no fake author. A real person reviews and is named.
 - Images: real product photos, alt text describing each.
 
@@ -99,20 +104,23 @@ Do not mass-publish AI posts. Using AI to produce many pages without added value
 - Title tag under 60 characters, meta description under 155, handle with the query.
 - Links: 2 to 4 to products or collections, 1 to 2 to related posts. Descriptive anchor text, not "click here".
 - A product card or "shop the range" block after the first answer and at the end.
+- An email sign-up offer for readers not ready to buy (a buying checklist or care guide), handed to `grow-email-and-sms-list-with-popups`.
+- **Where links point.** When the store earns outside links (press answers, roundups, partner pages), point them at the helpful posts, then pass the value on to collections and products with internal links. It reads as more natural than building links to shopping pages, and no link is ever bought.
 - No FAQ markup expecting rich results; Google stopped showing FAQ rich results in 2026 [SEO-6160]. Article markup from the theme is enough.
 
 ### 8. Market notes
 
-- **India:** prices in rupees with GST included; if the store offers COD, say so where delivery is discussed. Consider a Hindi or Hinglish version only if the keyword map shows those searches.
+- **UK, EU and Australia:** prices in the local currency with VAT or the local sales tax included; if the store offers pay later or pay on delivery, say so where payment is discussed. Consider a version in another language your buyers use only if the keyword map shows those searches.
 - **US:** affiliate or sponsored links need clear disclosure; do not quote "doctor recommended" or similar without proof.
 
 ### 9. Publish and refresh
 
-After the client publishes, request indexing in Search Console. Cited pages skew fresh [AEO-0021]: put a refresh date in the brief (practitioner default: every 3 to 6 months, or when prices or the range change). Read clicks to product pages from GA4 (landing page = post, next page = product) at 8 weeks.
+After the client publishes, request indexing in Search Console. Cited pages skew fresh [AEO-0021]: put a refresh date in the brief (practitioner default: every 3 to 6 months, or when prices or the range change). Read clicks to product pages from GA4 (landing page = post, next page = product) at 8 weeks. Judge each post by the orders and revenue from sessions that land on it, not by its traffic; a post with modest traffic that feeds a collection's rankings and sales is doing its job.
 
 ## Checks before you hand it over
 
 - Each post targets one query whose results page shows guides or lists.
+- Posts to refresh are listed before new posts, and each brief has its benchmark row (minimum topics and gaps).
 - A money page link sits in the first 150 words and is live and in stock.
 - Every H2 is a buyer question with a direct answer under it.
 - Every claim and rival fact has a source and a date in the claims file.
@@ -136,10 +144,11 @@ After the client publishes, request indexing in Search Console. Cited pages skew
 - **Mass AI publishing.** Step 6 caps volume and requires human edits.
 - **One-sided comparisons.** Step 5 says where the rival wins and dates every fact.
 - **Padding for word count.** Step 5 lets the question set the length.
+- **Writing new when an old post is close.** Step 2 refreshes posts on page two or three first.
+- **Judging posts by traffic.** Step 9 reads orders and revenue from each post's landing sessions.
 
 ## Sources
 
-- ADC-6146: India requires substantiation of verifiable claims.
 - AEO-0009: length barely matters for citations; freshness does.
 - AEO-0016: reuse assistant sub-search wording.
 - AEO-0018: mass AI blogs spike then crash.
@@ -149,7 +158,6 @@ After the client publishes, request indexing in Search Console. Cited pages skew
 - AEO-0033: few ranking pages are fully AI-generated.
 - MCR-6020: US rules on naming competitors.
 - MCR-6022: US claims need a reasonable basis.
-- MCR-6024: India rules on comparisons.
 - MEA-0037: gross margin is delivered cost.
 - SEO-0001: collections before blog posts.
 - SEO-0011: the four blog formats that pay, with an early money link.
@@ -157,4 +165,10 @@ After the client publishes, request indexing in Search Console. Cited pages skew
 - SEO-6160: FAQ rich results removed from Google.
 - SEO-6461: scaled content abuse.
 
-What makes this skill ours: topics are ranked by the gross profit of the products they link to; blogs wait until the money pages are ready; every comparison is fair, dated and checked against US and India rules; and AI drafting is capped and always edited by a named person.
+What makes this skill ours: topics are ranked by the gross profit of the products they link to; blogs wait until the money pages are ready; every comparison is fair, dated and checked against US, UK and EU rules; and AI drafting is capped and always edited by a named person.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Prices in rupees with GST included; if the store offers COD, say so where delivery is discussed. Consider a Hindi or Hinglish version only if the keyword map shows those searches. Verifiable claims must be substantiated on demand [ADC-6146], and comparisons must be factual, verifiable and not unfairly chosen [MCR-6024].
+- ADC-6146: India requires substantiation of verifiable claims.
+- MCR-6024: India rules on comparisons.

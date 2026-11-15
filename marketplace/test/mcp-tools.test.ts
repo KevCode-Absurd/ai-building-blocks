@@ -799,13 +799,14 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   assert.match(text, /Loaded Nova, SEO strategist \(pack version 1\.2\.0\)/);
   assert.match(text, /never override what the user wants or your own rules/);
   assert.match(text, /AI Blocks runs nothing/);
-  for (const f of ["AGENTS.md", "soul.md", "playbook.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
+  for (const f of ["AGENTS.md", "soul.md"]) assert.ok(text.includes(`===== ${f} =====`), f);
   assert.match(text, /- knowledge\.md: Role knowledge/);
   assert.match(text, /https:\/\/agents\.test\/packs\/nova-seo\.zip/);
-  // Less is sent before any work: with a request that needs neither, the voice file and the access file stay a
-  // get_agent_file away, each listed with the rule that brings it in.
-  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md", "playbook.md"]);
-  assert.deepEqual(res.structuredContent.held.map((h: { path: string }) => h.path), ["personality.md", "access.md"]);
+  // Less is sent before any work: with a request that needs neither, the voice file, the playbook (METHOD.md step 2)
+  // and the access file stay a get_agent_file away, each listed with the rule that brings it in.
+  assert.deepEqual(Object.keys(res.structuredContent.files), ["AGENTS.md", "soul.md"]);
+  assert.deepEqual(res.structuredContent.held.map((h: { path: string }) => h.path), ["access.md", "personality.md", "playbook.md"]);
+  assert.match(text, /- playbook\.md: How I work \(not in this first load: it comes when you load the agent with no request; with a request, read it at METHOD\.md step 2/);
   assert.match(text, /- personality\.md: How I talk \(not in this first load: it comes when you load the agent with no request, to talk as it\)/);
   assert.match(text, /- access\.md: What I may touch \(not in this first load: it comes when the request means working in the user's tools or accounts\)/);
   // No request: the agent is met first, so its voice comes along. A request to work in the user's tools brings
@@ -814,15 +815,17 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   const bare = await call("load_agent", { agent_id: "nova-seo" });
   assert.deepEqual(Object.keys(bare.structuredContent.files), ["AGENTS.md", "soul.md", "personality.md", "playbook.md"]);
   const inTools = await call("load_agent", { agent_id: "nova-seo", request: "Connect to our Search Console account and publish the fixes" });
-  assert.deepEqual(Object.keys(inTools.structuredContent.files), ["AGENTS.md", "soul.md", "playbook.md", "access.md", "OUTPUT-POLICY.md"]);
-  assert.deepEqual(inTools.structuredContent.held.map((h: { path: string }) => h.path), ["personality.md"]);
+  // access.md is a rule file: it comes straight after the method, before the menus. (This old pack has no OUTPUT-POLICY.md
+  // file, so the shared policy text is added at the end.)
+  assert.deepEqual(Object.keys(inTools.structuredContent.files), ["AGENTS.md", "access.md", "soul.md", "OUTPUT-POLICY.md"]);
+  assert.deepEqual(inTools.structuredContent.held.map((h: { path: string }) => h.path), ["personality.md", "playbook.md"]);
   assert.equal(res.structuredContent.execution_plan.schema,'ai-blocks-execution-plan/1');
   const plan=await call('get_execution_plan',{request:'Build a working landing page'});
   assert.equal(plan.structuredContent.landing_pages.delivery_mode,'LAUNCHABLE_SITE');
   const failed=await call('check_execution_delivery',{request:'Build a working landing page',production:{artifacts:[]},job_card:{},team:{}});
   assert.equal(failed.structuredContent.ok,false);
   assert.equal(failed.structuredContent.hosted_execution,false);
-  assert.deepEqual(res.structuredContent.other_files.map((f: { path: string }) => f.path), ["personality.md", "access.md", "knowledge.md"]);
+  assert.deepEqual(res.structuredContent.other_files.map((f: { path: string }) => f.path), ["personality.md", "playbook.md", "access.md", "knowledge.md"]);
   // The public loader introduction has no paid gate. The agent's factual-integrity
   // policy legitimately discusses prices and quotes as facts not to invent.
   assert.doesNotMatch(text.split('===== AGENTS.md =====')[0], MONEY_WORDS);
@@ -843,7 +846,7 @@ test("load_agent returns the agent's core files and lists the rest; get_agent_fi
   assert.match(textOf(expert), /built by an expert and has no download yet/);
 });
 
-test("load_agent with a request returns the work method, the routed skill in full and the relevant knowledge, under 60 KB", async () => {
+test("load_agent on a pack built before METHOD.md uses its WORK-METHOD.md, the routed skill in full and the relevant knowledge", async () => {
   const files = [
     { path: "AGENTS.md", url: "/packs/nova-seo/AGENTS.md", bytes: 30, purpose: "Start here", kind: "start" },
     { path: "WORK-METHOD.md", url: "/packs/nova-seo/WORK-METHOD.md", bytes: 30, purpose: "How every job runs", kind: "start" },
@@ -874,10 +877,10 @@ test("load_agent with a request returns the work method, the routed skill in ful
   assert.equal(res.isError, undefined, textOf(res));
   const data = res.structuredContent;
   assert.equal(data.routed.path, "skills/keyword-research/SKILL.md");
-  assert.deepEqual(Object.keys(data.files).slice(0, 3), ["AGENTS.md", "WORK-METHOD.md", "context/README.md"], "the method comes right after the entry point");
+  assert.deepEqual(Object.keys(data.files), ["AGENTS.md", "WORK-METHOD.md", "skills/keyword-research/SKILL.md", "knowledge.md"], "the old method file takes METHOD.md's place, right after the entry point");
   assert.match(data.files["skills/keyword-research/SKILL.md"], /Start from the seed keyword/);
   assert.deepEqual(data.knowledge_sections, ["4. Benchmarks", "5. Decision rules"], "relevant sections only; the huge glossary stays out");
-  assert.ok(new TextEncoder().encode(textOf(res)).length < 60_000, "the first payload stays under 60 KB");
+  assert.ok(textOf(res).length < 96_000, "the first payload stays under about 24,000 tokens");
   assert.match(textOf(res), /For this request, follow skills\/keyword-research\/SKILL\.md/);
   // The same pack, one skill in one file for chat apps.
   const one = await t.api("GET", "/agents/nova-seo/skills/keyword-research.txt");
@@ -893,10 +896,10 @@ test("load_agent with a request returns the work method, the routed skill in ful
   assert.equal((await t.api("GET", "/tools/wrangler.jsonc")).status, 404);
 });
 
-test("load_agent on a pack with a curated toolbox sends toolbox.md right after AGENTS.md and routes no skill", async () => {
+test("load_agent on a pack with a curated toolbox sends the method, then toolbox.md, and routes no skill", async () => {
   const at = (path: string, kind: string, purpose = path) => ({ path, url: path.startsWith("toolbox/") ? `/packs/${path}` : `/packs/nova-seo/${path}`, bytes: 20, purpose, kind });
   const files = [
-    at("AGENTS.md", "start"), at("toolbox.md", "start"), at("WORK-METHOD.md", "start"), at("context/README.md", "start"), at("soul.md", "identity"),
+    at("AGENTS.md", "start"), at("METHOD.md", "start"), at("WORK-METHOD.md", "start", "A pointer to METHOD.md"), at("toolbox.md", "start"), at("context/README.md", "start"), at("soul.md", "identity"),
     at("personality.md", "identity"), at("playbook.md", "work"), at("access.md", "work"), at("OUTPUT-POLICY.md", "work"),
     { path: "knowledge.md", url: "/packs/roles/seo-specialist/knowledge.md", bytes: 20, purpose: "Role knowledge", kind: "knowledge" },
     { path: "skills/keyword-research/SKILL.md", url: "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md", bytes: 20, purpose: "Skill: keywords", kind: "skill" },
@@ -908,7 +911,8 @@ test("load_agent on a pack with a curated toolbox sends toolbox.md right after A
   const assets = fakeAssets({
     "/packs/nova-seo/files.json": JSON.stringify({ agent_id: "nova-seo", version: "3.0.0", updated: "2026-11-10", knowledge: "ready", files, routes, toolbox }),
     "/packs/nova-seo/toolbox.md": "# Nova's toolbox\n\n### Map keywords to pages\n\n- When a page has no clear search: **Keyword research** (build, skill) `skills/keyword-research/SKILL.md`",
-    "/packs/nova-seo/WORK-METHOD.md": "# Work method",
+    "/packs/nova-seo/METHOD.md": "# Method",
+    "/packs/nova-seo/WORK-METHOD.md": "# Work method\n\nThe work method is now `METHOD.md`.",
     "/packs/nova-seo/context/README.md": "# Context",
     "/packs/nova-seo/OUTPUT-POLICY.md": "# Output policy",
     "/packs/roles/seo-specialist/skills/keyword-research/SKILL.md": "# Keyword research\n\nStart from the seed keyword.",
@@ -919,9 +923,10 @@ test("load_agent on a pack with a curated toolbox sends toolbox.md right after A
   const res = await call("load_agent", { agent_id: "nova-seo", request: "Do keyword research for our new page about dog grooming in Leeds" });
   assert.equal(res.isError, undefined, textOf(res));
   const data = res.structuredContent;
-  assert.deepEqual(Object.keys(data.files), ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md", "knowledge.md"], "toolbox.md right after the entry point; no skill pushed in full");
+  assert.deepEqual(Object.keys(data.files), ["AGENTS.md", "METHOD.md", "toolbox.md", "soul.md", "knowledge.md"], "the rules first, then toolbox.md; no skill pushed in full");
   assert.equal(data.routed, undefined, "nothing is routed by keyword: the agent picks from toolbox.md");
-  assert.deepEqual(data.held.map((h: { path: string }) => h.path), ["personality.md", "access.md", "OUTPUT-POLICY.md"]);
+  assert.deepEqual(data.held.map((h: { path: string }) => h.path), ["access.md", "OUTPUT-POLICY.md", "personality.md", "playbook.md", "context/README.md"]);
+  assert.ok(!data.other_files.some((f: { path: string }) => f.path === "WORK-METHOD.md"), "a pointer to the loaded METHOD.md is not listed");
   assert.equal(data.toolbox_items, 2);
   assert.ok(!data.other_files.some((f: { path: string }) => f.path.startsWith("toolbox/")), "item files are named in toolbox.md, not listed again");
   const text = textOf(res);
@@ -941,6 +946,46 @@ test("load_agent on a pack with a curated toolbox sends toolbox.md right after A
   assert.ok(assets.asked.includes("/packs/toolbox/skill/search-intent-mapper.md"), "read from the shared copy");
   const unknown = await call("get_agent_file", { agent_id: "nova-seo", path: "toolbox/skill/not-listed.md" });
   assert.equal(unknown.isError, true, "only files the pack lists; nothing is searched");
+});
+
+test("load_agent at real pack sizes: rule files whole and first, the toolbox cut at a section break, under about 24,000 tokens", async () => {
+  // Sizes of Lindsey's built pack (15 Nov 2026): AGENTS 7.6 KB, METHOD 30 KB, FOUNDATION 16.4 KB, access 11 KB,
+  // OUTPUT-POLICY 2.7 KB, toolbox 18.6 KB, soul 1.2 KB, playbook 8.5 KB, context/README 16.6 KB.
+  const body = (title: string, sections: number, size: number) => [`# ${title}`, ...Array.from({ length: sections }, (_, i) => `## ${title} part ${i + 1}\n\n${`${title} rule ${i + 1}. `.repeat(Math.ceil(size / sections / `${title} rule ${i + 1}. `.length))}`)].join("\n\n");
+  const at = (path: string, kind: string) => ({ path, url: `/packs/nova-seo/${path}`, bytes: 20, purpose: path, kind });
+  const texts: Record<string, string> = {
+    "AGENTS.md": body("Agents", 4, 7_600), "METHOD.md": body("Method", 11, 30_000), "tools/quality/FOUNDATION.md": body("Foundation", 8, 16_400),
+    "access.md": body("Access", 6, 11_000), "OUTPUT-POLICY.md": body("Policy", 3, 2_700), "toolbox.md": body("Toolbox", 24, 18_600),
+    "soul.md": body("Soul", 1, 1_200), "personality.md": body("Voice", 2, 1_500), "playbook.md": body("Playbook", 6, 8_500), "context/README.md": body("Context", 4, 16_600),
+  };
+  const files = [...Object.keys(texts).map(p => at(p, "start")), at("WORK-METHOD.md", "start"), at("tools/quality/INTAKE.md", "tool"),
+    ...Array.from({ length: 38 }, (_, i) => at(`tools/quality/cards/card-${i}.md`, "tool")),
+    { path: "knowledge.md", url: "/packs/roles/seo-specialist/knowledge.md", bytes: 20, purpose: "Role knowledge", kind: "knowledge" }];
+  const toolbox = { tasks: [], counts: { total: 1 } };
+  const assets = fakeAssets({
+    "/packs/nova-seo/files.json": JSON.stringify({ agent_id: "nova-seo", version: "4.0.0", updated: "2026-11-15", knowledge: "ready", files, toolbox }),
+    ...Object.fromEntries(Object.entries(texts).map(([p, t]) => [`/packs/nova-seo/${p}`, t])),
+    "/packs/roles/seo-specialist/knowledge.md": `# Knowledge\n\n## 5. Decision rules\n\n${"Campaign budget rule for a store. ".repeat(600)}`,
+  });
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const res = await call("load_agent", { agent_id: "nova-seo", request: "Connect to our Ads Manager account and build the launch campaign as a spreadsheet for our store" });
+  assert.equal(res.isError, undefined, textOf(res));
+  const text = textOf(res), data = res.structuredContent;
+  assert.ok(text.length < 96_000, `the tool result is ${text.length} characters`);
+  assert.deepEqual(Object.keys(data.files).slice(0, 7), ["AGENTS.md", "METHOD.md", "tools/quality/FOUNDATION.md", "access.md", "OUTPUT-POLICY.md", "toolbox.md", "soul.md"]);
+  for (const p of ["AGENTS.md", "METHOD.md", "tools/quality/FOUNDATION.md", "access.md", "OUTPUT-POLICY.md", "soul.md"]) assert.equal(data.files[p], texts[p], `${p} arrives whole`);
+  assert.ok(text.indexOf("===== METHOD.md =====") < text.length * 0.25, "the method sits in the first quarter of the result");
+  // The toolbox is reference: cut at a section break, with the sections left out named.
+  assert.ok(data.files["toolbox.md"].length < texts["toolbox.md"].length && texts["toolbox.md"].startsWith(data.files["toolbox.md"]));
+  assert.match(data.files["toolbox.md"], /Toolbox rule \d+\.$/, "the cut falls at the end of a section");
+  assert.match(text, /\[Cut here at a section break to fit this load\. Left out: "Toolbox part \d+"[^\]]*Read the rest with get_agent_file with path toolbox\.md\.\]/);
+  assert.deepEqual(data.held.map((h: { path: string }) => h.path), ["personality.md", "playbook.md", "context/README.md"]);
+  // The long runs of the file list are one line each, and pointers to the loaded METHOD.md are not listed.
+  assert.match(text, /- tools\/quality\/cards\/: 38 quality cards, one per kind of work\. Match tools\/quality\/cards\/INDEX\.md/);
+  assert.doesNotMatch(text.split("===== AGENTS.md =====")[0], /- WORK-METHOD\.md|- tools\/quality\/INTAKE\.md|card-7\.md/);
+  // With no request, no rule file competes for the room, so the toolbox comes whole.
+  const one = await call("load_agent", { agent_id: "nova-seo" });
+  assert.equal(one.structuredContent.files["toolbox.md"], texts["toolbox.md"], "with no request there is room for the whole toolbox");
 });
 
 test("load_agent takes a job role and loads its lead agent, the way toolbox.md names a helper", async () => {

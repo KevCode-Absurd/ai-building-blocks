@@ -1,6 +1,6 @@
 ---
 name: delay-and-stockout-customer-messages
-description: "Ready-to-load messages and triggers for every late or out-of-stock moment: dispatch delays, items oversold after purchase, split shipments, stuck parcels, failed delivery, peak cut-offs, pre-order date slips, back-in-stock alerts, and orders that will never ship, each with its trigger rule, channel, timing, the buyer's choice to wait or cancel, and the make-good rule. Written to meet US delay-notice rules and WhatsApp template rules, with India notes on SMS registration and languages. Use when late orders flood support, a stockout or courier problem hits, before peak season, or when setting up order notifications."
+description: "Ready-to-load messages and triggers for every late or out-of-stock moment: dispatch delays, items oversold after purchase, split shipments, stuck parcels, failed delivery, peak cut-offs, pre-order date slips, back-in-stock alerts, and orders that will never ship, each with its trigger rule, channel, timing, the buyer's choice to wait or cancel, and the make-good rule. Written to meet US delay-notice rules, UK and EU delivery and cancellation rights, and WhatsApp template rules, with notes on SMS sender registration and languages. Use when late orders flood support, a stockout or courier problem hits, before peak season, or when setting up order notifications."
 ---
 
 # Delay and stockout messages
@@ -28,7 +28,7 @@ Required:
 
 1. **Order and fulfilment data**: Shopify order export with Created at, Fulfillment Status, Fulfilled at, Shipping Country, Payment Method; plus courier tracking events (last scan, estimated delivery, failed-delivery reason).
 2. **The store's promises**: dispatch time, delivery promise by region, pre-order dates, policy pages.
-3. **Channels and consent**: which buyers agreed to SMS or WhatsApp, the WhatsApp Business provider, registered SMS sender and templates (India DLT).
+3. **Channels and consent**: which buyers agreed to SMS or WhatsApp, the WhatsApp Business provider, registered SMS sender and templates where a country requires them.
 4. **Brand voice**: five real lines from the store's emails or site.
 5. **Make-good budget**: what support may give without asking.
 
@@ -39,7 +39,7 @@ Messages and automations are built at draft access (level 2). Turning them on, s
 ## Before you start: the gates
 
 1. **Promise is known.** Pass when each order has a promised dispatch or delivery date. Fail: set the promise first with `set-up-shipping-rates-and-delivery-promise`; a delay message needs something to be late against.
-2. **Consent per channel.** Pass when SMS and WhatsApp go only to buyers who agreed, and Indian SMS templates are registered. Fail: email only until fixed.
+2. **Consent per channel.** Pass when SMS and WhatsApp go only to buyers who agreed, and SMS templates are registered where the country requires it. Fail: email only until fixed.
 3. **US delay rule.** Pass when US buyers get a wait-or-cancel choice before the promised date passes [CXP-6160]. Fail: fix the trigger timing before anything else.
 4. **Capacity.** Pass when someone answers replies within one working day. Fail: send fewer, plainer messages with self-serve links.
 
@@ -71,7 +71,7 @@ The day counts are practitioner defaults; tune them to the courier's normal scan
 - **Be early.** Proactive updates cut order-status contacts sharply [CXP-0014]; a contact rate above 8% of orders points to a broken process, not a messaging gap [CXP-0012].
 - **Plain and low-effort.** Every message carries the order number, the new date and a link that works on a phone. Effort, not lack of delight, drives disloyalty [CXP-0009].
 
-India notes: send in English plus the buyer's language where the store has it (Hindi and the main regional languages of its top states); keep SMS within registered DLT templates. For COD orders, say the amount due on delivery stays the same. US notes: transactional texts still need the buyer's number given for order updates; keep marketing out of them.
+Market notes: send in the languages your buyers use (the main languages of the store's top countries or regions); keep SMS within registered templates where a country requires them. For pay-on-delivery orders, say the amount due on delivery stays the same. US notes: transactional texts still need the buyer's number given for order updates; keep marketing out of them. UK and EU notes: buyers can cancel an online order within 14 days of delivery anyway, and a badly missed delivery date can let them end the contract, so offer the cancel choice plainly.
 
 ### 3. Write the message set
 
@@ -90,7 +90,7 @@ Fill each message in the brand's voice; keep the structure. Email versions add a
 "Your parcel for order {order_number} hasn't moved since {last_scan_date}. We've raised it with {courier}. Next update by {date}. If it doesn't move by then, we'll send a replacement or refund, your choice."
 
 **5. Failed delivery**
-"{courier} couldn't deliver order {order_number} today ({reason}). Pick a new day or fix the address here: {reattempt_link}. {For COD: Please keep {amount} ready.}"
+"{courier} couldn't deliver order {order_number} today ({reason}). Pick a new day or fix the address here: {reattempt_link}. {For pay on delivery: Please have {amount} ready.}"
 
 **6. Peak or weather cut-off**
 "Order by {date} to get it before {festival or holiday}. After that, orders ship from {date}. {Region} deliveries may run {n} days late because of {reason}."
@@ -128,7 +128,7 @@ Load the triggers in the helpdesk, Shopify Flow or the messaging app. Test each 
 - US delay messages follow the first and renewed notice rules.
 - No WhatsApp order update contains a discount, credit or code.
 - No message swaps an item or pays a refund as credit without the buyer choosing it.
-- SMS and WhatsApp go only to buyers who agreed; India SMS fits registered templates.
+- SMS and WhatsApp go only to buyers who agreed; SMS fits registered templates where required.
 - Each message was tested on a phone with a real link.
 - Nothing is switched on or sent without the client's yes.
 
@@ -161,4 +161,10 @@ Load the triggers in the helpdesk, Shopify Flow or the messaging app. Test each 
 - OPS-0009: no-approval budget for reps.
 - OPS-0019: hiding items at peak to avoid selling out.
 
-What makes this skill ours: every late-order message carries a real wait-or-cancel choice timed to US notice rules; offers stay out of WhatsApp order updates so they remain utility messages; make-goods are capped and each frequent trigger is sent back to the process that caused it; and India COD, SMS registration and language notes are built in.
+What makes this skill ours: every late-order message carries a real wait-or-cancel choice timed to US notice rules; offers stay out of WhatsApp order updates so they remain utility messages; make-goods are capped and each frequent trigger is sent back to the process that caused it; and pay-on-delivery, SMS registration and language notes are built in.
+
+## Selling in India
+
+- SMS templates must be registered under the DLT rules before they can be sent.
+- Send in English plus the buyer's language where the store has it (Hindi and the main regional languages of its top states).
+- For COD orders, say the amount due on delivery stays the same.

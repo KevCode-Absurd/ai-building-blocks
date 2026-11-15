@@ -51,7 +51,7 @@ Access: the client creates accounts and signs in; never ask for passwords. Draft
 - Set shared negative lists (waste words) and a brand negative list for non-brand campaigns [GAD-0028].
 - Account settings: auto-apply recommendations off; Search partners and Display off in Search campaigns [GAD-0042].
 - Feed titles on the top 10 products rewritten with `write-product-feed-titles-that-match-searches` if they are manufacturer names.
-- India: billing set with GST details so invoices are usable; add GST on Google invoices to ad cost when judging profit. Note which pin codes the store ships to and how cash on delivery is handled.
+- Billing set with the store's VAT or tax number so invoices are usable; add any VAT or goods and services tax on Google invoices to ad cost when judging profit, unless the store can reclaim it. Note which regions or postcodes the store ships to and how any pay-on-delivery orders are handled.
 
 ### 2. Days 8 to 30: launch two campaigns
 
@@ -102,6 +102,19 @@ At each review, read results on store data and conversion-time columns:
 
 Higher repeat value can justify a lower first-order target, but only when repeat rates are measured, not assumed [GAD-0032].
 
+### 6. Launch settings, budget shares and naming
+
+Settings for every launch campaign: Sales goal; purchases as the only goal (never add to cart or begin checkout); Search Partners and Display off; location set to presence, not presence or interest; skip suggested keywords and assets; leave "ways to reach your goal" blank.
+
+- **Do not stack types on a small budget.** Under about 50 to 100 a day, run branded Search and one Shopping campaign only.
+- **Budget against order value.** A 1,000 product on 50 a day gets about one sale in four days, too slow to learn; warn the owner rather than invent a minimum.
+- **Starting budget shares** (practitioner guide, adjust to the store): 50% or more on non-brand Shopping; branded Search 10 to 20 a day, up to 50 for larger brands, kept under 10% of Google spend [GAD-0024]; video remarketing 10 to 15% once traffic allows; Demand Gen about 30% only at stage 3, after lower stages saturate.
+- **Maximize Conversion Value start budget:** about 3 to 4 times average order value a day.
+- **Standard Shopping, not Performance Max, when the account has no data.** Start on the 5 to 10 best sellers [GAD-0030]: Ad groups, then Product groups, subdivide by Item ID, include the best sellers and set "Everything else" to Excluded. Priority Low while it is the only Shopping campaign; High once a feed-only Performance Max joins it [GAD-0029].
+- **Weekly product rule:** exclude a product once its spend passes its break-even cost per sale with no sale.
+- **Second Shopping campaign** on all products at a lower budget to find new winners, which move into the best-seller campaign.
+- **Naming:** type, country, focus, bid strategy (for example Shopping-USA-Bestsellers-MaxClicks).
+
 ## Checks before you hand it over
 
 - The search demand gate is answered with real volumes.
@@ -111,6 +124,7 @@ Higher repeat value can justify a lower first-order target, but only when repeat
 - Day 30, 60 and 90 rules are written before launch.
 - Tracking and feed gates passed, with evidence.
 - Nothing launches or scales without the client's yes.
+- Every launch campaign shows purchases as its only goal, partners and Display off, and presence location.
 
 ## Output
 
@@ -128,6 +142,7 @@ Higher repeat value can justify a lower first-order target, but only when repeat
 - **Budget from a round number.** Step 3 works it from break-even and purchases needed.
 - **Raising budget before profit.** Step 5's day 60 rule holds it.
 - **Starting Google for a product nobody searches.** Gate 1 says so first [GAD-0022].
+- **Stacking Search, Shopping, Performance Max and video on 50 a day.** No campaign gets enough data to learn.
 
 ## Sources
 
@@ -145,5 +160,12 @@ Higher repeat value can justify a lower first-order target, but only when repeat
 - GAD-0042: setting leaks to switch off at launch.
 - GAD-0054: Shopping carries most store sales on Google.
 - MEA-0017: one primary purchase action.
+- GAD-0024: brand at 3 to 8%, never above 10%.
+- GAD-0029: Shopping priority with feed-only PMax.
 
-What makes this skill ours: it first asks whether Google should lead at all for this product; every month's budget is worked from gross profit per purchase and checked against the client's cash; each new campaign type unlocks on a purchase count, not a calendar date; and day 30, 60 and 90 go, hold or stop rules are written before the first rupee or dollar is spent.
+What makes this skill ours: it first asks whether Google should lead at all for this product; every month's budget is worked from gross profit per purchase and checked against the client's cash; each new campaign type unlocks on a purchase count, not a calendar date; and day 30, 60 and 90 go, hold or stop rules are written before the first dollar, pound or euro is spent.
+
+## Selling in India
+
+- Set billing with GST details so invoices are usable, and add GST on Google invoices to ad cost when judging profit.
+- Note which pin codes the store ships to and how cash on delivery is handled.

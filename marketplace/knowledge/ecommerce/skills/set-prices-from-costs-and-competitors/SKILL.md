@@ -1,11 +1,11 @@
 ---
 name: set-prices-from-costs-and-competitors
-description: "A price for each product, worked out four ways and then decided: a floor from delivered cost, the ad cost to win a buyer and the profit target; the band rival products sell in, compared per unit and with shipping; where the store's proof lets it sit in that band; and the price ladder across the range. Each row ends with one recommended price, contribution per order, break-even ROAS, India MRP or US pre-tax price, and what to do when the floor sits above the market. Use when pricing a new product, repricing after cost or ad-cost changes, when margins are thin across the range, or before a launch or marketplace listing."
+description: "A price for each product, worked out four ways and then decided: a floor from delivered cost, the ad cost to win a buyer and the profit target; the band rival products sell in, compared per unit and with shipping; where the store's proof lets it sit in that band; and the price ladder across the range. Each row ends with one recommended price, contribution per order, break-even ROAS, the price as the market must show it (tax-inclusive in the UK, EU and Australia, pre-tax in the US and Canada), and what to do when the floor sits above the market. Use when pricing a new product, repricing after cost or ad-cost changes, when margins are thin across the range, or before a launch or marketplace listing."
 ---
 
 # Set product prices
 
-**You get:** a price sheet with one row per product: delivered cost, price floor, rival price band per unit, proof level, recommended price, contribution per order and as a percentage, break-even ROAS, price per unit or per use, MRP (India) or pre-tax price (US), and change from today, plus a one-screen summary of the moves.
+**You get:** a price sheet with one row per product: delivered cost, price floor, rival price band per unit, proof level, recommended price, contribution per order and as a percentage, break-even ROAS, price per unit or per use, shown price (tax-inclusive or pre-tax, as the market requires), and change from today, plus a one-screen summary of the moves.
 
 ## When to use
 
@@ -25,7 +25,7 @@ description: "A price for each product, worked out four ways and then decided: a
 
 Required:
 
-1. **Delivered cost per unit**: landed cost, delivery per order, payment fees, return and RTO allowance, from `build-sku-profit-sheet`.
+1. **Delivered cost per unit**: landed cost, delivery per order, payment fees, return and failed-delivery allowance, from `build-sku-profit-sheet`.
 2. **Ad cost per new customer**, from `store-meta-math` or `new-customer-cost-by-channel`. For a new store, a planning figure from current tests, marked as such.
 3. **Profit target**: the contribution per order the owner needs to cover fixed costs and profit, as a percentage of price.
 4. **Rival prices**: 3 to 8 close alternatives buyers would compare, with live URL, pack size, shipping and date checked.
@@ -39,7 +39,7 @@ If rival prices cannot be checked on the day, mark them "unchecked" and do not d
 
 1. **Delivered cost per product is complete.** Product cost against price is not gross margin [MEA-0037]. Fail: build the cost rows first.
 2. **Profit target is agreed.** Fail: use the store's current average contribution percentage and state it as the assumption in one line.
-3. **Price rules for the market.** India: the selling price may not exceed the printed MRP, which includes all taxes [COG-6264]. US: prices show before sales tax. Feed prices must match the page exactly or Google disapproves products [GAD-6122].
+3. **Price rules for the market.** Check your market's price display rules: in the UK, EU and Australia, consumer prices show including VAT or a similar consumption tax, and the EU and UK also expect a unit price (per kg or per litre) on many goods; in the US and Canada, prices usually show before sales tax; some markets cap the selling price at a printed maximum retail price that includes all taxes [COG-6264]. Feed prices must match the page exactly or Google disapproves products [GAD-6122].
 
 ## Steps
 
@@ -79,6 +79,14 @@ A new brand that priced like luxury with no reviews sold a tenth of its plan unt
 
 Round to the price endings buyers in that category expect (look at the rivals). Check that a single unit gives enough contribution to pay for its own shipping; if not, sell it as a multi-pack.
 
+Pick the ending style per product, with a one-line reason, as rules of thumb to test:
+
+- **Round** (120) for premium, gift and bought-for-enjoyment products, where a whole number reads as quality.
+- **Just below** (119) only when it drops the first digit and the buyer is price-led, or the item is cheap and low-risk. 199 to 195 changes nothing a buyer notices.
+- **Exact** (123) for bulk, trade and wholesale quotes, where the buyer expects to negotiate and a precise figure reads as worked out.
+
+Keep add-ons and accessories on the same ending style as the main product, and keep upgrade tiers on the same first digit where the aim is to get buyers to step up.
+
 ### 5. Build the ladder across the range
 
 - Entry, core and premium products should step up in clear jumps, so the middle option looks sensible.
@@ -96,10 +104,13 @@ For the recommended price: contribution per order, contribution %, break-even RO
 - Where the gain is uncertain, run `run-a-price-test` before changing everything.
 - Trust lines near the price (reviews, guarantee) can lower price objections [LPG-0017].
 
-### 8. India and US notes
+### 8. Market and channel notes
 
-- **India:** set MRP inclusive of GST on the pack and the page; the selling price may be lower but not higher. Add marketplace commission and closing fees per channel; a price that works on the store may lose money on a marketplace. Decide whether COD carries a fee and show it on the product page.
-- **US:** compare rivals including shipping; Amazon referral fees rise with price, so price per channel.
+- **Tax in the price:** where prices must include VAT (UK, EU) or consumption tax (Australia, New Zealand), work the floor on the price after tax is taken out, then show the tax-inclusive price. In the US and Canada, price before sales tax and let checkout add it.
+- **Marketplaces:** add commission and closing or fulfilment fees per channel (Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre); a price that works on the store may lose money on a marketplace. Amazon referral fees rise with price, so price per channel.
+- **Shipping:** compare rivals including shipping to a typical address in each market.
+- **Payment options:** decide whether any payment method carries a fee (for example pay on delivery where offered) and show it on the product page, where local rules allow surcharges at all.
+- **Several currencies:** set a rounded price per market rather than a straight conversion; see `set-up-markets-and-currencies`.
 
 ## Checks before you hand it over
 
@@ -108,7 +119,8 @@ For the recommended price: contribution per order, contribution %, break-even RO
 - Each position (above, at, below median) cites the proof that supports it.
 - Rows where the floor sits above the band have a reshape, cost or drop decision.
 - Contribution % and break-even ROAS are shown at the recommended price.
-- India rows show MRP inclusive of GST, and selling price at or below it.
+- Each price has an ending style (round, just below or exact) with its reason; just-below endings drop the first digit.
+- Each market's rows show the price the way its rules require (tax-inclusive or pre-tax, unit price where needed).
 - Feed, page and ads change on the same day.
 - No price was changed without a client yes.
 
@@ -118,7 +130,7 @@ For the recommended price: contribution per order, contribution %, break-even RO
 
 **Price sheet** (`price-sheet.csv` or Google Sheet):
 
-| SKU | Product | Delivered cost | Ad cost per new customer | Profit target % | Floor | Rival min / median / max per unit | Spread read | Proof level | Position | Recommended price | MRP or pre-tax price | Contribution per order | Contribution % | Break-even ROAS | Orders a rise can lose | Current price | Change | Action (raise, hold, cut, reshape, drop) | Date checked |
+| SKU | Product | Delivered cost | Ad cost per new customer | Profit target % | Floor | Rival min / median / max per unit | Spread read | Proof level | Position | Recommended price | Shown price (tax-inclusive or pre-tax) | Contribution per order | Contribution % | Break-even ROAS | Orders a rise can lose | Current price | Change | Action (raise, hold, cut, reshape, drop) | Date checked |
 
 **Change plan:** dates, list announcement, subscriber rule, feed and ad updates, test candidates. **Assumptions:** the profit target, entry products and rival list used where not given, one line each.
 
@@ -128,6 +140,7 @@ For the recommended price: contribution per order, contribution %, break-even RO
 - **Comparing sticker prices.** Step 2 compares per unit with shipping.
 - **Premium without proof.** Step 3 ties position to checkable proof.
 - **Pricing at the floor when the market will not pay it.** Step 4 forces reshape, cost or drop.
+- **A .99 ending on a premium gift.** Step 4 picks the ending style by product and buyer.
 - **One price for every channel.** Step 8 prices per channel's fees.
 - **Price change that misses the feed.** The gates and step 7 change feed, page and ads together.
 
@@ -142,7 +155,11 @@ For the recommended price: contribution per order, contribution %, break-even RO
 - PRD-0006: very low prices struggle to fund paid ads.
 - OFF-0063: grandfather subscribers at their price.
 - LPG-0017: trust near the price lowers price objections.
-- COG-6264: India MRP inclusive of all taxes.
+- COG-6264: a printed maximum retail price includes all taxes.
 - GAD-6122: feed price must match the page.
 
 What makes this skill ours: the floor includes the ad cost to win a buyer, not just product cost; rivals are compared per unit with shipping; the position in the band is set by proof the buyer can check; and a floor above the market triggers a reshape, cost or drop decision instead of a price nobody will pay.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. In India the selling price may not exceed the printed MRP, which includes all taxes [COG-6264]; set MRP inclusive of GST on the pack and the page, and show it as a column in the price sheet. Add the RTO allowance to delivered cost, decide whether COD carries a fee, and price Flipkart, Myntra and Nykaa listings on their own commission and closing fees.

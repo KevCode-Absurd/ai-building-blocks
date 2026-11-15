@@ -26,7 +26,7 @@ description: "A readout of a finished ad creative test that marks each tested co
 Required (read access, level 1):
 
 1. **Ad platform export** for the test window at ad level: ad name, ad set, spend, impressions, reach, frequency, link clicks, 3-second views and video plays at 25% and 50% (video), purchases, purchase value. Meta Ads Manager, TikTok Ads Manager or Google Ads.
-2. **Shopify order export** for the same window: order name, created at, total, discount code, UTM fields or landing site, customer type (new or returning), and for India the payment method and delivery status.
+2. **Shopify order export** for the same window: order name, created at, total, discount code, UTM fields or landing site, customer type (new or returning), and, where the store offers pay on delivery, the payment method and delivery status.
 3. **Gross profit per purchase and target cost per purchase** by product, from `store-meta-math`.
 4. **The test plan**: question, concepts, what was held constant, start and end dates.
 5. **Change log** for the window: price, offer, page, stock and tracking changes.
@@ -48,7 +48,7 @@ If the test plan is missing, rebuild it from ad names and the change log and say
 
 For each concept (sum its ads): spend, platform purchases, store-matched purchases, new-customer share, and store gross profit after ad cost = matched purchases x gross profit per purchase minus spend. Production cost goes in too when comparing formats [MCR-0023].
 
-India note: with cash on delivery, a placed order is not a sale. Use delivered orders, or apply the store's return-to-origin rate by payment method before counting gross profit.
+Pay on delivery note: where buyers can pay on delivery, a placed order is not a sale. Use delivered orders, or apply the store's failed-delivery rate by payment method before counting gross profit.
 
 ### 2. Apply the data rule
 
@@ -87,7 +87,7 @@ One row per concept in the learning log. Keep losers; they define what the store
 - Every win is on store-matched purchases and gross profit after ad cost, not platform return.
 - The data rule is stated in money for this store and was met before any win or lose.
 - Test changes, tracking gaps and sale distortion are named where they apply.
-- COD stores counted delivered orders or adjusted for return-to-origin.
+- Pay-on-delivery stores counted delivered orders or adjusted for failed deliveries.
 - Each concept has three next ads that each change buyer, angle, format, offer or hook.
 - No ad was paused, moved or scaled without the client's yes.
 
@@ -112,7 +112,7 @@ One row per concept in the learning log. Keep losers; they define what the store
 - **Calling it too early.** Step 2 sets a spend bar in the store's own money.
 - **Ignoring a changed test.** Gate 2 parks concepts whose offer, page or stock moved.
 - **Trusting platform purchases.** Gate 3 and step 1 match them to store orders.
-- **COD orders counted as sales.** Step 1 counts delivered orders in India.
+- **Pay-on-delivery orders counted as sales.** Step 1 counts delivered orders.
 - **"Make more like it" with no detail.** Step 6 names three ads and what each changes.
 
 ## Sources
@@ -130,4 +130,8 @@ One row per concept in the learning log. Keep losers; they define what the store
 - MEA-0024: gross profit per customer over acquisition cost bands.
 - MEA-0037: gross margin is delivered cost.
 
-What makes this skill ours: every verdict is on store-matched purchases and gross profit after ad cost, with a spend bar set in the store's own money; tests that changed mid-window, sale-week distortion and COD return-to-origin are handled before anyone calls a winner; and each verdict turns into three named next ads that change one real part, so the readout feeds the next batch instead of a slide.
+What makes this skill ours: every verdict is on store-matched purchases and gross profit after ad cost, with a spend bar set in the store's own money; tests that changed mid-window, sale-week distortion and failed pay-on-delivery orders are handled before anyone calls a winner; and each verdict turns into three named next ads that change one real part, so the readout feeds the next batch instead of a slide.
+
+## Selling in India
+
+- With COD, use delivered orders or apply the store's RTO rate by payment method before calling a winner.

@@ -1,6 +1,6 @@
 ---
 name: recover-carts-by-chat
-description: "WhatsApp, SMS and chat messages with exact timing that bring back abandoned carts and checkouts, sent only to buyers who opted in, plus a separate path for chat leads who went quiet after a link. Sets who gets a message, the delay, the two-message cap, when a discount is allowed, how replies are answered, the suppressions (bought, opted out, open complaint, out of stock), the cost check per message and a holdout that shows real recovered profit rather than attributed revenue. India notes for COD carts and WhatsApp journeys, US notes for SMS consent. Use when carts are abandoned and the store has WhatsApp or SMS consent but no chat recovery, or when chat leads go cold after a link."
+description: "WhatsApp, SMS and chat messages with exact timing that bring back abandoned carts and checkouts, sent only to buyers who opted in, plus a separate path for chat leads who went quiet after a link. Sets who gets a message, the delay, the two-message cap, when a discount is allowed, how replies are answered, the suppressions (bought, opted out, open complaint, out of stock), the cost check per message and a holdout that shows real recovered profit rather than attributed revenue. Market notes for WhatsApp journeys, pay-on-delivery carts, and SMS consent in the US, UK, EU, Canada and Australia. Use when carts are abandoned and the store has WhatsApp or SMS consent but no chat recovery, or when chat leads go cold after a link."
 ---
 
 # Recover carts by chat
@@ -18,7 +18,7 @@ description: "WhatsApp, SMS and chat messages with exact timing that bring back 
 
 - Writing the cart and checkout emails: use `write-abandoned-cart-and-checkout-emails`.
 - Full flow planning across email, SMS and WhatsApp: use `email-sms-flow-plan`.
-- Consent capture, DLT, TCPA and quiet hours: use `sms-and-whatsapp-compliance-setup`.
+- Consent capture, TCPA, UK and EU consent rules, sender registration and quiet hours: use `sms-and-whatsapp-compliance-setup`.
 - Fixing why buyers leave checkout: use `fix-checkout-drop-off`.
 
 ## What you need
@@ -70,7 +70,7 @@ Two chat messages per cart at most (practitioner default, test it). Send between
 
 Message 1 helps, it does not bribe. Cart abandoners often buy within a day or two anyway, so any early incentive is small or none, and at checkout a reminder or risk reducer beats a discount [OFF-0009].
 
-> Hi [first name], you left [product] in your cart at [store]. It's still available at Rs [price]. [One risk reducer: free returns in 7 days / COD available / delivery by (date)]. Pick up where you left off: [cart link]. Any question about size or delivery? Just reply here.
+> Hi [first name], you left [product] in your cart at [store]. It's still available at [price in the store's currency]. [One risk reducer: free returns in 7 days / pay on delivery available / delivery by (date)]. Pick up where you left off: [cart link]. Any question about size or delivery? Just reply here.
 
 Ending on a simple question invites replies, and replies surface the real objection [EML-0035].
 
@@ -80,7 +80,7 @@ Use the top reason from the store's "Lost:" labels or post-purchase survey (size
 
 ### 5. Write the quiet chat lead message (group C)
 
-> "Hi [first name], did the [size M] link work for you? If you're between sizes or want to check delivery to your pincode, tell me and I'll sort it."
+> "Hi [first name], did the [size M] link work for you? If you're between sizes or want to check delivery to your postcode, tell me and I'll sort it."
 
 No template, no offer blast, one message. Answers come from `write-chat-sales-scripts`.
 
@@ -96,10 +96,11 @@ Per group: messages sent x cost per message (from the provider's current rate ca
 
 Hold back 10% of eligible carts at random for 4 weeks (practitioner default). Compare the order rate within 7 days for messaged versus held-back carts, then multiply the difference by gross profit per order. Attributed recovered revenue counts people who would have bought anyway.
 
-### India and US notes
+### Market notes
 
-- **India:** WhatsApp is the main chat channel, and automated trigger journeys have drawn far more clicks than broadcasts [EML-0048]. For COD carts, message 1 can say COD is open; never suggest COD where the store has made that pincode prepaid only. Write in the language the buyer used at checkout where possible.
+- **WhatsApp markets** (much of Europe, Latin America, the Middle East and Asia): WhatsApp is often the main chat channel, and automated trigger journeys have drawn far more clicks than broadcasts [EML-0048]. Where the store offers pay on delivery, message 1 can say it is open; never suggest it where the store has made that area prepaid only. Write in the language the buyer used at checkout where possible.
 - **US:** SMS cart reminders need express written consent under US texting rules; route set-up through `sms-and-whatsapp-compliance-setup`. Keep each text under 160 characters with no emoji, or it bills extra segments [EML-0024].
+- **UK, EU, Canada and Australia:** cart texts and WhatsApp messages need prior marketing consent and a clear opt-out (UK and EU privacy and e-marketing rules, Canada's anti-spam law, Australia's Spam Act); route set-up through `sms-and-whatsapp-compliance-setup`.
 
 ## Checks before you hand it over
 
@@ -140,7 +141,11 @@ Hold back 10% of eligible carts at random for 4 weeks (practitioner default). Co
 - EML-0035: end with a simple question.
 - EML-0044, OFF-0065: late discounts with real expiry; discount profit maths.
 - EML-0009: Shopify Messaging suppression.
-- EML-0048: WhatsApp journeys in India.
+- EML-0048: WhatsApp trigger journeys beat broadcasts.
 - EML-0024: SMS segment length.
 
 What makes this skill ours: quiet chat leads are recovered free inside the open window instead of with paid templates; each group is judged on extra gross profit from a holdout, not attributed revenue; message 1 helps rather than discounts; and Instagram is kept to replies because the platform does not allow cold DMs.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. WhatsApp is the main chat channel. For COD carts, message 1 can say COD is open; never suggest COD where the store has made that pincode prepaid only. Show prices as Rs [price].

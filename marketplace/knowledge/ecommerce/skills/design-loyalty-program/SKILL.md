@@ -1,6 +1,6 @@
 ---
 name: design-loyalty-program
-description: "A loyalty program designed from the store's own repeat data and margins: whether a program is worth building at all, the earn rules (points per purchase and for which actions), the burn rules (reward value, minimum redemption, expiry and reminders), optional tiers based on gross profit, and a cost model that shows reward cost, expected breakage and the extra repeat gross profit the program must create to pay for itself. Includes a holdout test so the program is judged on real lift, launch messages, and India coins and COD notes. Tool-neutral. Use before buying a loyalty app, when an existing program costs more than it returns, or when repeat rate has stalled."
+description: "A loyalty program designed from the store's own repeat data and margins: whether a program is worth building at all, the earn rules (points per purchase and for which actions), the burn rules (reward value, minimum redemption, expiry and reminders), optional tiers based on gross profit, and a cost model that shows reward cost, expected breakage and the extra repeat gross profit the program must create to pay for itself. Includes a holdout test so the program is judged on real lift, launch messages, and notes on store wallets, pay-on-delivery orders and points terms by market. Tool-neutral. Use before buying a loyalty app, when an existing program costs more than it returns, or when repeat rate has stalled."
 ---
 
 # Loyalty program design
@@ -29,7 +29,7 @@ Required (read access, level 1):
 2. **Gross profit per order** and gross margin by product from `build-sku-profit-sheet` or `store-meta-math`.
 3. **Repeat facts** from `cohort-repeat-and-ltv-analysis`: share of buyers who order again within 90, 180 and 365 days, median days to second order, gross profit per returning order.
 4. **Current discounts and codes** in use.
-5. **Return and RTO rate.**
+5. **Return and failed-delivery rate.**
 
 Optional: an existing program's data (members, points issued, redeemed, expired), email and SMS consent counts.
 
@@ -62,11 +62,11 @@ Recommend one shape; name the runner-up in a line. Non-money benefits (early acc
 
 ### 3. Set earn and burn
 
-- **Earn:** points per unit of spend on product subtotal after discounts, excluding shipping and tax. Award points only after the return window closes, or claw them back on refund; in India, COD orders earn only once delivered and paid.
+- **Earn:** points per unit of spend on product subtotal after discounts, excluding shipping and tax. Award points only after the return window closes, or claw them back on refund; pay-on-delivery orders earn only once delivered and paid.
 - **Bonus actions:** account creation, birthday, review with photo (honest reviews only, never for a positive rating), referral. Cap these; each is a cost.
 - **Reward value:** start at about 3 to 5% of spend returned as reward value (practitioner default, test it), then check it in step 4.
 - **Burn:** a minimum redemption about the size of half a typical order's reward (so the first reward is reachable by order two or three), redeemed at checkout, not stackable with sale codes.
-- **Expiry:** set it shorter than the gap you want to close but long enough to use. One Indian brand used coins that expire 60 days after purchase with email and SMS reminders, which pulled buyers back; this suits repeat cycles of about 2 to 4 months and annoys long-cycle buyers [CXP-0019]. For long cycles, expire after 12 months of no activity instead.
+- **Expiry:** set it shorter than the gap you want to close but long enough to use. One brand used coins that expire 60 days after purchase with email and SMS reminders, which pulled buyers back; this suits repeat cycles of about 2 to 4 months and annoys long-cycle buyers [CXP-0019]. For long cycles, expire after 12 months of no activity instead.
 
 ### 4. Build the cost model
 
@@ -93,15 +93,15 @@ Members self-select, so comparing members with non-members overstates the effect
 
 Outline, for the email team: launch email to existing buyers with their starting balance, a short program page, a line in the order confirmation showing points earned, the expiry reminder (14 and 3 days before), and the first-reward-reached note. Send copy writing to `write-post-purchase-emails`.
 
-### 8. India and US notes
+### 8. Notes by market
 
-- **India:** "coins" or a store wallet is familiar to buyers. Credit points only after COD delivery and payment. Remind by WhatsApp only with opt-in. Ask the accountant how reward redemption is treated for GST invoices.
-- **US:** write clear terms (earn, value, expiry, changes, no cash value). Some states have rules on store credit and gift card expiry; check before calling points "credit".
+- **Wallets and pay on delivery:** "coins" or a store wallet is familiar to buyers in many markets. Credit points on pay-on-delivery orders only after delivery and payment. Remind by WhatsApp or SMS only with opt-in. Ask the accountant how reward redemption is treated for sales tax or VAT on invoices.
+- **US, UK and EU:** write clear terms (earn, value, expiry, changes, no cash value). Some US states have rules on store credit and gift card expiry; check before calling points "credit". UK and EU consumer law expects fair, plain terms, so changes to point value need notice.
 
 ## Checks before you hand it over
 
 - The gate on repeat potential and basic service was checked with numbers.
-- Earn excludes shipping, tax and refunded or undelivered COD orders.
+- Earn excludes shipping, tax and refunded or undelivered pay-on-delivery orders.
 - Reward rate, redemption rate and app fee are in the cost model.
 - Break-even lift is stated as extra returning orders a year.
 - The program does not depend on breakage to pay.
@@ -125,7 +125,7 @@ Outline, for the email team: launch email to existing buyers with their starting
 
 - **Building loyalty on a broken experience.** Gate 2 checks basics first.
 - **A hidden permanent discount.** Step 4 prices the reward against gross profit.
-- **Points on refunded or unpaid COD orders.** Step 3 awards after delivery and returns.
+- **Points on refunded or unpaid pay-on-delivery orders.** Step 3 awards after delivery and returns.
 - **Counting members' spend as lift.** Step 6 uses a random holdout.
 - **Expiry that angers long-cycle buyers.** Step 3 ties expiry to the repeat cycle.
 
@@ -133,7 +133,7 @@ Outline, for the email team: launch email to existing buyers with their starting
 
 - CXP-0009: fix effort before delight.
 - CXP-0016: discount-led buyers often repeat worse.
-- CXP-0019: expiring coins with reminders in an Indian brand.
+- CXP-0019: expiring coins with reminders at one direct-to-consumer brand.
 - CXP-0022: a logged weekly budget for surprises.
 - EML-0053: first to second order is the usual limit.
 - FIN-0029: judge repeat gains on 60 to 180-day cash.
@@ -142,4 +142,11 @@ Outline, for the email team: launch email to existing buyers with their starting
 - OFF-0035: gifts and access beat blanket discounts.
 - OFF-0063: grandfathering rewards loyalty without discounting.
 
-What makes this skill ours: the program must earn back its cost in extra returning orders, computed from the store's own gross profit; a random holdout, not member spend, decides if it stays; points are never earned on refunded or undelivered COD orders; and expiry follows the store's real repeat cycle.
+What makes this skill ours: the program must earn back its cost in extra returning orders, computed from the store's own gross profit; a random holdout, not member spend, decides if it stays; points are never earned on refunded or undelivered pay-on-delivery orders; and expiry follows the store's real repeat cycle.
+
+## Selling in India
+
+- "Coins" or a store wallet is familiar to Indian buyers. The 60-day expiring coins example [CXP-0019] came from an Indian brand.
+- Credit points on COD orders only after delivery and payment, never on RTO orders.
+- Remind by WhatsApp only with opt-in.
+- Ask the accountant how reward redemption is treated on GST invoices.

@@ -56,7 +56,7 @@ Pull candidate terms from four places and keep the source on each:
 
 ### 2. Expand and get volumes
 
-Put the seeds into Keyword Planner with the right country and language. Add Google autocomplete, "People also ask" and marketplace search suggestions (Amazon, Flipkart, Myntra, Nykaa as relevant). Record monthly searches. Keyword Planner shows ranges without ad spend; treat them as bands, and trust the store's own Search Console impressions over any tool where both exist.
+Put the seeds into Keyword Planner with the right country and language. Add Google autocomplete, "People also ask" and marketplace search suggestions (Amazon, Walmart, Etsy, eBay, Zalando as relevant). Record monthly searches. Keyword Planner shows ranges without ad spend; treat them as bands, and trust the store's own Search Console impressions over any tool where both exist.
 
 ### 3. Read intent from the live results page
 
@@ -75,12 +75,15 @@ Never map a term to a page type that the results page does not show. If the top 
 
 - **Difficulty:** use a tool score if the client has one, or judge by hand: count how many top 10 results are large marketplaces or national brands with an exact-match page. Seven or more is hard for a small store.
 - **Money:** cost per click from Keyword Planner shows advertisers pay for the click, which is evidence the term sells.
-- One practitioner's screen for a small store's first targets: buying intent, over 1,000 monthly searches, difficulty under 40 and CPC over 1 dollar [SEO-0008]. It holds for US stores with a tool score; for India, scale the CPC bar to the market (rupee CPCs run lower) and accept smaller volumes for narrow, high-margin products. Practitioner default, test it.
+- One practitioner's screen for a small store's first targets: buying intent, over 1,000 monthly searches, difficulty under 40 and CPC over 1 dollar [SEO-0008]. It holds for US stores with a tool score; for markets where clicks cost less, scale the CPC bar to the market and accept smaller volumes for narrow, high-margin products. Practitioner default, test it.
 - Narrow variant terms ("oversized hoodies", "hoodies under 50") with difficulty under 35 and buying intent are often easier first wins than the head term [SEO-0012].
+- **Site age changes the bar.** For a site under about a year old, start with difficulty 30 or less and 100 or more monthly searches. When more than one screen fits a term (a collection variant on a new site), use the stricter one and say which. Never average screens from different practitioners; they were set for different cases.
+- **No difficulty score?** The top-of-page bid range in Keyword Planner is a rough stand-in: a high bid means many advertisers compete and profit from the term. It is a signal, not a measure.
+- **Kept on judgement.** Tool volumes are estimates. A term showing 0 to 10 searches can still deserve a page when buyers use it in reviews, tickets or site search; keep it and label it "kept on judgement" with the evidence.
 
 ### 5. Map one primary keyword per page
 
-For each existing collection and product URL, pick one primary keyword and 2 to 5 variants with the same intent. Rules:
+For each existing collection and product URL, pick one primary keyword and 2 to 5 variants with the same intent. To decide whether two terms belong on one page, search both: if mostly the same pages rank for each, they are one topic for one page; if different pages rank, they need separate pages. When a colour, material or room brings different products ("white linen curtains" versus "blackout curtains"), it gets its own page; when it shows the same products, it stays a variant. The homepage owns the broadest category term ("buy linen bedding online"), and no collection or post uses it as primary. Rules:
 
 - Collections take the category and variant terms; products take model, brand plus type, and specific attribute terms. On stores with over 50 products, collections tend to carry most organic revenue [SEO-0003], so map collections first.
 - One primary keyword per URL. A term never sits as primary on two pages.
@@ -104,9 +107,11 @@ Priority score per page = monthly searches x the store's own CTR at positions 1 
 
 Choose the product cluster with the highest summed score that the store can stock and staff. Put all SEO effort there for a quarter, starting with the most purchase-ready terms [SEO-0009]. Runner-up cluster in one line.
 
+Start tracking 3 to 5 of the cluster's primary terms this month and add a few each month, up to 20 to 30. Search Console's Performance report gives average position per query for free. Give the client a sheet filled on the same day each month: Keyword, Owner page, Date, Position, Change since last month, Clicks, Notes.
+
 ### 9. Market notes
 
-- **India:** check Hinglish and transliterated terms ("kurti for women", "saree online"), "price", "online" and city modifiers; run Keyword Planner per language where the store has translated pages. "COD" in a query signals a buyer; note it for the page copy.
+- **Non-English and mixed-language markets:** check transliterated and mixed-language terms, "price", "online" and city modifiers; run Keyword Planner per language where the store has translated pages. "Pay on delivery" or "free returns" in a query signals a buyer; note it for the page copy.
 - **US:** watch for "near me" and local-pack results; an online-only store skips terms where the results page is mostly maps.
 
 ## Checks before you hand it over
@@ -117,6 +122,8 @@ Choose the product cluster with the highest summed score that the store can stoc
 - Every priority row shows gross profit per order; none is ranked on volume alone.
 - All clashes found in Search Console have a decision.
 - New collection ideas pass the stock and profit rule.
+- The difficulty and volume screen used is named per term, the stricter one where two fit; low-volume terms kept on judgement show their evidence.
+- The homepage's broad term is primary nowhere else, and the first 3 to 5 tracked terms and the monthly tracking sheet are set.
 - No page titles, URLs or menus were changed.
 
 ## Output
@@ -139,6 +146,8 @@ Choose the product cluster with the highest summed score that the store can stoc
 - **Tool numbers as truth.** Step 2 prefers the store's own impressions.
 - **Empty new collections.** Step 6 needs stock and margin before a collection is proposed.
 - **Spreading thin.** Step 8 picks one cluster.
+- **Averaging rules of thumb.** Step 4 picks one screen per case and says which.
+- **Grouping by words, not results.** Step 5 groups terms only when the same pages rank for them.
 
 ## Sources
 
@@ -153,4 +162,10 @@ Choose the product cluster with the highest summed score that the store can stoc
 - SEO-0012: sub-collections for searched variants at low difficulty.
 - SEO-0013: a few pages drive most organic traffic.
 
-What makes this skill ours: pages are ranked by gross profit per order and stock, not search volume; intent is read from the live results page in each selling country; clashes come from the store's own Search Console data; and India's Hinglish and COD buyer terms are part of the seed list.
+What makes this skill ours: pages are ranked by gross profit per order and stock, not search volume; intent is read from the live results page in each selling country; clashes come from the store's own Search Console data; and mixed-language and payment-option buyer terms are part of the seed list.
+
+## Selling in India
+
+- Check Hinglish and transliterated terms ("kurti for women", "saree online") and city modifiers.
+- "COD" in a query signals a buyer; note it for the page copy.
+- Add Flipkart, Myntra and Nykaa search suggestions; rupee CPCs run lower, so scale the CPC bar down.

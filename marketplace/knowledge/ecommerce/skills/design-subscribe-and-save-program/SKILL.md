@@ -1,6 +1,6 @@
 ---
 name: design-subscribe-and-save-program
-description: "A subscribe-and-save offer for the store's repeat-use products: which products qualify, the discount (front-loaded or flat), delivery frequencies set from real usage, the first-order gift, skip, delay, swap and cancel rules, the cancel flow with save offers by reason, and a margin model that shows gross profit per subscriber over 6 and 12 months after churn and failed payments. Covers US online subscription law (clear terms, consent, easy cancel), India recurring payment rules and COD limits, and how to place the offer on the product page. Tool-neutral, with Shopify's own Subscriptions app as the example. Use before launching subscriptions or when subscribers cancel fast."
+description: "A subscribe-and-save offer for the store's repeat-use products: which products qualify, the discount (front-loaded or flat), delivery frequencies set from real usage, the first-order gift, skip, delay, swap and cancel rules, the cancel flow with save offers by reason, and a margin model that shows gross profit per subscriber over 6 and 12 months after churn and failed payments. Covers online subscription law in the US, UK and EU (clear terms, consent, easy cancel), recurring payment rules such as strong customer authentication, why pay on delivery cannot be a subscription, and how to place the offer on the product page. Tool-neutral, with Shopify's own Subscriptions app as the example. Use before launching subscriptions or when subscribers cancel fast."
 ---
 
 # Subscribe and save program
@@ -29,7 +29,7 @@ Required (read access, level 1):
 2. **Landed cost per SKU**, shipping cost by units per order and payment fees, from `build-sku-profit-sheet`.
 3. **Usage facts per product**: units per pack and typical daily use.
 4. **Median days between orders** per product from `cohort-repeat-and-ltv-analysis`.
-5. **Payment set-up**: gateway, whether it supports recurring card or UPI mandates, share of COD orders.
+5. **Payment set-up**: gateway, whether it supports recurring card or wallet payments and local direct debits (such as SEPA Direct Debit in the EU or Direct Debit in the UK), share of pay-on-delivery orders.
 
 Optional: an existing subscription app's data (active, new, cancelled, reasons, skips, failed payments).
 
@@ -39,8 +39,8 @@ Setting up plans and the cancel flow needs draft access (level 2); turning subsc
 
 1. **Repeat use is real.** At least one product is used up on a cycle and is bought again by a meaningful share of buyers. Fail: no subscription; use bundles instead.
 2. **Margin after discount.** Gross profit per subscription order, after the recurring discount, shipping and fees, must stay positive and above the one-time order's gross profit per month of customer life. Computed in step 5.
-3. **Payments can recur.** US: card on file through the subscription app. India: recurring card charges need an e-mandate with extra authentication, a bank notice at least 24 hours before each charge, and the buyer can opt out any time [OFF-6307]; COD cannot be a subscription. Fail: offer a prepaid multi-month pack instead.
-4. **Legal terms.** US online subscriptions need clear terms before billing details, express consent, and a simple way to stop charges [OFF-6304]. In India, making cancellation hard, or taking card details for auto-debit during a free period, is a subscription trap under the dark-pattern guidelines [CXP-6608]; keep cancel as easy as sign-up. General practice, not a legal ruling.
+3. **Payments can recur.** US: card on file through the subscription app. UK and EU: the first payment needs strong customer authentication, and later charges run as merchant-initiated payments; check the gateway supports this. Other markets have their own recurring payment rules; check the gateway's notes. Pay on delivery cannot be a subscription. Fail: offer a prepaid multi-month pack instead.
+4. **Legal terms.** US online subscriptions need clear terms before billing details, express consent, and a simple way to stop charges [OFF-6304]. UK and EU consumer law also expects clear terms up front and treats hard cancellation or surprise renewals as unfair; keep cancel as easy as sign-up. General practice, not a legal ruling.
 5. **Capacity.** Recurring orders need stock planned ahead and a monthly shipping peak the warehouse can handle.
 
 ## Steps
@@ -103,9 +103,9 @@ Then cancel if they still want to. A save rate around 15% is good, 20% strong, u
 
 Show subscribe and one-time as two clear options with the price per delivery, frequency, savings and "skip or cancel any time" beside them. Auto-selecting subscription and giving one-time no discount raises take rate [OFF-0041], but the terms must stay plain; never show a quarterly charge as a monthly price that changes in the cart [OFF-0072].
 
-### 9. India and US notes
+### 9. Notes by market
 
-- **India:** recurring cards and mandates work for prepaid buyers only; offer a prepaid 3-month pack at a discount to COD-heavy buyers. Tell buyers the bank will send a notice before each charge [OFF-6307]. Remind and confirm by WhatsApp with opt-in. Price includes GST.
+- **Prepaid only:** recurring charges work for prepaid buyers only; offer a prepaid 3-month pack at a discount to buyers who mostly pay on delivery. Remind and confirm by email, SMS or WhatsApp with opt-in. Show the price the way the market expects (VAT included in the UK, EU and Australia; before sales tax in the US and Canada).
 - **US:** show the renewal price, frequency and how to cancel before checkout; get an active tick or button for consent; send a reminder before charges; cancel online in a few clicks [OFF-6304]. Some states add renewal-notice rules.
 
 ## Checks before you hand it over
@@ -116,7 +116,7 @@ Show subscribe and one-time as two clear options with the price per delivery, fr
 - Gross profit per subscription order stays positive after discount.
 - Skip, delay, swap and cancel work from the account without support.
 - Cancel flow has one save action per reason and stays short.
-- US terms, consent and easy cancel are in place; India uses mandates or prepaid packs, never COD.
+- US, UK and EU terms, consent and easy cancel are in place; pay-on-delivery buyers get prepaid packs, never a subscription.
 - Nothing goes live without the client's yes.
 
 ## Output
@@ -137,7 +137,7 @@ Show subscribe and one-time as two clear options with the price per delivery, fr
 - **Deep flat discounts.** Step 3 models front-loading and gifts first.
 - **Payback without churn.** Step 5 reads cohorts with churn [FIN-0014].
 - **Hard-to-cancel flows.** Gate 4 and step 7 keep cancel easy.
-- **COD subscriptions in India.** Gate 3 uses mandates or prepaid packs.
+- **Pay-on-delivery subscriptions.** Gate 3 uses recurring payments or prepaid packs.
 - **Subscribers hit by public sales.** Step 7 gives them a better offer [EML-0001].
 
 ## Sources
@@ -162,7 +162,16 @@ Show subscribe and one-time as two clear options with the price per delivery, fr
 - OFF-0072: monthly-price display can confuse and breach state rules.
 - OFF-6304: US online subscription law.
 - OFF-6306: Shopify Subscriptions self-serve features.
+
+What makes this skill ours: frequencies come from units per pack and daily use, not round numbers; the margin model runs 12 months by cohort with churn and failed payments; cancel stays as easy as sign-up under US, UK and EU rules; and buyers who mostly pay on delivery get prepaid packs instead of subscriptions that cannot be charged.
+
+## Selling in India
+
+- Recurring card charges need an e-mandate with extra authentication, a bank notice at least 24 hours before each charge, and the buyer can opt out any time [OFF-6307]. Check whether the gateway supports card or UPI mandates.
+- COD cannot be a subscription. Offer a prepaid 3-month pack at a discount to COD-heavy buyers.
+- Making cancellation hard, or taking card details for auto-debit during a free period, is a subscription trap under the dark-pattern guidelines [CXP-6608].
+- Remind and confirm by WhatsApp with opt-in. Price includes GST.
+
+Sources for this section:
 - OFF-6307: India recurring card mandate rules.
 - [CXP-6608]: India subscription traps: hard cancellation, hidden auto-debit, unannounced renewals.
-
-What makes this skill ours: frequencies come from units per pack and daily use, not round numbers; the margin model runs 12 months by cohort with churn and failed payments; cancel stays as easy as sign-up under US and Indian rules; and COD-heavy Indian buyers get prepaid packs instead of subscriptions that cannot be charged.

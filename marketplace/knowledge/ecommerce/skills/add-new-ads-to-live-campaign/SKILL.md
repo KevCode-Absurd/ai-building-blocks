@@ -1,6 +1,6 @@
 ---
 name: add-new-ads-to-live-campaign
-description: "A change plan for adding new ads to a Meta campaign that is already working, without knocking its winners back into learning. Takes a snapshot first, sorts every ad set into winning, weak, learning or learning limited, decides where each new ad goes (never into a winning ad set), lists what must not change in the same window, sets the order and timing of edits, and ends with a 72-hour and 7-day watch sheet with a written rollback rule. Covers Advantage+ campaigns, reusing winning posts, page ad limits, and India and US peak dates. Use whenever fresh creative goes into a live campaign or tired ads are being replaced."
+description: "A change plan for adding new ads to a Meta campaign that is already working, without knocking its winners back into learning. Takes a snapshot first, sorts every ad set into winning, weak, learning or learning limited, decides where each new ad goes (never into a winning ad set), lists what must not change in the same window, sets the order and timing of edits, and ends with a 72-hour and 7-day watch sheet with a written rollback rule. Covers Advantage+ campaigns, reusing winning posts, page ad limits, and peak sale dates in each market. Use whenever fresh creative goes into a live campaign or tired ads are being replaced."
 ---
 
 # Add new ads to a live campaign safely
@@ -41,7 +41,7 @@ If 2 is missing, ask the client to export it; without it you cannot tell whether
 2. **Tracking.** Pass when Meta's purchases track store orders over the last 14 days. Fail: no new ads until `store-meta-capi` is done [ADC-0028].
 3. **Quiet period.** Pass when the ad sets you will touch had no edit in the last 7 days (practitioner default, test it). Fail: wait, or touch only ad sets that are quiet.
 4. **Stock.** Pass when advertised SKUs have cover for the test window. Selling out mid-test pushes ad sets back into learning [OPS-0019].
-5. **Peak dates.** Pass when the change is not in the 5 days before a planned sale or festival (Diwali, Black Friday). Fail: launch earlier or after.
+5. **Peak dates.** Pass when the change is not in the 5 days before a planned sale or peak season (Black Friday and Cyber Monday, Christmas, Singles' Day, a local festival). Fail: launch earlier or after.
 
 ## Steps
 
@@ -102,10 +102,10 @@ Never edit the media or text of a live winning ad: an edited ad is treated as ne
 - **Rollback rule:** if a winning ad set's 3-day cost per purchase runs more than 30% over its snapshot and its spend shifted to new ads, pause the new ads in that campaign and return to the snapshot settings. Ask the client first.
 - If one ad takes most of the spend afterwards, that is normal under campaign budget optimisation [ADC-0014]; cap or feed it as `store-meta-budget` decides [ADC-0061].
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** in a cash-on-delivery store, judge new ads on confirmed or delivered orders, not placed orders (`meta-ads-for-cod-stores`). Freeze changes in the week before Diwali and big sale days; a new regional-language ad is a new concept and gets its own ad set.
-- **US:** finish adding Black Friday ads at least a week before, so they have delivery history before the peak.
+- **Stores with many failed deliveries or pay on delivery:** judge new ads on confirmed or delivered orders, not placed orders (`meta-ads-for-cod-stores`). A new ad in another of the languages your buyers use is a new concept and gets its own ad set.
+- **Peak seasons:** finish adding Black Friday and Cyber Monday or holiday ads at least a week before, so they have delivery history before the peak. Freeze changes in the week before the store's biggest sale days and local festivals.
 
 ## Checks before you hand it over
 
@@ -155,3 +155,8 @@ Never edit the media or text of a live winning ad: an edited ad is treated as ne
 - OPS-0019: stock-outs force a return to learning.
 
 What makes this skill ours: a dated snapshot that doubles as the rollback point; a placement table that sorts ad sets by status before any ad goes in; a freeze list so new ads are never judged in the same week as a budget move; and winners reused by post ID instead of being edited.
+
+## Selling in India
+
+- Freeze changes in the week before Diwali and the big marketplace sale days.
+- In a cash-on-delivery store, judge new ads on delivered orders, and treat a new regional-language ad as its own concept in its own ad set.

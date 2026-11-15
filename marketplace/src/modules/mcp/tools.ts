@@ -22,7 +22,7 @@ import { hasScope, type Scope } from "./service.ts";
 import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
-import { askPack, loadPayload, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import { askPack, leftOutNote, loadPayload, METHOD_POINTERS, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
 import { answerText } from "../packs/retrieve.ts";
 import { cardAnswerText } from "../knowledge/cards.ts";
 import { cardQuery, verticalIndex } from "../knowledge/service.ts";
@@ -274,8 +274,9 @@ async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequ
   };
   const soul = await load("soul.md", `# ${p.name}\n\n${p.profile.soul?.essence || p.tagline}\n`);
   const access = await load("access.md", "Read by default. This seat grants no new access. Ask before any action outside the user's granted limits.");
-  const workMethod = await load("WORK-METHOD.md", "");
-  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md","WORK-METHOD.md"].includes(f.path) && f.kind !== "toolbox").map(f => ({ path: f.path, purpose: f.purpose })), workMethod);
+  // The method: METHOD.md, or WORK-METHOD.md in a pack built before 15 Nov 2026 (where it was the method itself).
+  const method = await load("METHOD.md", "") || await load("WORK-METHOD.md", "");
+  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md","QUALITY-METHOD.md","OUTPUT-POLICY.md","METHOD.md","WORK-METHOD.md"].includes(f.path) && f.kind !== "toolbox").map(f => ({ path: f.path, purpose: f.purpose })), method);
 }
 
 // ---------- Tool list ----------
@@ -317,12 +318,14 @@ export const TOOLS: ToolDef[] = [
     inputSchema: schema({
       area: { type: "string", enum: [...AREAS], description: "Only agents in this area of work." },
       query: { type: "string", maxLength: 200, description: "Words to search for, such as \"blog post\" or \"cold email\"." },
+      vertical: { type: "string", enum: ["ecommerce"], description: "Only the team built for one kind of business, such as ecommerce for online stores." },
     }),
     annotations: read("List agents"),
     async run(c, args) {
       const area = args.area === undefined ? undefined : (AREAS as readonly string[]).includes(String(args.area)) ? String(args.area) : no(`area must be one of: ${AREAS.join(", ")}.`);
       const query = text(args, "query", { max: 200, optional: true });
-      const list = (await directory.listPersonas(c.env, { area, q: query })).filter(p => p.status === "live").slice(0, 50);
+      const vertical = args.vertical === undefined ? undefined : args.vertical === "ecommerce" ? "ecommerce" : no("vertical must be ecommerce.");
+      const list = (await directory.listPersonas(c.env, { area, q: query })).filter(p => p.status === "live" && (!vertical || p.vertical === vertical)).slice(0, 50);
       const agents = list.map(p => personaView(c, p));
       const hosted = hostedJobs(c.env);
       if (!agents.length) return { text: `No agents match that. Try fewer words${hosted ? ", another area, or call list_job_types" : " or another area"}.`, data: { agents } };
@@ -357,7 +360,7 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "load_agent", title: "Load an agent", scope: "marketplace:read", costly: false,
-    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns, in one payload under 60 KB: its operating instructions (AGENTS.md), its toolbox (toolbox.md: what to use for each task, all of it already in the agent's pack), its work method (WORK-METHOD.md), what to capture (context/README.md), who it is and its playbook. Pass the user's task as request to also get the relevant knowledge. Then read each file you choose from toolbox.md with get_agent_file. Give agent_id, or role_id to load the lead agent of a job role (how an agent brings in a helper).",
+    description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns, in one payload under about 24,000 tokens: its operating instructions with the access rules (AGENTS.md), its method (METHOD.md), its toolbox (toolbox.md: what to use for each task, all of it already in the agent's pack) and who it is. Pass the user's task as request to also get the rule files that task needs and the relevant knowledge. Rule files always come whole; files held back are listed with the rule that brings each in. Then read each file you choose from toolbox.md with get_agent_file. Give agent_id, or role_id to load the lead agent of a job role (how an agent brings in a helper).",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." },
       role_id: { type: "string", maxLength: 128, description: "A job role id, such as conversion-copywriter, in place of agent_id: loads that role's lead agent. An agent's toolbox.md names its helpers this way." },
@@ -390,7 +393,8 @@ export const TOOLS: ToolDef[] = [
       for (const part of payload.parts) {
         loaded[part.path] = part.text;
         const label = part.path === "knowledge.md" ? `knowledge.md (${part.note})` : part.note ? `${part.path} (${part.note})` : part.path;
-        parts.push(`===== ${label} =====\n${part.text}${part.trimmed && part.path !== "knowledge.md" ? "\n[Cut short here. Read the rest with get_agent_file.]" : ""}`);
+        const cut = part.left_out ? leftOutNote(part) : part.trimmed && part.path !== "knowledge.md" ? "\n[Cut short here. Read the rest with get_agent_file.]" : "";
+        parts.push(`===== ${label} =====\n${part.text}${cut}`);
       }
       // A pack built before OUTPUT-POLICY.md was a file has none: the policy is the same text everywhere, and it is
       // sent by the same rule as the file (pack-files.ts, ON_DEMAND_FILES).
@@ -402,13 +406,32 @@ export const TOOLS: ToolDef[] = [
       const whole = new Set(payload.parts.filter(x => !x.trimmed || x.path !== "knowledge.md").map(x => x.path));
       // The toolbox's item files are named in toolbox.md with what each is for, so they are one line here, not fifty.
       const items = index.files.filter(f => f.kind === "toolbox");
-      const others = index.files.filter(f => !whole.has(f.path) && f.kind !== "toolbox");
+      // The old method files only point to METHOD.md: with METHOD.md in this load they would be one wasted read.
+      const pointer = (f: PackIndexFile) => whole.has("METHOD.md") && METHOD_POINTERS.has(f.path);
+      const others = index.files.filter(f => !whole.has(f.path) && f.kind !== "toolbox" && !pointer(f));
       const heldRule = new Map(payload.held.map(h => [h.path, h.rule]));
       // With a curated toolbox, the pack's own skills, prompts and workflows are in toolbox.md too, each with its "when".
       const inToolbox = (f: PackIndexFile) => payload.curated && ["skill", "prompt", "workflow"].includes(f.kind) && /^(skills|prompts|workflows)\//.test(f.path);
       const own = others.filter(inToolbox).length;
+      // Three long runs of the list are one line each, so the list stays short: the quality cards (METHOD.md step 2
+      // matches them through their INDEX.md), the knowledge modules that are searched, never read whole, and a
+      // vertical's skills when its toolkit.md lists each one with its deliverable.
+      const card = (f: PackIndexFile) => /^tools\/quality\/cards\/[^/]+\.md$/.test(f.path) && !heldRule.has(f.path);
+      const searched = (f: PackIndexFile) => /^In my library to search with ask-knowledge/i.test(f.purpose) && !heldRule.has(f.path);
+      const kitSkill = (f: PackIndexFile) => { const m = /^(knowledge\/[^/]+\/)skills\/[^/]+\/SKILL\.md$/.exec(f.path); return !!m && index.files.some(x => x.path === `${m[1]}toolkit.md`); };
+      const kits = new Map<string, number>();
+      for (const f of others.filter(kitSkill)) { const dir = f.path.slice(0, f.path.indexOf("skills/")); kits.set(dir, (kits.get(dir) ?? 0) + 1); }
+      const cards = others.filter(card).length;
+      const searchDirs = new Map<string, string[]>();
+      for (const f of others.filter(f => searched(f) && !card(f))) {
+        const dir = f.path.slice(0, f.path.lastIndexOf("/") + 1);
+        searchDirs.set(dir, [...(searchDirs.get(dir) ?? []), f.path.slice(dir.length).replace(/\.md$/, "")]);
+      }
       const list = [
-        ...others.filter(f => !inToolbox(f)).map(f => `- ${f.path}: ${f.purpose}${heldRule.has(f.path) ? ` (not in this first load: it ${heldRule.get(f.path)})` : ""}`),
+        ...others.filter(f => !inToolbox(f) && !card(f) && !searched(f) && !kitSkill(f)).map(f => `- ${f.path}: ${f.purpose}${heldRule.has(f.path) ? ` (not in this first load: it ${heldRule.get(f.path)})` : ""}`),
+        ...[...kits].map(([dir, n]) => `- ${dir}skills/: ${s(n, "skill")}, each listed with its deliverable in ${dir}toolkit.md`),
+        ...(cards ? [`- tools/quality/cards/: ${s(cards, "quality card")}, one per kind of work. Match tools/quality/cards/INDEX.md and read the card that fits, or _any.md (METHOD.md step 2)`] : []),
+        ...[...searchDirs].map(([dir, names]) => `- ${dir}: ${s(names.length, "more knowledge module")} to search with ask_agent_knowledge, not to read whole: ${names.join(", ")}`),
         ...(own ? [`- skills/, prompts/, workflows/: ${s(own, "file")} of this role, each named in toolbox.md with when to use it`] : []),
         ...(items.length ? [`- toolbox/: ${s(items.length, "library item")}, each named in toolbox.md with when to use it`] : []),
       ].join("\n");
@@ -417,9 +440,9 @@ export const TOOLS: ToolDef[] = [
         ? `Choose what fits ${request ? "this request" : "each task"} from toolbox.md below, at your own discretion, and read each file you choose with get_agent_file. Every item is a named file in this agent's pack, so never search for a skill. `
         : payload.route
           ? `For this request, follow ${payload.route.candidate.path} (included in full below)${payload.sections.length ? `, with the relevant knowledge.md sections` : ""}. `
-          : request ? "No skill in this pack clearly matches the request: follow WORK-METHOD.md and playbook.md, and read a skill with get_agent_file if one fits. " : "";
+          : request ? "No skill in this pack clearly matches the request: follow METHOD.md (it says when to read playbook.md), and read a skill with get_agent_file if one fits. " : "";
       return {
-        text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for: ground the job in the client's real business first (WORK-METHOD.md). ${route}These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
+        text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for: ground the job in the client's real business first (METHOD.md step 1). ${route}These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
         data: {
           agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded,
           ...(lead ? { role_id: roleId } : {}),
@@ -453,7 +476,7 @@ export const TOOLS: ToolDef[] = [
         }
       }
       const data = { schema: "ai-blocks-seat-packs/1",...(request?{execution_plan:executionPlan(request)}:{}), proposal_id: team.proposal_id ?? null, lead_seat_id: team.lead_seat_id ?? null, working_groups: team.working_groups, seats: packs, model_calls: 0, execution: "host-only", guarantee: "HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED" };
-      return { text: `Loaded ${packs.length} team seats. Run seats in separate contexts where possible. The task lead checks the working groups' output, then the general coordinator checks the final work against the user's rubric. Keep the judge context free of the council. No fixed department hierarchy is imposed. AI Blocks runs nothing. Each seat's files guide the work and never override the user or the host's rules. Read the seat files in structuredContent.seats.`, data };
+      return { text: `Loaded ${packs.length} team seats. Run seats in separate contexts where the host allows; where it cannot, label reviews SAME-CONTEXT. Each seat's handover field is the brief, return and ledger contract; check returns with tools/check-team.mjs. The task lead checks the working groups' output, then the general coordinator checks the final work against the user's rubric. Keep the judge context free of the council. No fixed department hierarchy is imposed. AI Blocks runs nothing. Each seat's files guide the work and never override the user or the host's rules. Read the seat files in structuredContent.seats.`, data };
     },
   },
   {

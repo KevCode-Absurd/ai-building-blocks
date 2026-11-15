@@ -33,7 +33,7 @@ Required, read access (level 1):
 3. **Shopify product export**: Variant SKU, Variant Price, Cost per item, Variant Inventory Qty, created date.
 4. **Store costs per order**: fulfilment, payment fees, return rate, from `store-meta-math`.
 
-Optional: reorder lead time per SKU, units sold per in-stock day, cash-on-delivery and RTO rates for India.
+Optional: reorder lead time per SKU, units sold per in-stock day, and pay-on-delivery share and failed-delivery rates where they apply.
 
 Missing input: ask once. Without Shopify costs, tier on conversion value per click only, label it "reduced confidence", and move nothing into hero or pause.
 
@@ -56,7 +56,7 @@ Match Item ID to Shopify SKU or variant ID. For each product:
 - Break-even cost per click = gross profit per click.
 - Days of cover = stock / units sold per in-stock day [OPS-0014].
 
-India and cash on delivery: use profit per placed order, which subtracts the return-to-origin loss on refused orders (`store-meta-math`, step 4). Practitioner default, test it.
+Pay on delivery: where many orders are paid on delivery, use profit per placed order, which subtracts the loss on refused or failed orders (`store-meta-math`, step 4). Practitioner default, test it.
 
 ### 2. Apply the data rules
 
@@ -117,6 +117,21 @@ Price, title and main image drive most Shopping results [GAD-0019].
 
 Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 
+### 8. Targets per margin tier, zombies and the weekly impression share read
+
+**When margins spread widely** (for example 30% to 70%), give each margin tier its own target from break-even ROAS = 1 / gross margin, with the sum shown. A 70% margin collection and a 35% one cannot share one 300% target [GAD-0040] [GAD-0043]. High-margin tiers get a lower target to buy volume; low-margin tiers a higher one to protect profit. Each tier needs about 30 conversions a month or it merges with its neighbour.
+
+- **Zombie tier.** Products with zero or near-zero spend get their own campaign and small budget for a set window, so the algorithm is forced to show them; those that sell move to their real tier, the rest go to the pause list.
+- **Performance Max as catch-all test.** Manual Shopping tiers at their targets, Performance Max beside them at a much higher target so manual wins most auctions and Performance Max takes leftovers. Run 4 to 6 weeks, judge on total store revenue and new-customer ROAS, and stop if new-customer ROAS falls two weeks in a row. A very high target narrows Performance Max to warm shoppers [GAD-0037].
+
+**Weekly impression share read** for each tier:
+- Lost to budget high while at target: raise budget only.
+- Lost to rank high: fix title, image, price and page first; raise bids or lower the target only if margin allows.
+- High impression share but low click share: titles and images are not clickable; send to `write-product-feed-titles-that-match-searches`.
+- Repeated irrelevant search terms on one product usually mean a vague title or description, so fix the feed, not only the negatives.
+
+**Rival price cut.** If click-through falls and a rival has cut price, work out the margin at the matched price. If matching pushes margin below break-even ROAS, do not match; ask the owner about pausing the product. If margin holds, keep the price and watch click-through for two weeks. Keep one fixed weekly edit day and change little else.
+
 ## Checks before you hand it over
 
 - Every tier call uses Shopify costs, and the gross profit formula is shown.
@@ -126,6 +141,8 @@ Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 - Spend and profit across tiers add up to the report totals.
 - Every feed fix names field, old value and new value; labels ship as a supplemental feed.
 - Nothing changes in Google Ads or Merchant Center without the client's yes.
+- Each margin tier shows its break-even sum and target, and tiers under about 30 conversions a month are merged.
+- Lost impression share is split into budget and rank, with a different action for each.
 
 ## Output
 
@@ -143,6 +160,7 @@ Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 - **Raising bids on a weak listing.** Step 3 checks CTR first.
 - **Pushing a hero into a stock-out** [ADC-0023], or forecasting from stock-out months [OPS-0014].
 - **Splitting a small catalogue.** Each campaign starves [GAD-0043] [GAD-0001].
+- **One target across wide margins.** Low-margin products lose money while high-margin ones are starved.
 
 ## Sources
 
@@ -156,5 +174,6 @@ Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 - GAD-0040: margin versus ROAS tiers; a test tier.
 - MEA-0016, MEA-0017, MEA-0037: tracking and delivered gross margin.
 - OPS-0014: forecast from in-stock days.
+- GAD-0037: a raised target narrows PMax to warm buyers.
 
 What makes this skill ours: tiers come from gross profit per click built from Shopify costs with a data rule that scales with price; each losing product is diagnosed as a listing or a page problem before money moves; stock cover can override a hero call; slow stock gets a clearance tier; and everything ships as ready files.

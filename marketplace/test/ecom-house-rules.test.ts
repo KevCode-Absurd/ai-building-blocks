@@ -14,7 +14,7 @@ const title = (r: string) => /^([^.]+\.)/.exec(r)![1];
 
 // Other groups cite these titles in their skills, so they are fixed here.
 const SPINE = [
-  "Brand brain first.",
+  "Org context first.",
   "Map every signal to an asset.",
   "Look it up before you decide.",
   "Ship what was asked, in full.",
@@ -48,8 +48,8 @@ test("the toolkit renders the spine at the top of the rules", () => {
 
 test("the rules carry the round 2 changes", () => {
   const rule = (t: string) => RULES.find(r => r.startsWith(t))!;
-  assert.match(rule("Brand brain first."), /never ship[^]*reading level[^]*own phrases[^]*segment the data ranks[^]*each with its number/);
-  assert.match(rule("Brand brain first."), /stored brand file[^]*never per job[^]*back to the file/);
+  assert.match(rule("Org context first."), /never ship[^]*reading level[^]*own phrases[^]*segment the data ranks[^]*each with its number/);
+  assert.match(rule("Org context first."), /stored org context[^]*never per job[^]*back to the file/);
   assert.match(rule("Map every signal to an asset."), /past winner gets a relaunch[^]*best segment[^]*top return or complaint reason[^]*about 10%[^]*gap to close/i);
   assert.match(rule("Look it up before you decide."), /prepare-job\.mjs <brief>[^]*per data signal and per major decision[^]*context\/trace\.md[^]*knowledge-brief\.md[^]*never in the deliverable/);
   assert.match(rule("Ship what was asked, in full."), /copy job ships copy[^]*unless the brief asks[^]*one line on what to watch[^]*every branch[^]*merge fields[^]*fallback/);

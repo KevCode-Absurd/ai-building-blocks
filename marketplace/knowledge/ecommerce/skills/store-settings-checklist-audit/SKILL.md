@@ -1,6 +1,6 @@
 ---
 name: store-settings-checklist-audit
-description: "A fast pass/fail audit of a Shopify store's settings and product pages: checkout and payment options, shipping and returns visibility, tax and currency, speed, post-purchase messages, and product page images, copy and proof. Reads settings through the Shopify Admin API with read-only scopes where the owner connects it, or from admin screenshots where they do not. Covers US-style card checkouts and India-style checkouts with cash on delivery, UPI, pincode checks and GST invoices. Each fail comes with the fix, who can make it, and the gross profit it protects. Use on a new store before launch, after a theme or app change, or as the first hour of any conversion audit."
+description: "A fast pass/fail audit of a Shopify store's settings and product pages: checkout and payment options, shipping and returns visibility, tax and currency, speed, post-purchase messages, and product page images, copy and proof. Reads settings through the Shopify Admin API with read-only scopes where the owner connects it, or from admin screenshots where they do not. Covers card and wallet checkouts plus each market's local payment methods, postcode delivery checks, failed delivery controls and VAT or sales tax invoices. Each fail comes with the fix, who can make it, and the gross profit it protects. Use on a new store before launch, after a theme or app change, or as the first hour of any conversion audit."
 ---
 
 # Store settings and product page checklist
@@ -14,7 +14,7 @@ A one-sitting audit that turns "the store feels off" into a list of pass and fai
 - A new store is about to remove its password page.
 - After a theme switch, a new app, or a change to payments, shipping or tax.
 - First hour of a conversion audit, to clear obvious breaks before reading the funnel.
-- The store starts selling in India or the US for the first time.
+- The store starts selling in a new country for the first time.
 
 ## Not for
 
@@ -33,7 +33,7 @@ Required:
    - **Manual path:** admin screenshots of Settings > Payments, Checkout, Shipping and delivery, Taxes and duties, Markets, Policies, Notifications, and the Apps list.
 3. **Average order value and gross profit per order** from `store-meta-math`, or the inputs to work them out.
 
-Optional: last 30 days of orders by payment method (for COD share), support ticket tags, and PageSpeed Insights for the home and top product page.
+Optional: last 30 days of orders by payment method (to see which local methods buyers use), support ticket tags, and PageSpeed Insights for the home and top product page.
 
 Everything here is read access (level 1). Fixing a fail needs draft or publish access and a client yes for each change. If an input is missing, ask once; otherwise mark those lines "not checked".
 
@@ -41,7 +41,7 @@ Everything here is read access (level 1). Fixing a fail needs draft or publish a
 
 1. **Gross profit per order.** Needed only to rank fails. Pass when it exists. Fail: run the checklist anyway but sort fails by severity, not money, and say so.
 2. **Cash and capacity.** Ask who can change settings (owner, developer, agency) and how many hours this month. Settings fixes are cheap; theme fixes are not.
-3. **Market.** Name the markets the store sells to. India and US checklists differ; run each one that applies.
+3. **Market.** Name the markets the store sells to. Payment, tax and delivery checks differ by country; run the local checks in step 8 for each one.
 4. **Test orders allowed.** Before any change goes live, the store will run test-mode orders [SET-0003]. If the client will not allow test orders, mark checkout changes "client to verify".
 
 ## Steps
@@ -104,17 +104,17 @@ For each of the three top products, on a phone:
 - **Proof:** reviews loaded on the page, not hidden in a tab, with customer photos; proof at more than one point down the page. Only real numbers: no "N added to cart today" counters without a live source.
 - **Shipping and returns** sit next to add to cart, not in a footer tab.
 
-### 8. India checks (when the store sells in India)
+### 8. Local market checks (for each country the store sells to)
 
 Practitioner defaults, test them; no public card covers these numbers.
 
-- **Cash on delivery** is offered, with a clear COD fee or a prepaid incentive shown before checkout.
-- **UPI** is offered at checkout through the store's gateway (Razorpay, PayU, Cashfree or similar), and is the first prepaid option on mobile.
-- **Pincode check** on the product page shows delivery date and COD availability before add to cart.
-- **Phone number** is required at checkout; couriers need it for delivery and COD confirmation.
-- **COD confirmation** by WhatsApp or call before dispatch, with an order cancel option, to cut return to origin.
-- **GST invoice** is generated with the store's GSTIN and sent with or after the order.
-- **Return to origin rate** on COD is tracked; pass the number to `store-meta-math`.
+- **Local payment methods** buyers in that country expect are offered through the store's gateway: for example iDEAL in the Netherlands, Bancontact in Belgium, Klarna or invoice payment in Germany and the Nordics, Pix in Brazil, bank transfer apps where they lead. The most used local method is near the top on mobile.
+- **Pay on delivery**, where it is offered, shows any fee or any saving for paying upfront before checkout.
+- **Postcode or ZIP check** on the product page shows the delivery date before add to cart, where delivery times differ a lot by area.
+- **Phone number** is asked for at checkout where couriers need it for delivery.
+- **Order confirmation** for risky orders (pay on delivery, first orders, high value) by message or call before dispatch, with a cancel option, to cut failed deliveries.
+- **Tax invoice** carries what the market needs: a VAT invoice with the store's VAT number for UK and EU buyers, the right sales tax lines for US states, goods and services tax lines in Australia.
+- **Failed delivery rate** is tracked by payment method; pass the number to `store-meta-math`.
 
 ### 9. Price each fail
 
@@ -128,7 +128,7 @@ Group fixes into: settings changes (minutes, owner can do), app or theme changes
 
 - Every line is pass, fail or "not checked", with the value found and its date.
 - Each fail has a fix, an owner and either a gross profit figure or a stated severity.
-- The India section is present if the store sells in India, and absent otherwise.
+- The local checks in step 8 are present for each country the store sells to.
 - No line asks for or repeats a password, API key or token.
 - Speed results say lab or field, and which page.
 - No change was made live without a client yes; test orders are listed after checkout changes.
@@ -146,7 +146,7 @@ Group fixes into: settings changes (minutes, owner can do), app or theme changes
 - **Checking on desktop only.** Most shoppers are on phones. Step 7 runs on a phone.
 - **Reading lab speed as proof of a fix.** Field data lags about four weeks [SPD-0005].
 - **Missing leftover app code.** Uninstalling an app does not remove its scripts [SPD-0009].
-- **Treating COD as just a payment option.** In India it drives return to origin; the checklist ties it to confirmation and to the money lines.
+- **Treating pay on delivery as just a payment option.** It drives failed deliveries; the checklist ties it to confirmation and to the money lines.
 - **Asking for the API token.** The owner installs the app and keeps the token; the agent reads through a connector.
 - **Changing checkout without test orders.** Step 10 requires them.
 
@@ -161,4 +161,15 @@ Group fixes into: settings changes (minutes, owner can do), app or theme changes
 - CRO-0018: two-question post-purchase survey.
 - SPD-0001, SPD-0002, SPD-0005, SPD-0006, SPD-0009: speed checks.
 
-What makes this skill ours: settings are read through a read-only app the owner controls, never a shared password or token; every fail is priced in gross profit or given a severity; India checkouts get their own lines for COD, UPI, pincode and GST; and checkout changes always end in test-mode orders before going live.
+What makes this skill ours: settings are read through a read-only app the owner controls, never a shared password or token; every fail is priced in gross profit or given a severity; each market gets its own lines for local payment methods, delivery checks, failed deliveries and tax invoices; and checkout changes always end in test-mode orders before going live.
+
+## Selling in India
+
+Practitioner defaults, test them.
+
+- **Cash on delivery** is offered, with a clear COD fee or a prepaid incentive shown before checkout.
+- **UPI** is offered through the store's gateway (Razorpay, PayU, Cashfree or similar) and is the first prepaid option on mobile.
+- **Pincode check** on the product page shows delivery date and COD availability before add to cart.
+- **COD confirmation** by WhatsApp or call before dispatch, with a cancel option, to cut return to origin (RTO).
+- **GST invoice** carries the store's GSTIN.
+- **RTO rate** on COD is tracked and passed to `store-meta-math`.

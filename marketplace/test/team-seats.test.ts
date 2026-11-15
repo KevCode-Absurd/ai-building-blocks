@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { baseTeamFacets, generalCoordinatorMarkdown, MAX_SEAT_BYTES, roleSeatMarkdown, seatBriefMarkdown, seatPlaybook, teamMarkdown } from "../src/modules/directory/team.ts";
 import { parseSeat, parseTeam, SeatInputError, trimmedSeatPack } from "../src/modules/mcp/team-seats.ts";
 import { buildPack } from "../src/modules/packs/build.ts";
@@ -17,7 +18,7 @@ test("facets and team notes come from saved persona text without a fixed hierarc
   assert.match(generalCoordinatorMarkdown(), /task-specific lead and flexible working groups/);
   assert.match(generalCoordinatorMarkdown(), /no invented person or biography/);
   for (const protocol of [notes, generalCoordinatorMarkdown(), roleSeatMarkdown("sample", {seat_type:"maker"}), seatBriefMarkdown(persona, {seat_type:"maker"})]) {
-    assert.match(protocol, /context\/ files exist \(WORK-METHOD\.md, step 1\)/);
+    assert.match(protocol, /context\/ files exist \(METHOD\.md, step 1\)/);
     assert.doesNotMatch(protocol, /JOB-CARD\.json/, "no file the pack does not contain");
     assert.match(protocol, /Missing, stale or unread context blocks work/);
   }
@@ -53,17 +54,39 @@ test("judge seat pack is bounded in UTF-8 bytes and excludes council and unrelat
   assert.throws(() => trimmedSeatPack(p, { seat_type: "maker" }, "", "x".repeat(16_001), []), /access.md/);
 });
 
-test("every seat pack grounds the job first with the work method", () => {
-  const own = trimmedSeatPack(NOVA, { seat_type: "maker" }, "", "", [], "# Work method: the Grounded Job Protocol. Full text.");
-  assert.match(own.files["WORK-METHOD.md"], /Full text/);
+test("every seat pack grounds the job first with the method", () => {
+  const own = trimmedSeatPack(NOVA, { seat_type: "maker" }, "", "", [], "# Method: the Grounded Job Protocol. Full text.");
+  assert.match(own.files["METHOD.md"], /Full text/);
+  assert.ok(!own.trimmed.includes("METHOD.md"), "a method that fits goes in whole");
+  assert.deepEqual(Object.keys(own.files).slice(0, 3), ["QUALITY-METHOD.md", "OUTPUT-POLICY.md", "METHOD.md"], "the method stays near the top");
   const role = trimmedSeatPack(null, { seat_type: "maker", role_id: "test-maker" }, "", "", []);
-  // The outline follows the work method's steps: a spec sheet, grounding, real candidates, a fresh check, the hand-over.
-  const outline = role.files["WORK-METHOD.md"];
-  assert.match(outline, /0\. Frame: write context\/spec\.md/);
-  assert.match(outline, /1\. Ground: capture only what the acceptance tests depend on/);
+  // The outline follows the method's steps 0 to 6 and points to the full METHOD.md.
+  const outline = role.files["METHOD.md"];
+  assert.match(outline, /The full method is METHOD\.md in the lead agent's pack/);
+  assert.match(outline, /0\. Frame and ask: run the readiness check, then write context\/spec\.md/);
+  assert.match(outline, /a signal pass \(the signals that change the decision, as many as the data holds, or none\)/);
+  assert.match(outline, /1\. Ground: capture only what the signals and the decision depend on/);
   assert.match(outline, /3\. Diverge: expert and plain drafts[^\n]+A fresh reviewer picks/);
   assert.match(outline, /6\. Hand over the native work first, with context only when needed/);
-  assert.doesNotMatch(outline, /job-card|2 or 3 directions/);
+  assert.doesNotMatch(outline, /job-card|2 or 3 directions|acceptance tests|QUALITY-ENGINE-v3|three strongest/);
+});
+
+test("a method too big for the seat keeps its rules, depths, step table and the seat's own steps whole", () => {
+  const method = readFileSync(new URL("../packs/shared/METHOD.md", import.meta.url), "utf8");
+  const access = "Read by default.\n".repeat(700); // about 12 KB, like a real role's access.md
+  const files = Array.from({ length: 80 }, (_, i) => ({ path: `knowledge/x/file-${i}.md`, purpose: "A knowledge file with a long purpose line. ".repeat(3) }));
+  const judge = trimmedSeatPack(NOVA, { seat_type: "judge" }, "", access, files, method);
+  assert.ok(judge.bytes <= MAX_SEAT_BYTES);
+  const text = judge.files["METHOD.md"];
+  const section = (head: string) => method.split(/\n(?=## )/).find(p => p.startsWith(head))!.trimEnd();
+  for (const head of ["## Hard rules", "## Depth", "## The step table", "## 5. Check"]) assert.ok(text.includes(section(head)), `${head} whole`);
+  assert.doesNotMatch(text, /## 3\. Diverge|Excerpt cut here/);
+  assert.match(text, /Left out here: [^\n]*"3\. Diverge[^\n]*Read the whole method with get_agent_file, path METHOD\.md\./);
+  assert.ok(judge.trimmed.includes("METHOD.md"));
+  const maker = trimmedSeatPack(NOVA, { seat_type: "maker" }, "", access, files, method);
+  assert.match(maker.files["METHOD.md"], /## 3\. Diverge[\s\S]*## 4\. Build/);
+  assert.doesNotMatch(maker.files["METHOD.md"], /## 5\. Check/);
+  assert.equal(judge.files["access.md"], access, "access rules are never cut");
 });
 
 test("neutral coordinator works without falsely assigning a specialist persona", () => {

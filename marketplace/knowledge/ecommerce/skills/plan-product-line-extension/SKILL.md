@@ -20,6 +20,7 @@ description: "The next product a store that already sells should add, chosen fro
 - Testing whether buyers will pay before stock: run `validate-demand-before-buying-stock` on the pick.
 - Writing the factory spec: use `write-product-spec-sheet-for-factory`.
 - Ranking current products to push or cut: use `rank-products-to-push-or-cut`.
+- Deciding which current products retire as the new one arrives: use `sku-range-review-kill-keep-fix-grow`.
 
 ## What you need
 
@@ -61,7 +62,7 @@ Count each tag. A request named by many separate buyers beats one loud one. Keep
 - **Next product:** for repeat buyers, what the second order contains after each first product.
 - **Repeat by first product:** 90-day and 12-month gross profit per customer by first product [MEA-0048].
 - **Category repeat:** compare with the vertical; 365-day gross profit lift over the first order runs near 110% in CPG and supplements, about 55% in fashion, near zero in furniture and homewares [MEA-0052]. A low-repeat store gains more from a new product that wins new buyers; a high-repeat store gains from refills and companions.
-- **Regions:** where demand is growing (pincodes or states in India, states in the US).
+- **Regions:** where demand is growing (postcodes, states, regions or countries).
 
 ### 3. List the candidates
 
@@ -72,6 +73,8 @@ Write 5 to 10 candidates from steps 1 and 2. Each must answer one of:
 - Lift order value (bundle partner, upgrade).
 
 The hero-only risk is real: one brand's single viral product peaked and then fell faster than its other products grew [PRD-0003].
+
+Each candidate must also pass a launch gate of four parts: a job sentence ("When [situation], I want to [job], so I can [outcome]") in buyers' words; a named buyer; quoted buyer evidence from step 1; and one line on what it makes the current range stop doing (the SKU it replaces or the gap it fills). A candidate added only because a rival sells it, or because it is cheap to sell to current buyers, is surface growth with no job behind it; drop it.
 
 ### 4. Score each candidate
 
@@ -95,10 +98,12 @@ Ask whether the new product keeps the store's name meaning one clear thing. A re
 
 Pick the top score and a runner-up with one line each on why. Write the launch brief (Output). Price, landed cost and first order size are estimates until quotes are in; label them.
 
-### 7. India and US notes
+### 7. Market notes
 
-- India: price bands and pack sizes for marketplaces (Flipkart, Nykaa, Meesho) differ from the store; check whether the candidate can carry the COD refusal rate in its margin, and whether labels need Legal Metrology declarations or BIS marks.
+- Marketplaces: price bands and pack sizes on marketplaces (Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre) often differ from the store; check whether the candidate can carry its failed delivery and return rate in its margin, and whether its labels meet your market's labelling and product safety rules.
 - US: check category rules (FDA for food, supplements and cosmetics, CPSC for children's products) and whether the candidate can ship within the store's current box sizes.
+- UK and EU: check CE or UKCA marking where the category needs it, the general product safety rules, and the food, cosmetics or toy rules for those categories.
+- Canada and Australia: check bilingual labels in Canada (English and French) and the Australian consumer and product safety rules.
 
 ### 8. Hand off
 
@@ -107,11 +112,12 @@ Send the pick to `validate-demand-before-buying-stock` before any stock is bough
 ## Checks before you hand it over
 
 - Every candidate links to counted buyer evidence or an order-data pattern.
+- Every candidate passes the four-part launch gate (job sentence, buyer, quoted evidence, what it replaces or the gap it fills).
 - Repeat figures state the cohort window and age.
 - Gross profit per order uses delivered costs; estimates are labelled.
 - The pick fits within the cash limit without cutting hero stock.
 - The brief names the demand test to run before any order.
-- No candidate breaks a product rule in India or the US the store cannot meet.
+- No candidate breaks a product rule in any market the store sells to that the store cannot meet.
 - Runner-up is named with one line.
 
 ## Output
@@ -128,6 +134,7 @@ Send the pick to `validate-demand-before-buying-stock` before any stock is bough
 | Buyer and the job it does, in buyer words | |
 | Evidence (counts and two quotes) | |
 | What changes from the hero (one major thing) | |
+| Job sentence, and the SKU it replaces or the gap it fills | |
 | Spec outline (materials, sizes, pack) | |
 | Target price and delivered gross profit per order | |
 | First order size and cash needed | |
@@ -140,6 +147,7 @@ Send the pick to `validate-demand-before-buying-stock` before any stock is bough
 
 - **Picking what the founder likes.** Step 1 counts what buyers ask for.
 - **Adding products nobody pairs.** Step 2 checks baskets and second orders.
+- **Copying a rival's shelf.** Step 3's launch gate drops candidates with no job behind them.
 - **Repeat read on young customers.** Gate 4 sets the cohort window.
 - **Margin from product cost only.** Step 4 uses delivered costs and a veto.
 - **Diluting the brand name.** Step 5 checks the stretch.
@@ -160,3 +168,7 @@ Send the pick to `validate-demand-before-buying-stock` before any stock is bough
 - BRD-0007: visible products spread by word of mouth.
 
 What makes this skill ours: candidates come from counted buyer requests and second-order data, not trend lists; repeat is read only on cohorts old enough to show it; gross profit per order holds a veto; and the brief ends in a demand test, so no stock is bought on a guess.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Look at demand by pincode and state. Price bands and pack sizes on Flipkart, Nykaa and Meesho differ from the store; check whether the candidate can carry the COD refusal rate in its margin, and whether labels need Legal Metrology declarations or BIS marks.

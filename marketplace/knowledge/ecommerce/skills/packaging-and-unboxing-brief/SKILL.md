@@ -27,7 +27,7 @@ Required:
 
 1. **Gross profit per order** by top product and the order mix (units per order), from `build-sku-profit-sheet` or `store-meta-math`.
 2. **Repeat rate today:** share of first-time buyers who order again within 60 and 90 days (Shopify customer report or `cohort-repeat-and-ltv-analysis`).
-3. **Product sizes and weights**, and how they ship (courier, 3PL, own packing), with the current box sizes and damage or return-to-origin notes.
+3. **Product sizes and weights**, and how they ship (courier, 3PL, own packing), with the current box sizes and damage, return or failed-delivery notes.
 4. **Order volume per month** and supplier minimum order quantities.
 5. **Brand files:** logo, colours, fonts, voice (`store-visual-identity-sheet`, `brand-voice-guide`).
 6. **Top support questions** in the first two weeks after delivery (how to use, how to store, sizing).
@@ -89,7 +89,7 @@ List each item: unit cost at the store's volume, quantity per order, and total p
 
 ### 6. Shipping check
 
-Give the supplier inner dimensions with a tolerance, board grade or material, print method, and a drop test request. Ask for a pre-production sample and ship it to yourself by the store's main courier to two far pin codes or states. Add the final box's empty weight and size as a saved package in Shopify so calculated shipping is right [SET-0007]. Parcel-friendly packaging matters for profit on every order [PRD-0013].
+Give the supplier inner dimensions with a tolerance, board grade or material, print method, and a drop test request. Ask for a pre-production sample and ship it to yourself by the store's main courier to two far postcodes, states or regions. Add the final box's empty weight and size as a saved package in Shopify so calculated shipping is right [SET-0007]. Parcel-friendly packaging matters for profit on every order [PRD-0013].
 
 ### 7. Make it filmable
 
@@ -97,12 +97,13 @@ Write a short brief for creators and customers: the order to open the layers, wh
 
 ### 8. Measure for 60 days
 
-Before and after the change, compare: 60-day repeat rate of first-time buyers, redemptions of the insert offer code, QR scans (use a UTM-tagged link per QR), tagged posts and mentions, damage and return-to-origin claims. If possible, split by month or warehouse so half the orders get the new insert first.
+Before and after the change, compare: 60-day repeat rate of first-time buyers, redemptions of the insert offer code, QR scans (use a UTM-tagged link per QR), tagged posts and mentions, damage, return and failed-delivery claims. If possible, split by month or warehouse so half the orders get the new insert first.
 
-### India and US notes
+### Market notes
 
-- **India:** printed inserts in English plus the buyer's regional language where the store's orders cluster. COD orders: put a QR to prepaid reorder with a small prepaid benefit if the offer model supports it. Monsoon months need moisture protection. Packaged goods must carry the legally required declarations on the pack (MRP inclusive of taxes, manufacturer, net quantity); confirm with the client's compliance adviser.
+- **Every market:** printed inserts in the languages your buyers use where the store's orders cluster. Pay on delivery orders, where used: put a QR to prepaid reorder with a small prepaid benefit if the offer model supports it. Wet or humid seasons need moisture protection. Packaged goods must carry your market's legally required declarations on the pack (such as net quantity, maker or importer, and any safety marks); confirm with the client's compliance adviser.
 - **US:** state rules on packaging recycling claims vary; only print "recyclable" if the material and local programmes support it. Keep the box within the courier's dimensional weight band.
+- **UK and EU:** packaging producer rules (UK extended producer responsibility, EU packaging rules and Germany's packaging register) may apply; check before ordering printed boxes. Recycling marks must match local schemes.
 
 ## Checks before you hand it over
 
@@ -160,3 +161,7 @@ Before and after the change, compare: 60-day repeat rate of first-time buyers, r
 - MCR-6045: no incentives tied to review sentiment.
 
 What makes this skill ours: the box is only allowed once deliveries and returns work; the budget is set from gross profit per order with retail and shipping packaging split; the insert card has a first-use job and a next-order job with tracked QR codes; and the brief ends in a 60-day test of repeat orders, not a mood.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Printed inserts in English plus the buyer's regional language where orders cluster. COD orders: a QR to prepaid reorder with a small prepaid benefit. Monsoon months need moisture protection. Pack declarations: MRP inclusive of taxes, manufacturer, net quantity.

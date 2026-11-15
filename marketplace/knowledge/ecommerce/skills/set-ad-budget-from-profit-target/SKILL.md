@@ -26,8 +26,8 @@ description: "Gives the most a store can spend on ads next month, split by chann
 
 Required (read access, level 1):
 
-1. **Shopify order export**, last 6 months or more: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Taxes, Total, Refunded Amount, Payment Method, Lineitem sku, landing site or UTM fields. On India stores, add courier delivery status so return-to-origin (RTO) orders can be removed.
-2. **Delivered cost per order**: landed cost per SKU, pick and pack, shipping, payment fees, returns and RTO.
+1. **Shopify order export**, last 6 months or more: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Taxes, Total, Refunded Amount, Payment Method, Lineitem sku, landing site or UTM fields. Where parcels are often refused or undelivered (pay on delivery, remote areas), add courier delivery status so failed deliveries can be removed.
+2. **Delivered cost per order**: landed cost per SKU, pick and pack, shipping, payment fees, returns and failed deliveries.
 3. **Ad spend and platform results by channel and campaign by week**, same 6 months, paused campaigns included.
 4. **Fixed costs per month** and the **profit target**, from the owner.
 5. **Cash**: bank balance today, payouts expected, bills and stock payments due.
@@ -45,7 +45,7 @@ If fixed costs or the profit target are missing, the plan gives the cash and sto
 
 ## Steps
 
-Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Weeks count from the start of the month.
+Follow the house rules, chiefly **Org context first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the org context (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Weeks count from the start of the month.
 
 ### 1. Tracking
 
@@ -75,11 +75,11 @@ The plan uses the whole budget it sets (house rule **Spend plans add up**).
 - **Required contribution from new customers** = profit target + fixed costs - returning gross profit. If zero or less, ads only need to pay back inside the month.
 - **Allowed cost per new customer** = first-order gross profit after refunds [MEA-0020], unless cohorts at least 90 days old show 90-day gross profit [MEA-0048]; then up to half of that, if higher. Ratio bands: under 1 loses money, 1 to 2 needs proven repeat, 2 to 3 is the zone to scale [MEA-0024]. Never fund cost with repeat profit the store has not seen [MEA-0026]. Sale-month buyers can repeat less, so set them a lower allowance [MEA-0035].
 - **Profit ceiling** = spend where marginal cost reaches the allowance, or the spend that delivers the required contribution, whichever is lower. With no spend history, plan steps of 20 to 30% a fortnight (practitioner default).
-- **Cash ceiling**: list weeks with opening cash, payouts (card payouts lag by days; COD remittances in India often by a week or more), stock payments, bills and ad spend. The most spend that keeps every week above the owner's floor. Judge rises on 60 to 180-day cash [FIN-0029]; stock-funded growth can push profit near zero [FIN-0011]. India: GST on ad spend billed in India counts as cash out.
+- **Cash ceiling**: list weeks with opening cash, payouts (card and wallet payouts lag by days; marketplace payouts, buy now, pay later and pay-on-delivery remittances often by a week or more), stock payments, bills and ad spend. The most spend that keeps every week above the owner's floor. Judge rises on 60 to 180-day cash [FIN-0029]; stock-funded growth can push profit near zero [FIN-0011]. Tax on ad spend counts as cash out where the platform charges it (for example VAT or sales tax added to the ad invoice), even if the store reclaims it later.
 - **Stock ceiling**: no push on a SKU with fewer days of stock than lead time [ADC-0023]. Hold winners at a steady spend when stock is short; push harder when stock must clear [ADC-0012].
 - **Monthly ceiling** = lowest of the three; name the one that binds.
 - **Split**: existing-customer ads in money; past winners next; then each proven channel in order of marginal cost until it reaches the allowance; new ads about 30% when profitable, 10% or none when not [ADC-0053]. A reserve is at most 15%, with a release rule the account will hit in the month, such as "release in Week 3 to the channel whose store-basis cost stayed under the allowance for two weekly reads".
-- **Pacing**: split the month by last year's weekly order share, not evenly.
+- **Pacing**: split the month by last year's weekly order share, not evenly. Peak weeks (Black Friday and Cyber Monday, holiday and local festival weeks) get their own share.
 
 ### 6. Verdicts
 
@@ -156,3 +156,7 @@ One rule per channel, in one line, on store new customers, never on platform cos
 - FIN-0029: judge changes on 60 to 180-day cash.
 
 What makes this skill ours: the budget is the lowest of three ceilings with the binding one named, past winners are funded first, returning profit is kept apart so ads are not credited with it, and the creative the money needs is part of the plan.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. On India stores, add courier delivery status to the order export so RTO orders can be removed, count RTO in delivered cost, use COD remittance dates (often a week or more) in the cash ceiling, and count GST on ad spend billed in India as cash out.

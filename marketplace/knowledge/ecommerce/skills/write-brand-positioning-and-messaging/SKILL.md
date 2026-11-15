@@ -1,6 +1,6 @@
 ---
 name: write-brand-positioning-and-messaging
-description: "One positioning statement, three to four message pillars and a proof bank for a store, built from counted buyer evidence, rival messages and provable product facts, so every ad, page, email and WhatsApp message says the same thing in its own format. Finds the space rivals leave open, picks one buyer and one main promise, tests the statement for being true, specific and hard for rivals to copy, ties every pillar to proof the store can show, and lists claims that are banned until proven under US and India advertising rules. Use when a brand is new, when ads, pages and emails say different things, before a rebrand or a new line, or when the store looks like every rival."
+description: "One positioning statement, three to four message pillars and a proof bank for a store, built from counted buyer evidence, rival messages and provable product facts, so every ad, page, email and WhatsApp message says the same thing in its own format. Finds the space rivals leave open, picks one buyer and one main promise, tests the statement for being true, specific and hard for rivals to copy, ties every pillar to proof the store can show, and lists claims that are banned until proven under the advertising rules in each market (FTC in the US, ASA and CMA in the UK, EU consumer law, and others). Use when a brand is new, when ads, pages and emails say different things, before a rebrand or a new line, or when the store looks like every rival."
 ---
 
 # Brand positioning and messaging
@@ -39,7 +39,7 @@ Access: read only (level 1). Changing live pages or ads is a later job, drafted 
 1. **Evidence count.** Pass: 50 or more usable buyer comments, or 12 or more interviews. Fail: run interviews or a survey first, or mark the result as a draft to test.
 2. **Proof on file.** Every fact the store wants to claim has a document or test result. Claims without one go on the banned-until-proven list.
 3. **Gross profit known** for the hero products [MEA-0037]. A promise like "free returns forever" or "lowest price" must be affordable.
-4. **Claims law.** US advertisers need a reasonable basis for objective claims before an ad runs, and "tests prove" needs the tests [MCR-6022]. India's ASCI code requires claims to be substantiated on demand and cited research to show source and date [ADC-6146].
+4. **Claims law.** US advertisers need a reasonable basis for objective claims before an ad runs, and "tests prove" needs the tests [MCR-6022]. UK and EU rules also need proof held before a claim runs; ad codes such as the UK's CAP code require claims to be substantiated on demand, and cited research to show source and date [ADC-6146].
 
 ## Steps
 
@@ -68,6 +68,8 @@ Test it:
 - **Non-obvious but true:** an obvious idea is rarely a good one [BRD-0021].
 - **One change:** the difference is one big thing buyers notice, not a list [PRD-0002].
 - **Affordable:** the promise fits the gross profit.
+- **Gives something up:** name who it is not for and what the store sacrifices to own the spot (a wider range, the lowest price, a younger buyer). A statement that suits everybody positions nobody; naming who it is not for is a strength, not a flaw.
+- **Proven in actions, not words:** at least one move in price, pack or product, or guarantee or service backs it, so a shopper sees the position before reading a line.
 
 Write three versions, have someone outside the team pick the clearest, and keep the runner-up.
 
@@ -93,19 +95,23 @@ Good pillar sets often pair a selfish first reason to buy (look, feel, taste, re
 
 Show the main promise as it would appear in: a Meta ad first line, a Google search headline (30 characters at most [GAD-6140]), a product page headline, an email subject line, a WhatsApp message, and packaging. These are examples of the message, not final copy.
 
-### 8. India and US notes
+### 8. Market notes
 
-- India: check the promise reads well in Hindi and the store's regional languages; COD buyers often need trust proof (returns, delivery, real reviews) as a pillar; ASCI rules on claims and comparisons apply.
-- US: comparison claims must be fair and provable; "Made in USA" claims have strict rules; reviews and endorsements follow FTC guides.
+- Languages: check the promise reads well in every language your buyers use; first-time buyers and pay on delivery buyers often need trust proof (returns, delivery, real reviews) as a pillar.
+- Comparisons and origin: comparison claims must be fair and provable everywhere (FTC guides in the US, comparative advertising rules in the UK and EU); "Made in USA" claims have strict rules; reviews and endorsements follow FTC guides in the US and the CMA and ASA in the UK.
 
 ### 9. Hand over
 
 Send the messaging house to `brand-voice-guide`, `write-product-page-copy`, the ad copy team and `develop-campaign-big-idea`. Plan a cheap test of the statement through ads with two pillars as separate angles.
 
+Set a 30-day check that the position is landing: add "How would you describe us to a friend?" to the post-purchase survey (`post-purchase-how-did-you-hear-survey` can carry it) and count the share of new buyers whose answers use the main promise or a pillar's words. Record the baseline share now; if it has not risen after 30 days of the new copy, the message is not reaching buyers, or the proof is not visible.
+
 ## Checks before you hand it over
 
 - The statement names one buyer, one promise, one difference and real proof.
 - A rival name pasted into the statement makes it false.
+- The statement names who it is not for, the sacrifice, and at least one proof action in price, product or service.
+- A 30-day "describe us to a friend" check has a baseline.
 - Each pillar has at least two sourced proof points and two buyer phrases.
 - Theme counts come from the evidence, not opinion.
 - Every claim is on file or on the banned-until-proven list.
@@ -139,16 +145,17 @@ Send the messaging house to `brand-voice-guide`, `write-product-page-copy`, the 
 
 - **A statement any rival could use.** Step 4 tests it with a rival's name.
 - **Pillars without proof.** Step 5 requires sourced proof points.
+- **A position for everyone.** Step 4 names who it is not for and what the store gives up.
 - **Inventing a mechanism.** Step 3 moves to an unserved buyer instead.
 - **Founder opinion over buyer words.** Step 2 counts what buyers say.
 - **Promising what the margin cannot carry.** Gate 3 checks it.
-- **Claims that break the law.** Gate 4 and step 6 apply US and India rules.
+- **Claims that break the law.** Gate 4 and step 6 apply the rules in each market.
 
 ## Sources
 
 - MEA-0037: delivered gross margin.
 - MCR-6022: US claims need a reasonable basis.
-- ADC-6146: ASCI substantiation and research citation.
+- ADC-6146: ad code substantiation and research citation.
 - PRD-0001: same-looking categories and missed shifts.
 - AVT-0012: start with the narrowest buyer situation.
 - ADC-0001: lead by market stage.
@@ -159,4 +166,10 @@ Send the messaging house to `brand-voice-guide`, `write-product-page-copy`, the 
 - AVT-0010: buyer's dominant feeling and named alternatives.
 - GAD-6140: Google responsive search ad headline limits.
 
-What makes this skill ours: the statement is built from counted buyer evidence and a dated rival map, not a workshop; it must fail when a rival's name is pasted in; every pillar carries sourced proof and buyer phrases; and the promise is checked against gross profit and US and India claims rules before any channel uses it.
+What makes this skill ours: the statement is built from counted buyer evidence and a dated rival map, not a workshop; it must fail when a rival's name is pasted in; every pillar carries sourced proof and buyer phrases; and the promise is checked against gross profit and the claims rules in each market before any channel uses it.
+
+## Selling in India
+
+- Check the promise reads well in Hindi and the store's regional languages.
+- COD buyers often need trust proof (returns, delivery, real reviews) as a pillar.
+- The ASCI code requires claims to be substantiated on demand and cited research to show source and date [ADC-6146]; its rules on comparisons apply too.

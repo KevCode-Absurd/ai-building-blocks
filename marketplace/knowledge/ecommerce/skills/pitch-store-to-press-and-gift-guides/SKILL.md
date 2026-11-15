@@ -9,7 +9,7 @@ description: "A press and gift-guide outreach kit: a press list of 20 to 40 name
 
 ## When to use
 
-- A gifting season (Diwali, Raksha Bandhan, Mother's Day, Black Friday, the holidays) is 6 to 20 weeks away.
+- A gifting season (Mother's Day, Black Friday, the holidays, Lunar New Year or a local festival) is 6 to 20 weeks away.
 - A launch, a restock with a waiting list, or a real milestone can honestly be called news.
 - The store has a product that fits a clear recipient and price band ("under 50", "for new parents").
 - The owner wants earned coverage and has never pitched.
@@ -38,7 +38,7 @@ Building the list and drafts needs no access. Sending email from the client's ac
 ## Before you start: the gates
 
 1. **A true angle exists.** No angle, no pitch. Fail: wait for a launch or milestone, or build one from the store's own data.
-2. **Every claim can be proven.** India's ASCI code wants claims substantiated on request and research cited with source and date [ADC-6146]; in the US every objective claim needs a reasonable basis before it is made [MCR-6022]. Fail: cut the claim.
+2. **Every claim can be proven.** Your market's ad rules want claims backed: in the US every objective claim needs a reasonable basis before it is made [MCR-6022]; in the UK the CAP code needs proof held before the claim runs; ad codes elsewhere want claims substantiated on request and research cited with source and date [ADC-6146]. Fail: cut the claim.
 3. **Stock through the coverage window.** A guide can run weeks after the pitch. Fail: pitch only products with cover through the season.
 4. **Email law.** Cold pitches to US addresses fall under CAN-SPAM even when business to business: true sender and subject, postal address, an easy opt-out honoured within 10 business days [EML-6385]. Never use bought or scraped lists.
 
@@ -56,7 +56,7 @@ A paid-to-use stunt that shows the benefit can also earn coverage at small cost 
 
 ### 2. Work out the lead times
 
-Practitioner default, confirm per outlet: print magazines plan seasonal guides 3 to 6 months ahead; online guides and newsletters 4 to 10 weeks ahead; newspapers' festive supplements in India 4 to 8 weeks ahead. Work back from each season and put a "pitch by" date on every row.
+Practitioner default, confirm per outlet: print magazines plan seasonal guides 3 to 6 months ahead; online guides and newsletters 4 to 10 weeks ahead; newspapers' seasonal and festive supplements 4 to 8 weeks ahead. Work back from each season and put a "pitch by" date on every row.
 
 ### 3. Build the list
 
@@ -93,7 +93,7 @@ Write each pitch for the person; never send the same email to 40 writers in one 
 
 ### 6. Paid placements
 
-Some guides charge a fee or require an affiliate deal. A paid placement is an ad: it must be labelled as one; content that looks like editorial must say it is paid under ASCI's rules in India [ADC-6147], and in the US any material connection must be clear [MCR-6025]. Log paid placements separately and judge them like ads, on profit.
+Some guides charge a fee or require an affiliate deal. A paid placement is an ad: it must be labelled as one; content that looks like editorial must say it is paid under your market's ad disclosure rules [ADC-6147]: in the US any material connection must be clear [MCR-6025], and in the UK the ASA and CMA require it to be obvious. Log paid placements separately and judge them like ads, on profit.
 
 ### 7. Send, track and use coverage
 
@@ -103,9 +103,9 @@ Some guides charge a fee or require an affiliate deal. A paid placement is an ad
 - A wire press release can be worth it for genuine news, since AI answers sometimes cite syndicated releases; only publish what is true [AEO-0013].
 - When using coverage on the site, show the outlet's actual quote with the logo; bare logos now read as fake [LPG-0037]. Use only what was really published.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** include regional and city publications and their festive supplements; offer Hindi or regional-language product notes where the outlet publishes in them; quote prices inclusive of GST.
+- **Every market:** include regional and city publications and their seasonal supplements; offer product notes in the languages your buyers use where the outlet publishes in them; quote prices with tax shown the way local readers expect (VAT included in the UK and EU).
 - **US:** check that sample shipping meets customs and carrier rules for the product; many guides need an affiliate link to feature a product.
 
 ## Checks before you hand it over
@@ -140,7 +140,7 @@ Some guides charge a fee or require an affiliate deal. A paid placement is an ad
 
 ## Sources
 
-- ADC-6146, MCR-6022: claims must be substantiated (India, US).
+- ADC-6146, MCR-6022: claims must be substantiated before or on request.
 - EML-6385: CAN-SPAM covers business-to-business pitches.
 - WLD-0005: a benefit stunt can earn coverage cheaply.
 - ADC-6147, MCR-6025: paid placements must be disclosed.
@@ -149,3 +149,7 @@ Some guides charge a fee or require an affiliate deal. A paid placement is an ad
 - LPG-0037: show outlet quotes, not bare logos.
 
 What makes this skill ours: every target is a named writer with a dated piece in the store's price band, and every row carries a pitch-by date worked back from lead time; claims are checked against a proof sheet before any pitch; paid placements are logged and judged as ads; and coverage is tied to orders through UTM links and the post-purchase survey.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. ASCI's code wants claims substantiated on request [ADC-6146] and paid placements labelled [ADC-6147]. Include regional and city publications and their festive supplements (4 to 8 weeks ahead), offer Hindi or regional-language notes, and quote prices inclusive of GST. Diwali and Raksha Bandhan are gifting seasons.

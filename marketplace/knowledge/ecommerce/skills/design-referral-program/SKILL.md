@@ -1,6 +1,6 @@
 ---
 name: design-referral-program
-description: "A customer referral program sized from the store's own acquisition cost and margins: the reward for the friend and the referrer (money off, credit, product or a rising ladder), when the reward is paid, the rules and terms, fraud checks for self-referrals, coupon-site leaks and refunded orders, the moments to ask (after a good delivery, a high survey score or a photo review), and the messages for email, thank-you page, SMS and WhatsApp share in India. Includes disclosure rules for rewarded posts and a test that compares referred buyers with paid ones on gross profit. Tool-neutral with a free path. Use when the store wants a refer-a-friend program or an existing one costs more than paid ads."
+description: "A customer referral program sized from the store's own acquisition cost and margins: the reward for the friend and the referrer (money off, credit, product or a rising ladder), when the reward is paid, the rules and terms, fraud checks for self-referrals, coupon-site leaks and refunded orders, the moments to ask (after a good delivery, a high survey score or a photo review), and the messages for email, thank-you page, SMS and WhatsApp share. Includes disclosure rules for rewarded posts and a test that compares referred buyers with paid ones on gross profit. Tool-neutral with a free path. Use when the store wants a refer-a-friend program or an existing one costs more than paid ads."
 ---
 
 # Referral program design
@@ -39,7 +39,7 @@ Setting up the program needs draft access (level 2); launching it, and paying an
 
 1. **Product earns word of mouth.** If return rate is high or reviews average under about 4 stars, fix the product first; a reward cannot make people recommend what disappointed them (practitioner default, test it).
 2. **Reward fits acquisition cost.** Total reward cost per referred new customer must sit below the store's allowed cost per new customer, set from time-bound lifetime gross profit with refunds deducted [MEA-0020]. Computed in step 2.
-3. **Disclosure.** In the US, a referrer who posts a link publicly for a reward should say they get something, and the store should tell referrers this and check [CXP-6303]. Put it in the terms and the share text.
+3. **Disclosure.** In the US, a referrer who posts a link publicly for a reward should say they get something, and the store should tell referrers this and check [CXP-6303]. In the UK, the ASA and CAP Code expect the same. Put it in the terms and the share text.
 4. **Messaging consent.** Referral asks by SMS and WhatsApp go only to buyers who opted in. The store never messages the friend directly from a phone number the referrer typed in; the referrer shares the link themselves.
 
 ## Steps
@@ -64,7 +64,7 @@ A rising ladder (refer 3, get a product; refer 5, get a bigger one) fits launche
 ### 3. Write the rules
 
 - Friend must be a new customer (no past orders on email, phone or address).
-- Reward to referrer only after the friend's order is delivered, paid (COD in India) and past the return window.
+- Reward to referrer only after the friend's order is delivered, paid (including pay-on-delivery orders) and past the return window.
 - One friend reward per person and household; no stacking with sale codes.
 - Cap rewards per referrer per month (practitioner default: 10, test it).
 - Rewards are store credit or product, no cash value.
@@ -72,7 +72,7 @@ A rising ladder (refer 3, get a product; refer 5, get a bigger one) fits launche
 
 ### 4. Set the fraud checks
 
-Before each reward is paid, check: same email pattern, phone, shipping address or payment card as the referrer; friend order refunded or RTO; many referrals in a short burst; the referral code appearing on coupon sites (search the code each month); orders cancelled after the reward. Hold flagged rewards for review. Any referrer with three flags in 90 days is removed (practitioner default, test it).
+Before each reward is paid, check: same email pattern, phone, shipping address or payment card as the referrer; friend order refunded or undelivered; many referrals in a short burst; the referral code appearing on coupon sites (search the code each month); orders cancelled after the reward. Hold flagged rewards for review. Any referrer with three flags in 90 days is removed (practitioner default, test it).
 
 ### 5. Choose the ask moments
 
@@ -96,22 +96,22 @@ Asking promoters and reviewers to refer is fine; this is not a review ask, so it
 4. **Reward earned:** "Your friend's order arrived. [Reward] is in your account and works until [date]."
 5. **Share text** the referrer sends, with a disclosure line: "I get [reward] if you use my link, and you get [offer]."
 
-Keep SMS under 160 characters with no emoji. India: a WhatsApp share button with prefilled text in English and the store's top regional language.
+Keep SMS under 160 characters with no emoji. Where buyers use WhatsApp: a WhatsApp share button with prefilled text in each language your buyers use.
 
 ### 7. Measure on gross profit, not sign-ups
 
 Track monthly: links shared, referred first orders, referred share of new customers, reward cost, flagged and held rewards, and 90-day gross profit per referred customer versus per paid-ad customer, refunds deducted. The program stays only if cost per referred new customer is below the paid cost and referred customers' 90-day gross profit is at least equal. Watch the friends-and-family share in the post-purchase survey too; it should rise if word of mouth grows [CXP-0022].
 
-### 8. India and US notes
+### 8. Notes by market
 
-- **India:** WhatsApp sharing drives most referrals; build the link to open in WhatsApp. COD friend orders count only after delivery and payment; RTO orders never earn a reward. Store credit is clearer than "cashback", which buyers may expect as money.
-- **US:** state the disclosure line in terms and share text [CXP-6303]; keep rewards as credit with clear terms and expiry.
+- **Where WhatsApp leads:** in much of Europe, Latin America and Asia, WhatsApp sharing drives most referrals; build the link to open in WhatsApp. Pay-on-delivery friend orders count only after delivery and payment; undelivered orders never earn a reward. Store credit is clearer than "cashback", which buyers may expect as money.
+- **US and UK:** state the disclosure line in terms and share text [CXP-6303]; keep rewards as credit with clear terms and expiry.
 
 ## Checks before you hand it over
 
 - Reward cost per referred customer is below the allowed cost per new customer.
 - Referrer reward pays only after delivery, payment and the return window.
-- Fraud checks cover self-referral, address, card, coupon sites, refunds and RTO.
+- Fraud checks cover self-referral, address, card, coupon sites, refunds and undelivered orders.
 - Every ask moment has a trigger and excludes buyers with open problems.
 - Share text and terms include the reward disclosure.
 - The store never messages a friend's number directly.
@@ -151,4 +151,10 @@ Track monthly: links shared, referred first orders, referred share of new custom
 - MEA-0045: post-purchase survey shares as a channel check.
 - ORG-0030: product rewards and rising ladders beat cash.
 
-What makes this skill ours: the reward is capped by the store's own allowed cost per new customer; referrers are paid only after delivery, payment and the return window, so COD and refunds cannot be gamed; asks fire at real high points; and the program is kept only if referred buyers beat paid ones on 90-day gross profit.
+What makes this skill ours: the reward is capped by the store's own allowed cost per new customer; referrers are paid only after delivery, payment and the return window, so pay-on-delivery orders and refunds cannot be gamed; asks fire at real high points; and the program is kept only if referred buyers beat paid ones on 90-day gross profit.
+
+## Selling in India
+
+- WhatsApp sharing drives most referrals; add a share button with prefilled text in English and the store's top regional language.
+- COD friend orders count only after delivery and payment; RTO orders never earn a reward.
+- Store credit is clearer than "cashback", which Indian buyers may expect as money.

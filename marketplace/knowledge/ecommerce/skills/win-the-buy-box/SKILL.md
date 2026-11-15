@@ -58,8 +58,8 @@ Reading is level 1. Changing price, shipping settings or repricing rules needs d
 8. **Seller performance.** Read the order defect rate (under 1%), and for seller-fulfilled orders the late shipment rate (under 4%), cancel rate (under 2.5%) and valid tracking rate (over 95%) [AMZ-6444] [AMZ-6443]. Any metric over its line goes to `amazon-account-health-fix`. Read Voice of the Customer complaints for the ASIN: a pattern ("arrived broken", "not as described") is a listing or packaging fix.
 9. **Shipping and returns settings.** Check the shipping template for the delivery promise and any shipping charge, and whether the category allows free returns on this offer. A charge that pushes the total above a rival's can lose the box even when the item price is lower.
 10. **Do not test prices on buyers.** Change price as a rule-based response, not as an A/B test of two prices for the same product; that once ended in refunds to thousands of Amazon buyers [CRO-0009].
-11. **India notes (Amazon.in).** The same factors apply. Many sellers list the same branded item; buyers compare the delivered price, so check the delivery charge and delivery date shown for a few pincodes. Cash-on-delivery availability affects choice but is not a listed Featured Offer factor. Keep MRP on the listing correct.
-12. **US notes (Amazon.com).** A seller-fulfilled offer must ship within the time it promises; set handling time honestly rather than shortening it to look faster [CXP-6160].
+11. **Other Amazon stores (UK, EU, Canada, Australia and more).** The same factors apply in each store. Many sellers list the same branded item; buyers compare the delivered price, so check the delivery charge and delivery date shown for a few postcodes. In VAT markets, prices show with VAT included, so compare VAT-inclusive offers. Local payment options affect choice but are not a listed Featured Offer factor. Keep the price fields, and any required price declarations, correct on the listing.
+12. **Shipping promises.** A seller-fulfilled offer must ship within the time it promises (in the US the mail order rule backs this); set handling time honestly rather than shortening it to look faster [CXP-6160].
 13. **Set the watch.** Weekly: Featured Offer percentage per ASIN, Pricing Health alerts, offers on each listing, stock cover. Alert the client if any ASIN falls 10 points in a week (practitioner default).
 
 ## Checks before you hand it over
@@ -101,3 +101,7 @@ Reading is level 1. Changing price, shipping settings or repricing rules needs d
 - CXP-6160: US mail order rule on shipping promises.
 
 What makes this skill ours: it uses Amazon's own factor list, which says reviews and Prime do not count, instead of the common "lowest price wins" belief; every price move sits above a profit floor; it checks the brand's own prices elsewhere as a cause; and it treats genuine resellers as a supply-chain leak, not an IP case.
+
+## Selling in India
+
+- On Amazon.in, check the delivery charge and date for a few pincodes. COD availability affects choice but is not a listed Featured Offer factor. Keep MRP on the listing correct.

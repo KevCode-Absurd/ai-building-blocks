@@ -1,8 +1,8 @@
 # General lessons (any company, any job)
 
-Each lesson says what won and what to avoid. They sit under the rules of QUALITY-ENGINE-v3.md and never override them. None of them is a length limit: the owner's limit wins, then the family profile and the reader (rule 3).
+Each lesson says what won and what to avoid. They sit under the hard rules of `METHOD.md` and never override them. None of them is a length limit: the owner's limit wins, then the family profile and the reader (rule 4).
 
-1. **Finish the deliverable; state proposals plainly (rule 1).**
+1. **Finish the deliverable; state proposals plainly (rules 1 and 3).**
    - Won: complete offers, owners, timelines and numbers stated plainly as decisions; facts the research captured filled in with their exact wording; real, sourced values in public copy (signer, contact route, a real review quoted word for word); the setup that makes the kit true on the day (sample data loaded, notes ready where the team will look).
    - Avoid: blanks, placeholders, TBD, [Your name], [Insert POS] or bracket slots in the body; hedging every recommendation into a question; a list of open items at the end.
 
@@ -10,15 +10,15 @@ Each lesson says what won and what to avoid. They sit under the rules of QUALITY
    - Won: when the owner gave everything in the brief and cannot answer, deciding every open point with the assumption a top practitioner would pick; at most three assumption lines, each next to the part it changes; one final version of each field (one subject line, one headline) unless the brief asks for options, and then labelled options outside the field; a permission the law needs in one line next to its item.
    - Avoid: "To confirm" or "Open questions" sections; asking for the owner's yes, sign-off or choice inside the plan or copy; alternates or "(test: ...)" inside a field; notes to the writer left in the copy. Approvals for live actions belong in your own message, never in the deliverable.
 
-3. **The owner's data first; the playbook as the default (rule 4).**
+3. **The owner's data first; the playbook as the default (rule 5).**
    - Won: reading the owner's numbers before reaching for a template, and letting them set the move; the approach a top practitioner would normally take, done excellently, when the data says nothing new; one labelled bolder move, sized in the owner's unit, with its first step and risk. When a live version exists (a job posting, a page), start from it and table each change and why.
    - Avoid: a stock rule applied over the owner's data (one test design for every test, a fixed metric, a target set at the old average); clever moves that add risk, such as repeating an attacker's framing or inventing an untested metric; copying live gates unweighed, or changing them without flagging it.
 
 4. **Act fully on the signal.**
-   - Won: naming the three strongest signals in the owner's data (the winner hiding in an average, the under-used asset, the constraint that sets timing), each with its number, and building the deliverable on them; putting moves that serve the same goal into one recommendation; cutting what a signal says to cut.
-   - Avoid: the half-measure, which loses: quoting a weak number and keeping the weak option anyway, sending a step to everyone when the data says only one group responds, or demoting a strong lever to a runner-up line. If the deliverable keeps something a signal says to cut, say why in one line with the number.
+   - Won: naming the signals in the owner's data that change the decision (the winner hiding in an average, the under-used asset, the constraint that sets timing), as many as the data holds, each with its number, and building the deliverable on them; putting moves that serve the same goal into one recommendation; cutting what a signal says to cut.
+   - Avoid: the half-measure, which loses: quoting a weak number and keeping the weak option anyway, sending a step to everyone when the data says only one group responds, or demoting a strong lever to a runner-up line; inventing a signal to fill a slot, or treating a big number that changes nothing as a signal. If the deliverable keeps something a signal says to cut, say why in one line with the number.
 
-5. **Lead with the decision, then the kit the reader will use (rule 3).**
+5. **Lead with the decision, then the kit the reader will use (step 4, rule 4).**
    - Won: a first screen with the decision, the numbers the owner asked for by name, every piece of bad news and the first move this week; a one-screen summary up top (an at-a-glance table, a decision screen, a plan with arms, sample size, dates and rule), one-line definitions of technical terms, then every usable part (scripts, templates, checklists, readout templates, macros); short tables (two or three columns) with detail in step lists below.
    - Avoid: cutting usable parts to look short; padding that repeats the summary; tables of four or more columns with paragraphs in cells; the same definition or price paragraph pasted into every variant so different angles read alike (keep each required disclosure, short and fitted to its piece; say other shared lines once); reference tables inside a one-idea, one-button message (move them to optional blocks or build notes). If the request sets a page limit, check it with a real render.
 
@@ -38,7 +38,7 @@ Each lesson says what won and what to avoid. They sit under the rules of QUALITY
    - Won: renewal frequency and price beside every price the customer sees (hero, plan cards, sticky bars, final call to action, emails); "first order only" on any first-order guarantee; renewal date, the actual next charge and a visible cancel path in the first and pre-renewal email; days to act counted from the real cutoff.
    - Avoid: disclosure only in the hero; the intro price in a renewal notice; "pause" or "no fees" without a policy source; "a week" when the real window is six days.
 
-10. **Merge, don't just pick (step 5).**
+10. **Merge, don't just pick (step 3).**
    - Won: grafting specific strengths from runner-up drafts and the plain draft into the base.
    - Avoid: discarding a losing draft whole when one part of it beat the winner.
 
@@ -46,7 +46,7 @@ Each lesson says what won and what to avoid. They sit under the rules of QUALITY
    - Won: one {snake_case} token format, each filled by a named source, kept only for per-use data (names, order numbers, dates); a fallback line naming the sentence it replaces; branch labels, "pick when" / "do not use if" lines, chat versions and tags kept outside the pasted text; conflicts between sources listed with a recommended choice.
    - Avoid: double-brace tokens, arithmetic on tokens in the body, raw {curly} placeholders in third-party-facing text, a URL followed by punctuation; quietly picking one version of a conflicting policy.
 
-12. **Edit for the reader, then leak-check (steps 6 and 9).**
+12. **Edit for the reader, then leak-check (steps 4 and 5).**
     - Won: plain words, the decision first, scannable structure, one voice; sources in a visible footer; team-only notes clearly separated.
     - Avoid: internal file names, workflow words, notes to self. Run the leak-check tool and fix every hit.
 

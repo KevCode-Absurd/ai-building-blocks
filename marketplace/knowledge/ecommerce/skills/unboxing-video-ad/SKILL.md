@@ -25,7 +25,7 @@ description: "A script and shot plan for an unboxing video ad that shows the rea
 
 Required:
 
-1. **An order placed through the live store**, paid the way most buyers pay (prepaid or cash on delivery), shipped by the normal courier to the person who will unbox it. Note order date and delivery date.
+1. **An order placed through the live store**, paid the way most buyers pay (card, wallet, buy now pay later, or pay on delivery where offered), shipped by the normal courier to the person who will unbox it. Note order date and delivery date.
 2. **Packaging details:** what every buyer gets today (mailer, retail box, tissue, inserts, freebies) and what only some get. Ask the warehouse or 3PL, not the marketing team.
 3. **Approved claims list** (`product-claims-profile`) and the live product page.
 4. **Who unboxes:** a real customer, a creator, or the founder or staff, with signed usage terms for paid ads.
@@ -41,7 +41,7 @@ Access: read only. Placing the test order spends money; the client approves it o
 2. **Packaging is the same for everyone.** The box on camera is the box every buyer gets this month. A one-off press box is allowed only if the ad says it is a gift set or press kit. Fail: film what ships, or fix packaging first.
 3. **Delivery is fit to show.** If the order took far longer than the product page promises, or arrived damaged, do not make this ad yet. Report the problem to the client; it costs more than any ad earns.
 4. **Honest speaker.** Gifted or paid creators disclose it [MCR-6025]. No one speaks as a customer unless they bought and used it [MCR-6045].
-5. **India labelling.** Packaged goods sold in India carry a label with MRP and maker details. Never cover, blur or edit it out of the shot.
+5. **Labelling.** Packaged goods carry the labels your market's labelling and product safety rules require (for example net quantity, maker or importer details, CE or UKCA marks, warnings). Never cover, blur or edit them out of the shot.
 
 Fail on any gate: stop and say which one, and offer the fallback in step 1.
 
@@ -84,12 +84,12 @@ Box opens (2 s), hero part lifted (3 s), first use result (6 s), product still w
 
 ### 7. Write the honesty sheet
 
-List what must appear as is: the courier parcel, every part in the box today, the real size against a hand, the first use without cuts, the MRP label in India, the disclosure. List what must not appear: extras not in every order, a delivery time faster than the store's normal, results the product cannot give on day one.
+List what must appear as is: the courier parcel, every part in the box today, the real size against a hand, the first use without cuts, the required labels, the disclosure. List what must not appear: extras not in every order, a delivery time faster than the store's normal, results the product cannot give on day one.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** cash on delivery is common; if the order was COD, the speaker may say so only if the store still offers it. Show the courier mailer as it arrived; buyers know what tampered parcels look like and trust a real one. Film in the buyer's language; Hinglish is fine.
-- **US:** the paid or gifted disclosure goes on screen early and is spoken [MCR-6060]. A delivery-speed line must match what the store promises at checkout.
+- **Payment and parcel:** if the order used a payment option (pay later, pay on delivery), the speaker may mention it only if the store still offers it. Show the courier mailer as it arrived; buyers know what tampered parcels look like and trust a real one. Film in the languages your buyers use; mixed-language speech is fine where that is how buyers talk.
+- **Disclosure and claims:** the paid or gifted disclosure goes on screen early and is spoken [MCR-6060]; the FTC in the US, the ASA in the UK and EU consumer rules all expect it. A delivery-speed line must match what the store promises at checkout.
 
 ## Checks before you hand it over
 
@@ -99,7 +99,7 @@ List what must appear as is: the courier parcel, every part in the box today, th
 - First use is one continuous take with no cut inside the result.
 - Speaker status is real and disclosed where required.
 - No address, phone number or order number is visible.
-- India: the MRP label is not hidden.
+- Required labels are not hidden.
 - The 15 second cut makes sense with the sound off.
 - The test order and the creator message had the client's yes.
 
@@ -137,4 +137,10 @@ List what must appear as is: the courier parcel, every part in the box today, th
 - MEA-0037: gross margin uses delivered cost.
 - ORG-0017: first frame shows the topic.
 
-What makes this skill ours: the ad starts from a real order through the live store, so parcel, delivery and contents on camera are true; packaging cost is put into gross profit before the ad promises it; a slow or damaged delivery stops the ad and goes to the client; and India notes protect the MRP label and the real courier parcel.
+What makes this skill ours: the ad starts from a real order through the live store, so parcel, delivery and contents on camera are true; packaging cost is put into gross profit before the ad promises it; a slow or damaged delivery stops the ad and goes to the client; and market notes protect the required labels and the real courier parcel.
+
+## Selling in India
+
+- Packaged goods carry an MRP and maker details label under Legal Metrology rules; never hide it.
+- If the order was COD, the speaker may say so only if the store still offers it.
+- Hinglish is fine on camera.

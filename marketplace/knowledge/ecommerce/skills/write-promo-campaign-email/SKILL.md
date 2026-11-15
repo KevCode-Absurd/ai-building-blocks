@@ -1,6 +1,6 @@
 ---
 name: write-promo-campaign-email
-description: "One promotional campaign email written in full (three subject lines, preview text, headline, body, button, offer terms block and footer) plus a matching text version for SMS or a WhatsApp marketing template, all carrying the exact same offer, end date and exclusions. Checks the offer's gross profit, stock and any 'was' price before writing, picks the segment and send time, and runs a claims, spam and law check (CAN-SPAM, Gmail sender rules, India DLT and ASCI). Use for a single sale, offer, restock, bundle or new-arrival email, when the offer is decided and needs to be sold clearly and honestly."
+description: "One promotional campaign email written in full (three subject lines, preview text, headline, body, button, offer terms block and footer) plus a matching text version for SMS or a WhatsApp marketing template, all carrying the exact same offer, end date and exclusions. Checks the offer's gross profit, stock and any 'was' price before writing, picks the segment and send time, and runs a claims, spam and law check (CAN-SPAM in the US, UK and EU consent rules, Gmail sender rules and local ad rules). Use for a single sale, offer, restock, bundle or new-arrival email, when the offer is decided and needs to be sold clearly and honestly."
 ---
 
 # Promotional campaign email
@@ -90,12 +90,12 @@ Each under about 45 characters (practitioner default for mobile). Preview text a
 ```
 
 - **US:** only to SMS opt-ins, 8 a.m. to 9 p.m. recipient time [EML-6345].
-- **India:** the SMS must match a DLT-registered promotional template on a -P header, with a whitelisted full link [EML-6344]; register it days before. A WhatsApp marketing template is often the better channel; write it with `write-sms-and-whatsapp-messages`.
+- **UK and EU:** texts go only to people who gave consent (or past buyers under the UK soft opt-in), with the sender named and a free way to opt out. Where buyers use WhatsApp, a WhatsApp marketing template is often the better channel; write it with `write-sms-and-whatsapp-messages`.
 
 ### 7. Run the checks
 
 - **Numbers:** every price, percent, date and "up to" figure matches the offer sentence and the live store.
-- **Urgency:** no "last chance" unless it is; no countdown that resets; no stock claims without stock data. Indian advertising rules treat false urgency as misleading [ADC-6147].
+- **Urgency:** no "last chance" unless it is; no countdown that resets; no stock claims without stock data. Advertising rules in the US, UK, EU and other markets treat false urgency as misleading [ADC-6147].
 - **Spam and law:** no misleading subject or fake "Re:", visible unsubscribe [EML-6340]; US postal address and ad identification [EML-6341]; no all-caps words or strings of exclamation marks; no link shorteners.
 - **Mobile:** headline and button visible without scrolling on a phone; images have alt text.
 
@@ -133,7 +133,7 @@ Offer terms: [code or automatic]; [dates, time, zone]; [exclusions]; [limits]
 Footer: [postal address], [unsubscribe]
 ```
 
-3. **Text version:** channel, exact text, character count, template id (India).
+3. **Text version:** channel, exact text, character count, template id where the channel needs one (WhatsApp, or SMS where carriers require registered templates).
 4. **Check table:** Line, Claim, Source, Status.
 
 ## Common mistakes
@@ -146,7 +146,7 @@ Footer: [postal address], [unsubscribe]
 
 ## Sources
 
-- ADC-6147: false urgency is misleading in India (proposed).
+- ADC-6147: false urgency is misleading (proposed).
 - EML-0001, OFF-0043: protect active subscribers during sales.
 - EML-0024, EML-0025: SMS length and campaign cadence.
 - EML-0033: reviews that answer one doubt.
@@ -155,10 +155,15 @@ Footer: [postal address], [unsubscribe]
 - EML-0059: inbox health floor.
 - EML-0061: campaign split judged on revenue.
 - EML-6340, EML-6341: Gmail sender rules and CAN-SPAM (proposed).
-- EML-6344, EML-6345: India SMS templates and US text rules (proposed).
+- EML-6345: US text rules (proposed).
 - LPG-0045, MCR-0016: opening line and AI tells.
 - OFF-0017: show the bigger saving number.
 - OFF-0065: discount and break-even.
 - OFF-6145: genuine former prices (proposed).
 
-What makes this skill ours: nothing is written until the offer clears gross profit, stock and price history; one offer sentence locks every number across email, terms and text; the email replaces a weaker send instead of piling on; and the text version follows the real US and Indian sending rules.
+What makes this skill ours: nothing is written until the offer clears gross profit, stock and price history; one offer sentence locks every number across email, terms and text; the email replaces a weaker send instead of piling on; and the text version follows the real US, UK and EU sending rules.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. The SMS must match a DLT-registered promotional template on a -P header, with a whitelisted full link [EML-6344]; register it days before. A WhatsApp marketing template is often the better channel. Indian advertising rules (ASCI) treat false urgency as misleading [ADC-6147].
+- EML-6344: India SMS templates (proposed).

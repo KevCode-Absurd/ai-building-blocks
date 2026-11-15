@@ -91,10 +91,10 @@ For each result on screen, write how it was filmed: date, who filmed, takes, any
 - **TikTok and TikTok Shop:** for Shop videos, link the product and keep the demo in the first seconds. Rank Shop demos on sales per thousand views, not view count; these varied over a hundredfold across top videos in one review [MCR-0046]. Listing videos also feed `optimize-tiktok-shop-listings`.
 - **Products felt in seconds** (cooling, taste, scent) can add the user's honest reaction as the proof [MCR-0045].
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** show prices in rupees only if they match the live page today. For cash-on-delivery buyers, a demo that answers "will it really work" lowers the risk of refused parcels; write the proof text in Hindi, Hinglish or a regional language if that is how buyers search. Avoid demos with branded competitor products visible.
-- **US:** speeded-up, retouched or staged demos are misleading claims under advertising law. If a speed-up is unavoidable for a long process, show "sped up" on screen the whole time, or choose another demo.
+- **Every market:** show prices in the store's currency only if they match the live page today. Where buyers pay on delivery or return freely, a demo that answers "will it really work" lowers refused parcels and returns; write the proof text in the languages your buyers use if that is how they search. Avoid demos with branded competitor products visible.
+- **US, UK, EU, Canada and Australia:** speeded-up, retouched or staged demos are misleading claims under advertising law (FTC in the US, ASA in the UK, the EU consumer rules, the Competition Bureau in Canada, the ACCC in Australia). If a speed-up is unavoidable for a long process, show "sped up" on screen the whole time, or choose another demo.
 
 ### 9. Hand over and judge
 
@@ -144,4 +144,8 @@ Send the script to `plan-ugc-shoot-at-home` for the shoot, then to `captions-and
 - ORG-0016: hook text five to eight words.
 - ORG-0017: first frame shows the topic.
 
-What makes this skill ours: the demo must work three times off camera before it is filmed; every on-screen result has a proof sheet saying how and when it was shot; TikTok Shop demos are ranked on sales per thousand views; and the India notes tie the demo to cutting refused cash-on-delivery parcels.
+What makes this skill ours: the demo must work three times off camera before it is filmed; every on-screen result has a proof sheet saying how and when it was shot; TikTok Shop demos are ranked on sales per thousand views; and the market notes tie the demo to cutting refused parcels and returns.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Show prices in rupees only if they match the live page. For COD buyers, a demo that answers "will it really work" lowers refused parcels; write the proof text in Hindi, Hinglish or a regional language if that is how buyers search.

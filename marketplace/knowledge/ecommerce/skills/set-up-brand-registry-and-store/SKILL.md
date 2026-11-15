@@ -1,6 +1,6 @@
 ---
 name: set-up-brand-registry-and-store
-description: "Takes a brand from no trademark to enrolled in Amazon Brand Registry with a live Brand Store and a weekly protection routine: a trademark plan (clearance search, word mark, classes, filing in the US or India, who must own it), the Brand Registry application with a pending mark, a Brand Store page plan built from what buyers search, and the protection set-up (Report a Violation, test buys, barcode choice, watch list). Every legal step points to the official office and a trademark attorney for advice. Use when a brand starts selling on Amazon, when a reseller or copycat edits the brand's listings, or when A+, Vine and Sponsored Brands are locked because the brand is not registered."
+description: "Takes a brand from no trademark to enrolled in Amazon Brand Registry with a live Brand Store and a weekly protection routine: a trademark plan (clearance search, word mark, classes, filing in the store's main market such as the US, UK, EU, Canada or Australia, who must own it), the Brand Registry application with a pending mark, a Brand Store page plan built from what buyers search, and the protection set-up (Report a Violation, test buys, barcode choice, watch list). Every legal step points to the official office and a trademark attorney for advice. Use when a brand starts selling on Amazon, when a reseller or copycat edits the brand's listings, or when A+, Vine and Sponsored Brands are locked because the brand is not registered."
 ---
 
 # Amazon Brand Registry and brand store
@@ -28,7 +28,7 @@ Required:
 1. **The brand name exactly as printed** on the product and packaging, and photos showing it permanently on the product or box.
 2. **Legal owner**: the company or person who will own the trademark, with registered address.
 3. **Products and categories** the brand sells now and plans to sell in the next 2 years.
-4. **Countries** the brand sells in or plans to (US, India, others).
+4. **Countries** the brand sells in or plans to (for example US, UK, EU countries, Canada, Australia, Japan, others).
 5. **Seller Central** with a Professional plan.
 
 Optional: an existing trademark application or registration number, a logo file, a brand guide (`store-visual-identity-sheet`), product images, best-selling ASINs.
@@ -46,20 +46,20 @@ Planning is level 1. Filing a trademark, submitting Brand Registry and publishin
 
 ### Part 1: the trademark
 
-1. **Search.** Use the free official search: the USPTO trademark search for the US, the IP India public search for India. Search the exact name, close spellings and sound-alikes in the classes from step 2. Record what you find; the attorney judges the risk.
-2. **Pick the mark and classes.** File a word mark (the name in plain letters) first: it covers the name in any style. A design mark must contain letters or numbers to qualify for Brand Registry [AMZ-6441]. Pick classes from the Nice classification for the goods sold now and in the next 2 years (for example clothing, cosmetics, kitchenware are separate classes). Each class adds a fee; read the current fee on the office's own page.
-3. **File in the right country.** Brand Registry accepts a pending or registered mark from a government office in a country with an Amazon store [AMZ-6441]. File in the main market first: USPTO for Amazon.com, IP India for Amazon.in. Amazon's IP Accelerator lists vetted law firms if the client wants help [AMZ-6441].
+1. **Search.** Use the free official search for each market: the USPTO trademark search for the US, the UK IPO search for the UK, EUIPO's eSearch or TMview for the EU, CIPO for Canada, IP Australia for Australia, and WIPO's Global Brand Database to scan many countries at once. Search the exact name, close spellings and sound-alikes in the classes from step 2. Record what you find; the attorney judges the risk.
+2. **Pick the mark and classes.** File a word mark (the name in plain letters) first: it covers the name in any style. A design mark must contain letters or numbers to qualify for Brand Registry [AMZ-6441]. Pick classes from the Nice classification for the goods sold now and in the next 2 years (for example clothing, cosmetics, kitchenware are separate classes). Each class adds a fee; read the current fee on the office's own page. If the name is a common or descriptive word for the product (for example "Linen Co" for linen goods), offices often refuse a word mark; ask the attorney whether a design mark with the letters, or both, has a better chance, and budget for both if needed. A refusal or a complaint after launch can force a rebrand, with new packaging, listings and lost reviews, so the search in step 1 comes before any spend.
+3. **File in the right country.** Brand Registry accepts a pending or registered mark from a government office in a country with an Amazon store [AMZ-6441]. File in the main market first: USPTO for Amazon.com, the UK IPO for Amazon.co.uk, EUIPO for one mark across EU stores (Amazon.de, .fr, .it, .es, .nl and others), CIPO for Amazon.ca, IP Australia for Amazon.com.au. For many countries at once, ask the attorney about an international filing through WIPO's Madrid system. Amazon's IP Accelerator lists vetted law firms if the client wants help [AMZ-6441].
 4. **Mark it right.** Use TM next to the name while pending; use the registered symbol only once registered.
 
 ### Part 2: Brand Registry
 
-5. **Apply with the application number.** In Brand Registry, enter the brand name exactly as filed, the office, the application or registration number, product categories, and photos of the brand on the product and packaging. One office is chosen at enrolment; others are added after approval [AMZ-6441].
+5. **Apply with the application number.** In Brand Registry, enter the brand name exactly as filed, the office, the application or registration number, product categories, and photos of the brand on the product and packaging. One office is chosen at enrolment; others are added after approval [AMZ-6441]. Amazon accepts a pending application only in some cases, so confirm on the Brand Registry site that this one qualifies before relying on it. Photo rules: a standalone image of the logo, plus a real photo of the real product or packaging showing the brand name permanently printed, sewn, engraved or moulded on it. No mock-ups, no stock or edited images and no stickers. An existing ASIN is useful detail but not required to apply. Answer every field truthfully and check the current form, which can ask for more.
 6. **Expect a verification code.** Amazon usually sends a code to the trademark's correspondent on file (often the attorney). Tell them to forward it at once; it expires.
-7. **After approval, switch on the tools.** A+ Content (`write-amazon-listing`), Vine (`get-early-amazon-reviews`, up to 30 units under the fee bands [AMZ-6440]), Sponsored Brands, Brand Analytics, and the Brand Store. Add other people as users with only the roles they need; never share the owner login.
+7. **After approval, switch on the tools.** A+ Content (`write-amazon-listing`), Vine (`get-early-amazon-reviews`, up to 30 units under the fee bands [AMZ-6440]), Sponsored Brands, Brand Analytics, and the Brand Store. Also check the Brand Referral Bonus (a fee credit on sales from off-Amazon traffic you send with Amazon Attribution links; read the current terms on the Brand Registry site and quote no figure until you have), product video on listings, Subscribe and Save where the product is bought again, and the Report a Violation tool. Add other people as users with only the roles they need; never share the owner login.
 
 ### Part 3: the Brand Store
 
-8. **Plan pages from searches.** Home page plus one page per product group buyers search for (for example "Kurtas", "Dupatta sets", "Gift sets"), from Brand Analytics or the search term report. Keep it to 3 to 6 pages at first (practitioner default).
+8. **Plan pages from searches.** Home page plus one page per product group buyers search for (for example "Linen shirts", "Matching sets", "Gift sets"), from Brand Analytics or the search term report. Keep it to 3 to 6 pages at first (practitioner default).
 9. **Write each page.** Home: brand line, hero products, one row per group. Group pages: the products, one image tile on what makes them different, one on care or sizing. Use the brand's real story and facts only; no ratings, "best seller" or prices in images, which go stale and can break creative rules. Check the Stores creative guidelines in Seller Central before submitting.
 10. **Send traffic to it.** Point Sponsored Brands ads and the brand's social links to store pages. Tag off-Amazon links with Amazon Attribution (free with Brand Registry) to see what they sell: for brands also on Amazon, a real share of the sales that Meta ads create lands on Amazon, not the site [MEA-0029]. A brand known off Amazon can sell well there before advertising on it [AMZ-0007].
 
@@ -69,15 +69,18 @@ Planning is level 1. Filing a trademark, submitting Brand Registry and publishin
 12. **Weekly watch.** Search the brand name on Amazon; list every listing and seller. For each unknown seller: make a test buy; report fakes or trademark misuse through Report a Violation with order number and photos. Genuine resold stock is a distribution problem: trace the source and fix it in the supply agreement. Never report a genuine reseller as counterfeit.
 13. **Listing control.** Check weekly that titles, images and bullets on the brand's ASINs match the approved versions; fix changes through Brand Registry's listing tools.
 14. **Off Amazon.** Rivals can bid on the brand name in Google Ads; Google limits use of the mark in ad text only after the owner complains [GAD-6120]. Hand that to `protect-brand-search-terms`.
-15. **India notes.** File with IP India in the classes for the goods; Amazon.in accepts an Indian mark. Flipkart and other Indian marketplaces have their own brand approval: keep the trademark papers and brand authorisation letters ready for them (`list-on-indian-marketplaces`).
-16. **US notes.** A US filing for goods not yet sold can be made on intent to use; the attorney chooses the filing basis.
+15. **Other marketplaces.** Walmart, Etsy, eBay, Zalando, bol and Mercado Libre have their own brand or IP programs (for example Walmart Brand Portal and eBay VeRO): keep the trademark papers and brand authorisation letters ready for them, and log their listings in the same weekly watch.
+16. **Beyond trademarks.** A trademark protects the name, not the design. For a new invention, a patent or a provisional patent filing is a separate step for a patent attorney. With an overseas factory, a manufacturing agreement that bars copying and selling around you protects more than a common non-disclosure form, which is often weak abroad; ask a lawyer who knows that country.
+17. **Market notes.** A US filing for goods not yet sold can be made on intent to use; the attorney chooses the filing basis. UK and EU filings do not need use at filing but can be challenged after 5 years of non-use. An EU mark covers every EU country in one filing, but not the UK, which needs its own.
 
 ## Checks before you hand it over
 
 - The trademark owner is the client's own entity.
 - The brand name on the product, the filing and the Brand Registry form match letter for letter.
 - Classes cover current and planned products.
-- Photos show the brand permanently on product or packaging.
+- Photos show the brand permanently on product or packaging: real photos, no mock-ups, stock images or stickers.
+- For a generic or descriptive name, the attorney has weighed a word mark against a design mark.
+- No referral bonus or fee figure is quoted that was not read from Amazon's current terms.
 - Store pages come from buyer searches and contain no stale prices or claims.
 - The protection routine has a named owner and a weekly date.
 - Nothing filed, submitted, reported or published without the client's yes.
@@ -102,6 +105,8 @@ Planning is level 1. Filing a trademark, submitting Brand Registry and publishin
 - **A store that repeats the search page.** Step 8 builds pages around how buyers search.
 - **Reporting resellers as fakes.** Step 12 needs a test buy and treats genuine resale as a supply issue.
 - **Sharing the owner login.** Step 7 adds users with limited roles.
+- **A mock-up or a sticker in the application photo.** Step 5 sets the photo rules.
+- **A generic name filed only as a word mark.** Step 2 asks the attorney about a design mark too.
 
 ## Sources
 
@@ -111,5 +116,10 @@ Planning is level 1. Filing a trademark, submitting Brand Registry and publishin
 - MEA-0029: a share of Meta value lands on Amazon.
 - AMZ-0007: brands known off Amazon can sell there before advertising.
 - GAD-6120: Google lets rivals bid on a trademark keyword.
+- Library item: Amazon brand registry planner (AI Blocks skill), used for the generic-name mark choice, the photo rules, the extra tools to switch on and the patent and factory agreement notes.
 
 What makes this skill ours: it protects who owns the mark before anything is filed; it files the word mark that Brand Registry accepts and enrols on the pending number instead of waiting; store pages are built from the brand's own search data; and protection runs on test buys so genuine resellers are never reported as fakes.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Search the IP India public search, then file with IP India in the classes for the goods; Amazon.in accepts an Indian mark. Flipkart and other Indian marketplaces have their own brand approval: keep the trademark papers and brand authorisation letters ready for them (`list-on-indian-marketplaces`).

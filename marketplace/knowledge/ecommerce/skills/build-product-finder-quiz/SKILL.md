@@ -39,7 +39,7 @@ If return reasons are missing, use reviews that say "wrong one", "too strong", "
 1. **A real choice exists.** At least 3 products differ on a fact the buyer can answer about themselves. Fail: no quiz; improve the collection page with `build-collection-page-that-converts`.
 2. **Every result earns money.** Each product or bundle a quiz path can recommend has positive gross profit per order and stock. Fail: remove it from the results or route that path to another product that fits.
 3. **The matching is honest.** Every result follows from the answers. A quiz that recommends the highest-margin product to everyone is misleading. Fail: rebuild the scoring.
-4. **Consent rules.** Email and SMS capture follow the platform's opt-in rules; US SMS needs express written consent under the store's SMS provider terms; India: WhatsApp messages need opt-in under WhatsApp Business policy, and personal data handling should follow the DPDP Act 2023 (ask a professional for the store's notice text).
+4. **Consent rules.** Email and SMS capture follow the platform's opt-in rules; US SMS needs express written consent under the store's SMS provider terms; UK and EU: email and SMS capture need clear consent under GDPR and the e-privacy rules; everywhere, WhatsApp messages need opt-in under WhatsApp Business policy, and personal data handling should follow the local privacy law (ask a professional for the store's notice text).
 
 ## Steps
 
@@ -52,7 +52,7 @@ If return reasons are missing, use reviews that say "wrong one", "too strong", "
 7. **Tag for flows.** Each answer becomes a property the welcome flow can use: product matched, main concern, past products tried. Hand the flow to `email-sms-flow-plan`.
 8. **Set targets and read the data.** Target about 30% of starters reaching the results page; 25% is acceptable. Find any question where drop-off jumps well above the 1 to 2% typical per step and soften or cut it [CRO-0004]. Export answers about every 100 completions and read the share naming each concern and past product as angle fuel [AVT-0023]. Compare buyer cohorts by answer; one brand found a segment that converted far better [AVT-0020].
 9. **Place the entry points.** Homepage hero or shop-by tile, collection top intro, product pages ("Not sure? Take the 60-second quiz"), and menu. Do not fire the quiz as a pop-up in the first seconds of a visit [LPG-0022].
-10. **India and US notes.** India: offer Hindi or a regional language version if tickets show demand, show COD and pincode delivery on the results page, and send the result on WhatsApp only to shoppers who opted in. US: SMS capture needs the provider's compliant consent wording.
+10. **Market notes.** All markets: offer a version in the other languages your buyers use if tickets show demand, show payment options and delivery time for the shopper's postcode or country on the results page, and send the result on WhatsApp only to shoppers who opted in. US: SMS capture needs the provider's compliant consent wording.
 
 ## Checks before you hand it over
 
@@ -111,3 +111,8 @@ If return reasons are missing, use reviews that say "wrong one", "too strong", "
 - LPG-0022: no pop-ups in the first seconds.
 
 What makes this skill ours: questions come from the facts that cause wrong purchases and returns; every result path is gated on profit, stock and honest matching; capture never blocks the answer; and quiz answers flow into email properties and avatar research instead of sitting unused.
+
+## Selling in India
+
+- Personal data handling follows the DPDP Act 2023.
+- Show COD and pincode delivery on the results page; offer Hindi or a regional language version if tickets show demand.

@@ -1,6 +1,6 @@
 ---
 name: youtube-shorts-plan
-description: "A 60-day YouTube Shorts plan for a store: channel setup (handle, store link first among channel links, advanced features), three recurring Shorts formats tied to products with the best gross profit, a weekly posting and batching rhythm, and a working route from Shorts to the store, built on YouTube's own link rules: typed URLs in Shorts descriptions and comments are not clickable, so each Short points its related video link at a longer product video that carries the store link, and products are tagged through YouTube Shopping once the channel qualifies. Includes audio and AI disclosure rules, India language notes and a 60-day read of store visits and orders. Use when a store wants a second short-video channel, already makes Reels or TikToks, or wants buyers who search on YouTube."
+description: "A 60-day YouTube Shorts plan for a store: channel setup (handle, store link first among channel links, advanced features), three recurring Shorts formats tied to products with the best gross profit, a weekly posting and batching rhythm, and a working route from Shorts to the store, built on YouTube's own link rules: typed URLs in Shorts descriptions and comments are not clickable, so each Short points its related video link at a longer product video that carries the store link, and products are tagged through YouTube Shopping once the channel qualifies. Includes audio and AI disclosure rules, notes on the languages your buyers use and a 60-day read of store visits and orders. Use when a store wants a second short-video channel, already makes Reels or TikToks, or wants buyers who search on YouTube."
 ---
 
 # YouTube Shorts plan
@@ -40,7 +40,7 @@ If the channel is new, plan setup first and set targets after 30 days. Changing 
 2. **Route to the store works.** Typed URLs in Shorts descriptions and comments are not clickable [ORG-6402]. Pass when the plan uses the related video link, channel links or product tags. Fail: do not promise clicks from Shorts captions.
 3. **Advanced features.** Clickable links in long video descriptions and the related video link need the channel's advanced features access, which YouTube Studio shows under its feature settings [ORG-6402]. Fail: the client enables it first.
 4. **Audio rights.** Use YouTube's own Shorts sounds, the YouTube Audio Library, or original voice; Audio Library tracks can be used in monetised videos without claims, and Creative Commons tracks need credit [MCR-6065]. Fail: replace the audio.
-5. **Disclosure.** Realistic AI-made people or events need YouTube's synthetic content disclosure [MCR-6064]; any paid or gifted creator needs the in-video label [ORG-6405], and an ASCI label in India [ORG-6406].
+5. **Disclosure.** Realistic AI-made people or events need YouTube's synthetic content disclosure [MCR-6064]; any paid or gifted creator needs the in-video label [ORG-6405], and the label local ad rules ask for in other markets (such as "#ad" in the UK).
 
 ## Steps
 
@@ -80,9 +80,9 @@ Every two weeks in YouTube Studio: views, the share of viewers who viewed versus
 
 At 60 days: keep formats whose Shorts beat the channel median on viewed-versus-swiped and drive related video clicks; drop the weakest format; decide on YouTube Shopping if now eligible.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** YouTube is very large in India; Hindi and regional-language Shorts can reach buyers that English posts miss. Write titles in the language spoken in the Short. Own-store product tagging follows the same channel rules [ORG-6403]; check in YouTube Studio that Shopping is offered for the store's market. Show rupee prices exactly as on the store and mention COD only if offered.
+- **Any market:** Shorts in the languages your buyers speak can reach buyers that English posts miss. Write titles in the language spoken in the Short. Own-store product tagging follows the same channel rules [ORG-6403]; check in YouTube Studio that Shopping is offered for the store's market. Show prices exactly as on the store, in its currency, and name payment options only if offered.
 - **US:** product comparison and "is it worth it" Shorts match how US buyers search on YouTube. Gifted or paid creator Shorts need a spoken and on-screen disclosure early in the video [ORG-6405].
 
 ## Checks before you hand it over
@@ -133,6 +133,10 @@ At 60 days: keep formats whose Shorts beat the channel median on viewed-versus-s
 - ORG-6402: Shorts link rules and channel links.
 - ORG-6403: YouTube Shopping eligibility for own products.
 - ORG-6405: FTC disclosure in the video.
-- ORG-6406: ASCI labels for India.
 
 What makes this skill ours: the route to the store is built on YouTube's real link rules (related video to a long video with the clickable link) instead of a dead URL in the caption; products are chosen by gross profit; audio and AI disclosure are checked before upload; and results are read as store sessions and orders, not views.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. YouTube is very large in India; Hindi and regional-language Shorts can reach buyers that English posts miss. Show rupee prices exactly as on the store and mention COD only if offered. Gifted or paid creator Shorts need an ASCI label [ORG-6406].
+- ORG-6406: ASCI labels for India.

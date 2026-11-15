@@ -102,8 +102,9 @@ A line fails if it:
 - Says "clinically proven", "dermatologist tested" or "doctor recommended" without the study or statement on file.
 - Uses a countdown, stock count or "selling fast" line that is not true today.
 - Uses before and after imagery or wording that the platform restricts for health and weight products.
-- India: breaks the ASCI code or the Drugs and Magic Remedies Act list; cosmetics may not make drug claims.
 - US: lacks substantiation, or presents an invented or paid testimonial as an ordinary customer's.
+- UK: breaks the CAP Code (checked by the ASA), including medicinal claims for products that are not licensed medicines.
+- EU and other markets: breaks the local ad standards code or consumer law on misleading claims; cosmetics may not make drug claims anywhere.
 
 Rewrite failing lines to what the source says, or cut them. This is general practice, not a legal ruling; the owner's adviser signs off borderline lines.
 
@@ -174,4 +175,8 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 - [ADC-0066]: test budget formula; higher-funnel event when purchases are few.
 - [MCR-0029]: a high-CTR ad can be a false winner.
 
-What makes this skill ours: each set answers a ranked objection with a dated fact and a real review; a line-by-line compliance pass covers Meta, ASCI and FTC rules, including fake urgency; and the number of sets comes from test cash and target cost per purchase, read on store orders with a stated learning rule.
+What makes this skill ours: each set answers a ranked objection with a dated fact and a real review; a line-by-line compliance pass covers Meta, FTC, ASA and local ad rules, including fake urgency; and the number of sets comes from test cash and target cost per purchase, read on store orders with a stated learning rule.
+
+## Selling in India
+
+- Check every line against the ASCI code and the Drugs and Magic Remedies Act list; some disease claims are barred outright.

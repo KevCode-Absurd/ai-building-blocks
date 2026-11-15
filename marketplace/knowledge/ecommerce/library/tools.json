@@ -1,0 +1,2592 @@
+[
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "maker": "Adobe",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "kind": "ai-tool",
+    "ai_tools_slug": "adobe-firefly",
+    "for_stores": "Edits and makes product and ad images with Generative Fill, Generative Expand and background swaps. Adobe says its outputs are safe for commercial use, and it also runs partner models such as Nano Banana and FLUX.",
+    "jobs": [
+      "Seasonal background swaps on product photos",
+      "A square shot extended to 9:16 for Stories",
+      "Props and marks removed from a product photo",
+      "A cut-out product blended into a lifestyle scene",
+      "Old product images upscaled for new banners"
+    ],
+    "agents": [
+      "aurelio-product-photos",
+      "ayaka-ad-design",
+      "tanvi-listing-images"
+    ],
+    "stage": "creative",
+    "connect": "API (Firefly Services: generate, composite product shots into scenes, upscale); no MCP seen. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.adobe.com/products/firefly.html",
+      "https://developer.adobe.com/firefly-services/docs/firefly-api/"
+    ]
+  },
+  {
+    "slug": "canva",
+    "name": "Canva",
+    "maker": "Canva",
+    "url": "https://www.canva.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "canva",
+    "for_stores": "Turns the store's brand kit and templates into ads, social posts, banners, email headers and inserts that anyone on the team can edit.",
+    "jobs": [
+      "One ad design resized for every placement",
+      "On-brand social posts from the brand kit",
+      "Sale banners and email headers",
+      "Print-ready inserts, labels and cards",
+      "Quick edits to a winning ad for a new offer"
+    ],
+    "agents": [
+      "ayaka-ad-design",
+      "tomas-social-community",
+      "alistair-packaging",
+      "lerato-creative-producer"
+    ],
+    "stage": "creative",
+    "connect": "Official MCP server (create and edit designs, search templates, assets and brand kits, export) and a Canva connector in Claude. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://canva.dev/docs/mcp/",
+      "https://claude.com/connectors"
+    ]
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut",
+    "maker": "ByteDance",
+    "url": "https://www.capcut.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "capcut",
+    "for_stores": "Edits short product videos for TikTok, Reels and Shorts on phone, desktop or browser, with ad templates, auto captions and background removal.",
+    "jobs": [
+      "UGC clips cut into a 15 second ad",
+      "Auto captions for silent viewing",
+      "A winning ad remade on a fresh template",
+      "Product clips with the background removed",
+      "One edit resized for TikTok, Reels and Shorts"
+    ],
+    "agents": [
+      "cody-video-editor",
+      "devon-video-ugc",
+      "pilar-creators"
+    ],
+    "stage": "creative",
+    "connect": "No API or MCP seen; the agent writes the cut list, captions and on-screen text, and a person edits in CapCut. Drafts only, at level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.capcut.com/"
+    ]
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "maker": "Descript",
+    "url": "https://www.descript.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "descript",
+    "for_stores": "Edits founder videos, UGC and podcasts by editing the transcript. Its Underlord agent removes filler words, adds captions and pulls short clips for ads and social.",
+    "jobs": [
+      "A founder story trimmed by deleting words",
+      "Filler words and long pauses removed",
+      "Five short clips from one long video",
+      "Captions added for silent autoplay",
+      "Clean audio on a creator clip"
+    ],
+    "agents": [
+      "cody-video-editor",
+      "devon-video-ugc",
+      "tomas-social-community"
+    ],
+    "stage": "creative",
+    "connect": "API and a video editing MCP (import media, remove filler words, add captions, make clips, publish projects). Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.descript.com/api",
+      "https://www.descript.com/"
+    ]
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "maker": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "kind": "ai-tool",
+    "ai_tools_slug": "elevenlabs",
+    "for_stores": "Makes voice-overs for product videos and ads, dubs them into other languages, transcribes creator videos and can run a voice agent for store questions.",
+    "jobs": [
+      "A product demo voice-over in the brand's tone",
+      "A winning ad dubbed into new languages",
+      "Creator videos transcribed to mine hooks",
+      "Sound effects and music beds for short ads",
+      "A voice agent for order questions"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor",
+      "darlene-support-lead"
+    ],
+    "stage": "creative",
+    "connect": "API (speech, dubbing, music, sound effects, transcription, voice agents) and a hosted MCP server for managing its agents; the old local MCP repo is archived. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://elevenlabs.io/docs/overview",
+      "https://elevenlabs.io/docs/eleven-agents/customization/tools/mcp",
+      "https://github.com/elevenlabs/elevenlabs-mcp"
+    ]
+  },
+  {
+    "slug": "freepik",
+    "name": "Freepik (Magnific)",
+    "maker": "Freepik",
+    "url": "https://www.freepik.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "freepik",
+    "for_stores": "Stock photos, vectors and icons plus AI images, video, upscaling and relighting in one account, for ad backdrops, banners and quick product scenes. Its developer docs now carry the Magnific name.",
+    "jobs": [
+      "Stock lifestyle shots for a landing page",
+      "A weak product photo upscaled and relit",
+      "A seasonal backdrop for a product shot",
+      "Icons for a benefits row",
+      "Short video loops for a hero banner"
+    ],
+    "agents": [
+      "ayaka-ad-design",
+      "aurelio-product-photos",
+      "annabel-landing-pages"
+    ],
+    "stage": "creative",
+    "connect": "API (AI images, editing, upscaling, video, icons, stock) and an MCP server described in the docs, not marked official. Check licences before use. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.magnific.com/"
+    ]
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "maker": "HeyGen",
+    "url": "https://www.heygen.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "heygen",
+    "for_stores": "Turns a script into a presenter video with an AI avatar, then translates it with lip sync into 175+ languages, for product explainers, FAQ videos and ads in new markets.",
+    "jobs": [
+      "A product explainer with an AI presenter",
+      "A winning ad translated with lip sync",
+      "FAQ videos for product pages",
+      "Batch videos for wholesale buyers"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor",
+      "mei-wholesale-sales"
+    ],
+    "stage": "creative",
+    "connect": "API (avatar videos, translation, lip sync, batch) and MCP: the developer site says every endpoint ships with an MCP server. The owner approves any likeness used. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.heygen.com/",
+      "https://www.heygen.com/"
+    ]
+  },
+  {
+    "slug": "higgsfield",
+    "name": "Higgsfield",
+    "maker": "Higgsfield",
+    "url": "https://higgsfield.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "higgsfield",
+    "for_stores": "Makes product images and short video ads with 35+ models in one account, with ad, UGC and motion presets and a Drama Ads tool that turns a product into a story ad.",
+    "jobs": [
+      "A product video ad from one photo",
+      "UGC style clips from presets",
+      "Several hook variants of one ad",
+      "Motion graphics for a launch"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "tendai-ad-creative",
+      "ayaka-ad-design"
+    ],
+    "stage": "creative",
+    "connect": "Official MCP server (mcp.higgsfield.ai: images and video with 35+ models, ad and UGC presets) for Claude. It uses account credits, so the owner sets a credit limit. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://higgsfield.ai/",
+      "https://higgsfield.ai/mcp?tab=claude"
+    ]
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "maker": "Ideogram",
+    "url": "https://ideogram.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "ideogram",
+    "for_stores": "Makes sale graphics, posters and ad images with clean, readable text, and resizes one ad into many formats.",
+    "jobs": [
+      "Offer graphics with the text spelled right",
+      "One ad resized into many formats",
+      "One part of an image edited without a redo",
+      "Packaging and print on demand concepts"
+    ],
+    "agents": [
+      "ayaka-ad-design",
+      "kofi-ad-copy",
+      "alistair-packaging"
+    ],
+    "stage": "creative",
+    "connect": "API (generate, edit, remix, inpaint, upscale, background removal, ad and commerce tools); the developer site also lists an MCP server address. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developer.ideogram.ai/",
+      "https://ideogram.ai/"
+    ]
+  },
+  {
+    "slug": "kling",
+    "name": "Kling",
+    "maker": "Kuaishou",
+    "url": "https://kling.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "kling",
+    "for_stores": "Turns product photos or a written scene into short video clips, for product motion shots and ad b-roll.",
+    "jobs": [
+      "A still product shot animated",
+      "B-roll for a UGC style ad",
+      "Motion variants of one hero shot",
+      "A clip extended to fill a 15 second ad"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor"
+    ],
+    "stage": "creative",
+    "connect": "API (image and video generation); no MCP seen. Drafts at level 2; the owner checks every clip shows the product truthfully.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://kling.ai/dev"
+    ]
+  },
+  {
+    "slug": "leonardo",
+    "name": "Leonardo AI",
+    "maker": "Leonardo.Ai",
+    "url": "https://leonardo.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "leonardo",
+    "for_stores": "Makes ad images, product pictures and lifestyle scenes from a prompt or reference, and keeps one style across a campaign.",
+    "jobs": [
+      "Lifestyle scenes around a product",
+      "Ad image variants in one style",
+      "Concept art for a new collection",
+      "One look kept across a campaign"
+    ],
+    "agents": [
+      "aurelio-product-photos",
+      "ayaka-ad-design"
+    ],
+    "stage": "creative",
+    "connect": "API and an MCP connector that lets an AI assistant use its image generation, per its docs. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.leonardo.ai"
+    ]
+  },
+  {
+    "slug": "luma",
+    "name": "Luma",
+    "maker": "Luma AI",
+    "url": "https://lumalabs.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "luma",
+    "for_stores": "Makes short videos and images from text or references, with 16:9 and 9:16 ad variations and product shoots without a studio.",
+    "jobs": [
+      "Product shoot scenes without a studio",
+      "Ad variations in 9:16 and 16:9",
+      "A motion hero clip for a landing page",
+      "Brand-consistent images for a launch"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "aurelio-product-photos"
+    ],
+    "stage": "creative",
+    "connect": "API (images and video from text, images or references: submit, then poll for the result); no MCP seen. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://lumalabs.ai/",
+      "https://docs.lumalabs.ai/docs/api"
+    ]
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "maker": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "midjourney",
+    "for_stores": "Makes striking concept images and mood boards for campaigns, packaging and brand looks. Good for direction, not for exact product shots.",
+    "jobs": [
+      "Mood boards for a new collection",
+      "Campaign concept images",
+      "Packaging look explorations",
+      "Style references to brief a photographer"
+    ],
+    "agents": [
+      "kemal-creative-director",
+      "philippa-brand",
+      "alistair-packaging"
+    ],
+    "stage": "creative",
+    "connect": "No API seen; Midjourney's own pages mostly would not open for us. Work in its web app and bring images back. Drafts at level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://updates.midjourney.com/"
+    ]
+  },
+  {
+    "slug": "nano-banana",
+    "name": "Nano Banana",
+    "maker": "Google",
+    "url": "https://aistudio.google.com/docs/image-generation",
+    "kind": "ai-tool",
+    "ai_tools_slug": "nano-banana",
+    "for_stores": "Edits product photos by plain request: new backgrounds, products placed in scenes, up to 14 reference images blended, and clear text on images.",
+    "jobs": [
+      "A product placed in a lifestyle scene from one photo",
+      "The same product and model kept across a set",
+      "Readable offer text on an image",
+      "A detail fixed without a reshoot",
+      "A matching set of listing images"
+    ],
+    "agents": [
+      "aurelio-product-photos",
+      "tanvi-listing-images",
+      "ayaka-ad-design"
+    ],
+    "stage": "creative",
+    "connect": "API (Gemini API image generation and editing) or inside the Gemini app; no MCP seen. Drafts at level 2; the owner checks the product looks exactly right.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://aistudio.google.com/docs/image-generation"
+    ]
+  },
+  {
+    "slug": "opus-clip",
+    "name": "OpusClip",
+    "maker": "Opus",
+    "url": "https://www.opus.pro",
+    "kind": "ai-tool",
+    "ai_tools_slug": "opus-clip",
+    "for_stores": "Turns long videos, lives and podcasts into short captioned clips reframed for each platform, ready to review and post.",
+    "jobs": [
+      "Ten short clips from one live stream",
+      "Captions and reframing for Reels and TikTok",
+      "Clips from a founder interview",
+      "Reviewed clips scheduled to social"
+    ],
+    "agents": [
+      "tomas-social-community",
+      "pilar-creators",
+      "cody-video-editor"
+    ],
+    "stage": "organic",
+    "connect": "API (clipping, captions, reframing, exports) and a native MCP server, per its API page. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.opus.pro/api",
+      "https://www.opus.pro/"
+    ]
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "maker": "Recraft",
+    "url": "https://www.recraft.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "recraft",
+    "for_stores": "Makes editable vector art, icons, mockups and images in the store's own style, for packaging art, benefit icons and on-brand illustrations.",
+    "jobs": [
+      "An icon set for product benefits",
+      "Packaging and label artwork drafts",
+      "Mockups of a design on a product",
+      "Illustrations in the store's own style"
+    ],
+    "agents": [
+      "alistair-packaging",
+      "ayaka-ad-design",
+      "larissa-store-ux"
+    ],
+    "stage": "creative",
+    "connect": "API (images and vectors, inpainting, background removal) and an MCP integration with Recraft's own reference docs. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.recraft.ai/api",
+      "https://www.recraft.ai/"
+    ]
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "maker": "Runway",
+    "url": "https://runway.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "runway",
+    "for_stores": "Makes and edits video from prompts, images or footage, for ad b-roll, product motion and quick fixes to filmed clips.",
+    "jobs": [
+      "A product photo animated",
+      "A new scene behind filmed footage",
+      "B-roll for a product story",
+      "An existing clip extended or restyled"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor",
+      "kemal-creative-director"
+    ],
+    "stage": "creative",
+    "connect": "API (video, image and audio with Runway and other models) and a Runway Dev MCP for coding agents. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://dev.runway.com/"
+    ]
+  },
+  {
+    "slug": "seedance",
+    "name": "Seedance",
+    "maker": "ByteDance",
+    "url": "https://seed.bytedance.com/en/seedance",
+    "kind": "ai-tool",
+    "ai_tools_slug": "seedance",
+    "for_stores": "ByteDance's video model, offered in Dreamina, which turns product images into showcase videos and short ads from text and image references.",
+    "jobs": [
+      "A product showcase video from photos",
+      "Short ad clips from a written scene",
+      "Several takes of one hook",
+      "Clips for a seasonal campaign"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor"
+    ],
+    "stage": "creative",
+    "connect": "Dreamina lists Seedance with no API on that page; ByteDance's Seedance page links to an API option through BytePlus. No MCP seen. Drafts at level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://seed.bytedance.com/en/seedance",
+      "https://dreamina.capcut.com/"
+    ]
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "maker": "Suno",
+    "url": "https://suno.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "suno",
+    "for_stores": "Makes original songs and jingles from a text prompt for ad music and brand sound. Paid plans include commercial use rights; the free plan does not.",
+    "jobs": [
+      "A short brand jingle",
+      "Background music for a product video",
+      "Seasonal versions of a brand song",
+      "Music cut to a 15 second ad"
+    ],
+    "agents": [
+      "cody-video-editor",
+      "devon-video-ugc"
+    ],
+    "stage": "creative",
+    "connect": "No API seen; make tracks in Suno and download them. Confirm the plan covers commercial use before an ad runs. Drafts at level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://suno.com/",
+      "https://suno.com/pricing"
+    ]
+  },
+  {
+    "slug": "veed",
+    "name": "VEED",
+    "maker": "VEED",
+    "url": "https://www.veed.io",
+    "kind": "ai-tool",
+    "ai_tools_slug": "veed",
+    "for_stores": "Edits video in the browser with automatic subtitles, dubbing and translation and AI avatars, for product videos and ads in new markets.",
+    "jobs": [
+      "Subtitles burned in for silent viewing",
+      "An ad dubbed and translated",
+      "A talking-head clip with an AI avatar",
+      "Background removal or green screen"
+    ],
+    "agents": [
+      "cody-video-editor",
+      "devon-video-ugc"
+    ],
+    "stage": "creative",
+    "connect": "API (image to video, lip sync, subtitles, green screen, background removal; jobs run in the background); no MCP seen. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.veed.io/api",
+      "https://www.veed.io/"
+    ]
+  },
+  {
+    "slug": "veo",
+    "name": "Veo",
+    "maker": "Google",
+    "url": "https://deepmind.google/models/veo/",
+    "kind": "ai-tool",
+    "ai_tools_slug": "veo",
+    "for_stores": "Google's video model makes short clips with sound, including dialogue and effects, from text or images, for ad hooks and product b-roll.",
+    "jobs": [
+      "A product clip with sound effects",
+      "A short scene for an ad hook",
+      "Variants of one concept to test",
+      "B-roll with natural sound"
+    ],
+    "agents": [
+      "devon-video-ugc",
+      "cody-video-editor",
+      "kemal-creative-director"
+    ],
+    "stage": "creative",
+    "connect": "In the Gemini app, Flow and AI Studio. Google's API docs say the Veo 3.1 preview models left the Gemini API on 22 Oct 2026, so check which model is live. Drafts at level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://deepmind.google/models/veo/",
+      "https://aistudio.google.com/docs/video"
+    ]
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "maker": "OpenAI",
+    "url": "https://chatgpt.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "chatgpt",
+    "for_stores": "A chat assistant for research, writing, files and images. Stores can also share product feeds so their items show in ChatGPT shopping results.",
+    "jobs": [
+      "Copy drafted from a pasted org context",
+      "Review exports sorted into themes",
+      "Competitor research with web search",
+      "Products shown in ChatGPT shopping",
+      "Quick image concepts for ads"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "rustam-ai-answers",
+      "funmilayo-customer-research",
+      "georgia-product-copy"
+    ],
+    "stage": "research",
+    "connect": "Connects to tools through plugins and MCP servers (Stripe's page shows both). Merchants apply at chatgpt.com/merchants to share feeds; Shopify and Etsy catalogs are already in. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://chatgpt.com/",
+      "https://chatgpt.com/merchants",
+      "https://docs.stripe.com/mcp"
+    ]
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "maker": "Anthropic",
+    "url": "https://claude.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "claude",
+    "for_stores": "A chat assistant for writing, analysis and files that plugs into store tools through connectors, including Shopify's own, Canva and Stripe.",
+    "jobs": [
+      "Products, discounts and stock changed through the Shopify connector",
+      "An orders or reviews export analysed",
+      "On-brand copy from an org context",
+      "AI Blocks agents and skills run in one place",
+      "One report built from several tools"
+    ],
+    "agents": [
+      "malcolm-ecommerce-growth",
+      "margaret-job-orchestrator",
+      "callum-reporting"
+    ],
+    "stage": "store",
+    "connect": "Connectors directory includes Shopify (made by Shopify), Canva and Stripe, and any other MCP server can be added. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://claude.com/connectors",
+      "https://claude.com/connectors/shopify",
+      "https://docs.stripe.com/mcp"
+    ]
+  },
+  {
+    "slug": "claude-code",
+    "name": "Claude Code",
+    "maker": "Anthropic",
+    "url": "https://claude.com/product/claude-code",
+    "kind": "ai-tool",
+    "ai_tools_slug": "claude-code",
+    "for_stores": "A coding agent that edits Shopify theme files, writes scripts and runs checks, and uses MCP servers such as Shopify's Dev MCP.",
+    "jobs": [
+      "A theme bug fixed on a development theme",
+      "A custom section built",
+      "A product CSV cleaned by script",
+      "Speed fixes for a slow template",
+      "An MCP server wired up for a store tool"
+    ],
+    "agents": [
+      "yaroslav-shopify-dev",
+      "arjun-page-speed",
+      "emre-tracking"
+    ],
+    "stage": "store",
+    "connect": "Connects to remote and local MCP servers; pairs with Shopify CLI to preview and push themes. Work on a development theme; the owner approves anything published to the live theme.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://code.claude.com/docs/en/mcp",
+      "https://shopify.dev/docs/storefronts/themes/tools/cli"
+    ]
+  },
+  {
+    "slug": "gemini",
+    "name": "Gemini",
+    "maker": "Google",
+    "url": "https://gemini.google",
+    "kind": "ai-tool",
+    "ai_tools_slug": "gemini",
+    "for_stores": "Google's assistant for Deep Research, writing, images, video and music, with links to Google apps such as Workspace, Maps and YouTube.",
+    "jobs": [
+      "Deep Research on a category or rival",
+      "Copy drafted from pasted reviews",
+      "Product images with Nano Banana",
+      "YouTube reviews of a rival product summarised"
+    ],
+    "agents": [
+      "shannon-market-research",
+      "duncan-category-trends",
+      "revathi-product-research"
+    ],
+    "stage": "research",
+    "connect": "Works in the Gemini app with Google extensions; developers use the Gemini API. No store MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://gemini.google/overview/"
+    ]
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "maker": "Perplexity AI",
+    "url": "https://www.perplexity.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "perplexity",
+    "for_stores": "Answers research questions from the web with source links to check. Large retailers can join its free Merchant Program to share product data.",
+    "jobs": [
+      "A competitor and market scan with sources",
+      "A check of how AI answers describe your product",
+      "Stockists, suppliers or press to contact",
+      "A claim fact-checked before it goes in an ad"
+    ],
+    "agents": [
+      "shannon-market-research",
+      "rustam-ai-answers",
+      "margot-pr"
+    ],
+    "stage": "research",
+    "connect": "API (Search, Agent, Embeddings and more on one key); no MCP mentioned in the API docs. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.perplexity.ai/",
+      "https://www.perplexity.ai/hub/blog/shop-like-a-pro"
+    ]
+  },
+  {
+    "slug": "notebooklm",
+    "name": "NotebookLM (Gemini Notebook)",
+    "maker": "Google",
+    "url": "https://notebook.google",
+    "kind": "ai-tool",
+    "ai_tools_slug": "notebooklm",
+    "for_stores": "Answers only from the files you add, so review exports, survey answers and supplier documents become cited summaries, reports and audio overviews. Google's site now titles it Gemini Notebook.",
+    "jobs": [
+      "Questions answered across review and survey files",
+      "Supplier specs and quotes summarised",
+      "A briefing pack built from store documents",
+      "An audio overview of a market report"
+    ],
+    "agents": [
+      "funmilayo-customer-research",
+      "shannon-market-research",
+      "wenhao-procurement"
+    ],
+    "stage": "research",
+    "connect": "No API seen; the owner adds files (50 sources per notebook without an AI plan) and shares answers back. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://notebook.google/",
+      "https://support.google.com/notebooklm/answer/16213268"
+    ]
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "maker": "Jasper",
+    "url": "https://www.jasper.ai",
+    "kind": "ai-tool",
+    "ai_tools_slug": "jasper",
+    "for_stores": "Writes marketing drafts in a saved brand voice and style guide, with agents for SEO and AI-search content, campaigns, email and social.",
+    "jobs": [
+      "Campaign copy in the saved brand voice",
+      "SEO and AI-search articles",
+      "Email and social drafts for a launch",
+      "Many writers kept on one style guide"
+    ],
+    "agents": [
+      "georgia-product-copy",
+      "lucia-email-copy",
+      "kofi-ad-copy"
+    ],
+    "stage": "creative",
+    "connect": "Jasper API and a Jasper MCP server, per its site. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.jasper.ai/"
+    ]
+  },
+  {
+    "slug": "make",
+    "name": "Make",
+    "maker": "Make",
+    "url": "https://www.make.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "make",
+    "for_stores": "Connects store apps on a visual canvas so orders, reviews, stock alerts and reports move between them on their own.",
+    "jobs": [
+      "New reviews posted to a team channel",
+      "Orders copied into a sheet",
+      "An alert when stock cover runs low",
+      "Customers tagged across apps after a purchase"
+    ],
+    "agents": [
+      "margaret-job-orchestrator",
+      "callum-reporting",
+      "marivic-fulfilment"
+    ],
+    "stage": "numbers",
+    "connect": "Official MCP server (Make-hosted: AI runs your scenarios as tools and manages folders and teams, across 3,500+ apps). Level 1 read; the owner approves each scenario before it runs live.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.make.com/en/mcp"
+    ]
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "maker": "n8n",
+    "url": "https://n8n.io",
+    "kind": "ai-tool",
+    "ai_tools_slug": "n8n",
+    "for_stores": "Builds automations and AI agents you can inspect step by step, in the cloud or self-hosted, for order, support and reporting jobs.",
+    "jobs": [
+      "A daily sales and ad spend digest",
+      "Support emails routed by topic",
+      "Stock synced between store and marketplace",
+      "An agent that drafts replies for review"
+    ],
+    "agents": [
+      "margaret-job-orchestrator",
+      "callum-reporting",
+      "ilona-bot-security"
+    ],
+    "stage": "numbers",
+    "connect": "Built-in instance MCP server: clients search and run only the workflows you enable, and from 2.13.0 can create or edit them. Level 1 read; enable only what the owner approves.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.n8n.io/advanced-ai/accessing-n8n-mcp-server/"
+    ]
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier",
+    "maker": "Zapier",
+    "url": "https://zapier.com",
+    "kind": "ai-tool",
+    "ai_tools_slug": "zapier",
+    "for_stores": "Connects store apps so an event, like a new order, refund or review, runs steps in other apps automatically.",
+    "jobs": [
+      "New orders sent to a fulfilment sheet",
+      "Low ratings routed to the support inbox",
+      "Wholesale leads added to the CRM",
+      "A weekly report emailed to the owner"
+    ],
+    "agents": [
+      "margaret-job-orchestrator",
+      "marivic-fulfilment",
+      "mei-wholesale-sales"
+    ],
+    "stage": "numbers",
+    "connect": "Zapier MCP lets Claude, ChatGPT and Cursor find and run actions across 9,000+ apps. Turn on only the actions the owner approves. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://zapier.com/mcp"
+    ]
+  },
+  {
+    "slug": "shopify-magic",
+    "name": "Shopify Magic and Sidekick",
+    "maker": "Shopify",
+    "url": "https://www.shopify.com/magic",
+    "kind": "ai-tool",
+    "ai_tools_slug": "shopify-magic",
+    "for_stores": "AI inside the Shopify admin. Sidekick reads store data, forecasts, builds Flow automations, edits orders and drafts product copy and images, and shows changes for review first.",
+    "jobs": [
+      "Why sales moved last week, explained",
+      "A product description drafted",
+      "Studio-style product photo edits",
+      "A Flow automation built by asking",
+      "An email campaign drafted"
+    ],
+    "agents": [
+      "facundo-store-setup",
+      "juliet-merchandising",
+      "georgia-product-copy"
+    ],
+    "stage": "store",
+    "connect": "Built into the admin; Sidekick presents changes for review before applying them. Outside agents use Shopify's connector or API instead. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick",
+      "https://www.shopify.com/magic"
+    ]
+  },
+  {
+    "slug": "klaviyo",
+    "name": "Klaviyo",
+    "maker": "Klaviyo",
+    "url": "https://www.klaviyo.com",
+    "kind": "store-app",
+    "ai_tools_slug": "klaviyo",
+    "for_stores": "Email and SMS built on the store's customer and order data, with flows, AI segments, predicted lifetime value and a Customer Agent for order tracking.",
+    "jobs": [
+      "Welcome, cart, browse and post-purchase flows",
+      "Segments by what people bought",
+      "Win-back for lapsing buyers",
+      "Which flows earn the most, read weekly",
+      "Order tracking answered by Customer Agent"
+    ],
+    "agents": [
+      "morag-email-sms",
+      "lucia-email-copy",
+      "imogen-retention"
+    ],
+    "stage": "retention",
+    "connect": "Official MCP server (remote or local: from campaign creation to flow performance reports) and API. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "https://www.klaviyo.com/features/ai"
+    ]
+  },
+  {
+    "slug": "gorgias",
+    "name": "Gorgias",
+    "maker": "Gorgias",
+    "url": "https://www.gorgias.com",
+    "kind": "store-app",
+    "ai_tools_slug": "gorgias",
+    "for_stores": "A support helpdesk for online stores. Its AI Agent answers order status, returns and cancellations from your content and can act in Shopify, such as cancelling an order.",
+    "jobs": [
+      "Where-is-my-order chats answered",
+      "Returns and cancellations handled by policy",
+      "Macros for the top 10 questions",
+      "Tickets tagged to find product problems",
+      "Hard cases handed to a person"
+    ],
+    "agents": [
+      "darlene-support-lead",
+      "marivic-fulfilment",
+      "gurdeep-shipping-returns"
+    ],
+    "stage": "retention",
+    "connect": "API (tickets, customers, macros, rules, views) and a remote MCP server at developers.gorgias.com/mcp (API access, docs search, account data). Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.gorgias.com/",
+      "https://developers.gorgias.com/docs/mcp",
+      "https://docs.gorgias.com/en-US/set-up-and-go-live-with-ai-agent-500219"
+    ]
+  },
+  {
+    "slug": "intercom-fin",
+    "name": "Intercom Fin",
+    "maker": "Intercom",
+    "url": "https://fin.ai",
+    "kind": "store-app",
+    "ai_tools_slug": "intercom-fin",
+    "for_stores": "An AI support agent that pulls live order status and delivery dates from Shopify, handles refunds through set procedures and also works inside Zendesk, Salesforce, HubSpot and Freshdesk.",
+    "jobs": [
+      "Order status and delivery dates answered",
+      "Refunds handled by a set procedure",
+      "Help articles kept current",
+      "Unresolved chats handed to staff"
+    ],
+    "agents": [
+      "darlene-support-lead",
+      "rohan-chat-sales"
+    ],
+    "stage": "retention",
+    "connect": "Official remote MCP server (Intercom-hosted, US or EU: read conversations and contacts, add notes, manage Help Center articles). Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://fin.ai/",
+      "https://developers.intercom.com/docs/guides/mcp"
+    ]
+  },
+  {
+    "slug": "zendesk",
+    "name": "Zendesk",
+    "maker": "Zendesk",
+    "url": "https://www.zendesk.com",
+    "kind": "store-app",
+    "ai_tools_slug": "zendesk-ai",
+    "for_stores": "A helpdesk with AI agents that resolve multi-step requests across channels and a copilot that helps staff reply, for stores with larger support teams.",
+    "jobs": [
+      "Common questions answered by AI agents",
+      "Suggested replies for staff",
+      "Tickets routed by topic",
+      "Quality gaps found in replies"
+    ],
+    "agents": [
+      "darlene-support-lead",
+      "marivic-fulfilment"
+    ],
+    "stage": "retention",
+    "connect": "API (tickets and more); no Zendesk-hosted MCP server seen on its developer site. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developer.zendesk.com/",
+      "https://www.zendesk.com/service/ai/"
+    ]
+  },
+  {
+    "slug": "triple-whale",
+    "name": "Triple Whale",
+    "maker": "Triple Whale",
+    "url": "https://www.triplewhale.com",
+    "kind": "store-app",
+    "ai_tools_slug": "triple-whale",
+    "for_stores": "Puts store sales, ad spend, order profit and attribution in one dashboard, with an AI assistant called Moby to ask questions in plain words.",
+    "jobs": [
+      "Daily blended return on ad spend",
+      "Profit by order after ads and shipping",
+      "Channel attribution views compared",
+      "Ad spend spikes caught early"
+    ],
+    "agents": [
+      "callum-reporting",
+      "jared-performance-marketing",
+      "radek-unit-economics",
+      "emre-tracking"
+    ],
+    "stage": "numbers",
+    "connect": "Not confirmed: Triple Whale's own pages would not open for us; its help center appears to list a read-only MCP. Ask the owner what the account offers. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://github.com/Triple-Whale"
+    ]
+  },
+  {
+    "slug": "northbeam",
+    "name": "Northbeam",
+    "maker": "Northbeam",
+    "url": "https://www.northbeam.io",
+    "kind": "store-app",
+    "ai_tools_slug": "northbeam",
+    "for_stores": "Multi-touch attribution, media mix modelling and creative analytics, to see which channels and ads really bring new buyers.",
+    "jobs": [
+      "Channels compared on one model",
+      "Ads that bring new customers found",
+      "A budget split read from the media mix model",
+      "Weekly creative winners and losers"
+    ],
+    "agents": [
+      "jared-performance-marketing",
+      "emre-tracking",
+      "callum-reporting"
+    ],
+    "stage": "numbers",
+    "connect": "Official MCP (read-only; sign in with the normal Northbeam login; shows only what that user may see) for ChatGPT, Claude and other clients. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.northbeam.io/",
+      "https://docs.northbeam.io/docs/northbeam-mcp"
+    ]
+  },
+  {
+    "slug": "shopify",
+    "name": "Shopify",
+    "maker": "Shopify",
+    "url": "https://www.shopify.com",
+    "kind": "store-platform",
+    "ai_tools_slug": null,
+    "for_stores": "The store platform most of the team works in: products, collections, orders, customers, discounts, themes and checkout.",
+    "jobs": [
+      "Products and collections created and updated",
+      "Discount codes made",
+      "Orders, customers and stock checked",
+      "Themes edited on a development copy",
+      "The catalog opened to AI shopping agents"
+    ],
+    "agents": [
+      "facundo-store-setup",
+      "yaroslav-shopify-dev",
+      "juliet-merchandising",
+      "larissa-store-ux"
+    ],
+    "stage": "store",
+    "connect": "Shopify's own Claude connector (change products, stock, discounts; read orders, customers), Admin API, Dev MCP for coding, and storefront MCPs (UCP, Checkout). Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://claude.com/connectors/shopify",
+      "https://shopify.dev/docs/api/admin-graphql",
+      "https://shopify.dev/docs/apps/build/storefront-mcp",
+      "https://shopify.dev/docs/apps/build/devmcp"
+    ]
+  },
+  {
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "maker": "Woo",
+    "url": "https://woocommerce.com",
+    "kind": "store-platform",
+    "ai_tools_slug": null,
+    "for_stores": "The open source store plugin for WordPress, for stores that want full control of checkout, data and costs, extended with plugins and themes.",
+    "jobs": [
+      "Products added and updated",
+      "Order status updated and notes added",
+      "The store extended with plugins",
+      "Store data moved between tools"
+    ],
+    "agents": [
+      "facundo-store-setup",
+      "yaroslav-shopify-dev"
+    ],
+    "stage": "store",
+    "connect": "MCP through the WordPress MCP Adapter plugin (products: query, create, update, delete; orders: query, update status, add notes), a developer preview. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://woocommerce.com/",
+      "https://developer.woocommerce.com/docs/features/mcp/"
+    ]
+  },
+  {
+    "slug": "bigcommerce",
+    "name": "BigCommerce",
+    "maker": "BigCommerce",
+    "url": "https://www.bigcommerce.com",
+    "kind": "store-platform",
+    "ai_tools_slug": null,
+    "for_stores": "A hosted store platform with REST APIs for catalog, orders and customers and a GraphQL storefront, often chosen for big catalogs and B2B.",
+    "jobs": [
+      "Catalog updates in bulk",
+      "Orders and customers pulled for reports",
+      "A custom storefront on GraphQL",
+      "Store settings checked"
+    ],
+    "agents": [
+      "facundo-store-setup",
+      "yaroslav-shopify-dev",
+      "mei-wholesale-sales"
+    ],
+    "stage": "store",
+    "connect": "API (REST management: catalog, orders, customers, settings; GraphQL Storefront). Its Docs MCP server helps coding agents; no store data MCP seen. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.bigcommerce.com/"
+    ]
+  },
+  {
+    "slug": "shopify-flow",
+    "name": "Shopify Flow",
+    "maker": "Shopify",
+    "url": "https://help.shopify.com/en/manual/shopify-flow",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Shopify's free automation tool: when something happens in the store, it checks your conditions and takes an action, on Basic, Grow, Advanced and Plus plans.",
+    "jobs": [
+      "Risky orders tagged for review",
+      "Sold-out products hidden and brought back",
+      "VIP customers tagged after a spend level",
+      "Staff alerted when stock is low"
+    ],
+    "agents": [
+      "facundo-store-setup",
+      "marivic-fulfilment",
+      "omar-inventory-planning"
+    ],
+    "stage": "store",
+    "connect": "Built into the Shopify admin, and Sidekick can build flows on request; no separate API seen. Drafts at level 2; the owner turns each flow on.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://help.shopify.com/en/manual/shopify-flow",
+      "https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick"
+    ]
+  },
+  {
+    "slug": "shopify-collabs",
+    "name": "Shopify Collabs",
+    "maker": "Shopify",
+    "url": "https://www.shopify.com/collabs",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Shopify's creator app: find influencers, send gifts and samples, give affiliate links and codes, track sales and commissions and pay creators from the admin.",
+    "jobs": [
+      "Creators recruited for a launch",
+      "Gifts and samples sent",
+      "Affiliate links and codes set up",
+      "Sales and commissions tracked",
+      "Creator payouts run"
+    ],
+    "agents": [
+      "ritika-influencer-outreach",
+      "pilar-creators"
+    ],
+    "stage": "organic",
+    "connect": "Inside the Shopify admin; no API seen. The agent drafts outreach and commission plans; the owner sends offers and approves payouts. Level 2.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.shopify.com/collabs/find-influencers"
+    ]
+  },
+  {
+    "slug": "omnisend",
+    "name": "Omnisend",
+    "maker": "Omnisend",
+    "url": "https://www.omnisend.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Email and SMS for online stores with automations, segments, forms and reports, often picked by smaller stores.",
+    "jobs": [
+      "Cart and welcome automations",
+      "Segments from purchase events",
+      "Sign-up forms that grow the list",
+      "Campaign results read by revenue"
+    ],
+    "agents": [
+      "morag-email-sms",
+      "lucia-email-copy"
+    ],
+    "stage": "retention",
+    "connect": "API (contacts, events, products, campaigns, segments, automations, forms, analytics) and an Omnisend MCP Server for Claude, ChatGPT or Cursor. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://api-docs.omnisend.com/"
+    ]
+  },
+  {
+    "slug": "postscript",
+    "name": "Postscript",
+    "maker": "Postscript",
+    "url": "https://www.postscript.io",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "SMS, RCS and email for stores, with Shopper, which runs AI one-to-one text conversations aimed at more revenue per subscriber.",
+    "jobs": [
+      "Text flows for carts and browsing",
+      "List growth from pop-ups",
+      "AI one-to-one sales texts",
+      "Unsubscribes and data requests handled"
+    ],
+    "agents": [
+      "morag-email-sms",
+      "lucia-email-copy",
+      "rohan-chat-sales"
+    ],
+    "stage": "retention",
+    "connect": "API (subscribers, compliance, custom events); no MCP seen. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.postscript.io/",
+      "https://developers.postscript.io/"
+    ]
+  },
+  {
+    "slug": "attentive",
+    "name": "Attentive",
+    "maker": "Attentive",
+    "url": "https://www.attentive.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "SMS, email, RCS and push for larger brands, with AgentOS that acts within brand rules and shopper identity across channels.",
+    "jobs": [
+      "Personalised text and email journeys",
+      "Shoppers recognised across channels",
+      "Catalog-based product messages",
+      "Offers and sign-up units tested"
+    ],
+    "agents": [
+      "morag-email-sms",
+      "imogen-retention"
+    ],
+    "stage": "retention",
+    "connect": "API (subscribers, custom events, product catalog, webhooks, offers) and an Attentive MCP Server section in its own docs. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.attentive.com/",
+      "https://docs.attentive.com/",
+      "https://docs.attentive.com/llms.txt"
+    ]
+  },
+  {
+    "slug": "judge-me",
+    "name": "Judge.me",
+    "maker": "Judge.me",
+    "url": "https://judge.me",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Collects photo and video reviews by email, SMS and QR code, shows them on product pages, adds stars to Google Shopping and drafts replies and summaries with AI.",
+    "jobs": [
+      "Review requests after delivery",
+      "Photo and video reviews on product pages",
+      "Stars in Google Shopping",
+      "Replies to low ratings drafted",
+      "Review summaries for buyers"
+    ],
+    "agents": [
+      "corinne-reviews",
+      "latoya-post-purchase"
+    ],
+    "stage": "retention",
+    "connect": "Judge.me publishes API docs (we saw only the title page); no MCP seen. Replies drafted at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://apps.shopify.com/judgeme",
+      "https://judge.me/api/docs"
+    ]
+  },
+  {
+    "slug": "okendo",
+    "name": "Okendo",
+    "maker": "Okendo",
+    "url": "https://www.okendo.io",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Reviews and loyalty for Shopify brands, with APIs to pull reviews for analysis and reply to them.",
+    "jobs": [
+      "Reviews pulled for theme analysis",
+      "Replies posted to reviews",
+      "Review summaries on product pages",
+      "Loyalty data read for retention"
+    ],
+    "agents": [
+      "corinne-reviews",
+      "imogen-retention"
+    ],
+    "stage": "retention",
+    "connect": "API (Storefront APIs including loyalty, a Merchant REST API, webhooks); no MCP seen. Replies drafted at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.okendo.io/"
+    ]
+  },
+  {
+    "slug": "yotpo",
+    "name": "Yotpo",
+    "maker": "Yotpo",
+    "url": "https://www.yotpo.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Reviews, photo and video content, Q&A, loyalty and referrals for larger stores.",
+    "jobs": [
+      "Review and Q&A collection",
+      "Visual UGC on product pages",
+      "Loyalty points and referrals",
+      "Reviews pulled for analysis"
+    ],
+    "agents": [
+      "corinne-reviews",
+      "imogen-retention"
+    ],
+    "stage": "retention",
+    "connect": "API (reviews, UGC, Q&A, loyalty and referrals, products, orders, webhooks) and two MCP servers: one for API docs, one for Reviews. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.yotpo.com/from/ugc/"
+    ]
+  },
+  {
+    "slug": "recharge",
+    "name": "Recharge",
+    "maker": "Recharge",
+    "url": "https://getrecharge.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Runs subscriptions on Shopify with a customer portal, churn prevention, upsells, bundles, analytics and AI Concierge SMS.",
+    "jobs": [
+      "Subscribe-and-save offers set up",
+      "A cancel flow that saves subscribers",
+      "Bundles and build-a-box",
+      "Churn read by product and reason"
+    ],
+    "agents": [
+      "imogen-retention",
+      "brendan-offers",
+      "latoya-post-purchase"
+    ],
+    "stage": "retention",
+    "connect": "API (31 resources: subscriptions, charges, customers, orders, payment methods, webhooks); no MCP seen. Level 1 read; the owner approves changes to live subscriptions.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://getrecharge.com/",
+      "https://developer.rechargepayments.com/"
+    ]
+  },
+  {
+    "slug": "smile-io",
+    "name": "Smile.io",
+    "maker": "Smile.io",
+    "url": "https://smile.io",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Points, VIP tiers and referrals for stores, at checkout and in store.",
+    "jobs": [
+      "A points program set up",
+      "VIP tiers for best customers",
+      "Referral rewards",
+      "Loyalty members read for win-back"
+    ],
+    "agents": [
+      "imogen-retention",
+      "brendan-offers"
+    ],
+    "stage": "retention",
+    "connect": "REST API to bring loyalty into other systems (endpoints not shown on the page); no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://smile.io/",
+      "https://dev.smile.io/"
+    ]
+  },
+  {
+    "slug": "replo",
+    "name": "Replo",
+    "maker": "Replo",
+    "url": "https://www.replo.app",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Builds Shopify landing pages and funnels from links, Figma files or PDFs, and runs A/B tests that show where shoppers click.",
+    "jobs": [
+      "An ad-matched landing page per angle",
+      "Two hero sections A/B tested",
+      "A page rebuilt from a Figma file",
+      "Click maps on a test page"
+    ],
+    "agents": [
+      "annabel-landing-pages",
+      "gretchen-store-testing",
+      "larissa-store-ux"
+    ],
+    "stage": "store",
+    "connect": "No API or MCP seen; the site shows an 'Add to ChatGPT / Claude' button we did not test. Drafts at level 2; the owner publishes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.replo.app/"
+    ]
+  },
+  {
+    "slug": "pagefly",
+    "name": "PageFly",
+    "maker": "PageFly",
+    "url": "https://pagefly.io",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "An AI page builder for Shopify with a visual editor and 320+ templates, for landing, product and collection pages.",
+    "jobs": [
+      "A landing page from a template",
+      "A product page layout test",
+      "Seasonal collection pages",
+      "AI first drafts of page sections"
+    ],
+    "agents": [
+      "annabel-landing-pages",
+      "larissa-store-ux"
+    ],
+    "stage": "store",
+    "connect": "Claude connector, and it says it works with other assistants that support MCP; no API seen. Drafts at level 2; the owner publishes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://pagefly.io/"
+    ]
+  },
+  {
+    "slug": "elevar",
+    "name": "Elevar",
+    "maker": "Audiense",
+    "url": "https://www.audiense.com/products/audiense-online/",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Server-side conversion tracking that sends store events to 50+ tools such as Meta Conversions API and GA4. getelevar.com now leads to Audiense Online, powered by Elevar.",
+    "jobs": [
+      "Purchases sent server-side to Meta",
+      "Missing GA4 purchases fixed",
+      "More events matched for ad platforms",
+      "Tracking on non-Shopify stores via API"
+    ],
+    "agents": [
+      "emre-tracking",
+      "lindsey-meta-media-buyer"
+    ],
+    "stage": "numbers",
+    "connect": "Shopify app plus an API for any platform; no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.audiense.com/products/audiense-online/"
+    ]
+  },
+  {
+    "slug": "microsoft-clarity",
+    "name": "Microsoft Clarity",
+    "maker": "Microsoft",
+    "url": "https://clarity.microsoft.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Free heatmaps and session recordings that show where shoppers scroll, click and get stuck.",
+    "jobs": [
+      "Where mobile shoppers stop scrolling",
+      "Rage clicks on product pages",
+      "Engagement compared by device",
+      "Sessions that left at checkout reviewed"
+    ],
+    "agents": [
+      "larissa-store-ux",
+      "gretchen-store-testing",
+      "arjun-page-speed"
+    ],
+    "stage": "store",
+    "connect": "Official Microsoft MCP server (scroll depth, traffic, engagement by device, browser or country, with a Data Export token; 10 requests a day per project). Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://learn.microsoft.com/en-us/clarity/third-party-integrations/clarity-mcp-server"
+    ]
+  },
+  {
+    "slug": "fairing",
+    "name": "Fairing",
+    "maker": "Fairing",
+    "url": "https://fairing.co",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Post-purchase surveys that ask buyers how they heard of you, why they bought and what almost stopped them, a second read on what ads really drive.",
+    "jobs": [
+      "'How did you hear about us?' after checkout",
+      "Survey answers compared to platform-reported sales",
+      "What almost stopped buyers, ranked",
+      "Answers sent to Klaviyo, GA4 or Sheets"
+    ],
+    "agents": [
+      "emre-tracking",
+      "funmilayo-customer-research",
+      "jared-performance-marketing"
+    ],
+    "stage": "numbers",
+    "connect": "API (OAuth, responses, sources) and an MCP to ask survey data questions in Claude, per its docs. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://fairing.co/",
+      "https://docs.fairing.co/"
+    ]
+  },
+  {
+    "slug": "loop-returns",
+    "name": "Loop Returns",
+    "maker": "Loop",
+    "url": "https://www.loopreturns.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Turns Shopify returns into exchanges and store credit instead of cash refunds, and flags risky returns before approval.",
+    "jobs": [
+      "Exchanges offered before refunds",
+      "Store credit with a bonus",
+      "Risky returns flagged",
+      "Return reasons read for product fixes"
+    ],
+    "agents": [
+      "gurdeep-shipping-returns",
+      "latoya-post-purchase",
+      "marivic-fulfilment"
+    ],
+    "stage": "retention",
+    "connect": "API and webhooks (docs.loopreturns.com); no MCP seen. Level 1 read; the owner approves return policy changes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.loopreturns.com/",
+      "https://docs.loopreturns.com/"
+    ]
+  },
+  {
+    "slug": "aftership",
+    "name": "AfterShip",
+    "maker": "AfterShip",
+    "url": "https://www.aftership.com",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "A branded tracking page, delivery updates across 1,100+ carriers and an estimated delivery date on product and checkout pages.",
+    "jobs": [
+      "A branded tracking page",
+      "Delivery update emails and texts",
+      "Delivery dates shown before checkout",
+      "Late parcels found before buyers ask"
+    ],
+    "agents": [
+      "latoya-post-purchase",
+      "gurdeep-shipping-returns",
+      "darlene-support-lead"
+    ],
+    "stage": "retention",
+    "connect": "API and webhooks on the Premium plan, per its Shopify listing; no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://apps.shopify.com/aftership"
+    ]
+  },
+  {
+    "slug": "intelligems",
+    "name": "Intelligems",
+    "maker": "Intelligems",
+    "url": "https://www.intelligems.io",
+    "kind": "store-app",
+    "ai_tools_slug": null,
+    "for_stores": "Tests prices, shipping rates and free shipping thresholds, discounts and gifts, and page content on Shopify, read on profit.",
+    "jobs": [
+      "A price test on a best seller",
+      "A free shipping threshold test",
+      "Gift with purchase against a discount",
+      "A landing page content test"
+    ],
+    "agents": [
+      "gretchen-store-testing",
+      "brendan-offers",
+      "radek-unit-economics"
+    ],
+    "stage": "store",
+    "connect": "API (full access to every feature) and MCP, both listed on its site. Level 1 read; the owner approves every live test.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.intelligems.io/"
+    ]
+  },
+  {
+    "slug": "meta-ads-manager",
+    "name": "Meta Ads Manager",
+    "maker": "Meta",
+    "url": "https://www.facebook.com/business/news/meta-ads-ai-connectors",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs Facebook and Instagram ads for the store, including catalog ads from the product feed, with reporting, A/B tests and lift studies.",
+    "jobs": [
+      "A sales campaign launched from approved creative",
+      "A weekly report by ad and audience",
+      "A healthy product catalog for catalog ads",
+      "Pixel and Conversions API signal checked",
+      "An A/B test or lift study set up"
+    ],
+    "agents": [
+      "lindsey-meta-media-buyer",
+      "dustin-ad-deployment",
+      "jared-performance-marketing"
+    ],
+    "stage": "ads",
+    "connect": "Official Meta Ads MCP server (mcp.facebook.com/ads: reports, create and edit campaigns, catalogs, signals, A/B tests), in open early access, plus the Marketing API. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.facebook.com/business/news/meta-ads-ai-connectors",
+      "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview"
+    ]
+  },
+  {
+    "slug": "google-ads",
+    "name": "Google Ads",
+    "maker": "Google",
+    "url": "https://ads.google.com",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs Search and Shopping ads that put products in front of people searching to buy, fed by the Merchant Center product feed.",
+    "jobs": [
+      "Shopping campaigns from the product feed",
+      "Search terms that waste spend found",
+      "Search ads for best sellers",
+      "A weekly report by campaign and product"
+    ],
+    "agents": [
+      "raymond-google-ads",
+      "jared-performance-marketing",
+      "dustin-ad-deployment"
+    ],
+    "stage": "ads",
+    "connect": "Google Ads API, and google-ads-mcp in Google's googleads GitHub org (GAQL reports, account lists; its label and asset write tools can be switched off for read-only). Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.google.com/google-ads/api/docs/start",
+      "https://github.com/googleads/google-ads-mcp"
+    ]
+  },
+  {
+    "slug": "tiktok-ads-manager",
+    "name": "TikTok Ads Manager",
+    "maker": "TikTok",
+    "url": "https://ads.tiktok.com",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs TikTok ads for the store, from in-feed video to ads that send buyers to the shop or a TikTok Shop listing.",
+    "jobs": [
+      "Video ads launched from approved creative",
+      "Spark Ads on creator posts",
+      "A weekly report by ad and hook",
+      "Fatigued creative found and swapped"
+    ],
+    "agents": [
+      "zara-tiktok-ads",
+      "ploy-tiktok-shop",
+      "jared-performance-marketing"
+    ],
+    "stage": "ads",
+    "connect": "Not confirmed: TikTok's pages would not load for us. Search results point to a TikTok for Business MCP server and the API for Business; check in the account. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://business-api.tiktok.com/portal/docs/tiktok-ads-mcp-server/v1.3"
+    ]
+  },
+  {
+    "slug": "snapchat-ads-manager",
+    "name": "Snapchat Ads Manager",
+    "maker": "Snap",
+    "url": "https://forbusiness.snapchat.com",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs full-screen 9:16 ads on Snapchat, with catalog-based product ads and audience targeting.",
+    "jobs": [
+      "Full-screen video ads for a launch",
+      "Product ads from the catalog",
+      "A weekly report by ad set",
+      "Audiences built from site visitors"
+    ],
+    "agents": [
+      "kelsey-snapchat-ads",
+      "jared-performance-marketing"
+    ],
+    "stage": "ads",
+    "connect": "Official Snap Ads MCP server, read-only for now (campaign setup and performance; an org admin approves each agent), plus the Marketing API. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://forbusiness.snapchat.com/",
+      "https://developers.snap.com/marketing-api/Ads-MCP/Introduction",
+      "https://developers.snap.com/api/marketing-api/Ads-API/introduction"
+    ]
+  },
+  {
+    "slug": "pinterest-ads",
+    "name": "Pinterest Ads",
+    "maker": "Pinterest",
+    "url": "https://business.pinterest.com",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs Pinterest ads for awareness, consideration and sales, with shopping features and audience insights for people planning purchases.",
+    "jobs": [
+      "Product Pins promoted from the catalog",
+      "Seasonal campaigns timed to planning",
+      "Conversions API set up",
+      "A weekly report by Pin and audience"
+    ],
+    "agents": [
+      "marnie-pinterest-ads",
+      "jared-performance-marketing"
+    ],
+    "stage": "ads",
+    "connect": "API (Pins, boards, ads, catalogs, Conversions API, analytics). A Pinterest MCP server (Pins, trends, audience insights, ads) is announced but not open yet. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://business.pinterest.com/",
+      "https://developers.pinterest.com/",
+      "https://developers.pinterest.com/about-pinterest-mcp/"
+    ]
+  },
+  {
+    "slug": "amazon-ads",
+    "name": "Amazon Ads",
+    "maker": "Amazon",
+    "url": "https://advertising.amazon.com",
+    "kind": "ads-platform",
+    "ai_tools_slug": null,
+    "for_stores": "Runs Sponsored Products and other Amazon ads that win the top of search for the store's listings.",
+    "jobs": [
+      "A Sponsored Products campaign launched",
+      "Search terms harvested and negatives added",
+      "Bids moved on target cost of sale",
+      "A weekly report by campaign and keyword"
+    ],
+    "agents": [
+      "junaid-amazon-ads",
+      "garrett-amazon"
+    ],
+    "stage": "ads",
+    "connect": "Official Amazon Ads MCP server, open early access for partners with Ads API credentials (create, edit and delete campaigns, reports, settings, billing). Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://advertising.amazon.com/library/news/amazon-ads-mcp-server-open-beta"
+    ]
+  },
+  {
+    "slug": "amazon-seller-central",
+    "name": "Amazon Seller Central",
+    "maker": "Amazon",
+    "url": "https://sell.amazon.com",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "Where brands run their Amazon store: listings, FBA, Brand Registry, ads and AI tools that help write listings and suggest next steps.",
+    "jobs": [
+      "Listings created and fixed",
+      "FBA stock and restock checked",
+      "A+ content uploaded",
+      "Business reports pulled",
+      "Brand Registry protection used"
+    ],
+    "agents": [
+      "garrett-amazon",
+      "tanvi-listing-images",
+      "sudhir-marketplaces"
+    ],
+    "stage": "channels",
+    "connect": "Selling Partner API (listings, orders, FBA inventory, reports, A+ content); no MCP seen, only an llms.txt docs index for agents. Listing edits at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://sell.amazon.com/",
+      "https://developer-docs.amazon/sp-api/"
+    ]
+  },
+  {
+    "slug": "tiktok-shop",
+    "name": "TikTok Shop",
+    "maker": "TikTok",
+    "url": "https://seller-us.tiktok.com",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "Sells products inside TikTok through shoppable videos, lives and creator affiliates.",
+    "jobs": [
+      "Products listed in the shop",
+      "Creator affiliate offers set up",
+      "Live shopping runs planned",
+      "Orders and fulfilment tracked"
+    ],
+    "agents": [
+      "ploy-tiktok-shop",
+      "pilar-creators",
+      "sudhir-marketplaces"
+    ],
+    "stage": "channels",
+    "connect": "TikTok Shop Partner API for approved apps (its partner docs opened with little detail; other TikTok pages would not load); no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://partner.tiktokshop.com/docv2/page/tts-api-concepts-overview"
+    ]
+  },
+  {
+    "slug": "etsy",
+    "name": "Etsy",
+    "maker": "Etsy",
+    "url": "https://www.etsy.com/sell",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "A marketplace for handmade, vintage and unique goods, a fit for makers and gift-led brands.",
+    "jobs": [
+      "Listings written for Etsy search",
+      "Shop sections and policies set",
+      "Orders and receipts read",
+      "Inventory synced with the main store"
+    ],
+    "agents": [
+      "sudhir-marketplaces",
+      "georgia-product-copy"
+    ],
+    "stage": "channels",
+    "connect": "Open API v3 (inventory, orders, shop management) and a Dev MCP that helps coding agents with the API docs, not for running the shop. Listing edits at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.etsy.com/documentation/"
+    ]
+  },
+  {
+    "slug": "walmart-marketplace",
+    "name": "Walmart Marketplace",
+    "maker": "Walmart",
+    "url": "https://marketplace.walmart.com",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "Sells to Walmart shoppers across sites in 19 countries, with Walmart Fulfillment Services two-day delivery and Sponsored Search ads.",
+    "jobs": [
+      "Items listed and priced",
+      "Orders managed",
+      "Two-day delivery through WFS",
+      "Sponsored Search for best sellers"
+    ],
+    "agents": [
+      "sudhir-marketplaces",
+      "garrett-amazon"
+    ],
+    "stage": "channels",
+    "connect": "Marketplace APIs (item listings, pricing, orders); no MCP seen. Listing edits at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://marketplace.walmart.com/",
+      "https://developer.walmart.com/"
+    ]
+  },
+  {
+    "slug": "ebay",
+    "name": "eBay",
+    "maker": "eBay",
+    "url": "https://www.ebay.com/sellercenter",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "A global marketplace with bulk listing tools, AI help writing listings, and Promoted Listings, Promoted Stores and Promoted Offsite ads.",
+    "jobs": [
+      "Bulk listings with item specifics",
+      "AI-written descriptions checked",
+      "Promoted Listings on slow stock",
+      "Clearance of old or returned stock"
+    ],
+    "agents": [
+      "sudhir-marketplaces"
+    ],
+    "stage": "channels",
+    "connect": "eBay has a developer site (it blocked us), so API details are not confirmed here; no MCP seen. Listing edits at level 2. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.ebay.com/sellercenter"
+    ]
+  },
+  {
+    "slug": "zalando",
+    "name": "Zalando",
+    "maker": "Zalando",
+    "url": "https://partner.zalando.com",
+    "kind": "marketplace",
+    "ai_tools_slug": null,
+    "for_stores": "Europe's fashion platform; brands can sell wholesale, through the Partner Program at their own prices, or bring store stock online with Connected Retail.",
+    "jobs": [
+      "The right partnership model chosen",
+      "Fashion listings prepared",
+      "Store stock sold online via Connected Retail",
+      "Prices set under the Partner Program"
+    ],
+    "agents": [
+      "sudhir-marketplaces",
+      "juliet-merchandising"
+    ],
+    "stage": "channels",
+    "connect": "No API seen on the partner pages we opened. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://partner.zalando.com/partnership/partnership-models",
+      "https://partnerportal.zalando.com/"
+    ]
+  },
+  {
+    "slug": "accio",
+    "name": "Accio",
+    "maker": "Alibaba",
+    "url": "https://www.accio.com",
+    "kind": "sourcing",
+    "ai_tools_slug": null,
+    "for_stores": "Alibaba's AI business agent. In Accio Work, the Sourcing Expert matches suppliers, compares offers, sends bulk enquiries, negotiates and can place orders.",
+    "jobs": [
+      "Supplier matches for a spec",
+      "Offers compared side by side",
+      "Bulk enquiries sent to a shortlist",
+      "First-round price talks",
+      "Orders placed only with approval"
+    ],
+    "agents": [
+      "tunde-supplier-search",
+      "zhenyu-sourcing",
+      "wenhao-procurement"
+    ],
+    "stage": "source",
+    "connect": "Works through an official Alibaba.com connector inside Accio Work; no MCP or public API seen. Its help center says payments need explicit user approval. The owner authorises outreach and orders.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.accio.com/",
+      "https://www.accio.com/wow/doc-help-center.html"
+    ]
+  },
+  {
+    "slug": "alibaba",
+    "name": "Alibaba.com",
+    "maker": "Alibaba",
+    "url": "https://www.alibaba.com",
+    "kind": "sourcing",
+    "ai_tools_slug": null,
+    "for_stores": "The global B2B marketplace: verified manufacturers, requests for quote that reach many suppliers, and Trade Assurance on orders.",
+    "jobs": [
+      "Verified makers shortlisted",
+      "One RFQ sent to many suppliers",
+      "Samples ordered with Trade Assurance",
+      "Quotes compared on landed cost"
+    ],
+    "agents": [
+      "tunde-supplier-search",
+      "zhenyu-sourcing",
+      "wenhao-procurement"
+    ],
+    "stage": "source",
+    "connect": "No buyer API or MCP seen; reach it through Accio's official connector or by hand. The agent drafts RFQs; the owner sends them and pays.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.alibaba.com/"
+    ]
+  },
+  {
+    "slug": "alibaba-1688",
+    "name": "1688",
+    "maker": "Alibaba",
+    "url": "https://www.1688.com",
+    "kind": "sourcing",
+    "ai_tools_slug": null,
+    "for_stores": "Alibaba's China domestic wholesale site, in Chinese, used to compare factory-direct prices, often through a sourcing agent or buying service.",
+    "jobs": [
+      "Factory prices checked against export quotes",
+      "Makers of a product found",
+      "A sourcing agent briefed",
+      "Price ranges used in negotiation"
+    ],
+    "agents": [
+      "tunde-supplier-search",
+      "douglas-should-cost",
+      "wenhao-procurement"
+    ],
+    "stage": "source",
+    "connect": "No API seen; work through a sourcing agent or translated search. The owner pays any order. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.1688.com/"
+    ]
+  },
+  {
+    "slug": "faire",
+    "name": "Faire",
+    "maker": "Faire",
+    "url": "https://www.faire.com",
+    "kind": "sourcing",
+    "ai_tools_slug": null,
+    "for_stores": "A wholesale marketplace where 100,000+ brands sell to independent retailers, for brands that want stockists in independent shops.",
+    "jobs": [
+      "Wholesale listings for retailers",
+      "Retailer orders tracked",
+      "Opening order offers set",
+      "Products found to stock"
+    ],
+    "agents": [
+      "mei-wholesale-sales",
+      "sudhir-marketplaces"
+    ],
+    "stage": "channels",
+    "connect": "Faire has an external API (its old docs page says the docs moved; we could not open the new one); no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.faire.com/",
+      "https://faire.github.io/external-api-v2-docs/"
+    ]
+  },
+  {
+    "slug": "qima",
+    "name": "QIMA",
+    "maker": "QIMA",
+    "url": "https://www.qima.com",
+    "kind": "sourcing",
+    "ai_tools_slug": null,
+    "for_stores": "Pre-shipment inspections, factory and ethical audits, product certification and lab tests, run before the balance is paid.",
+    "jobs": [
+      "Pre-shipment inspection booked",
+      "A factory audit before a first order",
+      "Lab tests for a regulated product",
+      "Inspection reports read for pass or fail"
+    ],
+    "agents": [
+      "phuong-quality-control",
+      "wenhao-procurement"
+    ],
+    "stage": "source",
+    "connect": "myQIMA platform with dashboards and mobile apps; a Developer Portal link appears but no API is described. The agent drafts the inspection brief; the owner books and pays.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.qima.com/"
+    ]
+  },
+  {
+    "slug": "shipbob",
+    "name": "ShipBob",
+    "maker": "ShipBob",
+    "url": "https://www.shipbob.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "A 3PL with 50+ fulfilment centres, 2-day shipping across the continental US, B2B and EDI for retailers, and inventory spread across US sites.",
+    "jobs": [
+      "Orders picked and shipped by a 3PL",
+      "Stock placed nearer buyers",
+      "Retail and wholesale orders via EDI",
+      "Receiving and stock levels checked"
+    ],
+    "agents": [
+      "marivic-fulfilment",
+      "gurdeep-shipping-returns",
+      "omar-inventory-planning"
+    ],
+    "stage": "numbers",
+    "connect": "API (reference and OpenAPI spec) and an MCP server on its developer docs for coding agents. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.shipbob.com/",
+      "https://developer.shipbob.com/"
+    ]
+  },
+  {
+    "slug": "shipstation",
+    "name": "ShipStation",
+    "maker": "ShipStation",
+    "url": "https://www.shipstation.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "Prints shipping labels and compares carrier rates for orders from many sales channels in one place.",
+    "jobs": [
+      "Labels printed in batches",
+      "Rates compared by carrier",
+      "Orders from all channels in one list",
+      "Shipping rules by weight or region"
+    ],
+    "agents": [
+      "marivic-fulfilment",
+      "gurdeep-shipping-returns"
+    ],
+    "stage": "numbers",
+    "connect": "API V1 on certain plans (orders, shipments, labels, rates); no MCP seen. Buying labels spends money, so the owner says yes first. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.shipstation.com/docs/api/"
+    ]
+  },
+  {
+    "slug": "shippo",
+    "name": "Shippo",
+    "maker": "Shippo",
+    "url": "https://goshippo.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "Compares carrier rates, buys labels, tracks parcels, checks addresses and fills customs forms for small and mid-size stores.",
+    "jobs": [
+      "Rates compared before buying a label",
+      "Labels bought in batches",
+      "Addresses checked before dispatch",
+      "Customs forms for overseas orders",
+      "Parcels tracked"
+    ],
+    "agents": [
+      "marivic-fulfilment",
+      "gurdeep-shipping-returns"
+    ],
+    "stage": "numbers",
+    "connect": "Official hosted MCP server (mcp.shippo.com: rates, labels, tracking, address checks, customs) with OAuth sign-in, plus API. Labels cost money, so the owner says yes first. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.goshippo.com/guides/mcp-server"
+    ]
+  },
+  {
+    "slug": "flexport",
+    "name": "Flexport",
+    "maker": "Flexport",
+    "url": "https://www.flexport.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "Freight forwarding by ocean, air and truck, customs brokerage, fulfilment and tariff tools such as a simulator and refund calculator.",
+    "jobs": [
+      "Ocean or air freight booked",
+      "Customs entries filed",
+      "Tariff cost modelled before an order",
+      "Inbound shipments tracked"
+    ],
+    "agents": [
+      "sheila-inbound-freight",
+      "akosua-cost-forecast"
+    ],
+    "stage": "source",
+    "connect": "API (bookings, shipments, purchase orders, invoices, customs entries, documents, products); no MCP seen. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.flexport.com/",
+      "https://developers.flexport.com/"
+    ]
+  },
+  {
+    "slug": "freightos",
+    "name": "Freightos",
+    "maker": "Freightos",
+    "url": "https://www.freightos.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "Instant ocean freight quotes, online booking and tracking for importers, plus the Freightos Baltic Index for rate benchmarks.",
+    "jobs": [
+      "Freight quotes compared in minutes",
+      "A shipment booked and tracked",
+      "Rates checked against the index",
+      "Landed cost updated with live freight"
+    ],
+    "agents": [
+      "sheila-inbound-freight",
+      "akosua-cost-forecast",
+      "zhenyu-sourcing"
+    ],
+    "stage": "source",
+    "connect": "Terminal API portal and ERP or TMS integrations; no MCP seen. Bookings need the owner's yes. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.freightos.com/"
+    ]
+  },
+  {
+    "slug": "sendcloud",
+    "name": "Sendcloud",
+    "maker": "Sendcloud",
+    "url": "https://www.sendcloud.com",
+    "kind": "shipping",
+    "ai_tools_slug": null,
+    "for_stores": "Shipping labels across 170+ carriers, many in Europe, with a branded returns portal and branded tracking.",
+    "jobs": [
+      "Labels across European carriers",
+      "A branded returns portal",
+      "Branded tracking emails",
+      "Carrier choice by country"
+    ],
+    "agents": [
+      "gurdeep-shipping-returns",
+      "marivic-fulfilment"
+    ],
+    "stage": "numbers",
+    "connect": "API (labels, carriers, returns, tracking); no MCP seen. Labels cost money, so the owner says yes first. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.sendcloud.com/"
+    ]
+  },
+  {
+    "slug": "google-trends",
+    "name": "Google Trends",
+    "maker": "Google",
+    "url": "https://trends.google.com/trends/",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Shows what people search for now and over time, by region, to time launches and check if a product is rising or fading.",
+    "jobs": [
+      "A product's demand curve over five years",
+      "Seasonal peaks found for launch timing",
+      "Rising searches in a category",
+      "Demand compared across countries"
+    ],
+    "agents": [
+      "duncan-category-trends",
+      "revathi-product-research",
+      "sipho-product-hunter"
+    ],
+    "stage": "research",
+    "connect": "Google Trends API in alpha, by application (five rolling years, consistently scaled); otherwise the agent reads what the owner exports or screenshots. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://trends.google.com/trends/",
+      "https://developers.google.com/search/apis/trends"
+    ]
+  },
+  {
+    "slug": "google-merchant-center",
+    "name": "Google Merchant Center",
+    "maker": "Google",
+    "url": "https://www.google.com/retail/solutions/merchant-center/",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Holds the product feed that powers Google Shopping ads and free listings, with product status, issues and performance reports.",
+    "jobs": [
+      "Disapproved products found and fixed",
+      "Feed titles and attributes improved",
+      "Promotions added to listings",
+      "Shopping performance read by product"
+    ],
+    "agents": [
+      "raymond-google-ads",
+      "stuart-store-seo",
+      "juliet-merchandising"
+    ],
+    "stage": "ads",
+    "connect": "Merchant API (products, inventory, reports, promotions) and Google's Merchant API MCP Access Service in alpha (reads product status, reports, account issues; limited low-risk writes). Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.google.com/merchant/api/overview",
+      "https://developers.google.com/merchant/api/guides/agentic-tools/merchant-data-mcp"
+    ]
+  },
+  {
+    "slug": "google-search-console",
+    "name": "Google Search Console",
+    "maker": "Google",
+    "url": "https://search.google.com/search-console",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Shows the searches that bring people to the store, which pages rank, and indexing problems that hide pages from Google.",
+    "jobs": [
+      "Searches that bring buyers listed",
+      "Pages close to page one found",
+      "Indexing problems fixed",
+      "Sitemaps submitted"
+    ],
+    "agents": [
+      "stuart-store-seo",
+      "rustam-ai-answers"
+    ],
+    "stage": "organic",
+    "connect": "Search Console API (search analytics, sites, sitemaps); no official MCP seen, only community ones. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.google.com/webmaster-tools"
+    ]
+  },
+  {
+    "slug": "google-analytics",
+    "name": "Google Analytics 4",
+    "maker": "Google",
+    "url": "https://analytics.google.com",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Tracks visits, funnels and purchases on the store so the team can see where shoppers drop off and which channels sell.",
+    "jobs": [
+      "Funnel drop-off by step",
+      "Sales by channel and campaign",
+      "Landing pages ranked by revenue",
+      "Realtime check during a launch"
+    ],
+    "agents": [
+      "callum-reporting",
+      "emre-tracking",
+      "gretchen-store-testing"
+    ],
+    "stage": "numbers",
+    "connect": "Official Google Analytics MCP server, read-only per Google's docs (core, funnel and realtime reports, property settings), plus the API. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developers.google.com/analytics/devguides/MCP",
+      "https://github.com/googleanalytics/google-analytics-mcp"
+    ]
+  },
+  {
+    "slug": "meta-ad-library",
+    "name": "Meta Ad Library",
+    "maker": "Meta",
+    "url": "https://www.facebook.com/ads/library/",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "A public search of ads running on Meta, used to study rivals' offers, hooks and formats before briefing new creative.",
+    "jobs": [
+      "Rivals' live ads collected",
+      "Hooks and offers grouped by angle",
+      "Long-running ads spotted as likely winners",
+      "Formats compared across brands"
+    ],
+    "agents": [
+      "tendai-ad-creative",
+      "lindsey-meta-media-buyer",
+      "shannon-market-research"
+    ],
+    "stage": "research",
+    "connect": "The Ad Library API covers social issue, election and political ads plus ads delivered in the EU; for other ads the agent works from screenshots or exports. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://transparency.meta.com/researchtools/ad-library-tools"
+    ]
+  },
+  {
+    "slug": "google-ads-transparency-center",
+    "name": "Google Ads Transparency Center",
+    "maker": "Google",
+    "url": "https://adstransparency.google.com",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "A public view of the ads advertisers run on Google, used to check rivals' search, Shopping and video ads.",
+    "jobs": [
+      "Rivals' Google ads collected",
+      "Offers and claims compared",
+      "Video ad ideas for YouTube",
+      "A check on how long rivals run ads"
+    ],
+    "agents": [
+      "raymond-google-ads",
+      "shannon-market-research"
+    ],
+    "stage": "research",
+    "connect": "No API or download seen; the agent works from what the owner screenshots. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://adstransparency.google.com/"
+    ]
+  },
+  {
+    "slug": "pinterest-trends",
+    "name": "Pinterest Trends",
+    "maker": "Pinterest",
+    "url": "https://trends.pinterest.com",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Shows what people search and save on Pinterest, useful for planning seasonal products and content months ahead.",
+    "jobs": [
+      "Seasonal searches found early",
+      "Rising styles in a category",
+      "Pin topics planned ahead",
+      "Launch timing checked"
+    ],
+    "agents": [
+      "duncan-category-trends",
+      "marnie-pinterest-ads"
+    ],
+    "stage": "research",
+    "connect": "No Trends API seen on Pinterest's developer page; the announced Pinterest MCP lists trends. For now the owner exports or screenshots. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://trends.pinterest.com/",
+      "https://developers.pinterest.com/about-pinterest-mcp/"
+    ]
+  },
+  {
+    "slug": "helium-10",
+    "name": "Helium 10",
+    "maker": "Helium 10",
+    "url": "https://www.helium10.com",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Amazon, Walmart and TikTok Shop research: product research, keyword tools, listing help, ads and operations.",
+    "jobs": [
+      "Products sized on Amazon demand",
+      "Keywords for a listing",
+      "A listing scored and fixed",
+      "Rival listings tracked"
+    ],
+    "agents": [
+      "garrett-amazon",
+      "junaid-amazon-ads",
+      "sipho-product-hunter"
+    ],
+    "stage": "channels",
+    "connect": "Helium 10 MCP connects Claude, ChatGPT or other models, per its site; no API mentioned. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.helium10.com/"
+    ]
+  },
+  {
+    "slug": "jungle-scout",
+    "name": "Jungle Scout",
+    "maker": "Jungle Scout",
+    "url": "https://www.junglescout.com",
+    "kind": "data-and-research",
+    "ai_tools_slug": null,
+    "for_stores": "Amazon market data: product research, keyword data on 24M+ keywords and category benchmarks.",
+    "jobs": [
+      "A product idea checked on demand",
+      "Keyword volumes for a listing",
+      "Category share benchmarked",
+      "Rival sales tracked"
+    ],
+    "agents": [
+      "revathi-product-research",
+      "garrett-amazon",
+      "sipho-product-hunter"
+    ],
+    "stage": "research",
+    "connect": "API and MCP both listed on its site. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.junglescout.com/"
+    ]
+  },
+  {
+    "slug": "stripe",
+    "name": "Stripe",
+    "maker": "Stripe",
+    "url": "https://stripe.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "Takes card and wallet payments and handles refunds, disputes, subscriptions, payouts and tax for stores outside Shopify Payments.",
+    "jobs": [
+      "Payments and payouts reconciled",
+      "Disputes listed with evidence due dates",
+      "Refunds prepared for approval",
+      "Subscription churn read",
+      "Payment links for wholesale orders"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "darlene-support-lead"
+    ],
+    "stage": "numbers",
+    "connect": "Official Stripe MCP server (mcp.stripe.com: read and write via the API; refunds and money moves need human confirmation) and connectors in Claude and ChatGPT. Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://docs.stripe.com/mcp"
+    ]
+  },
+  {
+    "slug": "paypal",
+    "name": "PayPal",
+    "maker": "PayPal",
+    "url": "https://www.paypal.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "A checkout option many buyers trust, plus invoices for wholesale and custom orders.",
+    "jobs": [
+      "Invoices created for wholesale orders",
+      "Invoices listed by status",
+      "PayPal sales reconciled",
+      "Disputes checked"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "mei-wholesale-sales"
+    ],
+    "stage": "numbers",
+    "connect": "Official PayPal MCP server (invoices shown in its docs, with a full tools catalog). Start at level 1 read; nothing is spent, sent or launched without the owner's yes.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://developer.paypal.com/tools/mcp-server/"
+    ]
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "maker": "Xero",
+    "url": "https://www.xero.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "Cloud accounting for stores: invoices, bills, bank feeds and profit and loss.",
+    "jobs": [
+      "Monthly profit and loss read",
+      "Bank transactions matched",
+      "Supplier bills entered",
+      "Cash position checked"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "radek-unit-economics"
+    ],
+    "stage": "numbers",
+    "connect": "MCP server in the XeroAPI GitHub org (invoices, contacts, profit and loss, bank transactions) and API. Level 1 read; the owner approves any posting.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://github.com/XeroAPI/xero-mcp-server"
+    ]
+  },
+  {
+    "slug": "quickbooks",
+    "name": "QuickBooks Online",
+    "maker": "Intuit",
+    "url": "https://quickbooks.intuit.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "Cloud accounting for stores: income, bills, bank feeds and reports such as profit and loss.",
+    "jobs": [
+      "Monthly reports pulled",
+      "Bills and expenses entered",
+      "Sales reconciled with payouts",
+      "Cash flow checked"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "radek-unit-economics"
+    ],
+    "stage": "numbers",
+    "connect": "MCP server in Intuit's GitHub org, open source and self-hosted (145 tools, 29 entity types, 11 reports, OAuth). Level 1 read; the owner approves any posting.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://github.com/intuit/quickbooks-online-mcp-server"
+    ]
+  },
+  {
+    "slug": "a2x",
+    "name": "A2X",
+    "maker": "A2X",
+    "url": "https://www.a2xaccounting.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "Turns Shopify, Amazon, Etsy and other payouts into summaries that match bank deposits in QuickBooks, Xero, Sage or NetSuite, with cost of goods and sales tax and VAT workflows.",
+    "jobs": [
+      "Payouts matched to bank deposits",
+      "Fees and refunds split out",
+      "Cost of goods booked per period",
+      "Sales tax and VAT by channel"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "radek-unit-economics"
+    ],
+    "stage": "numbers",
+    "connect": "No API or MCP seen; it posts into Xero or QuickBooks, where agents read the results. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.a2xaccounting.com/"
+    ]
+  },
+  {
+    "slug": "avalara",
+    "name": "Avalara",
+    "maker": "Avalara",
+    "url": "https://www.avalara.com",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "Works out sales tax at checkout and files returns, and covers VAT and cross-border duties in 190+ countries.",
+    "jobs": [
+      "Sales tax worked out at checkout",
+      "Returns filed and paid",
+      "VAT for EU and UK sales",
+      "Duties shown for cross-border orders"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "meenakshi-compliance"
+    ],
+    "stage": "numbers",
+    "connect": "APIs linked from its site; no MCP seen. Tax settings change only with the owner's yes. Start at level 1 read.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://www.avalara.com/us/en/products/integrations/shopify.html"
+    ]
+  },
+  {
+    "slug": "wise-business",
+    "name": "Wise Business",
+    "maker": "Wise",
+    "url": "https://wise.com/business/",
+    "kind": "finance",
+    "ai_tools_slug": null,
+    "for_stores": "A multi-currency account to get paid in USD, EUR, GBP and more, and pay overseas suppliers in batches, with accounting sync.",
+    "jobs": [
+      "Supplier invoices paid in their currency",
+      "Batch payments to several suppliers",
+      "Marketplace income held in currency",
+      "Payments synced to accounting"
+    ],
+    "agents": [
+      "hemant-store-finance",
+      "wenhao-procurement"
+    ],
+    "stage": "source",
+    "connect": "API docs and accounting software sync, per its business page; no MCP seen. The agent may draft a payment list; the owner pays.",
+    "checked": "2026-11-15",
+    "sources": [
+      "https://wise.com/business/"
+    ]
+  }
+]

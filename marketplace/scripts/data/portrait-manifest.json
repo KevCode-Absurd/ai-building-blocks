@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 7.83107,
+  "spent_usd": 8.265,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -2759,5 +2759,160 @@
     "sha256": "95b9a799f21b82a25ef1c56bb6d094fa1f6d62a7242c15b116ff4f2c44f77c8b",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-13T07:55:34.363Z"
+  },
+  "junaid-amazon-ads": {
+    "sha256": "b8c74fb77d779a42a70fa4497aab20dd0565185c609b10bfd959d680e35d8d41",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:23.136Z"
+  },
+  "lindsey-meta-media-buyer": {
+    "sha256": "9194851350bb5ff2b318b5f2aa50aa03dcf7713a7e0e468586ebbdb3652b23b0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:24.869Z"
+  },
+  "emre-tracking": {
+    "sha256": "37159aba8af4e885b9090e4d6c0f82311ad87e1fbfc47456314a75bb526c64ec",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:24.966Z"
+  },
+  "marnie-pinterest-ads": {
+    "sha256": "1b89b52620c9b227117bd7bdf5f64b44892a797fc807cd7c2d6b298f992c7e5b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:24.973Z"
+  },
+  "callum-reporting": {
+    "sha256": "baa79ae512bae43ffb74c5479ec3102674ba7c7f63cf7edf19af50c84d6d5e55",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:35.699Z"
+  },
+  "meenakshi-compliance": {
+    "sha256": "be2a3a2154da0bf787fb49b15dd68e54eb0b84f345cddede6bd5138411c10d8d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:36.261Z"
+  },
+  "tanvi-listing-images": {
+    "sha256": "a101408148bff93e62e47789e505c46846e440eac38f64762e38a589cda41115",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:38.308Z"
+  },
+  "cody-video-editor": {
+    "sha256": "08c5b5d5b00d2d6ef36d3e85286f3904f0121546ef7475e2228ecca4362e8f8a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:38.793Z"
+  },
+  "alistair-packaging": {
+    "sha256": "ec3ecd3f74f3f1eb9b1418c02f51606341e02654fa8478a90b38e49b67ae3438",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:47.268Z"
+  },
+  "larissa-store-ux": {
+    "sha256": "de5d45bbb258916f65590433406028b88a96115d7c0c9d763357dc438dbe5cec",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:48.460Z"
+  },
+  "margot-pr": {
+    "sha256": "9157dc9aa05735296d119873625000810c6ac88e332e2a74d279fe0d9f92ba70",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:49.196Z"
+  },
+  "yaroslav-shopify-dev": {
+    "sha256": "a0c6559c1599232a77fa91348acacb1512d0fa284cb30867f185792410e32b29",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:51.064Z"
+  },
+  "sudhir-marketplaces": {
+    "sha256": "8c38a449b695b84c1e7d49ba111c4d37e57a159c41fd5d05d345c3539b08767f",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:18:59.993Z"
+  },
+  "gurdeep-shipping-returns": {
+    "sha256": "f10ae6c586ed4d431b539bf02b68f79316cb1227cce747edd7876184ea3403ac",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:01.911Z"
+  },
+  "corinne-reviews": {
+    "sha256": "61ff3b9a02d6f943d377dd09c9f15ea6c513b653547d2b472c2d8077ba5c2c50",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:02.059Z"
+  },
+  "ishita-india-commerce": {
+    "sha256": "c8f5556e0213bc8070be5912b2fb1f0b25a8ace210665d58cf03df1c5df15fcf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:03.379Z"
+  },
+  "fiona-account-manager": {
+    "sha256": "afced8f2c1d81a9f47af5cd2732127ff7e437bcf9b4f5c98e0b82b1d513ba472",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:13.426Z"
+  },
+  "lerato-creative-producer": {
+    "sha256": "7ffd9df5c87c5a3fb03a30660596290272cb872aebfc4d00282cc0842737341c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:13.902Z"
+  },
+  "clayton-new-business": {
+    "sha256": "54051475153d57246fa82c1f1c3050cb4fd7a64bf42542f7d821f560cf3be1f7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:19:14.443Z"
+  },
+  "duncan-category-trends": {
+    "sha256": "9a367bfb9a27141ae847a6b7a5dec6ab2524cfedf9031078c860852195c8c358",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:39:20.972Z"
+  },
+  "kelsey-snapchat-ads": {
+    "sha256": "38d363598fdfc496e8d09bcbe7bea5acdbaba540759135339449f3a44bc06bf6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:39:21.628Z"
+  },
+  "tunde-supplier-search": {
+    "sha256": "97b4949947aa0ba9ac9439bbef4fef8936d2cc27d27baf00da38fa32ecb6e3eb",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:39:22.991Z"
+  },
+  "ritika-influencer-outreach": {
+    "sha256": "96e2ca9658ec2702741e2d137f7a9a4ae81b1350289c91997c4e7d1798938426",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T07:39:23.302Z"
+  },
+  "douglas-should-cost": {
+    "sha256": "11684db9c90b73270b15b1d19e8ed4284d7d693e29bb2c1f3d0bd493bf6d77be",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:20.302Z"
+  },
+  "akosua-cost-forecast": {
+    "sha256": "5fb3dcfdb4b0e32fdb761a8fdf8c6c2ac483aea40b39125bda08651f786be2a4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:21.011Z"
+  },
+  "phuong-quality-control": {
+    "sha256": "dd0d7ef90dc7f0ac01c3d1a0079c9b890629c6293fb3e57590c074d536213773",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:21.635Z"
+  },
+  "wenhao-procurement": {
+    "sha256": "bdc038bbd9048c20b2d44ae1271e8559ddb3c66a9804597a538a8bb4ad413a1c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:24.973Z"
+  },
+  "sabelo-product-portfolio": {
+    "sha256": "0a0767cde7b1895f1a16acc7e05abf8ce1fe03d059deb298afb1a057c5cf68c6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:33.459Z"
+  },
+  "sheila-inbound-freight": {
+    "sha256": "e687eace59c5bdabf63ad2511848e7049f9ae22d83064b60e055e32369e4fb60",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:33.782Z"
+  },
+  "maxine-tech-packs": {
+    "sha256": "35167d9ef69236d502b808559be7375763f6303135e7c833a9a537fcfe0d7b5d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:34.243Z"
+  },
+  "howard-copy-chief": {
+    "sha256": "d2935d4deda5715b722adc578d4c365e9c1d9ca308507a6492d2449966d2c33b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-15T09:07:36.933Z"
   }
 }

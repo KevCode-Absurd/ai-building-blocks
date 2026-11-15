@@ -59,7 +59,7 @@ Using the revenue forecast, compute repayment per week: sales x remittance rate 
 
 Put the cash flows in a sheet: money received on day 0 (after any fees taken up front), then each repayment on its date. Use the spreadsheet XIRR function to get the effective annual rate. Illustrative only: 100,000 received, 108,000 repaid at 12% of sales on 300,000 a month means about 36,000 a month for 3 months, roughly 4% a month or about 60% a year. The same fee repaid over 12 months is about 15% a year. Always quote the annual rate at the store's own forecast, not the fee as a percentage.
 
-US: some states, including California and New York, require commercial financing providers to disclose an estimated annual cost; ask for it and compare with yours. India: check the lender is a bank or an RBI-registered NBFC, and ask for the key facts statement.
+US: some states, including California and New York, require commercial financing providers to disclose an estimated annual cost; ask for it and compare with yours. UK: check whether the lender is on the FCA register; much business lending is not regulated, so read every fee yourself. EU, Canada, Australia and elsewhere: check the lender is licensed or registered where you trade, and ask for a written summary of every cost and the total you will repay.
 
 ### 4. Put the repayments into the cash forecast
 
@@ -81,6 +81,13 @@ Cost each alternative the same way, in the same table:
 3. **A revolving credit line** for purchase-order timing, or purchase-order financing for large confirmed orders [FIN-0020].
 4. **Smaller amount** funding only the part with proof.
 5. **Doing nothing:** what growth is lost by waiting a month.
+
+6. **An inventory-backed loan (asset-based line):** when a lender offers to advance against stock, work out the most it can really lend before comparing:
+   - **Eligible stock:** stock list total at landed cost, minus what the lender excludes (slow or aged stock, stock at a 3PL or marketplace it cannot reach, consigned, damaged or in-transit goods). The stock list and the lender's appraisal must cover the same stock, currency and date; if not, say so before going on.
+   - **Three limits:** cost limit = eligible cost x the cost advance rate; appraisal limit = appraised value (often what the stock would fetch in a quick sale) x the appraisal advance rate; and any cap for a product category.
+   - **Lowest wins:** the advance can never go above the smallest of the three. Net advance = the lowest limit minus reserves, never below zero, and check that no reserve repeats a cut the appraisal already made. Name the limit that binds.
+   - Practice figures only: eligible cost 1,000 at 50% gives 500; appraised value 800 at 70% gives 560; a cap of 600; cost binds at 500, and reserves of 50 leave 450.
+   - The advance moves with stock: as the stock that backs it sells or ages out, the line shrinks, often in the weeks cash is tightest. Put that into the 13-week forecast too, and have the lender confirm the figure.
 
 Growth paid for with inventory loans has pushed some brands' net profit to near zero once interest and repayments landed [FIN-0011]. Facilities that fund marketing per customer cohort exist at large scale and work because each cohort's payback is measured [FIN-0022]; the same discipline applies to a small offer.
 
@@ -113,6 +120,7 @@ Give one verdict and the runner-up in one line.
 - Repayments are in the 13-week forecast, and the lowest cash week is shown.
 - The use of funds has evidence: past sell-through or measured customer payback.
 - At least three alternatives are costed on the same basis.
+- Any inventory-backed offer shows eligible stock, all three limits, reserves and the binding limit, with stock list and appraisal on the same date.
 - Every contract term is marked accept, negotiate or refuse.
 - The verdict is one of three, with reasons; nothing was accepted or signed.
 
@@ -131,6 +139,8 @@ Give one verdict and the runner-up in one line.
 
 **Terms checklist:** Term, What the contract says, Accept, negotiate or refuse, Question to ask.
 
+**Inventory advance check (when offered):** Stock list at cost, Exclusions, Eligible cost, Cost rate, Cost limit, Appraised value, Appraisal rate, Appraisal limit, Category cap, Lowest limit, Reserves, Net advance, Binding limit, Dates match (yes or no).
+
 ## Common mistakes
 
 - **Reading the fee as the interest rate.** An 8% fee repaid in 3 months costs far more a year than 8%. Step 3 computes the annual rate [FIN-6244].
@@ -139,6 +149,7 @@ Give one verdict and the runner-up in one line.
 - **Payback on first orders only.** Drop-off stretches payback [FIN-0014]. Step 5 uses cohort payback.
 - **No downside.** Step 4 runs it before any verdict.
 - **Skipping cheaper money.** Step 6 costs supplier terms and slow stock first [FIN-0023] [FIN-0026].
+- **Taking an inventory line at its headline size.** Step 6 works out the lowest of the three limits after exclusions and reserves.
 
 ## Sources
 
@@ -153,5 +164,10 @@ Give one verdict and the runner-up in one line.
 - FIN-0020: credit line and purchase-order financing.
 - FIN-0011: inventory-loan growth pushed net profit near zero.
 - FIN-0022: cohort-based marketing financing at scale.
+- Library item: Inventory borrowing base builder (AI Blocks skill), used for the eligible stock, three limits, reserves and binding-limit check in step 6; its method follows the OCC Comptroller's Handbook, "Asset-Based Lending" (https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/asset-based-lending/pub-ch-asset-based-lending.pdf).
 
 What makes this skill ours: the cost is an annual rate computed at the store's own sales forecast, so fast repayment is shown as expensive; repayments are dropped into the weekly cash forecast to find the lowest week; the money is approved only for uses with measured payback; and supplier terms and slow stock are costed as cheaper money before any lender.
+
+## Selling in India
+
+- Check the lender is a bank or an RBI-registered NBFC, and ask for the key facts statement.

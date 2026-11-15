@@ -25,7 +25,7 @@ description: "A verdict on one niche: roughly how big buyer demand is (as a rang
 
 Required:
 
-1. **The niche in one line:** product type, buyer, country (for example "posture correctors for desk workers, India").
+1. **The niche in one line:** product type, buyer, country (for example "posture correctors for desk workers, UK").
 2. **Expected price and delivered costs** (or supplier quotes) to work out gross profit per order.
 3. **Cash limit** for entering.
 
@@ -37,14 +37,14 @@ Access: read only (level 1). Nothing is spent. If a small paid search or ad test
 
 1. **Gross profit per order estimated** from delivered costs, not product cost alone [MEA-0037]. Fail: get rough quotes first; a niche verdict without margin is a guess.
 2. **Label every number.** Each figure is one of: measured (platform data), estimated (a formula on measured data), or proxy (a hint, such as review counts). The report keeps these labels.
-3. **One country at a time.** India and the US behave differently; size them separately.
+3. **One country at a time.** The US, UK, Germany and Australia behave differently; size them separately.
 4. **Regulation.** Note any licence, label or certification the niche needs. Fail when the store cannot meet it.
 
 ## Steps
 
 ### 1. List how buyers search for it
 
-Write 20 to 50 phrases buyers use, from marketplace search suggestions, Reddit and forum threads, reviews of current products and Google's "People also ask". Include regional language and Hinglish terms for India. Split into: problem phrases ("lower back pain from sitting"), product phrases ("posture corrector"), and brand phrases.
+Write 20 to 50 phrases buyers use, from marketplace search suggestions, Reddit and forum threads, reviews of current products and Google's "People also ask". Include terms in the languages your buyers use, and mixed-language or slang terms. Split into: problem phrases ("lower back pain from sitting"), product phrases ("posture corrector"), and brand phrases.
 
 ### 2. Size demand as a range
 
@@ -63,6 +63,14 @@ For the top 10 sellers across Google, the main marketplace and Meta:
 - Brand, price band, review count, rating, years selling, channels.
 - Live Meta ads now, from the Ad Library, which holds only running ads for ordinary advertisers [PRD-6483].
 - Share: what share of the top 10's reviews (a proxy) sit with the top 3.
+
+Count live advertisers properly, because a raw Ad Library count flatters or hides a crowd:
+
+- Search the exact product term, two or three other words buyers use, and the wider niche term (the other products the same buyer could pick instead), with the country set to the market, active ads only, over the last 7 to 14 days. Date the search; counts change week to week.
+- Count distinct stores, not pages, since one store can run several pages. Remove ads in a language the market does not buy in, ads for a different product, and big retailers that sell everything. Write the count before and after.
+- For each rival note the number of live ads, the oldest ad's start date, whether it is a one-product store, and its offer (bundle, free gift, subscription or plain). Ads started in the last few days prove nothing yet; put those rivals on a watch list and look again in a week.
+- Read it: fewer than about 5 stores advertising the exact product in the last week is open, 10 or more is crowded (one practitioner's beginner thresholds; test them). Zero advertisers anywhere does not mean an open niche; it can mean nobody has made it pay. At least one rival running several ads for more than a week is the proof someone pays to sell it.
+- The Ad Library shows Meta advertisers only, so count Amazon and TikTok Shop sellers by hand.
 
 Read the shape:
 
@@ -83,7 +91,7 @@ On Amazon, signs a niche can be entered: top listings with 300 reviews or fewer,
 
 ### 5. Find the angle
 
-A new store wins most often by serving a narrower buyer first: start on the most specific buyer situation and widen once it converts [AVT-0012]. If the product is the same as a large rival's, pick a buyer group the rival ignores rather than claiming a new mechanism [AVT-0014]. Write one angle in one line: buyer, situation, why current options fail them, why the store can serve them. If no angle can be written with evidence, the verdict is avoid or test only.
+A new store wins most often by serving a narrower buyer first: start on the most specific buyer situation and widen once it converts [AVT-0012]. If the product is the same as a large rival's, pick a buyer group the rival ignores rather than claiming a new mechanism [AVT-0014]. Two cheap sources of an angle: a plain one-product rival can often be beaten with a better offer and page, so name the offer gap; and a sub-category with strong search but a weak average rating (a rule of thumb from one demo: below about 3.8 stars) shows demand with weak products. Products rated 4.1 to 4.3 stars that still sell well point to the same gap, with their 1-star complaints as the fix list [AMZ-0002]. Keep a rating gap only when two kinds of evidence agree, such as review text and search volume, and drop any gap that rests on one forum post. Write one angle in one line: buyer, situation, why current options fail them, why the store can serve them. If no angle can be written with evidence, the verdict is avoid or test only.
 
 ### 6. Write the verdict
 
@@ -93,10 +101,11 @@ A new store wins most often by serving a narrower buyer first: start on the most
 
 Name the revenue goal check: monthly orders needed for the goal divided by the top of the buyer range. If the store needs more than a small share of the niche in year one (practitioner default: over 5%, test it), call it out.
 
-### 7. India and US notes
+### 7. Market notes
 
-- India: much demand runs through Amazon.in, Flipkart, Meesho and Nykaa; size those as well as Google. Price bands and COD refusal rates change the gross profit. TikTok is not available; use Instagram and YouTube search instead.
+- Every market: much demand runs through marketplaces (Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre, as fits the country); size those as well as Google. Price bands, return rates and failed deliveries change the gross profit. Where TikTok is not available, use Instagram and YouTube search instead.
 - US: Amazon and TikTok Shop often lead demand for new products; Merchant Center data covers Google. Check category rules (FDA, CPSC) before entering.
+- UK and EU: Amazon and local marketplaces such as Zalando or bol often lead; check product safety and labelling rules (UKCA or CE marking, the EU General Product Safety Regulation) before entering.
 
 ## Checks before you hand it over
 
@@ -104,6 +113,8 @@ Name the revenue goal check: monthly orders needed for the goal divided by the t
 - Demand is a range with the working shown.
 - No Trends score is described as volume.
 - The ownership table covers at least two channels.
+- Live advertiser counts show the before and after count once non-rivals are removed, with the search date; brand-new ads sit on a watch list, not in the proof.
+- Any rating gap used for the angle is backed by two kinds of evidence.
 - Cost per buyer is compared with delivered gross profit per first order.
 - The angle names a buyer, a situation and evidence.
 - The verdict is one of three, with one runner-up option.
@@ -125,9 +136,10 @@ Name the revenue goal check: monthly orders needed for the goal divided by the t
 - **One big number.** Step 2 gives a labelled range.
 - **Trends as volume.** Step 2 reads Trends for direction only.
 - **Crowded means bad.** Step 3 separates owned from same-looking niches.
+- **Reading zero advertisers as an open niche.** Step 3 asks for proof that someone pays to sell it.
 - **Size without cost to win.** Step 4 compares cost per buyer with gross profit.
 - **An angle with no evidence.** Step 5 needs a buyer, situation and proof.
-- **Sizing India from Google only.** Step 7 adds marketplaces.
+- **Sizing a marketplace-led country from Google only.** Step 7 adds marketplaces.
 
 ## Sources
 
@@ -138,9 +150,14 @@ Name the revenue goal check: monthly orders needed for the goal divided by the t
 - AVT-0013: confirm a buyer group's size by separate forum threads.
 - PRD-0001: same-looking categories plus a missed shift.
 - AMZ-0006: signs of beatable Amazon listings.
+- AMZ-0002: 4.1 to 4.3 star products that still sell, and their 1-star complaints.
 - MEA-0019: cost per buyer floor.
 - ADC-0057: rivals with better unit economics win auctions.
 - AVT-0012: start on the narrowest buyer situation.
 - AVT-0014: same product, win an unserved buyer.
 
-What makes this skill ours: every figure is labelled measured, estimated or proxy so a hint never passes as a fact; the verdict turns on cost to win a buyer against delivered gross profit, not on size alone; crowded niches are split into owned and same-looking; and India is sized across marketplaces, not just Google.
+What makes this skill ours: every figure is labelled measured, estimated or proxy so a hint never passes as a fact; the verdict turns on cost to win a buyer against delivered gross profit, not on size alone; crowded niches are split into owned and same-looking; and marketplace-led countries are sized across marketplaces, not just Google.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Much demand runs through Amazon.in, Flipkart, Meesho and Nykaa; size those as well as Google. Include regional language and Hinglish terms. Price bands and COD refusal rates change the gross profit. TikTok is not available; use Instagram and YouTube search instead.

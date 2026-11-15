@@ -41,7 +41,7 @@ Writing the rule changes nothing. Applying it inside ad accounts, email template
 ### 1. Fix the format
 
 - Lowercase only. GA4 values are case sensitive, so "Google" and "google" are two rows [MEA-6221].
-- Words joined with hyphens, no spaces, no special characters, English letters and numbers only, so every report and spreadsheet reads them the same way. Regional-language campaigns keep their language in the ad, not the tag.
+- Words joined with hyphens, no spaces, no special characters, English letters and numbers only, so every report and spreadsheet reads them the same way. Campaigns in the languages your buyers use keep their language in the ad, not the tag; add a market code to the campaign name (for example `-uk`, `-de`) when the same push runs in several countries.
 - Always set utm_source, utm_medium and utm_campaign; add utm_content for the creative or link; use utm_id for the platform's campaign ID where the platform can fill it [MEA-6221].
 
 ### 2. Fix the allowed values
@@ -63,7 +63,7 @@ Medium decides the GA4 channel, so it is a closed list. Paid Social needs a soci
 
 Source names the platform or sender: facebook, instagram, tiktok, pinterest, youtube, google, bing, newsletter, the store's email tool name, whatsapp, the creator's handle for creator links. Keep a fixed list; new values are added by the rule owner only.
 
-Campaign: yyyy-mm-theme, for example 2026-11-diwali-gifting or 2026-11-bfcm. Use the same campaign name across channels for one push so the push can be read whole.
+Campaign: yyyy-mm-theme, for example 2026-11-holiday-gifting or 2026-11-bfcm. Use the same campaign name across channels for one push so the push can be read whole.
 
 Content: the ad name from the naming rule, the email link position (hero, footer), or the creator's post ID.
 
@@ -76,7 +76,7 @@ Fill one per channel type in the sheet:
 - **Meta and TikTok ads:** set parameters in the ad's URL parameters field, not the landing URL, so one template covers every ad. Both platforms offer dynamic values that fill in campaign, ad set and ad names or IDs at click time; copy the current macro names from the platform's own URL parameter builder. Template: source = facebook or tiktok (or the dynamic site source), medium = paid-social, campaign = campaign name, content = ad name, id = campaign ID.
 - **Google Ads:** none needed; auto-tagging covers GA4 [MEA-6225]. Add UTMs only if another tool needs them, and know GA4 will ignore them.
 - **Email and SMS:** most email and SMS tools can add UTMs to every link automatically; set the tool's defaults to this rule once, then spot-check one send.
-- **WhatsApp (India first):** every link in broadcasts, catalog messages and automated flows carries source=whatsapp, medium=whatsapp, campaign, content = template name. Chat replies typed by agents use a short saved link per product.
+- **WhatsApp (and other chat apps such as Messenger, Telegram or LINE where the store uses them):** every link in broadcasts, catalog messages and automated flows carries source=whatsapp, medium=whatsapp, campaign, content = template name. Chat replies typed by agents use a short saved link per product.
 - **Organic social and link in bio:** one tagged link per platform, content = post date or bio.
 - **Creators and affiliates:** one link per creator: source = handle, medium = affiliate or creator, campaign = program and month. Give each creator a discount code too, as a backup for buyers who type the URL [MEA-0040].
 - **QR codes:** source = insert, print or event name, medium = qr. Print a short redirect link so the target can change later.
@@ -143,7 +143,7 @@ Compare GA4 channel shares of new-customer orders with the post-purchase survey 
 - **Turning off Google auto-tagging.** Step 3 leaves Google Ads to the gclid.
 - **Free-typed values.** Step 4 uses drop-downs.
 - **UTMs on site banners.** Step 5 bans them.
-- **WhatsApp left untagged.** In India it is often a top channel; step 3 tags every flow and broadcast.
+- **WhatsApp left untagged.** In many markets across Europe, Latin America, the Middle East and Asia it is often a top channel; step 3 tags every flow and broadcast.
 - **Creator links without codes.** Buyers retype URLs; step 3 adds a code.
 
 ## Sources
@@ -157,3 +157,7 @@ Compare GA4 channel shares of new-customer orders with the post-purchase survey 
 - MEA-0045: survey shares should roughly match spend shares.
 
 What makes this skill ours: the medium list is mapped line by line to GA4's real channel rules, so a typo cannot hide paid spend as organic; WhatsApp, creators and QR codes get their own channels in a custom group; and a 10-minute weekly check catches drift before a month of data is lost.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. WhatsApp is often a top channel in India, so tag every broadcast, catalog message and flow before anything else. Name festive pushes the same way across channels (for example 2026-11-diwali-gifting). Hindi and regional-language campaigns keep their language in the ad, not the tag.

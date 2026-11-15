@@ -1,6 +1,6 @@
 ---
 name: email-sms-flow-plan
-description: "Plans every automated email, SMS and WhatsApp flow a store needs, ranked by the gross profit each one adds, starting from the store's real flow revenue and trigger volumes rather than a generic list. For each flow it sets the trigger, the split between new and returning buyers, the number of messages, the delay before each, the purpose of each message, the exit rule, and one target metric. Adds subscription flows where the store sells subscriptions and WhatsApp journeys, cash-on-delivery confirmation and prepaid nudges for India. Platform-neutral, with Klaviyo names as the example. Use when building flows for a new store, rebuilding a messy account, or adding SMS or WhatsApp."
+description: "Plans every automated email, SMS and WhatsApp flow a store needs, ranked by the gross profit each one adds, starting from the store's real flow revenue and trigger volumes rather than a generic list. For each flow it sets the trigger, the split between new and returning buyers, the number of messages, the delay before each, the purpose of each message, the exit rule, and one target metric. Adds subscription flows where the store sells subscriptions, WhatsApp journeys where buyers use WhatsApp, and order confirmation and prepaid nudges where pay on delivery causes failed deliveries. Platform-neutral, with Klaviyo names as the example. Use when building flows for a new store, rebuilding a messy account, or adding SMS or WhatsApp."
 ---
 
 # Email, SMS and WhatsApp flow plan
@@ -13,7 +13,7 @@ A ranked build plan: which flows, in what order, with every message's timing and
 
 - A new store needs its automated flows built from scratch.
 - An existing account has a pile of half-built flows and nobody knows which matter.
-- The store adds SMS, or WhatsApp in India, and needs to know where each channel fits.
+- The store adds SMS, or WhatsApp where its buyers use it (much of Europe, Latin America, the Middle East and Asia), and needs to know where each channel fits.
 - After `email-account-health-audit` shows missing or weak flows.
 
 ## Not for
@@ -110,15 +110,16 @@ Cost check per SMS step: recipients x segments x cost per segment must be below 
 - Failed-payment flows split by payment method; weak dunning loses 5 to 10% of subscription revenue at some brands [EML-0007].
 - Cancelled-subscriber win-back 30 to 60 days after cancelling [EML-0006].
 
-### 7. India: WhatsApp and cash on delivery
+### 7. WhatsApp and pay-on-delivery orders
 
-Automated WhatsApp journeys averaged 11.12% click rate versus 2.6% for broadcasts across Indian brands [EML-0048]. Plan them as their own channel:
+Automated WhatsApp journeys averaged an 11.12% click rate versus 2.6% for broadcasts across brands in one large WhatsApp market [EML-0048]. Where your buyers use WhatsApp (or a similar chat app), plan it as its own channel:
 
-- **Order confirmation and COD confirmation** (utility template): within minutes of a COD order, ask the buyer to confirm or cancel. Practitioner default, test it: unconfirmed COD orders are held, not shipped, which cuts return to origin.
-- **Prepaid nudge**: offer a small prepaid saving to convert a COD order before dispatch, if `store-meta-math` shows the saving costs less than the expected return-to-origin loss.
+- **Order confirmation** (utility template): where the store offers pay on delivery, ask the buyer to confirm or cancel within minutes of such an order. Practitioner default, test it: unconfirmed pay-on-delivery orders are held, not shipped, which cuts failed deliveries and return shipping.
+- **Prepaid nudge**: offer a small prepaid saving to convert a pay-on-delivery order before dispatch, if `store-meta-math` shows the saving costs less than the expected loss from failed deliveries.
 - **Abandoned checkout** (marketing template): one WhatsApp message alongside email 1.
 - **Shipping and delivery updates** (utility template), with the tracking link.
-- **Loyalty points expiry reminders** by message suit repeat categories; one Indian brand used 60-day expiring coins this way [CXP-0019].
+- **Loyalty points expiry reminders** by message suit repeat categories; one brand used 60-day expiring coins this way [CXP-0019].
+- **Where buyers do not use WhatsApp** (much of the US, Canada and Australia), run the same confirmation and delivery updates by SMS or email instead.
 
 WhatsApp charges per message by category; check the provider's current rates and add them to the cost check in step 5.
 
@@ -162,8 +163,13 @@ Build in the rank order from step 3, but always in this sequence where ranks tie
 - EML-0024, EML-0028, EML-0029, EML-0035: SMS length, cost and flows.
 - EML-0043, EML-0056, EML-0059: smart sending, attribution, inbox floor.
 - EML-0045, EML-0060: welcome timing.
-- EML-0048, CXP-0019: WhatsApp journeys and loyalty expiry in India.
+- EML-0048, CXP-0019: WhatsApp journeys and loyalty points expiry.
 - EML-0049, EML-0062: replenishment and post-purchase timing.
 - EML-0053: split by new, returning and loyal.
 
-What makes this skill ours: flows are ranked by the gross profit gap from the store's own numbers, not a standard list; timing comes from the store's real days between orders and usage cycles; every SMS and WhatsApp step must pay for itself; and India gets COD confirmation and prepaid nudges tied to return-to-origin losses.
+What makes this skill ours: flows are ranked by the gross profit gap from the store's own numbers, not a standard list; timing comes from the store's real days between orders and usage cycles; every SMS and WhatsApp step must pay for itself; and stores that offer pay on delivery get order confirmation and prepaid nudges tied to failed-delivery losses.
+
+## Selling in India
+
+- Cash on delivery is common, so return to origin (RTO) is the big cost. Send a COD confirmation on WhatsApp within minutes of every COD order and hold unconfirmed orders.
+- The WhatsApp click-rate figures [EML-0048] and the 60-day expiring coins [CXP-0019] both come from Indian brands.

@@ -7058,5 +7058,3317 @@
     "why": "Indian law-firm summary (tier 2) of the CCPA Guidelines for Prevention and Regulation of Dark Patterns, 2023, listing all 13 specified patterns with illustrations and exceptions; used because consumeraffairs.nic.in and the gazette block automated access.",
     "cards": 3,
     "public": true
+  },
+  {
+    "id": "S6604",
+    "file": "bluesense/-YiL9Dp96d4.md",
+    "title": "The IM8 Paid Media Teardown: Creative, Offers, Landing Pages, P&L",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=-YiL9Dp96d4",
+    "date": "2026-08-24",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "MCR",
+      "OFF",
+      "LPG"
+    ],
+    "why": "Reading a public DTC P&L (contribution margin, ARR, cohort GP to CAC, cohort financing), the quarterly plan and offer stack, the timeline script multiplied by persona, awareness mix and claims risk, and landing pages routed by awareness and persona.",
+    "cards": 23,
+    "public": true
+  },
+  {
+    "id": "S6605",
+    "file": "bluesense/7r9Ys2LrIZ8.md",
+    "title": "Full Teardown Of A $100M Supplement Brand: Gorilla Mind",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=7r9Ys2LrIZ8",
+    "date": "2026-10-11",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "OFF",
+      "LPG",
+      "ADC"
+    ],
+    "why": "A worked teardown of a nine-figure supplement brand: retail versus DTC product split, subscription pricing leak, bundle and free shipping tests, creative format and hook diagnosis, script rewrites, and landing page gaps.",
+    "cards": 24,
+    "public": true
+  },
+  {
+    "id": "S6606",
+    "file": "bluesense/7uCzTEZWE3M.md",
+    "title": "The #1 Bottleneck I See in 80% of eCommerce Audits",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=7uCzTEZWE3M",
+    "date": "2026-05-17",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "ADC",
+      "GAD",
+      "CRO"
+    ],
+    "why": "Data integrity as the bottleneck: why platform ROAS misleads, Meta attribution settings and the 2026 click change, incremental attribution, MER versus acquisition MER, the finance dashboard, 180-day LTGP to CAC benchmarks, geo-lift and CausalImpact methods, nine recurring audit patterns and a measurement playbook by revenue stage.",
+    "cards": 25,
+    "public": true
+  },
+  {
+    "id": "S6607",
+    "file": "bluesense/95LccODmEFA.md",
+    "title": "Everything You Need to Know About Finance in eCommerce",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=95LccODmEFA",
+    "date": "2026-05-03",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "FIN",
+      "OFF",
+      "COG",
+      "ADC"
+    ],
+    "why": "Finance for DTC operators and media buyers: gross to net revenue, true gross margin, P&L classification and troubleshooting, CAC against first-order gross profit, waterfall pricing, discount and bundle maths, new versus returning profit, LTGP windows, product-level bidding traps, clearing slow stock with paid media, cash cycle limits and cohort and spend-curve forecasting.",
+    "cards": 27,
+    "public": true
+  },
+  {
+    "id": "S6608",
+    "file": "bluesense/DHaB1oYtV34.md",
+    "title": "The US Launch Playbook for Non-US Brands",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=DHaB1oYtV34",
+    "date": "2026-08-16",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OPS",
+      "ADC",
+      "MEA",
+      "OFF"
+    ],
+    "why": "When a non-US brand is ready for the US and how to launch: revenue floor, one market at a time, tariffs and US stock, CPM-driven pricing, first-purchase modelling, localisation, returns and shipping, state targeting and tax, transferring winning ads, cash and focus.",
+    "cards": 18,
+    "public": true
+  },
+  {
+    "id": "S6609",
+    "file": "bluesense/DQKF8O1ZcPA.md",
+    "title": "The Only Google Ads Strategy You Need",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=DQKF8O1ZcPA",
+    "date": "2026-06-21",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "GAD",
+      "MEA",
+      "LPG"
+    ],
+    "why": "A 2026 e-commerce Google Ads playbook: consolidation rules, PMax vs standard Shopping split, asset groups, bidding traps, feed titles and images, and a 90 day rollout.",
+    "cards": 33,
+    "public": true
+  },
+  {
+    "id": "S6610",
+    "file": "bluesense/E65iCbg_y2k.md",
+    "title": "The Finance Masterclass for $10M+ eCommerce Brands",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=E65iCbg_y2k",
+    "date": "2026-10-25",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "FIN",
+      "MEA",
+      "COG",
+      "OFF"
+    ],
+    "why": "Finance for $10M+ DTC brands: why profit is not cash, cash conversion cycle, GMROI, working capital per revenue dollar, landed cost and FX, open-to-buy, the 13-week cash forecast, payback as financing, price break-even maths, true cost of returns, channel P&Ls, scenarios, valuation and the finance stack by stage.",
+    "cards": 32,
+    "public": true
+  },
+  {
+    "id": "S6611",
+    "file": "bluesense/HEsIfihl1E0.md",
+    "title": "eCommerce CRO Masterclass: The Full System",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=HEsIfihl1E0",
+    "date": "2026-08-10",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "CRO",
+      "LPG",
+      "OFF",
+      "MEA"
+    ],
+    "why": "A full CRO system: revenue per visitor over conversion rate, the five-lever priority order, above-the-fold questions, ad to page continuity, offer building with bundles, gifts and thresholds, proof, Baymard checkout fixes, and the sample size maths behind A/B tests.",
+    "cards": 32,
+    "public": true
+  },
+  {
+    "id": "S6612",
+    "file": "bluesense/JDYsuvpkV2Q.md",
+    "title": "How The Meta Ads Algorithm Works",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=JDYsuvpkV2Q",
+    "date": "2026-07-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "ADC",
+      "MCR",
+      "MEA"
+    ],
+    "why": "How Meta's retrieval, ranking and auction stages work after Andromeda and GEM, what targeting you still control, the auction formula, why economics set your bid, signal quality and server-side tracking, the entity ID trap, the 20% budget myth and consolidation.",
+    "cards": 13,
+    "public": true
+  },
+  {
+    "id": "S6613",
+    "file": "bluesense/KL6Jy4Cd720.md",
+    "title": "Full Teardown Of A $226M Baby Toys Brand: Lovevery",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=KL6Jy4Cd720",
+    "date": "2026-11-01",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "LPG",
+      "OFF",
+      "EML"
+    ],
+    "why": "A full-funnel teardown of a stage-based subscription brand: creative pillar and awareness audits, script fixes, a PDP redesign, pre-lander and quiz funnels, persona routing, gift funnel and handover offers, and retention tests.",
+    "cards": 21,
+    "public": true
+  },
+  {
+    "id": "S6614",
+    "file": "bluesense/LSFsNbsDL3E.md",
+    "title": "How to Scale an eCommerce Brand Profitably: The Full System",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=LSFsNbsDL3E",
+    "date": "2026-06-14",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "FIN",
+      "OFF",
+      "ADC",
+      "MCR",
+      "CRO"
+    ],
+    "why": "First half of a 9-hour masterclass: incrementality and finance-grade metrics, ecommerce P&L and cash, offer economics, Meta account structure by spend tier and Andromeda-era creative strategy, with thresholds and worked maths.",
+    "cards": 156,
+    "public": true
+  },
+  {
+    "id": "S6615",
+    "file": "bluesense/LoL1w-k9Mgg.md",
+    "title": "How To Write Meta Ads That Scale: Copywriting Masterclass",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=LoL1w-k9Mgg",
+    "date": "2026-09-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "AVT",
+      "OFF",
+      "ADC"
+    ],
+    "why": "A full direct response scriptwriting system for Meta video and static ads: research sources and what each yields, awareness and sophistication placement, offer and guarantee rewrites, the nine-beat script, bridges, objections and the proof ladder, identity, storytelling, writing for voice, choosing a format, ad length and how to use AI for scripts.",
+    "cards": 66,
+    "public": true
+  },
+  {
+    "id": "S6616",
+    "file": "bluesense/LpciOB45Lw8.md",
+    "title": "The Future of Google Ads, AI and Agencies (with Caden)",
+    "author": "Caden Thompson with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=LpciOB45Lw8",
+    "date": "2025-06-18",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "MEA",
+      "GAD",
+      "MCR"
+    ],
+    "why": "How Blue Sense audits for big moves instead of settings, the fix-it-without-the-ad-account exercise, overspend on existing customers, AI creative limits in 2025, and how to vet an agency against the P&L.",
+    "cards": 8,
+    "public": true
+  },
+  {
+    "id": "S6617",
+    "file": "bluesense/Nn5yt6DVVKs.md",
+    "title": "How To Structure A Meta Ads Account At Every Spend Tier",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=Nn5yt6DVVKs",
+    "date": "2026-05-31",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "ADC",
+      "CRO",
+      "MEA",
+      "MCR"
+    ],
+    "why": "Meta account structure by spend tier (under $50k, $50k to $250k, $250k plus): consolidation versus segmentation rules, ABO versus CBO, test budget and duration maths, scaling and page cap tactics, retargeting and DPA limits, existing customer budget formula and a settings audit.",
+    "cards": 39,
+    "public": true
+  },
+  {
+    "id": "S6618",
+    "file": "bluesense/QerNLnEm7AE.md",
+    "title": "Google Ads (w/ Austin from Grow My Ads)",
+    "author": "Austin (Grow My Ads) with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=QerNLnEm7AE",
+    "date": "2025-12-14",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "GAD",
+      "OFF",
+      "MCR",
+      "OPS"
+    ],
+    "why": "BFCM 2025 portfolio results by discount history, two agencies' shift from Performance Max back to standard Shopping, PMax plateau points, AI Max and AI Overview status, when to add YouTube, and why cheap Meta retainers no longer work.",
+    "cards": 10,
+    "public": true
+  },
+  {
+    "id": "S6619",
+    "file": "bluesense/SE1aIOgO-lM.md",
+    "title": "How to Write Ad Hooks That Scale",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=SE1aIOgO-lM",
+    "date": "2026-01-28",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Hook purpose, three hook layers, a template and a five-part scoring order, live rewrites of weak hooks, and how to bridge from hook to body and call to action.",
+    "cards": 9,
+    "public": true
+  },
+  {
+    "id": "S6620",
+    "file": "bluesense/TXaUABqll1E.md",
+    "title": "The Death Spiral That Kills Most eCommerce Brands",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=TXaUABqll1E",
+    "date": "2026-07-21",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "ADC",
+      "OPS"
+    ],
+    "why": "How rising CAC and weak LTGP create a death spiral, LTGP to CAC bands, why platform ROAS hides decline, the measurement ladder, category retention benchmarks, funding first-order losses, and a monthly unit economics routine.",
+    "cards": 13,
+    "public": true
+  },
+  {
+    "id": "S6621",
+    "file": "bluesense/UgfvRnO1pLc.md",
+    "title": "How We Audit 8 and 9 Figure Ad Accounts (Full Process)",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=UgfvRnO1pLc",
+    "date": "2026-09-07",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "ADC",
+      "MCR",
+      "GAD"
+    ],
+    "why": "Blue Sense's full audit method: cohort GP to CAC bands, normalised and first-time P&Ls, acquisition MER versus platform ROAS by attribution setting, campaign consolidation, frequency checks by audience, common errors, Google feed checks, creative volume and concept counts by spend, and the fix order.",
+    "cards": 22,
+    "public": true
+  },
+  {
+    "id": "S6622",
+    "file": "bluesense/WvYpV69IEy0.md",
+    "title": "The Ad Libraries That You Should Be Watching",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=WvYpV69IEy0",
+    "date": "2026-11-08",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "ADC",
+      "MEA",
+      "OFF"
+    ],
+    "why": "How to tell which brands' Meta ad libraries to model (brand-aware hook and problem-framing counts), the four checks for whether Meta creates demand, and the creative and offer playbook of Meta-first fast scalers Smooch, Hostage Tape and Resilia.",
+    "cards": 22,
+    "public": true
+  },
+  {
+    "id": "S6623",
+    "file": "bluesense/YDo6Kx0RlNk.md",
+    "title": "How To Create Founder Ads That Scale (Masterclass)",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=YDo6Kx0RlNk",
+    "date": "2026-08-31",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR"
+    ],
+    "why": "How to script and produce founder ads at volume: the founder-only claims, the claim and proof structure from their top 15 founder ads, hook and body maths, fixing founder sameness, the founder involvement ladder and roles, portfolio risk, and real ad teardowns.",
+    "cards": 18,
+    "public": true
+  },
+  {
+    "id": "S6624",
+    "file": "bluesense/YLDKl9aVgMM.md",
+    "title": "Black Friday Strategy: Spend, Creative, Offers, Pacing",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=YLDKl9aVgMM",
+    "date": "2026-09-20",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "ADC",
+      "MEA",
+      "MCR",
+      "OFF"
+    ],
+    "why": "How to plan and run BFCM 2026: attribution lag and post-treatment windows, pre-season budget share, marginal versus average CAC, discount-adjusted ROAS targets, November cohort quality, 3-day rolling scaling rules, creative volume and types, and a dated prep timeline.",
+    "cards": 15,
+    "public": true
+  },
+  {
+    "id": "S6625",
+    "file": "bluesense/aFRMC2gNbLM.md",
+    "title": "The Creative Strategy Behind $400M a Year in Ad Spend",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=aFRMC2gNbLM",
+    "date": "2026-10-04",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "ADC",
+      "MEA"
+    ],
+    "why": "Blue Sense's creative system for Meta: ad spend capacity, frequency under 2, concept equals persona plus angle plus offer, 10+ ads per concept, metric reliability order, creative volume per spend, content mix and production budget by spend tier.",
+    "cards": 26,
+    "public": true
+  },
+  {
+    "id": "S6626",
+    "file": "bluesense/aYljX26Ecp8.md",
+    "title": "Two Years Later: What Still Works (And What Doesn't) ft. Michael Nadalin",
+    "author": "Nathan Perdriau and Michael Nadalin (Market Lead) with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=aYljX26Ecp8",
+    "date": "2025-12-26",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "ADC",
+      "GAD",
+      "MEA",
+      "OPS"
+    ],
+    "why": "Practitioner conversation on attribution tools, TikTok for large fashion versus small brands, Google's funnel role, segmenting Google and Meta accounts around business priorities, practical AI use from internal data, and choosing an agency.",
+    "cards": 7,
+    "public": true
+  },
+  {
+    "id": "S6627",
+    "file": "bluesense/bcskMbd_tnM.md",
+    "title": "How To Scale Google Ads For Q4 (With Aaron Young)",
+    "author": "Aaron Young with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=bcskMbd_tnM",
+    "date": "2026-10-18",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "GAD",
+      "MEA",
+      "OPS"
+    ],
+    "why": "Google Ads scaling rules for Q4: the 50 conversions a week stability line, budget step sizes, CPC resistance and impression share, PMax versus Shopping structure and exclusions, brand campaign setup, and audit routines.",
+    "cards": 22,
+    "public": true
+  },
+  {
+    "id": "S6628",
+    "file": "bluesense/c9lLSY-Vdeo.md",
+    "title": "Why Your Meta Ads Don't Scale (12 Real Examples)",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=c9lLSY-Vdeo",
+    "date": "2026-08-02",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Teardowns of real Meta video ads showing what makes them scale or stall: gadget demos, belief-capture street interviews, benefit before feature, edit pace, persona match, AI for storytelling not demos, before and after compliance, and awareness placement.",
+    "cards": 12,
+    "public": true
+  },
+  {
+    "id": "S6629",
+    "file": "bluesense/hV-E_N85iZA.md",
+    "title": "The Complete E-Commerce Retention Masterclass",
+    "author": "Nathan Perdriau and Angus Cowan with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=hV-E_N85iZA",
+    "date": "2026-07-13",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "EML",
+      "MEA",
+      "ADC",
+      "CXP"
+    ],
+    "why": "Retention economics and execution: time-boxed LTGP, CAC targets from LTGP to CAC bands, the retention hierarchy, Klaviyo flow structure by customer stage, 80/20 campaign reach, engaged segment growth, RFM winbacks, and paid media budgets for existing customers.",
+    "cards": 22,
+    "public": true
+  },
+  {
+    "id": "S6630",
+    "file": "bluesense/hpj26J68znQ.md",
+    "title": "How To Breakdown Shopify Data Into Country Unit Economics (with Valentin)",
+    "author": "Valentin with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=hpj26J68znQ",
+    "date": "2025-07-21",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "FIN",
+      "OFF"
+    ],
+    "why": "A per country unit economics table from Shopify exports: data sources, revenue per session, cart value vs AOV, discounts, shipping under-collection, payment fees, blended vs new customer profit contribution.",
+    "cards": 10,
+    "public": true
+  },
+  {
+    "id": "S6631",
+    "file": "bluesense/kD1Elt-gYdk.md",
+    "title": "Reviewing 7 Ads: The One Change I'd Make To 6 Of Them",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=kD1Elt-gYdk",
+    "date": "2026-01-21",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "ADC",
+      "AVT"
+    ],
+    "why": "Script-level ad teardowns (Haus, Nothin, OraCare, IM8 Health, Hyro, Zum): hook choice, desire and benefit ordering, VSL structure, partnership ad use, broad hooks that scale and how to avoid commodity positioning.",
+    "cards": 11,
+    "public": true
+  },
+  {
+    "id": "S6632",
+    "file": "bluesense/mOlklmm4J3o.md",
+    "title": "Bottleneck Analysis in Google Ads: The Full Framework",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=mOlklmm4J3o",
+    "date": "2026-06-28",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "GAD",
+      "MEA",
+      "CRO"
+    ],
+    "why": "A top-down order for diagnosing a Google Ads dip: pre-checks, cross-channel check, campaign drill-down, failure modes by campaign type, metric trees and fix-before-rebuild rules.",
+    "cards": 15,
+    "public": true
+  },
+  {
+    "id": "S6633",
+    "file": "bluesense/mueHZta2aBM.md",
+    "title": "Alo Yoga Teardown: Creative, Offers, Landers and Acquisition",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=mueHZta2aBM",
+    "date": "2026-09-13",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "LPG",
+      "OFF",
+      "BRD"
+    ],
+    "why": "What a celebrity-fed aspirational fashion account does and what transfers: creative rotation versus scaling winners, script beats, multi-product video, no-discount discipline, free shipping in ads, store content, celebrity landing pages and collection grid upkeep.",
+    "cards": 15,
+    "public": true
+  },
+  {
+    "id": "S6634",
+    "file": "bluesense/nMl3JZ9wndg.md",
+    "title": "Why Most Fashion Brands Are Running Paid Media Wrong",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=nMl3JZ9wndg",
+    "date": "2026-05-24",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "ADC",
+      "MEA",
+      "GAD",
+      "MCR"
+    ],
+    "why": "Fashion-specific paid media: days of inventory and stock grades in budget calls, returns-adjusted CAC and MER, attribution gaps with real audit numbers, Meta and Google Shopping structure, feed fixes, creative mix, international launch rules, geolift testing and a playbook by spend tier.",
+    "cards": 43,
+    "public": true
+  },
+  {
+    "id": "S6635",
+    "file": "bluesense/r2h8S02N9mw.md",
+    "title": "How 8 and 9 Figure Brands Build Offers Without Discounting",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=r2h8S02N9mw",
+    "date": "2026-06-07",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OFF",
+      "MEA",
+      "CRO",
+      "EML"
+    ],
+    "why": "Offer design with worked unit economics: discount waterfalls and ROAS curves, five offer mechanics, gift with purchase and bundle maths, threshold setting from order value distribution, upsell take-rate maths and post-purchase sequencing.",
+    "cards": 27,
+    "public": true
+  },
+  {
+    "id": "S6636",
+    "file": "bluesense/vDmNSVi3ip8.md",
+    "title": "What Actually Built rhode, Alo, Gruns and IM8",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=vDmNSVi3ip8",
+    "date": "2026-10-21",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OPS",
+      "MEA",
+      "FIN",
+      "MCR"
+    ],
+    "why": "The four growth levers (product, distribution, talent, risk) and where each is paid for on the P&L, using rhode, Grüns, Alo and IM8 filings, plus which lever fits each revenue stage and four questions to find your bottleneck.",
+    "cards": 10,
+    "public": true
+  },
+  {
+    "id": "S6637",
+    "file": "bluesense/vUbLw80KTpo.md",
+    "title": "Meta Ads Creative Strategy: The Full System",
+    "author": "Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=vUbLw80KTpo",
+    "date": "2026-05-10",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "ADC",
+      "MEA",
+      "OPS"
+    ],
+    "why": "A full Meta creative operating system: concept architecture, hook and format rules, test structure, metric hierarchy, creative volume and production budget formulas by spend tier, fatigue and portfolio management, with client numbers.",
+    "cards": 52,
+    "public": true
+  },
+  {
+    "id": "S6638",
+    "file": "bluesense/wYOayIG15Oc.md",
+    "title": "How to Make Static Image Ads That Scale",
+    "author": "Nathan Perdriau with Blue Sense Digital",
+    "url": "https://www.youtube.com/watch?v=wYOayIG15Oc",
+    "date": "2026-07-06",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MCR",
+      "LPG",
+      "MEA"
+    ],
+    "why": "How to make static image ads that reach cold audiences: expected gross profit per ad, clarity versus curiosity, visual hierarchy, concepts versus variations under Andromeda, awareness stages, the production pipeline and where AI fits, volume forecasting, and native and advertorial funnels.",
+    "cards": 18,
+    "public": true
+  },
+  {
+    "id": "S6639",
+    "file": "web/abcsupplychain.com/abc-xyz-analysis/",
+    "title": "ABC XYZ Analysis in Inventory Management: A Complete Guide with Excel Example",
+    "author": "Edouard Thieuleux (AbcSupplyChain)",
+    "url": "https://abcsupplychain.com/abc-xyz-analysis/",
+    "date": "2025-04-07",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "MEA",
+      "OPS"
+    ],
+    "why": "Monthly CV method with stated X/Y/Z bands, a cell-by-cell stocking policy and the CV's blind spot for seasonal items.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6640",
+    "file": "web/academy.iccwbo.org/incoterms/article/incoterms-2020-exw-or-ddp/",
+    "title": "Incoterms 2020: EXW or DDP?",
+    "author": "ICC Academy (Miguel Angel Bustamante Morales)",
+    "url": "https://academy.iccwbo.org/incoterms/article/incoterms-2020-exw-or-ddp/",
+    "date": "2025-04-16",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "ICC on DDP: seller must clear import, some countries bar foreign firms from doing so; consider DAP.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6641",
+    "file": "web/academy.iccwbo.org/incoterms/article/incoterms-2020-exw-or-fca/",
+    "title": "Incoterms 2020: EXW or FCA?",
+    "author": "ICC Academy (Miguel Angel Bustamante Morales)",
+    "url": "https://academy.iccwbo.org/incoterms/article/incoterms-2020-exw-or-fca/",
+    "date": "2025-01-07",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "ICC advice to use FCA instead of EXW across borders because EXW puts loading and export clearance on the buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6642",
+    "file": "web/academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/",
+    "title": "Incoterms 2020: FCA or FOB?",
+    "author": "ICC Academy (Miguel Angel Bustamante Morales)",
+    "url": "https://academy.iccwbo.org/incoterms/article/incoterms-2020-fca-or-fob/",
+    "date": "2024-11-19",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "ICC's own view that FCA, not FOB, fits containerised goods, with where risk passes under each.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6643",
+    "file": "web/activity.alibaba.com/ggs/trade_assurance.html",
+    "title": "Trade Assurance for suppliers",
+    "author": "Alibaba.com",
+    "url": "https://activity.alibaba.com/ggs/trade_assurance.html",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Alibaba's refund-dispute clock: 3 days to ask for intervention, 7 days of buyer silence closes it, decision steps after 30 days.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6644",
+    "file": "web/api.fairwear.org/wp-content/uploads/2020/06/Guidance-for-Use-of-the-Fair-Wear-Labour-and-Minute-and-Product-Costing-Calculator-Final.pdf",
+    "title": "Guidance for Use of the Fair Wear Labour Minute and Product Costing Calculator",
+    "author": "Fair Wear Foundation",
+    "url": "https://api.fairwear.org/wp-content/uploads/2020/06/Guidance-for-Use-of-the-Fair-Wear-Labour-and-Minute-and-Product-Costing-Calculator-Final.pdf",
+    "date": "2020-06-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG"
+    ],
+    "why": "The cut-and-sew should-cost formula (working minute cost times SAM over efficiency), the FOB build-up and a worked polo shirt.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S6645",
+    "file": "web/arxiv.org/html/2505.16319v1",
+    "title": "FreshRetailNet-50K: A Stockout-Annotated Censored Demand Dataset",
+    "author": "Yangyang Wang et al.",
+    "url": "https://arxiv.org/html/2505.16319v1",
+    "date": "2025-05-22",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Measured size of the forecast bias from training on stockout-censored sales, and the gain from recovering it.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6646",
+    "file": "web/assets.publishing.service.gov.uk/media/692576c7aca6213a492dcfda/FINAL_-_Reforming_the_customs_treatment_of_low_value_imports_into_the_United_Kingdom.pdf",
+    "title": "Reforming the customs treatment of low value imports into the United Kingdom (consultation)",
+    "author": "HM Treasury and HM Revenue & Customs",
+    "url": "https://assets.publishing.service.gov.uk/media/692576c7aca6213a492dcfda/FINAL_-_Reforming_the_customs_treatment_of_low_value_imports_into_the_United_Kingdom.pdf",
+    "date": "2025-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "why": "How the £135 low value import relief works today and the plan to remove it by March 2029 at the latest.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6647",
+    "file": "web/books.byui.edu/docx/11048",
+    "title": "Case Study 12.1: Estimating the Cost of an Injection-Molded Pocket Knife",
+    "author": "BYU-Idaho open textbook",
+    "url": "https://books.byui.edu/docx/11048",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "A full injection-moulded product should-cost with material, waste factor, cycle time, cavities, machine rate, tooling amortisation and packaging.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S6648",
+    "file": "web/business.columbia.edu/sites/default/files-efs/imce-uploads/CPRM/2009-2-PrimaryDemandEM.pdf",
+    "title": "Estimating primary demand for substitutable products from sales transaction data",
+    "author": "Gustavo Vulcano, Garrett van Ryzin, Richard Ratliff",
+    "url": "https://business.columbia.edu/sites/default/files-efs/imce-uploads/CPRM/2009-2-PrimaryDemandEM.pdf",
+    "date": "2009-12-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Spill and recapture: why stockouts bias both the missing SKU and its substitutes, with cited recapture and record-error rates.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6649",
+    "file": "web/content.govdelivery.com/accounts/USDHSCBP/bulletins/412cc7f",
+    "title": "CSMS #68340863: UPDATE: Consolidated Administration and Processing of Entries (CAPE) for IEEPA Refunds",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/412cc7f",
+    "date": "2026-04-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "why": "How importers claim IEEPA tariff refunds with interest in ACE, who may file and the 80-day cut-off.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6650",
+    "file": "web/content.govdelivery.com/accounts/USDHSCBP/bulletins/421d887",
+    "title": "CSMS #69326983: Section 301 Forced Labor Import Duties",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/421d887",
+    "date": "2026-07-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Country-by-country Chapter 99 headings and rates (10% or 12.5%) for the July 2026 Section 301 duty, exemptions and stacking order.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6652",
+    "file": "web/eprints.lancs.ac.uk/id/eprint/45487/",
+    "title": "Effective forecasting and judgmental adjustments (International Journal of Forecasting 25(1))",
+    "author": "Robert Fildes, Paul Goodwin, Michael Lawrence, Konstantinos Nikolopoulos",
+    "url": "https://eprints.lancs.ac.uk/id/eprint/45487/",
+    "date": "2009-01-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "60,000+ forecasts at four supply-chain firms showing which manual overrides help and which hurt.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6653",
+    "file": "web/faculty.wharton.upenn.edu/wp-content/uploads/2016/12/kahn-weingarten-townsend-bookchapter.pdf",
+    "title": "Assortment Variety: Too Much of a Good Thing? (book chapter)",
+    "author": "Barbara E. Kahn, Evan Weingarten, Claudia Townsend (Wharton)",
+    "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2016/12/kahn-weingarten-townsend-bookchapter.pdf",
+    "date": "2016-12-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "MEA",
+      "PRD"
+    ],
+    "why": "Research review of SKU cuts that raised sales and cuts that lost customers, and which SKUs are safe to drop.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6654",
+    "file": "web/fred.stlouisfed.org/series/CHNTOT",
+    "title": "Import Price Index by Origin: All Industries for China (CHNTOT)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from US BLS",
+    "url": "https://fred.stlouisfed.org/series/CHNTOT",
+    "date": "2026-10-16",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Monthly duty-free price trend of goods bought from China, to test supplier price-rise requests.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6655",
+    "file": "web/fred.stlouisfed.org/series/PCOTTINDUSDM",
+    "title": "Global price of Cotton (PCOTTINDUSDM)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from IMF",
+    "url": "https://fred.stlouisfed.org/series/PCOTTINDUSDM",
+    "date": "2026-10-22",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Free monthly cotton benchmark with its posting lag and latest value.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6656",
+    "file": "web/fred.stlouisfed.org/series/PCU313210313210",
+    "title": "PPI by Industry: Broadwoven Fabric Mills (PCU313210313210)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from US BLS",
+    "url": "https://fred.stlouisfed.org/series/PCU313210313210",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "US woven fabric price index for textile BOM lines.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6657",
+    "file": "web/fred.stlouisfed.org/series/PCU322211322211",
+    "title": "PPI by Industry: Corrugated and Solid Fiber Box Manufacturing (PCU322211322211)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from US BLS",
+    "url": "https://fred.stlouisfed.org/series/PCU322211322211",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Free monthly index for shipper cartons and boxes, the packaging BOM line.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6658",
+    "file": "web/fred.stlouisfed.org/series/PCU325211325211",
+    "title": "PPI by Industry: Plastics Material and Resin Manufacturing (PCU325211325211)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from US BLS",
+    "url": "https://fred.stlouisfed.org/series/PCU325211325211",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Free monthly resin price index, release timing and latest moves for plastic BOM lines.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6659",
+    "file": "web/fred.stlouisfed.org/series/WPU1017",
+    "title": "PPI by Commodity: Steel Mill Products (WPU1017)",
+    "author": "Federal Reserve Bank of St. Louis (FRED), data from US BLS",
+    "url": "https://fred.stlouisfed.org/series/WPU1017",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "US steel price index and its year-on-year move, showing how US domestic prices diverge from world prices.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6660",
+    "file": "web/govinfo.gov/content/pkg/FR-2025-01-08/pdf/2024-30826.pdf",
+    "title": "Certificates of Compliance, final rule (90 FR 1800, 16 CFR part 1110)",
+    "author": "US Consumer Product Safety Commission",
+    "url": "https://govinfo.gov/content/pkg/FR-2025-01-08/pdf/2024-30826.pdf",
+    "date": "2025-01-08",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "eFiling of certificate data at entry from 8 July 2026, de minimis and mail cases, and exact certificate content rules.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6661",
+    "file": "web/harris-sliwoski.com/chinalawblog/china-contract-damages-done-right/",
+    "title": "China Contract Damages: How Liquidated Damages Give Your Contract Real Teeth",
+    "author": "Dan Harris, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/china-contract-damages-done-right/",
+    "date": "2020-08-30",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "How to set liquidated damages for China (per day, per run), the 30% benchmark and pre-judgment asset freezes.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6662",
+    "file": "web/harris-sliwoski.com/chinalawblog/china-manufacturing-and-the-huge-impact-of-payment-terms/",
+    "title": "China Manufacturing Contracts: Why Your Draft Does Not Work (payment terms)",
+    "author": "Dan Harris, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/china-manufacturing-and-the-huge-impact-of-payment-terms/",
+    "date": "2026-06-08",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "How payment terms drive factory priority, and why to pay only the contracting company's approved account.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6663",
+    "file": "web/harris-sliwoski.com/chinalawblog/china-manufacturing-contracts-when-one-agreement-is-not-enough/",
+    "title": "China Manufacturing Contracts: When One Agreement Is Not Enough",
+    "author": "Dan Harris and Arlo Kipfer, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/china-manufacturing-contracts-when-one-agreement-is-not-enough/",
+    "date": "2026-05-04",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "What an NNN leaves out and what a manufacturing agreement must cover: quality, inspection, tooling, subcontracting.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6664",
+    "file": "web/harris-sliwoski.com/chinalawblog/ndas-do-not-work-for-china-but-nnn-agreements-do/",
+    "title": "NDAs Do Not Work for China, but NNN Agreements Do",
+    "author": "Dan Harris and Arlo Kipfer, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/ndas-do-not-work-for-china-but-nnn-agreements-do/",
+    "date": "2019-10-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Why use, not disclosure, is the main risk with a Chinese factory, and what an NNN must name.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6665",
+    "file": "web/harris-sliwoski.com/chinalawblog/silly-rabbit-only-the-chinese-language-matters-in-your-china-contract/",
+    "title": "Silly Rabbit, Only the Chinese Language Matters in Your China Contract",
+    "author": "Dan Harris, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/silly-rabbit-only-the-chinese-language-matters-in-your-china-contract/",
+    "date": "2013-04-02",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Which language controls a bilingual China contract, with a 500 versus 300 pound mistranslation example.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6666",
+    "file": "web/harris-sliwoski.com/chinalawblog/who-owns-your-molds-how-overseas-factories-hold-tooling-hostage-and-how-to-stop-them/",
+    "title": "Who Owns Your Molds? How Overseas Factories Hold Tooling Hostage and How to Stop Them",
+    "author": "Dan Harris, Harris Sliwoski LLP",
+    "url": "https://harris-sliwoski.com/chinalawblog/who-owns-your-molds-how-overseas-factories-hold-tooling-hostage-and-how-to-stop-them/",
+    "date": "2021-10-18",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Mould ownership clauses, tooling schedules and release deadlines from a China law firm.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6667",
+    "file": "web/help.sap.com/doc/6297d7531a4d414de10000000a174cb4/1610%20002/en-US/d195d7531a4d414de10000000a174cb4.html",
+    "title": "Component Scrap",
+    "author": "SAP SE (SAP Help Portal)",
+    "url": "https://help.sap.com/doc/6297d7531a4d414de10000000a174cb4/1610%20002/en-US/d195d7531a4d414de10000000a174cb4.html",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "How ERP systems gross up BOM quantities for component and assembly scrap, in sequence.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6668",
+    "file": "web/help.sap.com/saphelp_470/helpdata/EN/ea/e9b3764c7211d189520000e829fbbd/content.htm",
+    "title": "Operation Scrap: Example",
+    "author": "SAP SE (SAP Help Portal)",
+    "url": "https://help.sap.com/saphelp_470/helpdata/EN/ea/e9b3764c7211d189520000e829fbbd/content.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Worked example of why parts fitted after the faulty units are removed should not carry assembly scrap.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6669",
+    "file": "web/help.shopify.com/en/manual/fulfillment/managing-orders/returns/creating-returns",
+    "title": "Creating returns",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/creating-returns",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "CXP",
+      "COG"
+    ],
+    "why": "Return reasons depend on product category, and refunds without a return record no reason.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6670",
+    "file": "web/help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports",
+    "title": "Profit reports",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "MEA",
+      "COG"
+    ],
+    "why": "Shopify only reports profit for variants that had a cost when they sold, and which reports include shipping and duties.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6671",
+    "file": "web/help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report",
+    "title": "Sales reports (returns by product and return line item reason)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "CXP"
+    ],
+    "why": "Exact report path to pull returned units and return reason per product, the raw input for a defect feedback loop.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6672",
+    "file": "web/help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/inventory-reports",
+    "title": "Inventory reports (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/inventory-reports",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Exact formulas behind Shopify's sell-through and percent-sold reports and the On hand switch from 1 October 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6673",
+    "file": "web/hqts.com/all-you-need-to-know-about-ista-1a-package-testing",
+    "title": "All you need to know about ISTA 1A package testing",
+    "author": "HQTS Group",
+    "url": "https://hqts.com/all-you-need-to-know-about-ista-1a-package-testing",
+    "date": "2022-05-12",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "ISTA 1A drop heights by packed weight and the drop sequence used for carton drop tests.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6674",
+    "file": "web/ibf.org/knowledge/posts/what-is-sales-and-operations-planning-sop-41",
+    "title": "What Is Sales and Operations Planning (S&OP)?",
+    "author": "Institute of Business Forecasting & Planning (IBF)",
+    "url": "https://ibf.org/knowledge/posts/what-is-sales-and-operations-planning-sop-41",
+    "date": "2025-01-08",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "The five monthly S&OP steps in order and what each must produce.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6675",
+    "file": "web/ideas.repec.org/a/eee/ijrema/v25y2008i3p201-214.html",
+    "title": "Decomposing the sales promotion bump accounting for cross-category effects (IJRM 25(3))",
+    "author": "Peter S. H. Leeflang, Josefa Parreno Selva, Albert Van Dijk, Dick R. Wittink",
+    "url": "https://ideas.repec.org/a/eee/ijrema/v25y2008i3p201-214.html",
+    "date": "2008-09-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "MEA",
+      "PRD"
+    ],
+    "why": "Measured halo (complement) and substitution effects of promotions across categories.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6676",
+    "file": "web/ideas.repec.org/a/inm/ormksc/v23y2004i3p317-334.html",
+    "title": "Decomposing the Sales Promotion Bump with Store Data (Marketing Science 23(3))",
+    "author": "Harald J. van Heerde, Peter S. H. Leeflang, Dick R. Wittink",
+    "url": "https://ideas.repec.org/a/inm/ormksc/v23y2004i3p317-334.html",
+    "date": "2004-01-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "MEA",
+      "OPS"
+    ],
+    "why": "Where a promotion spike comes from: about a third each from other items, other weeks and new category demand.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6677",
+    "file": "web/itl.nist.gov/div898/handbook/pmc/section2/pmc231.htm",
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods: MIL-STD-105E and related standards",
+    "author": "NIST",
+    "url": "https://itl.nist.gov/div898/handbook/pmc/section2/pmc231.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Shows MIL-STD-105, ANSI Z1.4 and ISO 2859 share the same basic tables, so specs can cite either.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6678",
+    "file": "web/knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/quality-fade-chinas-great-business-challenge/",
+    "title": "'Quality Fade': China's Great Business Challenge",
+    "author": "Paul Midler, Knowledge at Wharton",
+    "url": "https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/quality-fade-chinas-great-business-challenge/",
+    "date": "2007-07-25",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "The origin of 'quality fade' with cases, such as an aluminium part under 90% of spec weight.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6679",
+    "file": "web/library.iccwbo.org/clp/clp-incoterms-2020vs2010.htm",
+    "title": "Differences between Incoterms 2010 and 2020",
+    "author": "International Chamber of Commerce",
+    "url": "https://library.iccwbo.org/clp/clp-incoterms-2020vs2010.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Official ICC summary: CIF minimum cover is Institute Cargo Clauses (C), CIP needs (A); costs listed in A9/B9.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6680",
+    "file": "web/mondovisione.com/media-and-resources/news/dalian-commodity-exchange-notice-on-listing-and-trading-of-linear-low-density-p-20251020/",
+    "title": "Dalian Commodity Exchange: Notice on listing LLDPE, PVC and PP monthly average price futures",
+    "author": "Dalian Commodity Exchange (notice republished by Mondo Visione)",
+    "url": "https://mondovisione.com/media-and-resources/news/dalian-commodity-exchange-notice-on-listing-and-trading-of-linear-low-density-p-20251020/",
+    "date": "2025-10-20",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "China's exchange-traded plastics prices (PP, LLDPE, PVC) and the new monthly average contracts that suit index-linked quotes.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6681",
+    "file": "web/nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025",
+    "title": "Consumers expected to return nearly $850 billion in merchandise in 2025",
+    "author": "National Retail Federation and Happy Returns",
+    "url": "https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025",
+    "date": "2025-10-15",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CXP",
+      "COG"
+    ],
+    "why": "US benchmark: 19.3% of online sales returned and 9% of returns fraudulent, from 2,006 consumers and 358 retailers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6682",
+    "file": "web/otexts.com/fpp3/accuracy.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.8 Evaluating point forecast accuracy",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/accuracy.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Test-set sizing, MAE/RMSE/MAPE/MASE formulas and the four concrete failure modes of MAPE.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6683",
+    "file": "web/otexts.com/fpp3/combinations.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 13.4 Forecast combinations",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/combinations.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Worked test-set numbers showing a simple average of three models beating each one.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6684",
+    "file": "web/otexts.com/fpp3/counts.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 13.2 Time series of counts (Croston's method)",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/counts.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Croston's method equations, default smoothing values and its known limits for slow-moving SKUs.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6685",
+    "file": "web/otexts.com/fpp3/diagnostics.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.4 Residual diagnostics",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/diagnostics.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "The bias test (residual mean) and the simple fix of adding the mean back to forecasts.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6686",
+    "file": "web/otexts.com/fpp3/holt-winters.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 8.3 Methods with seasonality (and 8.2 damped trend)",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/holt-winters.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "When to use additive vs multiplicative seasonality and the 0.8 to 0.98 damping range.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6687",
+    "file": "web/otexts.com/fpp3/missing-outliers.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 13.9 Dealing with outliers and missing values",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/missing-outliers.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "A stated outlier rule (3 IQR on robust STL remainder) and why missing days can bias a forecast.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6688",
+    "file": "web/otexts.com/fpp3/prediction-intervals.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.5 Prediction intervals",
+    "author": "Rob J Hyndman and George Athanasopoulos",
+    "url": "https://otexts.com/fpp3/prediction-intervals.html",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Multipliers and the square-root-of-horizon rule to turn price volatility into high and low cases.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6689",
+    "file": "web/otexts.com/fpp3/simple-methods.html",
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.2 Some simple forecasting methods",
+    "author": "Rob J Hyndman and George Athanasopoulos, Monash University (OTexts)",
+    "url": "https://otexts.com/fpp3/simple-methods.html",
+    "date": "2021-05-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Formulas for mean, naive, seasonal naive and drift, and the rule that any method must beat them to be used.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6690",
+    "file": "web/propercloth.com/reference/accepted-sewing-tolerances-for-proper-cloth-garments/",
+    "title": "Accepted sewing tolerances for Proper Cloth garments",
+    "author": "Proper Cloth",
+    "url": "https://propercloth.com/reference/accepted-sewing-tolerances-for-proper-cloth-garments/",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "PRD"
+    ],
+    "why": "A brand's published measurement tolerances for shirts, jackets and pants, ready to copy into a spec sheet.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6691",
+    "file": "web/public-inspection.federalregister.gov/2026-12670.pdf",
+    "title": "Indefinite Suspension of the De Minimis Exemption for Merchandise Arriving Through All Modes Other Than the International Postal Network (CBP Dec. 26-12)",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://public-inspection.federalregister.gov/2026-12670.pdf",
+    "date": "2026-06-24",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The June 2026 interim final rule that makes the de minimis suspension indefinite and points to the 1 July 2027 statutory end.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6692",
+    "file": "web/public-inspection.federalregister.gov/2026-15530.pdf",
+    "title": "CBP Dec. 26-14: Customs User Fees to Be Adjusted for Inflation in Fiscal Year 2027",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://public-inspection.federalregister.gov/2026-15530.pdf",
+    "date": "2026-07-31",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG",
+      "FIN"
+    ],
+    "why": "The FY2027 MPF minimum and maximum and informal entry fees in force from 1 October 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6693",
+    "file": "web/qualityinspection.org/china-supplier-lc/",
+    "title": "How to get a Chinese supplier to accept a letter of credit",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/china-supplier-lc/",
+    "date": "2012-11-22",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "When an L/C pays off (about USD 30,000 and up) and which documents, including an inspection certificate, to demand.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6694",
+    "file": "web/qualityinspection.org/chinese-new-year-production-planning/",
+    "title": "Chinese New Year: how to manage the disruption?",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/chinese-new-year-production-planning/",
+    "date": "2012-12-12",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "A dated ordering plan around Chinese New Year: mid-December material orders, firm orders by 15 January, extra inspection after.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6695",
+    "file": "web/qualityinspection.org/inspection-during-production/",
+    "title": "Inspection during production: a necessity?",
+    "author": "Renaud Anjoran",
+    "url": "https://qualityinspection.org/inspection-during-production/",
+    "date": "2010-03-06",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "How to time a DUPRO to the first finished output, with a worked 20,000-piece example and the too-late trap.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6696",
+    "file": "web/qualityinspection.org/inspection-level/",
+    "title": "How the AQL inspection levels in ISO 2859-1 affect sampling size",
+    "author": "Renaud Anjoran",
+    "url": "https://qualityinspection.org/inspection-level/",
+    "date": "2021-06-16",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "When to pick level I, II, III or S1 to S4, with sample sizes at 5,000 and 40,000 pieces.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6697",
+    "file": "web/qualityinspection.org/leverage-china-supplier-factory/",
+    "title": "Sourcing From China 101, Part 6: How To Keep Leverage Over Suppliers",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/leverage-china-supplier-factory/",
+    "date": "2017-12-08",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Why a purchase order is not a contract and how a reusable China master agreement keeps leverage.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6698",
+    "file": "web/qualityinspection.org/negotiations_terms_china/",
+    "title": "Sourcing from China 101, Part 5: The Terms You Need to Discuss",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/negotiations_terms_china/",
+    "date": "2017-12-04",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "The OEM terms to settle before ordering and a 30/50/20 payment split for when suppliers compete.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6699",
+    "file": "web/qualityinspection.org/payment-credit-chinese-factory/",
+    "title": "Is It Possible To Get Credit from a Chinese Supplier?",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/payment-credit-chinese-factory/",
+    "date": "2022-05-26",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "What terms a small buyer can realistically get: balance before original B/L release, 10 to 20% deposits on standard goods, L/C over USD 50,000.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6700",
+    "file": "web/qualityinspection.org/payment-terms-chinese-manufacturer/",
+    "title": "T/T Payment Terms with China Factories: Set the Right Incentives",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/payment-terms-chinese-manufacturer/",
+    "date": "2016-11-09",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Payment structures (30/70, 20/50/30, L/C, NRE) judged by the behaviour each creates in the factory.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6701",
+    "file": "web/qualityinspection.org/penalties-chinese-suppliers/",
+    "title": "Imposing fines on Chinese suppliers",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/penalties-chinese-suppliers/",
+    "date": "2012-03-28",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Sample late-shipment penalty schedules and a failed-inspection charge, and how to apply them.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6702",
+    "file": "web/qualityinspection.org/pricing-negotiation-contracts/",
+    "title": "China Supplier Vetting Part 10: Pricing, Negotiation, Contracts",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/pricing-negotiation-contracts/",
+    "date": "2017-07-03",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "How many quotes show the market price, what a specific moulding quote must state, and a price-pressure test.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S6703",
+    "file": "web/qualityinspection.org/qc-inspections-at-the-suppliers-charge/",
+    "title": "When QC inspections are at the supplier's charge",
+    "author": "Renaud Anjoran",
+    "url": "https://qualityinspection.org/qc-inspections-at-the-suppliers-charge/",
+    "date": "2010-08-17",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Who pays for re-inspections and aborted visits, and the debit-note method to recover the fee.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6704",
+    "file": "web/qualityinspection.org/request-quotations/",
+    "title": "When should you request quotations from Chinese factories?",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/request-quotations/",
+    "date": "2011-04-05",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "How many factories to contact (10 to 50) and when to qualify before sharing a sensitive design.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6705",
+    "file": "web/qualityinspection.org/samples-in-hands-of-inspector/",
+    "title": "How to get approved samples in the hands of the inspector?",
+    "author": "Renaud Anjoran",
+    "url": "https://qualityinspection.org/samples-in-hands-of-inspector/",
+    "date": "2010-08-31",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Ranked ways to give the inspector a reference sample the factory cannot swap.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6706",
+    "file": "web/qualityinspection.org/select-cartons-to-inspect/",
+    "title": "How to select the cartons to inspect in a factory",
+    "author": "Renaud Anjoran",
+    "url": "https://qualityinspection.org/select-cartons-to-inspect/",
+    "date": "2012-03-16",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Square-root rule for how many export cartons to open and how to stop the factory steering the pick.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6707",
+    "file": "web/qualityinspection.org/supplier-evaluation-system/",
+    "title": "Setting up a Supplier Evaluation System that Works in China",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/supplier-evaluation-system/",
+    "date": "2015-12-07",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "A supplier rating method for China: what to score, how often to review and the A to D bands.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6708",
+    "file": "web/qualityinspection.org/target-price-chin/",
+    "title": "Should you tell China suppliers about your target price?",
+    "author": "Renaud Anjoran (Sofeast)",
+    "url": "https://qualityinspection.org/target-price-chin/",
+    "date": "2011-03-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "A quote-round method: FOB USD quotes, drop outliers 20% off the average, hold the target price until the shortlist.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6709",
+    "file": "web/qualityinspection.org/when-a-chinese-factory-quote-is-too-low-the-hidden-risks-for-buyers/",
+    "title": "When a Chinese Factory Quote Is Too Low: The Hidden Risks for Buyers",
+    "author": "Adrian Leighton (QualityInspection.org)",
+    "url": "https://qualityinspection.org/when-a-chinese-factory-quote-is-too-low-the-hidden-risks-for-buyers/",
+    "date": "2026-08-10",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "What a too-low quote usually signals and what the factory cuts after you commit.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6710",
+    "file": "web/raw.githubusercontent.com/cran/tsintermittent/master/R/idclass.R",
+    "title": "tsintermittent R package, idclass function (SBC demand classification)",
+    "author": "Nikolaos Kourentzes",
+    "url": "https://raw.githubusercontent.com/cran/tsintermittent/master/R/idclass.R",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Exact Syntetos-Boylan-Croston cut-offs (1.32 and 0.49) and which method each class gets.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6711",
+    "file": "web/researchcommons.waikato.ac.nz/entities/publication/678d5648-0acd-4dd4-ad61-0ac7dc0c8e3f",
+    "title": "Estimating cannibalization rates for pioneering innovations (Marketing Science 29(6))",
+    "author": "Harald J. van Heerde, Shuba Srinivasan, Marnik G. Dekimpe",
+    "url": "https://researchcommons.waikato.ac.nz/entities/publication/678d5648-0acd-4dd4-ad61-0ac7dc0c8e3f",
+    "date": "2010-11-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "MEA",
+      "PRD"
+    ],
+    "why": "A new product's net demand can be far below its total demand once own-range cannibalisation is removed.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6712",
+    "file": "web/statmodeling.stat.columbia.edu/wp-content/uploads/2021/10/M5_accuracy_competition.pdf",
+    "title": "The M5 Accuracy competition: Results, findings and conclusions (preprint)",
+    "author": "Spyros Makridakis, Evangelos Spiliotis, Vassilios Assimakopoulos",
+    "url": "https://statmodeling.stat.columbia.edu/wp-content/uploads/2021/10/M5_accuracy_competition.pdf",
+    "date": "2020-10-06",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Large-sample (42,840 Walmart series, 5,507 teams) evidence on which simple and intermittent-demand methods win where.",
+    "cards": 5,
+    "public": true
+  },
+  {
+    "id": "S6713",
+    "file": "web/taxation-customs.ec.europa.eu/customs/customs-procedures-import-and-export/customs-procedures/economic-operators-registration-and-identification-number-eori_en",
+    "title": "Economic Operators Registration and Identification number (EORI)",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/customs/customs-procedures-import-and-export/customs-procedures/economic-operators-registration-and-identification-number-eori_en",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Which member state issues an EORI to a non-EU business and that one number covers the whole EU.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6714",
+    "file": "web/taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en",
+    "title": "The temporary EUR 3 customs duty and the Union handling fee: Guidance for Member States and Trade",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en?filename=Customs+Guidance+on+EUR+3+customs+duty.pdf",
+    "date": "2026-10-05",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The €2 per item Union handling fee on distance sales of any value, expected from 1 November 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6715",
+    "file": "web/taxation-customs.ec.europa.eu/document/download/b6388552-f370-47a2-b017-f7d2af3a2078_en",
+    "title": "Customs Valuation Quick Info",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/document/download/b6388552-f370-47a2-b017-f7d2af3a2078_en",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "What goes into and stays out of EU customs value, with transport up to the EU border included.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6716",
+    "file": "web/taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-removing-eur150-threshold-vat-import-one-stop-shop-2026-11-09_en",
+    "title": "Commission welcomes Council agreement on removing the €150 threshold for the VAT Import One-Stop Shop",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-removing-eur150-threshold-vat-import-one-stop-shop-2026-11-09_en",
+    "date": "2026-11-09",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "why": "IOSS today covers parcels up to €150; the cap is set to go from 1 July 2028 once the Customs Data Hub runs.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6717",
+    "file": "web/taxation-customs.ec.europa.eu/system/files/2019-03/04_taxud_ucc_binding_tariff_information_quick_info_en.pdf",
+    "title": "Binding Tariff Information Quick Info",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/system/files/2019-03/04_taxud_ucc_binding_tariff_information_quick_info_en.pdf",
+    "date": "2019-03-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "BTI validity (3 years, all member states), the 120-day issue deadline and the duty to declare it.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6718",
+    "file": "web/taxation-customs.ec.europa.eu/taxation/vat/vat-directive/taxable-amount_en",
+    "title": "Taxable amount (VAT Directive)",
+    "author": "European Commission, DG Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-directive/taxable-amount_en",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "why": "EU import VAT base: customs value plus duties and incidental costs to the first place of destination.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6719",
+    "file": "web/techpacker.com/blog/12-types-of-garment-samples-you-should-know-about-for-apparel-production/",
+    "title": "12 types of garment samples you should know about for apparel production",
+    "author": "Sayam Kochar, Techpacker",
+    "url": "https://techpacker.com/blog/12-types-of-garment-samples-you-should-know-about-for-apparel-production/",
+    "date": "2021-10-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "PRD"
+    ],
+    "why": "Full sample sequence (proto, fit, size set, SMS, GPT, PP, sealed, TOP, shipment) and the 5 to 7 rounds brands typically need.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6720",
+    "file": "web/thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-May-2026.pdf",
+    "title": "World Bank Commodities Price Data (The Pink Sheet), May 2026",
+    "author": "World Bank",
+    "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-May-2026.pdf",
+    "date": "2026-05-04",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Exactly which raw materials the Pink Sheet covers, the price basis of each (Cotlook A, LME, 62% Fe iron ore), and what it leaves out (steel, resins, pulp).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6721",
+    "file": "web/trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
+    "title": "EU applies €3 customs duty per item on low-value e-commerce consignments",
+    "author": "European Commission, Access2Markets",
+    "url": "https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
+    "date": "2026-06-30",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Scope of the €3 per item duty on parcels up to €150, the per declaration line rule and its end date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6722",
+    "file": "web/tradeassurance.alibaba.com/ta/MoneyBackPolicy.htm",
+    "title": "Trade Assurance: Money-back policy",
+    "author": "Alibaba.com",
+    "url": "https://tradeassurance.alibaba.com/ta/MoneyBackPolicy.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Alibaba's own refund windows (30 or 60 days from delivery) and Easy Return limits (under USD 3,000, 46 countries).",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6723",
+    "file": "web/tradeassurance.alibaba.com/ta/Payment.htm",
+    "title": "Trade Assurance: Payment",
+    "author": "Alibaba.com",
+    "url": "https://tradeassurance.alibaba.com/ta/Payment.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Which payment routes keep escrow protection, including wires only to the bank details Alibaba.com provides.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6724",
+    "file": "web/tradeassurance.alibaba.com/ta/ShippingAndLogistics.htm",
+    "title": "Trade Assurance: Shipping and logistics",
+    "author": "Alibaba.com",
+    "url": "https://tradeassurance.alibaba.com/ta/ShippingAndLogistics.htm",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Alibaba's on-time delivery guarantee: 10% delay compensation capped at USD 100, only via Alibaba.com Logistics.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6725",
+    "file": "web/user.engineering.uiowa.edu/~dbricker/Lecture_Slides/Reorder_Point.pdf",
+    "title": "Reorder Point (lecture slides)",
+    "author": "Dennis Bricker, University of Iowa",
+    "url": "https://user.engineering.uiowa.edu/~dbricker/Lecture_Slides/Reorder_Point.pdf",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Lead-time demand variance with random lead times, and a worked case where 99% fill rate is only 81.6% cycle service.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S6726",
+    "file": "web/ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-china-technology-transfer/china-section-301-tariff-actions-and-exclusion-process/four-year-review",
+    "title": "Four-Year Review (China Section 301 tariff actions and exclusion process)",
+    "author": "Office of the United States Trade Representative",
+    "url": "https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-china-technology-transfer/china-section-301-tariff-actions-and-exclusion-process/four-year-review",
+    "date": "2026-05-06",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Dated notice list: exclusions extended only through 9 November 2026 and a second four-year review opened 6 May 2026 (latest dated entry used as the date).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6727",
+    "file": "web/www-users.cse.umn.edu/~kumar001/dmbook/ch5_association_analysis.pdf",
+    "title": "Introduction to Data Mining (2nd ed), Chapter 5 Association Analysis",
+    "author": "Pang-Ning Tan, Michael Steinbach, Anuj Karpatne, Vipin Kumar",
+    "url": "https://www-users.cse.umn.edu/~kumar001/dmbook/ch5_association_analysis.pdf",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "MEA",
+      "PRD"
+    ],
+    "why": "Support, confidence and lift defined, with worked cases where confidence and lift mislead.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6728",
+    "file": "web/www.accio.com/wow/doc-help-center.html",
+    "title": "Accio Work Help Center",
+    "author": "Accio (Alibaba.com)",
+    "url": "https://www.accio.com/wow/doc-help-center.html",
+    "date": "2026-10-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "How Accio's sourcing agent runs outreach and negotiation, what needs user approval, and plan prices and credits.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6729",
+    "file": "web/www.asq.org/quality-resources/cost-of-quality",
+    "title": "What is Cost of Quality (COQ)?",
+    "author": "ASQ",
+    "url": "https://www.asq.org/quality-resources/cost-of-quality",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "MEA"
+    ],
+    "why": "The four cost-of-quality buckets that let a store price QC spend against returns and refunds.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6730",
+    "file": "web/www.bauer.uh.edu/egardner/3301H%20Operations%20Management/OM%20Text/3INVENTORY%20MANAGEMENT-1.pdf",
+    "title": "Operations Management, Chapter 3: Inventory Management",
+    "author": "Everette S. Gardner Jr., University of Houston Bauer College of Business",
+    "url": "https://www.bauer.uh.edu/egardner/3301H%20Operations%20Management/OM%20Text/3INVENTORY%20MANAGEMENT-1.pdf",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Worked test of a quantity discount on total cost (price plus ordering plus holding) and the EOQ.",
+    "cards": 6,
+    "public": true
+  },
+  {
+    "id": "S6731",
+    "file": "web/www.bls.gov/opub/hom/ipp/concepts.htm",
+    "title": "Import/Export Price Indexes: Concepts (Handbook of Methods)",
+    "author": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/opub/hom/ipp/concepts.htm",
+    "date": "2025-03-26",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "What import price indexes include and exclude (duties out, f.o.b. basis) and which origin countries have their own index.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6732",
+    "file": "web/www.bls.gov/ppi/publications/price-adjustment-guide-for-contracting-parties.htm",
+    "title": "Price Adjustment Guide for Contracting Parties",
+    "author": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ppi/publications/price-adjustment-guide-for-contracting-parties.htm",
+    "date": "2021-12-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "The regulator's own rules and worked formulas for index-linked price clauses: simple, partial and composite adjustment, revisions, fallbacks.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S6733",
+    "file": "web/www.business.gov.uk/campaign/europe/european-union-eu-regulations/eu-general-product-safety-regulation-eu-gpsr/",
+    "title": "EU General Product Safety Regulation (EU GPSR)",
+    "author": "UK Department for Business and Trade",
+    "url": "https://www.business.gov.uk/campaign/europe/european-union-eu-regulations/eu-general-product-safety-regulation-eu-gpsr/",
+    "date": "2026-08-12",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "What a non-EU seller must do for EU consumers: REO, listing safety info, Safety Business Gateway triggers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6735",
+    "file": "web/www.cbp.gov/sites/default/files/assets/documents/2023-May/ISF%20FAQ%202.0%20%28508%29.pdf",
+    "title": "Frequently Asked Questions: Importer Security Filing (ISF) and Additional Carrier Requirements",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/sites/default/files/assets/documents/2023-May/ISF%20FAQ%202.0%20%28508%29.pdf",
+    "date": "2023-05-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS"
+    ],
+    "why": "ISF timing, updates for goods sold on the water, $5,000 liquidated damages per violation and first-time importer holds.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6736",
+    "file": "web/www.cbp.gov/sites/default/files/assets/documents/2024-Feb/FINAL_A%20Guide%20for%20the%20Public_How%20CBP%20Sets%20Bond%20Amounts%20(February%202024)%20(Not%20Secured).pdf",
+    "title": "A Guide for the Public: How CBP Sets Bond Amounts",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/sites/default/files/assets/documents/2024-Feb/FINAL_A%20Guide%20for%20the%20Public_How%20CBP%20Sets%20Bond%20Amounts%20(February%202024)%20(Not%20Secured).pdf",
+    "date": "2024-02-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "why": "Exact formulas for continuous, single transaction and ISF bonds, including the 3x rule for restricted goods.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6737",
+    "file": "web/www.cbp.gov/sites/default/files/documents/icp017r2_3.pdf",
+    "title": "What Every Member of the Trade Community Should Know About: Tariff Classification (Informed Compliance Publication)",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/sites/default/files/documents/icp017r2_3.pdf",
+    "date": "2004-05-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The General Rules of Interpretation and the HTSUS structure (legal 8 digits, statistical 10) explained by CBP.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6738",
+    "file": "web/www.cbp.gov/trade/rulings/eruling-requirements",
+    "title": "Requirements for Electronic Ruling Requests",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/rulings/eruling-requirements",
+    "date": "2026-08-21",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Binding classification rulings by email, usually within 30 calendar days, only for prospective shipments.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6739",
+    "file": "web/www.cbp.gov/trade/rulings/informed-compliance-publications/marking-country-origin-us-imports",
+    "title": "Marking of Country of Origin on U.S. Imports",
+    "author": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/rulings/informed-compliance-publications/marking-country-origin-us-imports",
+    "date": "2026-05-15",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "How origin must be marked (legible, conspicuous, permanent), when 'Made in' is required and container rules.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6740",
+    "file": "web/www.chinajusticeobserver.com/a/whatsapp-wechat-messages-as-evidence-to-chinese-courts",
+    "title": "WhatsApp/WeChat Messages as Evidence to Chinese Courts?",
+    "author": "Meng Yu, China Justice Observer",
+    "url": "https://www.chinajusticeobserver.com/a/whatsapp-wechat-messages-as-evidence-to-chinese-courts",
+    "date": "2022-05-05",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Chat records count as evidence in Chinese courts; keep the original data so a notary can verify it.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6741",
+    "file": "web/www.chinamoney.com.cn/english/bmkcpr/",
+    "title": "Central Parity of RMB",
+    "author": "China Foreign Exchange Trade System (authorised by the People's Bank of China)",
+    "url": "https://www.chinamoney.com.cn/english/bmkcpr/",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "How the daily RMB central parity is set and which currencies it covers, for quotes priced in yuan.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6742",
+    "file": "web/www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Product-Certificate",
+    "title": "Children's Product Certificate (CPC)",
+    "author": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Product-Certificate",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Who issues a CPC for imported goods (the importer), its required elements, and the July 2026 eFiling switch.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6743",
+    "file": "web/www.cpsc.gov/s3fs-public/Quick%20Resource%20Guide%20KO.pdf",
+    "title": "CPSC Business Desktop Reference Guide",
+    "author": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/s3fs-public/Quick%20Resource%20Guide%20KO.pdf",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "One-page list of US children's and general-use product duties: CPC, GCC, lead and paint limits, tracking labels, duty to report.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6744",
+    "file": "web/www.drewry.co.uk/logistics-executive-briefing/logistics-executive-briefing-articles/world-container-index-methodology",
+    "title": "World Container Index Methodology",
+    "author": "Drewry",
+    "url": "https://www.drewry.co.uk/logistics-executive-briefing/logistics-executive-briefing-articles/world-container-index-methodology",
+    "date": "2025-01-01",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "The 8 WCI lanes, which surcharges are inside the rate and which costs are not, and how outliers are removed.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6745",
+    "file": "web/www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "title": "World Container Index assessed by Drewry, 12 Nov 2026",
+    "author": "Drewry",
+    "url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "date": "2026-11-12",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Weekly spot container rates by lane with dated values to turn into freight per unit.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6746",
+    "file": "web/www.ecb.europa.eu/pub/economic-bulletin/focus/2021/html/ecb.ebbox202105_07~d799754f4e.en.html",
+    "title": "Pipeline pressures for non-energy industrial goods inflation (Economic Bulletin 5/2021, box)",
+    "author": "Koester, Rubene, Goncalves and Nordeman, European Central Bank",
+    "url": "https://www.ecb.europa.eu/pub/economic-bulletin/focus/2021/html/ecb.ebbox202105_07~d799754f4e.en.html",
+    "date": "2021-08-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG"
+    ],
+    "why": "Estimated lag and share of input-price moves that reach consumer goods producer prices.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6747",
+    "file": "web/www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "title": "Euro foreign exchange reference rates",
+    "author": "European Central Bank",
+    "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Daily euro reference rates: time, coverage, free downloads, and the ECB's warning not to use them for transactions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6749",
+    "file": "web/www.ecfr.gov/current/title-19/chapter-I/part-141/subpart-F/section-141.86",
+    "title": "19 CFR 141.86 Contents of invoices and general requirements",
+    "author": "U.S. Customs and Border Protection (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-19/chapter-I/part-141/subpart-F/section-141.86",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The legal list of what a US commercial invoice must show, including all charges and assists.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6750",
+    "file": "web/www.ecfr.gov/current/title-19/chapter-I/part-142/subpart-A/section-142.2",
+    "title": "19 CFR 142.2 Time for filing entry",
+    "author": "U.S. Customs and Border Protection (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-19/chapter-I/part-142/subpart-A/section-142.2",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "The 15 calendar day deadline to file entry after goods land.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6751",
+    "file": "web/www.ecfr.gov/current/title-19/chapter-I/part-143/subpart-C/section-143.21",
+    "title": "19 CFR 143.21 Merchandise eligible for informal entry",
+    "author": "U.S. Customs and Border Protection (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-19/chapter-I/part-143/subpart-C/section-143.21",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "The $2,500 informal entry limit and the $250 Chapter 99 carve-out that a model rarely mentions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6752",
+    "file": "web/www.ecfr.gov/current/title-19/chapter-I/part-24/section-24.24",
+    "title": "19 CFR 24.24 Harbor maintenance fee",
+    "author": "U.S. Customs and Border Protection (eCFR)",
+    "url": "https://www.ecfr.gov/current/title-19/chapter-I/part-24/section-24.24",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The 0.125% harbor maintenance fee applies to cargo unloaded from commercial vessels, so air shipments avoid it.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6753",
+    "file": "web/www.federalregister.gov/documents/2024/09/18/2024-21217/notice-of-modification-chinas-acts-policies-and-practices-related-to-technology-transfer",
+    "title": "Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (Section 301 four-year review final modifications)",
+    "author": "Office of the United States Trade Representative",
+    "url": "https://www.federalregister.gov/documents/2024/09/18/2024-21217/notice-of-modification-chinas-acts-policies-and-practices-related-to-technology-transfer",
+    "date": "2024-09-18",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Which China Section 301 rates rose in 2024 to 2026, including lithium-ion non-EV batteries to 25% in 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6754",
+    "file": "web/www.federalreserve.gov/releases/h10/current/",
+    "title": "H.10 Foreign Exchange Rates (Weekly)",
+    "author": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/releases/h10/current/",
+    "date": "2026-11-09",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Weekly US dollar exchange rates including yuan, peso and rupee, and the move of daily data to FRED.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6755",
+    "file": "web/www.flexport.com/glossary/origin-charges",
+    "title": "Origin Charges (glossary)",
+    "author": "Flexport",
+    "url": "https://www.flexport.com/glossary/origin-charges",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Forwarder's breakdown of origin charges and who pays them under EXW versus FOB, for comparing freight quotes.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6756",
+    "file": "web/www.flexport.com/help/lcl-vs-fcl/",
+    "title": "Should I ship by LCL or FCL?",
+    "author": "Flexport",
+    "url": "https://www.flexport.com/help/lcl-vs-fcl/",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The break-even logic between LCL and a 20ft container and the free-time difference before storage fees.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6757",
+    "file": "web/www.freightos.com/enterprise/terminal/freightos-baltic-index-global-container-pricing-index/",
+    "title": "Freightos Baltic Index (FBX): Global Container Pricing Index",
+    "author": "Freightos and the Baltic Exchange",
+    "url": "https://www.freightos.com/enterprise/terminal/freightos-baltic-index-global-container-pricing-index/",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "The 12 FBX lanes, daily and weekly timing, and how the median spot rate is built.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6758",
+    "file": "web/www.freightos.com/freight-resources/chargeable-and-volumetric-weight-calculator-freightos/",
+    "title": "Chargeable and Volumetric Weight Calculator for Air and Sea Freight",
+    "author": "Freightos",
+    "url": "https://www.freightos.com/freight-resources/chargeable-and-volumetric-weight-calculator-freightos/",
+    "date": "2026-10-26",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The divisors by mode (air 6,000, express 5,000, LCL 1,000 kg per cubic metre) with a worked example.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6759",
+    "file": "web/www.freightos.com/freight-resources/freight-charges/",
+    "title": "Understanding Common Freight Charges and Fees",
+    "author": "Freightos",
+    "url": "https://www.freightos.com/freight-resources/freight-charges/",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "The full list of origin, main leg and destination charges, including US fees, to check a quote against.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6760",
+    "file": "web/www.freightos.com/shipping-routes/shipping-from-vietnam-to-the-united-states/",
+    "title": "Shipping From Vietnam to United States [Updated November 2026]",
+    "author": "Freightos",
+    "url": "https://www.freightos.com/shipping-routes/shipping-from-vietnam-to-the-united-states/",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Air price per kg by shipment weight and port-to-port versus door-to-door transit days by mode for Vietnam to the US.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6761",
+    "file": "web/www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text",
+    "title": "Care Labeling of Textile Wearing Apparel and Certain Piece Goods (16 CFR 423)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/care-labeling-textile-wearing-apparel-certain-piece-goods-text",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "What a US care label must say, when warnings are needed, and the reasonable-basis rule.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6762",
+    "file": "web/www.gov.uk/eori",
+    "title": "Get an EORI number: Who needs an EORI",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/eori",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Who needs a GB EORI, the 'established' test and what a non-UK business must do instead.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6763",
+    "file": "web/www.gov.uk/government/publications/general-product-safety-regulations-northern-ireland/eu-regulation-2023988-on-general-product-safety-detailed-guidance",
+    "title": "EU Regulation 2023/988 on General Product Safety: detailed guidance",
+    "author": "UK Office for Product Safety and Standards",
+    "url": "https://www.gov.uk/government/publications/general-product-safety-regulations-northern-ireland/eu-regulation-2023988-on-general-product-safety-detailed-guidance",
+    "date": "2025-11-04",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "GPSR duties in plain terms: responsible economic operator, labelling, traceability, 10-year documentation.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6764",
+    "file": "web/www.gov.uk/guidance/apply-for-an-advance-tariff-ruling",
+    "title": "Apply for an Advance Tariff Ruling",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/apply-for-an-advance-tariff-ruling",
+    "date": "2026-06-02",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "How to get a binding UK commodity code decision, the 30 to 120 day timing and that it cannot be retrospective.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6765",
+    "file": "web/www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return",
+    "title": "Check when you can account for import VAT on your VAT Return",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/check-when-you-can-account-for-import-vat-on-your-vat-return",
+    "date": "2025-06-16",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "why": "Postponed VAT accounting: who can use it, the declaration fields, statements and exclusions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6766",
+    "file": "web/www.gov.uk/guidance/delivery-costs-to-include-in-the-customs-value",
+    "title": "Delivery costs to include in the customs value",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/delivery-costs-to-include-in-the-customs-value",
+    "date": "2026-04-15",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Which freight, insurance and surcharges go into UK customs value and which UK-side costs can be deducted.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6767",
+    "file": "web/www.gov.uk/guidance/finding-commodity-codes-for-imports-or-exports",
+    "title": "Finding commodity codes for imports into or exports out of the UK",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/finding-commodity-codes-for-imports-or-exports",
+    "date": "2022-08-22",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Only the first 6 digits of a commodity code are international; do not rely on a supplier's code.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6768",
+    "file": "web/www.gov.uk/guidance/import-and-export-goods-using-preference-agreements",
+    "title": "Pay less Customs Duty on goods from a country with a UK trade agreement",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/import-and-export-goods-using-preference-agreements",
+    "date": "2025-02-03",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "How to claim a preferential UK duty rate, the proof of origin and records needed, and reclaiming duty later.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6769",
+    "file": "web/www.gov.uk/guidance/using-the-ukca-marking",
+    "title": "Using the UKCA marking",
+    "author": "UK Department for Business and Trade",
+    "url": "https://www.gov.uk/guidance/using-the-ukca-marking",
+    "date": "2026-08-21",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "GB still recognises CE marking; importer name and postal address rules; UK declaration of conformity contents.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6770",
+    "file": "web/www.gov.uk/guidance/working-out-the-vat-value-using-the-customs-value-of-the-imported-goods",
+    "title": "Working out the VAT value using the customs value of the imported goods",
+    "author": "HM Revenue & Customs",
+    "url": "https://www.gov.uk/guidance/working-out-the-vat-value-using-the-customs-value-of-the-imported-goods",
+    "date": "2026-10-21",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "why": "The UK import VAT base and the nationally agreed flat rates for incidental costs.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6771",
+    "file": "web/www.huronconsultinggroup.com/en/insights/strengthen-growth",
+    "title": "Strengthen growth strategy with complexity-adjusted whale curves",
+    "author": "Stephen Wilson and Andrei Perumal (Innosight, Huron)",
+    "url": "https://www.huronconsultinggroup.com/en/insights/strengthen-growth",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "MEA",
+      "PRD"
+    ],
+    "why": "A complexity-cost whale curve case: 21% of products made 380% of profit, and selective cuts added 25% profit.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6772",
+    "file": "web/www.imf.org/-/media/files/publications/wp/2020/english/wpiea2020126-print-pdf.pdf",
+    "title": "Patterns in Invoicing Currency in Global Trade (WP/20/126)",
+    "author": "Boz, Casas, Georgiadis, Gopinath, Le Mezo, Mehl and Nguyen, IMF",
+    "url": "https://www.imf.org/-/media/files/publications/wp/2020/english/wpiea2020126-print-pdf.pdf",
+    "date": "2020-07-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG"
+    ],
+    "why": "Measured exchange-rate pass-through to import prices: the dollar rate matters far more than the bilateral rate.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6773",
+    "file": "web/www.imf.org/en/research/commodity-prices",
+    "title": "IMF Primary Commodity Prices",
+    "author": "International Monetary Fund",
+    "url": "https://www.imf.org/en/research/commodity-prices",
+    "date": "2026-09-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Coverage and monthly update of the IMF commodity price system behind FRED's global price series.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6774",
+    "file": "web/www.industryweek.com/supply-chain/supplier-scorecards-choose-these-metrics-improve-your-partners-performance",
+    "title": "Supplier Scorecards: Choose These Metrics to Improve Your Partners' Performance",
+    "author": "Larry Fast, IndustryWeek",
+    "url": "https://www.industryweek.com/supply-chain/supplier-scorecards-choose-these-metrics-improve-your-partners-performance",
+    "date": "2018-08-17",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "A 100-point supplier scorecard with on-time bands, actions per band and a 70/30 volume split.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6775",
+    "file": "web/www.law.cornell.edu/cfr/text/16/1107.21",
+    "title": "16 CFR 1107.21 Periodic testing",
+    "author": "Legal Information Institute (US regulation text)",
+    "url": "https://www.law.cornell.edu/cfr/text/16/1107.21",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Maximum retest intervals for children's products: 1, 2 or 3 years depending on the testing plan.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6776",
+    "file": "web/www.law.cornell.edu/cfr/text/16/1115.14",
+    "title": "16 CFR 1115.14 Time computations (duty to report)",
+    "author": "Legal Information Institute (US regulation text)",
+    "url": "https://www.law.cornell.edu/cfr/text/16/1115.14",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "CXP"
+    ],
+    "why": "The 24-hour CPSC reporting clock, the 10-day investigation limit and the 5-day internal routing rule.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6777",
+    "file": "web/www.law.cornell.edu/regulations/california/27-CCR-25600.2",
+    "title": "27 CCR 25600.2 Responsibility to provide consumer product exposure warnings",
+    "author": "Legal Information Institute (California regulation text)",
+    "url": "https://www.law.cornell.edu/regulations/california/27-CCR-25600.2",
+    "date": "2020-04-01",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "When an own-brand seller carries the Prop 65 warning duty and how upstream notices work (annual renewal, 90 days).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6778",
+    "file": "web/www.law.cornell.edu/regulations/california/27-CCR-25602",
+    "title": "27 CCR 25602 Consumer product exposure warnings: methods of transmission",
+    "author": "Legal Information Institute (California regulation text)",
+    "url": "https://www.law.cornell.edu/regulations/california/27-CCR-25602",
+    "date": "2025-01-01",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "LPG"
+    ],
+    "why": "Exactly how a Prop 65 warning must appear for internet and catalog sales.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6779",
+    "file": "web/www.law.cornell.edu/regulations/california/27-CCR-25603",
+    "title": "27 CCR 25603 Consumer product exposure warnings: content",
+    "author": "Legal Information Institute (California regulation text)",
+    "url": "https://www.law.cornell.edu/regulations/california/27-CCR-25603",
+    "date": "2025-01-01",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "The 2025 short-form warning now names a chemical; old short-form allowed only on goods made and labelled before 2028.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6780",
+    "file": "web/www.law.cornell.edu/uscode/text/19/1304",
+    "title": "19 USC 1304 Marking of imported articles and containers",
+    "author": "Legal Information Institute (US Code text)",
+    "url": "https://www.law.cornell.edu/uscode/text/19/1304",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "The 10% ad valorem marking duty on unmarked imports and the penalties for removing origin marks.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6781",
+    "file": "web/www.law.cornell.edu/uscode/text/19/1592",
+    "title": "19 U.S. Code 1592: Penalties for fraud, gross negligence, and negligence",
+    "author": "Legal Information Institute, Cornell Law School (US Code text)",
+    "url": "https://www.law.cornell.edu/uscode/text/19/1592",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "why": "The penalty caps for negligent and grossly negligent entries and how prior disclosure cuts them to interest.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6782",
+    "file": "web/www.lexiscn.com/law/law-english-1-5601651-T.html",
+    "title": "Value-Added Tax Law of the People's Republic of China",
+    "author": "National People's Congress Standing Committee (English text via LexisNexis China)",
+    "url": "https://www.lexiscn.com/law/law-english-1-5601651-T.html",
+    "date": "2024-12-25",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Statutory 13% VAT on goods in China, effective 1 January 2026, which a 'tax included' quote contains.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6783",
+    "file": "web/www.maersk.com/support/faqs/cargo-weight-limit",
+    "title": "What is the weight limit for the cargo? (container payload and capacity)",
+    "author": "A.P. Moller - Maersk",
+    "url": "https://www.maersk.com/support/faqs/cargo-weight-limit",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "OPS",
+      "COG"
+    ],
+    "why": "Carrier-published payload and cubic capacity of 20ft, 40ft and 40ft high cube dry containers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6784",
+    "file": "web/www.news.cn/politics/20261105/f90cd6ad4df94ab4833b141e52ccfc13/c.html",
+    "title": "State Council General Office notice on 2027 public holiday arrangements",
+    "author": "General Office of the State Council of China (via Xinhua)",
+    "url": "https://www.news.cn/politics/20261105/f90cd6ad4df94ab4833b141e52ccfc13/c.html",
+    "date": "2026-11-05",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Official 2027 Spring Festival and National Day dates, with the make-up working days.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6785",
+    "file": "web/www.one-line.com/en/dry-containers",
+    "title": "Dry containers: specifications",
+    "author": "Ocean Network Express (ONE)",
+    "url": "https://www.one-line.com/en/dry-containers",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "Usable inside size, volume and payload of 20ft, 40ft and 40ft high cube containers for packaging-cube maths.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6786",
+    "file": "web/www.qima.com/aql",
+    "title": "AQL Calculator and guide",
+    "author": "QIMA",
+    "url": "https://www.qima.com/aql",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Typical AQL values by defect class and a worked lot-size example under ISO 2859 General Level II.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6787",
+    "file": "web/www.qima.com/aql-acceptable-quality-limit",
+    "title": "Acceptable Quality Limit (AQL): AQL tables and calculator",
+    "author": "QIMA",
+    "url": "https://www.qima.com/aql-acceptable-quality-limit",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "ISO 2859-1 / ANSI Z1.4 lookup: lot size to code letter to sample size and accept/reject numbers, with a worked 4,000-unit example.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6788",
+    "file": "web/www.qima.com/blog/quality-control/pre-shipment-inspection-procedure",
+    "title": "The pre-shipment inspection procedure explained",
+    "author": "QIMA",
+    "url": "https://www.qima.com/blog/quality-control/pre-shipment-inspection-procedure",
+    "date": "2022-09-27",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG"
+    ],
+    "why": "Step by step PSI: 80% packed, how each defect class is judged, function tests by product type, what the report holds.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6789",
+    "file": "web/www.qima.com/during-production-inspection",
+    "title": "During Production Inspection (DUPRO) and In-Line Inspection",
+    "author": "QIMA",
+    "url": "https://www.qima.com/during-production-inspection",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "DUPRO trigger point (20% of the order produced) and what it checks, including predicted completion date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6790",
+    "file": "web/www.qima.com/newsroom/news/news-q3-2026-barometer",
+    "title": "QIMA Q3 2026 Barometer",
+    "author": "QIMA",
+    "url": "https://www.qima.com/newsroom/news/news-q3-2026-barometer",
+    "date": "2026-07-13",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "COG"
+    ],
+    "why": "Real AQL failure rates from QIMA's inspection volume: 8% to 26% of orders fail by category and buyer maturity.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6791",
+    "file": "web/www.retaildoc.com/blog/retail-consultant-tip-merchandise-doesnt-get-better-with-age",
+    "title": "What Is Open to Buy and How Do You Calculate It?",
+    "author": "Bob Phibbs (The Retail Doctor)",
+    "url": "https://www.retaildoc.com/blog/retail-consultant-tip-merchandise-doesnt-get-better-with-age",
+    "date": "2026-09-16",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "OPS",
+      "MEA"
+    ],
+    "why": "Open-to-buy formula including stock on order, a worked overbought example and a months-of-stock ceiling.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S6792",
+    "file": "web/www.sea-intelligence.com/press-room/415-global-schedule-reliability-records-a-marginal-gain-in-september",
+    "title": "Global Schedule Reliability Records a Marginal Gain in September",
+    "author": "Sea-Intelligence (Alan Murphy, CEO)",
+    "url": "https://www.sea-intelligence.com/press-room/415-global-schedule-reliability-records-a-marginal-gain-in-september",
+    "date": "2026-10-28",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Monthly on-time share and average delay of late vessels across 34 trade lanes and 60+ carriers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6793",
+    "file": "web/www.shfe.com.cn/eng/",
+    "title": "Shanghai Futures Exchange (English site): products and market data",
+    "author": "Shanghai Futures Exchange",
+    "url": "https://www.shfe.com.cn/eng/",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "The China-priced metals, rubber, pulp and paper futures a Chinese factory's input costs follow, with free delayed data.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6794",
+    "file": "web/www.shopify.com/blog/how-to-create-a-tech-pack",
+    "title": "How to create a tech pack",
+    "author": "Danielle Bauter, Shopify",
+    "url": "https://www.shopify.com/blog/how-to-create-a-tech-pack",
+    "date": "2026-08-25",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "COG",
+      "PRD"
+    ],
+    "why": "Tech pack sections with worked numbers: BOM with Pantone per line, POMs, grade rules, SPI, label positions, revision log.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6795",
+    "file": "web/www.sqconline.com/switching-rules-mil-std-105e-z14",
+    "title": "Switching Rules (MIL-STD-105E, Z1.4)",
+    "author": "SQCOnline",
+    "url": "https://www.sqconline.com/switching-rules-mil-std-105e-z14",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "The normal, tightened and reduced switching triggers most buyers never apply to repeat suppliers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6796",
+    "file": "web/www.trade.gov/index.php/methods-payment",
+    "title": "Methods of Payment",
+    "author": "US International Trade Administration",
+    "url": "https://www.trade.gov/index.php/methods-payment",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Government description of cash in advance, letters of credit, documentary collections and open account, with who carries the risk.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6797",
+    "file": "web/www.trade.gov/know-your-incoterms",
+    "title": "Know Your Incoterms",
+    "author": "US International Trade Administration",
+    "url": "https://www.trade.gov/know-your-incoterms",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "US government list of what Incoterms do not cover: title, payment, documents, non-conformity, disputes.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6798",
+    "file": "web/www.v-trust.com/en/our-services/inspection-standards/defect-classification",
+    "title": "Defect Classification: how to classify defects during quality inspection",
+    "author": "V-Trust Inspection Service Group",
+    "url": "https://www.v-trust.com/en/our-services/inspection-standards/defect-classification",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Default AQLs by defect class (0, 2.5, 4.0) and concrete critical, major and minor examples per product category.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6799",
+    "file": "web/www.v-trust.com/en/our-services/quality-control/container-loading-supervision-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "title": "Container Loading Supervision service",
+    "author": "V-Trust Inspection Service Group",
+    "url": "https://www.v-trust.com/en/our-services/quality-control/container-loading-supervision-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "What a loading check covers, seal-number recording and its price.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6800",
+    "file": "web/www.v-trust.com/en/our-services/quality-control/pre-shipment-inspection-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "title": "Pre-Shipment Inspection service",
+    "author": "V-Trust Inspection Service Group",
+    "url": "https://www.v-trust.com/en/our-services/quality-control/pre-shipment-inspection-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Published all-inclusive price (268 USD per man-day), timing, booking lead time and report turnaround for a PSI.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6801",
+    "file": "web/www.v-trust.com/en/our-services/supplier-evaluation/factory-audit-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "title": "Factory Audit service",
+    "author": "V-Trust Inspection Service Group",
+    "url": "https://www.v-trust.com/en/our-services/supplier-evaluation/factory-audit-service-in-china-india-vietnam-malaysia-thailand-bangladesh-pakistan-indonesia-cambodia",
+    "date": "unknown",
+    "rights": "public_reference",
+    "tier": 4,
+    "modules": [
+      "COG"
+    ],
+    "why": "Factory audit scope and published price (398 USD per man-day) with a 2-day report.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6802",
+    "file": "web/www.worldbank.org/en/research/commodity-markets",
+    "title": "Commodity Markets (Pink Sheet and Commodity Markets Outlook)",
+    "author": "World Bank",
+    "url": "https://www.worldbank.org/en/research/commodity-markets",
+    "date": "2026-11-03",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "Where the free monthly Pink Sheet files live, its release dates, and the twice-yearly price forecasts to use as a base case.",
+    "cards": 1,
+    "public": true
   }
 ]

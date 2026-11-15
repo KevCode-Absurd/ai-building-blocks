@@ -27,7 +27,7 @@ Required:
 
 1. **Product facts and proof file**: what is proven, what customers report, what is banned (from `product-claims-profile` if it exists).
 2. **10 to 30 real customer lines**: reviews, comments, support tickets, with their source. These give the spoken words.
-3. **Live offer and page**: price, delivery, returns, COD, and the page the ad will send people to.
+3. **Live offer and page**: price, delivery, returns, payment options, and the page the ad will send people to.
 4. **Who will say it**: in-house staff, founder, paid creators, or Spark Ads from existing posts.
 
 Optional: the store's past TikTok ads with 2-second view rate, 6-second view rate, CTR and cost per purchase; top organic posts on the brand or creator accounts.
@@ -39,14 +39,14 @@ If customer lines are missing, mine them first with `mine-ad-angles-from-reviews
 1. **Gross profit per order.** Pass when delivered cost is known [MEA-0037]. Fail: no discount scripts; write the other formats.
 2. **Proof for each claim.** Every result a creator will say out loud must be proven or customer-reported with a source. Fail: drop the claim, do not soften it into a hint.
 3. **Real people, real experience.** A creator may only say they used the product if they did. Fake or false testimonials are banned in the US [MCR-6021]. AI presenters must never pose as real customers; check TikTok's current AI-generated content label rules and use the label.
-4. **Ad labels.** Creator posts used as ads must be marked as ads or paid partnerships; in India disguised ads are treated as misleading [ADC-6147].
+4. **Ad labels.** Creator posts used as ads must be marked as ads or paid partnerships; in the US, UK, EU and most other markets, disguised ads are treated as misleading.
 5. **Category rules.** Health, weight, skin and supplements need `check-ad-copy-for-policy-and-claims` on the final scripts.
 
 ## Steps
 
 ### 1. Pick one buyer and one moment per script
 
-From the customer lines, list the 3 to 5 moments when people feel the problem ("my feet hurt by 4pm", "the tiffin leaks in my bag"). Each script gets one buyer in one moment. The opener must speak to that buyer, not just stop the scroll, because the platform learns from who keeps watching [MCR-0026].
+From the customer lines, list the 3 to 5 moments when people feel the problem ("my feet hurt by 4pm", "my lunch box leaks in my bag"). Each script gets one buyer in one moment. The opener must speak to that buyer, not just stop the scroll, because the platform learns from who keeps watching [MCR-0026].
 
 ### 2. Give the five scripts five different formats
 
@@ -90,9 +90,10 @@ Spoken-word rules: contractions, short sentences, words a person would say aloud
 
 Per script: setting, who is on camera, 3 to 6 shots, props, and the one product moment that must be visible (the leak test, the fabric stretch). Phone footage in natural light is the default; polished studio footage often reads as an ad.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** write a Hinglish version of the openers for scripts aimed at Hindi-belt buyers, handed to `write-ad-copy-in-indian-languages`; name COD or UPI in the call to action only if live; show prices with GST included.
+- **UK, EU and Australia:** show prices with VAT or the local sales tax included; name pay later or other payment options in the call to action only if live.
+- **Other languages:** write versions of the openers in the languages your target buyers speak, written or checked by a native speaker.
 - **US:** creators must disclose paid relationships; "#ad" or the platform's paid partnership tag. TikTok Shop scripts should be ranked later on revenue per 1,000 views, not view count [MCR-0046].
 
 ### 8. Set the test order
@@ -119,7 +120,7 @@ Rank the five by: proof strength, how clearly the opener calls out the buyer, an
 | Field | Content |
 |---|---|
 | Script # and format | 2. Demo with voice-over |
-| Buyer and moment | Office worker, tiffin leaks in her bag on the metro |
+| Buyer and moment | Office worker, lunch box leaks in her bag on the train |
 | Openers (A, B, C) | Spoken line / on-screen text / first shot for each |
 | Beats | Time, spoken words, on-screen text, shot |
 | Turn | The understated result |
@@ -155,7 +156,11 @@ Rank the five by: proof strength, how clearly the opener calls out the buyer, an
 - MCR-0061: spoken CTAs on TikTok are contested.
 - ADC-0036, ADC-0037: first TikTok test shape and early read guides.
 - MCR-6021: fake or false testimonials banned (US).
-- ADC-6147: disguised ads must be labelled (India).
 - MEA-0037: margin from delivered cost.
 
-What makes this skill ours: five scripts in five native formats instead of one script in five wordings; every spoken claim is tied to a proof line or a sourced customer quote; the contested spoken CTA is built as a cuttable test, not a rule; and India buyers get Hinglish openers, COD and GST-inclusive prices only where true.
+What makes this skill ours: five scripts in five native formats instead of one script in five wordings; every spoken claim is tied to a proof line or a sourced customer quote; the contested spoken CTA is built as a cuttable test, not a rule; and each market gets openers in its buyers' language, with payment and tax-inclusive price lines only where true.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Write a Hinglish version of the openers for scripts aimed at Hindi-belt buyers, handed to `write-ad-copy-in-indian-languages`. Name COD or UPI in the call to action only if live; show prices with GST included. Disguised ads are treated as misleading [ADC-6147].
+- ADC-6147: disguised ads must be labelled (India).

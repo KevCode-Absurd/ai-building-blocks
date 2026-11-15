@@ -105,9 +105,9 @@ Common fixes:
 
 Match quality reflects recent events, so wait at least 7 days after the last fix, practitioner default. Record day 0 and day 7 scores and coverage per event, plus Meta purchase events per 100 store orders. Only then decide on any paid tool: the Conversions API Gateway only copies events after the browser pixel fires, so blocked pixels stay lost and recovery is about 1 to 2% [MEA-0001]. Spend on measurement tools around 1% of ad spend at most, and only if they plausibly make spend 5% better [MEA-0036].
 
-### 9. India and phone-first stores
+### 9. Phone-first stores
 
-Many orders carry a phone number and no email, especially cash on delivery. Make phone the first key: send it with the 91 country code, digits only, on every checkout and purchase event. If orders arrive through a third-party checkout or chat ordering, confirm those orders also send a server Purchase with phone; they often bypass the store's own checkout events.
+In some markets many orders carry a phone number and no email, especially with pay on delivery or chat ordering. Make phone the first key: send it with the buyer's country code (for example 1 for the US and Canada, 44 for the UK, 61 for Australia), digits only, on every checkout and purchase event. If orders arrive through a third-party checkout or chat ordering, confirm those orders also send a server Purchase with phone; they often bypass the store's own checkout events.
 
 ## Checks before you hand it over
 
@@ -152,3 +152,7 @@ Many orders carry a phone number and no email, especially cash on delivery. Make
 - SPD-0003: keep tracking parameters out of cache keys rather than stripping them.
 
 What makes this skill ours: realistic aims per funnel event instead of one score for all; a cause for every missing key; an honest cost range in place of a made-up loss; and a same-day check in Shopify customer events and test events, then a booked 7-day re-measure.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Many orders carry a phone number and no email, especially COD. Send phone with the 91 country code, digits only, on every checkout and purchase event.

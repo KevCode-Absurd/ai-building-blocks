@@ -1,6 +1,6 @@
 ---
 name: build-review-collection-system
-description: "A review collection system for the store: when to ask each product's buyers (timed to when the product has done its job, not a fixed day count), which channel, what to ask so reviews answer real buyer doubts, how to ask for photos and videos, which incentives each platform allows, how to moderate fairly, and where reviews show on the site. Follows Google's ban on incentives and review gating and the US FTC review rule, with India notes for WhatsApp asks and regional languages. Tool-neutral with a free path. Use when a product has few reviews, review rate is low, reviews are generic, or the store wants photo and video reviews."
+description: "A review collection system for the store: when to ask each product's buyers (timed to when the product has done its job, not a fixed day count), which channel, what to ask so reviews answer real buyer doubts, how to ask for photos and videos, which incentives each platform allows, how to moderate fairly, and where reviews show on the site. Follows Google's ban on incentives and review gating and the US FTC review rule, with market notes for WhatsApp asks and the languages your buyers use. Tool-neutral with a free path. Use when a product has few reviews, review rate is low, reviews are generic, or the store wants photo and video reviews."
 ---
 
 # Review collection system
@@ -76,7 +76,7 @@ Asks go to every buyer of the product, with the same wording, whatever their lik
 - **Google reviews:** no incentive at all [CXP-6300].
 - **Store's own reviews (US and similar rules):** a small reward for a photo or video review is allowed only if it is given for any honest review, good or bad, and the wording never implies a positive one [CXP-6301]. Wording: "Leave an honest review with a photo and get [reward], whatever you think." Disclose incentivised reviews on the site if the review app supports a label.
 - **Amazon and marketplaces:** follow their own rules; most ban incentives.
-- **India:** follow the same honesty rules; avoid incentives that only go to five star reviews.
+- **UK, EU and other markets:** follow the same honesty rules; the UK and EU ban fake reviews and require stores to say whether and how they check reviews are genuine. Never give incentives that only go to five star reviews.
 
 Practitioner default: start without an incentive; add one only for photo or video reviews if media rate stays low after 60 days.
 
@@ -95,9 +95,12 @@ Write a published moderation policy: reviews are removed only for profanity, pri
 
 If the store has a Google Business Profile, send one separate, plain ask to all buyers after the product review step, with no incentive and no filtering.
 
-### 8. India and US notes
+**Stars in Google Shopping and the store badge.** Product ratings in Google ads and free listings come through Merchant Center, from Google's own customer reviews, an approved review partner, or a feed sent from the review app. Google's help pages have asked for at least 50 reviews across all products and say stars can take a couple of weeks to appear after onboarding; read the current page and write down the date you checked, because these limits change. Some practitioners also want a few reviews (they say 3) on a product before its stars help, so list the products under that line and point the review asks at them first. The top quality store badge compares the store with others in the same country on things such as shipping speed and cost, returns, site experience and ratings. The store can only improve the inputs it controls: a clear returns window and cost, real delivery times shown, and a steady flow of new reviews. Only genuine reviews from real buyers, never filtered to the happy ones [CXP-6300].
 
-- **India:** WhatsApp asks often beat email; use an approved utility or marketing template with opt-in, and a link that opens the review form on mobile. Let buyers write in Hindi or regional languages, and show those reviews; they help buyers who read that language. COD buyers who refused delivery get no review ask.
+### 8. Market notes
+
+- **Chat-first markets:** where buyers live on WhatsApp, asks there often beat email; use an approved utility or marketing template with opt-in, and a link that opens the review form on mobile.
+- **All markets:** let buyers write in the languages they use, and show those reviews; they help buyers who read that language. Buyers who refused delivery get no review ask.
 - **US:** follow the FTC rule on fake and insider reviews; staff, family and creators who got free product must not post undisclosed reviews.
 
 ### 9. Track monthly
@@ -145,4 +148,9 @@ Per product: delivered orders, asks sent, reviews, review rate, share with photo
 - LPG-0037: show name, photo and source.
 - LPG-0062: zero to about 80 reviews matters most; relevance after.
 
-What makes this skill ours: asks are timed to when each product has done its job, not a fixed day; prompts make reviews answer real buyer doubts; incentive rules differ by destination under Google and FTC rules; and moderation is equal for good and bad reviews, with India WhatsApp and regional-language asks.
+What makes this skill ours: asks are timed to when each product has done its job, not a fixed day; prompts make reviews answer real buyer doubts; incentive rules differ by destination under Google and FTC rules; and moderation is equal for good and bad reviews, with WhatsApp and local-language asks where buyers use them.
+
+## Selling in India
+
+- WhatsApp asks often beat email; let buyers write in Hindi or regional languages.
+- COD buyers who refused delivery get no review ask.

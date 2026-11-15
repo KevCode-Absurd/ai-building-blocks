@@ -83,10 +83,13 @@ Recompute with bot and doubtful traffic removed: sessions, purchase conversion r
 - **Ad platforms:** placement and location exclusions from step 4, as tests with an end date.
 - **Site:** if the bots are hitting forms or checkout, hand to `stop-fake-orders-and-card-testing`. Do not add blanket bot blocking at the CDN; it catches wanted crawlers [SEC-0002].
 
-### 7. India and US notes
+### 7. Market notes
 
-- India: spikes from one city often come from a courier or marketplace crawler, or from a cheap traffic source; check the campaign list before calling it bots. WhatsApp link previews can create single-hit visits with no engagement.
-- US: data centre traffic (Ashburn, Virginia and similar hosting hubs is a common sign, practitioner default) with zero engagement is usually automated.
+- Spikes from one city often come from a courier, price-comparison or marketplace crawler, or from a cheap traffic source; check the campaign list before calling it bots.
+- Chat apps (WhatsApp, Messenger, Telegram, LINE) and social link previews can create single-hit visits with no engagement.
+- Data centre traffic with zero engagement is usually automated: common signs are hosting hubs such as Ashburn, Virginia in the US, Frankfurt, Amsterdam, Dublin and London in Europe, and Singapore in Asia (practitioner default).
+- Visits from countries the store does not ship to, with no engagement, are usually bots or VPN traffic; for stores using Shopify Markets, check them against the list of active markets first.
+- Consent banners in the EU and UK hide some real visitors from GA4, which changes the normal Shopify-to-GA4 gap; set the baseline per market.
 
 ### 8. Weekly watch
 
@@ -142,3 +145,7 @@ Every Monday: Shopify-to-GA4 session ratio, engagement rate, add-to-cart rate, a
 - SEC-0002: accidental AI crawler blocks.
 
 What makes this skill ours: the check starts from the store's own normal gap between Shopify and GA4 instead of treating any gap as an attack; each source needs three signs and a count before it is called a bot; key numbers are shown raw and cleaned so profit rankings can be trusted; and wanted AI and search crawlers are never blocked.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. In India, spikes from one city often come from a courier or marketplace crawler, or from a cheap traffic source; check the campaign list before calling it bots. WhatsApp link previews are a common source of single-hit visits with no engagement.

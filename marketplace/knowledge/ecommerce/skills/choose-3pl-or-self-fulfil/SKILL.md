@@ -20,7 +20,7 @@ description: "A fulfilment decision for the store: keep packing in-house, hire h
 - Choosing couriers and shipping aggregators: use `compare-shipping-carriers`.
 - Writing the daily packing routine: use `pick-pack-ship-sop`.
 - Amazon FBA planning: use `plan-fba-inventory`.
-- Return-to-origin rules for COD orders: use `cut-rto-on-cod-orders`.
+- Rules for which pay-on-delivery orders to confirm or block, and failed-delivery returns: use `cut-rto-on-cod-orders`.
 
 ## What you need
 
@@ -62,7 +62,7 @@ Options inside in-house: a part-time packer, a packing station layout, or batch 
 
 Send the same pack to 3 to 5 warehouses so quotes compare. The pack holds: products with weights and box sizes, SKU count, monthly orders by month for 12 months, units per order, inbound pattern (pallets, cartons, containers, how often), destinations, returns volume, special handling, integrations needed (Shopify, marketplaces), and the go-live date. Ask for every fee in a per-unit format.
 
-India notes: ask about COD handling, remittance cycle, return-to-origin processing and which cities they hold stock in. Holding stock in another state usually needs GST registration of an additional place of business there; confirm with the accountant before choosing a multi-city network. US notes: stock held in a state can create sales tax presence there; check with the accountant before splitting stock across warehouses.
+Tax and location notes: ask which countries, states or cities they hold stock in, how they handle returns and failed deliveries, and, where the store takes pay on delivery, how fast they pass the cash on. Stock held in a place can create a tax duty there: in the US, stock in a state can create sales tax presence; in the UK and EU, stock held in a country usually means registering for VAT there; in Canada and Australia, check the national goods and services tax and any provincial rules. Check with the accountant before splitting stock across warehouses or countries.
 
 ### 4. Build the 3PL cost per order
 
@@ -126,7 +126,7 @@ Move plan: freeze dates, stock count out and in, run both sites for a short over
 - Shipping rates compared on the store's real box sizes and destinations.
 - Each 3PL has a quality and risk score with two reference calls planned.
 - The move date is at least 8 weeks before peak or the plan says why not.
-- India GST and US sales tax questions about stock locations are listed for the accountant.
+- Sales tax and VAT questions about stock locations are listed for the accountant.
 - No contract signed and no stock moved without the client's yes.
 
 ## Output
@@ -158,4 +158,9 @@ Move plan: freeze dates, stock count out and in, run both sites for a short over
 - MEA-0037, MEA-0023: gross margin on delivered cost.
 - OPS-6287: USPS dimensional weight above 1 cubic foot.
 
-What makes this skill ours: both options are costed per order at today's volume, double and peak with the owner's time priced; a 3PL is scored on accuracy, peak record and exit terms before price; India GST and US sales tax effects of stock location are raised before a multi-site choice; and the move is timed away from peak with a monthly invoice audit after.
+What makes this skill ours: both options are costed per order at today's volume, double and peak with the owner's time priced; a 3PL is scored on accuracy, peak record and exit terms before price; the sales tax and VAT effects of stock location in each market are raised before a multi-site choice; and the move is timed away from peak with a monthly invoice audit after.
+
+## Selling in India
+
+- Ask each Indian warehouse about COD handling, the cash remittance cycle, RTO processing and which cities they hold stock in.
+- Holding stock in another state usually needs GST registration of an additional place of business there; confirm with the accountant before choosing a multi-city network.

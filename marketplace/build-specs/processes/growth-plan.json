@@ -1,0 +1,311 @@
+{
+  "id": "growth-plan",
+  "kind": "recurring",
+  "name": "Growth plan for the quarter, with a monthly check",
+  "goal": "One goal with a date, for example lift conversion 15% in 60 days, turned into a dated plan of ranked plays you signed off, each play opened as a job on the board, then checked every month against the warehouse with a keep, change or stop call.",
+  "starts_from": "The end of store setup, the start of a new quarter, or you naming a new goal. The plan runs about 90 days, with checks at roughly day 30, day 60 and quarter end.",
+  "folder": "plans",
+  "metrics": [
+    "Main number from context/goals.json, against the dated target in the plan, judged only after the minimum spend and days you set.",
+    "Guardrails from context/goals.json (for example cost per purchase and refund rate) held for every play.",
+    "Plan health: the share of plays that met their pass mark, and the share of tasks started by their planned date."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Goal and where we start",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "read",
+      "gate": "none",
+      "say": "Writes the goal as one number with a date and a baseline from the warehouse, for example conversion rate 1.8% over the last 28 days, target 2.07% by a named day. Reads the Org context, your goals and limits, past lessons and the ledger, and notes what changed recently (a sale, a stockout, a new product). Lists which tools are connected and at which level. A goal with no baseline in the data becomes a question, not a guess.",
+      "needs": [
+        "context/org-context/ (customers, offers, claims)",
+        "context/goals.json and context/limits.json",
+        "context/learnings.md and context/ledger.md",
+        "warehouse views daily_blended, shop_orders_daily and creative_performance (last 90 days)",
+        "your goal, in your words"
+      ],
+      "makes": [
+        "intake.md"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md states the goal number, its baseline with dates and source, the target date, what changed recently, the access table and any answered questions."
+    },
+    {
+      "id": "trust-gate",
+      "name": "Can we trust the numbers?",
+      "agent": "radek-unit-economics",
+      "access": "read",
+      "gate": "none",
+      "say": "Before any play is ranked, confirms gross profit per purchase and the break-even ad cost per first order from current costs, and checks that shop orders, GA4 and the ad platforms still agree. Gives a verdict: pass, pass with caveats, or fail. On fail, fixing the numbers is the first play and nothing else is ranked.",
+      "needs": [
+        "intake.md",
+        "warehouse views shop_orders_daily and daily_blended",
+        "product cost, fee and returns data"
+      ],
+      "makes": [
+        "trust-gate.md",
+        "trust-numbers.json"
+      ],
+      "checks": [
+        "trust-numbers",
+        "trust-review"
+      ],
+      "done_when": "trust-gate.md gives gross profit per purchase, break-even cost per first order, the tracking match for the last 28 days, and the verdict with its reason."
+    },
+    {
+      "id": "preconditions",
+      "name": "Cash and capacity we can use",
+      "agent": "hemant-store-finance",
+      "access": "read",
+      "gate": "none",
+      "say": "States how much cash the team can put into ads, stock and tests this quarter without going below your cash floor, month by month, and how many extra orders and tickets the team can handle (from the fulfilment notes in the ledger). A play that breaks either limit waits, however good it looks.",
+      "needs": [
+        "context/limits.json",
+        "the latest cash forecast from monthly numbers",
+        "fulfilment capacity notes in context/ledger.md"
+      ],
+      "makes": [
+        "preconditions.md"
+      ],
+      "checks": [
+        "preconditions-review"
+      ],
+      "done_when": "preconditions.md gives the spend room for each month of the quarter and the extra order capacity, each with its source."
+    },
+    {
+      "id": "offers",
+      "name": "Offer plays",
+      "agent": "brendan-offers",
+      "access": "draft",
+      "gate": "none",
+      "say": "Proposes up to three offers that add value before they cut margin, such as a kit, a bundle, a guarantee or a free shipping line, built from what buyers already pair and what they doubt. Each offer shows profit per order at each discount level, the stock and cash it needs, and the wording with no false was-prices or fake timers. Offers below the profit floor are dropped.",
+      "needs": [
+        "trust-gate.md",
+        "preconditions.md",
+        "context/org-context/ customers and claims",
+        "orders and discount history, last 12 months"
+      ],
+      "makes": [
+        "offers.md"
+      ],
+      "checks": [
+        "offers-review"
+      ],
+      "done_when": "offers.md has each offer with its margin math, the test that would prove it (one change, one main number, run length, stop rule), and the consumer pricing rules checked for each market."
+    },
+    {
+      "id": "bets",
+      "name": "Bigger bets",
+      "agent": "barnaby-wild-bets",
+      "access": "draft",
+      "gate": "none",
+      "say": "Lists bold ideas (a new market, format, channel or partnership) and scores each on upside, cost to test, cash at risk and time to learn, with gross profit per purchase setting what upside means. Shapes the top one or two into small tests with a capped budget, a fixed end date, a go number and a kill rule.",
+      "needs": [
+        "trust-gate.md",
+        "preconditions.md",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "bets.md"
+      ],
+      "checks": [
+        "bets-review"
+      ],
+      "done_when": "bets.md scores each idea on the four measures and gives the top bets a budget cap, end date, go number and kill rule inside the spend room."
+    },
+    {
+      "id": "plan",
+      "name": "The dated plan",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Ranks every candidate play from offers, bets and the team leads (paid ads, creative, landing pages, email, retention) by gross profit it can add, cash needed, team hours and days to a readable result. Writes one page: the goal, the baseline, the plays in order, and for each play its owner agent, the process it runs as (for example image-ad, video-ad or a landing page job), its start date, pass mark, stop rule and budget by month inside your limits. The checks at day 30, day 60 and quarter end are on the plan with their dates.",
+      "needs": [
+        "intake.md",
+        "trust-gate.md",
+        "preconditions.md",
+        "offers.md",
+        "bets.md"
+      ],
+      "makes": [
+        "plan.md",
+        "plan.json",
+        "plan-numbers.json"
+      ],
+      "checks": [
+        "plan-numbers",
+        "plan-review",
+        "plan-readability"
+      ],
+      "signoff": "You read the plan: the plays, their order, dates, pass marks and budget by month. Reply yes with the code to approve it, or say what to drop or move. Your yes approves the plan only. Every job it opens still asks you to sign off its creative, and every spend, send or publish still needs its own yes.",
+      "done_when": "plan.md and plan.json list the same plays, each with owner, process, start date, pass mark, stop rule and monthly budget, and the budget total sits inside the spend room in preconditions.md."
+    },
+    {
+      "id": "open-jobs",
+      "name": "Open the jobs on the board",
+      "agent": "margaret-job-orchestrator",
+      "access": "draft",
+      "gate": "none",
+      "say": "Turns each task in the signed-off plan into a job on the board with node agent/board.mjs new <process> \"<title>\", and writes each one a spec sheet: the job, the deliverable, who it is for, the inputs, the deadline and acceptance tests that can pass or fail. Each job names this plan as its source, so results flow back to the monthly check. Jobs due later are put on the schedule for their start date.",
+      "needs": [
+        "plan.json (signed off)",
+        "processes/ (the processes this store runs)"
+      ],
+      "makes": [
+        "jobs.md"
+      ],
+      "checks": [
+        "jobs-match-plan"
+      ],
+      "done_when": "jobs.md lists every task in plan.json with its job id, process, owner agent, start date and spec sheet, and none is missing or added."
+    },
+    {
+      "id": "month-1",
+      "name": "Day 30 check",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "read",
+      "gate": "owner",
+      "wait_days": 30,
+      "say": "Reads the warehouse and each job's results (readouts, the creative register, lessons) and compares every play with its pass mark: keep, change or stop, quoting the deciding number, its dates and its source. Shows cash and capacity left, and the goal number against its path to the target. A play judged before its minimum spend and days is marked too early, not a loss.",
+      "needs": [
+        "plan.json and jobs.md",
+        "warehouse views daily_blended, shop_orders_daily and creative_performance",
+        "results files of each job, and context/learnings.md",
+        "context/goals.json"
+      ],
+      "makes": [
+        "checks/month-1.md",
+        "checks/month-1-numbers.json"
+      ],
+      "checks": [
+        "month-numbers",
+        "month-review"
+      ],
+      "signoff": "You read the calls. Reply yes with the code to accept them. Stop calls close their jobs, and change calls go to the orchestrator as new briefs, each needing your sign-offs as usual.",
+      "done_when": "month-1.md gives one call per play with the deciding number and the rule it met, the goal against target, and cash and capacity left."
+    },
+    {
+      "id": "month-2",
+      "name": "Day 60 check",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "read",
+      "gate": "owner",
+      "wait_days": 30,
+      "say": "The same check one month later: every play against its pass mark with keep, change or stop, and the goal against the target date. If the main play failed its stop mark, says whether to start the backup play and what it needs.",
+      "needs": [
+        "checks/month-1.md",
+        "warehouse views daily_blended, shop_orders_daily and creative_performance",
+        "results files of each job"
+      ],
+      "makes": [
+        "checks/month-2.md",
+        "checks/month-2-numbers.json"
+      ],
+      "checks": [
+        "month-numbers",
+        "month-review"
+      ],
+      "signoff": "You read the calls. Reply yes with the code to accept them.",
+      "done_when": "month-2.md gives one call per play with its deciding number, and says whether the goal is on track for its date."
+    },
+    {
+      "id": "quarter-end",
+      "name": "Quarter end: what we learned",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "draft",
+      "gate": "owner",
+      "wait_days": 30,
+      "say": "Writes the quarter review: the goal against the target, what passed, what failed, what was stopped and why, and the money each play made or cost. Adds the dated lessons to context/learnings.md, with plays from too little spend marked as hunches. Ends with the question for next quarter, which becomes the next growth plan's goal.",
+      "needs": [
+        "plan.md and every month check",
+        "warehouse views",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "quarter-review.md",
+        "quarter-numbers.json"
+      ],
+      "checks": [
+        "quarter-numbers",
+        "quarter-review-check"
+      ],
+      "signoff": "You read the review and next quarter's question. Reply yes with the code to close the quarter. A new growth plan starts from your next goal.",
+      "done_when": "quarter-review.md has the result for the goal and every play with its evidence, the lessons are appended to context/learnings.md, and next quarter's question is written."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "the goal is one number with a date and a baseline from a named source, and missing facts are listed as answered questions, not guesses"
+    },
+    "trust-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/trust-numbers.json --final <folder>/trust-gate.md",
+      "passes_when": "gross profit per purchase and break-even recompute from their inputs"
+    },
+    "trust-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "revenue and orders come from the shop, every cost has a source, and the verdict follows the match"
+    },
+    "preconditions-review": {
+      "kind": "reviewer",
+      "agent": "radek-unit-economics",
+      "passes_when": "the spend room keeps the cash floor in every month and the capacity figure names its source"
+    },
+    "offers-review": {
+      "kind": "reviewer",
+      "agent": "juliet-merchandising",
+      "passes_when": "every offer stays above the profit floor at each discount level, uses no false was-price or fake timer, and fits stock and cash"
+    },
+    "bets-review": {
+      "kind": "reviewer",
+      "agent": "hemant-store-finance",
+      "passes_when": "each test's cash at risk is capped inside the spend room, and each has an end date, a go number and a kill rule"
+    },
+    "plan-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/plan-numbers.json --final <folder>/plan.md",
+      "passes_when": "the monthly budget totals add up and the target recomputes from the baseline"
+    },
+    "plan-review": {
+      "kind": "reviewer",
+      "agent": "jared-performance-marketing",
+      "passes_when": "the ranking follows gross profit, cash, hours and days to a result, each play has a pass mark and stop rule, and the budget fits your limits"
+    },
+    "plan-readability": {
+      "kind": "script",
+      "run": "node tools/quality/readability.cjs <folder>/plan.md --audience business",
+      "passes_when": "the readability checker exits 0"
+    },
+    "jobs-match-plan": {
+      "kind": "reviewer",
+      "agent": "malcolm-ecommerce-growth",
+      "passes_when": "every plan task has exactly one job with a spec sheet whose acceptance tests match the play's pass mark"
+    },
+    "month-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/checks/<month>-numbers.json --final <folder>/checks/<month>.md",
+      "passes_when": "every rate and total in the check recomputes, and each keep, change or stop label matches its number"
+    },
+    "month-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "each deciding number matches the warehouse for the stated dates, and each call follows the pass mark written in the plan"
+    },
+    "quarter-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/quarter-numbers.json --final <folder>/quarter-review.md",
+      "passes_when": "the money each play made or cost and the goal result recompute from their inputs"
+    },
+    "quarter-review-check": {
+      "kind": "reviewer",
+      "agent": "barnaby-wild-bets",
+      "passes_when": "each lesson is backed by its evidence, its confidence fits the spend, and next quarter's question follows from what was learned"
+    }
+  }
+}

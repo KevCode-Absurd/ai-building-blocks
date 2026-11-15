@@ -1,0 +1,70 @@
+{
+  "id": "process-improvement",
+  "kind": "recurring",
+  "name": "Improve how the team works (monthly)",
+  "goal": "Once a month the team looks at its own track record (where jobs stalled, which checks kept failing, what you changed at sign-off, and which creatives won) and proposes a small number of changes to the processes, each approved by you before it takes effect.",
+  "starts_from": "The monthly scheduled run, after the monthly numbers process. It needs at least one finished job.",
+  "folder": "jobs",
+  "metrics": [
+    "Hit rate: the share of launched creatives that beat the main target in context/goals.json, month by month.",
+    "Time from brief to launch, and how many stages needed a second round.",
+    "Generation spend per winning creative.",
+    "How often you changed work at a sign-off, and why."
+  ],
+  "stages": [
+    {
+      "id": "track-record",
+      "name": "Read the team's track record",
+      "agent": "margaret-job-orchestrator",
+      "access": "read",
+      "gate": "none",
+      "say": "Reads every job card on the board from the last month: how long each stage took, which checks said FIX and why, where you asked for changes at a sign-off, which plans failed or were blocked, and which steps waited longest for you. Counts are made by reading the files, not from memory.",
+      "needs": ["board/ (job cards and their history)", "agent-state/log.jsonl", "agent-state/plans/ and runs/", "processes/"],
+      "makes": ["track-record.md"],
+      "checks": ["numbers-check"],
+      "done_when": "track-record.md lists, per process, the jobs finished, the median days per stage, the most common FIX reasons, the sign-off changes you asked for, and every blocked or failed plan step."
+    },
+    {
+      "id": "results-record",
+      "name": "Read what the work achieved",
+      "agent": "callum-reporting",
+      "access": "read",
+      "gate": "none",
+      "say": "Joins the month's finished creatives to their results in the warehouse: hit rate against your main target, the second numbers you chose (for example hook rate), generation spend per winner, and which tags (angle, hook type, format, person, length, model) won or lost. Checks that the lessons in context/learnings.md still hold, and marks any that new results contradict.",
+      "needs": ["warehouse views creative_performance and daily_blended", "context/goals.json", "context/learnings.md"],
+      "makes": ["results-record.md"],
+      "checks": ["numbers-check", "results-review"],
+      "done_when": "results-record.md gives the hit rate with its count and dates, spend per winner, the tag patterns with their sample sizes, and each lesson marked holds, weaker or contradicted."
+    },
+    {
+      "id": "proposals",
+      "name": "Propose changes to the processes",
+      "agent": "malcolm-ecommerce-growth",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Proposes at most three changes, each tied to evidence from the two records: for example a new check where the same FIX keeps coming back, a stage moved earlier, a sign-off you never change dropped to a lighter look, a different model for a stage that keeps failing, or a lesson promoted into an intake question. Each change says what it fixes, the cost, and how we will know next month if it worked. Changes to your money limits or goals are never made here; they are their own file plans.",
+      "needs": ["track-record.md", "results-record.md", "processes/"],
+      "makes": ["proposals.md"],
+      "checks": ["proposal-review"],
+      "signoff": "You read the three proposals. Reply yes with the code to accept the list as written, or say which to drop. Accepting here does not change any process yet; each change is shown to you as an exact file change in the next stage.",
+      "done_when": "proposals.md has no more than three changes, each with its evidence, expected effect, cost, and the number that will show next month whether it worked."
+    },
+    {
+      "id": "apply",
+      "name": "Apply the accepted changes",
+      "agent": "margaret-job-orchestrator",
+      "access": "publish",
+      "gate": "none",
+      "say": "Writes each accepted change as a new version of the process file, checks it with node agent/process.mjs check, and proposes it with node agent/actions.mjs propose-file, which shows you the old and new file side by side with a code. Each process file changes only on your yes. Jobs already running keep the version they started with.",
+      "needs": ["proposals.md (signed off)"],
+      "makes": ["applied.md"],
+      "publish": "Owner-held process files in processes/, changed one file plan at a time through node agent/actions.mjs propose-file. Nothing outside the store folder changes.",
+      "done_when": "applied.md lists each accepted change with its file plan code and whether you approved it, and every changed process still passes the process check."
+    }
+  ],
+  "checks": {
+    "numbers-check": { "kind": "script", "run": "node tools/quality/numbers.cjs <folder>/<the record file>", "passes_when": "every count, median and rate in the record recomputes from its own inputs" },
+    "results-review": { "kind": "reviewer", "agent": "jared-performance-marketing", "passes_when": "each pattern has its sample size and dates, small samples are marked as hunches, and no result is credited to a tag without enough spend" },
+    "proposal-review": { "kind": "reviewer", "agent": "kemal-creative-director", "passes_when": "each change fixes a problem the records show, is small enough to judge in a month, and does not weaken a sign-off, a check or the approval gate without a stated reason" }
+  }
+}

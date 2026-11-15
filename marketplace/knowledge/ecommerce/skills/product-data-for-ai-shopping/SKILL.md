@@ -88,7 +88,9 @@ Order fixes by: gross profit per order x units sold in 90 days x fields failing.
 
 ### 7. Market notes
 
-- **India:** displayed prices must include all taxes; set GST correctly so channel prices match the page. Many Indian buyers pay COD; if an AI channel only supports prepaid checkout, note that the store's COD-heavy buyers may still discover there but buy on the site, and keep the product page COD message clear. Check which AI channels serve India before planning around them.
+- **UK, EU and Australia:** prices shown to consumers must include VAT (or Australia's goods and services tax); set tax settings so channel prices match the page. Return windows, including the EU 14-day right to cancel, must match the policy page.
+- **Pay on delivery:** where many buyers pay on delivery, and an AI channel only supports prepaid checkout, note that those buyers may still discover there but buy on the site, and keep the product page payment message clear.
+- **Every market:** check which AI shopping channels serve each country the store sells to before planning around them.
 - **US:** sales tax is added at checkout, so listed prices exclude it; return windows and who pays return shipping must match the policy page word for word.
 
 ### 8. Confirm
@@ -137,4 +139,8 @@ After the client approves fixes: re-export, re-score, and check 10 top products 
 - GAD-6123: Merchant Center title rules.
 - MEA-0037: gross margin is delivered cost.
 
-What makes this skill ours: every SKU gets a pass or fail per field agents read, ranked by the gross profit of what fails; policies and price sync are treated as gates that block whole channels; stale app metafields are cleaned because the catalog reads the admin, not the theme; and India's COD buyers are planned for when an AI channel only takes prepaid.
+What makes this skill ours: every SKU gets a pass or fail per field agents read, ranked by the gross profit of what fails; policies and price sync are treated as gates that block whole channels; stale app metafields are cleaned because the catalog reads the admin, not the theme; and pay-on-delivery buyers are planned for when an AI channel only takes prepaid.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Displayed prices must include all taxes; set GST correctly so channel prices match the page. Many buyers pay COD; if an AI channel only takes prepaid, expect COD-heavy buyers to discover there but buy on the site, and keep the product page COD message clear. Check which AI channels serve India before planning around them.

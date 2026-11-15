@@ -1,6 +1,6 @@
 ---
 name: seasonal-gifting-creative-plan
-description: "A creative plan for one gifting season (Diwali, Raksha Bandhan, Black Friday, Christmas, Valentine's Day or Mother's Day): the ad concepts for each phase, the full asset list by channel and size, and every deadline worked back from the real last day to order for on-time delivery. Sets the cutoff from courier lanes and packing capacity, checks gifting stock and the offer's break-even, writes concepts for the giver rather than the user, switches messages after the cutoff to options that still arrive, and dates every brief, asset and go-live. Use six to ten weeks before a gifting date, or when last season's ads promised delivery the store could not keep."
+description: "A creative plan for one gifting season (Black Friday and Cyber Monday, Christmas and the winter holidays, Valentine's Day, Mother's Day, Father's Day, Lunar New Year, Eid or a local festival): the ad concepts for each phase, the full asset list by channel and size, and every deadline worked back from the real last day to order for on-time delivery. Sets the cutoff from courier lanes and packing capacity, checks gifting stock and the offer's break-even, writes concepts for the giver rather than the user, switches messages after the cutoff to options that still arrive, and dates every brief, asset and go-live. Use six to ten weeks before a gifting date, or when last season's ads promised delivery the store could not keep."
 ---
 
 # Gifting season creative plan
@@ -26,7 +26,7 @@ description: "A creative plan for one gifting season (Diwali, Raksha Bandhan, Bl
 Required:
 
 1. **The season and gift date** (festival dates move each year; check the official calendar for this year).
-2. **Delivery times by zone** from the courier or 3PL: pickup to delivery days for the slowest lane the store sells to, and any published peak cutoffs (US carriers publish holiday deadlines; Indian couriers announce pre-festival slowdowns).
+2. **Delivery times by zone** from the courier or 3PL: pickup to delivery days for the slowest lane the store sells to, and any published peak cutoffs (most national carriers, such as USPS, UPS, FedEx, Royal Mail, Canada Post and Australia Post, publish holiday deadlines; many couriers also announce pre-holiday or pre-festival slowdowns).
 3. **Packing capacity**: orders a day the team or 3PL can pack at peak.
 4. **Stock by SKU** and inbound dates (Shopify inventory export, supplier dates).
 5. **Gross profit per purchase** for gifting SKUs and bundles (`store-meta-math`), and the planned offer.
@@ -47,7 +47,7 @@ If courier times are unknown, ask the courier or use the slowest time in the las
 
 ### 1. Work out the real last order date
 
-Last order date = gift date minus slowest common delivery days minus packing days at peak minus a buffer of 1 to 2 days (practitioner default, test it). Write a separate date for each zone if they differ a lot (metro and rest of India; US ground and express). Show a specific arrival date on ads and the product page where the store can keep it; a clear date lifts conversion, but only if it is usually beaten [CXP-0010].
+Last order date = gift date minus slowest common delivery days minus packing days at peak minus a buffer of 1 to 2 days (practitioner default, test it). Write a separate date for each zone if they differ a lot (big cities and remote areas; ground and express; domestic and cross-border). Show a specific arrival date on ads and the product page where the store can keep it; a clear date lifts conversion, but only if it is usually beaten [CXP-0010].
 
 ### 2. Split the season into four phases
 
@@ -65,16 +65,16 @@ Many brands also add a fifth phase for self-gifting after the date. After Christ
 The buyer is the giver, not the user. Concepts per phase:
 
 - **Recipient** ("for a mother who never buys herself anything"); products that suit "for me or for you" do best here [PRD-0013].
-- **Budget band** (under 1,000 rupees, under 50 dollars).
+- **Budget band** in the store's own currency (under 25, under 50, under 100).
 - **Ease**: gift wrap, a message card, delivery to another city, returns for the recipient.
-- **The moment**: the giver opening the box with the recipient, the call home on Raksha Bandhan.
+- **The moment**: the giver opening the box with the recipient, the video call home on a holiday morning.
 - **Deadline**: the real order-by date for that zone.
 
 A gift with purchase can lift contribution per order when the gift costs little and is valued highly [OFF-0007]. Build an offer ladder in advance if the store might react during the peak [OFF-0068]. Keep evergreen ads running through a big sale and add offer-badged copies rather than replacing everything [MCR-0069]. Owning one cultural date each quarter can lift demand beyond the big sale days [EML-0055].
 
-India note: Raksha Bandhan and Diwali gifts often ship to another city; lead with delivery to that city. Push prepaid for gifts: a COD parcel the recipient did not expect is often refused, which adds return-to-origin cost. Corporate Diwali orders need GST invoices; hand those to `corporate-gifting-sales-pitch`.
+Delivery note: many holiday gifts ship to another city or country; lead with delivery to the recipient's address and gift notes with no prices shown. Take payment at checkout for gifts: where the store offers pay on delivery, a parcel the recipient did not expect is often refused, which adds two-way shipping cost. Corporate holiday orders need proper tax invoices (VAT or sales tax as the market needs); hand those to `corporate-gifting-sales-pitch`.
 
-US note: Black Friday buyers are often self-gifting; Christmas buyers need carrier deadlines; Valentine's and Mother's Day are short, so express shipping matters.
+Season notes: Black Friday and Cyber Monday buyers are often self-gifting; Christmas buyers need carrier deadlines, and cross-border gifts need earlier cutoffs plus duties paid up front so the recipient is not charged; Valentine's, Mother's and Father's Day are short, so express shipping matters. Festival dates such as Lunar New Year, Eid or Hanukkah move each year; check them for the market.
 
 ### 4. Build the asset list
 
@@ -97,7 +97,7 @@ Sale weeks bend ad-level results toward whichever product was discounted; read c
 - Concepts speak to the giver: recipient, budget, ease, moment or deadline.
 - The offer's break-even is computed for each depth.
 - Every asset has a size, channel, owner and due date.
-- India plans push prepaid for gifts; corporate orders are handed off.
+- Gift orders are paid at checkout where pay on delivery is offered; corporate orders are handed off.
 
 ## Output
 
@@ -117,7 +117,7 @@ Sale weeks bend ad-level results toward whichever product was discounted; read c
 - **Nothing to sell after the cutoff.** Step 2 plans that phase in advance.
 - **Ads aimed at the user, not the giver.** Step 3 writes for the giver.
 - **Assets made the week they run.** Step 5 dates every brief and asset backwards.
-- **COD gifts that get refused.** Step 3 pushes prepaid for gifts in India.
+- **Pay-on-delivery gifts that get refused.** Step 3 takes payment at checkout for gifts.
 - **Judging creative on sale-week returns.** Step 6 reads at ad-set level.
 
 ## Sources
@@ -136,4 +136,8 @@ Sale weeks bend ad-level results toward whichever product was discounted; read c
 - OPS-0019: selling out early can hurt the rest of the season.
 - PRD-0013: "for me or for you" gifting demand.
 
-What makes this skill ours: the plan is worked back from a last order date built on the store's slowest courier lane and real peak packing, not a calendar date; after-cutoff creative is made in advance so the store keeps selling things that still arrive; concepts speak to the giver; and India gifting pushes prepaid to avoid refused COD parcels, with corporate GST orders handed to their own skill.
+What makes this skill ours: the plan is worked back from a last order date built on the store's slowest courier lane and real peak packing, not a calendar date; after-cutoff creative is made in advance so the store keeps selling things that still arrive; concepts speak to the giver; and gifts are paid at checkout to avoid refused parcels, with corporate orders and their tax invoices handed to their own skill.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Key gifting dates are Diwali, Raksha Bandhan and wedding season. Raksha Bandhan and Diwali gifts often ship to another city, so lead with delivery to that city and set separate cutoffs for metros and the rest of India. Push prepaid for gifts: a COD parcel the recipient did not expect is often refused, which adds RTO cost. Corporate Diwali orders need GST invoices. Budget bands work in rupees (under 1,000 rupees).

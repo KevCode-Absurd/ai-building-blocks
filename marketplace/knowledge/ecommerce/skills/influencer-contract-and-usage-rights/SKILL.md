@@ -28,8 +28,8 @@ Required:
 1. **Deal summary** from outreach: creator, platform, tier, fee or commission, deliverables discussed.
 2. **Ad plan**: will the content run as ads, on which platforms, for how long.
 3. **Approved claims list** for the product, from `check-ad-copy-for-policy-and-claims`.
-4. **Market** of the creator and of the buyers (India, US, both).
-5. **Payment route** and tax details the store needs (invoice, GSTIN or PAN in India; W-9 in the US).
+4. **Market** of the creator and of the buyers (US, UK, EU, Australia or elsewhere).
+5. **Payment route** and tax details the store needs (invoice, VAT number in the UK and EU, ABN in Australia, W-9 in the US).
 
 Optional: the creator's own contract or rate card; past agreements to bring into the rights register.
 
@@ -40,7 +40,7 @@ Access: none for drafting. Sending terms to a creator, signing and paying are cl
 1. **Fee within the profit cap.** The total (fee + usage + exclusivity + product) sits within the cap from `find-and-vet-influencers`. Fail: cut usage scope or switch to commission.
 2. **Ownership understood.** In the US the creator owns what they make; a paid video becomes the brand's only through a signed written agreement, so the contract must grant a licence or an assignment [ORG-6421]. Fail: no ad use until signed.
 3. **Claims are backed.** Every claim the creator may say is on the approved list. Endorsements must reflect the creator's honest view and real use [MCR-6025]. Fail: remove the claim.
-4. **Category rules.** In India, health and finance creators giving advice must hold and state a qualification [ORG-6420]. Fail: limit the brief to showing the product.
+4. **Category rules.** Some markets require health and finance creators who give advice to hold and state a qualification; check your market's rules. Fail: limit the brief to showing the product.
 
 ## Steps
 
@@ -75,15 +75,15 @@ Only if needed, and narrow: named competitor brands or one product category, for
 ### 5. Disclosure clause
 
 - **US:** the relationship stated in the post in plain words, early and on screen and spoken in video; platform labels alone are not enough [ORG-6405].
-- **India:** an ASCI label (Ad, Advertisement, Sponsored, Collaboration, Partnership, Employee, Free gift) upfront, kept on screen for the required time [ORG-6406]; live streams announce it at the start and end [ORG-6420].
-- **Both:** the creator turns on the platform's paid partnership tool as well. The store checks every post and asks for fixes; the creator agrees to edit within 24 hours. The advertiser has a duty to train and monitor [CXP-6303].
+- **UK:** a clear label such as "Ad" up front, before people engage, on screen long enough to read; platform labels alone may not be enough. **EU and other markets:** use the label your market's ad rules require and keep it on screen for any required time; live streams announce it at the start and end.
+- **All markets:** the creator turns on the platform's paid partnership tool as well. The store checks every post and asks for fixes; the creator agrees to edit within 24 hours. The advertiser has a duty to train and monitor [CXP-6303].
 
 ### 6. Payment terms
 
 - Fee, currency, and split (practitioner default: 50% on signing, 50% on going live, or 100% on going live for small fees).
 - Commission rate, which orders count, holding period until the return window closes, and that refunded orders cancel commission.
 - Usage renewal price set now.
-- **India:** GST invoice if the creator is registered; TDS on fees as the accountant advises; products the creator keeps may need TDS under Section 194R [FIN-6423].
+- **UK, EU, Australia and elsewhere:** a VAT or goods and services tax invoice if the creator is registered; ask the accountant whether withholding tax or reporting applies to fees and to products the creator keeps.
 - **US:** W-9 before first payment; the store may need to issue Form 1099. Through Shopify Collabs, a missing requested W-9 caps payouts at 599.99 dollars a year [ORG-6422].
 
 ### 7. Cancellation, takedown and conduct
@@ -145,13 +145,18 @@ Signed: [no / date]
 
 - ORG-6421: the creator owns commissioned work unless a signed writing says otherwise.
 - MCR-6025: endorsements must be honest and from real use.
-- ORG-6420: ASCI live-stream labels and health influencer qualifications.
 - ADC-6081: creators grant and can revoke partnership ad permission.
 - ORG-0033: flat fees for paid use, never a share of spend.
 - ORG-6405: FTC disclosure placement and wording.
-- ORG-6406: ASCI permitted labels and on-screen durations.
 - CXP-6303: advertisers must train and monitor rewarded endorsers.
-- FIN-6423: India TDS on products creators keep.
 - ORG-6422: Collabs W-9 payout cap and tax forms.
 
-What makes this skill ours: each usage right is bought separately with an end date, so the store pays only for what the ad plan needs; a rights register stops ads running past their licence; the disclosure clause is written for the buyer's market (India or US), not a generic hashtag; and tax steps cover both GST and TDS in India and W-9 and 1099 in the US.
+What makes this skill ours: each usage right is bought separately with an end date, so the store pays only for what the ad plan needs; a rights register stops ads running past their licence; the disclosure clause is written for the buyer's market, not a generic hashtag; and tax steps cover VAT or goods and services tax invoices, W-9 and 1099 in the US, and any local withholding.
+
+## Selling in India
+
+- Disclosure: an ASCI label (Ad, Advertisement, Sponsored, Collaboration, Partnership, Employee, Free gift) upfront, kept on screen for the required time [ORG-6406]; live streams announce it at the start and end [ORG-6420].
+- Health and finance creators giving advice must hold and state a qualification [ORG-6420].
+- Tax details: GSTIN or PAN. A GST invoice if the creator is registered; TDS on fees as the accountant advises; products the creator keeps may need TDS under Section 194R [FIN-6423].
+
+Sources: ORG-6420 (ASCI live-stream labels and health influencer qualifications); ORG-6406 (ASCI permitted labels and on-screen durations); FIN-6423 (India TDS on products creators keep).

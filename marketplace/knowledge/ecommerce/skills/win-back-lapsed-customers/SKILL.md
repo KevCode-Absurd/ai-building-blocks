@@ -1,6 +1,6 @@
 ---
 name: win-back-lapsed-customers
-description: "A win-back plan that names who has lapsed using the store's own reorder gap, splits them into groups by past value and the reason they may have left, sets the most each group can be offered while the returning order still makes gross profit, and fixes the cutoff where the store stops marketing to them and moves them to sunset. Includes a 10% holdout so the store sees real returns, not attributed revenue, plus India notes for COD and RTO buyers and WhatsApp, and US notes for SMS. Use when repeat orders slip, when a big list of past buyers has gone quiet, or before sending a 'we miss you' discount to everyone."
+description: "A win-back plan that names who has lapsed using the store's own reorder gap, splits them into groups by past value and the reason they may have left, sets the most each group can be offered while the returning order still makes gross profit, and fixes the cutoff where the store stops marketing to them and moves them to sunset. Includes a 10% holdout so the store sees real returns, not attributed revenue, plus channel notes for email, SMS and WhatsApp, and rules for buyers who refused parcels. Use when repeat orders slip, when a big list of past buyers has gone quiet, or before sending a 'we miss you' discount to everyone."
 ---
 
 # Win back lapsed customers
@@ -28,7 +28,7 @@ Required (read access, level 1):
 1. **Shopify order export**, 24 months: Name, Email, Phone, Created at, Financial Status, Fulfillment Status, Subtotal, Discount Code, Discount Amount, Refunded Amount, Lineitem sku, Payment Method, Tags, Cancelled at.
 2. **Gross profit per order** from `build-sku-profit-sheet`.
 3. **Email and SMS engagement** per profile: last open (non-privacy), last click, last site visit, consent status, from the email tool's profile export.
-4. **Returns, complaints and RTO list**: who returned, complained, charged back or refused a COD parcel, with dates.
+4. **Returns, complaints and failed delivery list**: who returned, complained, charged back or refused a parcel, with dates.
 
 Optional: `rfm-customer-segments` sheet, product reviews by customer, WhatsApp opt-in list.
 
@@ -55,9 +55,9 @@ Compute the median days between first and second order (G). A customer is lapsed
 | B. Repeat lapsed | 2 or more orders, the rest | Proven repeaters |
 | C. One-time full price | 1 order, no discount code | Liked the product enough to pay full price |
 | D. One-time discount | 1 order, with a discount code | Discount-led buyers often have worse lifetime value [CXP-0016] |
-| E. Fix first | Returned, complained, charged back, or 2 or more refused COD parcels | Service or fraud issue, not a marketing problem |
+| E. Fix first | Returned, complained, charged back, or 2 or more refused parcels | Service or fraud issue, not a marketing problem |
 
-Group E gets no marketing. Unresolved complaints get a support follow-up; repeat COD refusers in India are excluded from win-back and offered prepaid-only if they return on their own.
+Group E gets no marketing. Unresolved complaints get a support follow-up; repeat parcel refusers are excluded from win-back and offered pay upfront only if they return on their own.
 
 ### 3. Price the offer ladder per group
 
@@ -87,8 +87,8 @@ Three messages per lapse, spaced about a week apart, is the usual baseline [EML-
 
 Exit on any order, click to preferences, or new support ticket.
 
-- **SMS (US):** one text alongside step 2 for SMS subscribers, at about twice their average days between orders [EML-0029].
-- **WhatsApp (India):** one marketing template alongside step 2 for opted-in buyers; costs per message, so run the cost check first.
+- **SMS (US, Canada, UK, Australia and other SMS markets):** one text alongside step 2 for SMS subscribers, at about twice their average days between orders [EML-0029].
+- **WhatsApp (where buyers use it, for example much of Europe, Latin America and Asia):** one marketing template alongside step 2 for opted-in buyers; costs per message, so run the cost check first.
 - **List that has been silent for months:** expect an unsubscribe spike on the first send, then it settles [EML-0032]. Send to the most recent lapsed first, in slices of about 10% added to normal sends [EML-0052].
 
 ### 5. Fix the cutoff where the store stops
@@ -145,4 +145,9 @@ Pick 10% of each group at random and send them nothing. After 60 days compare th
 - CXP-0016: discount-acquired buyers repeat less.
 - OFF-0065: discounts raise break-even sharply.
 
-What makes this skill ours: the lapse line comes from the store's own reorder gap; every offer is capped so the returning order still earns gross profit; complainers, returners and repeat COD refusers are fixed or excluded instead of discounted; and success is read from a holdout, not attributed revenue.
+What makes this skill ours: the lapse line comes from the store's own reorder gap; every offer is capped so the returning order still earns gross profit; complainers, returners and repeat parcel refusers are fixed or excluded instead of discounted; and success is read from a holdout, not attributed revenue.
+
+## Selling in India
+
+- Buyers with 2 or more refused COD parcels go to group E; offer them prepaid-only if they return on their own.
+- WhatsApp is often the main win-back channel.

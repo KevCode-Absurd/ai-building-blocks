@@ -58,7 +58,7 @@ Use one source per catalog. Two sources writing the same items create duplicates
 
 Meta needs id, title, description, availability, condition, price, link and image_link, plus one of brand, GTIN or MPN [ADC-6087]. Then check:
 
-- **Price format:** number, space, currency code, no symbol (499.00 INR, 24.99 USD) [ADC-6087].
+- **Price format:** number, space, currency code, no symbol (24.99 USD, 19.95 EUR, 22.00 GBP) [ADC-6087].
 - **Availability:** in stock or out of stock; out-of-stock items stop appearing in ads [ADC-6087]. Confirm that zero inventory in the store turns into out of stock in the catalog.
 - **Link:** the product page on the store's own domain [ADC-6087], live, not a redirect to the home page.
 - **Variants:** each variant its own id, grouped under one item group id, with its own image where colour differs.
@@ -105,10 +105,13 @@ Ad set: Sales objective, Purchase event, 7-day click, product set from step 5, a
 - **Every sale start and end:** run the test on the sale items within an hour of the change.
 - **Monthly:** refresh the margin labels from the profit sheet.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** catalog prices must include GST and match the page; if the store charges a COD fee, the ad price should not promise less than the buyer pays. Use INR in the price field. Exclude products the courier cannot deliver to most pincodes.
-- **US:** catalog price excludes sales tax, which is normal; free shipping claims in overlays must match the live threshold.
+- **Tax in the price:** in the UK, EU, Australia and other markets where shown prices include VAT or similar tax, catalog prices must include it and match the page. In the US and Canada, catalog price excludes sales tax, which is normal.
+- **Currency:** use the currency code of the market the ads target in the price field; for several markets, use a country or language feed per market (Shopify Markets can supply local prices) so each ad shows the price that buyer will pay.
+- **Extra charges:** if the store charges a fee for a payment method (for example pay on delivery) or a handling fee, the ad price should not promise less than the buyer pays.
+- **Delivery:** exclude products the courier cannot deliver to most of the targeted area, and free shipping claims in overlays must match the live threshold for that market.
+- **Language:** titles and descriptions in the languages your buyers use for each market.
 
 ## Checks before you hand it over
 
@@ -157,3 +160,7 @@ Ad set: Sales objective, Purchase event, 7-day click, product set from step 5, a
 - MEA-0037: gross margin from delivered cost.
 
 What makes this skill ours: product sets are cut by gross profit and stock cover, not by collection; a price and stock truth test on a real sample must pass before any ad runs and repeats at every sale change; and catalog spend is capped and read on 7-day click because its reported return leans on buyers who were coming anyway.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Catalog prices must include GST and match the page (for example 499.00 INR); if the store charges a COD fee, the ad price should not promise less than the buyer pays. Exclude products the courier cannot deliver to most pincodes.

@@ -1,0 +1,26 @@
+{
+  "id": "snapchat-ads-media-buyer",
+  "name": "Snapchat ads media buyer",
+  "department": "marketing",
+  "summary": "Plans, runs and improves paid Snapchat campaigns for online stores. Fixes the Snap Pixel and Conversions API, tests vertical video and moves budget to what sells.",
+  "aliases": [
+    "snapchat ads",
+    "snap ads",
+    "snapchat ads manager",
+    "snapchat advertising",
+    "snapchat media buyer",
+    "snap pixel",
+    "snapchat conversions api",
+    "snapchat dynamic ads",
+    "sponsored snaps",
+    "snapchat ads specialist"
+  ],
+  "updated": "2026-11-15",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-15",
+      "note": "First release for online stores and agencies anywhere: objectives, bidding, attribution, Snap Pixel and Conversions API with deduplication, catalogs and Dynamic Ads, formats and safe zones, audiences, creator Paid Partnership ads, the read-only Snapchat Ads MCP Server, age limits, ad review, and disclosure and data rules by market. Built from Snap's developer docs, business pages and ad policies; Help Center pages were confirmed through search results."
+    }
+  ]
+}

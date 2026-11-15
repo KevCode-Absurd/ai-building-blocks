@@ -1,0 +1,126 @@
+{
+  "id": "results-loop",
+  "kind": "continuation",
+  "name": "Watch results, decide, and learn",
+  "goal": "Every launched creative is read at day 1, day 3 and day 7 from the warehouse, gets a scale, hold or cut call using the rule you set before launch, and leaves a dated lesson that the next brief must read.",
+  "starts_from": "A launched job from the Meta launch process (or another channel's launch). Same folder, same creative register entry.",
+  "folder": "creatives",
+  "metrics": [
+    "Main number from context/goals.json, judged only after the minimum spend and days you set.",
+    "Guardrails from context/goals.json (for example cost per purchase and refund rate).",
+    "Learning quality: the share of new briefs whose winning concept matched a lesson in context/learnings.md."
+  ],
+  "stages": [
+    {
+      "id": "day-1",
+      "name": "Day 1: is it delivering?",
+      "agent": "lindsey-meta-media-buyer",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 1,
+      "say": "One day after go-live, checks from the warehouse and the connector that every ad passed review and is spending at the planned pace, with no errors. It does not judge results yet; one day of data is noise.",
+      "needs": [
+        "register.json",
+        "warehouse view ads_daily",
+        "launch-record.md"
+      ],
+      "makes": [
+        "results/day-1.md"
+      ],
+      "done_when": "day-1.md lists each ad's review status, spend against plan and any error with its fix."
+    },
+    {
+      "id": "day-3",
+      "name": "Day 3: early read",
+      "agent": "lindsey-meta-media-buyer",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 2,
+      "say": "Gives an early read on hook rate, click-through rate and cost per result against the account's own history. Changes nothing while ad sets are still learning, unless an ad is clearly burning money with no results, in which case it drafts a pause plan for you.",
+      "needs": [
+        "warehouse views ads_daily and creative_performance"
+      ],
+      "makes": [
+        "results/day-3.md"
+      ],
+      "done_when": "day-3.md compares each ad with the account's history and says whether anything needs action before day 7."
+    },
+    {
+      "id": "readout",
+      "name": "Day 7 readout",
+      "agent": "jared-performance-marketing",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 4,
+      "say": "Reads the result against the decision rule written before launch: scale, hold or cut, quoting the deciding number, its date range and attribution setting. Checks the numbers against shop orders, so a tracking fault is not mistaken for a winner.",
+      "needs": [
+        "warehouse views creative_performance and shop_orders_daily",
+        "context/goals.json",
+        "context/experiments.md"
+      ],
+      "makes": [
+        "results/readout.md"
+      ],
+      "checks": [
+        "numbers-check",
+        "readout-review"
+      ],
+      "done_when": "readout.md gives one call per ad with the deciding number, the rule it met, and the gap between Meta's purchases and shop orders."
+    },
+    {
+      "id": "act",
+      "name": "Act on the call",
+      "agent": "lindsey-meta-media-buyer",
+      "access": "publish",
+      "optional": true,
+      "gate": "none",
+      "say": "For scale or cut calls, shows you a plan: the budget step (no bigger than your limit) or the pause. On your yes it makes the change and reads it back. A hold call needs no plan; it sets the next check date instead.",
+      "needs": [
+        "results/readout.md",
+        "context/limits.json"
+      ],
+      "makes": [
+        "results/act.md"
+      ],
+      "publish": "Through the Meta ads connector: budget changes within your step limit, or pauses. Never deletes.",
+      "done_when": "act.md records the call, the plan code if there was one, and what was read back after the change."
+    },
+    {
+      "id": "learn",
+      "name": "Write down what we learned",
+      "agent": "callum-reporting",
+      "access": "draft",
+      "gate": "none",
+      "say": "Updates the creative register with the final numbers and adds a dated lesson to context/learnings.md: what was tested (angle, hook, format, person, length), what happened, how sure we are, and what to test next. Lessons from too little spend are marked as hunches, not rules. The next intake for any creative must read these.",
+      "needs": [
+        "results/readout.md",
+        "register.json",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "results/learning.md"
+      ],
+      "checks": [
+        "learning-review"
+      ],
+      "done_when": "learning.md holds one lesson with its evidence (number of ads, spend, dates, metric change) and a confidence level, and the same lesson is appended to context/learnings.md."
+    }
+  ],
+  "checks": {
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/results/readout.md",
+      "passes_when": "every rate and total in the readout recomputes from its own inputs"
+    },
+    "readout-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "each number matches the warehouse for the stated dates, and the call follows the rule written before launch"
+    },
+    "learning-review": {
+      "kind": "reviewer",
+      "agent": "tendai-ad-creative",
+      "passes_when": "the lesson is supported by its evidence, its confidence fits the spend and sample, and it is written so a brief writer can use it"
+    }
+  }
+}

@@ -70,7 +70,7 @@
       "task": "Build ads from real customer reviews",
       "kind": "ad_creative",
       "items": [
-        { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When you have reviews and a brand file and want a buyer brief, an angle and checked copy" },
+        { "ref": "library:review-ad-copy", "type": "workflow", "use": "build", "when": "When you have reviews and an org context and want a buyer brief, an angle and checked copy" },
         { "ref": "library:customer-quote-image-ad", "type": "skill", "use": "build", "when": "When one review line is strong enough to be the whole image ad" },
         { "ref": "library:quote-video-ad-script", "type": "skill", "use": "explore", "when": "When the reviews would work better spoken, to get a video script with a source for every line" },
         { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before a quote runs, to sort each claim into fine, needs proof or cut" }

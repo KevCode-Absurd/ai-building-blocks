@@ -56,7 +56,7 @@ Score each candidate 1 to 3 on four questions, and pick the highest. Ties go to 
 | Do we have the creative? | Vertical video, static pins, longer demo video, or text-led posts |
 | Can we track it? | Pixel plus server events available, Shopify app or tag manager path |
 
-Channel fit varies by buyer, not by hype: in one large apparel brand, a mobile app network matched Meta spend in gift season while TikTok never scaled for menswear [ADC-0054]. India: check the audience estimate in each regional language the store sells in.
+Channel fit varies by buyer, not by hype: in one large apparel brand, a mobile app network matched Meta spend in gift season while TikTok never scaled for menswear [ADC-0054]. Check the audience estimate in each language your buyers use, in each country you test.
 
 ### 2. Set the maximum loss and budget
 

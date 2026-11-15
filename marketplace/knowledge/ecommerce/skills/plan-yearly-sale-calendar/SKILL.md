@@ -1,6 +1,6 @@
 ---
 name: plan-yearly-sale-calendar
-description: "A twelve-month promotion calendar for a store: every sale and full-price moment by date, the mechanic and depth of each, the products in and out, the stock that must be on hand and the purchase-order date to get it there, and a yearly discount budget that caps how much gross profit promotions may give away. Built from the store's own weekly sales history, each product's discount ceiling, supplier lead times, cash and the India and US retail calendars. Limits sitewide sales, keeps 'was' prices and free offers legal, and plans full-price moments between sales so buyers do not learn to wait. Use at the start of a year or season, when the store runs a sale every month, or when stock keeps arriving after the sale it was bought for."
+description: "A twelve-month promotion calendar for a store: every sale and full-price moment by date, the mechanic and depth of each, the products in and out, the stock that must be on hand and the purchase-order date to get it there, and a yearly discount budget that caps how much gross profit promotions may give away. Built from the store's own weekly sales history, each product's discount ceiling, supplier lead times, cash and the retail calendars of each market the store sells to. Limits sitewide sales, keeps 'was' prices and free offers legal, and plans full-price moments between sales so buyers do not learn to wait. Use at the start of a year or season, when the store runs a sale every month, or when stock keeps arriving after the sale it was bought for."
 ---
 
 # Yearly sale calendar
@@ -41,7 +41,7 @@ If history is under 6 months, plan one quarter only and mark the rest "draft". C
 1. **Ceilings exist.** Every product in a sale has a discount ceiling from delivered cost. Fail: no depth is planned for that product.
 2. **Cash and stock can carry the peaks.** The biggest event's stock bill must fit the cash plan in the month it is paid. Fail: shrink the event or move the PO.
 3. **Capacity.** Peak orders per day must fit the warehouse and support team, with a written pick-time promise from the 3PL [OPS-0015]. Fail: cap the event or add staff.
-4. **Legal timing.** A "was" price needs a real period at that price before the sale [OFF-6145]. In the US, one product size should not carry a free-gift offer more than 6 months in any 12 [OFF-6500].
+4. **Legal timing.** A "was" price needs a real period at that price before the sale [OFF-6145]. In the US, one product size should not carry a free-gift offer more than 6 months in any 12 [OFF-6500]. In the EU, a price cut must be shown against the lowest price of the prior 30 days, and UK rules expect the 'was' price to be a genuine, recent selling price.
 
 ## Steps
 
@@ -53,8 +53,10 @@ From the order export, chart weekly gross profit (not revenue) and mark every pr
 
 Lay out the year by week and add:
 
-- **India:** Republic Day, Holi, end-of-season sales, Independence Day, Raksha Bandhan, Navratri and Dussehra, Diwali, wedding season, and the big marketplace festival sales if the store sells there (dates change each year; confirm them).
+- **Every market:** national holidays, local festivals, end-of-season sales, and the big marketplace event sales if the store sells there (dates change each year; confirm them).
 - **US:** Valentine's Day, Mother's Day, Memorial Day, Fourth of July, Prime Day if on Amazon, Labor Day, Black Friday to Cyber Monday, holiday shipping cutoffs, after-Christmas.
+- **UK and EU:** Valentine's Day, Mothering Sunday (UK, March) and Mother's Day (May in many EU countries), Easter, summer and winter sales (set dates in some countries, such as France), Prime Day if on Amazon, Singles' Day, Black Friday to Cyber Monday, Christmas postal cutoffs, Boxing Day.
+- **Canada and Australia:** Boxing Day in both; Thanksgiving in October in Canada; end of financial year sales in June and Click Frenzy in Australia.
 - The store's own dates: founding day, launches, restocks.
 
 Keep only the dates where the store's buyers actually buy (check last year's weeks), not every holiday.
@@ -139,3 +141,7 @@ Add each event's expected discount money (discount per order x expected orders) 
 - OFF-6145, OFF-6500: genuine former prices; US free-offer frequency.
 
 What makes this skill ours: the year gets a discount budget measured in gross profit with a running total, not a list of holidays; every event is checked against each product's own ceiling; stock is worked back to a PO date and a capacity check; and full-price moments are planned between sales so the regular price stays real and legal.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Plan Republic Day, Holi, end-of-season sales, Independence Day, Raksha Bandhan, Navratri and Dussehra, Diwali, wedding season, and the big marketplace festival sales if the store sells there (dates change each year; confirm them).

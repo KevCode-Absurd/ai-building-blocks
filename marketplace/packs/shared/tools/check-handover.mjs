@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Hand-over check (WORK-METHOD.md, step 5): run it on the finished deliverable before you hand it over.
+// Hand-over check (METHOD.md, step 5): run it on the finished deliverable before you hand it over.
 //
 //   node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]
 //

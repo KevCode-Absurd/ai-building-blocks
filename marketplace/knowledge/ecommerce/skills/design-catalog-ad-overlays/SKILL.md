@@ -91,7 +91,7 @@ Template ideas: a thin brand-colour border with logo; a solid bottom bar with th
 
 ### 5. Ratings: the strict rule
 
-A rating overlay shows only that product's own reviews. It never borrows a parent product's rating for a variant with different materials, never shows a store-wide average on a product, and never rounds 4.4 up to 4.5. Reviews must be real buyer reviews; fake or AI-made reviews, and hiding negative ones, are banned in the US [MCR-6045]. Under about 80 reviews, count still moves conversion; beyond that it barely matters, so do not pad counts [LPG-0062].
+A rating overlay shows only that product's own reviews. It never borrows a parent product's rating for a variant with different materials, never shows a store-wide average on a product, and never rounds 4.4 up to 4.5. Reviews must be real buyer reviews; fake or AI-made reviews, and hiding negative ones, are banned in the US [MCR-6045] and under UK and EU consumer law. Under about 80 reviews, count still moves conversion; beyond that it barely matters, so do not pad counts [LPG-0062].
 
 ### 6. Audit every product
 
@@ -103,10 +103,10 @@ Run the audit sheet over the whole catalog, not a sample. For each product, mark
 - Custom labels for bestseller and rating recomputed weekly.
 - After a sale ends, remove sale_price the same day even if dates are set [ADC-6047].
 
-### India and US notes
+### Notes by market
 
-- **India:** feed price must be the GST-inclusive selling price, and for packaged goods it must not exceed the MRP printed on the pack. A "Free delivery" frame is false if COD carries a fee; say "Free prepaid delivery" only if that is the real rule.
-- **US:** a strikethrough price must be a price the store really charged before; check Shopify compare-at history. State sales tax is added at checkout, which is normal.
+- **Tax and fees:** in the UK, EU and Australia the feed price must include VAT or local tax; in the US and Canada, sales tax is added at checkout, which is normal. A "Free delivery" frame is false if any payment method or area carries a delivery fee; say "Free delivery over [amount]" or name the real rule.
+- **Was prices:** a strikethrough price must be a price the store really charged before; check Shopify compare-at history. In the EU it must be the lowest price of the last 30 days.
 
 ## Checks before you hand it over
 
@@ -158,3 +158,8 @@ Run the audit sheet over the whole catalog, not a sample. For each product, mark
 - LPG-0062: review count matters up to about 80.
 
 What makes this skill ours: every badge is a written rule tied to a feed field, so it switches off by itself when it stops being true; the Google image stays clean while Meta gets the frame; sale prices cannot outlive the sale because dates are a gate; and loss-making products are kept out of prospecting before any design work starts.
+
+## Selling in India
+
+- The feed price must be the GST-inclusive selling price, and for packaged goods it must not exceed the MRP printed on the pack.
+- A "Free delivery" frame is false if COD carries a fee; say "Free prepaid delivery" only if that is the real rule.

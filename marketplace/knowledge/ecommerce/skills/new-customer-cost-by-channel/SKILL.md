@@ -25,7 +25,7 @@ description: "A table of what each new customer really costs by channel (Meta, G
 
 Required (read access, level 1):
 
-1. **Shopify order export**, last 6 months: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Refunded Amount, Payment Method, Cancelled at, Lineitem sku, Lineitem quantity. Add delivery status for COD orders on India stores.
+1. **Shopify order export**, last 6 months: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Refunded Amount, Payment Method, Cancelled at, Lineitem sku, Lineitem quantity. Add delivery status for pay on delivery orders where the store offers it.
 2. **Order source per first order**, one of: Shopify's marketing attribution report (orders by channel and UTM), or a GA4 exploration of purchases by first user source and medium with transaction ID, joined to the Shopify order name.
 3. **Spend by channel by month**, from each ads manager, plus creator fees, product seeding cost and agency fees by channel.
 4. **Gross profit per order** from delivered costs (from `build-sku-profit-sheet` or `store-meta-math`).
@@ -37,7 +37,7 @@ If order source is missing, use the survey alone and mark every cost "survey onl
 ## Before you start: the gates
 
 1. **Gross profit per order is known** from delivered cost to the door [MEA-0037]. Fail: compute it first; costs mean nothing without it.
-2. **New customers are counted correctly.** A new customer is an email or phone with no earlier order. Remove test, staff, cancelled and fully refunded orders. India: remove COD orders that were returned to origin; they are not customers. Fail: fix the list before any cost.
+2. **New customers are counted correctly.** A new customer is an email or phone with no earlier order. Remove test, staff, cancelled and fully refunded orders. Remove orders that failed delivery or were refused (common with pay on delivery); they are not customers. Fail: fix the list before any cost.
 3. **UTM tags are consistent.** Values are case sensitive, so "Meta" and "meta" split into two rows [MEA-6221]. Fail: merge spellings by hand and flag the fix.
 4. **Windows match.** Platforms report on different default windows: Pinterest 30-day click [MEA-6100], Snap 28-day swipe [MEA-6101], Reddit 28-day click [MEA-6102], Meta read on 7-day click [MEA-0042]. Fail: re-pull platform numbers on the same click window, or leave the platform view out.
 
@@ -60,7 +60,7 @@ Keep email, SMS and WhatsApp out of acquisition for first orders unless the sign
 
 ### 3. Load cost per channel
 
-All money spent to win customers in that channel: ad spend, creator fees, free product at landed cost, agency or freelancer fees, and app fees tied to it. India: include GST on ad spend if the store cannot claim it back.
+All money spent to win customers in that channel: ad spend, creator fees, free product at landed cost, agency or freelancer fees, and app fees tied to it. Include VAT or sales tax on ad spend if the store cannot claim it back.
 
 ### 4. Work out three views of cost per new customer
 
@@ -100,7 +100,7 @@ A cut on a small upper-funnel channel waits for a holdout test (`measure-channel
 
 ## Checks before you hand it over
 
-- New customers exclude test, cancelled, refunded and RTO orders.
+- New customers exclude test, cancelled, refunded and failed-delivery orders.
 - Each channel's cost includes creator fees, seeded product and agency fees.
 - Platform numbers use the same click window as the store's standard.
 - Every cost is shown as a range with its views named.
@@ -134,7 +134,7 @@ Plus a monthly trend tab: blended new-customer cost and acquisition MER for the 
 - **Platform purchases as new customers.** Most include repeat buyers; step 4 counts new customers from store orders.
 - **Leaving out creator and agency costs.** Step 3 loads every cost, so creators are not falsely cheap.
 - **Comparing windows.** A 30-day click Pinterest report against a 7-day click Meta report flatters Pinterest; gate 4 matches them.
-- **Counting COD orders that never arrived.** Gate 2 removes RTO.
+- **Counting orders that never arrived.** Gate 2 removes failed deliveries.
 - **Using lifetime value from young cohorts.** Step 6 waits until cohorts are 90 days old.
 - **Cutting a channel whose lift shows elsewhere.** Step 7 sends small upper-funnel channels to a holdout first.
 
@@ -154,4 +154,8 @@ Plus a monthly trend tab: blended new-customer cost and acquisition MER for the 
 - MEA-6100, MEA-6101, MEA-6102: Pinterest, Snap and Reddit default windows.
 - MEA-6221: UTM values are case sensitive.
 
-What makes this skill ours: new customers are counted from the store's own first orders with RTO removed; every channel gets a range from three views instead of one number; creator fees and seeded product count as acquisition cost; and verdicts use 90-day gross profit only from mature cohorts, with small upper-funnel channels sent to a holdout before any cut.
+What makes this skill ours: new customers are counted from the store's own first orders with failed deliveries removed; every channel gets a range from three views instead of one number; creator fees and seeded product count as acquisition cost; and verdicts use 90-day gross profit only from mature cohorts, with small upper-funnel channels sent to a holdout before any cut.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Add delivery status for COD orders, remove COD orders that were returned to origin (RTO), and include GST on ad spend if the store cannot claim it back.

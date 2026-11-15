@@ -55,7 +55,7 @@ Write the chain in three links: what causes the problem, what the product does, 
 
 - Every link has a source that says what the script will say.
 - It is true of this product, not only the ingredient in general; a mechanism claim needs a real product difference [AVT-0014].
-- No link becomes a disease, cure or drug claim [MCR-0073]. In India, check the Drugs and Magic Remedies Act and the ASCI code.
+- No link becomes a disease, cure or drug claim [MCR-0073]. Check your market's health claim and ad disclosure rules (for example FTC and FDA rules in the US, the ASA's CAP code and MHRA in the UK, the EU health claims rules, TGA in Australia).
 - A "why now" or "modern life broke it" story needs evidence the product addresses that cause [MCR-0004]; "natural" or "how people lived long ago" is not proof.
 
 Rewrite a failing link to what the source supports, or drop the angle. General practice, not a legal ruling.
@@ -162,3 +162,7 @@ Curious openings need an educational page [MCR-0024]; complex products often con
 - [MCR-0013]: 2 to 4 hook variants.
 
 What makes this skill ours: nothing is produced until each mechanism link has a primary source that applies to this product; angles must pass an interest test that catches pitches in disguise; the voice is licensed, sized from measured pace and approved before video spend; and visuals get a second fact-check before the film is judged on store orders.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Check the Drugs and Magic Remedies Act and the ASCI code before any health or body claim goes live.

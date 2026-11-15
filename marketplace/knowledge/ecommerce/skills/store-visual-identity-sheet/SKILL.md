@@ -101,9 +101,16 @@ A short, plain block any generator or freelancer brief can paste: palette as nam
 
 One table: issue, where it appears, who sees it (all buyers, phone only, one page), fix, effort in hours, and whether it needs a developer. Order: contrast fails on the add-to-cart and price first, then image weight on top product pages, then button and colour merges, then the rest.
 
-### India and similar markets
+Before handover, run two quick tests of the sheet itself:
 
-Phone traffic is often well above desktop, so judge every rule at 360 px wide as well as 390 px. If the store shows COD or UPI badges near the price, add them to the badge rules so they stay one style.
+- **Feeling at a glance.** Write the one feeling the store should give in a single word (for example calm, playful, expert). Show the homepage and the top product page for three seconds each to five people outside the team and ask for one word. If most words miss the feeling, find the colour that fights it (a loud sale red on a calm brand, a cold grey on a warm one) and list it as a fix: either push the main colour toward the feeling or cut the colour that pulls away. Check the main text and button pair for colour-blind readability as well as contrast.
+- **Stranger test.** Give only the one-page wall sheet to a designer or AI image tool that has never seen the store and ask for one ad layout. If the result needs corrections, the sheet is missing a rule; add it.
+
+### Phone-first markets and payment badges
+
+### Phone-first markets and payment badges
+
+In many markets phone traffic is well above desktop, so judge every rule at 360 px wide as well as 390 px. If the store shows payment badges near the price (buy now pay later, local wallets, pay on delivery where offered), add them to the badge rules so they stay one style.
 
 ## Checks before you hand it over
 
@@ -113,7 +120,8 @@ Phone traffic is often well above desktop, so judge every rule at 360 px wide as
 4. The token file values match the guide exactly (spot-check five).
 5. Image rules state width, file size and the first-screen loading rule.
 6. The fix list is ranked and every fix names who applies it.
-7. Nothing was changed in the theme.
+7. The feeling-at-a-glance and stranger tests were run, and their misses are on the fix list.
+8. Nothing was changed in the theme.
 
 ## Output
 
@@ -130,6 +138,7 @@ Phone traffic is often well above desktop, so judge every rule at 360 px wide as
 - **Forgetting app widgets.** Step 4 includes injected elements that ignore the theme.
 - **Image rules with no weights.** Step 5 sets pixel width and file size.
 - **A sheet without a prompt block.** AI tools drift without one; step 7 writes it.
+- **A sheet nobody tested.** Step 8 checks the feeling at a glance and hands the sheet to a stranger.
 - **Fonts the store cannot use everywhere.** Step 2 checks the licence before the guide sends them to print or ads.
 
 ## Sources
@@ -146,3 +155,7 @@ Phone traffic is often well above desktop, so judge every rule at 360 px wide as
 Platform documentation: WCAG 2.2 contrast criteria 1.4.3 and 1.4.11; Shopify theme file structure (`config/settings_data.json`).
 
 What makes this skill ours: it reads tokens from the published theme's own settings file instead of guessing from screenshots; it checks every real colour pair for contrast and gives a same-hue fix; it treats app widgets and image weight as part of the identity; and it ranks fixes by what buyers on the top-profit product pages see first.
+
+## Selling in India
+
+- COD and UPI badges near the price follow the same badge rules; keep them one style.

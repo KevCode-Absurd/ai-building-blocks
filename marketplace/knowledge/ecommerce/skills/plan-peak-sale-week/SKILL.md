@@ -1,6 +1,6 @@
 ---
 name: plan-peak-sale-week
-description: "A day-by-day operating plan for one big sale (Black Friday and Cyber Monday, Diwali, an end-of-season sale or a brand's own sale day): ad budget by channel per day, which creative runs when, every email, SMS and WhatsApp send, stock and warehouse checks, and written cost guards that say when to scale, hold or cut. Starts from break-even at each discount depth, cash and stock, sets build-up spend weeks before the sale, pre-builds an offer ladder, and ends with an after-sale read on store orders. Use three to six weeks before a peak sale, or when a sale is planned without a budget or a stock check."
+description: "A day-by-day operating plan for one big sale (Black Friday and Cyber Monday, Boxing Day, Singles' Day, a big local festival, an end-of-season sale or a brand's own sale day): ad budget by channel per day, which creative runs when, every email, SMS and WhatsApp send, stock and warehouse checks, and written cost guards that say when to scale, hold or cut. Starts from break-even at each discount depth, cash and stock, sets build-up spend weeks before the sale, pre-builds an offer ladder, and ends with an after-sale read on store orders. Use three to six weeks before a peak sale, or when a sale is planned without a budget or a stock check."
 ---
 
 # Peak sale week plan across channels
@@ -9,7 +9,7 @@ description: "A day-by-day operating plan for one big sale (Black Friday and Cyb
 
 ## When to use
 
-- Black Friday, Cyber Monday, Diwali, Republic Day, Independence Day or a brand sale is three to six weeks away.
+- Black Friday, Cyber Monday, Boxing Day, Singles' Day, Prime Day, a national holiday, a big local festival or a brand sale is three to six weeks away.
 - The discount is chosen but nobody has planned spend, sends and stock day by day.
 - Last year's sale made revenue but lost money, sold out early or broke the warehouse.
 - Ads, email and site banners are run by different people and need one calendar.
@@ -42,7 +42,7 @@ If gross profit at the sale price is missing, stop and get it; a sale cannot be 
 2. **Stock covers the plan.** Each hero SKU must have stock for the sale plus the weeks after, while ads still run. Selling out into December can empty the ad account and force a slow restart [OPS-0019]. Fail: lower that SKU's spend or move it out of the offer.
 3. **Warehouse can ship it.** Forecast peak orders per day against pick and pack capacity. A 24 to 48 hour pick promise can slip to seven days at peak; get the promise in writing [OPS-0015]. Fail: cap daily orders through spend or extend the delivery promise on the site.
 4. **Cash covers build-up spend.** Build-up spend is paid weeks before sale revenue. Fail: shorten the build-up, not the sale.
-5. **Messaging rules.** SMS in India needs DLT-registered templates; WhatsApp marketing needs approved templates and opt-in; US SMS needs consent. Fail: hand off to `sms-and-whatsapp-compliance-setup` and plan email only.
+5. **Messaging rules.** WhatsApp marketing needs approved templates and opt-in; marketing SMS needs prior consent in the US, UK, EU, Canada and Australia, and some countries also need registered sender IDs or templates. Fail: hand off to `sms-and-whatsapp-compliance-setup` and plan email only.
 
 ## Steps
 
@@ -58,7 +58,7 @@ Write the calendar backward from the sale end:
 | Last chance | final 24 to 48 hours | Real deadline only |
 | After-sale | 1 to 3 weeks | Shipping, returns, cheaper media |
 
-India: Diwali moves each year; set the sale to end before the last courier cutoff that still delivers before the festival, and plan gifting buyers earlier. US: Black Friday to Cyber Monday, then Christmas shipping cutoffs.
+Festival and holiday dates move each year in many markets; set the sale to end before the last courier cutoff that still delivers before the day, and plan gifting buyers earlier. US, UK, EU, Canada and Australia: Black Friday to Cyber Monday, then Christmas shipping cutoffs, then Boxing Day in the UK, Canada and Australia.
 
 ### 2. Pre-build the offer ladder
 
@@ -66,7 +66,7 @@ Decide the main offer and two fallbacks (deeper discount, gift, free shipping, b
 
 ### 3. Set build-up and sale budgets
 
-- Do not go dark before the sale. One agency puts 31 to 43% of September-to-December spend into September and October, with November near 1.8 times October [ADC-0048]. Use this for Black Friday stores with cash to fund it; Diwali stores apply the same idea to the 3 to 4 weeks before.
+- Do not go dark before the sale. One agency puts 31 to 43% of September-to-December spend into September and October, with November near 1.8 times October [ADC-0048]. Use this for Black Friday stores with cash to fund it; Stores whose peak is a different season or festival apply the same idea to the 3 to 4 weeks before.
 - Build-up spend looks weak in real time: in November the gap between 1-day and 30-day click revenue roughly doubles [ADC-0046], and lift from pre-sale spend keeps showing after it stops [MEA-0034]. Judge build-up on new customers and list growth, not same-day ROAS.
 - Sale-day budget is a ceiling, not a target. Peak reach is rarely exhausted; a stall usually means offer fatigue [ADC-0044].
 - Google often gets less efficient over Black Friday while Meta improves; prepare feeds and promotions rather than raising Google on inflated ROAS [GAD-0050].
@@ -88,11 +88,11 @@ Per day: email to which segment, SMS or WhatsApp to which opted-in segment, and 
 - Exact terms in every send: what is off, on what, until when.
 - Copy goes to `write-sale-countdown-emails`; banners to `design-sale-banners-and-hero`.
 
-India: send in the buyer's language where the store has one; submit WhatsApp templates early enough for approval.
+Send in the languages your buyers use where the store has them; submit WhatsApp templates early enough for approval.
 
 ### 6. Write the stock and operations line per day
 
-For each hero SKU and day: forecast units, units left, and the action when stock falls below the reorder lead time (raise its target or pause its ads) [ADC-0023]. Add warehouse orders per day against capacity, courier pickup times, and support staffing. Vet the 3PL on peak throughput and a named contact [OPS-0008]. India: confirm COD orders before shipping on sale days, since failed deliveries cost two shipping legs.
+For each hero SKU and day: forecast units, units left, and the action when stock falls below the reorder lead time (raise its target or pause its ads) [ADC-0023]. Add warehouse orders per day against capacity, courier pickup times, and support staffing. Vet the 3PL on peak throughput and a named contact [OPS-0008]. Where the store offers pay on delivery, confirm those orders before shipping on sale days, since failed deliveries cost two shipping legs.
 
 ### 7. Write the cost guards before the sale
 
@@ -159,4 +159,8 @@ Plus the **offer ladder** (offer, trigger to switch, break-even ROAS, page ready
 - MEA-0028, MEA-0034, MEA-0035: returns accrual, post-treatment lift, sale-month cohorts.
 - OPS-0008, OPS-0015, OPS-0019: 3PL vetting, pick promises, not selling out.
 
-What makes this skill ours: build-up spend is judged on new customers rather than same-day ROAS; every day has a written scale, hold or cut guard plus a platform spending limit as the hard stop; stock and warehouse capacity sit on the same calendar line as spend; and India's Diwali courier cutoffs, COD confirmation and DLT and WhatsApp template rules are built in.
+What makes this skill ours: build-up spend is judged on new customers rather than same-day ROAS; every day has a written scale, hold or cut guard plus a platform spending limit as the hard stop; stock and warehouse capacity sit on the same calendar line as spend; and courier cutoffs before each market's peak days, pay-on-delivery confirmation and SMS and WhatsApp consent and template rules are built in.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Diwali moves each year; set the sale to end before the last courier cutoff that still delivers before the festival, and plan gifting buyers earlier. Diwali stores apply the build-up spend idea to the 3 to 4 weeks before. Republic Day and Independence Day sales are common. SMS needs DLT-registered templates. Send in the buyer's language (Hindi or a regional language) where the store has one, and submit WhatsApp templates early enough for approval. Confirm COD orders before shipping on sale days.

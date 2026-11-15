@@ -26,7 +26,7 @@ description: "A ranked list of every product in the store sorted into push, fix 
 
 Required (read access, level 1):
 
-1. **Per-SKU profit sheet** from `build-sku-profit-sheet`: price, discounts, landed cost, shipping, payment fees, returns and RTO cost per unit.
+1. **Per-SKU profit sheet** from `build-sku-profit-sheet`: price, discounts, landed cost, shipping, payment fees, returns and failed delivery cost per unit.
 2. **Shopify order export**, last 180 days: Created at, Lineitem sku, Lineitem quantity, Lineitem price, Discount Amount, Refunded Amount, Payment Method.
 3. **Stock levels** per SKU on hand and on order, with expected arrival dates, and a stock history or stockout dates (Shopify inventory history, warehouse report or a manual log).
 4. **Supplier lead time** and minimum order per SKU.
@@ -38,7 +38,7 @@ If stock history is missing, ask the client to mark stockout weeks by hand; with
 
 ## Before you start: the gates
 
-1. **Delivered profit per unit.** Pass when it includes outbound shipping, fees, packing and the return and RTO allowance [MEA-0037]. A product showing 70% product margin can earn far less after those lines [MEA-0023]. Fail: stop and run `build-sku-profit-sheet`.
+1. **Delivered profit per unit.** Pass when it includes outbound shipping, fees, packing and the return and failed delivery allowance [MEA-0037]. A product showing 70% product margin can earn far less after those lines [MEA-0023]. Fail: stop and run `build-sku-profit-sheet`.
 2. **Demand on in-stock days.** Pass when sales are divided by days in stock, not calendar days [OPS-0014]. Fail: mark the product "demand unknown" rather than ranking it low.
 3. **Cash and lead time known.** The push list must fit the cash available for reorders and the supplier lead time. If the owner has no cash figure, run `build-13-week-cash-forecast` or cap pushes at stock on hand.
 
@@ -112,15 +112,15 @@ For each cut product, give a floor price no lower than what the stock is worth t
 
 Each row gets one plain sentence a merchandiser can act on: "Push: earns 4.10 a unit after ads, demand up 20%, 85 days of cover against a 60-day lead time." No row leaves the sheet without a reason.
 
-### India and US notes
+### Market notes
 
-- **India:** include RTO cost in delivered profit; a product that sells well on COD can still lose money per order shipped (`returns-and-rto-cost-analysis`). Check marketplace fees per channel if the product also sells on Amazon or Flipkart.
-- **US:** check if the product sells on Amazon too; push decisions on site ads can show up there.
+- **Every market:** include failed delivery and return cost in delivered profit; a product that sells well with pay on delivery or free returns can still lose money per order shipped (`returns-and-rto-cost-analysis`). Check marketplace fees per channel if the product also sells on Amazon, Walmart, eBay, Etsy or Zalando.
+- **Amazon sellers (any country):** check if the product sells on Amazon too; push decisions on site ads can show up there.
 
 ## Checks before you hand it over
 
 - Every active product is in exactly one of push, fix, cut or too new.
-- Delivered profit includes shipping, fees, packing and return and RTO allowance.
+- Delivered profit includes shipping, fees, packing and return and failed delivery allowance.
 - Demand uses in-stock days; products with unknown stock history are marked.
 - No entry product with high repeat pull is in cut.
 - Every push product has days of cover compared with lead time.
@@ -164,3 +164,7 @@ Each row gets one plain sentence a merchandiser can act on: "Push: earns 4.10 a 
 - OFF-0008: keep sitewide discounts rare.
 
 What makes this skill ours: every product is ranked on profit per unit of cash tied up, not revenue; demand is measured only on in-stock days; entry products that bring buyers back are protected from cuts; and every push is paced against the supplier's real lead time.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Include RTO cost in delivered profit; a product that sells well on COD can still lose money per order shipped. Check marketplace fees per channel if the product also sells on Flipkart.

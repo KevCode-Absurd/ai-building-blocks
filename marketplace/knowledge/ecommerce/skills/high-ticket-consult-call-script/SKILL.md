@@ -1,6 +1,6 @@
 ---
 name: high-ticket-consult-call-script
-description: "A consultation call or video-call flow for expensive products such as jewellery, furniture, mattresses or custom pieces, from the booking button to the close: a check that consults pay for themselves, where the booking link goes, a 3-question pre-call form, booking confirmations and reminders, prep notes, a 20 to 30 minute call script (open, discover, show, recommend, price, answer, ask), what to show on camera for jewellery and furniture, closes for yes, not yet and no, and a follow-up rule that never chases. India notes for gold rates, hallmarks, EMI and delivery access; US notes for call recording and financing. Use when buyers of high-priced items ask many questions, hesitate at checkout, or want to see the product before paying."
+description: "A consultation call or video-call flow for expensive products such as jewellery, furniture, mattresses or custom pieces, from the booking button to the close: a check that consults pay for themselves, where the booking link goes, a 3-question pre-call form, booking confirmations and reminders, prep notes, a 20 to 30 minute call script (open, discover, show, recommend, price, answer, ask), what to show on camera for jewellery and furniture, closes for yes, not yet and no, and a follow-up rule that never chases. Notes for gold prices, hallmarks, instalments, cancellation rights and delivery access in any market; US notes for call recording and financing. Use when buyers of high-priced items ask many questions, hesitate at checkout, or want to see the product before paying."
 ---
 
 # Consultation call for high-ticket products
@@ -64,7 +64,7 @@ Add the phone number with a tick box to receive booking messages on WhatsApp or 
 
 ### 4. Prepare in 10 minutes
 
-Read the form. Pick two products that fit and one runner-up. Check stock or lead time, delivery date to their pincode or ZIP, and current price. Have the proof ready: real customer photos with permission, reviews on the same concern, and certificates or specs.
+Read the form. Pick two products that fit and one runner-up. Check stock or lead time, delivery date to their postcode or ZIP, and current price. Have the proof ready: real customer photos with permission, reviews on the same concern, and certificates or specs.
 
 ### 5. Run the call (20 to 30 minutes)
 
@@ -73,7 +73,7 @@ Read the form. Pick two products that fit and one runner-up. Check stock or lead
 | 0 to 2 | Open | "Thanks for booking. I'll ask a few questions, show you two or three pieces, and you can ask anything. If it's not right, I'll tell you. Sound good?" |
 | 2 to 8 | Discover | Ask about the occasion or room, what matters most, what they've tried. Use their words back to them. Let silences run. |
 | 8 to 18 | Show | Show the product on camera (lists below). Show the runner-up only if the first is not right. |
-| 18 to 22 | Recommend and price | "Based on what you said about [their words], I'd go with [product] at Rs or $ [price]. That includes [delivery, installation, warranty]." Then stop talking. |
+| 18 to 22 | Recommend and price | "Based on what you said about [their words], I'd go with [product] at [price in the store's currency]. That includes [delivery, installation, warranty]." Then stop talking. |
 | 22 to 27 | Answer | Questions and doubts. Price pushback: use `handle-price-objections-in-chat` replies, said aloud. |
 | 27 to 30 | Ask | One of the three closes in step 6. |
 
@@ -99,9 +99,10 @@ Within 2 hours: a summary message with photos, the price, what's included, the o
 
 Log every booking: source, product, show or no-show, outcome, order value, gross profit, call minutes. Monthly: close rate, no-show rate, gross profit per call, and the top 3 reasons for "not yet" and "no". Drop the booking button on products where gross profit per call stays below cost.
 
-### India and US notes
+### Market notes
 
-- **India:** gold jewellery prices move with the daily gold rate, so state how long a quote holds. Show the hallmark details for gold (BIS hallmark with HUID). State making charges and GST separately if that is how the invoice shows them. For furniture, confirm lift access and floor, and whether installation is included. Offer EMI or pay-later only through the store's checkout. Video calls on WhatsApp are often easiest for buyers.
+- **All markets:** gold jewellery prices move with the daily gold price, so state how long a quote holds. Show the hallmark details for gold (for example a UK assay office hallmark, or your country's hallmark scheme). State making charges and sales tax or VAT separately if that is how the invoice shows them. For furniture, confirm lift access and floor, and whether installation is included. Offer instalments or pay-later only through the store's checkout. Video calls on WhatsApp or FaceTime are often easiest for buyers.
+- **UK and EU:** online buyers usually have 14 days to cancel; made-to-order or personalised pieces can be exempt, so say so before they pay.
 - **US:** ask permission before recording; some states need consent from everyone on the call. Financing offers must show the real terms from the provider. Quote sales tax as "calculated at checkout" unless known.
 
 ## Checks before you hand it over
@@ -142,6 +143,15 @@ Log every booking: source, product, show or no-show, outcome, order value, gross
 - LPG-0023: a short founder video builds trust on high-trust purchases.
 - CXP-0010: specific, padded delivery dates.
 - OFF-0064: long warranties only on items that truly last.
-- ADC-6146: India's ASCI Code on provable claims.
 
 What makes this skill ours: consults are switched on only where gross profit per call beats the cost of the call; the booking button sits only above a price line; the camera lists are specific to jewellery and furniture; and the close allows a clean no with one follow-up, never a chase or fake scarcity.
+
+## Selling in India
+
+- Gold prices move with the daily gold rate; state how long a quote holds.
+- Show the BIS hallmark with HUID for gold.
+- State making charges and GST separately if the invoice shows them that way.
+- Offer EMI only through the store's checkout. WhatsApp video calls are often easiest.
+- Claims must be provable under ASCI's Code [ADC-6146].
+
+Source: ADC-6146 (ASCI Code on provable claims).

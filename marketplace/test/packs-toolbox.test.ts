@@ -19,25 +19,42 @@ import {
 import { housePersonas } from "../src/modules/directory/index.ts";
 import { getRole, listRoles } from "../src/modules/directory/roles.ts";
 import { listJobTypes } from "../src/modules/catalogue/index.ts";
-import { CORE_FILES, firstLoadFiles } from "../src/modules/mcp/pack-files.ts";
+import { CORE_FILES, cutAtSection, firstLoadFiles, leftOutNote, WHOLE_FILES } from "../src/modules/mcp/pack-files.ts";
 
-test("the first load holds back five files unless the request needs them, and says which rule brings each in", () => {
-  assert.deepEqual([...CORE_FILES], ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md"]);
+test("the first load sends the rules first and holds back reference files, saying which rule brings each in", () => {
+  // The method (with the readiness check, METHOD.md step 0) comes straight after the entry point, before any menu.
+  assert.deepEqual([...CORE_FILES], ["AGENTS.md", "METHOD.md", "toolbox.md", "soul.md"]);
   const held = (request?: string) => firstLoadFiles(request).held.map(h => h.path);
-  // No request: the agent is met first, so its voice comes along, after soul.md.
-  assert.deepEqual(firstLoadFiles(undefined).paths, ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md"]);
-  assert.deepEqual(held("Make a 6-slide Instagram carousel for the launch of the Allbirds Tree Runner"), ["personality.md", "access.md"], "slides are a real format; a product launch is not work in the user's accounts");
-  assert.deepEqual(held("Plan the launch of our spring range"), ["personality.md", "access.md", "OUTPUT-POLICY.md"]);
-  assert.deepEqual(held("Reconcile last month's bank statement against our books"), ["tools/quality/FOUNDATION.md", "personality.md", "access.md", "OUTPUT-POLICY.md"], "bookkeeping is not buyer-facing work");
-  assert.deepEqual(held("Connect to our Klaviyo account and schedule the welcome emails"), ["personality.md", "OUTPUT-POLICY.md"]);
-  assert.deepEqual(held("Build the landing page as an HTML file"), ["personality.md", "access.md"]);
-  assert.deepEqual(firstLoadFiles("Publish the fixes to our Shopify store").paths.slice(-3), ["playbook.md", "access.md", "OUTPUT-POLICY.md"]);
+  // No request: the agent is met first, so its voice and its playbook come along, after soul.md.
+  assert.deepEqual(firstLoadFiles(undefined).paths, ["AGENTS.md", "METHOD.md", "toolbox.md", "soul.md", "personality.md", "playbook.md"]);
+  const reference = ["personality.md", "playbook.md", "context/README.md"];
+  assert.deepEqual(held("Make a 6-slide Instagram carousel for the launch of the Allbirds Tree Runner"), ["access.md", ...reference], "slides are a real format; a product launch is not work in the user's accounts");
+  assert.deepEqual(held("Plan the launch of our spring range"), ["access.md", "OUTPUT-POLICY.md", ...reference]);
+  assert.deepEqual(held("Reconcile last month's bank statement against our books"), ["tools/quality/FOUNDATION.md", "access.md", "OUTPUT-POLICY.md", ...reference], "bookkeeping is not buyer-facing work");
+  assert.deepEqual(held("Connect to our Klaviyo account and schedule the welcome emails"), ["OUTPUT-POLICY.md", ...reference]);
+  assert.deepEqual(held("Build the landing page as an HTML file"), ["access.md", ...reference]);
+  // The rule files a request needs follow the method, before the toolbox.
+  assert.deepEqual(firstLoadFiles("Publish the fixes to our Shopify store").paths, ["AGENTS.md", "METHOD.md", "tools/quality/FOUNDATION.md", "access.md", "OUTPUT-POLICY.md", "toolbox.md", "soul.md"]);
+  assert.deepEqual(firstLoadFiles("Connect our Klaviyo account").paths.slice(0, 3), ["AGENTS.md", "METHOD.md", "access.md"], "access.md follows the method when FOUNDATION.md is not in the load");
   for (const h of firstLoadFiles("Write three subject lines").held) assert.match(h.rule, /^comes (when|with) /);
-  // Every request gets the readiness check straight after AGENTS.md; with no request it waits.
-  assert.equal(firstLoadFiles("Plan the launch of our spring range").paths[1], "tools/quality/INTAKE.md");
-  assert.deepEqual(held(undefined).slice(0, 2), ["tools/quality/INTAKE.md", "tools/quality/FOUNDATION.md"]);
+  assert.match(firstLoadFiles("Plan the launch").held.find(h => h.path === "playbook.md")!.rule, /METHOD\.md step 2/);
+  assert.match(firstLoadFiles("Plan the launch").held.find(h => h.path === "context/README.md")!.rule, /METHOD\.md step 1/);
+  // No on-demand intake file any more: the readiness check is METHOD.md step 0.
+  assert.ok(![...firstLoadFiles("Plan the launch", true).paths, ...held(undefined)].some(p => /INTAKE/.test(p)));
   // A one-file text for a chat app carries them all: a chat cannot fetch a file later.
   assert.deepEqual(firstLoadFiles(undefined, true).held, []);
+  assert.deepEqual(firstLoadFiles(undefined, true).paths, ["AGENTS.md", "METHOD.md", "tools/quality/FOUNDATION.md", "access.md", "OUTPUT-POLICY.md", "toolbox.md", "soul.md", "personality.md", "playbook.md", "context/README.md"]);
+});
+
+test("a reference file is cut only at a section break, and names the sections it leaves out", () => {
+  const text = ["# Toolbox", "", "Intro line.", "", "## Your jobs", "", "x".repeat(2_000), "", "## On every job", "", "y".repeat(800), "", "### Late task", "", "z".repeat(800), "", "## Who to bring in", "", "w".repeat(400)].join("\n");
+  assert.deepEqual(cutAtSection(text, text.length), { text, left_out: [] });
+  const cut = cutAtSection(text, 3_000)!;
+  assert.ok(cut.text.endsWith("y".repeat(800)), "cut before a heading, never inside a section");
+  assert.deepEqual(cut.left_out, ["Late task", "Who to bring in"]);
+  assert.equal(cutAtSection(text, 1_000), null, "too little room: held back whole rather than sent as a stub");
+  assert.match(leftOutNote({ path: "toolbox.md", text: cut.text, trimmed: true, left_out: cut.left_out }), /Left out: "Late task", "Who to bring in"\. Read the rest with get_agent_file with path toolbox\.md\./);
+  assert.ok(WHOLE_FILES.has("METHOD.md") && WHOLE_FILES.has("AGENTS.md") && WHOLE_FILES.has("access.md") && !WHOLE_FILES.has("toolbox.md"), "rule files are never cut to fit");
 });
 
 const ROOT =path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -233,7 +250,7 @@ test("a curated pack: toolbox.md says what to use when, carries every listed ite
   for (const t of fixture("graphic-designer").tasks) assert.ok(toolbox.includes(`### ${t.task}`), `every task is there: ${t.task}`);
   // Where the job's gates are, and the items for every job.
   assert.match(toolbox, /## Your jobs\n\n[^\n]+\n\n- [^\n]+ `skills\/social-graphics-spec-job\/SKILL\.md`/);
-  assert.match(toolbox, /## On every job\n\n- Before any work that must look or sound like the client: \*\*Brand file capture\*\* \(brief, skill\) `toolbox\/skill\/brand-dna-capture\.md`/);
+  assert.match(toolbox, /## On every job\n\n- Before any work that must look or sound like the client: \*\*Org context capture\*\* \(brief, skill\) `toolbox\/skill\/brand-dna-capture\.md`/);
   // It ends with the helpers: the role, how to load it, and its pack.
   const who = toolbox.slice(toolbox.indexOf("## Who to bring in"));
   assert.ok(toolbox.trimEnd().endsWith(who.trimEnd()) && who.length > 100, "Who to bring in is the last section");
@@ -261,7 +278,8 @@ test("a curated pack: toolbox.md says what to use when, carries every listed ite
   assert.doesNotMatch(file(pack, "README.md")!, /library\.md/);
   assert.match(file(pack, "README.md")!, /\| `toolbox\/` \| The 24 library items toolbox\.md names, each in full in its own file\. \|/);
   assert.deepEqual(lintPack(pack), []);
-  assert.deepEqual(lintNotes(pack), []);
+  // Overlap notes are curator advice (an item that fits two tasks), printed by the build, never a failure.
+  assert.deepEqual(lintNotes(pack).filter(n => !/_overlap$/.test(n.rule)), []);
   assert.deepEqual(pack.notes.filter(n => /toolbox/.test(n)), []);
 
   // The zip holds them all; pack.json lists them with their checksums.
@@ -387,22 +405,23 @@ test("the training pack names library items by address and keeps library.md", as
   assert.deepEqual(lintNotes(train), []);
 });
 
-test("the one-file text carries toolbox.md and the best 8 library items; the rest are named by address", async () => {
+test("the one-file text carries toolbox.md and the best 8 library items; the rest are named by path", async () => {
   const pack = await build("riley-carousels");
   const text = oneFileText(pack, "https://agents.test");
   const parts = [...text.matchAll(/^===== FILE: (.+) =====$/gm)].map(m => m[1]);
-  assert.deepEqual(parts.slice(0, 2), ["AGENTS.md", "toolbox.md"]);
+  assert.equal(parts[0], "AGENTS.md");
+  assert.ok(parts.indexOf("toolbox.md") > parts.indexOf("OUTPUT-POLICY.md") && parts.indexOf("toolbox.md") < parts.indexOf("skills.md"), "the toolbox sits in the core, after the rules");
   const inline = parts.filter(p => p.startsWith("toolbox/"));
   assert.equal(inline.length, 8);
   assert.deepEqual(inline.slice().sort(), pack.toolbox!.top.slice(0, 8).sort());
   // The ones for every job and for Riley's own task come first; a lens (about 30 KB each) is never inlined.
   assert.ok(inline.includes("toolbox/skill/brand-dna-capture.md") && inline.includes("toolbox/skill/layout-default-breaker.md"));
   assert.ok(!inline.some(p => p.startsWith("toolbox/mind/")));
-  // In the toolbox.md part, an item that is here keeps its path; one that is not gets its address.
-  const toolbox = text.slice(text.indexOf("===== FILE: toolbox.md ====="), text.indexOf("===== FILE: WORK-METHOD.md ====="));
+  // In the toolbox.md part every item keeps its short path; the head says once where a path that is not a part lives.
+  const toolbox = text.slice(text.indexOf("===== FILE: toolbox.md ====="), text.indexOf("===== FILE: skills.md ====="));
   assert.match(toolbox, /\*\*Layout default breaker\*\* \(explore, skill\) `toolbox\/skill\/layout-default-breaker\.md`/);
-  assert.match(toolbox, /\*\*David Carson\*\* \(think, thinking lens\) `https:\/\/agents\.test\/packs\/toolbox\/mind\/david-carson\.md`/);
-  assert.match(text, /The toolbox\.md part names 24 library items: 8 are parts of this file, and each of the other 16 is one page at the address beside its name\./);
+  assert.match(toolbox, /\*\*David Carson\*\* \(think, thinking lens\) `toolbox\/mind\/david-carson\.md`/);
+  assert.match(text, /including 16 of the 24 library items toolbox\.md names: a path that starts with knowledge\/ or toolbox\/ and is not a part here is the page at https:\/\/agents\.test\/packs\/ followed by that path/);
   const all = pack.files.filter(f => f.source === "toolbox").reduce((n, f) => n + f.content.length, 0);
   const whole = oneFileText(pack, "https://agents.test", 99);
   assert.ok(text.length < whole.length - all / 3, "most of the item text stays out, so the file stays small enough to attach");

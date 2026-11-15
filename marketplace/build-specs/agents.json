@@ -1,0 +1,458 @@
+[
+ {
+  "id": "malcolm-ecommerce-growth",
+  "name": "Malcolm",
+  "title": "E-commerce growth lead",
+  "role": "ecommerce-manager"
+ },
+ {
+  "id": "revathi-product-research",
+  "name": "Revathi",
+  "title": "E-commerce product researcher",
+  "role": "physical-product-developer"
+ },
+ {
+  "id": "funmilayo-customer-research",
+  "name": "Funmilayo",
+  "title": "E-commerce customer researcher",
+  "role": "customer-insights-researcher"
+ },
+ {
+  "id": "brendan-offers",
+  "name": "Brendan",
+  "title": "E-commerce offer strategist",
+  "role": "growth-marketer"
+ },
+ {
+  "id": "philippa-brand",
+  "name": "Philippa",
+  "title": "E-commerce brand strategist",
+  "role": "brand-strategist"
+ },
+ {
+  "id": "facundo-store-setup",
+  "name": "Facundo",
+  "title": "Shopify store setup specialist",
+  "role": "shopify-specialist"
+ },
+ {
+  "id": "radek-unit-economics",
+  "name": "Radek",
+  "title": "E-commerce unit economics analyst",
+  "role": "ecommerce-analyst"
+ },
+ {
+  "id": "annabel-landing-pages",
+  "name": "Annabel",
+  "title": "E-commerce landing page writer",
+  "role": "conversion-copywriter"
+ },
+ {
+  "id": "arjun-page-speed",
+  "name": "Arjun",
+  "title": "Shopify page speed specialist",
+  "role": "shopify-specialist"
+ },
+ {
+  "id": "gretchen-store-testing",
+  "name": "Gretchen",
+  "title": "E-commerce conversion testing specialist",
+  "role": "cro-specialist"
+ },
+ {
+  "id": "tendai-ad-creative",
+  "name": "Tendai",
+  "title": "Paid social creative strategist for stores",
+  "role": "ad-creative-strategist"
+ },
+ {
+  "id": "dustin-ad-deployment",
+  "name": "Dustin",
+  "title": "E-commerce ad copy and deployment specialist",
+  "role": "meta-media-buyer"
+ },
+ {
+  "id": "raymond-google-ads",
+  "name": "Raymond",
+  "title": "Google Ads and Shopping specialist for stores",
+  "role": "google-ads-media-buyer"
+ },
+ {
+  "id": "pilar-creators",
+  "name": "Pilar",
+  "title": "E-commerce creator and organic content manager",
+  "role": "affiliate-influencer-manager"
+ },
+ {
+  "id": "morag-email-sms",
+  "name": "Morag",
+  "title": "E-commerce email and SMS specialist",
+  "role": "email-marketing-specialist"
+ },
+ {
+  "id": "stuart-store-seo",
+  "name": "Stuart",
+  "title": "E-commerce SEO specialist",
+  "role": "seo-specialist"
+ },
+ {
+  "id": "rustam-ai-answers",
+  "name": "Rustam",
+  "title": "E-commerce AI search visibility specialist",
+  "role": "aeo-geo-specialist"
+ },
+ {
+  "id": "latoya-post-purchase",
+  "name": "LaToya",
+  "title": "E-commerce post-purchase experience manager",
+  "role": "cx-manager"
+ },
+ {
+  "id": "zhenyu-sourcing",
+  "name": "Zhenyu",
+  "title": "E-commerce sourcing and product cost planner",
+  "role": "supply-chain-planner"
+ },
+ {
+  "id": "barnaby-wild-bets",
+  "name": "Barnaby",
+  "title": "E-commerce big bets strategist",
+  "role": "growth-marketer"
+ },
+ {
+  "id": "hemant-store-finance",
+  "name": "Hemant",
+  "title": "E-commerce finance and cash analyst",
+  "role": "fpa-analyst"
+ },
+ {
+  "id": "marivic-fulfilment",
+  "name": "Marivic",
+  "title": "E-commerce fulfilment and support manager",
+  "role": "ecommerce-manager"
+ },
+ {
+  "id": "garrett-amazon",
+  "name": "Garrett",
+  "title": "Amazon marketplace manager for brands",
+  "role": "amazon-marketplace-manager"
+ },
+ {
+  "id": "ilona-bot-security",
+  "name": "Ilona",
+  "title": "E-commerce bot and agent security specialist",
+  "role": "cybersecurity-specialist"
+ },
+ {
+  "id": "margaret-job-orchestrator",
+  "name": "Margaret",
+  "title": "E-commerce job orchestrator",
+  "role": "chief-of-staff"
+ },
+ {
+  "id": "jared-performance-marketing",
+  "name": "Jared",
+  "title": "E-commerce performance marketing lead",
+  "role": "growth-marketer"
+ },
+ {
+  "id": "kemal-creative-director",
+  "name": "Kemal",
+  "title": "Creative director for stores",
+  "role": "ad-creative-strategist"
+ },
+ {
+  "id": "imogen-retention",
+  "name": "Imogen",
+  "title": "E-commerce retention marketing lead",
+  "role": "lifecycle-marketer"
+ },
+ {
+  "id": "thanh-product-sourcing-lead",
+  "name": "Thanh",
+  "title": "E-commerce product and sourcing lead",
+  "role": "physical-product-developer"
+ },
+ {
+  "id": "shannon-market-research",
+  "name": "Shannon",
+  "title": "E-commerce market research analyst",
+  "role": "market-research-analyst"
+ },
+ {
+  "id": "sipho-product-hunter",
+  "name": "Sipho",
+  "title": "E-commerce product hunter",
+  "role": "market-research-analyst"
+ },
+ {
+  "id": "ayaka-ad-design",
+  "name": "Ayaka",
+  "title": "E-commerce ad graphics designer",
+  "role": "graphic-designer"
+ },
+ {
+  "id": "devon-video-ugc",
+  "name": "Devon",
+  "title": "E-commerce video ad and UGC producer",
+  "role": "video-producer"
+ },
+ {
+  "id": "aurelio-product-photos",
+  "name": "Aurelio",
+  "title": "E-commerce product photographer",
+  "role": "product-photographer"
+ },
+ {
+  "id": "georgia-product-copy",
+  "name": "Georgia",
+  "title": "E-commerce product page copywriter",
+  "role": "ecommerce-copywriter"
+ },
+ {
+  "id": "ploy-tiktok-shop",
+  "name": "Ploy",
+  "title": "TikTok Shop manager for brands",
+  "role": "tiktok-shop-manager"
+ },
+ {
+  "id": "darlene-support-lead",
+  "name": "Darlene",
+  "title": "E-commerce customer support lead",
+  "role": "customer-support-specialist"
+ },
+ {
+  "id": "omar-inventory-planning",
+  "name": "Omar",
+  "title": "E-commerce inventory and demand planner",
+  "role": "supply-chain-planner"
+ },
+ {
+  "id": "juliet-merchandising",
+  "name": "Juliet",
+  "title": "E-commerce merchandising manager",
+  "role": "pricing-strategist"
+ },
+ {
+  "id": "kofi-ad-copy",
+  "name": "Kofi",
+  "title": "E-commerce ad copywriter",
+  "role": "advertising-copywriter"
+ },
+ {
+  "id": "lucia-email-copy",
+  "name": "Lucia",
+  "title": "E-commerce email and SMS copywriter",
+  "role": "email-marketing-specialist"
+ },
+ {
+  "id": "rohan-chat-sales",
+  "name": "Rohan",
+  "title": "Chat and WhatsApp sales lead",
+  "role": "chatbot-specialist"
+ },
+ {
+  "id": "mei-wholesale-sales",
+  "name": "Mei",
+  "title": "Wholesale and corporate gifting sales lead",
+  "role": "channel-sales-manager"
+ },
+ {
+  "id": "tomas-social-community",
+  "name": "Tomas",
+  "title": "Organic social and community manager",
+  "role": "social-media-manager"
+ },
+ {
+  "id": "zara-tiktok-ads",
+  "name": "Zara",
+  "title": "TikTok ads media buyer",
+  "role": "tiktok-ads-media-buyer"
+ },
+ {
+  "id": "lindsey-meta-media-buyer",
+  "name": "Lindsey",
+  "title": "Meta ads media buyer",
+  "role": "meta-media-buyer"
+ },
+ {
+  "id": "junaid-amazon-ads",
+  "name": "Junaid",
+  "title": "Amazon ads (PPC) specialist",
+  "role": "amazon-ppc-specialist"
+ },
+ {
+  "id": "marnie-pinterest-ads",
+  "name": "Marnie",
+  "title": "Pinterest ads and pins specialist",
+  "role": "pinterest-marketer"
+ },
+ {
+  "id": "emre-tracking",
+  "name": "Emre",
+  "title": "E-commerce tracking and attribution specialist",
+  "role": "marketing-analyst"
+ },
+ {
+  "id": "callum-reporting",
+  "name": "Callum",
+  "title": "E-commerce reporting and dashboards analyst",
+  "role": "bi-analyst"
+ },
+ {
+  "id": "meenakshi-compliance",
+  "name": "Meenakshi",
+  "title": "E-commerce compliance and ad policy specialist",
+  "role": "compliance-specialist"
+ },
+ {
+  "id": "tanvi-listing-images",
+  "name": "Tanvi",
+  "title": "Marketplace listing and A+ content designer",
+  "role": "graphic-designer"
+ },
+ {
+  "id": "cody-video-editor",
+  "name": "Cody",
+  "title": "Short-form video ad editor",
+  "role": "video-editor"
+ },
+ {
+  "id": "alistair-packaging",
+  "name": "Alistair",
+  "title": "Packaging and unboxing designer",
+  "role": "packaging-designer"
+ },
+ {
+  "id": "larissa-store-ux",
+  "name": "Larissa",
+  "title": "Store UX designer",
+  "role": "ux-designer"
+ },
+ {
+  "id": "yaroslav-shopify-dev",
+  "name": "Yaroslav",
+  "title": "Shopify theme developer",
+  "role": "frontend-developer"
+ },
+ {
+  "id": "margot-pr",
+  "name": "Margot",
+  "title": "E-commerce PR and gift guide specialist",
+  "role": "pr-specialist"
+ },
+ {
+  "id": "sudhir-marketplaces",
+  "name": "Sudhir",
+  "title": "Marketplace channel manager",
+  "role": "marketplace-manager"
+ },
+ {
+  "id": "ishita-india-commerce",
+  "name": "Ishita",
+  "title": "India e-commerce specialist",
+  "role": "marketplace-manager"
+ },
+ {
+  "id": "corinne-reviews",
+  "name": "Corinne",
+  "title": "Reviews and ratings manager",
+  "role": "reputation-manager"
+ },
+ {
+  "id": "gurdeep-shipping-returns",
+  "name": "Gurdeep",
+  "title": "Shipping, delivery and returns manager",
+  "role": "logistics-coordinator"
+ },
+ {
+  "id": "fiona-account-manager",
+  "name": "Fiona",
+  "title": "Agency account manager for store clients",
+  "role": "customer-success-manager"
+ },
+ {
+  "id": "clayton-new-business",
+  "name": "Clayton",
+  "title": "Agency new business lead",
+  "role": "business-development-manager"
+ },
+ {
+  "id": "lerato-creative-producer",
+  "name": "Lerato",
+  "title": "Agency creative producer",
+  "role": "project-manager"
+ },
+ {
+  "id": "kelsey-snapchat-ads",
+  "name": "Kelsey",
+  "title": "Snapchat ads media buyer",
+  "role": "snapchat-ads-media-buyer"
+ },
+ {
+  "id": "ritika-influencer-outreach",
+  "name": "Ritika",
+  "title": "Influencer outreach manager",
+  "role": "affiliate-influencer-manager"
+ },
+ {
+  "id": "tunde-supplier-search",
+  "name": "Tunde",
+  "title": "Supplier search and AI sourcing specialist",
+  "role": "procurement-specialist"
+ },
+ {
+  "id": "duncan-category-trends",
+  "name": "Duncan",
+  "title": "Category trends and demand analyst",
+  "role": "market-research-analyst"
+ },
+ {
+  "id": "douglas-should-cost",
+  "name": "Douglas",
+  "title": "BOM and should-cost analyst",
+  "role": "procurement-specialist"
+ },
+ {
+  "id": "akosua-cost-forecast",
+  "name": "Akosua",
+  "title": "Materials and landed cost forecaster",
+  "role": "supply-chain-planner"
+ },
+ {
+  "id": "wenhao-procurement",
+  "name": "Wenhao",
+  "title": "Procurement and supplier negotiation manager",
+  "role": "procurement-specialist"
+ },
+ {
+  "id": "phuong-quality-control",
+  "name": "Phuong",
+  "title": "Quality control and inspection manager",
+  "role": "physical-product-developer"
+ },
+ {
+  "id": "sheila-inbound-freight",
+  "name": "Sheila",
+  "title": "Inbound freight and customs coordinator",
+  "role": "logistics-coordinator"
+ },
+ {
+  "id": "sabelo-product-portfolio",
+  "name": "Sabelo",
+  "title": "Product portfolio analyst",
+  "role": "ecommerce-analyst"
+ },
+ {
+  "id": "maxine-tech-packs",
+  "name": "Maxine",
+  "title": "Product developer and tech pack specialist",
+  "role": "physical-product-developer"
+ },
+ {
+  "id": "howard-copy-chief",
+  "name": "Howard",
+  "title": "Direct-response copy chief",
+  "role": "conversion-copywriter"
+ }
+]

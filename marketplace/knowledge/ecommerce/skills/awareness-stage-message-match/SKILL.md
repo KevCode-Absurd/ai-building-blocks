@@ -73,6 +73,8 @@ For this product, write one line per stage: **unaware** (has the situation, has 
 
 Meta's audience segments let you read new, engaged and existing customers separately [ADC-0015]. Record each source's share of sessions and of purchases. Use one rule set for edge cases, since sources disagree: product page visitors and subscribers who have not bought are product-aware; cart and checkout abandoners are most aware. Stage comes from behaviour, never from age or gender. Where the data cannot tell, mark the stage "unknown" and test openings for two neighbouring stages rather than defaulting to one. Recheck the map monthly; audiences move down the stages as they see more. Also note the market's stage: in a market that has seen every claim, only a new mechanism or messenger cuts through [ADC-0001].
 
+When copy for colder stages is in scope, read the market's sophistication properly: list the main promise in 5 rival ads. Stage 1, nobody makes the claim, so state it plainly. Stage 2, everyone makes it, so make it more specific within proof. Stage 3, buyers doubt it, so lead with the mechanism. Stage 4, every rival has a mechanism, so sharpen yours. Stage 5, buyers believe none of it, so sell who the buyer becomes. Write one stage above the rivals [MCR-6696].
+
 ### 3. Diagnose each piece
 
 For each ad, page and email, read the opening (first line, headline, first three seconds, first screen) and decide which stage it speaks to. Then compare with the stage of the traffic it gets. Mark:
@@ -95,7 +97,19 @@ For each stage in use, write the opening, the body beats, the proof and the offe
 | Product-aware | The doubt that stops them | Reviews matched to objections, guarantee | Clear offer | Product page |
 | Most aware | The offer, restock or deadline | Rating and count | Best offer the margin allows | Product page or cart |
 
-Under each draft, add one line: the neighbouring stage it would also suit, and the stage it would fail (usually two steps away), so nobody reuses it on the wrong audience. Deadlines, low-stock lines and countdowns appear only when they are true; invented urgency is a deceptive practice under the FTC Act and India's CCPA guidelines on dark patterns. Judge early-stage pieces on new-customer cost per purchase over a full week of 7-day click results, not on first-day ROAS; judge most-aware pieces on cost per purchase and order value.
+Use the framework and lead that suit each stage:
+
+| Stage | Framework | Lead to start with |
+|---|---|---|
+| Unaware | A story or a lesson they want, the hidden problem revealed, the kind of fix introduced, a soft ask to learn more | Story, secret, or proclamation (a bold, true claim read like news) |
+| Problem-aware | The problem in their words, the consequence they live with, the cause, the kind of fix | Problem and solution, or secret |
+| Solution-aware | Why this kind of fix beats the others: the difference, the mechanism, the proof | Promise backed in the next line, or problem and solution |
+| Product-aware | The alternatives on one concrete measure, objections answered, the offer | Promise |
+| Most aware | The offer and a true reason to act now | Offer |
+
+Each lead needs its material: a secret needs a real, checkable fact; a story needs a real scene from buyers; an offer needs its full terms. Without it, move to the nearest lead the facts support. Each stage needs its own opening, and cost per result rises as copy goes colder [MCR-6692].
+
+Under each draft, add one line: the neighbouring stage it would also suit, and the stage it would fail (usually two steps away), so nobody reuses it on the wrong audience. Deadlines, low-stock lines and countdowns appear only when they are true; invented urgency is a deceptive practice under the FTC Act, the UK's consumer protection law (enforced by the CMA) and the EU's unfair commercial practices rules. Judge early-stage pieces on new-customer cost per purchase over a full week of 7-day click results, not on first-day ROAS; judge most-aware pieces on cost per purchase and order value.
 
 Send cold traffic to an advertorial instead of the product page when the product needs about three minutes of explaining; simple, understood products go straight to the product page [LPG-0004]. Build an advertorial only after an ad to the plain product page shows the angle can roughly break even [LPG-0030]. Route unaware ads to articles or quizzes, persona ads to persona pages and retargeting to product pages when spend per persona justifies a page [LPG-0070].
 
@@ -108,9 +122,9 @@ Send cold traffic to an advertorial instead of the product page when the product
 
 Cards give different splits. For broad-targeted Meta accounts trying to grow past their warm audience, put roughly 80% of new creative in the unaware and problem-aware stages and the rest in later stages [MCR-0057]; a second source says 80% in the first three stages and 20% in the last two [MCR-0011]. Those two agree closely and win for growth. They fail for small accounts and brands with strong outside demand, which still find enough product-aware buyers. So read the store's own data first: if most purchases come from brand search, returning visitors and existing customers, the store is harvesting demand it already has; shift toward early stages step by step, judged on new-customer cost per purchase, not blended ROAS.
 
-### India and similar markets
+### Chat-first and low-trust markets
 
-For product-aware and most-aware shoppers who opted in, automated WhatsApp journeys far outperformed broadcasts in one large Indian dataset [EML-0048]. Cash on delivery and easy returns belong in the product-aware proof block.
+In markets where buyers live on WhatsApp or other chat apps (much of Latin America, Southern Europe, Africa and Asia), for product-aware and most-aware shoppers who opted in, automated chat journeys far outperformed broadcasts in one large dataset [EML-0048]. Payment safety (pay on delivery where offered, buyer protection), easy returns and delivery promises belong in the product-aware proof block.
 
 ## Checks before you hand it over
 
@@ -122,6 +136,7 @@ For product-aware and most-aware shoppers who opted in, automated WhatsApp journ
 6. GA4 conversion rates are filtered to purchase.
 7. The mix recommendation cites the store's own share of purchases by stage.
 8. Nothing was published or spent.
+9. Every draft's lead suits its stage and has the material it needs.
 
 ## Output
 
@@ -141,6 +156,7 @@ For product-aware and most-aware shoppers who opted in, automated WhatsApp journ
 - **Unfiltered GA4 conversion rates.** The inputs filter to purchase.
 - **Defaulting to one stage when unsure.** Step 2 marks it unknown and tests two.
 - **Fake urgency for the last stage.** Step 4 allows only true deadlines and stock lines.
+- **A secret lead with no secret.** Step 4 moves to the nearest lead the facts support.
 
 ## Sources
 
@@ -158,6 +174,14 @@ For product-aware and most-aware shoppers who opted in, automated WhatsApp journ
 - [EML-0053]: split flows by new, returning and subscriber.
 - [MCR-0057]: about 80% of creative in early stages.
 - [MCR-0011]: 80% in stages one to three, 20% later.
-- [EML-0048]: WhatsApp journeys in India.
+- [EML-0048]: WhatsApp journeys beat broadcasts in one large dataset.
+- [MCR-6696]: write one stage above the market's sophistication.
+- [MCR-6692]: each stage needs its own opening; colder copy costs more per result.
 
 What makes this skill ours: stage comes from audience, query and visitor data instead of a guess; every mismatch is ranked by store-side cost per purchase; the ad, page and email are fixed together as one path; and the stage mix starts from the store's own sales and margin, not a fixed split.
+
+## Selling in India
+
+- The EML-0048 dataset came from Indian stores, so the WhatsApp journey advice is strongest there.
+- India's CCPA guidelines on dark patterns also ban invented urgency.
+- Cash on delivery belongs in the product-aware proof block.

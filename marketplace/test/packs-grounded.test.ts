@@ -9,7 +9,7 @@ import { contextRequirements, familyOf } from "../src/modules/packs/families.ts"
 import { FIXTURE_JOB_TYPES, LANDING_PAGE, NOVA } from "./fixtures.ts";
 
 const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8");
-const TEMPLATES = Object.fromEntries(["AGENTS.md", "WORK-METHOD.md", "README.md", "LICENSE.md"].map(p => [p, shared(p)]));
+const TEMPLATES = Object.fromEntries(["AGENTS.md", "METHOD.md", "WORK-METHOD.md", "README.md", "LICENSE.md"].map(p => [p, shared(p)]));
 const TOOLS = {
   "capture-brand-dna.mjs": "// capture\nexport {};\n",
   "brand-dna-snippet.js": "// snippet\n",
@@ -25,8 +25,8 @@ test("AGENTS.md is a short entry point that starts every job by grounding it", a
   assert.ok(agents.split("\n").length <= 75, `AGENTS.md has ${agents.split("\n").length} lines`);
   assert.match(agents, /## How to start every job\n\n1\. \*\*Foundation first\.\*\*/);
   assert.match(agents, /five questions at most/);
-  // The method lives in WORK-METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
-  assert.match(agents, /run the job the way `WORK-METHOD\.md` says/);
+  // The method lives in METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
+  assert.match(agents, /run the job the way `METHOD\.md` says/);
   assert.match(agents, /Find the task in `toolbox\.md` and pick what fits it, at your own discretion/);
   assert.match(agents, /never search for a skill/);
   assert.match(agents, /one line naming the toolbox items you used/);
@@ -43,19 +43,19 @@ test("agent packs carry the capture tools under tools/; the one file links to th
   assert.equal(index.files.find(f => f.path === "tools/capture-brand-dna.mjs")!.url, "/packs/tools/capture-brand-dna.mjs");
   assert.equal(index.files.find(f => f.path === "tools/capture-brand-dna.mjs")!.kind, "tool");
   assert.ok(index.routes.length >= 2, "files.json lists what load_agent routes to");
-  assert.match(file(pack, "WORK-METHOD.md")!, /Run `node tools\/capture-brand-dna\.mjs <url>`/);
+  assert.match(file(pack, "METHOD.md")!, /Run `node tools\/capture-brand-dna\.mjs <url>`/);
   const text = oneFileText(pack, "https://agents.test");
   assert.doesNotMatch(text, /===== FILE: tools\/.+\.(mjs|js) =====/);
   assert.match(text, /===== FILE: tools\/ai-default-patterns\.md =====/, "the default list is data the method needs");
   // Commands stay runnable: the relative path is kept, with where to get the script first.
-  assert.match(text, /Run `node tools\/capture-brand-dna\.mjs <url>` \(get https:\/\/agents\.test\/tools\/capture-brand-dna\.mjs into a tools\/ folder first\)/);
+  assert.match(text, /each is also on the web: `tools\/capture-brand-dna\.mjs` is at https:\/\/agents\.test\/tools\/capture-brand-dna\.mjs/, "the head says once where the scripts are");
   assert.doesNotMatch(text, /`node https:|`https:\/\/[^`]*\.mjs/);
   assert.doesNotMatch(text, /(https:\/\/agents\.test\/tools\/[\w.-]+)`? \(also at \1\)/, "no doubled tool links");
   assert.deepEqual(lintPack(pack), []);
   // A training pack goes back to the studio, which takes text files only: it links to the public tools.
   const train = await build({ templates: { ...TEMPLATES } }, "train");
   assert.ok(!train.files.some(f => f.path.startsWith("tools/")));
-  assert.match(file(train, "WORK-METHOD.md")!, /https:\/\/agents\.useaiblocks\.com\/tools\/capture-brand-dna\.mjs/);
+  assert.match(file(train, "METHOD.md")!, /https:\/\/agents\.useaiblocks\.com\/tools\/capture-brand-dna\.mjs/);
   assert.ok(train.files.some(f => f.path === "context/README.md"));
   // Without the scripts in the build, references point at the public copies, so the pack never names a missing file.
   const bare = await build({ tools: {} });
@@ -108,7 +108,7 @@ test("a job type's own gates and craft rubric render as pass/fail gates and a we
   assert.match(skill, /## Gates: pass or fail[\s\S]*- The live site's nav and footer are kept\./);
   // The job type's own rubric is made job-first: the job leads at 30, own material follows at 10, the rest share 60.
   assert.match(skill, /\| Does the job for the buyer \| 30 \|[^\n]+\n\| Own material \| 10 \|[^\n]+\n\| Brand fidelity \| 36 \| Fonts and colours match brand-dna\.json\. \|\n\| Specificity \| 24 \|/);
-  assert.match(skill, /3\. \*\*Diverge: real candidates, and someone else chooses\.\*\*[^\n]+A fresh reviewer who has not seen your reasoning picks one/);
+  assert.match(skill, /3\. \*\*Diverge: real candidates, and someone else chooses\.\*\*[^\n]+At full and team depth \(METHOD\.md step 3\), a fresh reviewer who has not seen your reasoning picks one/);
   assert.match(skill, /6\. \*\*Hand over\.\*\* The native work comes first/);
   assert.doesNotMatch(skill, /Write DECISIONS\.md/);
   assert.match(skill, /Default mode: patch/);
@@ -128,7 +128,7 @@ test("every job skill carries the hand-over word budget; conversion jobs also ch
   const skills = pack.files.filter(f => /^skills\/[^/]+\/SKILL\.md$/.test(f.path) && /## Gates: pass or fail/.test(f.content));
   assert.ok(skills.length > 0);
   for (const s of skills) assert.match(s.content, /The hand-over fits: the native work first, with context only when needed/, s.path);
-  assert.match(file(pack, "WORK-METHOD.md")!, /check the proven levers/);
+  assert.match(file(pack, "METHOD.md")!, /check the proven levers/);
   // 10 Nov rerun: the deliverable stands on its own, and plans keep the detail someone needs to act.
   for (const family of Object.keys(WORD_BUDGETS) as (keyof typeof WORD_BUDGETS)[]) assert.match(familyGates(family)[0], /never in a file the client does not have/, family);
   assert.match(WORD_BUDGETS.plan, /10,000 words/);
@@ -138,17 +138,17 @@ test("every job skill carries the hand-over word budget; conversion jobs also ch
 const visibleWords = (t: string) => (t.replace(/[|#*_>`-]+/g, " ").match(/[A-Za-z0-9$%€£][^\s]*/g) ?? []).length;
 const quality = (p: string) => shared(`tools/quality/${p}`);
 
-test("the built-in method outline matches WORK-METHOD.md: owner first, signal pass, no homework", async () => {
+test("the built-in method outline matches METHOD.md: owner first, signal pass, no homework", async () => {
   const outline = FALLBACK_TEMPLATES["WORK-METHOD.md"];
   assert.match(outline, /follow the owner and say why in one line/);
   assert.match(outline, /In a one-shot job \(nobody can reply\), decide every open point, deliver every piece asked for, state at most three assumptions and finish/);
-  assert.match(outline, /0\. Frame:[^\n]*a signal pass \(the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it\)/);
+  assert.match(outline, /0\. Frame:[^\n]*a signal pass \(the signals that change the decision, as many as the data holds, or none/);
   assert.match(outline, /1\. Ground: capture only what the signals and the decision depend on/);
   assert.match(outline, /4\. Build:[^\n]*one recommendation, which may combine complementary moves[^\n]*act fully on each signal/);
   assert.match(outline, /6\. Hand over[^\n]*first screen holds the decision, the numbers asked for, the bad news and the first move/);
   assert.doesNotMatch(outline, /acceptance tests?|To confirm|runner-up/i);
   // The full method says the same in step 0.
-  assert.match(shared("WORK-METHOD.md"), /## 0\. Frame[\s\S]*\*\*Signal pass:\*\* the three strongest signals in the owner's data[\s\S]*## 1\./);
+  assert.match(shared("METHOD.md"), /## 0\. Frame[\s\S]*\*\*Signal pass:\*\* the signals in the owner's data that change the decision: as many as the data holds, or none\.[\s\S]*## 1\./);
   // A pack built without the shared method falls back to the outline.
   const { "WORK-METHOD.md": _, ...noMethod } = TEMPLATES;
   assert.match(file(await build({ templates: noMethod }), "WORK-METHOD.md")!, /a signal pass/);
@@ -160,30 +160,34 @@ test("approval rules govern live actions, never the content of a plan; the metho
   assert.match(agents, /When nobody can reply \(a test or an API call\), never ask: decide, state at most three assumptions and finish/);
   assert.match(agents, /get a yes before the first live action/, "live-action approvals stay");
   assert.match(shared("train/AGENTS.md"), /Decide: one recommendation, which may combine complementary moves that serve the same goal; name a runner-up only when the options truly exclude each other\./);
-  const engine = quality("QUALITY-ENGINE-v3.md");
-  assert.match(engine, /4\. \*\*The owner's data first\.\*\* The standard playbook is the default where the data says nothing new\./);
+  const engine = shared("METHOD.md");
+  assert.match(engine, /5\. \*\*The owner's data first\.\*\*[^\n]*The expert's standard playbook is the default where the data says nothing new\./);
   assert.match(engine, /Every plan, strategy or recommendation carries one labelled \*\*bolder move\*\*: one idea beyond the standard playbook, sized in the owner's unit, with its first step and its risk, inside the length budget\./);
-  assert.match(engine, /Light and standard have no third draft, but the expert draft of any plan, strategy or recommendation carries the bolder move/);
+  assert.match(engine, /At light and standard depth there is no third draft\./);
   assert.match(engine, /differs on at least two of angle, format, persona and hook source/);
-  assert.match(engine, /the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week/);
+  assert.match(engine, /first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week/);
   assert.match(engine, /Stay within the owner's limit, counted the way the owner counts/);
-  assert.match(engine, /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections\./);
-  assert.match(quality("ROUTING.md"), /\*\*standard\*\*[\s\S]*No creative third draft, but the expert draft of a plan, strategy or recommendation carries one labelled bolder move/);
-  assert.match(quality("INTAKE.md"), /Show the reader at most three assumptions, one line each/);
+  assert.match(engine, /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections; never in what a buyer reads\./);
+  assert.match(engine, /\| 3 Diverge \|[^\n]*\| Expert \(with the bolder move in a plan\) and plain \|/);
+  assert.match(engine, /At most three assumption lines, one line each/);
   // "To confirm" survives only where a rule forbids it.
-  for (const [name, text] of [["WORK-METHOD.md", shared("WORK-METHOD.md")], ["AGENTS.md", shared("AGENTS.md")], ["train/AGENTS.md", shared("train/AGENTS.md")],
-    ["QUALITY-ENGINE-v3.md", engine], ["INTAKE.md", quality("INTAKE.md")], ["ROUTING.md", quality("ROUTING.md")]] as const)
+  for (const [name, text] of [["METHOD.md", engine], ["AGENTS.md", shared("AGENTS.md")], ["train/AGENTS.md", shared("train/AGENTS.md")]] as const)
     for (const line of text.split("\n").filter(l => /To confirm/i.test(l))) assert.match(line, /(never|no) (holds a |add a |end with a )?(a )?"?To confirm/i, `${name}: ${line.slice(0, 80)}`);
 });
 
-test("a one-shot job's required reading stays under 6,000 words in a pricing-strategist pack", async () => {
-  // AGENTS.md, WORK-METHOD.md, the quality engine sections the fast path names (rules, steps 2 to 4 and 8), one card
-  // and one job skill. About 13,560 words before 13 Nov 2026.
+test("a one-shot job's required reading stays under 7,000 words in a pricing-strategist pack", async () => {
+  // AGENTS.md, the METHOD.md parts the fast path names (the hard rules, the step table, step 0's spec sheet and rubric,
+  // steps 3 to 6), one card and one job skill. About 13,560 words before 13 Nov 2026; 5,637 before the merge (15 Nov).
   const agents = file(await build(), "AGENTS.md")!;
-  const engine = quality("QUALITY-ENGINE-v3.md").split(/\n(?=## )/).filter(s => /^(# |## (Rules|[2-4]\.|8\.))/.test(s)).join("\n");
-  assert.match(shared("WORK-METHOD.md"), /read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill/);
+  const method = shared("METHOD.md");
+  assert.match(method, /read only the hard rules, the step table, the spec sheet and rubric in step 0, and steps 3 to 6/);
+  const parts = method.split(/\n(?=## )/);
+  const step0 = parts.find(s => s.startsWith("## 0."))!;
+  const engine = [parts[0], ...parts.filter(s => /^## (Hard rules|The step table|[3-6]\.)/.test(s)), step0.slice(step0.indexOf("**The spec sheet.**"))].join("\n");
   const skills = ["price-recommendation", "price-test-and-readout", "tiers-and-packaging"]
     .map(s => readFileSync(new URL(`../packs/roles/pricing-strategist/skills/${s}/SKILL.md`, import.meta.url), "utf8"));
-  const total = visibleWords(agents) + visibleWords(shared("WORK-METHOD.md")) + visibleWords(engine) + visibleWords(quality("cards/pricing.md")) + Math.max(...skills.map(visibleWords));
-  assert.ok(total < 6000, `one-shot reading is ${total} words`);
+  const total = visibleWords(agents) + visibleWords(engine) + visibleWords(quality("cards/pricing.md")) + Math.max(...skills.map(visibleWords));
+  // 15 Nov: the fast path now also reads the whole check step (the mechanical checks it used to skip), the rubric and
+  // the chat path, about 900 words. A bloat guard, never a reason to cut a useful line.
+  assert.ok(total < 7000, `one-shot reading is ${total} words`);
 });

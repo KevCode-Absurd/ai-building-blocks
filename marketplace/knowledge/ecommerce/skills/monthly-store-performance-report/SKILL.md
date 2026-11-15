@@ -100,9 +100,9 @@ Judge changes to order value, repeat rate or acquisition cost on 60 to 180-day c
 
 Close with next month's targets (contribution after ads, new-customer MER, spend), each with how it was set, and book a 30-minute walk-through with the owner; the report is read properly when someone talks it through. Keep the report to what changes a decision: top and bottom ads belong in `store-meta-creative-review`, not here.
 
-### 9. India and cash-on-delivery stores
+### 9. Stores with pay on delivery or many failed deliveries
 
-Add three lines: COD share of orders, return-to-origin rate on COD orders delivered this month, and COD cash still with couriers at month end. Gross profit uses placed orders after return-to-origin losses. GST stays out of net sales and is shown as a separate line.
+Add three lines: pay on delivery share of orders, failed-delivery rate on orders shipped this month, and cash still with couriers at month end. Gross profit uses placed orders after failed-delivery and return losses. Sales tax or VAT stays out of net sales and is shown as a separate line.
 
 ## Checks before you hand it over
 
@@ -161,3 +161,7 @@ Add three lines: COD share of orders, return-to-origin rate on COD orders delive
 - MEA-0055: split new and returning profit.
 
 What makes this skill ours: contribution after ads and cash on the first screen; Shopify's definition traps corrected before any comparison; a source tag on every number with untagged numbers removed; and last month's actions graded so the report learns from itself.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Add COD share of orders, RTO rate on COD orders this month, and COD cash still with couriers at month end. GST stays out of net sales as its own line.

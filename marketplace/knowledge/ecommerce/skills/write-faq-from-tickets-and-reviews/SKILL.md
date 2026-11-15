@@ -10,7 +10,7 @@ description: "Writes the store's FAQ from what buyers really ask: support ticket
 ## When to use
 
 - Support answers the same 10 questions every week.
-- Buyers ask about sizing, delivery, COD or ingredients in chat before buying.
+- Buyers ask about sizing, delivery, payment or ingredients in chat before buying.
 - The help page was written at launch and does not match current policy.
 - Reviews show buyers were surprised by something the page never said.
 
@@ -28,7 +28,7 @@ Required (read access, level 1):
 
 1. **Support export, last 90 days**: ticket or chat ID, date, channel (email, chat, WhatsApp, Instagram), subject, first customer message, tags. From the helpdesk (Gorgias, Zendesk, Freshdesk) or, with no helpdesk, a copy of inbox and WhatsApp Business chats.
 2. **Reviews export**: rating, body, date, product.
-3. **Live policy pages**: shipping, returns, refunds, warranty, payment and COD.
+3. **Live policy pages**: shipping, returns, refunds, warranty and payment methods.
 4. **Product facts** for the products most asked about.
 
 Optional: Shopify search terms, post-purchase survey answers ("what almost stopped you"), on-page survey answers, sales chat transcripts.
@@ -37,20 +37,20 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 
 ## Before you start: the gates
 
-1. **Policy is settled.** Each shipping, returns, refund and COD answer must match a live policy page. If two sources disagree (policy page versus what agents say), stop that answer and ask the client which is true.
+1. **Policy is settled.** Each shipping, returns, refund and payment answer must match a live policy page. If two sources disagree (policy page versus what agents say), stop that answer and ask the client which is true.
 2. **Answers can be owned.** Each answer has an owner who updates it when the fact changes (ops for delivery, product for ingredients). No owner: mark it and ask.
 3. **Rules that apply.** Health, safety and ingredient answers stay inside the store's claims sheet (`product-claims-profile`). US delivery answers need a reasonable basis in dispatch data [CXP-6160].
 
 ## Steps
 
 1. **Pull and clean.** Combine tickets, chats and reviews into one sheet. Keep only messages that contain a question or a surprise ("I didn't know it was so small").
-2. **Code each question.** Tag by stage: before buying (fit, use, ingredients, delivery time, COD, price), during checkout (payment failed, coupon, address), after buying (where is my order, return, how to use). Merge duplicates into one plain question in buyer words. Paste the exact wording of 2 to 3 examples per group; do not let a tool paraphrase them [AVT-0007].
+2. **Code each question.** Tag by stage: before buying (fit, use, ingredients, delivery time, payment options, price), during checkout (payment failed, coupon, address), after buying (where is my order, return, how to use). Merge duplicates into one plain question in buyer words. Paste the exact wording of 2 to 3 examples per group; do not let a tool paraphrase them [AVT-0007]. Word each merged question the way a buyer would type it into a search box: under 12 words, starting with how, what, can, does, is, when or why.
 3. **Count and rank.** Count each group. Questions before buying rank first, because each one may be a lost sale. Order-status questions are a separate pile: if they exceed about 3% of orders, the fix is tracking and proactive messages, not FAQ text [CXP-0012]; hand them to `cut-where-is-my-order-tickets`.
 4. **Add the near-miss questions.** From any "what almost stopped you" survey answers, add the top reasons as questions [LPG-0042] [CRO-0018]. Add page-level gaps: quick backs from product pages and dead clicks on price or shipping text often mean missing information [CRO-0023].
-5. **Write each answer.** Lead with the direct answer in the first sentence, about 20 to 25 words, so it stands alone if quoted [AEO-0023]. Then one or two sentences of detail or the exception. Use numbers and dates, not "fast" or "soon". Link to the full policy where a policy governs. No sales pitch in answers; if the honest answer is "this is not for you", say so and point to the right product.
-6. **Decide the placement.** For each question choose where it is asked: product page (fit, use, ingredients, what is in the box), collection page (how to choose), cart or checkout area (payment, COD, delivery date, returns), help centre (everything, grouped by stage), order confirmation and shipping emails (how to use, when it arrives). Put a question in two places at most. Answer obscure product questions (compatibility, edge uses) in a help centre on the main domain, not a subdomain, since chat users ask longer, specific questions [AEO-0031].
+5. **Write each answer.** Lead with the direct answer in the first sentence, about 20 to 25 words, so it stands alone if quoted [AEO-0023]. Then one or two sentences of detail or the exception. Use numbers and dates, not "fast" or "soon". Link to the full policy where a policy governs. No sales pitch in answers; if the honest answer is "this is not for you", say so and point to the right product. Keep each answer under about 60 words unless it needs steps. A fact you do not have is marked missing for the owner, never softened into "usually" or "most orders". Within the before-buying group, answer "will it work for me" questions with a review from the same kind of buyer where one exists. Flag questions a page cannot settle (medical, legal or money questions where the honest answer is a qualified person or an official source) and say so in the answer.
+6. **Decide the placement.** For each question choose where it is asked: product page (fit, use, ingredients, what is in the box), collection page (how to choose), cart or checkout area (payment, delivery date, returns), help centre (everything, grouped by stage), order confirmation and shipping emails (how to use, when it arrives). Put a question in two places at most. Answer obscure product questions (compatibility, edge uses) in a help centre on the main domain, not a subdomain, since chat users ask longer, specific questions [AEO-0031]. Give the help centre page a title under eight words naming the product or topic, and a one-line intro saying who it is for and how to find a question fast.
 7. **Make it readable by machines too.** FAQ text must be in the page HTML, not loaded by a script after the page opens, or many AI crawlers will not see it; check by reloading with JavaScript turned off [AEO-0002]. Do not add FAQ blocks for search snippets: Google stopped showing FAQ rich results from May 2026 [SEO-6160]. A plain official FAQ about the brand also helps assistants repeat the right facts [AEO-0011].
-8. **India and US notes.** India: answer COD availability and fees, prepaid offers, pincode serviceability, delivery days by zone, open-box or return pickup rules, GST invoice access, and UPI refunds in plain words; offer Hindi or regional versions of the top 5 answers if tickets arrive in those languages. US: answer delivery timing with dates the store meets, and say how delays are handled.
+8. **Market notes.** US: answer delivery timing with dates the store meets, and say how delays are handled. UK and EU: answer the 14-day right to cancel, who pays return postage, and whether prices include VAT. Cross-border: say whether duties and import taxes are included and who pays them. Anywhere: answer payment options (and pay on delivery where offered), delivery days by zone, return pickup rules, tax invoice access, and how refunds reach each payment method, in plain words; offer versions of the top 5 answers in the languages your buyers use if tickets arrive in those languages.
 9. **Set the refresh.** Each answer gets a review date (90 days by default, practitioner default) and is rechecked whenever a policy, product or courier changes.
 
 ## Checks before you hand it over
@@ -62,6 +62,8 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 - Each question has one or two placements, chosen by where it is asked.
 - FAQ text renders without JavaScript.
 - Every answer has an owner and a review date.
+- Every question reads the way a buyer would type it, under 12 words; no answer softens a missing fact into "usually".
+- Questions a page cannot settle are flagged and point to the right person or source.
 
 ## Output
 
@@ -81,6 +83,8 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 
 **Policy conflicts:** where two policies disagree, the answer follows the stricter one and says so in one line. Claims that need legal sign-off carry one line beside them.
 
+**Questions that should not need asking:** three lines for the owner naming the questions that point to a product, page or policy fix rather than more FAQ text (for example, a size question asked by many buyers means the size chart is missing a measurement).
+
 ## Common mistakes
 
 - **Writing questions the founder wishes buyers asked.** Step 1 and step 3 use counted real questions.
@@ -89,6 +93,7 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 - **Vague answers.** Step 5 demands numbers, dates and a direct first sentence.
 - **FAQ loaded by an app script.** Step 7 tests with JavaScript off.
 - **Treating order-status floods as an FAQ problem.** Step 3 routes them to tracking fixes.
+- **Answering a question that should not exist.** The owner note names the page or product fix instead.
 
 ## Sources
 
@@ -102,5 +107,10 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 - AEO-0002: script-loaded FAQ is invisible to many AI crawlers.
 - SEO-6160: FAQ rich results removed from Google Search in 2026.
 - AEO-0011: an official brand FAQ helps assistants repeat correct facts.
+- Search-style question wording, the cannot-settle flag and the owner note on avoidable questions come from the AI Blocks FAQ page writer.
 
 What makes this skill ours: every question is counted from the store's own tickets, chats and reviews; each answer is placed where the doubt arises rather than on one page; policy conflicts are surfaced instead of guessed; and answers are written to be both read by buyers and quoted by answer engines, now that FAQ snippets are gone.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Answer COD availability and fees, prepaid offers, pincode serviceability, open-box or return pickup rules, GST invoice access, and UPI refunds in plain words. Offer Hindi or regional versions of the top 5 answers if tickets arrive in those languages.

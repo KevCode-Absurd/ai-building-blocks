@@ -1,0 +1,395 @@
+{
+  "id": "product-launch",
+  "name": "New product, from idea to ready for sourcing",
+  "goal": "One new product you picked from real evidence (demand, rivals, buyer complaints, fit with your range and margin after landed cost), with a factory-ready tech pack, a should-cost, a landed cost and a packaging spec, handed to the sourcing team in one pack you approved.",
+  "starts_from": "A gap in your range from the portfolio review, a category trend call, a growth plan task, or you asking for a new product. When it ends, the same folder moves to sourcing-negotiation, which finds suppliers, runs the talks and, after the golden sample, prepares the photos and the product page. The page goes live later through the landing-page process or your store setup agent, as its own approved change.",
+  "folder": "products",
+  "then": "sourcing-negotiation",
+  "metrics": [
+    "Main number: the one you set in context/goals.json. For a new product this is usually gross profit per order after landed cost at the planned selling price.",
+    "Money kept safe: the share of ideas stopped at a gate before any sample, deposit or tooling was paid.",
+    "Estimate quality: the landed cost written here against the real landed cost on the first order, with the gap recorded.",
+    "Time: days from the start of the job to the sourcing pack you signed off."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Gather what we know",
+      "agent": "thanh-product-sourcing-lead",
+      "access": "read",
+      "gate": "none",
+      "say": "Collects the facts before anyone hunts for products: who your buyers are, which gap in the range we are trying to fill and why it matters to them, your selling price band, the margin floor, the cash you can put into a first order, the markets you sell in, and which data we can reach (store, marketplaces, Search Console, ads). Then it writes the stage gates for this job, each with a pass mark and a kill condition, before any work starts. Anything missing is a question for you.",
+      "needs": [
+        "context/org-context/ (customers, voice, design, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/limits.json (cash and spending limits)",
+        "context/learnings.md",
+        "store orders, products, reviews and returns for the last 12 to 24 months (store connector, read only, or exports you share)",
+        "the task that started this job"
+      ],
+      "makes": [
+        "intake.md",
+        "gates.md"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md names the buyer, the gap, the price band, the margin floor, the cash limit, the markets and the data we can reach, and gates.md lists every gate with its pass mark and kill condition."
+    },
+    {
+      "id": "candidates",
+      "name": "Find and screen product ideas",
+      "agent": "sipho-product-hunter",
+      "access": "read",
+      "gate": "none",
+      "say": "Sets the screening rules from the intake (category, price band, size and weight, risk limits and the margin floor), then builds a long list from marketplace best sellers, rival products and buyer complaints, and cuts it with those rules. Each survivor gets a first pass on unit economics, with every guess marked as a guess, and a dig into what buyers dislike about the top rival products. A candidate needs a real fix to offer, not just a cheaper copy.",
+      "needs": [
+        "intake.md",
+        "gates.md",
+        "marketplace listings and rival reviews (public pages and exports you share)",
+        "margin floor from radek-unit-economics in the team ledger"
+      ],
+      "makes": [
+        "ideas/candidates.md",
+        "ideas/first-pass-economics.md",
+        "numbers.json"
+      ],
+      "checks": [
+        "candidates-review",
+        "numbers-check"
+      ],
+      "done_when": "candidates.md lists 10 to 20 screened ideas, every cut idea with the rule that cut it, and a top five where each has a counted rival complaint it can fix and a first-pass margin with its guesses marked."
+    },
+    {
+      "id": "demand",
+      "name": "Size demand and seasons",
+      "agent": "duncan-category-trends",
+      "access": "read",
+      "gate": "none",
+      "say": "Sizes demand for the top five. Reads Google Trends over five years and twelve months in each market you sell in, against a steady reference term, because Trends shows a share of searches and not counts. Then sizes searches with Google Keyword Planner, logs review counts on the top marketplace products with dates, and maps the seasons month by month so we know when stock must land. Each idea gets a grow, hold or avoid call with dated evidence from at least two sources.",
+      "needs": [
+        "ideas/candidates.md",
+        "store sales by product and month",
+        "Search Console and ads search terms (read only, if connected)",
+        "Google Trends, Keyword Planner and marketplace best seller pages"
+      ],
+      "makes": [
+        "ideas/demand.md",
+        "sources/demand-sources.md"
+      ],
+      "checks": [
+        "demand-review",
+        "proof-check"
+      ],
+      "done_when": "demand.md gives each top idea a grow, hold or avoid call, monthly searches by market with the source and date, a month by month season map, and what would change the call."
+    },
+    {
+      "id": "market",
+      "name": "Check the market and rivals",
+      "agent": "shannon-market-research",
+      "access": "read",
+      "gate": "none",
+      "say": "Checks whether there is room to win for the strongest ideas. Counts and rates rivals on Shopify stores, Amazon, the big local marketplaces and social: how many, how big, how good their reviews are and how long they have sold. Builds the price ladder from cheapest to premium and looks for signs of a crowded market, such as lookalike listings, falling prices and tired review themes. It writes the kill conditions before the verdict, checks each one, then calls go, look closer or walk away.",
+      "needs": [
+        "ideas/candidates.md",
+        "ideas/demand.md",
+        "rival stores, listings and reviews (public pages)"
+      ],
+      "makes": [
+        "validation/market.md"
+      ],
+      "checks": [
+        "market-review",
+        "proof-check"
+      ],
+      "done_when": "market.md has, for each idea still standing, the rival count with sources, the price ladder, the kill conditions with what we found for each, and a go, look closer or walk away call."
+    },
+    {
+      "id": "product",
+      "name": "Check the product and write the brief",
+      "agent": "revathi-product-research",
+      "access": "draft",
+      "gate": "none",
+      "say": "Groups buyer complaints from your reviews and rival reviews into problems a product could fix, works out margin after landed cost (real quotes where we have them, marked estimates where we do not), and checks risk: labelling and safety rules in your markets, breakage, sizing returns, seasons and likely minimum order size. It scores the ideas on demand, margin, sourcing ease and risk, with weights you can change, and writes a product brief for the top idea: who it is for, the problem it fixes, the must-have features, the target landed cost and the questions for suppliers.",
+      "needs": [
+        "ideas/",
+        "validation/market.md",
+        "your reviews and return reasons (store connector, read only, or exports)"
+      ],
+      "makes": [
+        "validation/scorecard.md",
+        "validation/product-brief.md"
+      ],
+      "checks": [
+        "brief-review",
+        "risk-review",
+        "numbers-check"
+      ],
+      "done_when": "scorecard.md scores every remaining idea with the weights shown, and product-brief.md names the buyer, the problem, the must-haves, the target landed cost and the supplier questions, with every claim marked with its source."
+    },
+    {
+      "id": "portfolio-fit",
+      "name": "Check fit with your range",
+      "agent": "sabelo-product-portfolio",
+      "access": "read",
+      "gate": "none",
+      "say": "Reads the top idea against the products you already sell. Will it take sales from one of your own products, or add to the total? Is it something your buyers already ask for in site search, reviews or support tickets? What do they buy with your current products, and would this attach to those baskets? It shows the effect on your margin mix and says plainly whether the idea fits, fits with a change, or does not fit.",
+      "needs": [
+        "validation/product-brief.md",
+        "12 to 24 months of orders and line items",
+        "site search terms, reviews and support tickets (read only)",
+        "gross profit per SKU from radek-unit-economics"
+      ],
+      "makes": [
+        "validation/portfolio-fit.md"
+      ],
+      "checks": [
+        "fit-review"
+      ],
+      "done_when": "portfolio-fit.md gives the overlap with existing SKUs, the attach rate to current baskets, the buyer evidence for the gap and a fits, fits with a change, or does not fit call."
+    },
+    {
+      "id": "pick",
+      "name": "You pick the product",
+      "agent": "thanh-product-sourcing-lead",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts the evidence on one page for each idea still standing: demand, rivals, margin after landed cost, risk, fit with your range, and the cash needed to reach first stock. It recommends go, wait or stop for each, with the reason, and names the kill conditions that still apply. You make the choice. Nothing is ordered or paid at this stage.",
+      "needs": [
+        "ideas/",
+        "validation/",
+        "gates.md",
+        "spending limit from hemant-store-finance in the team ledger"
+      ],
+      "makes": [
+        "decision.md"
+      ],
+      "checks": [
+        "decision-review",
+        "cash-fit"
+      ],
+      "signoff": "You read the decision page and pick one product, or none. Reply yes with the code to approve the pick, its target landed cost and the gates ahead. This starts spec work only: no supplier is contacted and no money is spent.",
+      "done_when": "decision.md shows a go, wait or stop call per idea with its evidence, the cash needed to first stock against your limit, and the gates still ahead."
+    },
+    {
+      "id": "tech-pack",
+      "name": "Tech pack and test plan",
+      "agent": "maxine-tech-packs",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the first version of the tech pack a factory can quote on: materials and grades, measured drawings with tolerances, Pantone colours with a physical standard, construction steps, trims and labels, care and use notes, and a slot for the packaging spec. It plans colours and sizes from your sales data against likely minimum orders, and sets the tests and certificates each market needs with the compliance specialist, so the factory and the lab know them before the first sample.",
+      "needs": [
+        "decision.md (signed off)",
+        "validation/product-brief.md",
+        "reviews and return reasons for this product type",
+        "context/org-context/ (the look, feel and promises the product must keep)"
+      ],
+      "makes": [
+        "spec/tech-pack.md",
+        "spec/variants.md",
+        "spec/test-plan.md"
+      ],
+      "checks": [
+        "techpack-review",
+        "compliance-review"
+      ],
+      "done_when": "tech-pack.md has a version number and every point a factory must hit has a measure and a tolerance, variants.md checks each colour and size against a likely minimum order, and test-plan.md lists the tests and certificates by market with their source."
+    },
+    {
+      "id": "should-cost",
+      "name": "Bill of materials and should-cost",
+      "agent": "douglas-should-cost",
+      "access": "draft",
+      "gate": "none",
+      "say": "Builds the bill of materials from the tech pack, one line per component with material, weight or quantity, unit and a dated price source. Then works out what each line should cost: material amount (with waste) times its market price from a named series, plus factory time and labour at the region's rates, scrap, overhead and a fair factory margin, with every sum shown. From that it sets a target price and a walk-away price per line, kept in an internal file that is never sent to a supplier.",
+      "needs": [
+        "spec/tech-pack.md",
+        "spec/variants.md",
+        "any quotes or invoices you already hold"
+      ],
+      "makes": [
+        "cost/bom.csv",
+        "cost/should-cost.md",
+        "cost/targets-internal.md"
+      ],
+      "checks": [
+        "should-cost-review",
+        "numbers-check"
+      ],
+      "done_when": "every BOM line has a dated source, should-cost.md shows each sum and a total per unit, and targets-internal.md gives a target and walk-away per line with the reason for each."
+    },
+    {
+      "id": "landed-cost",
+      "name": "Landed cost and cost forecast",
+      "agent": "akosua-cost-forecast",
+      "access": "draft",
+      "gate": "none",
+      "say": "Turns the should-cost into a landed cost per unit at three order sizes: factory price, packaging, freight to your door, duty, fees and waste. Freight comes from a named freight index with its date, and the duty rate from the official tariff of each import market with its date, marked for your customs broker to confirm. It ties each cost line to a public price series, gives a base, high and low cost at 3, 6 and 12 months, and checks the margin at your planned selling price against the floor.",
+      "needs": [
+        "cost/",
+        "spec/tech-pack.md",
+        "your planned selling price and margin floor (intake.md)"
+      ],
+      "makes": [
+        "cost/landed-cost.md",
+        "cost/cost-forecast.md",
+        "sources/cost-sources.md"
+      ],
+      "checks": [
+        "landed-review",
+        "margin-floor",
+        "numbers-check",
+        "proof-check"
+      ],
+      "done_when": "landed-cost.md gives the landed cost per unit at three order sizes with a dated source for every input, and cost-forecast.md gives base, high and low cases with the driver of each and the margin each leaves."
+    },
+    {
+      "id": "packaging",
+      "name": "Packaging and labels",
+      "agent": "alistair-packaging",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Designs the pack around what must survive the trip and what the buyer sees first: box or mailer size, material, print and inner layers, the insert card, and a dieline a supplier can quote on. It writes every label detail each market requires (for example net quantity, maker or importer details and safety marks) and flags anything for food, children, skin or batteries for an expert, without guessing. It costs each option per unit and per order, with real and volumetric shipping weight, shown against gross profit per order. A flat mockup is drawn in code from the dieline, so no image money is spent.",
+      "needs": [
+        "spec/tech-pack.md",
+        "cost/landed-cost.md",
+        "context/org-context/ (design rules and claims)",
+        "damage returns and reviews that mention packaging, if you sell similar products"
+      ],
+      "makes": [
+        "packaging/brief.md",
+        "packaging/labels.md",
+        "packaging/spec.md",
+        "packaging/cost.md",
+        "packaging/mockup.png"
+      ],
+      "checks": [
+        "packaging-review",
+        "compliance-review",
+        "copy-lint"
+      ],
+      "signoff": "You look at the mockup, the label text and the cost per order. Reply yes with the code to approve the pack design as written, or say what to change. Nothing is ordered from a packaging supplier.",
+      "done_when": "spec.md gives sizes, material, print and a dieline, labels.md lists every required detail per market with its source and any expert flags, and cost.md shows cost per order against gross profit per order."
+    },
+    {
+      "id": "sourcing-pack",
+      "name": "Sourcing pack for approval",
+      "agent": "thanh-product-sourcing-lead",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts everything sourcing needs into one pack: the tech pack version, the packaging spec, the test plan, order sizes at three tiers, the landed cost ceiling, the timeline to first stock with real lead times where we have them, the cash needed and when, what is still open, and the list of who sourcing may contact. The targets and walk-away prices stay in the internal file and are not part of anything a supplier will see.",
+      "needs": [
+        "decision.md",
+        "spec/",
+        "cost/",
+        "packaging/ (signed off)",
+        "gates.md"
+      ],
+      "makes": [
+        "sourcing-pack.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You check the pack. Reply yes with the code to start supplier search. This yes does not let anyone message a supplier: every message still needs its own yes in the sourcing job.",
+      "done_when": "sourcing-pack.md lists the spec version, packaging spec, test plan, three order sizes, the cost ceiling, the timeline, the cash plan and the open questions, and points to the internal targets without repeating them."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every heading in intake.md is filled from a named source, gates.md has a pass mark and kill condition for each gate, and missing facts are listed as answered questions, not guesses"
+    },
+    "candidates-review": {
+      "kind": "reviewer",
+      "agent": "radek-unit-economics",
+      "passes_when": "every cut idea names the rule that cut it, first-pass margins use real quotes or clearly marked guesses, and each top-five idea has a counted rival complaint it can fix"
+    },
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/numbers.json --final <the stage's main file>",
+      "passes_when": "every figure in the numbers ledger has one basis, totals match their rows, and the stage's file uses the same figures"
+    },
+    "proof-check": {
+      "kind": "script",
+      "run": "node tools/quality/proof.cjs <the stage's main file> --sources <folder>/sources",
+      "passes_when": "every link is live and every figure is backed by a saved source (exit 0)"
+    },
+    "demand-review": {
+      "kind": "reviewer",
+      "agent": "shannon-market-research",
+      "passes_when": "each demand figure has a source and a date, Trends shares are not read as search counts, a spike on one platform is treated as a flag and not a trend, and the store's own sales line is shown first"
+    },
+    "market-review": {
+      "kind": "reviewer",
+      "agent": "duncan-category-trends",
+      "passes_when": "kill conditions were written before the verdict and each one was checked, rivals are counted from named sources, and the price ladder shows where there is room"
+    },
+    "brief-review": {
+      "kind": "reviewer",
+      "agent": "thanh-product-sourcing-lead",
+      "passes_when": "the brief names the buyer, the problem and the must-haves, the target landed cost clears the margin floor, and the supplier questions can be answered with facts"
+    },
+    "risk-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "labelling and safety rules are listed per market with their source, and anything touching food, children, skin, heat, water, batteries or electricity is flagged for a qualified expert rather than judged by an agent"
+    },
+    "fit-review": {
+      "kind": "reviewer",
+      "agent": "juliet-merchandising",
+      "passes_when": "overlap and attach figures trace to the order history, and the fit call says what happens to the existing products it touches"
+    },
+    "decision-review": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "each call follows from the evidence in the job folder, every gate result is stated, and nothing on the page commits money or contacts a supplier"
+    },
+    "cash-fit": {
+      "kind": "reviewer",
+      "agent": "hemant-store-finance",
+      "passes_when": "the cash needed to reach first stock, by week, stays inside the spending limit and above the cash floor, or the page says plainly that it does not"
+    },
+    "techpack-review": {
+      "kind": "reviewer",
+      "agent": "phuong-quality-control",
+      "passes_when": "every point a factory must hit has a measure and a tolerance, so it can be checked on a sample and at inspection"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "every required label detail, test and certificate for each market is listed with its source, and expert flags are raised where the category needs them"
+    },
+    "should-cost-review": {
+      "kind": "reviewer",
+      "agent": "wenhao-procurement",
+      "passes_when": "every line has a dated price source, the sums recompute, and each target and walk-away is realistic to negotiate and has its reason"
+    },
+    "landed-review": {
+      "kind": "reviewer",
+      "agent": "zhenyu-sourcing",
+      "passes_when": "landed cost is built on the same basis sourcing will use for quotes (spec, quantity, packing, Incoterm and delivery point), and freight and duty inputs carry a source and date"
+    },
+    "margin-floor": {
+      "kind": "reviewer",
+      "agent": "radek-unit-economics",
+      "passes_when": "gross profit per order after landed cost at the planned price clears the floor in the team ledger in the base and high cost cases, or the stage stops and the gap goes back to you"
+    },
+    "packaging-review": {
+      "kind": "reviewer",
+      "agent": "philippa-brand",
+      "passes_when": "the pack follows the design rules and voice in the Org context, the insert has one review ask and one reorder reason inside marketplace review rules, and cost per order is shown against gross profit"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/packaging/labels.md",
+      "passes_when": "the copy checker exits 0 (no placeholders, no banned words, stated counts match)"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "the sourcing pack has every item it lists, points to signed-off files only, and repeats no target or walk-away price"
+    }
+  }
+}

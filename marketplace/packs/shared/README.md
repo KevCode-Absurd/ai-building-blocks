@@ -20,11 +20,11 @@ Your AI reads AGENTS.md first, because it explains who the agent is, how it star
 
 ## Use it in your AI
 
-The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one_file_url}}. It holds everything {{name}} needs in a single text file. Attach it to a new chat, then send: "You are {{name}}. The file I attached holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part. Before you start, ask me for my business name and website (or what I can paste instead), and what I need done." Step-by-step help for each app is on {{name}}'s profile page, under "Start {{name}} in your AI".
+The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one_file_url}}. It holds {{name}}'s core (instructions, method, rules, toolbox and skills), a digest of the cards {{name}} uses most, and links to everything else, in a single text file. Attach it to a new chat, then send: "You are {{name}}. The file I attached holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part. Before you start, ask me for my business name and website (or what I can paste instead), and what I need done." Step-by-step help for each app is on {{name}}'s profile page, under "Start {{name}} in your AI".
 
 To use the whole folder instead, unzip the pack first, then choose your tool from the sections below. Each section ends with a first message that you can copy and paste, after replacing the part in square brackets with a sentence or two about your own job.
 
-If your tool limits how many files you can add, start with toolbox.md, WORK-METHOD.md, context/README.md, soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's method, character and expertise. After that, add the skills and the toolbox files for the tasks you expect to give it most often.
+If your tool limits how many files you can add, start with METHOD.md, toolbox.md, context/README.md, soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's method, character and expertise. After that, add the skills and the toolbox files for the tasks you expect to give it most often.
 
 ### Claude (claude.ai or the Claude app)
 

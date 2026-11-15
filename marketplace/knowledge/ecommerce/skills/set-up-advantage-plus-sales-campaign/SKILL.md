@@ -61,7 +61,7 @@ Advantage+ sales suits a store with one main country, enough purchases, and a wi
 Monthly cap = existing customers x desired monthly frequency x CPM / 1,000 [ADC-0068] [ADC-0020].
 
 - Frequency: 4 to 7 a month for repeat-buy products [ADC-0020]; near 0 for furniture and other one-off buys.
-- Worked example (illustrative): 8,000 customers x 5 x 300 rupees CPM / 1,000 = 12,000 rupees a month, about 400 a day.
+- Worked example (illustrative, in the store's own currency): 8,000 customers x 5 x a CPM of 10 / 1,000 = 400 a month, about 13 a day. CPMs differ a lot by country, so use the store's own last 30 days.
 - Warning lines: 7-day frequency above 8 on existing customers [ADC-0021], or about 30 in 30 days [ADC-0029], means overspend; about 10 views in 30 days is plenty for most stores [ADC-0042].
 
 ### 4. Build the two ad sets
@@ -78,8 +78,8 @@ Then check the three levers that keep it Advantage+ [ADC-6080]: campaign budget 
 
 | Field | Value |
 |---|---|
-| Objective | Sales, website (plus WhatsApp in India only if those orders are tracked) |
-| Event | Purchase (see `meta-ads-for-cod-stores` for COD-heavy stores) |
+| Objective | Sales, website (plus WhatsApp or Messenger only where those orders are tracked) |
+| Event | Purchase (for stores with many refused or unpaid orders, see `meta-ads-for-cod-stores`) |
 | Attribution | 7-day click [MEA-0042] |
 | Bid strategy | Highest volume to start; a cost goal only via `cost-capped-campaigns` |
 | Daily budget | Target purchases a week x target cost / 7 |
@@ -114,10 +114,14 @@ Then check the three levers that keep it Advantage+ [ADC-6080]: campaign budget 
 
 Under about 1,000 a day of spend, read on 7-day windows only [ADC-0064].
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** COD-heavy stores should consider optimising on confirmed orders (`meta-ads-for-cod-stores`). Upload customer phones with country code 91; many Indian buyers give phone, not email. Prices on landing pages include GST.
-- **US:** state the 7-day click basis in every report; the default with view credit can show a much higher number.
+- **Reporting:** state the 7-day click basis in every report; the default with view credit can show a much higher number.
+- **Customer list:** upload phones in full international format with the country code (+1 for the US and Canada, +44 for the UK, +61 for Australia); in markets where buyers give phone more than email, the phone column matches far more people.
+- **Prices:** landing page prices match the ad and the market's display rules (tax-inclusive in the UK, EU and Australia; before sales tax in the US and Canada).
+- **Consent:** in the EU and UK, upload only customers whose data the privacy notice covers for ads, and respect consent signals from the cookie banner.
+- **Payment risk:** stores where many orders are refused, unpaid or fail delivery should consider optimising on confirmed orders (`meta-ads-for-cod-stores`).
+- **Several countries:** if the store ships to many countries with different margins or currencies, give each main market its own campaign rather than one mixed list (gate 4).
 
 ## Checks before you hand it over
 
@@ -168,3 +172,7 @@ Under about 1,000 a day of spend, read on 7-day windows only [ADC-0064].
 - MEA-0037, MEA-0042: delivered margin; 7-day click reporting.
 
 What makes this skill ours: the existing-customer cap is sized in money from the store's own customer count, not a default percentage; it uses Meta's current two ad set method and checks the campaign still counts as Advantage+; and the first two weeks are judged on store new-customer orders, not Meta's blended return.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. COD-heavy stores should consider optimising on confirmed orders (`meta-ads-for-cod-stores`). Upload customer phones with country code 91; many Indian buyers give phone, not email. Prices on landing pages include GST. Add WhatsApp as a conversion location only if those orders are tracked. CPMs are often quoted in rupees; size the cap with the account's own figure.

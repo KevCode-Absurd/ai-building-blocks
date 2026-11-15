@@ -70,7 +70,7 @@ A short scripted session can feed months of hook and body combinations [MCR-0007
 - Turn off fans, air conditioning, the fridge if close, and notifications on every phone in the room.
 - A clip-on mic is best. Without one, keep the phone about an arm's length away and film talking shots in the quietest corner.
 - Record 10 seconds of silent room tone at the start. The editor uses it to cover cuts.
-- India: city noise peaks in the day (traffic, pressure cookers, construction). Film talking shots early morning or late evening, and b-roll in the noisy hours.
+- Busy cities: noise often peaks in the day (traffic, deliveries, construction, neighbours' kitchens). Film talking shots early morning or late evening, and b-roll in the noisy hours.
 
 ### 4. Set the phone
 
@@ -104,7 +104,7 @@ Leave 10 minutes for one more room, outfit or outdoor spot. The same script in a
 - Pause one second before and after each line. Clean gaps make clean cuts.
 - Never read claims from a phone off to the side. Learn one line, film it, next line.
 - One honest small doubt or downside is allowed and helps trust.
-- Language: film in the language the buyer thinks in. In India, that may be Hindi, Hinglish or a regional language, with an English take of the openers only if the brand runs English ads. In the US, plain conversational English unless the brief names a Spanish version.
+- Language: film in the language the buyer thinks in. For English-speaking markets, plain conversational English. For each other language your buyers use (for example Spanish in the US, French in Canada, German or Dutch in Europe), film a native speaker's take, with an English take of the openers only if the brand runs English ads there.
 
 ### 9. Hand in the files
 
@@ -169,4 +169,8 @@ Leave 10 minutes for one more room, outfit or outdoor spot. The same script in a
 - MEA-0037: gross margin uses delivered cost.
 - ORG-0017: first frame shows the topic.
 
-What makes this skill ours: the shot count is sized from how many openers and bodies the account can actually test; proof shots must be single continuous takes so demos stay honest; the shoot fee is booked as production cost against the ads it makes; and India notes cover noise hours, language takes and the WhatsApp compression trap.
+What makes this skill ours: the shot count is sized from how many openers and bodies the account can actually test; proof shots must be single continuous takes so demos stay honest; the shoot fee is booked as production cost against the ads it makes; and the notes cover noise hours, language takes and the chat-app compression trap.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. City noise peaks in the day (traffic, pressure cookers, construction). Film in the language the buyer thinks in: Hindi, Hinglish or a regional language, with an English take of the openers only if the brand runs English ads.

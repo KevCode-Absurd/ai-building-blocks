@@ -1,6 +1,6 @@
 ---
 name: run-nps-and-csat-surveys
-description: "Two short surveys set up and read for the store: a recommend (NPS) survey sent after delivery and real use, and a satisfaction (CSAT) question after each closed support ticket, with the exact questions, timing per product, channels (email, SMS, WhatsApp in India), how to calculate and read the scores without being fooled by small samples, and a close-the-loop routine that has a person contact every unhappy buyer within two business days. Feeds promoters to reviews and referrals and detractor reasons to the monthly insights report. Use when the store has no measure of how buyers feel, scores exist but nobody acts on them, or before building loyalty or referral programs."
+description: "Two short surveys set up and read for the store: a recommend (NPS) survey sent after delivery and real use, and a satisfaction (CSAT) question after each closed support ticket, with the exact questions, timing per product, channels (email, SMS, WhatsApp where buyers use it), how to calculate and read the scores without being fooled by small samples, and a close-the-loop routine that has a person contact every unhappy buyer within two business days. Feeds promoters to reviews and referrals and detractor reasons to the monthly insights report. Use when the store has no measure of how buyers feel, scores exist but nobody acts on them, or before building loyalty or referral programs."
 ---
 
 # NPS and satisfaction surveys
@@ -57,7 +57,7 @@ Net Promoter Score is the share of promoters (9 to 10) minus the share of detrac
 
 ### 2. Time it after real use
 
-Send once per order, after delivery and after the product has had time to work, using the same days to real use as the review plan: quick-use items 5 to 7 days after delivery, results products when results show (practitioner defaults, test them). Send the survey before the review ask, in a separate message, so the two never mix. Skip buyers with an open ticket, a return in progress or a refused COD delivery; they go straight to support.
+Send once per order, after delivery and after the product has had time to work, using the same days to real use as the review plan: quick-use items 5 to 7 days after delivery, results products when results show (practitioner defaults, test them). Send the survey before the review ask, in a separate message, so the two never mix. Skip buyers with an open ticket, a return in progress or a refused or failed delivery; they go straight to support.
 
 ### 3. Add the satisfaction question to support
 
@@ -91,10 +91,10 @@ Promoters (9 to 10) get a thank-you and a referral ask through `design-referral-
 
 Each month, pass the reason groups, counts, quotes and the close-the-loop log to `turn-support-tickets-into-insights`. Pair scores with a near-miss question from checkout surveys when the store runs one; a post-purchase "what almost stopped you" question gives pre-sale doubts that NPS does not [CRO-0018] [LPG-0042].
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** WhatsApp surveys often get more answers than email; keep the question in the buyer's language where the store supports it, with numbers 0 to 10 as quick-reply options where the template allows. COD buyers who refused delivery get no survey; they go to the RTO review. Call detractors when they prefer calls.
-- **US:** keep survey emails transactional in tone with no sales offer, so they stay a service message. Honour opt-outs across channels.
+- **WhatsApp markets** (much of Europe, Latin America, the Middle East and Asia): WhatsApp surveys often get more answers than email; keep the question in the buyer's language where the store supports it, with numbers 0 to 10 as quick-reply options where the template allows. Buyers who refused delivery get no survey; they go to the failed delivery review. Call detractors when they prefer calls.
+- **Every market:** keep survey emails transactional in tone with no sales offer, so they stay a service message. Honour opt-outs across channels.
 
 ## Checks before you hand it over
 
@@ -133,4 +133,8 @@ Each month, pass the reason groups, counts, quotes and the close-the-loop log to
 - CXP-6305: NPS question, bands and formula.
 - LPG-0042: post-purchase near-miss survey completion.
 
-What makes this skill ours: surveys are timed to when each product has done its job; no survey is sent without a named person to call back unhappy buyers; NPS never gates reviews; and scores are read against the store's own past with response counts shown, with WhatsApp surveys and COD exclusions for India.
+What makes this skill ours: surveys are timed to when each product has done its job; no survey is sent without a named person to call back unhappy buyers; NPS never gates reviews; and scores are read against the store's own past with response counts shown, with WhatsApp surveys and failed-delivery exclusions where they matter.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. WhatsApp surveys often get more answers than email. COD buyers who refused delivery get no survey; they go to the RTO review.

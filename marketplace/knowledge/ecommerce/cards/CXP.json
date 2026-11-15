@@ -1215,5 +1215,204 @@
     },
     "strength": "regulator_rule",
     "public": true
+  },
+  {
+    "id": "CXP-6609",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "shipping expectations",
+      "customer support",
+      "post-purchase"
+    ],
+    "claim": "US shoppers expect delivery in about two days; if you cannot meet that, state real delivery times on landing pages and in post-purchase emails, or expect more support tickets, refunds and returns.",
+    "body": "Fast nationwide shipping has been normal in the US for years, so two-day delivery is the default expectation. Shoppers from markets such as Australia might expect that only from Amazon, which is why international brands are caught out. When delivery is slower than buyers assume, support load rises, and refunds and returns follow. How to apply: before launch, decide whether a US 3PL can get you close to two days for most of the country. If not, state expected delivery windows clearly on product and landing pages and at checkout, repeat them in the order confirmation and shipping emails, and send tracking updates proactively. Plan support staffing for the US time zone and watch where-is-my-order tickets as a share of orders in the first months.",
+    "conditions": "Non-US brands shipping to US customers, especially from abroad or a single warehouse.",
+    "fails_when": "Brands already shipping from US warehouses within two to three days; products where buyers accept longer lead times, such as made-to-order goods.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 2-day delivery expected"
+    ],
+    "asks": [
+      "How fast do US customers expect shipping?",
+      "How do I reduce where-is-my-order emails from US customers?",
+      "Should I use a US warehouse?",
+      "What should my post-purchase emails say about delivery?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6608",
+    "evidence": {
+      "where": "[17:47] two-day fulfilment expectation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-6610",
+    "modules": [
+      "CXP",
+      "MEA"
+    ],
+    "topics": [
+      "return rate reduction",
+      "returns P&L",
+      "fashion returns"
+    ],
+    "claim": "In high-return categories, run returns as their own P&L: Revolve booked $1.4B of return provisions in 2022 against $1.1B net revenue, so cutting returns $100M equals adding $100M of sales.",
+    "body": "Revolve's 2022 annual report showed return provisions of about $1.4 billion (up from $894 million the year before) against net revenue of about $1.1 billion, with a returns reserve of $63 million. In fashion, returns are so large that they deserve to be managed as a business line of their own. Blue Sense's point: you can grow by selling more, or work just as hard, arguably less hard, on returning less. Reducing return provisions from $1.4 billion to $1.3 billion is worth the same as adding $100 million of top-line sales, without the ad spend. How to apply: build a returns P&L with gross sales returned, the full cost per return (shipping both ways, payment fees, handling, write-offs) and reasons by SKU. Set a return rate target per category. Attack the biggest reasons first: fit and size guidance, honest photos and descriptions, fabric details, and flagging serial returners. Track the gain in contribution margin from each point of return rate cut, and compare it with what the same effort would earn in acquisition.",
+    "conditions": "Categories with high return rates (fashion, footwear, some home goods), typically 15% or more of orders.",
+    "fails_when": "Low-return categories such as consumables, where effort is better spent elsewhere.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Revolve 2022: about $1.1B net revenue, $1.4B return provisions ($894.1M in 2021)",
+      "Returns reserve $63M (2022) and $49M (2021)"
+    ],
+    "asks": [
+      "Is it worth trying to reduce my return rate?",
+      "How do fashion brands manage returns?",
+      "Should I treat returns as a separate P&L?",
+      "What's the value of cutting returns by a few points?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[54:14] Revolve 10-K returns provisions"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "CXP-6611",
+    "modules": [
+      "CXP",
+      "OFF",
+      "MEA"
+    ],
+    "topics": [
+      "returns policy",
+      "free returns",
+      "fashion returns"
+    ],
+    "claim": "About 15% of abandoners cite the returns policy, but do not rush to free returns, especially in fashion; losing those buyers can be more profitable than paying for heavy returns.",
+    "body": "A generous returns policy wins some checkouts, but in categories like fashion it also invites heavy returning, which can do real damage to profit and operations. Blue Sense's view is that returns policy deserves more thought than simply making it as generous as possible. If you test free returns, measure the full cost: return shipping, restocking, unsellable items and the share of orders that come back, not just the lift in conversion. If profit falls, roll it back and accept losing some of the 15% who leave over returns. A related point from their checkout example: whatever policy you choose, state it clearly on the checkout page (for example 30-day free returns) rather than hiding it behind a footer link, because a hidden policy reads as a bad one. How to apply: run free or extended returns as a time-boxed test, and compare contribution margin per order, return rate and conversion against the control.",
+    "conditions": "Categories with high return rates, especially fashion, footwear and anything sold on fit.",
+    "fails_when": "Low-return categories (consumables, small accessories) where free returns cost little and lift trust.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "15% abandon over the returns policy"
+    ],
+    "asks": [
+      "Should I offer free returns?",
+      "Does a better returns policy increase sales?",
+      "How do I decide on a returns policy for my fashion brand?",
+      "Are free returns worth it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [54:41] returns policy nuance"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-6612",
+    "modules": [
+      "CXP",
+      "COG"
+    ],
+    "topics": [
+      "returns and refunds",
+      "quality control"
+    ],
+    "claim": "Shopify's return reasons change with the product category, and a refund issued without creating a return records no reason, so set categories and always log returns to keep defect data.",
+    "body": "Return-reason data is only as good as how returns are entered. In Shopify the reasons offered depend on the product's category: apparel shows options such as too big and too small, and other categories show their own sets. The same category-based reasons appear in Shopify POS and in self-serve returns from the customer's order status page, and they feed Analytics so you can see trends. A refund given without a return, which support teams often do to save time, leaves no reason at all, so defects disappear from the data. How to apply: set an accurate Shopify product category on every product so the reasons fit what can go wrong with it. Tell support to create a return, even a no-ship return, before refunding, and to pick the reason the customer gives, adding a photo in the notes for defects. Then the monthly defect-rate report by SKU and batch is complete enough to show a factory, to hold back part of a balance, or to justify moving a supplier to tightened inspection.",
+    "conditions": "Shopify stores using native returns, POS returns or self-serve returns.",
+    "fails_when": "Returns run fully in a third-party app with its own reason codes, which then becomes the data source to fix.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why are my return reasons missing in Shopify?",
+      "Can I change the return reasons customers see?",
+      "Should support refund without creating a return?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6669",
+    "evidence": {
+      "where": "Return reasons section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6613",
+    "modules": [
+      "CXP",
+      "COG"
+    ],
+    "topics": [
+      "returns and refunds",
+      "quality control"
+    ],
+    "claim": "US shoppers were expected to return 19.3% of online sales in 2025, and retailers judged 9% of all returns fraudulent, so check returned goods before charging a factory for defects.",
+    "body": "This NRF and Happy Returns study (2,006 US consumers who returned an online purchase in the past year and 358 e-commerce professionals at retailers above 500 million USD revenue, surveyed in summer 2025) gives a US benchmark. Total returns were expected at 15.8% of sales (849.9 billion USD), and 19.3% for online sales. Retailers estimated 9% of returns were fraudulent; among those tracking it, increases were seen in overstated quantities (71%), empty boxes (65%) and decoy items such as counterfeits (64%). Also, 45% of consumers said bending the truth on a return is acceptable. That matters for quality work, because 'defective' is the reason customers pick when they know it means a free return. How to apply: compare each SKU's online return rate with the 19.3% average, but split it by reason before acting. Inspect or photograph a sample of returns coded defective before you debit a factory or change a spec, and track the confirmed defect rate separately from the claimed rate. Since 71% of shoppers say a poor returns experience makes them less likely to buy again, fix real defects at the source rather than by making returns harder.",
+    "conditions": "US online sellers comparing their return rate and using return reasons as quality evidence.",
+    "fails_when": "Categories with very different norms (apparel runs well above average) or markets outside the US.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "19.3%: share of US online sales expected to be returned in 2025",
+      "15.8%: share of all US retail sales returned",
+      "9%: share of returns retailers judged fraudulent",
+      "45%: consumers who find bending the truth on returns acceptable",
+      "71%: less likely to shop again after a poor returns experience",
+      "2,006 consumers and 358 retailers: survey sample"
+    ],
+    "asks": [
+      "What is a normal return rate for online stores?",
+      "Can I trust customers' return reasons?",
+      "Should I charge my factory for returned defective items?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6681",
+    "evidence": {
+      "where": "Press release key findings and methodology"
+    },
+    "strength": "research",
+    "public": true
   }
 ]

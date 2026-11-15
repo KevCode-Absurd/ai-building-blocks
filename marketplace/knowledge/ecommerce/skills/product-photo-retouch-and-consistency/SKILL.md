@@ -29,7 +29,7 @@ Required:
 1. **Shopify products export** (Handle, Title, Variant SKU, Image Src, Image Position, Variant Image) to list every image and where it is used.
 2. **The image files** (or the CDN URLs from the export), plus originals or RAW files if they exist.
 3. **The theme's image settings:** product card ratio (square, portrait or natural), gallery ratio, and whether the theme crops.
-4. **Channels used:** Shopify site, Google Merchant Center, Meta catalog, Amazon or Indian marketplaces.
+4. **Channels used:** Shopify site, Google Merchant Center, Meta catalog, Amazon or other marketplaces (Walmart, eBay, Etsy, Zalando).
 
 Optional: brand colours (`store-visual-identity-sheet`), the physical products for colour checks, PageSpeed Insights report for the top product pages.
 
@@ -47,7 +47,7 @@ Read access is enough to audit and write the standard. Replacing images in Shopi
 
 Write one value for each, and do not vary it by product:
 
-- **Background:** pure white (RGB 255, 255, 255) if Amazon or Indian marketplaces are used, otherwise one light neutral the brand chooses, with its exact RGB value.
+- **Background:** pure white (RGB 255, 255, 255) if Amazon, Walmart or other white-background marketplaces are used, otherwise one light neutral the brand chooses, with its exact RGB value.
 - **Shadow:** none, soft contact shadow, or natural shadow. One choice.
 - **Light direction:** for example, key from the left at 45 degrees. Products shot with light from the other side are flagged for reshoot, not flipped (flipping mirrors labels).
 - **Canvas ratio:** match the theme's product card. If the card is square, every main image is square; if 4:5, every main image is 4:5.
@@ -99,10 +99,10 @@ For each product image, score pass or fail on: background value, shadow style, c
 
 When replacing an image in Shopify, the image URL changes; check the feed apps pick it up, because Meta ignores a changed image at the same URL [ADC-6047].
 
-### India and US notes
+### Marketplace and market notes
 
-- **India:** Amazon.in, Flipkart and Myntra each set main image rules (white background, size, no text); keep a marketplace export per their rules from the same master. Colour accuracy matters most for apparel and sarees, where buyers judge colour from the photo alone; check the store's own return reasons for "colour different" and shoot fabric in daylight.
-- **US:** Amazon US main image needs a pure white background and the product filling most of the frame; keep an Amazon export if the store sells there.
+- **Marketplaces:** Walmart, eBay, Etsy, Zalando and other marketplaces each set main image rules (background, size, no text); keep a marketplace export per their rules from the same master. Colour accuracy matters most for apparel and textiles, where buyers judge colour from the photo alone; check the store's own return reasons for "colour different" and shoot fabric in daylight.
+- **Amazon (every country):** the main image needs a pure white background and the product filling most of the frame; keep an Amazon export if the store sells there.
 
 ## Checks before you hand it over
 
@@ -147,3 +147,7 @@ When replacing an image in Shopify, the image URL changes; check the feed apps p
 - MEA-0037: gross margin is the delivered cost to the door.
 
 What makes this skill ours: one fill percentage and one base line make every collection row line up; edits are split into allowed and banned so no editor "improves" the product; fixes are ordered by gross profit and channel risk; and image replacements carry new URLs so Meta and Google actually pick them up.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Amazon.in, Flipkart and Myntra each set main image rules (white background, size, no text); keep an export for each from the same master. Colour accuracy matters most for sarees and ethnic wear; check return reasons for "colour different".

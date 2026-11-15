@@ -1,6 +1,6 @@
 ---
 name: sell-in-instagram-dms
-description: "Comment-to-DM and DM reply flows that turn Instagram interest into orders within Instagram's own messaging rules: a keyword per post, the one private reply each comment allows (written to do the whole job alone), follow-ups only after the buyer answers, story-reply and price-question flows, the hand-off to a person, tracked links per post, and a weekly sheet of DMs, clicks, orders and gross profit per post. Tool-neutral, with a manual path. India notes for COD, UPI links and regional languages; US notes for disclosure. Use when posts get comments like 'price?' or 'link?' that never turn into sales, or before turning on DM automation."
+description: "Comment-to-DM and DM reply flows that turn Instagram interest into orders within Instagram's own messaging rules: a keyword per post, the one private reply each comment allows (written to do the whole job alone), follow-ups only after the buyer answers, story-reply and price-question flows, the hand-off to a person, tracked links per post, and a weekly sheet of DMs, clicks, orders and gross profit per post. Tool-neutral, with a manual path. Works for stores in any country, with notes on payment links, the languages your buyers use, and ad and automation disclosure. Use when posts get comments like 'price?' or 'link?' that never turn into sales, or before turning on DM automation."
 ---
 
 # Sell in Instagram DMs
@@ -46,13 +46,13 @@ Access: reading the inbox is level 1. Building automations in draft is level 2. 
 
 ### 1. Pick the posts and keywords
 
-Use a keyword on posts that show one product or one clear offer, not on pure entertainment posts. One practitioner keeps organic posts all give and lets ads carry the ask [ORG-0003]; a fair middle path is a keyword on a minority of posts (practitioner default, test it). One keyword per post, short and unique to it (for example `KURTA`, `SPF`), so the DM and the sales sheet know which post sold. Replacing "link in bio" with a comment keyword gets the link straight into the inbox and shows who opened and clicked [ORG-0021].
+Use a keyword on posts that show one product or one clear offer, not on pure entertainment posts. One practitioner keeps organic posts all give and lets ads carry the ask [ORG-0003]; a fair middle path is a keyword on a minority of posts (practitioner default, test it). One keyword per post, short and unique to it (for example `LINEN`, `SPF`), so the DM and the sales sheet know which post sold. Replacing "link in bio" with a comment keyword gets the link straight into the inbox and shows who opened and clicked [ORG-0021].
 
 ### 2. Write the first DM to do the whole job
 
 The private reply is one message until the buyer answers [ORG-6364], so it must carry everything:
 
-> Hi [first name]! Here's the [product] from the post: [link with UTM]. It's Rs [price], [one key fact: delivers in 3 to 5 days / COD available / sizes S to XXL]. Which size do you usually wear? I'll tell you how it fits.
+> Hi [first name]! Here's the [product] from the post: [link with UTM]. It's [price in the store's currency], [one key fact: delivers in 3 to 5 days / free returns / sizes S to XXL]. Which size do you usually wear? I'll tell you how it fits.
 
 Rules: the link, the price, one fact that removes the commonest doubt, and one question. If a bot sends it, add "(auto reply: a person will answer your next message)".
 
@@ -69,7 +69,7 @@ When the buyer answers, the conversation window opens: a person or the tool can 
 | "Price?" on a post | Price, link, one question (step 2) |
 | Story reply ("love this") | Thank them, name the product, link, one question |
 | "Is it available in my size or colour?" | Check stock, answer, link to that variant |
-| Delivery or COD question | Answer with pincode check, link |
+| Delivery, payment or returns question | Answer with a delivery check by postcode or ZIP code, the payment options, link |
 | "Can I order here?" | Send the product link or a checkout link (Shopify draft order); never take card details in DM |
 | Complaint or order issue | Move to support, `comment-and-dm-reply-rules` |
 
@@ -89,10 +89,12 @@ Each DM link carries `utm_source=instagram&utm_medium=dm&utm_campaign=<keyword>`
 
 Per post: comments with the keyword, DMs sent, replies, link clicks, orders, revenue, gross profit, gross profit per post. Make more posts like the ones that earn gross profit, not the ones with the most comments. Gross profit uses delivered costs, not product cost alone [MEA-0037].
 
-### India and US notes
+### Market notes
 
-- **India:** in-app checkout is not the norm, so links go to the store; offer a UPI payment link from the store's gateway for buyers who want to pay in chat. Say clearly if COD is open. Reply in the language the buyer wrote in when someone on the team can; Hinglish replies to Hinglish DMs.
-- **US:** creators and staff who post about the products disclose the relationship; a bot that answers says so. Payment always happens on the store's checkout.
+- **Checkout:** in most markets links go to the store's own checkout. For buyers who want to pay in chat, send a payment link or a draft-order checkout link from the store's own gateway (cards, wallets such as Apple Pay or PayPal, or the local bank transfer method); never take card details in the DM. If the store offers pay on delivery or buy now, pay later in a market, say so clearly.
+- **Languages:** reply in the language the buyer wrote in when someone on the team can; keep saved replies in the languages your buyers use, and mixed-language replies to mixed-language DMs.
+- **Disclosure:** creators and staff who post about the products disclose the relationship (FTC rules in the US, ASA and CAP rules in the UK, the EU consumer rules); a bot that answers says so. Payment always happens on the store's checkout or its payment link.
+- **Privacy:** where buyers are in the EU or UK, keep DM data inside the store's privacy notice and do not copy chats into tools it does not name.
 
 ## Checks before you hand it over
 
@@ -128,7 +130,11 @@ Per post: comments with the keyword, DMs sent, replies, link clicks, orders, rev
 - ORG-0021: comment-keyword DMs instead of link in bio.
 - ORG-0028: keyword DM reels keep collecting leads for months.
 - ORG-0003: organic posts as give, ads carry the ask.
-- ADC-6146: India's ASCI Code on claims.
+- ADC-6146: ad claims need proof (from an advertising standards code; the same rule holds under FTC, ASA and EU rules).
 - MEA-0037: delivered gross margin.
 
 What makes this skill ours: the single private reply is written to sell on its own because the platform allows no second message until the buyer answers; prices are public, not hidden behind DMs; each keyword is unique so every post's sales and gross profit can be counted; and automation is labelled, with a person behind it.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. In India, in-app checkout is not the norm, so links go to the store; offer a UPI payment link from the store's gateway for buyers who want to pay in chat. Say clearly if COD is open, and answer delivery questions with a pincode check. Show prices in rupees (Rs). Reply in Hindi or the regional language the buyer used when someone on the team can; Hinglish replies to Hinglish DMs. Claims follow the ASCI Code.

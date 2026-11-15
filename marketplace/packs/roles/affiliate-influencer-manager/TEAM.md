@@ -4,7 +4,7 @@ Finds creators and affiliates who fit the brand, briefs them and sets fair rewar
 
 This role is a discovery group, not a fixed place in a company hierarchy. The general coordinator assigns a task lead and working groups for each job.
 
-Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (WORK-METHOD.md, step 1), are current and have been read. For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.
+Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (METHOD.md, step 1), are current and have been read: for a business, the org context (`context/org-context/`) first. Read the store memory first: `context/MEMORY.md`, or the memory packet the owner pasted (MEMORY-TEMPLATE.md). For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.
 
 ## How I critique
 
@@ -27,6 +27,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Varun (varun-affiliates)
 - Pilar (pilar-creators)
 - Zara (zara-tiktok-ads)
+- Ritika (ritika-influencer-outreach)
 - Chelsea (chelsea-creator-partnerships)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

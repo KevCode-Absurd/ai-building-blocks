@@ -103,7 +103,7 @@ Generate one still for the opening of each clip from the references. Check prese
 
 ### 6. Assemble and label
 
-Cut the clips, burn in captions for sound-off viewing, place reviews on screen with their source, and add "AI-generated presenter" in the first seconds plus the platform's AI label. This follows the FTC rule against fake testimonials, ASCI's virtual influencer disclosure in India, TikTok's AI labelling and the EU AI Act deepfake disclosure; check current rules per market.
+Cut the clips, burn in captions for sound-off viewing, place reviews on screen with their source, and add "AI-generated presenter" in the first seconds plus the platform's AI label. This follows the FTC rule against fake testimonials, the UK ASA's guidance on AI and influencer disclosure, TikTok's AI labelling and the EU AI Act deepfake disclosure; check current rules per market.
 
 ### 7. Check the cut
 
@@ -157,3 +157,7 @@ Run against the store's best current video or a real creator ad as control, judg
 - [MCR-0013]: 2 to 4 hooks per body.
 
 What makes this skill ours: it first asks whether real buyers or a priced creator would beat an AI presenter; the presenter is fictional or consenting and barred from first-person buyer claims, with every outcome a sourced real review on screen; the first frame is approved before video spend; and the ad must beat the store's best video on store orders.
+
+## Selling in India
+
+- ASCI requires virtual influencers to be disclosed; keep the "AI-generated presenter" line.

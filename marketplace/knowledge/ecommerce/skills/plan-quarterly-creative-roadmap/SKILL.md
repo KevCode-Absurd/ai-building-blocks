@@ -46,7 +46,7 @@ If the ad export is missing, plan as a new account: lean to net-new concepts and
 
 ### 1. Mark the fixed points
 
-Lay out weeks 1 to 12 with real dates. Mark launches, sales, gifting dates, festival dates, stock arrivals, stock-outs and any week the owner or creators are away. Brief dates come 2 to 3 weeks before each live date; for a shoot, 4 weeks. India note: plan around the festival run (Raksha Bandhan, Navratri, Diwali, wedding season) and courier slowdowns before Diwali. US note: Black Friday, Christmas cutoffs and the quiet late December auction.
+Lay out weeks 1 to 12 with real dates. Mark launches, sales, gifting dates, festival dates, stock arrivals, stock-outs and any week the owner or creators are away. Brief dates come 2 to 3 weeks before each live date; for a shoot, 4 weeks. Market note: plan around each market's peak seasons and festival runs, and courier slowdowns before the biggest of them. US, UK, EU, Canada and Australia: Black Friday, Christmas cutoffs and the quiet late December auction; Australia also has end of financial year sales in June.
 
 ### 2. Size the volume from money, churn and hands
 
@@ -134,3 +134,7 @@ Weeks 4, 8 and 12: compare results by tag, move unused budget to what won, rewri
 - MEA-0037: gross margin is delivered cost.
 
 What makes this skill ours: concept volume is the lowest of what the test budget, winner churn and the makers can carry, not a fixed quota; every row carries the product's gross profit and stock cover, so no ad is planned for a product that loses money or runs out; sale-week readouts switch to signals that are not bent by the discount; and the plan rewrites itself at weeks 4 and 8.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Plan around the festival run (Raksha Bandhan, Navratri, Diwali, wedding season) and courier slowdowns before Diwali.

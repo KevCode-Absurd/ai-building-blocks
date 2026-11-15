@@ -63,7 +63,7 @@ Google allows up to 15 headlines of 30 characters and 4 descriptions of 90 [GAD-
 | Keyword match | 3 | The group's main term, close to how buyers type it. At least one headline carries a keyword [GAD-6140]. |
 | Benefit or result | 3 | What changes for the buyer, in plain words, only from proven facts. |
 | Proof | 3 | Review count and rating, years in business, a test result, a named material. Only numbers the store can show today. |
-| Offer and risk | 3 | Price or "from" price, delivery time, returns window, COD or warranty. Only what the page shows. |
+| Offer and risk | 3 | Price or "from" price, delivery time, returns window, payment option or warranty. Only what the page shows. |
 | Call to action or call-out | 3 | "Shop men's sizes 6 to 12", "Order by 2pm, ships today". |
 
 Every headline must read well on its own and next to any other, because Google mixes them [GAD-6140]. No headline should depend on the one before it.
@@ -111,9 +111,9 @@ Then cut machine-sounding phrasing with `machine-copy-scrubber` if the draft was
 
 ### 8. Price and offer truth
 
-- Prices: in India say whether GST is included; quoted prices should include charges that apply to most buyers [ADC-6147]. In the US, write "plus tax" only if the page does.
+- Prices: in the UK, EU, Australia and other tax-inclusive markets, quoted prices include VAT or the local sales tax and any charges that apply to most buyers. In the US, write "plus tax" only if the page does.
 - "Free shipping" or "free delivery" only if it is free for the buyers the ad reaches, or state the line ("Free delivery over 999").
-- "COD available" only if COD is live for the pincodes the campaign targets.
+- "Pay on delivery", "pay later" or any payment line only if it is live for the regions the campaign targets.
 - No "was" price unless that price was genuinely charged [OFF-6145].
 - Delivery promises ("ships today", "2-day delivery") must match the courier's real times for the target region.
 
@@ -167,8 +167,12 @@ Judge headlines on store results, not CTR alone. CPA equals CPC divided by conve
 - GAD-0028: keep brand and non-brand apart with brand negatives.
 - GAD-0038: CPA = CPC / conversion rate, so CPC and CTR alone mislead.
 - ADC-6142: Google editorial rules on capitals, punctuation, repetition, phone numbers.
-- ADC-6147: quoted prices should include charges most buyers pay (India).
 - OFF-6145: a "was" price must be one genuinely charged.
 - MEA-0037: gross margin uses delivered cost, not product cost.
 
-What makes this skill ours: headlines are planned as five jobs built from the store's own search terms report rather than a template list; the load choice (15/4 or 8/2) follows the ad group's conversion volume; every offer, delivery and COD line is checked against the live page and target region; and lines are judged on cost per order, not click-through.
+What makes this skill ours: headlines are planned as five jobs built from the store's own search terms report rather than a template list; the load choice (15/4 or 8/2) follows the ad group's conversion volume; every offer, delivery and payment line is checked against the live page and target region; and lines are judged on cost per order, not click-through.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Say whether GST is included; quoted prices should include charges that apply to most buyers [ADC-6147]. Write "COD available" only if COD is live for the pincodes the campaign targets.
+- ADC-6147: quoted prices should include charges most buyers pay (India).

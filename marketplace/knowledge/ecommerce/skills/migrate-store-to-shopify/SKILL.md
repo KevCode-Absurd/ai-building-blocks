@@ -1,6 +1,6 @@
 ---
 name: migrate-store-to-shopify
-description: "A migration plan that moves a store from WooCommerce or another platform to Shopify without losing products, customers, orders, URLs or search rankings: an inventory of what exists, a field map, a URL redirect map for every page that has traffic or links, a dated cut-over plan with a freeze window, a test plan, and a 30-day watch on rankings, organic traffic and orders. Free migration tools and CSV first, paid importers only for what they cannot move. Covers customer account re-activation, consent records for email and SMS, gift card and subscription balances, and India GST and COD settings. Use when a store has decided to move to Shopify, or is choosing a cut-over date."
+description: "A migration plan that moves a store from WooCommerce or another platform to Shopify without losing products, customers, orders, URLs or search rankings: an inventory of what exists, a field map, a URL redirect map for every page that has traffic or links, a dated cut-over plan with a freeze window, a test plan, and a 30-day watch on rankings, organic traffic and orders. Free migration tools and CSV first, paid importers only for what they cannot move. Covers customer account re-activation, consent records for email and SMS, gift card and subscription balances, and local tax and payment settings. Use when a store has decided to move to Shopify, or is choosing a cut-over date."
 ---
 
 # Move a store to Shopify
@@ -28,7 +28,7 @@ Required:
 2. **A full URL list** of the old site: the XML sitemap plus a crawl with a free crawler (or the free tier of a paid one).
 3. **Google Search Console** access (read) for the old domain, with the last 16 months of pages by clicks, and a backlinks export from any free or paid tool.
 4. **GA4 or old analytics**: sessions and revenue by landing page, last 12 months.
-5. **List of apps and integrations** on the old store (payments, shipping, email, reviews, ERP, GST invoices).
+5. **List of apps and integrations** on the old store (payments, shipping, email, reviews, ERP, tax invoices).
 
 Optional: past order volume by month (to pick a quiet week), staff list.
 
@@ -69,7 +69,7 @@ Shopify uses fixed paths (`/products/`, `/collections/`, `/pages/`, `/blogs/`), 
 
 ### 6. Rebuild settings
 
-Payments, shipping, tax, policies, notifications and tracking, using `launch-new-shopify-store-checklist`. India: GST rates and invoice tool, COD rules and pincode settings, WhatsApp provider. Remove old platform scripts from anything carried over; WooCommerce loads shop scripts on every page [SPD-0014], and those habits should not be rebuilt on Shopify.
+Payments, shipping, tax, policies, notifications and tracking, using `launch-new-shopify-store-checklist`. Local settings: sales tax or VAT rates and any tax invoice tool, local payment methods, pay on delivery rules if used, postcode delivery settings, and the SMS or WhatsApp provider. Remove old platform scripts from anything carried over; WooCommerce loads shop scripts on every page [SPD-0014], and those habits should not be rebuilt on Shopify.
 
 ### 7. Test before cut-over
 
@@ -92,7 +92,7 @@ Daily for 7 days, then weekly: orders and gross profit per order against the sam
 - Every ranked URL has a redirect to a relevant page, with no chains and no home-page dumps.
 - Consent flags for email and SMS came across; nobody is subscribed who was not.
 - Subscriptions and gift cards show exact balances and dates on 10 spot checks.
-- Test orders pass on every payment path, including COD and UPI for India.
+- Test orders pass on every payment path, including each local payment method and pay on delivery if offered.
 - The cut-over plan has a freeze time, an owner for DNS, and a roll-back rule.
 - No password, card number or API secret appears in the workbook.
 
@@ -130,3 +130,7 @@ Daily for 7 days, then weekly: orders and gross profit per order against the sam
 - MEA-0037: gross margin uses delivered cost.
 
 What makes this skill ours: URLs are ranked by clicks, revenue and links before mapping; the import order protects the costliest errors (subscriptions, gift cards, consent); the cut-over has a freeze window and a written roll-back rule; and the 30-day watch judges the move on gross profit per order and GA4 traffic, not Shopify sessions.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Move GST rates and the GST invoice tool, COD rules, pincode settings and the WhatsApp provider. Test orders must pass on COD and UPI.

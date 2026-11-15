@@ -69,7 +69,7 @@ Sort high to low. Ten products often hold most of the loss; fix those first.
 
 Price mismatches are among the most common causes; stores with frequent price changes should refresh the feed often, at least every six hours in one compilation [GAD-0005].
 
-India notes: the feed price must match the price shown on the page, with GST as displayed there. Cash-on-delivery fees added only at checkout do not belong in the price, but say so honestly on the page. Regional sites or pin-code checkers that hide the price until a pin code is entered can cause mismatches; show the price by default.
+Tax notes: the feed price must match the price shown on the page. In the UK, EU and Australia that price includes VAT or goods and services tax; in the US and Canada it is shown before sales tax, which is set in Merchant Center's tax settings. Pay-on-delivery or other fees added only at checkout do not belong in the price, but say so honestly on the page. Delivery checkers that hide the price until a postcode is entered can cause mismatches; show the price by default.
 
 ### 3. Check for duplicate and copy listings
 
@@ -97,6 +97,24 @@ These stop every product. Common causes: missing or hard-to-find contact details
 - Stock-outs: a hero product out of stock for a few days can reset Performance Max learning [GAD-0037]; flag low stock a week ahead.
 - Return policy: a clear window and costs support Google's store quality signals; one agency links a 30-day-plus window to stronger Shopping results [GAD-0018].
 
+### 7. Autofix split, link check and the suspension-proofing sweep
+
+- **Split fixes by the Fix type filter.** Autofix only for low-risk items; never for policy, price mismatch or missing required attributes, which are fixed by hand at the source.
+- **Check the link.** In Google Ads, Data manager must show Merchant Center under connected products, and the Shopify Google channel must point at the right accounts.
+- **Read in order:** Disapproved first (not showing, lost sales), then Warnings, then Limited performance.
+- **Do not scale spend until the feed is clean.** Under about 30 products, feed work gains less than tracking and offer fixes.
+
+**Suspension-proofing sweep** (best practice, not a guarantee; Google rarely names the exact reason), marked pass, fail or not run:
+1. Programmes enrolled where they apply: dynamic remarketing, customer reviews, product ratings, promotions; business info, logo and colours filled; store claimed.
+2. Shipping set by hand in the Shopify Google channel so a Shopify change cannot silently mismatch; shipping for every ship-to country and the ship-from location.
+3. Return policy in Merchant Center linked to and matching the real returns page.
+4. Checkout: secure, every payment method works, the final price with tax and shipping shown before payment, codes apply.
+5. Listings: page price equals checkout price equals feed price [GAD-6122]; stock matches; no broken links; claims factual; reviews real.
+6. Contact: the same address and phone in Merchant Center, Google Ads and the site; a branded email domain; terms and privacy in the footer; working order tracking.
+7. Promotions with correct end dates.
+
+Schedule: diagnostics weekly; policies, addresses and links monthly; promotion dates at each promotion. A thin store on a default theme with copied reviews is high risk. Never suggest a new account, a new domain or cloaking.
+
 ## Checks before you hand it over
 
 - Every affected product has one cause and one fix, not a guess list.
@@ -106,6 +124,7 @@ These stop every product. Common causes: missing or hard-to-find contact details
 - Each fix names where it is made (Shopify, feed rule, supplemental feed, Merchant Center).
 - A prevention date is set for the next sale or price change.
 - Review requests are listed for the client's yes, not sent.
+- The sweep shows pass, fail or not run on all seven areas, and no fix suggests a new account or domain.
 
 ## Output
 
@@ -122,6 +141,7 @@ These stop every product. Common causes: missing or hard-to-find contact details
 - **Sale prices on the site before the feed.** Step 6 times the update.
 - **Resubmitting a suspension review too soon.** Step 5 fixes everything first.
 - **Fixing in the feed while Shopify overwrites it.** Step 4 fixes at the source.
+- **Running Autofix on a price mismatch.** It hides the cause; fix the price at the source.
 
 ## Sources
 
@@ -134,4 +154,10 @@ These stop every product. Common causes: missing or hard-to-find contact details
 - GAD-6122: exact price match rule, disapproval and possible suspension.
 - GAD-6123: title length and content rules.
 
-What makes this skill ours: every issue is ranked by the gross profit it is losing, not by the order Google lists it; product problems and account problems get different paths; no fix hides a fact or invents an identifier; and India's GST display and pin-code price gates are checked as mismatch causes.
+What makes this skill ours: every issue is ranked by the gross profit it is losing, not by the order Google lists it; product problems and account problems get different paths; no fix hides a fact or invents an identifier; and tax display and postcode price gates are checked as mismatch causes.
+
+## Selling in India
+
+- The feed price must match the page price with GST as displayed there.
+- Cash-on-delivery fees added only at checkout do not belong in the price, but say so on the page.
+- Pin-code checkers that hide the price until a pin code is entered cause mismatches; show the price by default.

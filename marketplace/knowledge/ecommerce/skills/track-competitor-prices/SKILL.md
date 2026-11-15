@@ -51,7 +51,7 @@ One row per product per rival per week. Fix the day and time of the check (for e
 For each product and rival:
 
 - List price, sale price, any "was" price.
-- **Delivered price:** add shipping, COD fee and taxes shown before payment. In India, note the MRP printed and the price shown; selling above MRP is not allowed, and MRP includes all taxes [COG-6264].
+- **Delivered price:** add shipping, any payment method fee and taxes shown before payment. Compare like with like: US prices usually show before sales tax, while UK, EU and Australian prices show with VAT or goods and services tax included. Where a market has a printed maximum retail price, note it and the price shown [COG-6264].
 - Price per unit or per use (per 100 ml, per wash, per month).
 - Offer: code, bundle, gift, threshold, and the end date if shown.
 - Stock: in stock, low, out, or pre-order; delivery promise.
@@ -91,7 +91,7 @@ Never test two prices for the same product at the same time to "see what works" 
 ### 6. Make any change honestly
 
 - A "was" price must be a price the store really charged for a reasonable recent time [OFF-6145].
-- In India, no false urgency, drip pricing or bait and switch; show all-in prices [ADC-6147].
+- No false urgency, drip pricing or bait and switch; show all-in prices. Ad standards and consumer rules in most markets ban these (FTC in the US, CMA and ASA in the UK, EU consumer law) [ADC-6147].
 - Feed price and page price must match exactly in Merchant Center, or products are disapproved [GAD-6122]. Schedule the feed update with any site change.
 - Marketplaces: check each platform's price parity and minimum price rules before changing.
 
@@ -106,7 +106,7 @@ Each decision goes in the log with date, reason and owner. Every four weeks, rev
 - Every product has a floor price based on delivered costs.
 - Each flag is classified and has one decision.
 - No reaction drops a price below the floor.
-- Any "was" price or urgency line passes the US or India rule.
+- Any "was" price or urgency line passes the rule in each market the store sells to.
 - Feed and page prices will match after any change.
 - No price, sale or spend change goes live without the client's yes.
 
@@ -142,8 +142,14 @@ Each decision goes in the log with date, reason and owner. Every four weeks, rev
 - GAD-0034: pull Shopping spend while a rival discounts.
 - CRO-0009: never test two prices for one product.
 - OFF-6145: "was" prices must be genuine.
-- ADC-6147: ASCI false urgency and drip pricing.
+- ADC-6147: an ad standards code on false urgency and drip pricing.
 - GAD-6122: feed and page prices must match.
-- COG-6264: India MRP declaration rules.
+- COG-6264: maximum retail price declaration rules.
 
-What makes this skill ours: every product gets a price floor from gross profit before any rival is tracked; flags are sorted into short sales and real resets so the store stops chasing temporary cuts; pulling ad spend and answering with value come before cutting price; and India MRP and all-in price rules sit in the same sheet.
+What makes this skill ours: every product gets a price floor from gross profit before any rival is tracked; flags are sorted into short sales and real resets so the store stops chasing temporary cuts; pulling ad spend and answering with value come before cutting price; and each market's "was" price and all-in price rules sit in the same sheet.
+
+## Selling in India
+
+- Note the MRP printed and the price shown. Selling above MRP is not allowed, and MRP includes all taxes [COG-6264].
+- Add any COD fee to the delivered price.
+- The Advertising Standards Council of India (ASCI) bans false urgency and drip pricing [ADC-6147].

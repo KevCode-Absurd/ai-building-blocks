@@ -1,6 +1,6 @@
 ---
 name: handle-price-objections-in-chat
-description: "Ready chat answers to the three price objections (too expensive, cheaper elsewhere, is it worth it) that hold the store's price and still ask for the order: a one-question check that finds what the buyer really means, answers built from the store's own value facts, real reviews and risk reducers, a smaller-option path that keeps margin, a check-the-claim routine for cheaper-elsewhere, and a concession ladder the owner approves in advance with the profit cost of each step. Bans secret one-off discounts, fake 'was' prices and invented urgency. India notes for 'last price?' bargaining, COD and GST; US notes for price matching. Use when chats stall on price or agents give away discounts to close."
+description: "Ready chat answers to the three price objections (too expensive, cheaper elsewhere, is it worth it) that hold the store's price and still ask for the order: a one-question check that finds what the buyer really means, answers built from the store's own value facts, real reviews and risk reducers, a smaller-option path that keeps margin, a check-the-claim routine for cheaper-elsewhere, and a concession ladder the owner approves in advance with the profit cost of each step. Bans secret one-off discounts, fake 'was' prices and invented urgency. Notes for 'last price?' bargaining, pay on delivery and tax-inclusive prices in any market; US notes for price matching. Use when chats stall on price or agents give away discounts to close."
 ---
 
 # Handle price objections in chat
@@ -39,7 +39,7 @@ Access: read only (level 1) to build the kit. The concession ladder takes effect
 
 1. **Gross profit per order known.** Pass: each concession shows its cost. Fail: stop; no concession ladder without it. A 30% discount on a 40% margin order can leave almost nothing [OFF-0065].
 2. **Value facts sourced.** Every number in an answer (lasts 2 years, 60 washes, 30-day returns) has a source. Fail: drop the line.
-3. **Comparisons provable.** In India, comparisons must be factual, clear on what is compared and not unfairly run down a rival [MCR-6024], and claims need proof on demand [ADC-6146]. Fail: no comparison; talk only about the store's own product.
+3. **Comparisons provable.** In most markets (for example FTC rules in the US, the CAP code in the UK and the EU rules on comparative advertising), comparisons must be factual, clear on what is compared and not unfairly run down a rival, and claims need proof on demand. Fail: no comparison; talk only about the store's own product.
 4. **One price for everyone.** Pass: no secret per-chat discounts. Different prices for the same item to different buyers damage trust when buyers compare notes [CRO-0009]. Fail: write the concession ladder as public, rule-based offers.
 
 ## Steps
@@ -62,11 +62,11 @@ Three moves, short:
 
 1. **Value in their terms:** cost per use, per day or per wash, or what it replaces. Price makes sense against what the buyer already spends on alternatives that failed [LPG-0027].
 2. **Proof:** one real review that talks about price or worth, in the customer's words [LPG-0005].
-3. **Risk reducer:** the real returns window, guarantee or COD. A price doubt is often a risk doubt, and trust signals near the price have lifted conversion in agency tests [LPG-0017].
+3. **Risk reducer:** the real returns window, guarantee or pay on delivery. A price doubt is often a risk doubt, and trust signals near the price have lifted conversion in agency tests [LPG-0017].
 
 Then ask: "Shall I send the link?"
 
-> "Fair question. It works out to about Rs 12 a day over the 3 months the pack lasts. A buyer wrote '[short real quote on value]'. And if it doesn't suit you, returns are free within 7 days. Want the link?"
+> "Fair question. It works out to about 50 cents a day over the 3 months the pack lasts. A buyer wrote '[short real quote on value]'. And if it doesn't suit you, returns are free within 7 days. Want the link?"
 
 ### 3. Answer "cheaper elsewhere" by checking the claim
 
@@ -84,7 +84,7 @@ Then one of three answers:
 
 ### 4. Offer a smaller option, not a lower price
 
-For a buyer over budget, offer a smaller size, a starter pack or a single unit instead of a discount, so the margin per unit holds. Size it to their real use [OFF-0018]: "The 50 ml is Rs 499 and lasts about a month; a good way to try it."
+For a buyer over budget, offer a smaller size, a starter pack or a single unit instead of a discount, so the margin per unit holds. Size it to their real use [OFF-0018]: "The 50 ml is $15 and lasts about a month; a good way to try it."
 
 ### 5. Use the concession ladder only as written
 
@@ -106,9 +106,10 @@ After the answer, one question toward the order. If the buyer still says no: "No
 
 Weekly: price chats, closes, close rate per objection type, concessions used and their gross profit cost, and gross profit per price chat. If one product draws most price objections, send it to `set-prices-from-costs-and-competitors` or page fixes; chat answers cannot fix a price buyers will not pay.
 
-### India and US notes
+### Market notes
 
-- **India:** "Last price?" is often a habit, not a hard no. Answer warmly and firmly: "Our prices are fixed so everyone pays the same, but here's what's included: [free delivery / COD / 7-day returns]." State GST-inclusive prices. COD is a strong risk reducer for a first order; mention it where the pincode allows.
+- **Bargaining cultures (parts of South Asia, the Middle East and Latin America):** "Last price?" is often a habit, not a hard no. Answer warmly and firmly: "Our prices are fixed so everyone pays the same, but here's what's included: [free delivery / pay on delivery / 7-day returns]." Pay on delivery is a strong risk reducer for a first order; mention it where the buyer's address allows.
+- **UK, EU and Australia:** quote prices including VAT or goods and services tax, as shoppers expect and the law asks.
 - **US:** state the store's price-match policy if it has one, with its terms; compare totals including shipping and sales tax; a "compare at" price must be a real former price.
 
 ## Checks before you hand it over
@@ -152,6 +153,13 @@ Weekly: price chats, closes, close rate per objection type, concessions used and
 - LPG-0027: price against what buyers already spent.
 - LPG-0005: reviews picked to answer the objection.
 - OFF-0018: size the option to real use.
-- MCR-6024, ADC-6146: India's ASCI rules on comparisons and claims.
 
 What makes this skill ours: one question splits budget, worth and comparison before any answer; a smaller option protects margin before a concession is considered; the concession ladder is public, owner-signed and costed in gross profit per order; and cheaper-elsewhere claims are checked on total cost and like-for-like, never answered by running down a rival.
+
+## Selling in India
+
+- Comparisons must be factual, clear on what is compared and not unfairly run down a rival [MCR-6024], and claims need proof on demand [ADC-6146].
+- "Last price?" is often a habit, not a hard no; answer warmly and firmly. State GST-inclusive prices. COD is a strong risk reducer for a first order; mention it where the pincode allows.
+- Give value examples in rupees, for example "about Rs 12 a day" or "the 50 ml is Rs 499".
+
+Sources: MCR-6024, ADC-6146 (ASCI rules on comparisons and claims).

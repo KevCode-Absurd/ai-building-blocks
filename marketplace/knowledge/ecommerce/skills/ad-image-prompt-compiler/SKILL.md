@@ -69,6 +69,24 @@ Write the recommendation as: model kind, the tool the store has that fits, and t
 
 Leave out brand history, buyer demographics, marketing terms and competitor talk. They cost attention and add nothing a camera could see. Keep only what changes the picture.
 
+Sort the approved brief into three piles before writing:
+
+- **Keep:** the approved scene, the exact words, the product facts and lock lines, and any rule that changes what is visible.
+- **Translate:** labels a camera cannot see ("premium", "fresh", "fun") into things it can (soft window light from the left, cold condensation on the glass, saturated primary colours).
+- **Drop:** research notes, rejected versions, placeholder text from a layout sketch, repeated adjectives, and model or cost settings.
+
+Any detail the approved ad does not give but the camera needs (surface material, time of day, light direction) is added as a choice and listed under "Added, not approved" so the owner can see it.
+
+### 2b. Give every attached image one role
+
+Number the images in the order you attach them and give each one job in one line:
+
+- "Image 1 is the product as sold. Match its shape, colours and printing exactly."
+- "Image 2 shows the product in a hand. Use it for size only."
+- "Image 3 is the light I want. Take the light and camera height. Ignore its product, people and words."
+
+Put the product and any approved person first, then light or style, then any layout sketch. Attach an image only if it has a job: an image with no job leaks its props and colours into the scene. Then write the product's 3 to 5 lock lines from `keep-product-accurate-in-ai-media` (the details a model gets wrong first) and repeat them word for word in every prompt of a set; when words and images disagree, models tend to follow the words.
+
 ### 3. Write the prompt in a fixed order
 
 1. **Format:** "Photograph, 4:5 vertical, 1080 x 1350" (or the canvas from the layout).
@@ -79,6 +97,12 @@ Leave out brand history, buyer demographics, marketing terms and competitor talk
 6. **Palette:** hex codes with plain names ("#1F3A2E deep forest green").
 7. **Mood and style:** two words for mood, one phrase for style.
 8. **Text:** "No text, letters, logos or watermarks anywhere." If a few words must appear, put them in quotes, five words or fewer (practitioner default, test it), and plan a real-type fallback.
+
+**Settings beat words.** Where the tool has settings for shape, size or quality, set them there; writing "4K" or "8K" in a prompt sets nothing, and some tools ignore a ratio written in words. Keep the format line for tools with no settings, or as a plain statement of what the image is and where it runs ("A photoreal product ad for an online store's Instagram feed").
+
+**Camera and physics.** Give the camera as a real position ("counter height, about 40 cm away, slightly above"), with framing, height, angle and distance as separate choices, not a mood. Make the scene physically possible: every object rests on, hangs from or is held by something, with a shadow that matches the light; the product opens, pours or is used only as the facts say, and is shown closed or at rest when no step is on file. Any hand gets its own line: how many, which hand, what it holds.
+
+**Exact words, when the tool can spell.** Current text-capable models can render a headline and a short support line, but test the tool first. When you do put words in, list each line once, in reading order, in quotes, with its role (headline, support, button), its place, its colour as hex plus a plain name, and the type look (weight, width, case, spacing). Never describe a word twice. Check every letter in the output; any miss means real type is set afterwards.
 
 Aim for the shortest prompt that carries every locked setting, usually one short paragraph per section. Long prompts that repeat themselves tend to drift (practitioner default, test it).
 
@@ -114,6 +138,8 @@ Give every prompt an ID: `<brand>-<concept ID>-<variant>-v<number>`. Each edit i
 
 Check each image at full size beside the real product photo: label, colour, shape, size, and any text letter by letter. Approve or reject with a reason code. An approved image still goes through `prelaunch-ad-check` before launch.
 
+**Edit requests.** When the owner picks a favourite that needs changes, split every change by intent and send one kind at a time. A text edit changes only the words (a headline, a spelling, a quote) and says "change nothing else". A style edit changes only the look (background, colour, light, mood, a prop added or removed) and keeps every word and the product exactly as they are. Mixing both in one request is the commonest way to lose a good image. Each edit makes a new version with its parent ID in the log, so any step can be undone.
+
 ### 8. Learn per brand
 
 After about 20 logged generations for a brand (practitioner default, test it), read the log:
@@ -126,15 +152,21 @@ Approval means the image is usable, not that it sells. Join the ad ID to results
 
 Variants of one prompt that only change colour or pose are not new ads [MCR-0022]; send real variety back to `ad-batch-visual-direction`.
 
+AI statics can carry cold, top-of-funnel spend at scale, not only retargeting [MCR-6866], but the concept behind them should come from a person: language models hand every store the same ideas, while people connect ideas from outside the category [MCR-6876]. Use this compiler for production, never as the source of the idea.
+
 ## Checks before you hand it over
 
 1. The prompt follows the fixed order and names the canvas size from the layout.
 2. The real product photo is attached as a reference, or the plan places the real photo on top.
-3. No invented fact appears: no names, quotes, ratings, counts, results or prices.
-4. Any text in the image is five words or fewer and quoted exactly, with a real-type fallback.
-5. The avoid list matches the chosen tool: negative field if it has one, positive phrasing if not.
-6. The prompt has a version ID and a log row.
-7. Every output was reviewed at full size beside the real product, with a reason code.
+3. Every attached image has a numbered role, and the lock lines are repeated word for word.
+4. Shape, size and quality are set in the tool's settings where it has them.
+5. Any detail added beyond the approved ad is listed under "Added, not approved".
+6. No invented fact appears: no names, quotes, ratings, counts, results or prices.
+7. Any text in the image is five words or fewer and quoted exactly, with a real-type fallback, or the tool was tested for spelling and every line is listed once with its role, place, colour and type look.
+8. The avoid list matches the chosen tool: negative field if it has one, positive phrasing if not.
+9. The prompt has a version ID and a log row.
+10. Every output was reviewed at full size beside the real product, with a reason code.
+11. Each edit request changes only words or only style.
 
 ## Output
 
@@ -152,6 +184,9 @@ Variants of one prompt that only change colour or pose are not new ads [MCR-0022
 - **"No X" lists the model ignores.** Step 4 matches avoids to the tool.
 - **Keeping prompts in a chat history.** Step 6 versions and logs every one.
 - **Calling approved images winners.** Step 8 joins them to results first.
+- **Attaching a mood photo with no job.** Step 2b gives each image one role, or leaves it out.
+- **Writing "4K, 4:5" in the prompt.** Step 3 sets those in the tool.
+- **One edit that fixes a word and the background at once.** Step 7 splits text edits from style edits.
 
 ## Sources
 
@@ -162,6 +197,8 @@ Variants of one prompt that only change colour or pose are not new ads [MCR-0022
 - [MCR-0023]: compare creative types on gross profit per ad.
 - [MCR-0037]: about a third AI, a third creator, a third in-house.
 - [MCR-0022]: a colour or pose change is not a new ad.
+- [MCR-6866]: AI image statics can carry cold, top-of-funnel spend.
+- [MCR-6876]: keep a human at the concepting step.
 
 Platform documentation: Meta and TikTok AI-generated content disclosure rules; each image tool's own guidance on reference images and negative prompts.
 

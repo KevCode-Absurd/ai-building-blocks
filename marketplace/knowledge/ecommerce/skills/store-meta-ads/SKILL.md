@@ -1,6 +1,6 @@
 ---
 name: store-meta-ads
-description: "Front door for an online store's Meta (Facebook and Instagram) ads work. Turns the owner's words into the right job, collects one store context sheet (platform, gross profit per purchase, spend, markets, stock and cash limits, sale calendar), checks the money, cash and tracking gates, and runs the store-meta skills in order: tracking trust, money, structure, creative. Use when an owner says 'ROAS dropped', 'ads are not spending', 'scale for Diwali or Black Friday' or 'we are launching a product', or when the job is unclear."
+description: "Front door for an online store's Meta (Facebook and Instagram) ads work. Turns the owner's words into the right job, collects one store context sheet (platform, gross profit per purchase, spend, markets, stock and cash limits, sale calendar), checks the money, cash and tracking gates, and runs the store-meta skills in order: tracking trust, money, structure, creative. Use when an owner says 'ROAS dropped', 'ads are not spending', 'scale for Black Friday or our peak season' or 'we are launching a product', or when the job is unclear."
 ---
 
 # Meta ads for an online store: start here
@@ -14,7 +14,7 @@ This skill builds nothing itself. It turns what the owner says into the right jo
 - The owner names a symptom, not a job: "ROAS dropped", "sales are down", "ads are not spending".
 - The owner wants several things at once.
 - A new store or ad account comes in and no context sheet exists yet.
-- A big sale (Diwali, Black Friday, end of season) is within the next three months.
+- A big sale (Black Friday and Cyber Monday, the holidays, a local festival, end of season) is within the next three months.
 
 ## Not for
 
@@ -35,7 +35,7 @@ This skill builds nothing itself. It turns what the owner says into the right jo
 | Outbound shipping and pick-pack per order | Yes | Courier or 3PL invoices | Ask |
 | Payment fees | Yes | Payment provider | Use published rate |
 | Refund rate and cost of one return | Yes | Order export | Compute |
-| Cash on delivery share and return-to-origin rate | Where COD is offered | Courier or COD app report | Ask |
+| Failed delivery rate, return rate and payment failure or fraud rate (and pay on delivery share where offered) | Always | Courier, returns app or payment provider report | Ask |
 | Meta spend per month, last 3 months; other paid channels | Yes | Ads Manager | Read |
 | Markets and currency | Yes | Ad sets | Read |
 | Stock on hand and reorder lead time, top 10 SKUs | For scaling or sales | Inventory report | Ask |
@@ -69,7 +69,7 @@ Match the owner's words to a route. When two rows fit, take the one higher in th
 | "ROAS dropped", "sales fell" | Demand, tracking, stock or offer changed | `store-meta-deep-dive` | `store-meta-capi` if the Meta to store ratio moved; `store-meta-creative-review` if ads are tired |
 | "Meta shows more (or fewer) sales than Shopify" | Window, view credit, double counting or lost server events | `store-meta-attribution` | `store-meta-capi` |
 | "Ads are not spending", "stuck in learning" | Payment, account or ad review block; cap too tight; too many small ad sets | `store-meta-audit` (delivery and policy checks) | `store-meta-budget` |
-| "Scale for Diwali" or "Black Friday" | Cash, stock and offer plan before budget | `store-meta-math` | `store-meta-plan`, `store-meta-budget`, `store-meta-concepts` |
+| "Scale for Black Friday" or "our peak season" | Cash, stock and offer plan before budget | `store-meta-math` | `store-meta-plan`, `store-meta-budget`, `store-meta-concepts` |
 | "We are launching a new product" | New SKU money, page, ads, read plan | `store-meta-math` | `store-meta-landing`, `store-meta-product-photos`, `store-meta-concepts`, `store-meta-ad-images`, `store-meta-test` |
 | "Take over the account", "is our agency any good" | Health check ranked by money | `store-meta-audit` | What its week list names |
 | "Ads are tired", "what do we make next" | Creative supply and fatigue | `store-meta-creative-review` | `store-meta-competitor`, `store-meta-concepts` |
@@ -91,10 +91,10 @@ Gross profit per purchase = order value after discount (before tax) minus landed
 
 - Break-even ROAS = Meta purchase value per order / gross profit per purchase. Check what value the store sends to Meta (subtotal, or total with shipping and tax) and use the same definition on top.
 - Break-even cost per purchase = gross profit per purchase.
-- Cash on delivery: Meta counts the purchase when the order is placed, before delivery. Effective gross profit = gross profit x (1 minus COD share x RTO rate) minus COD share x RTO rate x (forward plus return shipping), on the store's own rates.
+- Failed deliveries and unpaid orders: Meta counts the purchase when the order is placed, before it is delivered or paid. Some orders never turn into cash: parcels that come back undelivered, payments that fail or are reversed, and pay on delivery orders the buyer refuses, where that option is offered. Effective gross profit = gross profit x (1 minus failed order rate) minus failed order rate x (forward plus return shipping), on the store's own rates.
 - Target cost per purchase. Default: first-order gross profit minus the profit per order the owner wants, because first-order margin at or above acquisition cost is the safe floor [MEA-0026]. Only if the store has 12 months of real repeat data: target = 90-day gross profit per customer / 2 to 3 [MEA-0020] [MEA-0024].
 
-Worked example (any currency): order value 2,000; landed cost 600; shipping and pick-pack 120; fees 40; returns 25. Gross profit 1,215. Break-even ROAS 1.65. With 40% COD orders, a 20% RTO rate and 240 lost shipping per RTO: effective gross profit 1,099, break-even ROAS 1.82.
+Worked example (any currency): order value 2,000; landed cost 600; shipping and pick-pack 120; fees 40; returns 25. Gross profit 1,215. Break-even ROAS 1.65. With 8% of orders failing (undelivered, refused or payment reversed) and 240 lost shipping per failed order: effective gross profit 1,099, break-even ROAS 1.82.
 
 ### 4. Name the number that decides
 
@@ -118,7 +118,7 @@ Later stages may draft in parallel, but no later-stage decision (pause, scale, c
 
 ### 6. Sale periods
 
-- Spread spend: put about 31 to 43% of September to December paid budget into September and October, and plan November near 1.8x October [ADC-0048]. These figures come from Black Friday data; for Diwali, apply the same logic to the store's own daily sales from last year and mark it "practitioner default, test it".
+- Spread spend: put about 31 to 43% of September to December paid budget into September and October, and plan November near 1.8x October [ADC-0048]. These figures come from Black Friday data; for other peak seasons (holidays, local festivals, a brand's own big sale), apply the same logic to the store's own daily sales from last year and mark it "practitioner default, test it".
 - Stock: never plan sale spend that empties the shelves; an empty catalog forces ads off and a slow restart [OPS-0019]. When a SKU has fewer days of stock than its reorder lead time, raise its target or pause its ads [ADC-0023].
 - Cash: sale spend fits the cash limit; a big month's returns land the month after [MEA-0011].
 - Ad volume: a fast November ramp can hit the per-page ad limit; set up extra pages first [ADC-0045].
@@ -154,7 +154,7 @@ Never spend, launch, pause, change budgets, publish or message customers without
 - **Treating "ROAS dropped" as a creative problem.** Step 5 checks tracking and money first.
 - **Using product margin as gross margin.** Step 3 uses delivered cost to the door.
 - **Scaling into a stock-out before a sale.** The cash and stock gate blocks it.
-- **Counting COD orders as revenue before delivery.** Step 3 adjusts for RTO.
+- **Counting orders as revenue before they are delivered and paid.** Step 3 adjusts for failed deliveries and unpaid orders.
 - **Reading the 1-day view default as truth.** Step 4 names 7-day click and acquisition MER.
 - **Handling "ads not spending" as a budget problem.** Check payment, account status, rejected ads and catalog errors first.
 
@@ -181,4 +181,9 @@ Never spend, launch, pause, change budgets, publish or message customers without
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: routes the owner's own words to one of 16 store skills in a fixed trust, money, structure, creative order; computes gross profit per purchase and break-even ROAS, with cash on delivery and return-to-origin, before any option is ranked; blocks scale and sale plans without stock cover and a cash limit; names the number that decides each choice instead of an industry benchmark.
+What this skill does that the open-source one did not: routes the owner's own words to one of 16 store skills in a fixed trust, money, structure, creative order; computes gross profit per purchase and break-even ROAS, with failed deliveries, returns and unpaid orders, before any option is ranked; blocks scale and sale plans without stock cover and a cash limit; names the number that decides each choice instead of an industry benchmark.
+
+## Selling in India
+
+- Cash on delivery is common there. Work out the share of COD orders and the return to origin (RTO) rate before you trust any ROAS; Ishita has the full method.
+- Diwali is the main peak. Use last year's daily sales around it to plan the ramp, as step 6 describes for Black Friday.

@@ -1,6 +1,6 @@
 ---
 name: google-search-term-mining
-description: "Sorts a store's Google Ads search terms into six groups (irrelevant, waste, hidden winners, new themes, competitor and brand, watch) using gross profit per conversion, not ROAS alone, and turns them into negative keyword lists ready for Google Ads Editor, exact-match keyword candidates and new ad group ideas. Checks every negative against live keywords and existing negatives, finds queries that trigger more than one ad group, and handles Hindi, Hinglish and other mixed-language queries for India. Read access only; the client approves every list. Use it weekly, after a spend spike, or when cost per purchase climbs."
+description: "Sorts a store's Google Ads search terms into six groups (irrelevant, waste, hidden winners, new themes, competitor and brand, watch) using gross profit per conversion, not ROAS alone, and turns them into negative keyword lists ready for Google Ads Editor, exact-match keyword candidates and new ad group ideas. Checks every negative against live keywords and existing negatives, finds queries that trigger more than one ad group, and handles mixed-language and mixed-script queries in any market (Spanish and English in the US, French and English in Canada, and others). Read access only; the client approves every list. Use it weekly, after a spend spike, or when cost per purchase climbs."
 ---
 
 # Search term mining for an online store
@@ -14,7 +14,7 @@ Shoppers type what they want; your keywords only guess at it. This skill reads w
 - Weekly on accounts with new search terms each week; monthly on small ones.
 - Cost per purchase in Search, Shopping or Performance Max has climbed for two weeks with no clear cause.
 - A new broad match or Performance Max campaign has run for 14 days or more.
-- The store sells in India or another mixed-language market.
+- The store sells in a mixed-language market (for example Canada, Belgium, Switzerland, much of Asia, or Spanish-speaking buyers in the US).
 - Before raising budget, to stop paying for traffic that never buys.
 
 ## Not for
@@ -34,7 +34,7 @@ Required, read access (level 1):
 4. **Existing negatives**: campaign and ad group negatives plus every shared negative keyword list (Tools, Shared library).
 5. **Live keyword list** with match types, and the top converting search terms.
 
-Optional: margin by product category (Shopify product export, "Cost per item"), a list of rival brands, and for India the cash-on-delivery share and return-to-origin (RTO) rate.
+Optional: margin by product category (Shopify product export, "Cost per item"), a list of rival brands, and where pay on delivery is offered, its share of orders and the failed-delivery rate.
 
 Missing input: ask once. Without gross profit per purchase, sort on cost per conversion against the account target, label the output "reduced confidence", and promote no winner.
 
@@ -101,14 +101,14 @@ When one search term shows in two or more ad groups or campaigns, they bid again
 
 Each hidden winner becomes an exact match keyword in the ad group whose landing page fits it, or in a new ad group if none does. When a winning term names a product attribute (material, size, use), pass it to the feed: proven search terms belong at the front of Merchant Center titles [GAD-0044].
 
-### 8. India and mixed-language markets
+### 8. Mixed-language markets
 
-Practitioner default, test it. Queries arrive in English, Hindi in Devanagari, Hinglish in Latin script ("sasta", "kam daam", "cotton wali kurti") and phonetic spellings.
+Practitioner default, test it. Queries can arrive in English, in the local language in its own script, in a mix of both written in Latin letters, and in phonetic spellings.
 
 - Group terms that mean the same thing across scripts and spellings; judge the group on money.
-- Wrong-intent words to check: "free", "naukri" (job), "kaise banaye" (how to make), "wholesale", "used" or "purana", "repair" or "theek", "near me" when there is no shop. Do not auto-negate "sasta" (cheap): if cheap-seeking terms make money, keep them.
+- Wrong-intent words to check in every language: "free", "job" or "jobs", "how to make", "wholesale", "used" or "second hand", "repair", "near me" when there is no shop. Do not auto-negate "cheap" or its local forms: if cheap-seeking terms make money, keep them.
 - Write each negative in every script and spelling you saw.
-- Where cash on delivery is common, judge on profit per placed order: delivered share x profit per delivered order minus RTO share x loss per RTO order (`store-meta-math`, step 4). A refused order still counts as a conversion.
+- Where pay on delivery is common, judge on profit per placed order: delivered share x profit per delivered order minus failed-delivery share x loss per failed order (`store-meta-math`, step 4). A refused order still counts as a conversion.
 
 ### 9. Write the files
 
@@ -156,4 +156,10 @@ Google Ads Editor import format, one row per negative: Campaign, Ad group (blank
 - GAD-0042, MEA-0016, MEA-0017: one primary purchase action with real values.
 - GAD-0044: proven search terms lead feed titles.
 
-What makes this skill ours: waste and winners are judged on gross profit after ad cost, ranked by profit lost; every negative is checked against live keywords and existing negatives before it ships; queries split across ad groups get one owner; and cash-on-delivery losses and mixed-script Hindi and Hinglish queries are handled for India.
+What makes this skill ours: waste and winners are judged on gross profit after ad cost, ranked by profit lost; every negative is checked against live keywords and existing negatives before it ships; queries split across ad groups get one owner; and pay-on-delivery losses and mixed-script queries are handled in every market.
+
+## Selling in India
+
+- Queries arrive in English, Hindi in Devanagari, Hinglish in Latin script ("sasta", "kam daam", "cotton wali kurti") and phonetic spellings. Write each negative in every script and spelling you saw.
+- Wrong-intent words to check: "naukri" (job), "kaise banaye" (how to make), "purana" (used), "theek" (repair). Do not auto-negate "sasta" (cheap) if it makes money.
+- Where COD is common, judge on profit per placed order: delivered share x profit per delivered order minus RTO share x loss per RTO order (`store-meta-math`, step 4). Bring the COD share and RTO rate as inputs.

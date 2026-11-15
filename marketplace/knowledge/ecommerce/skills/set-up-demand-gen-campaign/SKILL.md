@@ -72,7 +72,7 @@ Use optimised targeting only after the first two weeks, so the first read shows 
 
 - Images: landscape (1.91:1), square (1:1) and portrait (4:5), product clearly visible, little text.
 - Video: at least one vertical cut for Shorts and one horizontal; the product in the first seconds; captions on. Use `google-video-dropoff` later to fix where viewers leave.
-- Headlines and descriptions: real offer, real proof (review count, delivery promise) from the live site. India: cash-on-delivery or prepaid offer lines only if live; price in rupees as shown on site. US: real shipping and returns terms.
+- Headlines and descriptions: real offer, real proof (review count, delivery promise) from the live site. Use real shipping and returns terms; payment offer lines (free returns, buy now, pay later, pay on delivery) only if live; price in the store's own currency exactly as shown on the site for that market. Write in the languages your buyers use, one ad group per language if the store sells in several.
 - Product feed: attach the Merchant Center feed, limited to products with stock and good gross profit (custom label), so ads can show products under the creative.
 - Final URL: product or collection page, never the home page for a product-led ad.
 
@@ -130,3 +130,7 @@ The question is whether Demand Gen finds new customers at a lower cost in gross 
 - MEA-0050: clustered geo tests for incrementality.
 
 What makes this skill ours: readiness and budget come from the store's own target cost per purchase and Google's own 10 times rule, so a store that cannot fund a fair test is told before spending; prospecting excludes buyers so the test reads new customers; and Demand Gen is judged against Meta on new-customer gross profit from store data, never Google-reported ROAS.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Use cash-on-delivery or prepaid offer lines only if live, and show the price in rupees as on the site.

@@ -1,6 +1,6 @@
 ---
 name: comment-and-dm-reply-rules
-description: "Reply rules and a bank of ready answers for a store's comments and DMs on Instagram, Facebook, TikTok and YouTube: nine message types (sales question, order problem, complaint, product or safety question, hate and abuse, spam and scams, trolls, collab requests, praise and customer posts), each with a reply time, public or private route, owner, what to hide and never hide, when to escalate, and two filled answers in the brand's voice. Built on Meta's messaging window, keeps order details out of public view, never deletes honest complaints, and covers Hinglish and regional-language replies, COD and delivery questions for India. Use when comments go unanswered, replies are inconsistent between team members, a bad-comment wave hits, or before a launch or sale."
+description: "Reply rules and a bank of ready answers for a store's comments and DMs on Instagram, Facebook, TikTok and YouTube: nine message types (sales question, order problem, complaint, product or safety question, hate and abuse, spam and scams, trolls, collab requests, praise and customer posts), each with a reply time, public or private route, owner, what to hide and never hide, when to escalate, and two filled answers in the brand's voice. Built on Meta's messaging window, keeps order details out of public view, never deletes honest complaints, and covers replies in the languages your buyers use, plus delivery, returns and payment questions for each market. Use when comments go unanswered, replies are inconsistent between team members, a bad-comment wave hits, or before a launch or sale."
 ---
 
 # Comment and DM reply rules
@@ -26,7 +26,7 @@ description: "Reply rules and a bank of ready answers for a store's comments and
 Required (read access, level 1):
 
 1. **Last 30 days of comments and DMs**: read in Meta Business Suite inbox, TikTok and YouTube Studio comments; export where the tool allows. Aim for at least 100 messages.
-2. **Store policies**: shipping, delivery times, returns, refunds, COD rules, warranty, from the live policy pages.
+2. **Store policies**: shipping, delivery times, returns, refunds, payment options (including pay on delivery if offered), warranty, from the live policy pages.
 3. **Product facts**: sizes, materials, ingredients, care, safety warnings, from product pages.
 4. **Brand voice**: 5 real replies or captions the client likes.
 5. **Team and hours**: who answers, which hours, who handles refunds and escalations.
@@ -64,7 +64,7 @@ Read the messages and tag each with one of the nine types in step 2. Count them.
 
 ### 3. Write the hide and delete rules
 
-Hide or delete only: slurs, threats, harassment, spam, scams, personal data (yours or the buyer's), and illegal content. Use the platform's own comment filters for slurs and spam words. Never hide or delete an honest complaint, a bad experience, or a question you dislike. Hiding honest criticism makes a store look like it hides problems, and in the US the FTC's review rule bans suppressing negative reviews [MCR-6045]. Treat honest complaints as service, not threats.
+Hide or delete only: slurs, threats, harassment, spam, scams, personal data (yours or the buyer's), and illegal content. Use the platform's own comment filters for slurs and spam words. Never hide or delete an honest complaint, a bad experience, or a question you dislike. Hiding honest criticism makes a store look like it hides problems, and in the US the FTC's review rule bans suppressing negative reviews [MCR-6045]; UK and EU consumer law also bans hiding or faking reviews. Treat honest complaints as service, not threats.
 
 ### 4. Write the ready answers
 
@@ -85,10 +85,10 @@ For selling posts, a comment keyword can send the product link by DM, which also
 
 Escalate at once to the client: threats or safety issues; a product causing harm; a legal or regulator mention; press or a large creator complaining; a comment wave of 10 or more complaints on one issue in a day (practitioner default); anything about a data breach. The escalation note says what happened, links, screenshots and a suggested holding reply. No one posts a statement without the client's yes.
 
-### 7. India and US notes
+### 7. Notes by market
 
-- **India:** reply in the language the buyer used: English, Hinglish, Hindi or a regional language; keep a few ready answers translated by a fluent speaker. Common sales questions: COD available, delivery time to the pincode, GST invoice, size exchange, return to origin. For COD order checks, move to WhatsApp or DM, never ask for the address in public. Do not ask buyers to share UPI or payment details in comments or DMs; payments go only through the store's checkout.
-- **US:** keep replies short and plain; do not ask for card details anywhere. If a creator or employee answers questions about the product while promoting it, disclose the relationship [ORG-6405].
+- **All markets:** reply in the language the buyer used; keep a few ready answers translated by a fluent speaker for each language your buyers use. Common sales questions: delivery time to the buyer's postcode or zip code, duties and taxes for cross-border orders, VAT or sales tax invoices for business buyers, size exchange, and returns. For order checks, move to DM or WhatsApp; never ask for the address in public. Do not ask buyers to share card, bank or payment details in comments or DMs; payments go only through the store's checkout.
+- **Disclosure:** if a creator or employee answers questions about the product while promoting it, disclose the relationship [ORG-6405]; the FTC in the US and the ASA in the UK both expect this. Keep replies short and plain.
 
 ### 8. Run the weekly check
 
@@ -102,7 +102,7 @@ Each week, sample 20 replies: was the reply time met, was the route right, was p
 - No answer contains order details, a refund promise beyond policy, or a medical or legal claim.
 - Automation sends only to people who commented and hands off to a person at the first real reply.
 - The escalation list names who is called and what they get.
-- Language and COD answers are included for India when the store sells there.
+- Language, delivery and payment answers are included for each market the store sells in.
 - The client has approved the rule card before any reply is posted under it.
 
 ## Output
@@ -134,4 +134,11 @@ Each week, sample 20 replies: was the reply time met, was the route right, was p
 - ORG-6405: disclose a relationship when promoting.
 - ORG-6365: Instagram messaging window and private replies.
 
-What makes this skill ours: replies are triaged into nine types with a route that keeps order details private; honest complaints are protected while abuse and scams are removed fast; automation is held inside Meta's messaging window and hands off to a person; and India gets language, COD and payment-safety answers.
+What makes this skill ours: replies are triaged into nine types with a route that keeps order details private; honest complaints are protected while abuse and scams are removed fast; automation is held inside Meta's messaging window and hands off to a person; and each market gets language, delivery and payment-safety answers.
+
+## Selling in India
+
+- Reply in the language the buyer used: English, Hinglish, Hindi or a regional language.
+- Common sales questions: is COD available, delivery time to the pincode, GST invoice, size exchange and return to origin.
+- For COD order checks, move to WhatsApp or DM; never ask for the address in public.
+- Never ask buyers to share UPI or payment details in comments or DMs.

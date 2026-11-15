@@ -1,6 +1,6 @@
 ---
 name: grow-instagram-with-collabs
-description: "A 60-day Instagram collab plan for a store: a scored list of partner accounts (non-competing brands, niche creators, local businesses, community pages), the collab format for each (co-authored Reel, carousel, live, joint giveaway), ready outreach messages, a brief per collab, and a tracking sheet that measures new followers, keyword DMs, store visits and gross profit per collab with its own code and UTM link. Covers Instagram's collab post limits and US and India disclosure labels. Use when the account has stalled, when the store wants reach without ad spend, or before a launch that needs borrowed audiences."
+description: "A 60-day Instagram collab plan for a store: a scored list of partner accounts (non-competing brands, niche creators, local businesses, community pages), the collab format for each (co-authored Reel, carousel, live, joint giveaway), ready outreach messages, a brief per collab, and a tracking sheet that measures new followers, keyword DMs, store visits and gross profit per collab with its own code and UTM link. Covers Instagram's collab post limits and disclosure labels in the US, UK, EU and other markets. Use when the account has stalled, when the store wants reach without ad spend, or before a launch that needs borrowed audiences."
 ---
 
 # Grow Instagram with collabs
@@ -40,7 +40,7 @@ If Insights are missing, use the buyer profile alone and mark targets "set after
 1. **Gross profit per order** is known for the featured products and gift costs are counted. Fail: compute it in `build-sku-profit-sheet`; until then, gift only low-cost products.
 2. **Own account is ready.** At least 9 recent posts that show what the store sells, a clear bio and a working link. Partners check the profile before replying. Fail: fix the profile first.
 3. **Capacity.** Each collab takes outreach, a brief, review and posting. Fail: plan fewer collabs.
-4. **Disclosure.** If either side gives anything of value (product, money, a code that earns), the post carries a clear label [ORG-6405]; in India use an ASCI label such as Collaboration or Partnership [ORG-6406]. A collab between two brands with no exchange still benefits from naming the partnership plainly.
+4. **Disclosure.** If either side gives anything of value (product, money, a code that earns), the post carries a clear label [ORG-6405]; in the UK put "Ad" up front, and in other markets use the label your market's ad rules allow. A collab between two brands with no exchange still benefits from naming the partnership plainly.
 5. **Giveaway rules.** Any joint giveaway follows Instagram's promotion guidelines and local contest law. Fail: drop the giveaway format; no legal ruling here.
 
 ## Steps
@@ -110,9 +110,9 @@ Each collab gets its own:
 
 At 7 and 30 days, record: reach, share of reach from non-followers, follows from the post (shown in Insights), profile visits, keyword DMs, link clicks, orders on the code or UTM, and gross profit from those orders minus gift and prize cost. Judge growth collabs on shares and follows, and selling collabs on comments, DMs and orders [ORG-0019]. Keep partners whose collab beat the account's median post on its goal; rebook them first.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** many partners prefer WhatsApp for coordination after the first DM; get the client's yes before moving off Instagram. Write captions in the language both audiences use. Use an ASCI label and keep it on screen for the required time in video [ORG-6406]. If the store takes COD, codes must work on COD orders too, or tracking will undercount.
+- **All markets:** many partners prefer WhatsApp or another chat app for coordination after the first DM; get the client's yes before moving off Instagram. Write captions in the language both audiences use. Use the label your market's ad rules require and keep it on screen long enough in video. If the store takes pay on delivery, codes must work on those orders too, or tracking will undercount.
 - **US:** a label such as "ad" or "Thanks to [brand] for the free product" goes in the post itself; vague tags like "collab" alone are not enough [ORG-6405].
 
 ## Checks before you hand it over
@@ -152,6 +152,12 @@ At 7 and 30 days, record: reach, share of reach from non-followers, follows from
 - ORG-0041: price paid creator deals off Meta CPM.
 - ORG-6404: up to 5 collaborators; feed, Reels and carousels only.
 - ORG-6405: FTC disclosure rules.
-- ORG-6406: ASCI labels and video timing.
 
-What makes this skill ours: partners are scored on audience fit and real reach to strangers, not follower count; every collab carries its own code, UTM link and keyword so gross profit per collab can be read; gift costs come off the result; and US and India disclosure rules are built into each brief.
+What makes this skill ours: partners are scored on audience fit and real reach to strangers, not follower count; every collab carries its own code, UTM link and keyword so gross profit per collab can be read; gift costs come off the result; and the disclosure rules of each market are built into each brief.
+
+## Selling in India
+
+- Use an ASCI label such as Collaboration or Partnership, and keep it on screen for the required time in video [ORG-6406].
+- If the store takes COD, codes must work on COD orders too.
+
+Source: ORG-6406 (ASCI labels and video timing).

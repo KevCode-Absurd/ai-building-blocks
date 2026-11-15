@@ -45,7 +45,7 @@ If 3 is missing, RTO can be read for the store but not by ad: say so, and set up
 
 ## Steps
 
-Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its delivered number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from the start; a calendar date only when the brief gives one.
+Follow the house rules, chiefly **Org context first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the org context (every segment the data ranks, each with its delivered number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from the start; a calendar date only when the brief gives one.
 
 ### 1. Tracking
 
@@ -71,7 +71,7 @@ Follow the house rules, chiefly **Brand brain first**, **Map every signal to an 
 - Rank formats and angles on cost per delivered order. At least half of new creative goes to the style with the best delivered profit, with enough ads to feed the budget: each needs about 3 times the break-even cost per placed order to be judged [ADC-0039].
 - Ads state the real payment terms: if COD has a fee, no "free COD" line.
 - Show the prepaid reason (a real prepaid discount or faster dispatch) in ads and on landing pages, as set in `cod-and-prepaid-checkout-for-india`.
-- Messages that set honest expectations (delivery time, size, what is in the box) cut refusals; use the customers' own words from the brand brain.
+- Messages that set honest expectations (delivery time, size, what is in the box) cut refusals; use the customers' own words from the org context.
 
 ### 5. Budget
 

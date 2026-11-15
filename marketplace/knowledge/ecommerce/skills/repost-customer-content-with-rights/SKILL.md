@@ -1,6 +1,6 @@
 ---
 name: repost-customer-content-with-rights
-description: "A working system to find customers' photos and videos of the store's products, check they are real buyers, ask for permission with a clear scope (organic repost, website, email, paid ads), record the yes in a rights register with the exact wording, expiry and any incentive, and remove content when permission ends. Includes ready permission messages, the register layout, disclosure rules when anything of value is given (FTC in the US, ASCI in India), and the extra steps before customer content goes into ads. Use before resharing any tagged post, when building a customer photo wall or review gallery, or when the ad team wants to use customer videos."
+description: "A working system to find customers' photos and videos of the store's products, check they are real buyers, ask for permission with a clear scope (organic repost, website, email, paid ads), record the yes in a rights register with the exact wording, expiry and any incentive, and remove content when permission ends. Includes ready permission messages, the register layout, disclosure rules when anything of value is given (FTC in the US, ASA and CMA in the UK, and matching rules in the EU, Canada and Australia), and the extra steps before customer content goes into ads. Use before resharing any tagged post, when building a customer photo wall or review gallery, or when the ad team wants to use customer videos."
 ---
 
 # Repost customer content with permission
@@ -37,10 +37,10 @@ If no records exist, treat every past repost as unpermitted until asked. Sending
 ## Before you start: the gates
 
 1. **Ownership.** The person who took a photo or video owns it; being tagged does not give the store rights, and the platform's licence covers the platform, not the brand. Pass only with the owner's recorded yes. Fail: do not use it. No legal ruling here; for disputes, the client asks a lawyer.
-2. **Real buyer and real experience.** Content used as proof must come from a real customer and show their honest experience; reviews and testimonials by people who do not exist, including AI-made ones, or that misrepresent the experience are banned in the US [MCR-6045].
+2. **Real buyer and real experience.** Content used as proof must come from a real customer and show their honest experience; reviews and testimonials by people who do not exist, including AI-made ones, or that misrepresent the experience are banned in the US [MCR-6045] and under UK and EU consumer law.
 3. **Other people in the shot.** Faces of others, especially children, need the consent of those people or a parent. Fail: crop, blur or skip.
-4. **Incentive disclosure.** If anything of value is given for the content or permission, say so wherever it is used [MCR-6025]; in India this is a material connection that needs an ASCI label [ORG-6406].
-5. **Personal data.** Store only what the register needs. In India the Digital Personal Data Protection Act expects clear consent and purpose; in the US follow the store's privacy policy. No legal ruling here.
+4. **Incentive disclosure.** If anything of value is given for the content or permission, say so wherever it is used [MCR-6025]; in the UK and EU the post also needs a clear "ad" label.
+5. **Personal data.** Store only what the register needs. In the UK and EU, GDPR expects a lawful basis, a clear purpose and only the data needed; other countries have their own privacy laws (for example Canada's PIPEDA and Australia's Privacy Act); in the US follow the store's privacy policy and any state privacy law that applies. No legal ruling here.
 
 ## Steps
 
@@ -69,7 +69,7 @@ Log in the register the same day: asset ID, link, owner handle, date asked, exac
 
 ### 5. Use within scope
 
-- **Organic repost:** credit the owner as agreed; never edit their words or change the meaning. If an incentive was given, the post carries a plain label [ORG-6405], or an ASCI label in India [ORG-6406].
+- **Organic repost:** credit the owner as agreed; never edit their words or change the meaning. If an incentive was given, the post carries a plain label [ORG-6405], using the label each market expects (for example "ad" in the UK).
 - **Website and email:** show it as a customer photo, not as a staged shoot.
 - **Paid ads:** only with the paid-ads scope. A disclosure stays with the content when an incentive was given [MCR-6025]. An organic customer post with about 5 times the account's usual views is worth testing in ads, once rights cover it [ORG-0035].
 - **AI edits:** do not change what the customer's product or result looks like; any AI edit beyond basic cropping and colour follows Meta's AI labelling [MCR-6063] and the store's accuracy rules in `keep-product-accurate-in-ai-media`.
@@ -82,9 +82,10 @@ Each month, filter the register for expiry dates in the next 30 days. Remove con
 
 List content reshared before this system. Ask for permission now using the same messages; remove any that get a no or no reply within 14 days (practitioner default, test it).
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** many buyers send photos on WhatsApp; ask there with the same scope wording and record the reply as a screenshot. Free product or store credit for a post makes it an ad under ASCI; use a permitted label such as "Free gift" or "Collaboration" [ORG-6406]. Keep regional-language captions as the customer wrote them.
+- **Every market:** where buyers send photos on WhatsApp or other chat apps, ask there with the same scope wording and record the reply as a screenshot. Keep captions in the language the customer wrote them.
+- **UK and EU:** free product or store credit for a post makes it an ad; label it clearly ("ad" in the UK, under ASA and CMA guidance).
 - **US:** paying or gifting for content requires disclosure in the post itself, not just a platform tag [ORG-6405]. Fake or incentivised-for-positive reviews are banned under the FTC's rule [MCR-6045].
 
 ## Checks before you hand it over
@@ -127,6 +128,9 @@ List content reshared before this system. Ask for permission now using the same 
 - MCR-6063: Meta's AI info label.
 - ORG-0035: organic posts at about 5x usual views belong in ads.
 - ORG-6405: FTC disclosure in the post.
-- ORG-6406: ASCI labels and material connection in India.
 
-What makes this skill ours: nothing is used without a register row holding the exact ask, the exact yes and a screenshot; paid-ad rights are always a separate ask with an expiry; incentives trigger the right US or India label; and past reshares are cleaned up rather than ignored.
+What makes this skill ours: nothing is used without a register row holding the exact ask, the exact yes and a screenshot; paid-ad rights are always a separate ask with an expiry; incentives trigger the right label for each market; and past reshares are cleaned up rather than ignored.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Many buyers send photos on WhatsApp; ask there and record the reply as a screenshot. Free product or store credit for a post is a material connection that makes it an ad under ASCI; use a permitted label such as "Free gift" or "Collaboration" [ORG-6406: ASCI labels and material connection]. The Digital Personal Data Protection Act expects clear consent and purpose. Keep regional-language captions as the customer wrote them.

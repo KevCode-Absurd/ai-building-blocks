@@ -1,6 +1,6 @@
 ---
 name: set-up-helpdesk-and-response-times
-description: "A working support desk plan: one shared inbox that pulls in email, site chat, WhatsApp, Instagram and Facebook messages and marketplace questions, with a fixed tag list, an owner for each queue, routing rules, business hours, first-reply and resolution targets per channel, and the weekly numbers to watch. Sized from the store's own contact volume and orders, with a free path (shared Gmail plus WhatsApp Business app labels) and a helpdesk path. Covers WhatsApp opt-in and human-handoff rules, India regional-language queues and peak season staffing. Use when messages are scattered across apps, replies get missed, or the store is about to hire or outsource support."
+description: "A working support desk plan: one shared inbox that pulls in email, site chat, WhatsApp, Instagram and Facebook messages and marketplace questions, with a fixed tag list, an owner for each queue, routing rules, business hours, first-reply and resolution targets per channel, and the weekly numbers to watch. Sized from the store's own contact volume and orders, with a free path (shared Gmail plus WhatsApp Business app labels) and a helpdesk path. Covers WhatsApp opt-in and human-handoff rules, queues for the languages your buyers use, time zones for stores selling across countries, and peak season staffing. Use when messages are scattered across apps, replies get missed, or the store is about to hire or outsource support."
 ---
 
 # Helpdesk and response time setup
@@ -12,7 +12,7 @@ description: "A working support desk plan: one shared inbox that pulls in email,
 - Customer messages sit in five places (Gmail, Instagram DMs, WhatsApp, site chat, Amazon) and some are never answered.
 - The store is about to hire its first support person or an outsourced team.
 - Nobody knows how fast the store replies, or which reasons fill the inbox.
-- A sale or festive season is coming and the desk must handle two to three times the load.
+- A sale or peak season (Black Friday and Cyber Monday, the winter holidays, a local festival) is coming and the desk must handle two to three times the load.
 
 ## Not for
 
@@ -57,7 +57,7 @@ Recommend one; give the runner-up in a line.
 
 ### 3. Fix the tag list
 
-One primary reason tag per conversation, from a short fixed list (order status, change or cancel, damaged or wrong, return or exchange, refund, product question, pre-sale, payment or COD, subscription, complaint, wholesale, spam). Add a channel tag automatically, a language tag in India, and a "risk" tag for safety, legal or chargeback words. More than about 20 primary tags and agents stop tagging well (practitioner default, test it).
+One primary reason tag per conversation, from a short fixed list (order status, change or cancel, damaged or wrong, return or exchange, refund, product question, pre-sale, payment, delivery failed, subscription, complaint, wholesale, spam). Add a channel tag automatically, a language tag when buyers write in more than one language, and a "risk" tag for safety, legal or chargeback words. More than about 20 primary tags and agents stop tagging well (practitioner default, test it).
 
 ### 4. Set queues, owners and routing
 
@@ -90,14 +90,20 @@ Targets, practitioner defaults to test against the store's own numbers:
 
 Out of hours, an auto-reply states when a person will answer, gives the tracking page link and never pretends to be a person. Fewer touches matter more than fast first replies: high-effort service drives disloyalty [CXP-0009], so measure contacts per resolved case too.
 
+**Cost per ticket and hire dates.** Track cost per ticket each month: all support costs (people and software) divided by tickets. Track touches per ticket too; many touches mean replies lack detail or the macros are weak. To plan hires, work out tickets per order for each month of last year, multiply by the order forecast, and divide by the tickets one trained agent closes in a month from the store's own data. Count back from the peak by the hiring and training time, so new agents are ready before the rush, and aim to keep cost per ticket about flat as volume grows. Send simple, repeat tickets to the lowest-cost trained team and keep complex or sensitive cases with the most experienced people; compare resolution time and touches per ticket for each group before moving more work.
+
 ### 6. Plan the peak
 
 Before a sale, multiply the weekly workload by last year's peak ratio. Cover the gap with flexible help, not permanent hires: one card sizes full-time payroll to the lowest month and staffs the rest flexibly [OPS-0010]. Load macros and a pinned "known issues" note before the sale starts.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** WhatsApp is often the main channel; give it its own queue and a named owner. Add language queues (Hindi plus the store's top regional language) if over about 10% of messages arrive in that language (practitioner default, test it). Publish the grievance contact the store's policy names. COD buyers often call; log calls as tickets.
-- **US:** email and chat lead; SMS replies to marketing texts land in the SMS tool and must be routed in. Show business hours with time zone.
+- **Main channel:** in the US, UK and Canada, email and chat usually lead; in much of Europe, Latin America, the Middle East and Asia, WhatsApp is often the main channel. Whichever channel leads gets its own queue and a named owner.
+- **Languages:** add a language queue for each language your buyers use if over about 10% of messages arrive in it (practitioner default, test it), staffed by a fluent speaker; tag the rest and use careful translation.
+- **Time zones:** show business hours with the time zone; a store selling across regions sets hours per region or a follow-the-sun rota, and auto-replies say when the next person is on.
+- **SMS:** replies to marketing texts land in the SMS tool and must be routed in.
+- **Legal contacts:** publish the complaint or grievance contact the store's policy and local law name (for example the EU's required contact details and online dispute info, or a named grievance officer where the law asks for one).
+- **Calls:** buyers who pay on delivery or place big orders often call; log calls as tickets.
 
 ### 8. Switch over
 
@@ -144,4 +150,8 @@ Connect channels one at a time, send a test message through each, confirm it lan
 - OPS-0010: size payroll to the lowest month, flex for peaks.
 - OPS-0013: blend teams and judge by cost per resolved ticket.
 
-What makes this skill ours: targets are sized from the store's own workload and hours, not copied from benchmarks; order status volume is sent to a shipping fix before anyone is hired; a free path runs on Gmail and the WhatsApp Business app; and India gets a WhatsApp-first queue, language queues and COD call logging.
+What makes this skill ours: targets are sized from the store's own workload and hours, not copied from benchmarks; order status volume is sent to a shipping fix before anyone is hired; a free path runs on Gmail and the WhatsApp Business app; and each market gets its main channel first, language queues and call logging where buyers phone.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. In India WhatsApp is often the main channel; give it its own queue and a named owner. Add language queues (Hindi plus the store's top regional language) if over about 10% of messages arrive in that language. Publish the grievance contact the store's policy names. COD buyers often call; log calls as tickets, and add a "COD" payment tag. Festive peaks such as Diwali need the step 6 plan.

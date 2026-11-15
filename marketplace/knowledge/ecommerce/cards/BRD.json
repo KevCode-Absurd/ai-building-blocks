@@ -874,5 +874,326 @@
     },
     "strength": "regulator_rule",
     "public": true
+  },
+  {
+    "id": "BRD-6486",
+    "modules": [
+      "BRD",
+      "ORG",
+      "MEA"
+    ],
+    "topics": [
+      "ambassador deals",
+      "equity partnerships",
+      "partner costs"
+    ],
+    "claim": "Paying ambassadors in equity or declining royalties rather than per post lets partner costs shrink as you grow: IM8's ambassador and royalty share fell from 14% of revenue in Q2 to 6.2% in July 2026.",
+    "body": "IM8's famous partners sit in the P&L as their own line. The deals start with a large royalty percentage that falls as revenue grows, and lean on equity rather than fees, so the cost per dollar of revenue keeps dropping while growth compounds; another view of the partner line fell from 11% to 3.3%. Blue Sense calls it a cost-effective model as long as growth continues, and the least transferable part of IM8: you cannot make Beckham your co-founder, and his reach of about 90 million followers likely cut CAC at launch and carried the first $50 million or so. IM8 also runs trial sampling, earned PR, brand activations in 12 cities and clinical trials, which build the brand and lower CAC over time. How to apply: if you work with creators or ambassadors, model a deal where pay is tied to sales or equity and the percentage steps down as revenue rises, instead of flat fees per post. Only do this if you understand the deal terms well; Blue Sense would not rush most brands into it.",
+    "conditions": "Brands with creators or ambassadors who will accept equity or sliding royalties, and growth that can compound.",
+    "fails_when": "Flat or slow growth, where royalties never step down; founders without the experience to structure equity deals safely.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "ambassador and royalty share 14% in Q2 to 6.2% in July 2026",
+      "partner line 11% to 3.3%",
+      "activations in 12 cities",
+      "about 90 million followers"
+    ],
+    "asks": [
+      "How should I pay brand ambassadors?",
+      "Should I give influencers equity instead of fees?",
+      "How do celebrity partnerships affect my P&L?",
+      "Is a famous co-founder worth it?"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6604",
+    "evidence": {
+      "where": "[52:32] ambassador equity model; [53:46] royalty share falling; [58:11] pay partners in equity, not per post"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "BRD-6487",
+    "modules": [
+      "BRD",
+      "MCR",
+      "AVT"
+    ],
+    "topics": [
+      "blue ocean positioning",
+      "audience repositioning",
+      "saturated categories"
+    ],
+    "claim": "A commodity product can win a saturated category by aiming at an audience nobody targets; Bloom launched a greens powder for women instead of fighting AG1 on ingredients.",
+    "body": "Blue Sense's favourite marketing idea comes from Blue Ocean Strategy: you often do not need a new product, only a new position. Their example, as told by Bloom's founder, is Bloom's first hit. Greens powder was one of the most crowded categories at the time, but no one was making or marketing one for women. Bloom took a broadly similar product and spoke to women directly rather than claiming to beat AG1 or out-formulate rivals. Blue Sense argues this is honest: customers who repeat buy are happy with the product, and the small tweak in positioning is what opens a new audience, lowers CAC and takes share. How to apply: list the buyer groups in your category and who currently markets to each; look for a large group that rivals ignore or treat as an afterthought; then rebuild the hero headline, imagery, ads and landing page around that group. Validate it cheaply first by running that persona as a separate ad concept with its own page.",
+    "conditions": "Crowded categories where products are near identical and a sizeable buyer group is underserved by current messaging.",
+    "fails_when": "The ignored group is too small to scale, or the product truly does not suit them, which shows up as returns and weak repeat rates.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I compete in a saturated market?",
+      "Do I need a better product to beat big competitors?",
+      "How did Bloom grow so fast?",
+      "Who should I target if everyone sells the same thing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [29:40] Blue Ocean Strategy and the Bloom greens powder example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-6488",
+    "modules": [
+      "BRD",
+      "AVT",
+      "LPG"
+    ],
+    "topics": [
+      "one-of-one positioning",
+      "review mining",
+      "differentiation"
+    ],
+    "claim": "To become one of one, export all reviews into an LLM to find benefits rivals do not claim, or stack two category benefits; free shipping, service and fast delivery are not differentiators.",
+    "body": "Most stores sell something close to what everyone else sells, and copy that sounds like competitors gives no reason to choose you. Blue Sense offers two practical routes. First, mine your own reviews: export every review and ask Claude or ChatGPT to find feedback that sets your product apart, including benefits you never marketed. Second, combine two benefits that the category sells separately, such as a pillowcase pitched both as acne friendly (holds less oil) and genuinely comfortable to sleep on, which nobody else claims together. What does not work is stacking table stakes: free shipping, great service and fast delivery are expected by everyone and add nothing. How to apply: run the review prompt, shortlist claims that are specific, true and hard for rivals to say honestly, and put the best one high on the product page and into ad hooks. Use real customer wording where possible, for example a line customers keep repeating.",
+    "conditions": "Brands with a few hundred or more written reviews, selling in crowded categories.",
+    "fails_when": "You have very few reviews (mine support tickets, surveys and competitor reviews instead), or the combined benefits do not matter to the same buyer.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I make my product stand out when everyone sells the same thing?",
+      "How can I use my reviews to find a unique angle?",
+      "What's my unique selling point?",
+      "Is free shipping a good USP?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [26:50] reposition as one of one using reviews and stacked benefits"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-6489",
+    "modules": [
+      "BRD",
+      "MEA"
+    ],
+    "topics": [
+      "brand building",
+      "diminishing returns"
+    ],
+    "claim": "Performance ads can brute-force growth to roughly $20M, but past about $30k to $40k a day spend returns diminish; budget for brand associations, which is why a $300M fashion brand's account beats an $8M one on every metric.",
+    "body": "Blue Sense's view from working with hundreds of seven-figure brands and over 60 eight and nine figure ones: from $1M to about $20M a year you can grow mostly through performance marketing, putting $1 in and getting $4 out. Eventually spending past about $30,000 to $40,000 a day stops buying more growth. The way through is brand. Comparing a fashion account doing about $8M a year with one doing about $300M, the bigger account has better CPMs, click-through rates, CPCs and ROAS despite roughly 20 times the spend, the opposite of normal diminishing returns. The difference is the associations built outside the ad account. The presenter's own purchases illustrate it: he bought from 247 Represent because the running creators he follows wear or are sponsored by it, and from 2XU (a Blue Sense client) because of its premium perception from campaign shoots and messaging, not because of any performance ad. How to apply: set aside a planned share of marketing for showing up where your buyers already spend attention (creators, events, communities they follow), treat it as a P&L budget line, and judge it on long-run account efficiency and branded demand rather than coupon-code ROAS.",
+    "conditions": "Brands approaching or past $20M revenue or $30k a day spend, with performance channels flattening.",
+    "fails_when": "Small brands still far from performance limits, where brand spend crowds out cheaper growth.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$1M to about $20M can be driven by performance",
+      "diminishing returns past about $30k to $40k a day spend",
+      "$8M versus $300M fashion accounts, about 20x spend"
+    ],
+    "asks": [
+      "When should we start spending on brand?",
+      "Why does a big brand's ad account perform better than ours?",
+      "Our ads stopped scaling past $30k a day, what now?",
+      "How do I justify brand spend that has no ROAS?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6614",
+    "evidence": {
+      "where": "about [2:24:30] to [2:28:00] brand as a budget line"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-6490",
+    "modules": [
+      "BRD",
+      "MEA"
+    ],
+    "topics": [
+      "retail and DTC",
+      "halo effect",
+      "market expansion"
+    ],
+    "claim": "Opening stores in a market lifts online sales there: Blue Sense saw a client's online revenue in Canada rise about 20% after it opened stores, through trust, try-in-store-buy-online and out-of-stock spillover.",
+    "body": "In fashion especially, stores feed the website. People try items in store and later buy other sizes or colours online; they return something in store and rebuy online; when their size is out of stock in store they go straight to the site; or they think it over and buy online two weeks later, or send someone else to buy it as a gift. On top of that, physical presence makes people trust the brand more. Blue Sense saw this when a client entered Canada and then opened stores there: online revenue in that market went up about 20%. Their wider view is that retail plus DTC beats DTC alone at large scale, because growing DTC only through paid media means CAC keeps rising unless you have some edge that holds it down. How to apply: when you add stores or stockists in a region, track online new customer count and CAC for that region before and after, and do not judge a store only on its own till sales.",
+    "conditions": "Fashion and other try-on categories with the brand strength to open stores; the effect is regional.",
+    "fails_when": "Categories where trying in person does not matter; store openings in markets with little online demand; this is one client example, not a controlled test.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "online revenue in Canada up about 20% after store openings"
+    ],
+    "asks": [
+      "Will opening a store help my online sales?",
+      "Is retail worth it for a DTC brand?",
+      "Why does CAC keep rising as we scale DTC?",
+      "How do I measure the online effect of a new store?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6633",
+    "evidence": {
+      "where": "about [43:04] retail stores lift online revenue, Canada example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "BRD-6491",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "new consumption format",
+      "white space",
+      "product positioning"
+    ],
+    "claim": "A strong product lever can come from changing how a proven product is consumed: Grüns turned a multivitamin into a gummy and AG1 into a greens powder, creating white space without new science.",
+    "body": "Multivitamins have been sold for decades, so the product itself was not what set Grüns apart. Its edge was the format: taking a multivitamin out of tablets and into a greens gummy created a space nobody owned, and the brand could then market it through many angles as if it were something new. Blue Sense puts AG1 in the same category: a greens powder that, in their view, works mostly like a multivitamin in a new form with strong marketing. For a new or growing consumer goods brand, this is a lower-risk path to product market fit than inventing a new product, because demand for the underlying benefit already exists. How to apply: list proven products in your category and the forms they come in today (tablet, powder, liquid, bar, patch, spray, single-serve). Look for a form buyers find easier, tastier or more fun that no strong brand owns. Check that unit economics still work in the new form (Blue Sense's product lever needs high gross margin) and that the format supports repeat purchase or subscription.",
+    "conditions": "Consumer goods and supplement brands looking for a new product or a launch idea.",
+    "fails_when": "Formats that reduce efficacy or raise cost so much that margin collapses; categories already crowded with the same format shift.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I find a product idea in a crowded market?",
+      "What made Grüns or AG1 different?",
+      "Is a new format enough to stand out?",
+      "How do I differentiate a supplement brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6636",
+    "evidence": {
+      "where": "[14:19] Grüns switched the consumption method; AG1 comparison"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-6492",
+    "modules": [
+      "BRD",
+      "FIN"
+    ],
+    "topics": [
+      "talent risk",
+      "key person dependence",
+      "acquisition structure"
+    ],
+    "claim": "Where a brand's lever is, its risk is: Coty paid $200M for a fifth of Kim Kardashian's beauty brand and sold it four years later for $74M after her attention moved to Skims.",
+    "body": "A talent-led brand depends on the talent keeping their attention on it. Coty bought a 20% stake in Kim Kardashian's beauty brand for $200 million; when she shifted her promotion toward Skims, the beauty brand's revenue fell and Coty sold the stake four years later for $74 million, booking a large loss. Blue Sense contrasts the deal terms with rhode's sale, where big earnouts and likely promotion duties kept Hailey Bieber involved. The same buyer paid $600 million for 51% of Kylie Cosmetics, a $1.2 billion valuation on an estimated $177 million of trailing revenue (about 7 times sales, against about 3.8 times for rhode); Forbes later reported revenue was far lower than claimed, and Coty's own report blamed a later revenue drop on a lack of product innovation. How to apply: if your brand's demand rests on one person, track how much revenue moves with their posts, and build the product, channels and team that keep selling without them. If you are buying or investing in such a brand, tie price to their continued involvement through earnouts and clear deliverables.",
+    "conditions": "Founder-led, celebrity or creator-led brands, and investors or acquirers evaluating them.",
+    "fails_when": "Brands with diversified demand where no single person drives sales.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Coty: $200M for 20% of KKW Beauty; stake sold for $74M four years later",
+      "Kylie Cosmetics: $600M for 51%, $1.2B valuation, about $177M trailing revenue (about 7x sales)",
+      "rhode valued at about 3.8x trailing revenue"
+    ],
+    "asks": [
+      "What's the risk of building a brand around one influencer?",
+      "What happens if our founder stops promoting the brand?",
+      "How should a celebrity brand acquisition be structured?",
+      "Is my brand too dependent on one person?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6636",
+    "evidence": {
+      "where": "[22:41] bad examples: Coty with KKW Beauty and Kylie Cosmetics"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "BRD-6493",
+    "modules": [
+      "BRD",
+      "ADC",
+      "FIN"
+    ],
+    "topics": [
+      "talent-led brands",
+      "celebrity brands",
+      "earnouts"
+    ],
+    "claim": "rhode shows a talent-led brand: $169M net sales on $19.5M marketing in 2024, mostly bottom-funnel catalog ads, with the talent cost appearing in the sale's earnouts rather than the P&L.",
+    "body": "Hailey Bieber's rhode reported $169 million of net sales for 2024 with $19.5 million of total marketing expense (about 11.5% of sales) and about a 16% net margin. Its demand came from her, not from ads: until late August 2026 its Meta ads were mostly simple statics and catalog ads, with 249 of 356 active ads pulling product details from the catalog, which only works when talent creates the demand. The talent does not show up as a cost on rhode's P&L; it shows up in the deal. e.l.f. paid $800 million in cash plus up to $200 million in two $100 million earnouts tied to revenue targets, which keeps the founder involved. Since the acquisition rhode has reported $293.3 million of net sales and $112.9 million of net income (about 38% margin), and the expected earnout rose from about $7 million to about $80 million. Blue Sense expects rhode will have to build acquisition that does not depend on her, and its ads have started moving to explainers. How to apply: do not model a talent-led brand's ad account. If your brand relies on a founder or creator, plan the channels that will replace them before they step back.",
+    "conditions": "Brands built around a founder, celebrity or creator audience, and anyone studying such brands.",
+    "fails_when": "Brands where the founder is not the main demand driver; reading these figures as typical marketing ratios for brands without talent.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "2024: $169M net sales, $19.5M marketing (11.5%), about 16% net margin",
+      "Deal: $800M cash plus two $100M earnouts",
+      "Post-acquisition: $293.3M net sales, $112.9M net income (about 38%)",
+      "249 of 356 active ads were catalog-style",
+      "Earnout estimate raised from about $7M to about $80M"
+    ],
+    "asks": [
+      "Should I copy rhode's ads?",
+      "How much do celebrity brands spend on marketing?",
+      "What happens to an influencer brand when the founder steps back?",
+      "Why do celebrity brand acquisitions use earnouts?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6636",
+    "evidence": {
+      "where": "[06:42] rhode filings and e.l.f. deal terms; [09:49] rhode ad library"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
   }
 ]

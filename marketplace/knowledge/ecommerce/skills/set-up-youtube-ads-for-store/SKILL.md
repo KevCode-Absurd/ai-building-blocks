@@ -29,7 +29,7 @@ Required:
 2. **Video material**: the master video file or raw footage, its length, and whether it shows the product in use.
 3. **Tracking**: one primary purchase action with real values in Google Ads [MEA-0017]; YouTube channel linked to Google Ads.
 4. **Baseline data, last 8 weeks**: Shopify orders by day and region (Created at, Shipping Province, Customer type), branded search clicks from Search Console or the brand campaign, direct sessions from GA4.
-5. **Where else the brand sells**: Amazon, Flipkart, retail.
+5. **Where else the brand sells**: Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre, retail.
 
 Optional: post-purchase survey with a "where did you hear about us" question, a YouTube channel with organic views, past video campaign exports.
 
@@ -69,7 +69,7 @@ Rules:
 - Brand name and product on screen early; many viewers skip at 5 seconds.
 - Captions on every cut; many watch without sound.
 - One call to action, matching the landing page.
-- India: make Hindi or regional-language versions where the buyers are, with the voice-over by a native speaker; prices in rupees as on site; cash-on-delivery lines only if live. US: real shipping and returns terms.
+- Make versions in the languages your buyers use where the store sells in several markets, with the voice-over by a native speaker; prices in the store's own currency as on the site for that market; real shipping and returns terms; payment lines (free returns, buy now, pay later, pay on delivery) only if live.
 
 ### 3. Set budget and audiences
 
@@ -135,3 +135,7 @@ Weekly: placements (apps and kids content, hand to `google-display-placement-cle
 - MEA-0050: clustered region tests to read lift.
 
 What makes this skill ours: it picks the campaign type for the store's stage instead of defaulting to reach; it turns one master video into a cut list an editor can work from by the second; and it judges YouTube on new-customer gross profit through a region holdout with brand search, survey and Amazon side signals, never views.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Make Hindi or regional-language versions where the buyers are, with the voice-over by a native speaker; show prices in rupees as on the site; use cash-on-delivery lines only if live. Count Flipkart and Amazon.in sales as side signals in the holdout.

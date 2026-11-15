@@ -19,12 +19,16 @@ const HEADER = `#!/usr/bin/env node
 //   node tools/prepare-job.mjs context/brief.md
 //   node tools/prepare-job.mjs "We sell cotton bedsheets in India on Shopify. Write a 5-email win-back series..."
 //   node tools/prepare-job.mjs context/brief.md --k 20 --json
+//   node tools/prepare-job.mjs context/brief.md --keep MCR-0022,ADC-0034,MEA-0025
 //
-// It reads what the brief asks for and what its data says (the standout row of each table, the biggest item of each
-// list of shares, the funnel step that drops most), searches the pack's library once per request and signal, keeps
-// only cards for this market, marketplace and store platform, ranks them, drops near-duplicates and lists gaps. It
-// writes the digest to context/knowledge-brief.md and adds its lookups to context/trace.md. Use a card only where its
-// "holds when" fits; check its "fails when". Card ids stay in your notes, never in the deliverable.
+// It reads what the brief asks for, what its data says (the standout row of each table, the biggest item of each
+// list of shares, the funnel step that drops most) and the facts it states, searches the pack's library once per
+// request, signal and fact, keeps only cards for this market, marketplace and store platform, ranks them, drops
+// near-duplicates and lists gaps. It writes the digest to context/knowledge-brief.md: its best 15 cards, then more
+// candidates up to about 40, with a short grading step for you, the AI reading it. Grade them against the store, then
+// run it again with --keep and your ids, best first: the digest then holds only those cards. Each run adds its
+// lookups to context/trace.md. Use a card only where its "holds when" fits; check its "fails when". Card ids stay in
+// your notes, never in the deliverable.
 //
 // Generated from the AI Blocks marketplace (src/modules/knowledge/prepare.ts by scripts/gen-prepare-job.mjs).
 // Do not edit by hand.
@@ -37,10 +41,12 @@ async function main(argv) {
   const fs = await import("node:fs");
   const path = await import("node:path");
   const { fileURLToPath } = await import("node:url");
-  const args = { brief: null, k: 15, json: false, pack: null, out: "context/knowledge-brief.md", trace: "context/trace.md" };
+  const args = { brief: null, k: 15, pool: 40, keep: null, json: false, pack: null, out: "context/knowledge-brief.md", trace: "context/trace.md" };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--k") args.k = Number(argv[++i]) || 15;
+    else if (a === "--pool") args.pool = Number(argv[++i]) || 40;
+    else if (a === "--keep") args.keep = String(argv[++i] ?? "").split(/[\\s,]+/).filter(Boolean);
     else if (a === "--json") args.json = true;
     else if (a === "--pack") args.pack = argv[++i];
     else if (a === "--out") args.out = argv[++i];
@@ -63,7 +69,13 @@ async function main(argv) {
     }
   }
   if (!cards.length) { console.log("This pack carries no library cards, so there is nothing to prepare. Use tools/ask-knowledge.mjs for the pack's own knowledge."); return 0; }
-  const prepared = new JobPrep(cards).prepare(brief, { k: args.k });
+  let prepared = new JobPrep(cards).prepare(brief, { k: args.k, pool: args.pool });
+  if (args.keep) {
+    const kept = keepPicks(prepared, args.keep, cards);
+    if (kept.unknown.length) { console.error("No card with id " + kept.unknown.join(", ") + " in this pack. Copy the ids from context/knowledge-brief.md."); return 2; }
+    if (!kept.prepared.picks.length) { console.error("--keep needs at least one card id, best first, for example --keep MCR-0022,ADC-0034"); return 2; }
+    prepared = kept.prepared;
+  }
   const md = preparedMarkdown(prepared);
   const write = (rel, text, append) => {
     const file = path.resolve(process.cwd(), rel);
@@ -72,17 +84,22 @@ async function main(argv) {
   };
   write(args.out, md + "\\n", false);
   const traceFile = path.resolve(process.cwd(), args.trace);
-  const rows = prepared.queries.filter(q => q.kind !== "brief").map(q => {
-    const ids = prepared.picks.filter(p => p.via.includes(q.text)).map(p => p.card.id);
-    return "| " + q.text.replace(/\\|/g, "/").replace(/\\s+/g, " ").slice(0, 160) + " | " + (ids.join(", ") || "none: a gap") + " | to settle in the draft |";
-  });
+  const rows = prepared.graded
+    ? ["| Graded shortlist: cards kept, best first | " + prepared.picks.map(p => p.card.id).join(", ") + " | to settle in the draft |"]
+    : prepared.queries.filter(q => q.kind === "ask" || q.kind === "signal").map(q => {
+      const ids = prepared.picks.filter(p => p.via.includes(q.text)).map(p => p.card.id);
+      return "| " + q.text.replace(/\\|/g, "/").replace(/\\s+/g, " ").slice(0, 160) + " | " + (ids.join(", ") || "none: a gap") + " | to settle in the draft |";
+    });
   write(args.trace, (fs.existsSync(traceFile) ? "\\n" : "# Knowledge trace\\n\\nWorking file, never shipped. Fill in the call each card supports as you draft.\\n\\n") + "| Question | Cards | Call it supports |\\n|---|---|---|\\n" + rows.join("\\n") + "\\n", true);
-  console.log(args.json ? JSON.stringify({ facts: prepared.facts, queries: prepared.queries, gaps: prepared.gaps, picks: prepared.picks.map(p => ({ id: p.card.id, claim: p.card.claim, holds: p.card.holds, fails: p.card.fails, via: p.via, score: p.score })) }, null, 2) : md);
-  console.error("prepare-job: " + prepared.picks.length + " cards from " + cards.length + "; wrote " + args.out + " and " + args.trace);
+  const card = p => ({ id: p.card.id, claim: p.card.claim, tier: p.card.tier, holds: p.card.holds, fails: p.card.fails, via: p.via, score: p.score });
+  console.log(args.json ? JSON.stringify({ facts: prepared.facts, queries: prepared.queries, gaps: prepared.gaps, graded: !!prepared.graded, picks: prepared.picks.map(card), shortlist: prepared.shortlist.map(card) }, null, 2) : md);
+  console.error("prepare-job: " + (prepared.graded ? prepared.picks.length + " kept cards" : prepared.picks.length + " cards and " + (prepared.shortlist.length - prepared.picks.length) + " more to grade") + " from " + cards.length + "; wrote " + args.out + " and " + args.trace);
+  // One line in context/job-log.jsonl (hashes only), when the job folder exists; it never stops the tool.
+  try { const { logEvent } = await import("./log-event.mjs"); logEvent({ tool: "prepare-job", cmd: args.keep ? "keep" : "prepare", args: argv, inputs: [brief === args.brief ? null : args.brief], result: "PASS", counts: { cards: prepared.picks.length, shortlist: prepared.shortlist.length, gaps: prepared.gaps.length } }); } catch {}
   return 0;
 }
 
-const HELP = 'Usage: node tools/prepare-job.mjs <brief file or "brief text"> [--k 15] [--out context/knowledge-brief.md] [--trace context/trace.md] [--json] [--pack <folder>]';
+const HELP = 'Usage: node tools/prepare-job.mjs <brief file or "brief text"> [--k 15] [--pool 40] [--keep ID,ID,...] [--out context/knowledge-brief.md] [--trace context/trace.md] [--json] [--pack <folder>]';
 
 const invoked = typeof process !== "undefined" && !!process.argv?.[1] && (await import("node:path")).resolve(process.argv[1]).toLowerCase() === (await import("node:url")).fileURLToPath(import.meta.url).toLowerCase();
 if (invoked) process.exitCode = await main(process.argv.slice(2));

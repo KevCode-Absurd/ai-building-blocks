@@ -1,6 +1,6 @@
 ---
 name: replenishment-reminder-timing
-description: "A per-product table of reorder reminder days worked out from the store's real reorder gaps and each product's usage cycle, scaled for the quantity bought, plus the flow build spec (trigger, filters, delays, splits, exits, channels) ready to set up in Klaviyo, Shopify Email or a WhatsApp tool. Says which products are not replenishable, caps reminders at two per cycle, keeps the first reminder free of discounts, and measures reorders against a holdout rather than attributed revenue. Includes India notes for WhatsApp reorder links and COD, and US notes for SMS. Use when launching or fixing a reorder flow for consumables, or when one fixed 30-day reminder goes to every product."
+description: "A per-product table of reorder reminder days worked out from the store's real reorder gaps and each product's usage cycle, scaled for the quantity bought, plus the flow build spec (trigger, filters, delays, splits, exits, channels) ready to set up in Klaviyo, Shopify Email or a WhatsApp tool. Says which products are not replenishable, caps reminders at two per cycle, keeps the first reminder free of discounts, and measures reorders against a holdout rather than attributed revenue. Includes notes for WhatsApp reorder links, pay on delivery, and SMS consent in the US and other markets. Use when launching or fixing a reorder flow for consumables, or when one fixed 30-day reminder goes to every product."
 ---
 
 # Replenishment reminder timing
@@ -88,8 +88,8 @@ If the store has Klaviyo predictions (500 or more buyers, 180 days of orders, so
 
 Email first for everyone. Add SMS or WhatsApp to reminder 1 only where the buyer opted in and the message cost is below the expected gross profit it adds (sends x cost per message versus reorders x gross profit).
 
-- **India:** WhatsApp is usually the channel that gets read. Automated journeys clicked far better than broadcasts across Indian brands [EML-0048]. A reorder reminder is a marketing template on WhatsApp, not utility, and is charged at the marketing rate for the market [EML-6322]. Link to a pre-filled cart, and keep COD available if the buyer paid COD last time.
-- **US:** one SMS alongside reminder 1 for SMS subscribers; keep it under 160 characters with no emoji [EML-0024].
+- **WhatsApp markets** (much of Europe, Latin America, the Middle East and Asia): WhatsApp is often the channel that gets read. Automated journeys clicked far better than broadcasts [EML-0048]. A reorder reminder is a marketing template on WhatsApp, not utility, and is charged at the marketing rate for the market [EML-6322]. Link to a pre-filled cart, and keep pay on delivery available if the buyer paid that way last time.
+- **SMS (US, UK, EU, Canada, Australia):** one SMS alongside reminder 1 for SMS subscribers who gave marketing consent; keep it under 160 characters with no emoji [EML-0024].
 
 ### 7. Write the flow spec
 
@@ -145,7 +145,7 @@ Attributed flow revenue counts orders that would have come anyway [EML-0056]. Co
 - EML-0019: lapse at about twice the purchase interval.
 - EML-6326: Klaviyo predictions and their data floor.
 - OFF-0065: discounts raise break-even sharply.
-- EML-0048: India WhatsApp journeys beat broadcasts.
+- EML-0048: WhatsApp journeys beat broadcasts.
 - EML-6322: WhatsApp per-message pricing by category.
 - EML-0024: SMS length and segment billing.
 - EML-0056: attributed revenue is not incremental.
@@ -153,3 +153,7 @@ Attributed flow revenue counts orders that would have come anyway [EML-0056]. Co
 - EML-0023: test delays first.
 
 What makes this skill ours: each reminder day comes from cleaned reorder gaps counted from delivery and checked against the label's usage cycle; days scale with the quantity bought; stock-outs pause the branch before the flow sells what the store cannot ship; and success is a reorder lift over a holdout, not attributed revenue.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. WhatsApp is usually the channel that gets read; automated journeys clicked far better than broadcasts across Indian brands [EML-0048]. Keep COD available if the buyer paid COD last time.

@@ -25,7 +25,7 @@ description: "A scored list of 30 to 60 shops and boutiques that fit the brand, 
 
 Required:
 
-1. **Shopify order export**, last 12 months: Created at, Shipping City, Shipping Zip (pincode in India), Shipping Province, Lineitem name, Lineitem quantity, Subtotal. This shows where buyers cluster.
+1. **Shopify order export**, last 12 months: Created at, Shipping City, Shipping Zip (the postcode or ZIP), Shipping Province, Lineitem name, Lineitem quantity, Subtotal. This shows where buyers cluster.
 2. **Wholesale price list and terms** from `build-wholesale-price-list-and-terms`: wholesale price, suggested retail price, case pack and opening minimum per SKU.
 3. **Product facts**: photos, sizes, shelf life if any, retail packaging, barcode or GTIN if the product has one.
 4. **Stock on hand and reorder lead time** per SKU.
@@ -40,13 +40,13 @@ If the wholesale price list is missing, stop and build it first; a pitch without
 1. **Wholesale gross profit.** Pass when each SKU on the line sheet shows gross profit per unit at the wholesale price, with landed cost, wholesale packaging and freight to the shop included [MEA-0037]. Fail: hand to `build-wholesale-price-list-and-terms`.
 2. **Stock for reorders.** A shop that sells through and cannot reorder is worse than no shop: an empty shelf ends the relationship [OPS-0022]. Pass when the store can fill the opening orders of all A-tier shops plus one reorder each without dropping its own site below reorder point. Fail: pitch fewer shops.
 3. **Cash.** If terms will be 30 days or more, the store waits for its money while paying the supplier. Pass when `build-13-week-cash-forecast` shows the gap is covered. Fail: start with prepaid opening orders only.
-4. **Outreach rules.** US: sales emails to businesses fall under CAN-SPAM, with no business exception, so each email needs the store's postal address and a working opt-out honoured within 10 business days [EML-6385]. India: email is fine with the same courtesy; WhatsApp only after the buyer opts in [EML-6320]. India: B2B sales across states need GST registration and a GST tax invoice the buyer can claim credit on [FIN-6205] [FIN-6380].
+4. **Outreach rules.** US: sales emails to businesses fall under CAN-SPAM, with no business exception, so each email needs the store's postal address and a working opt-out honoured within 10 business days [EML-6385]. UK: email to company addresses is allowed with a clear opt-out, but sole traders and partnerships count as consumers under PECR, so they need consent first; EU countries have similar rules, so check before sending. Everywhere: WhatsApp only after the buyer opts in [EML-6320]. Selling to shops in another state or country may need sales tax or VAT registration and an invoice the buyer can reclaim tax on; ask the store's accountant.
 
 ## Steps
 
 ### 1. Find where demand already is
 
-Group orders by city and pincode or zip. Mark the top 10 clusters by orders and by repeat buyers. Shops in these places sell to people who already know the brand, and a physical presence near buyers can lift online sales in that area too [MCR-0067]. Retail sales and online sales will mix, so tell the client to read results across channels, not the site alone [MEA-0029].
+Group orders by city and postcode or ZIP. Mark the top 10 clusters by orders and by repeat buyers. Shops in these places sell to people who already know the brand, and a physical presence near buyers can lift online sales in that area too [MCR-0067]. Retail sales and online sales will mix, so tell the client to read results across channels, not the site alone [MEA-0029].
 
 ### 2. Build the long list
 
@@ -55,7 +55,7 @@ Free sources first, in this order:
 - Stockist pages of 5 to 10 neighbour brands (similar price, same buyer, not direct rivals). Shops that stock them already sell to your buyer.
 - Map searches for the category plus each cluster city ("gift shop", "concept store", "organic store", "baby boutique").
 - Instagram location tags and shop accounts in those cities.
-- India: concept stores, gifting stores, pharmacy and wellness chains, café retail shelves, regional modern-trade chains. US: independent boutiques, gift shops, museum and hotel shops, regional chains.
+- Concept stores, gift shops, pharmacy and wellness chains, café retail shelves, independent boutiques, museum and hotel shops, and regional chains. In the UK and Europe, add delis, farm shops and garden centres for food and home goods.
 - Optional paid path: a wholesale marketplace that lists retailers and charges commission. Note its fee and treat it as a channel test, not the plan.
 
 Start with independents and small regional chains in a few cities. Big national chains need proof of sell-through first and can strain stock and cash.
@@ -111,6 +111,18 @@ After that, hand the shop to `b2b-sales-follow-up-sequence`. Stop at once on any
 
 Show the client the A-tier list, the pack and the three emails. Send nothing until they say yes. Log each shop's status in the sheet.
 
+### 9. Keep the shelf once a shop says yes
+
+Winning the first order is half the job; buyers judge on what the brand did for them lately.
+
+- **Give the buyer a real choice.** Offer two or three opening mixes the store can truly supply (for example best sellers only, best sellers plus one new line, a display pack), with the store's pick and why. Buyers who help choose the range back it.
+- **Never miss a purchase order.** For each stockist, hold safety stock above its expected reorder, and work out the cash it ties up. Hold only what the store can fund after rent, wages, supplier payments and tax; if it cannot, slow the number of new shops instead. An empty shelf hands the space to another brand [OPS-0022].
+- **Set the fill-rate target before the first order** (share of ordered units shipped complete and on time), and track it per shop.
+- **Send a monthly proof sheet** to each buyer covering the last three months: units sold through where the shop shares it, reorders, on-time fill rate, and what the store did for the shop (staff notes, display material, local ads or posts pointing to the shop). Recent results count more than old ones.
+- **Keep one price everywhere.** Keep the store's own site and marketplaces at the same suggested retail price the shop charges, so the brand never undercuts its own stockists. If a shop wants something only it has, give a colour or edition, not a lower price.
+- **Prove one shop or city first.** Use the first strong stockists' reorder and sell-through record to open the next tier.
+- **Spread the risk.** Note each shop's share of wholesale revenue; flag any single account above about a third (a starting point, set it with the owner) so no one shop can sink the channel.
+
 ## Checks before you hand it over
 
 - Every SKU on the line sheet shows wholesale price, suggested retail, shop margin and the store's gross profit per unit.
@@ -120,15 +132,18 @@ Show the client the A-tier list, the pack and the three emails. Send nothing unt
 - Every email has the postal address and opt-out line.
 - No WhatsApp message is planned to anyone who has not opted in.
 - Samples are offered, not sent unasked, and capped.
+- Each new stockist has safety stock with its cash cost, a fill-rate target set before the first order, and a monthly proof sheet.
+- The store's own site and marketplaces do not sell below the shop's suggested retail price.
 - Nothing was sent without the client's yes.
 
 ## Output
 
 1. **One-screen summary:** clusters chosen, shop count by tier, the 10 to 15 shops to pitch first, and the stock and cash check result.
-2. **Stockist target sheet** with columns: Shop, City, Pincode or zip, Buyer name, Role, Channel, Neighbour brands stocked, Score per factor, Total, Tier, Reason it fits, Status, Next step, Date.
+2. **Stockist target sheet** with columns: Shop, City, Postcode or ZIP, Buyer name, Role, Channel, Neighbour brands stocked, Score per factor, Total, Tier, Reason it fits, Status, Next step, Date.
 3. **Line sheet layout:** Photo, Product, SKU, Case pack, Wholesale price, Suggested retail, Shop margin (money and %), Opening minimum, Lead time.
 4. **Email set** for each A-tier shop: Subject, Pitch, Follow-up 1, Follow-up 2, each with send day.
 5. **Sample log:** Shop, Requested on, Sent on, Items, Cost, Feedback, Outcome.
+6. **Keep-the-shelf sheet** per live stockist: Opening mix chosen, Safety stock units, Cash tied up, Fill-rate target, Monthly proof (sell-through, reorders, fill rate, what we did), Share of wholesale revenue.
 
 ## Common mistakes
 
@@ -138,17 +153,26 @@ Show the client the A-tier list, the pack and the three emails. Send nothing unt
 - **Winning shelf space you cannot refill.** The stock gate checks one reorder per shop [OPS-0022].
 - **Chasing with "any update?"** Step 7 makes each touch add something, then hands off.
 - **Judging stockists by site sales.** Retail and online mix; read them together [MEA-0029].
+- **Going quiet after the first order.** Step 9 sends a monthly proof sheet and holds safety stock for reorders.
+- **Undercutting your own shops online.** Step 9 keeps one price everywhere.
 
 ## Sources
 
 - MEA-0037: gross margin includes every cost to deliver, including freight to the shop.
-- OPS-0022: an unfilled retailer order leaves an empty shelf and can end the account.
+- OPS-0022: an unfilled retailer order leaves an empty shelf and can end the account; it backs the safety stock rule in step 9.
 - MCR-0067: physical presence lifted nearby online sales in one case.
 - MEA-0029: media value spills into other channels; read across them.
 - OFF-0057: samples pay only when requested with some effort.
 - EML-6385: CAN-SPAM covers business email; address, opt-out, 10 business days.
 - EML-6320: WhatsApp needs opt-in; honour opt-outs.
-- FIN-6205: India GST registration and Shopify invoice gaps.
-- FIN-6380: India GST tax invoice fields and timing.
 
 What makes this skill ours: the list starts from the store's own buyer clusters and the stockists of neighbour brands, not a generic directory; every shop is scored on payment risk as well as fit; the pitch leads with what the shop earns per unit; and nobody is pitched until the store can refill a reorder.
+
+## Selling in India
+
+- B2B sales across states need GST registration and a GST tax invoice the buyer can claim credit on [FIN-6205] [FIN-6380].
+- Group buyer clusters by city and pincode.
+- Email shops with the same courtesy as elsewhere; WhatsApp only after the buyer opts in.
+- Good first stockists: concept stores, gifting stores, café retail shelves and regional modern-trade chains.
+
+Sources: FIN-6205 (India GST registration and Shopify invoice gaps); FIN-6380 (India GST tax invoice fields and timing).

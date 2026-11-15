@@ -31,7 +31,7 @@ Required (read access, level 1):
 4. **Calendar** for next month: planned sales and their depth, emails to the full list, launches, festivals and public holidays in the store's market.
 5. **Stock** on hand and arriving next month for the top products.
 
-Optional: GA4 sessions by month, return and RTO rates from `returns-and-rto-cost-analysis`, last year's same-month sale details.
+Optional: GA4 sessions by month, return and failed-delivery rates from `returns-and-rto-cost-analysis`, last year's same-month sale details.
 
 If ad spend history is missing, forecast new customers from last month's new-customer count and say so. If the store has under 6 months of orders, use the last 8 weeks only and widen the range (step 8). This skill only reads data.
 
@@ -67,7 +67,7 @@ Group past customers by the month of their first order. For each group: size x t
 - **Days and weekdays.** Count trading days and weekend days; use the store's own weekday pattern.
 - **Seasonal index.** With 12 months or more: same month last year / average month last year, applied to the base. Without it, use no index and widen the range.
 - **Sale days.** Use the lift from the last comparable sale (orders per day in the sale / orders per day in the 14 days before), not a hoped-for number. Expect a dip in the days after a deep sale.
-- **India:** Diwali, Navratri, Raksha Bandhan, end-of-season sales and salary days near the 1st move order timing; marketplace sale weeks can pull buyers away from the site.
+- **Other markets:** Boxing Day and January sales in the UK, Canada and Australia; Singles' Day in parts of Asia; Ramadan and Eid in many markets; end-of-season sales and pay days near the start or end of the month move order timing; marketplace sale weeks can pull buyers away from the site.
 - **US:** Black Friday to Cyber Monday, Memorial Day, back-to-school and Prime Day; holiday shipping cut-offs end the peak early.
 
 ### 5. Set order value
@@ -82,7 +82,7 @@ For each top product, forecast units from its share of orders. If units on hand 
 
 - Subtract planned discounts.
 - Subtract expected returns at the matured return rate. Shopify books refunds on the refund date, so last month's numbers may still be missing returns [MEA-0011].
-- For COD orders, count only orders expected to be delivered: COD orders x (1 minus RTO rate).
+- For pay-on-delivery orders, count only orders expected to be delivered: pay-on-delivery orders x (1 minus failed-delivery rate).
 - Revenue here means net sales plus shipping charged, before tax; tax collected is not revenue [MEA-0010].
 
 ### 8. Set the range
@@ -99,6 +99,16 @@ Rebuild the base from sessions x conversion rate x order value [MEA-0009]. If th
 
 If the owner has a target, show the gap and what would close it in each driver: extra spend at the rising cost per new customer, extra returning orders from an email campaign, or a sale. Do not close the gap by raising the conversion rate on hope.
 
+Every action that closes the gap must be sized from a named past event in the store's own data (last year's launch email, the spring sale). An action with no past event to size it from is marked "unsized" and left out of the total. Where the spend needed is above the highest daily spend in the history, the spend curve is being stretched past what the store has seen: mark that part "unsized, beyond past spend" and ask whether cash and creative can support it. Show what changes when each calendar event is removed, so a missing launch is not quietly assumed.
+
+### 11. Test the method and track it daily
+
+- **Beat a simple benchmark first.** Before trusting the method, run it on the last month or two it did not see (hold back about 20% of history, and at least one full month) and compare it with a seasonal naive forecast: each week equals the same week last year, scaled by the store's growth [OPS-6646, OPS-6638]. If the method does not beat that benchmark, use the benchmark and say so.
+- **Score errors the right way.** Track the average signed error to spot bias: if forecasts run 6% high on average, take 6% off the next one [OPS-6642]. Do not judge small or new product lines with percentage error, which breaks on low and zero weeks; compare against the naive forecast instead (a scaled error below 1 means you beat it) [OPS-6639].
+- **Ranges widen with time.** Within the month, give a range for each week that widens with the horizon, using the spread of past errors, plus or minus 1.28 times the error spread for an 80% range [OPS-6645].
+- **Daily check.** Each day, compare actual net revenue with the forecast to date and flag a gap of more than the week's range by day 5, not day 22. One owner runs the daily check; another owns the big moves ahead (launches, sales).
+- **Limits.** The spend curve needs about 12 months of daily data; on a newer account, skip it and use cost per new customer with the wider range in step 8. Widen ranges for new products.
+
 ## Checks before you hand it over
 
 - New and returning orders are forecast separately.
@@ -106,22 +116,29 @@ If the owner has a target, show the gap and what would close it in each driver: 
 - Returning orders come from past customer groups, not a flat growth rate.
 - Sale days use a past sale's measured lift.
 - Stock caps are applied and marked.
-- Revenue is after discounts, returns and RTO, and excludes tax.
+- Revenue is after discounts, returns and failed deliveries, and excludes sales tax or VAT.
 - The sessions-based cross-check is within 15% or the gap is explained.
 - Every input appears in the input table with its source.
+- Every action in the gap plan is sized from a named past event, or marked "unsized" and left out.
+- The method was tested on held-back months against a seasonal naive benchmark, and its bias is shown.
+- A daily check with an owner and a day-5 flag is set.
 
 ## Output
 
 **One-screen summary:** base orders and net revenue for the month with the low and high range; split new and returning; the three inputs the forecast is most sensitive to; gap to target and the cheapest way to close it; a reminder that spending against it needs gross profit per order; and up to three assumption lines where an unknown input moves the forecast.
 
-**Input table:** Input, Value, Source, Date pulled. Rows: planned spend by channel, cost per new customer (base, low, high), organic new customers per day, returning orders by group, new order value, returning order value, discount rate, return rate, COD share, RTO rate, seasonal index, sale days and lift, stock caps.
+**Input table:** Input, Value, Source, Date pulled. Rows: planned spend by channel, cost per new customer (base, low, high), organic new customers per day, returning orders by group, new order value, returning order value, discount rate, return rate, pay-on-delivery share, failed-delivery rate, seasonal index, sale days and lift, stock caps.
 
 **Forecast by week:**
 
-| Week | Trading days | Sale days | New customers | Returning orders | Total orders | Gross sales | Discounts | Returns | RTO | Net revenue base | Low | High | Stock capped |
+| Week | Trading days | Sale days | New customers | Returning orders | Total orders | Gross sales | Discounts | Returns | Failed deliveries | Net revenue base | Low | High | Stock capped |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 **Returning orders by group:** First-order month, Group size, Repeat share at next month's age, Returning order value, Expected orders, Expected revenue.
+
+**Gap plan:** Action, Past event it is sized from, Revenue added, Cost, Sized or unsized.
+
+**Forecast test and tracking:** Held-back period, Method error, Naive benchmark error, Bias, Daily actual versus forecast to date, Flag.
 
 ## Common mistakes
 
@@ -131,6 +148,8 @@ If the owner has a target, show the gap and what would close it in each driver: 
 - **Counting tax as revenue.** Step 7 excludes it [MEA-0010].
 - **A single number.** Step 8 always gives a range.
 - **Forecasting sales the stock cannot cover.** Step 6 caps them.
+- **Closing the gap with actions nobody can size.** Step 10 sizes each from a past event or leaves it out.
+- **Trusting a method nobody tested.** Step 11 checks it against a seasonal naive forecast first.
 
 ## Sources
 
@@ -142,5 +161,16 @@ If the owner has a target, show the gap and what would close it in each driver: 
 - MEA-0011: refunds are booked on the refund date.
 - MEA-0010: net sales plus shipping is revenue collected; total sales includes tax.
 - MEA-0009: revenue equals sessions times conversion rate times order value.
+- OPS-6646, OPS-6638: beat a seasonal naive forecast on held-back data.
+- OPS-6642: bias as the average signed error.
+- OPS-6639: percentage error misleads on low-volume lines.
+- OPS-6645: ranges that widen with the horizon.
+- Library item: Store revenue forecast builder (AI Blocks skill), used for the sized-action rule, the beyond-past-spend flag, the calendar removal test and the daily check.
+- Web source: Hyndman and Athanasopoulos, "Forecasting: Principles and Practice" (3rd ed), chapter 5 (https://otexts.com/fpp3/accuracy.html).
 
-What makes this skill ours: new and returning revenue are forecast from different drivers; cost per new customer rises with planned spend and is floored by cost per click; COD revenue is counted only if delivered; and every forecast comes with a range and a stock cap, not one hopeful number.
+What makes this skill ours: new and returning revenue are forecast from different drivers; cost per new customer rises with planned spend and is floored by cost per click; pay-on-delivery revenue is counted only if delivered; and every forecast comes with a range and a stock cap, not one hopeful number.
+
+## Selling in India
+
+- Diwali, Navratri, Raksha Bandhan, end-of-season sales and salary days near the 1st move order timing; marketplace sale weeks can pull buyers away from the site.
+- Count COD orders only if expected to be delivered: COD orders x (1 minus RTO rate). Take the RTO rate from `returns-and-rto-cost-analysis`.

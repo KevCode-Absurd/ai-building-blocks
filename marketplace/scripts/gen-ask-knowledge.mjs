@@ -21,9 +21,10 @@ const HEADER = `#!/usr/bin/env node
 //   node tools/ask-knowledge.mjs "free shipping threshold for bundles" --module OFF,MEA
 //
 // Several quoted phrasings of one need are searched together and their rankings merged (ask it two or three ways
-// when the first words may not be the pack's words). It prints the best passages, best first, each with its file and
-// lines, its heading trail and the sources it cites (with the date each was checked, and STALE when a source is past
-// twice its review window). When the best passage covers too little of the question, it says the pack does not know:
+// when the first words may not be the pack's words). It prints the best passages, best first, each with an id to note
+// (a library card's own id and tier: each card comes back whole, with its source line), its file and lines, its
+// heading trail and the sources it cites (with the date each was checked, and STALE when a source is past twice its
+// review window). A passage that repeats one already shown is left out. When the best passage covers too little of the question, it says the pack does not know:
 // then ask the client or research it, and never fill the gap from memory.
 //
 // Generated from the AI Blocks marketplace (src/modules/packs/retrieve.ts by scripts/gen-ask-knowledge.mjs).
@@ -70,10 +71,12 @@ async function main(argv) {
   const today = new Date().toISOString().slice(0, 10);
   const modules = args.modules.map(m => m.trim()).filter(Boolean);
   if (modules.length && !modulePaths(files.map(f => f.path), modules).length) console.error("No knowledge file for module " + modules.join(", ") + " in this pack, so the whole pack is searched.");
-  const answer = index.ask(args.q, { k: args.k, today, paths: args.in, modules });
+  const answer = index.ask(args.q, { k: args.k, today, paths: args.in, modules, distinct: true });
   let name = "this agent";
   try { name = JSON.parse(fs.readFileSync(path.join(pack, "pack.json"), "utf8")).name || name; } catch {}
   console.log(args.json ? JSON.stringify(answer, null, 2) : answerText(answer, name));
+  // One line in context/job-log.jsonl (hashes only), when the job folder exists; it never stops the tool.
+  try { const { logEvent } = await import("./log-event.mjs"); logEvent({ tool: "ask-knowledge", cmd: "ask", args: argv, inputs: [], result: "PASS", counts: { passages: answer.passages.length, enough: answer.enough ? 1 : 0 } }); } catch {}
   return 0;
 }
 

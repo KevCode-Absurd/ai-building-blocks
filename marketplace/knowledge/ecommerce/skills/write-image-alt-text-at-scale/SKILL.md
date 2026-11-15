@@ -93,8 +93,8 @@ File names give Google only light clues [SEO-6463], and renaming existing Shopif
 
 ### 7. Translations
 
-- **India:** English alt text is the base. For Hindi or regional-language markets, translate alt text with the page using Shopify's translation tools, and have a native speaker review a sample; colour names must match the translated variant names.
-- **US and other markets:** translate for each language market; never leave English alt text on a Spanish page.
+- **Base language:** alt text is written first in the store's main language. For each other language your buyers use, translate alt text with the page using Shopify's translation tools, and have a native speaker review a sample; colour names must match the translated variant names.
+- **Every language market:** translate for each one; never leave English alt text on a Spanish, French or German page.
 
 ### 8. Import and confirm
 

@@ -43,6 +43,7 @@ Access: read only. Generating spends credits: the client approves the cap first.
 3. **Likeness consent.** No photo of a stranger, influencer or customer as a person reference. A real person only with signed consent; otherwise a fictional character created once. Fail: no person in the ad.
 4. **Honest role.** An AI person is a presenter or character, labelled, and never claims to have used the product or speaks as a customer [MCR-6045].
 5. **Disclosure.** Realistic generated people and scenes need the platform's AI disclosure [MCR-6064]; Meta may label the ad when it detects AI signals or the uploader discloses [MCR-6063].
+6. **What AI is for in this ad.** Use AI video to dramatise the problem, the story or a scene that is costly to film; never to fake a product demonstration or a customer testimonial, because viewers who spot a fake demo turn on the brand [MCR-6809]. Practitioners still use generation for parts of an ad, such as a person holding the product, because whole AI ads still come out with typos and drifting products [MCR-6732]. Fail: film that part for real.
 
 ## Steps
 
@@ -54,10 +55,23 @@ Each card is a short paragraph pasted word for word into every prompt that needs
 - **Person card:** age range, build, skin tone, hair, face shape, one or two marks of identity, outfit per scene. Use the approved reference image in every clip that shows them.
 - **Style card:** camera feel (phone handheld or steady tripod), lens look (wide or normal), light source and direction, time of day, colour feel, texture (clean or slightly grainy), and what to avoid (glossy plastic skin, cinematic grading when the ad should feel real).
 - **Voice card,** if anyone speaks: from `voiceover-script-and-voice-pick`.
+- **Set card,** when the ad returns to the same place: the room's layout, where the light comes from, the permanent props and where they sit, so a kitchen does not rearrange itself between clips. Props come only from the product photos, the script or the org context; mark any other prop "inferred".
+
+Work in this order and stop for the owner's yes at each gate: facts and claims (gate 1: the owner confirms the claims and the style) > story beats > the cards (gate 2: the owner approves how each person, place and product looks) > scene table and stills (gate 3) > motion prompts > edit and sound handoff (gate 4: the owner checks the plan against the facts). Do not move past a gate without the yes. If the owner asks for everything at once, write it all, mark each gate "(approve)" and ask for each yes at the end.
 
 ### 2. Build the scene table
 
 Split the script into clips, each with one action. Clip length follows the tool's limit and the action; 3 to 8 seconds is a practical range (practitioner default). For each clip write: scene number, shot size, camera move (one), the action, any spoken line (short), product state (closed, open, in hand), and continuity notes: what must match the clip before (in) and the clip after (out). The first clip's first frame shows the topic, not scenery [ORG-0017].
+
+Add three more fields per clip:
+
+- **What the viewer learns at this cut,** in one line. If two clips teach the same thing, merge them; if a clip teaches nothing, cut it.
+- **Sound:** the exact spoken line word for word or "no dialogue", then `SFX:` the action's own sound and `Ambient:` the room. Lip-sync is easiest on short lines and held notes.
+- **Safe area:** nothing that matters in the top seventh or the bottom third of a 9:16 frame, where the app's names and buttons sit.
+
+In the edited ad, the picture changes about every 1.5 to 3 seconds; one unbroken talking head with no cutaways loses people even on a winning script [MCR-6800]. Plan inserts and cutaways (the label, hands, the material) to make that pace possible.
+
+**Product-only rapid-cut spots** (a 5 to 20 second hero piece with no person) follow a beat count rule: spot length divided by 1.5 seconds, rounded down, with no beat under 1 second. A 15-second spot gets about ten beats; a 10-second spot six or seven; a 5-second spot three or four. A useful order: raw material close-up, material pouring or tumbling, pieces in the air, the pack reveal, label or material detail, a badge only if the claim is approved, a sweeping move round the pack, and a final hero hold of at least 1.5 seconds with the front readable. If 1.5-second beats read too fast on a phone, merge them and say so. The pack's shape, label, logo and material stay fixed even when the world around it turns surreal, and no beat shows an effect the product does not really have.
 
 ### 3. Make first frames as stills
 
@@ -66,6 +80,8 @@ For each clip, generate a still first frame from the cards and references. Revie
 ### 4. Write motion prompts from approved stills
 
 Each motion prompt: "Animate from the approved first frame." Then camera move, the single action, what stays still, light unchanged, length, end state, and the keep-out list (no new text, no new objects, no change to the product or face). Paste the product and person cards in full.
+
+Prompt wording rules: write "real speed" once near the top unless the script truly asks for a speed effect; never write slow motion, time-lapse, sped up, frozen or a frame rate by accident, because generators drift toward slowed, showy footage that jars at the cut. Use plain physical verbs (pour, settle, roll, peel, click, slide, land) rather than explode, shatter or burst. Describe weight in a material line where it matters ("thick cream folds like a ribbon and takes its time"). State any count that matters ("three jars").
 
 ### 5. Chain where action continues
 
@@ -87,7 +103,7 @@ Line up all approved clips in order and check: same face, hair and outfit per sc
 
 Edit in any editor. Add captions and text (`captions-and-text-for-sound-off`), sound (`music-and-sound-for-ads`), and an on-screen line such as "AI-generated presenter" where a realistic person appears. Turn on each platform's AI disclosure setting where it exists.
 
-India and US notes: in India, set scenes in homes, streets and clothing the buyer recognises; generic Western settings read as foreign stock. Prices, MRP and offers are added as real text from the live page, never generated. In the US, an AI person must not appear to give a testimonial or results [MCR-6045].
+Market notes: set scenes in homes, streets and clothing the buyer recognises in each market you sell to; a setting from another country reads as foreign stock. Prices, list prices and offers are added as real text from the live page, never generated. In the US, an AI person must not appear to give a testimonial or results [MCR-6045]; the UK and EU take the same line on misleading testimonials.
 
 ## Checks before you hand it over
 
@@ -99,6 +115,8 @@ India and US notes: in India, set scenes in homes, streets and clothing the buye
 - Every clip passed the product accuracy check.
 - Spend is within the approved cap, logged per clip.
 - Continuity review passed across the full sequence.
+- No clip fakes a product demonstration or a customer result; AI is used for scenes and story only.
+- Each gate had the owner's yes before the next stage, and every clip names what the viewer learns at the cut.
 
 ## Output
 
@@ -130,6 +148,9 @@ India and US notes: in India, set scenes in homes, streets and clothing the buye
 - MCR-6045: no testimonials by people who do not exist.
 - MCR-6063: Meta's AI info label and self-disclosure.
 - MCR-6064: which synthetic content needs disclosure.
+- MCR-6732: use AI for parts of an ad; whole AI ads still drift.
+- MCR-6800: a new clip every 1.5 to 2 seconds.
+- MCR-6809: AI dramatises the problem; it never fakes a demo or testimonial.
 - MEA-0037: gross margin uses delivered cost.
 - ORG-0017: first frame shows the topic.
 

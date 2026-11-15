@@ -97,10 +97,10 @@ Write a timed plan: setup, product order, model hours, lunch, reshoot buffer (pr
 - File name: `<sku>_<slot>_<ratio>_<shot#>.jpg`.
 - Selects within 3 days, retouched finals per `product-photo-retouch-and-consistency`.
 
-### India and US notes
+### Market notes
 
-- **India:** if the store sells on Amazon.in, Flipkart or Myntra, check each marketplace's main image rules too (most want a white background); shoot those frames on the day. Festive lifestyle frames (Diwali, weddings) need props and wardrobe that are right for the region shown.
-- **US:** Amazon US main images need a pure white background; plan that frame per product if Amazon is used.
+- **Marketplaces:** if the store sells on Amazon, Walmart, Etsy, eBay, Zalando or another marketplace, check each one's main image rules (most want a white background; Amazon main images need a pure white background); plan and shoot those frames per product on the day.
+- **Seasonal frames:** lifestyle frames for the store's peak seasons (Christmas, Black Friday gifting, Lunar New Year, weddings, local festivals) need props and wardrobe that are right for the market and region shown.
 
 ## Checks before you hand it over
 
@@ -151,3 +151,8 @@ Write a timed plan: setup, product order, model hours, lunch, reshoot buffer (pr
 - SPD-0008: export about 2,000 px and compress.
 
 What makes this skill ours: frames are spent by gross profit rank, not evenly; every shot is tied to a named channel slot and the buyer doubt it answers; vertical frames are composed for Meta's current safe bands on the day; and casting comes from the store's own buyers, with the usage licence a hard stop.
+
+## Selling in India
+
+- If the store sells on Amazon.in, Flipkart or Myntra, check each marketplace's main image rules and shoot those frames on the day.
+- Festive frames (Diwali, weddings) need props and wardrobe right for the region shown.

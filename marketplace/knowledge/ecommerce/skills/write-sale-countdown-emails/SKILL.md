@@ -1,6 +1,6 @@
 ---
 name: write-sale-countdown-emails
-description: "The emails for one big sale written in full, from early access to the final hours: announcement, early access for VIPs and subscribers, sale open, best sellers and proof, what is left, final day and final hours, each with subject lines, preview, body, terms block, send time, segment and stop rules. Urgency is honest: every deadline, countdown timer, stock count and 'was' price is checked as true, nothing resets, and a sale called final is not extended. Starts from break-even at the sale's discount depth and protects subscribers and full-price buyers. Use for Black Friday and Cyber Monday, Diwali, end-of-season or a brand's own sale days."
+description: "The emails for one big sale written in full, from early access to the final hours: announcement, early access for VIPs and subscribers, sale open, best sellers and proof, what is left, final day and final hours, each with subject lines, preview, body, terms block, send time, segment and stop rules. Urgency is honest: every deadline, countdown timer, stock count and 'was' price is checked as true, nothing resets, and a sale called final is not extended. Starts from break-even at the sale's discount depth and protects subscribers and full-price buyers. Use for Black Friday and Cyber Monday, Boxing Day, Singles' Day, local festival sales, end-of-season or a brand's own sale days."
 ---
 
 # Sale countdown emails
@@ -9,7 +9,7 @@ description: "The emails for one big sale written in full, from early access to 
 
 ## When to use
 
-- A multi-day sale is set: Black Friday and Cyber Monday, Diwali, an end-of-season sale or the brand's own sale days.
+- A multi-day sale is set: Black Friday and Cyber Monday, Boxing Day, a local festival sale, an end-of-season sale or the brand's own sale days.
 - Past sale emails used "last chance" three days running, or timers that restarted.
 - The sale has early access for VIPs or subscribers and the emails need to respect it.
 - Sale terms changed between the email, the banner and the checkout last year.
@@ -41,7 +41,7 @@ Drafts need draft access (level 2). Each send needs the client's yes; a pre-appr
 1. **Break-even.** Discounts eat margin, so the return on ad spend needed rises steeply with depth [OFF-0069]; a 30% cut can triple it [OFF-0065]. Pass when every featured group stays above zero gross profit per order. Fail: drop or cap that group.
 2. **Stock.** Featured items cover expected units, or the email names fewer items.
 3. **Reference prices.** "Was" prices only where genuinely charged recently [OFF-6145].
-4. **Honest urgency.** One fixed end, written down, that the store will keep. Indian advertising rules name false urgency as misleading [ADC-6147].
+4. **Honest urgency.** One fixed end, written down, that the store will keep. Advertising rules in the US, UK, EU and other markets name false urgency as misleading [ADC-6147].
 5. **Subscribers.** Active subscribers get a subscriber-only offer at least as good, or are excluded, so they do not cancel to buy the public deal [OFF-0043].
 
 ## Steps
@@ -94,7 +94,8 @@ Before each send, check: spam complaints from the last send (Gmail asks bulk sen
 
 ### 7. Market notes
 
-- **India:** state COD availability and courier cut-offs for delivery before the festival; WhatsApp marketing templates and DLT SMS templates are submitted days ahead with the exact sale wording; prices shown as on site. Customers won on deep discounts had worse lifetime value at many brands [CXP-0016], so do not add extra discount emails to chase volume past break-even.
+- **UK and EU:** prices include VAT; in the EU a "was" price must be the lowest price of the last 30 days; emails go only to subscribers who gave consent or past buyers under the UK soft opt-in.
+- **Any market:** state payment options and courier cut-offs for delivery before the holiday or festival; WhatsApp marketing templates and any registered SMS templates are submitted days ahead with the exact sale wording; prices shown as on site. Customers won on deep discounts had worse lifetime value at many brands [CXP-0016], so do not add extra discount emails to chase volume past break-even.
 - **US:** postal address, ad identification and unsubscribe in every email; subjects match content [EML-6341]. Customers acquired in November showed less repeat lift than February customers in one sample [MEA-0035], so sale emails favour existing customers and engaged subscribers rather than buying volume at any cost.
 
 ## Checks before you hand it over
@@ -153,3 +154,7 @@ Sources: [stock report time / review id / price history]
 - OFF-6145: genuine former prices (proposed).
 
 What makes this skill ours: urgency is real by rule (one written end, timers that never reset, no extension of a final sale); one terms block locks every number; every send has a daily stop check on spam, unsubscribes, stock and terms; and the sale is held to break-even at each discount depth while subscribers and VIPs are protected.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. For Diwali and festival sales, state COD availability and courier cut-offs for delivery before the festival. WhatsApp marketing templates and DLT SMS templates are submitted days ahead with the exact sale wording. Indian advertising rules name false urgency as misleading [ADC-6147].

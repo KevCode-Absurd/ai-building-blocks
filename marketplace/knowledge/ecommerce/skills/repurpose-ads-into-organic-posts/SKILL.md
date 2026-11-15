@@ -41,7 +41,7 @@ If the rights record is missing for an asset, it is blocked until the client con
 2. **Organic rights.** A creator's grant for paid ads may not cover posting on the brand's own feed, and the reverse. Pass only when organic use is covered in writing. Fail: ask through `influencer-contract-and-usage-rights` or use only brand-made footage.
 3. **Claims.** Ad copy went through review for ads; organic captions need the same truth. Fail: remove any claim without a source.
 4. **Offer.** Any price or offer in the ad must still be live. Fail: cut it from the organic version.
-5. **Disclosure.** Creator content with a paid or gifted relationship keeps a clear label in the organic post too [ORG-6405], and an ASCI label in India [ORG-6406].
+5. **Disclosure.** Creator content with a paid or gifted relationship keeps a clear label in the organic post too [ORG-6405], using the label each market expects (for example "ad" in the UK).
 
 ## Steps
 
@@ -76,7 +76,7 @@ Re-post a proven story more than once in new formats: a new hook, voiceover or t
 
 ### 5. Write give-first captions
 
-First line restates the hook for readers. Then 2 to 4 short lines that teach, show or tell the story. No price unless it is a selling story. Disclosure goes first when a creator was paid or gifted. In India, match the comment language of the audience (English, Hinglish or a regional language) and keep any rupee price exact.
+First line restates the hook for readers. Then 2 to 4 short lines that teach, show or tell the story. No price unless it is a selling story. Disclosure goes first when a creator was paid or gifted. Match the comment language of the audience (the languages your buyers use) and keep any price exact in the store's currency.
 
 ### 6. Slot into the calendar
 
@@ -90,11 +90,11 @@ At 7 days, record views, non-follower share, shares, saves, story replies and li
 
 One row per winner: ad name, posts made, results, rights status, sent back to ads (yes or no). After 4 weeks, note which angles win in both paid and organic; those are the brand's strongest messages.
 
-### 9. AI and US or India notes
+### 9. AI and market notes
 
 - If any visual is AI-made or AI-edited, follow Meta's AI labelling and never present an AI person as a real customer [MCR-6063].
-- **US:** a gifted creator's clip in an organic post keeps an "ad" or "sponsored" label in the video itself, not only in the caption [ORG-6405].
-- **India:** ad copy in Indian languages may have been written for paid placements with tight claims; re-check it before organic use.
+- **US, UK, EU and beyond:** a gifted creator's clip in an organic post keeps an "ad" or "sponsored" label in the video itself, not only in the caption [ORG-6405].
+- **Every market:** ad copy in other languages may have been written for paid placements with tight claims; re-check it before organic use.
 
 ## Checks before you hand it over
 
@@ -135,6 +135,9 @@ One row per winner: ad name, posts made, results, rights status, sent back to ad
 - ORG-0026: re-post a proven story in new formats.
 - ORG-0035: an organic post at about 5x usual views belongs in ads.
 - ORG-6405: FTC disclosure in the video itself.
-- ORG-6406: ASCI labels for India.
 
 What makes this skill ours: winners are picked by profit against gross profit per order, not ROAS; organic rights are checked asset by asset before anything is reposted; each winner becomes three native formats with different goals; and the routine runs both ways, sending organic winners back to ads.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Paid or gifted creator content keeps an ASCI label in the organic post too [ORG-6406: ASCI labels]. Match the comment language of the audience (English, Hinglish or a regional language) and keep any rupee price exact.

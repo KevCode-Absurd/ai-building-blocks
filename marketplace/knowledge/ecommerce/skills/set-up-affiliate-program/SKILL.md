@@ -1,6 +1,6 @@
 ---
 name: set-up-affiliate-program
-description: "An affiliate program ready to switch on: commission rate worked back from gross profit per order, cookie window and holding period matched to the buying cycle and return window, approval and removal rules, banned traffic sources (brand-term bidding, coupon sites), a disclosure rule, payout and tax steps, and a creative pack affiliates can post from. Covers Shopify Collabs, other affiliate apps and a free manual setup with codes and UTM links. Use when launching affiliates, when an existing program pays commission on sales the store would have got anyway, or when the owner asks what commission to offer."
+description: "An affiliate program ready to switch on: commission rate worked back from gross profit per order, cookie window and holding period matched to the buying cycle and return window, approval and removal rules, banned traffic sources (brand-term bidding, coupon sites), a disclosure rule for each market the store sells in, payout and tax steps, and a creative pack affiliates can post from. Covers Shopify Collabs, other affiliate apps and a free manual setup with codes and UTM links. Use when launching affiliates, when an existing program pays commission on sales the store would have got anyway, or when the owner asks what commission to offer."
 ---
 
 # Affiliate program setup
@@ -25,7 +25,7 @@ description: "An affiliate program ready to switch on: commission rate worked ba
 
 Required:
 
-1. **Gross profit per order** by product, after product, shipping, payment fees, returns and RTO, from `build-sku-profit-sheet`.
+1. **Gross profit per order** by product, after product, shipping, payment fees, returns and failed deliveries, from `build-sku-profit-sheet`.
 2. **Shopify order export** for 6 to 12 months: Created at, Total, Discount Code, Lineitem sku, Refunded Amount, Customer Email (to find days between first visit and purchase where available, and return timing).
 3. **Return window** and average days from order to refund.
 4. **Time-bound customer value**: 90-day or 180-day gross profit per new customer, from `cohort-repeat-and-ltv-analysis`, if repeat purchase matters.
@@ -83,8 +83,11 @@ Removal: first breach, warning and fix within 48 hours; second, removal and unpa
 
 ### 6. Disclosure rule
 
-- **US:** "I earn a commission if you buy through my link" or "Ad" in the post itself, not only in a bio or behind "more" [ORG-6405].
-- **India:** an ASCI label such as "Ad" or "Partnership" upfront [ORG-6406].
+Follow your market's ad disclosure rules. The common core everywhere: a clear label in the post itself, upfront, not only in a bio or behind "more".
+
+- **US:** "I earn a commission if you buy through my link" or "Ad" in the post itself, under the FTC endorsement guides [ORG-6405].
+- **UK:** "Ad" or "#ad" at the start, under the ASA and CAP code; "affiliate" alone is not enough.
+- **EU, Canada, Australia and others:** the EU consumer rules, Ad Standards in Canada and Australia, and similar codes elsewhere ask for a plain label such as "Ad", "Advertising" or "Partnership" upfront, in the language your buyers use [ORG-6406].
 
 Put the exact lines in the creative pack.
 
@@ -95,19 +98,20 @@ Put the exact lines in the creative pack.
 ### 8. Choose the setup route
 
 - **Shopify Collabs:** native app; links and codes, automatic payouts with the fee above.
-- **Other affiliate apps:** compare monthly fee, payout methods for India and the US, and fraud checks.
+- **Other affiliate apps:** compare monthly fee, payout methods for every country your affiliates live in (bank transfer, PayPal, local methods), currency support, tax form collection and fraud checks.
 - **Free manual route:** a Shopify discount code per affiliate plus a UTM link (from `set-up-utm-tracking-for-all-channels`), a monthly order export filtered by code, and payouts by bank transfer after the holding period. Fine up to about 20 affiliates.
 
 ### 9. Payouts and tax
 
-- **US:** collect a W-9; the store may need to issue Form 1099. On Collabs, a missing requested W-9 caps payouts at 599.99 dollars a year [ORG-6422].
-- **India:** pay by bank transfer or UPI to the affiliate's own account; ask the accountant about TDS on commission and GST invoices for registered affiliates. Count commission only on delivered, paid COD orders, never on orders that return to origin.
+- **US:** collect a W-9; the store may need to issue Form 1099. On Collabs, a missing requested W-9 caps payouts at 599.99 dollars a year [ORG-6422]. Affiliates outside the US give a W-8BEN instead.
+- **UK, EU and elsewhere:** pay to the affiliate's own account in their currency; affiliates registered for VAT may need to invoice the store with VAT, and some countries ask the store to withhold tax on commission. Ask the accountant once per country.
+- **All markets:** count commission only on delivered, paid orders, never on orders that are refused, fail delivery or are refunded inside the holding period. Where the store offers pay on delivery, that means after the cash is collected.
 
 ## Checks before you hand it over
 
 - The commission rate is below the ceiling for every product group, with the tool fee included.
 - The holding period is at least the return window plus return transit.
-- COD orders earn commission only once delivered and paid.
+- Orders earn commission only once delivered and paid (pay-on-delivery orders after the cash is collected).
 - Brand bidding and coupon-site posting are banned in the terms.
 - Disclosure lines exist for each market in the creative pack.
 - Every asset in the pack has reuse rights and only approved claims.
@@ -129,7 +133,7 @@ Put the exact lines in the creative pack.
 
 - **Copying a rate from another brand.** Step 1 sets the ceiling from the store's own profit.
 - **Paying before returns land.** Step 3 holds commission past the return window.
-- **Paying on COD orders that never arrive.** Step 9 pays only on delivered, paid orders.
+- **Paying on orders that never arrive or never get paid.** Step 9 pays only on delivered, paid orders.
 - **Coupon sites stealing credit.** Step 5 bans them; code sales are watched monthly.
 - **Brand bidding by affiliates.** Gate 3 and step 5 stop it.
 - **No disclosure line.** Step 6 gives affiliates the exact words.
@@ -144,7 +148,11 @@ Put the exact lines in the creative pack.
 - CXP-0016: deep-discount buyers often repeat less.
 - MCR-6045: fake reviews and testimonials are banned in the US.
 - ORG-6405: FTC disclosure in the post itself.
-- ORG-6406: ASCI labels for India.
+- ORG-6406: upfront ad labels such as "Ad" or "Partnership" (one national ad code, used here as the common standard).
 - AEO-0029: third-party roundups drive answer-engine recommendations.
 
-What makes this skill ours: the commission is a ceiling worked back from each product group's own gross profit, not an industry rate; commission is held past the return window and paid on COD orders only after delivery; brand bidding and coupon-site leaks are banned in the terms from day one; and a free manual route works for small programs without a paid app.
+What makes this skill ours: the commission is a ceiling worked back from each product group's own gross profit, not an industry rate; commission is held past the return window and paid only on orders that were delivered and paid; brand bidding and coupon-site leaks are banned in the terms from day one; and a free manual route works for small programs without a paid app.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Disclosure in India follows the ASCI code: a label such as "Ad" or "Partnership" upfront [ORG-6406]. Pay by bank transfer or UPI to the affiliate's own account, and ask the accountant about TDS on commission and GST invoices for registered affiliates. Count commission only on delivered, paid COD orders, never on orders that return to origin (RTO).

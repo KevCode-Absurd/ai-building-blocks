@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "break-even-roas-and-cpa-calculator",
+    "name": "Break-even ROAS and CPA calculator",
+    "why": "Works out the most you can pay per sale from price and margin, the number every Snapchat test is judged against."
+  },
+  {
+    "slug": "platform-roas-reality-check",
+    "name": "Platform ROAS reality check",
+    "why": "Compares Snapchat's reported return, on its 28-day window, with your shop totals before you scale."
+  },
+  {
+    "slug": "conversion-tracking-fixer",
+    "name": "Conversion tracking fixer",
+    "why": "Plans the repair when sales from ads are missing or doubled, to pair with the kit's Pixel and Conversions API check."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check that catches broken Pixel or server events and double counts after a site or checkout change."
+  },
+  {
+    "slug": "monthly-catalogue-clean-up-keeper",
+    "name": "Monthly catalogue clean-up keeper",
+    "why": "Finds product data gaps each month so Dynamic Ads keep running on a clean catalog."
+  },
+  {
+    "slug": "shopping-feed-title-writer",
+    "name": "Shopping feed title writer",
+    "why": "Rewrites product titles in the feed so Dynamic Ads show clear, specific names."
+  },
+  {
+    "slug": "ad-test-budget-calculator",
+    "name": "Ad test budget calculator",
+    "why": "Sets daily spend and how much to spend before judging a creative test, allowing for late conversions."
+  },
+  {
+    "slug": "creative-test-reader",
+    "name": "Creative test reader",
+    "why": "Reads test results by ad and flags false winners before budget moves."
+  },
+  {
+    "slug": "ad-fatigue-watcher",
+    "name": "Ad fatigue watcher",
+    "why": "Catches tired ads early so fresh concepts are briefed in time."
+  },
+  {
+    "slug": "short-video-hook-writer",
+    "name": "Short video hook writer",
+    "why": "Opening lines for full-screen vertical video, where the first two seconds decide the swipe."
+  },
+  {
+    "slug": "five-part-creator-ad-script-writer",
+    "name": "Five-part creator ad script writer",
+    "why": "Turns a creator brief into a timed script from hook to call to action."
+  },
+  {
+    "slug": "creator-pay-planner",
+    "name": "Creator pay planner",
+    "why": "Works out a fair fee for a creator post, for the client to approve and pay."
+  },
+  {
+    "slug": "retargeting-ad-sequence-planner",
+    "name": "Retargeting ad sequence planner",
+    "why": "Plans what viewers and cart adders see next, to sit alongside Dynamic Ads."
+  },
+  {
+    "slug": "india-data-privacy-checker",
+    "name": "India data privacy checker",
+    "why": "Checks consent and data handling against India's rules before a customer list or server events go to Snap."
+  }
+]

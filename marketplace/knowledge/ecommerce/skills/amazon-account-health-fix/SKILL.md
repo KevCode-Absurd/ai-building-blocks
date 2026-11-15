@@ -61,7 +61,7 @@ Reading is level 1. Changing shipping settings or listings is level 2. A plan of
 5. **Policy and product issues.** For each notice, name the policy in Amazon's words and the exact ASIN.
    - **Listing policy or restricted product:** fix or remove the claim or listing; attach the corrected text.
    - **Authenticity:** gather supplier invoices that cover the units sold in the period Amazon names, with supplier contact details. A supplier who will not confirm is a supplier to drop.
-   - **Safety:** test reports and certificates for the product. For India, the Legal Metrology declarations on the pack [COG-6264] and the BIS licence if a Quality Control Order applies [COG-6266].
+   - **Safety:** test reports and certificates for the product. Include the marks and labels each marketplace country requires, such as CPSC certificates in the US, UKCA or CE marking in the UK and EU, and your market's pack labelling rules.
    - **IP complaint:** if the brand did infringe (used a rival's mark, image or design), remove it and ask the rights owner to withdraw the complaint. If the complaint is wrong (the brand owns the mark or bought genuine stock), send the rights owner the evidence and ask for withdrawal; reply in Amazon's form with the facts. Never make a counter-complaint without basis.
    - **Review abuse:** stop every banned practice: incentives, packaging requests, asking reviewers to change reviews, outside messaging [AMZ-6448]. In the US, fake and insider reviews are also banned by federal rule [MCR-6045]. Say plainly what was done and what stopped, with dates.
 6. **Write the plan of action** in three parts, short and factual:
@@ -72,7 +72,7 @@ Reading is level 1. Changing shipping settings or listings is level 2. A plan of
 7. **Attach evidence.** Only documents that prove a line in the plan, named clearly (`invoice-supplier-2026-09.pdf`). Remove prices from invoices only where Amazon's instructions allow; otherwise send as issued.
 8. **Get the client's yes, then submit.** Show the plan beside the notice. Submit through the Account Health page or the notice's appeal link. Log the date and case ID.
 9. **Follow up.** Watch the dashboard and email daily until resolved. If Amazon asks for more, answer only what it asks. If refused twice the same way, change the approach (new evidence or a clearer root cause) rather than resending.
-10. **India notes (Amazon.in).** The same metrics apply to self-shipped orders. Cash-on-delivery refusals are a delivery issue; keep promised dates honest by pincode. GST invoices must match the seller's GSTIN; a mismatch can block payouts.
+10. **Other marketplaces.** The same metrics apply to self-shipped orders in every Amazon country. Refused or failed deliveries are a delivery issue; keep promised dates honest by postcode or zone. In VAT countries (UK, EU), VAT invoices must match the seller's VAT registration; a mismatch can block payouts.
 11. **US notes.** State consumer and product safety rules can apply to recalled or restricted products; a lawyer advises on recall duty.
 12. **Set the monthly check.** First Monday of each month: dashboard, each metric against its line, open notices, Voice of the Customer complaints.
 
@@ -119,6 +119,12 @@ Reading is level 1. Changing shipping settings or listings is level 2. A plan of
 - AMZ-6448: banned review practices.
 - MCR-6045: US ban on fake and insider reviews.
 - CXP-6160 and CXP-6160: US mail order rule on shipping promises and delays.
-- COG-6264 and COG-6266: India pack declarations and BIS marks.
 
 What makes this skill ours: every metric is traced to the actual orders behind it before any words are written; the plan of action reports changes already made, with dates and numbers; documents must be real and only those that prove a line go in; and nothing reaches Amazon or a rights owner without the client's fresh yes.
+
+## Selling in India
+
+- On Amazon.in, safety documents include the Legal Metrology pack declarations [COG-6264] and the BIS licence if a Quality Control Order applies [COG-6266].
+- Cash-on-delivery refusals count as a delivery issue; keep promised dates honest by pincode.
+- GST invoices must match the seller's GSTIN; a mismatch can block payouts.
+- Sources: COG-6264 and COG-6266, pack declarations and BIS marks.

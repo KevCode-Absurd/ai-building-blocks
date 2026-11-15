@@ -39,7 +39,7 @@ Access: reading settings is level 1. Changing the app connection, theme code or 
 1. **One owner of the pixel.** Know which Business Center and ad account the pixel belongs to. Fail: the owner confirms access before any change.
 2. **Time zone matches.** TikTok ad account and Shopify in the same time zone, or the daily table is shifted. Fail: compare on 7-day totals only.
 3. **Consent rules known.** Which visitors must accept cookies before tracking (for example EU and UK). Fail: ask the owner; never switch consent off to get more data.
-4. **Market.** TikTok is blocked in India; this check applies to stores advertising to buyers elsewhere.
+4. **Market.** TikTok ads run only where TikTok is available; it is blocked in a few countries. This check applies to stores advertising to buyers where it runs.
 
 ## Steps
 
@@ -100,7 +100,7 @@ Daily table, 7 days: Shopify orders (excluding test and cancelled), TikTok purch
 
 Ten-order spot check: pick ten recent orders, find each order ID as an event_id in Events Manager, and note found once, twice or not found.
 
-COD markets outside India: the purchase fires when the order is placed, before payment. If many COD orders fail delivery, consider sending a separate server event for confirmed or delivered orders; `meta-ads-for-cod-stores` explains the logic.
+Pay on delivery and other paid-later orders: the purchase fires when the order is placed, before payment. If many of these orders fail delivery or are never paid, consider sending a separate server event for confirmed or delivered orders; `meta-ads-for-cod-stores` explains the logic.
 
 ### 10. Write the fix list in order
 
@@ -159,3 +159,7 @@ Place one real order (refund it after, with the owner's agreement). Pass: one pu
 - MEA-6227: custom pixels only when no app fits; consent stays with the store.
 
 What makes this skill ours: purchase events are reconciled against every Shopify order by day with a ten-order spot check, not just a green light in Events Manager; fixes come in a fixed priority order starting with double counts; Shopify's 2026 checkout upgrade is checked for silent tag loss; and consent is never loosened to raise the numbers.
+
+## Selling in India
+
+- TikTok is blocked in India, so this check applies only to Indian stores advertising to buyers abroad.

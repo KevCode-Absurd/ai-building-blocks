@@ -1,6 +1,6 @@
 ---
 name: build-wholesale-price-list-and-terms
-description: "A wholesale price list per SKU (delivered cost, wholesale price, suggested retail price, the shop's margin, the store's gross profit per unit and per case, case pack and minimum order) and a one-page terms sheet (payment, delivery, damages, returns, pricing policy) that keep the store profitable and its retail price intact. Works back from the retail price the store already charges, drops SKUs that cannot pay their way at wholesale, sets payment terms against the supplier's terms and the cash cycle, and covers GST, MRP and MSME rules in India and resale price rules in the US. Use before pitching any shop, distributor or corporate buyer, or when old wholesale prices are eating margin."
+description: "A wholesale price list per SKU (delivered cost, wholesale price, suggested retail price, the shop's margin, the store's gross profit per unit and per case, case pack and minimum order) and a one-page terms sheet (payment, delivery, damages, returns, pricing policy) that keep the store profitable and its retail price intact. Works back from the retail price the store already charges, drops SKUs that cannot pay their way at wholesale, sets payment terms against the supplier's terms and the cash cycle, and covers tax-inclusive retail prices (VAT, goods and services tax), late payment rules in the UK and EU, and resale price rules in the US and Europe. Use before pitching any shop, distributor or corporate buyer, or when old wholesale prices are eating margin."
 ---
 
 # Wholesale price list and terms
@@ -26,7 +26,7 @@ description: "A wholesale price list per SKU (delivered cost, wholesale price, s
 Required:
 
 1. **Landed cost per SKU** from `calculate-landed-cost-per-unit`: product, inbound freight, duty, retail box.
-2. **Current retail price per SKU** on the store (and printed MRP in India).
+2. **Current retail price per SKU** on the store (and any price printed on the pack).
 3. **Wholesale packing cost**: master carton, inner packs, shrink wrap, labels per case.
 4. **Freight to a shop**: courier or transport quote per case for 2 or 3 typical destinations.
 5. **Supplier payment terms and lead time** for each SKU.
@@ -41,7 +41,7 @@ If retail-buyer margin expectations are unknown, use the practitioner defaults i
 1. **Cost is complete.** Pass when landed cost follows "all in until it's in": purchase price, inbound freight and duty per unit [FIN-0007], and the per-unit view adds wholesale packing, freight to the shop and payment costs [MEA-0037]. Fail: finish landed cost first.
 2. **Cash cycle.** Pass when the payment terms you plan to give are shorter than the float your supplier gives you, or the gap is funded. Fail: prepaid terms only until it is.
 3. **Capacity.** Pass when the store can supply reorders on time; missing a retailer's order costs the account [OPS-0022].
-4. **Legal.** India: printed MRP must include all taxes [COG-6264], and resale price control is a competition law question; get a lawyer before making any minimum price binding. US: a suggested retail price and a policy the store applies alone are lawful; an agreed minimum resale price is judged case by case federally and banned in some states [OFF-6384].
+4. **Legal.** All markets: resale price control is a competition law question; get a lawyer before making any minimum price binding. UK and EU: fixing or enforcing a minimum resale price is generally unlawful; a recommended retail price is fine. US: a suggested retail price and a policy the store applies alone are lawful; an agreed minimum resale price is judged case by case federally and banned in some states [OFF-6384].
 
 ## Steps
 
@@ -54,17 +54,17 @@ Per SKU: landed cost + wholesale packing per unit + freight to shop per unit (if
 Wholesale price is set so the shop earns its margin while selling at the store's own retail price. Multiplying cost by two or three ignores both the shop's needs and the store's real costs [FIN-0012].
 
 - **US:** Wholesale = suggested retail price x (1 minus shop margin).
-- **India:** the shop sells at MRP including GST and claims back the GST it pays you. Wholesale before GST = (MRP / (1 + GST rate)) x (1 minus shop margin).
+- **UK, EU, Australia and other tax-inclusive markets:** the shop sells at a retail price including VAT or goods and services tax and claims back the tax it pays you. Wholesale before tax = (retail price / (1 + tax rate)) x (1 minus shop margin).
 
 ### 3. Pick the shop margin
 
 Practitioner defaults, confirm with 3 target shops:
 
-| Buyer | US | India |
-|---|---|---|
-| Independent boutique or gift shop | about 50% of retail (retail is 2x wholesale) | 30 to 40% of MRP |
-| Regional chain or modern trade | 40 to 50%, plus possible fees | 20 to 35%, plus listing or display fees |
-| Distributor layer on top | 15 to 25% | 10 to 20% |
+| Buyer | Shop margin (US default; check in each market) |
+|---|---|
+| Independent boutique or gift shop | about 50% of retail (retail is 2x wholesale); in tax-inclusive markets, of retail before tax |
+| Regional chain or department store | 40 to 50%, plus possible listing or display fees |
+| Distributor layer on top | 15 to 25% |
 
 Ask each buyer for their margin, payment days and fees; write the answers in the sheet.
 
@@ -74,7 +74,7 @@ Store gross profit per unit = wholesale price minus delivered cost. Then compare
 
 Pass a SKU when wholesale gross profit per unit is at least the practitioner floor of 20% of the wholesale price (test it) and at least half of the online contribution per unit. Fail: raise the retail price, cut cost, sell it only in a bundle or case, or leave it off the list.
 
-Illustrative only: retail 1,000 (India MRP incl 18% GST), net of GST 847, shop margin 35% gives wholesale 551 before GST. Delivered cost 300 leaves 251 per unit, 46% of wholesale. Pass.
+Illustrative only: retail 120 (UK price incl 20% VAT), net of VAT 100, shop margin 50% gives wholesale 50 before VAT. Delivered cost 22 leaves 28 per unit, 56% of wholesale. Pass.
 
 ### 5. Set case packs and minimums
 
@@ -92,7 +92,9 @@ Each tier must pass step 4 on its own. Keep tiers on quantity only, never one-of
 - New accounts: prepaid, or 50% with order and 50% before dispatch.
 - After 2 or 3 orders paid on time: net 30 for trusted shops.
 - Never give more credit days than the supplier float: supplier terms minus the days to make and land stock [FIN-0005]. Growth funded by waiting for customers to pay stalls when the cash cycle is long [FIN-0011]. Large retail purchase orders can be funded with a credit line or purchase order finance [FIN-0020].
-- **India:** NEFT, RTGS or UPI; no cash on delivery for trade. If the store is a Udyam-registered micro or small enterprise, buyers must pay within 45 days of accepting goods or owe interest at three times the RBI bank rate; print the Udyam number on invoices [FIN-6382]. A GST tax invoice with both GSTINs is needed for the buyer's input credit [FIN-6380].
+- **All markets:** bank transfer for trade; no pay on delivery for trade. A proper tax invoice with both businesses' tax numbers (VAT or similar) is needed for the buyer to reclaim tax.
+- **UK:** business buyers who pay late owe statutory interest (8 points above the Bank of England base rate) plus a fixed recovery fee, unless the contract sets other fair terms.
+- **EU:** the Late Payment Directive caps business payment terms at 60 days unless both sides clearly agree and it is not unfair, with interest of at least 8 points above the ECB rate; national rules can be stricter.
 - **US:** ACH or wire for net terms; card payments add the processor fee, so price it in or add a surcharge only where the state allows.
 
 ### 8. Write damage, return and pricing rules
@@ -111,7 +113,7 @@ Show the sheet with failed SKUs highlighted and the terms page. The client appro
 
 - Every SKU has delivered cost, wholesale price, suggested retail, shop margin and store gross profit per unit and per case.
 - No SKU on the list fails the margin check.
-- India prices show GST separately and MRP includes all taxes.
+- Prices show VAT, goods and services tax or sales tax separately, and any printed retail price matches the market's tax-inclusive rule.
 - Credit days are shorter than supplier float, or the gap is funded.
 - Opening and reorder minimums are set and match case packs.
 - The pricing policy suggests, never forces, a resale price.
@@ -121,14 +123,14 @@ Show the sheet with failed SKUs highlighted and the terms page. The client appro
 ## Output
 
 1. **One-screen summary:** SKUs on and off the list, average shop margin, average store gross profit per unit at wholesale versus online contribution per unit, minimums, payment terms, and the runner-up pricing option in one line.
-2. **Price sheet** with columns: SKU, Product, Case pack, Delivered cost, Wholesale price (ex tax), GST or tax rate, Suggested retail or MRP, Shop margin %, Store gross profit per unit, per case, Margin check (pass or fail), Tier 2 price, Notes.
-3. **Terms sheet** (one page): Opening minimum, Reorder minimum, Payment (new and trusted accounts), Delivery and freight, Damage claims, Returns, Suggested retail price policy, Marketplace rule, Price change notice, Invoice details (GSTIN or tax ID, Udyam number if any).
+2. **Price sheet** with columns: SKU, Product, Case pack, Delivered cost, Wholesale price (ex tax), VAT or tax rate, Suggested retail (incl tax where the market requires), Shop margin %, Store gross profit per unit, per case, Margin check (pass or fail), Tier 2 price, Notes.
+3. **Terms sheet** (one page): Opening minimum, Reorder minimum, Payment (new and trusted accounts), Delivery and freight, Damage claims, Returns, Suggested retail price policy, Marketplace rule, Price change notice, Invoice details (VAT number or tax ID, company number).
 4. **File:** `wholesale-price-list.csv` or a Google Sheet with live formulas.
 
 ## Common mistakes
 
 - **Wholesale as half of retail.** Step 4 checks each SKU against delivered cost.
-- **Ignoring GST in the India formula.** Step 2 removes GST before applying the shop margin.
+- **Ignoring VAT in a tax-inclusive market.** Step 2 removes VAT or goods and services tax before applying the shop margin.
 - **Credit longer than supplier float.** Step 7 caps credit days [FIN-0005].
 - **Site sales that undercut stockists.** Step 8 commits the store to its own retail price.
 - **Forcing a resale price in writing.** Step 8 suggests a price; the gate flags the law.
@@ -144,9 +146,14 @@ Show the sheet with failed SKUs highlighted and the terms page. The client appro
 - FIN-0011: long cash cycles stall growth.
 - FIN-0020: credit line or PO finance for big retail orders.
 - OPS-0022: never miss a retailer's order.
-- COG-6264: India MRP inclusive of all taxes.
 - OFF-6384: US suggested price and resale price rules.
-- FIN-6382: India MSMED Act 45-day payment.
-- FIN-6380: India GST tax invoice fields.
 
-What makes this skill ours: wholesale prices are worked back from the store's own retail price with GST handled the Indian way; every SKU is checked against what it earns online after ad cost; credit terms are capped by the supplier's float; and the pricing policy protects the retail price without crossing resale price law.
+What makes this skill ours: wholesale prices are worked back from the store's own retail price with VAT, goods and services tax or sales tax handled the way each market prices; every SKU is checked against what it earns online after ad cost; credit terms are capped by the supplier's float; and the pricing policy protects the retail price without crossing resale price law.
+
+## Selling in India
+
+- Printed MRP must include all taxes [COG-6264]. Wholesale before GST = (MRP / (1 + GST rate)) x (1 minus shop margin).
+- Practitioner margins: boutiques 30 to 40% of MRP; modern trade 20 to 35% plus fees; distributors 10 to 20%.
+- Pay by NEFT, RTGS or UPI; no COD for trade. A Udyam-registered micro or small enterprise must be paid within 45 days of acceptance, or the buyer owes interest at three times the RBI bank rate; print the Udyam number on invoices [FIN-6382].
+- A GST tax invoice with both GSTINs is needed for input credit [FIN-6380].
+- Sources: COG-6264 (MRP inclusive of taxes), FIN-6382 (MSMED Act 45-day payment), FIN-6380 (GST tax invoice fields).

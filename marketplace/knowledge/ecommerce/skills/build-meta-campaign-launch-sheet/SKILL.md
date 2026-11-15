@@ -25,7 +25,7 @@ description: "A launch sheet that writes down every setting of a new Meta campai
 
 Required:
 
-1. **Gross profit per purchase** for the products advertised, from `store-meta-math` or `build-sku-profit-sheet`: price after discount, landed cost, shipping, payment fees, returns and, in India, return-to-origin (RTO) losses.
+1. **Gross profit per purchase** for the products advertised, from `store-meta-math` or `build-sku-profit-sheet`: price after discount, landed cost, shipping, payment fees, returns and, where the store offers pay on delivery, failed-delivery losses.
 2. **Meta Ads Manager export** of the last 90 days at campaign, ad set and ad level (if the account has history): objective, optimisation event, attribution setting, spend, purchases, purchase value.
 3. **Shopify (or WooCommerce) order export** for the same 90 days: Name, Created at, Total, Payment Method, Customer Id, Lineitem sku, to check Meta's purchases against real orders.
 4. **The campaign's job in one line** from the client: which products, which market, which month, what monthly spend cap.
@@ -76,7 +76,7 @@ Group ad sets by concept (persona, angle, offer), not by launch date [ADC-0058].
 
 | Field | Default | Why |
 |---|---|---|
-| Conversion location | Website (or website and WhatsApp in India, see step 7) | Where the order happens |
+| Conversion location | Website (or website and WhatsApp in chat-first markets, see step 7) | Where the order happens |
 | Performance goal | Maximise conversions, event Purchase | Optimise on the outcome, not clicks |
 | Dataset | The store's one pixel or dataset | Two datasets split the signal |
 | Attribution setting | 7-day click (add 1-day engaged view only if the client reports that way) [MEA-0042] [ADC-0027] | View credit inflates reported results |
@@ -104,12 +104,14 @@ Group ad sets by concept (persona, angle, offer), not by launch date [ADC-0058].
 
 ### 6. Name everything
 
-Use the store's naming rule, or: campaign `PROSP | IN | sales | broad | CBO`, ad set `P01 | persona | angle | offer | 2026-11-20`, ad `P01-A | format | hook | v1`. Names carry the facts a later reader needs without opening the settings.
+Use the store's naming rule, or: campaign `PROSP | UK | sales | broad | CBO`, ad set `P01 | persona | angle | offer | 2026-11-20`, ad `P01-A | format | hook | v1`. Names carry the facts a later reader needs without opening the settings.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** if most orders are cash on delivery, the Purchase event rewards orders that are later refused; read `meta-ads-for-cod-stores` before choosing the optimisation event. Landing pages must show prices with GST included and the payment options the ad promises (COD, UPI). If ads send people to WhatsApp, record how those orders are counted. Write ads in the language the buyer reads; a Hindi or Tamil ad set is a separate concept, not a translation toggle.
+- **Pay on delivery stores:** if many orders are paid on delivery, the Purchase event rewards orders that are later refused; read `meta-ads-for-cod-stores` before choosing the optimisation event.
+- **All markets:** landing pages must show prices the way the market expects (VAT included in the UK and EU) and the payment options the ad promises. If ads send people to WhatsApp or Messenger, record how those orders are counted. Write ads in the language the buyer reads; an ad set in another of your buyers' languages is a separate concept, not a translation toggle.
 - **US:** check state shipping limits for regulated products, and that any "free shipping" or "sale" line in the ad matches the live page.
+- **EU:** ads aimed at EU buyers show the advertiser and payer details under the Digital Services Act; fill the "beneficiary and payer" fields.
 
 ### 8. Get the yes, then build paused
 
@@ -167,3 +169,9 @@ Send the summary and the sheet. Ask for one reply: approve all, or the line numb
 - MEA-0042: report on 7-day click, not 1-day view.
 
 What makes this skill ours: every setting has a written reason and an approval box; the budget and cost goal come from delivered gross profit, not a round number; a new campaign must earn its place against consolidation; and the built draft is checked against the signed sheet before anyone switches it on.
+
+## Selling in India
+
+- If most orders are COD, read `meta-ads-for-cod-stores` before choosing the optimisation event.
+- Landing pages show prices with GST and the payment options the ad promises (COD, UPI).
+- A Hindi or Tamil ad set is its own concept.

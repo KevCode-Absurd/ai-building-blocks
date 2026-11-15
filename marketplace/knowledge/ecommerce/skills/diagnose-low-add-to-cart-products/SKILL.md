@@ -97,9 +97,9 @@ Leave a product alone when its gross profit at stake is small, it is being disco
 
 Most single-product changes cannot be split tested at these volumes [CRO-0011]. Read before and after: 4 weeks either side, same traffic sources, no promotion in either window, and the product type median as a control line. Label the result as weaker evidence than a test.
 
-### 8. India and US notes
+### 8. Notes by market
 
-- **India:** check pincode delivery estimate and COD availability on the product page; sizing for Indian body measurements where products are imported; prices shown with GST included; regional-language reviews counted too.
+- **All markets:** check the delivery estimate for the buyer's postcode and the payment options buyers expect (cards, wallets, buy now pay later, pay on delivery where common) on the product page; sizing for local body measurements and size systems (US, UK and EU sizes differ) where products are imported; prices shown the way the market expects (tax included in the UK, EU and Australia); reviews in other languages counted too.
 - **US:** check that shipping cost or free-shipping threshold is visible on the product page, and that compare-at prices are real past prices.
 
 ## Checks before you hand it over
@@ -148,3 +148,9 @@ Most single-product changes cannot be split tested at these volumes [CRO-0011]. 
 - MEA-0037: gross margin is delivered cost.
 
 What makes this skill ours: products are compared with their own product type median and a view floor, not one store average; traffic, device and stock causes are ruled out before anyone touches the page; each product gets one evidenced reason and one first fix, sized in gross profit a month; and products not worth the work are named and left alone.
+
+## Selling in India
+
+- Check the pincode delivery estimate and COD availability on the product page.
+- Check sizing against Indian body measurements where products are imported.
+- Show prices with GST included, and count regional-language reviews too.

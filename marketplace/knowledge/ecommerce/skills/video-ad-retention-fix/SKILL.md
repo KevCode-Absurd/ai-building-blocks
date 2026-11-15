@@ -57,9 +57,13 @@ Per video and placement:
 
 Use one definition for every video. Do not mix ThruPlay-based and quartile-based hold rates across ads.
 
+Show the numerator and denominator beside every rate, with the dates and the column name used, so anyone can recheck it. A missing column or a zero denominator is "not calculable", never a zero. If someone hands you 3-second plays divided by reach, label it "plays per person reached": repeat plays can push it over 100%, so it is not the share of people who watched. A 6-second video's ThruPlay rate is not comparable with a 45-second video's; compare quartiles in seconds instead.
+
 ### 2. Set the bar from the account, not the internet
 
 For each placement group (Feed; Reels and Stories), take the median hook rate and hold rate of videos that passed the data gate. Strong = at or above the median; weak = under 0.8x the median (practitioner default, test it). Reels and Stories hook rates run higher than Feed, so never compare across groups.
+
+If the owner has their own cutoffs, use them and say so; if not, say the medians are the starting bar. Any video within 10% of a bar, or just past the data gate, is marked "unsure" rather than forced into strong or weak (practitioner default, test it). A forced label on thin data reads as more certain than it is.
 
 ### 3. Sort on money first, attention second
 
@@ -82,6 +86,19 @@ Convert each quartile into seconds (25% of a 40-second video is second 10). The 
 
 Only about 15% of viewers reach the second half of a typical video, so the first half matters most [MCR-0077]. The biggest exits come where the feeling of being sold jumps suddenly [MCR-0027].
 
+To name the cause, map the script around the leak. Label each line hook, bridge, body, proof or call to action, and rate how sold-to the viewer feels on it from 0 (not at all) to 5 (a direct pitch). A jump of 2 or more between neighbouring lines is a broken bridge [MCR-6738]. Then check these causes in order:
+
+| What sits at the leak | Likely cause | Look at |
+|---|---|---|
+| The line right after the opener | A stock opener stapled onto a body it does not lead into [MCR-6715] | Write a bridge line for that opener |
+| A shot held 10 seconds or more with nothing new | Pacing; a talking head with no cutaway [MCR-6624] | Add a cut, overlay or close-up every 1.5 to 3 seconds [MCR-6800] |
+| The first time the product is named or shown | The pitch arrived before the problem and the reason were clear | See the note below before moving anything |
+| A slow, product-led first 8 to 9 seconds | The ad only suits warm buyers [MCR-6633] | Cut straight to the first interesting line for cold traffic |
+| A curiosity gap left open for 20 seconds or more | Viewers never learn what the ad is about | Give the why and the benefit early |
+| The price said aloud | Price shock with no frame | Frame it per use or against what it replaces |
+
+**Do not move the product earlier just because the curve dips there.** A later reveal keeps fewer viewers but usually sells better to the ones who stay [MCR-6654]. Move it only when store CPP, not attention, says the reveal is the problem.
+
 ### 5. Write the fix
 
 **Strong opener, weak body.** Keep the first 3 seconds exactly. Re-edit from the leak:
@@ -91,7 +108,18 @@ Only about 15% of viewers reach the second half of a typical video, so the first
 - Check the opener and body speak to the same buyer; an attention grab followed by a feature list serves nobody [MCR-0015].
 - For premium products, keep the product out of any rough phone footage and show it cleanly later [MCR-0010].
 
-**Weak opener, strong body.** Keep the body. Make 3 to 5 new openers on the same body [MCR-0076]; 2 to 4 is enough when budget is tight [MCR-0013]. Show the topic in the first frame [ORG-0017]. When reviving a tired winner, shoot new openers with a different person rather than recutting old footage [MCR-0047]. Send the brief to `ad-opener-writer` and `first-frame-design`.
+**Weak opener, strong body.** Keep the body. Make 3 to 5 new openers on the same body [MCR-0076]; 2 to 4 is enough when budget is tight [MCR-0013]. Show the topic in the first frame [ORG-0017]. When reviving a tired winner, shoot new openers with a different person rather than recutting old footage [MCR-0047]. Send the brief to `ad-opener-writer` and `first-frame-design`. Each new opener needs its own bridge into the body; never stitch 20 openers onto one body with no join line [MCR-6715]. Before paying to test them, the store can post the cuts as Instagram trial reels with the call to action removed, read the retention graphs, and put only the best few into the account [MCR-6664].
+
+**Signs by symptom**, for when the sort is unclear:
+
+| Sign | Look at |
+|---|---|
+| Few watch past 3 seconds | The opener: who it calls in and whether it shows the topic |
+| They stay for the opener, then leave | The bridge, or a problem beat written as a list |
+| Watched, few link clicks | The promise, the offer or the call to action |
+| Clicks, few purchases | The landing page match and the price said aloud |
+| Fading after a week or two | New openers on the same body, then a new reason to buy |
+| Cheap clicks, then refunds or complaints | The promise is bigger than the product; rewrite the promise, not the edit |
 
 **Cut.** Pause with a yes. Log the concept key so the team does not remake it; the problem is the concept, not a part.
 
@@ -110,6 +138,8 @@ Rank fixes by gross profit at stake per month = monthly spend on the video / tar
 5. No video at or under target CPP is sent for a fix.
 6. Pauses and uploads are a numbered approval list, not done.
 7. The plain answer ("improve your hook") would not beat it: each fix is specific to one video.
+8. Every rate shows its numerator, denominator and column name; nothing missing was filled with a zero.
+9. Videos near a bar or on thin data say "unsure", and no product reveal was moved earlier on attention alone.
 
 ## Output
 
@@ -143,6 +173,13 @@ Save as `VIDEO-RETENTION.md` and `video-verdicts.csv`.
 - MCR-0068: sale periods corrupt creative reads.
 - MCR-0076: 4 to 5 openers per ad.
 - MCR-0077: fix the first half first.
+- MCR-6624: break up any long shot with nothing new.
+- MCR-6633: a slow product-led start keeps an ad warm-only.
+- MCR-6654: a late product reveal sells better to those who stay.
+- MCR-6664: pre-test cuts as trial reels without the call to action.
+- MCR-6715: stitched hooks break at the bridge.
+- MCR-6738: script the bridges; let product awareness rise slowly.
+- MCR-6800: a new clip every 1.5 to 2 seconds.
 - ORG-0017: show the topic in the first frame.
 
 What makes this skill ours: the sort uses store-side cost per purchase against the store's own target before attention, so a selling video is never re-edited; bars come from the account's own medians by placement, with one hold definition; leaks are placed in seconds from the quartile drops; and fixes are ranked by gross profit at stake per month.

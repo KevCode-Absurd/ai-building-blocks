@@ -1,6 +1,6 @@
 ---
 name: write-store-policy-pages
-description: "Writes a store's shipping, returns and refund, privacy, terms and contact pages in plain words that match how the store really works: real cut-off times, delivery ranges, return window, who pays return shipping, refund method and timing, COD refunds, damaged and wrong-item handling, data use and contact routes. Starts from an operations fact sheet the owner confirms, not a template, then checks each page against what the warehouse, courier and payment set-up can deliver, and lists what a lawyer should review. Covers India (COD, grievance contact, GST invoices) and US (shipping time rules, refund timing). Use before launch, after changing couriers or returns, or when tickets show buyers misread a policy."
+description: "Writes a store's shipping, returns and refund, privacy, terms and contact pages in plain words that match how the store really works: real cut-off times, delivery ranges, return window, who pays return shipping, refund method and timing for each payment method, damaged and wrong-item handling, data use and contact routes. Starts from an operations fact sheet the owner confirms, not a template, then checks each page against what the warehouse, courier and payment set-up can deliver, and lists what a lawyer should review. Covers the US (shipping time rules, refund timing), the UK and EU (14-day cancellation right, trader identity, GDPR) and local rules in other markets. Use before launch, after changing couriers or returns, or when tickets show buyers misread a policy."
 ---
 
 # Store policy pages
@@ -25,8 +25,8 @@ description: "Writes a store's shipping, returns and refund, privacy, terms and 
 
 Required:
 
-1. **Operations facts**, confirmed by the owner: order cut-off time, dispatch days, couriers, delivery ranges by zone, holidays, return window, condition rules, who pays return shipping, refund method and timing per payment type, exchange option, damaged or wrong item process, COD rules.
-2. **Business identity**: legal name, registered address, GSTIN or state registrations, support email, phone or WhatsApp, support hours.
+1. **Operations facts**, confirmed by the owner: order cut-off time, dispatch days, couriers, delivery ranges by zone, holidays, return window, condition rules, who pays return shipping, refund method and timing per payment type, exchange option, damaged or wrong item process, any pay-on-delivery rules.
+2. **Business identity**: legal name, registered address, VAT number or state sales tax registrations, support email, phone or WhatsApp, support hours.
 3. **Data facts**: apps and tools that receive customer data (email, SMS, WhatsApp, analytics, ads, reviews, helpdesk), where the store sells, whether it sells to the EU or UK.
 4. **Current policy pages** and the last 90 days of support tickets tagged shipping, returns or refunds.
 
@@ -44,28 +44,29 @@ Writing is level 1 work. Publishing pages is level 2 (draft) then live with the 
 
 ### 1. Build the fact sheet
 
-One line per fact, with source and owner: "Cut-off 2 pm IST Mon to Sat (warehouse lead)". Every sentence in every policy must trace to a line here.
+One line per fact, with source and owner: "Cut-off 2 pm GMT Mon to Sat (warehouse lead)". Every sentence in every policy must trace to a line here.
 
 ### 2. Shipping policy
 
-Write in this order: dispatch time and cut-off; delivery range by zone; shipping charges and free-shipping line; COD availability and fee; how tracking is sent; what happens if an order is late; address errors; international orders and duties.
+Write in this order: dispatch time and cut-off; delivery range by zone; shipping charges and free-shipping line; payment options and any pay-on-delivery fee; how tracking is sent; what happens if an order is late; address errors; international orders and duties.
 
 - US: the shipping time stated needs a reasonable basis; if no time is stated, the default expectation is 30 days. If the store cannot ship on time it must offer the buyer a delay or cancel choice, and refund cancelled orders within 7 working days for most payment methods [CXP-6160]. Write that promise in.
 - Use the same delivery range wording as the product page and checkout.
 
 ### 3. Returns and refunds policy
 
-Order: the window (counted from delivery, not order), what can and cannot be returned, condition rules, how to start a return, who pays return shipping, exchange option, refund method and timing per payment type, damaged or wrong items, and COD refunds.
+Order: the window (counted from delivery, not order), what can and cannot be returned, condition rules, how to start a return, who pays return shipping, exchange option, refund method and timing per payment type, damaged or wrong items, and refunds for pay-on-delivery orders where offered.
 
 - Fast refunds matter: a poor return experience puts most buyers off buying again [CXP-0007], and slow refunds lose intent [CXP-0015]. State a refund time the team can meet.
 - For low-value items, refund without return can cost less than processing a return [CXP-0018]; say so only if the owner chose it.
 - On low-cost consumables, a longer guarantee can bring fewer claims than a short one [OFF-0060]; offer it only if the owner agrees and it is costed.
 - A clear return window of 30 days or more is one of the inputs to Google's store quality badge [GAD-0018].
-- India: COD refunds go by bank transfer or UPI after the return is received and checked; say how the buyer shares details safely (a secure form, never by posting them in chat comments).
+- UK and EU: the buyer can cancel within 14 days of delivery without giving a reason, and the refund, including standard outbound delivery, is due within 14 days of getting the goods back or proof of return.
+- Pay-on-delivery refunds, where offered, go by bank transfer or store credit after the return is received and checked; say how the buyer shares details safely (a secure form, never by posting them in chat comments).
 
 ### 4. Privacy policy
 
-Start from Shopify's privacy policy template, then edit to the truth: what is collected, why, which tools receive it (from the data facts), how long it is kept, how buyers ask for access or deletion, cookies and consent, and contact. EU or UK buyers bring GDPR duties; California and India have their own data laws. The lawyer confirms which apply. Never claim certifications or practices the store does not have.
+Start from Shopify's privacy policy template, then edit to the truth: what is collected, why, which tools receive it (from the data facts), how long it is kept, how buyers ask for access or deletion, cookies and consent, and contact. EU or UK buyers bring GDPR duties; California, Canada, Australia and many other places have their own data laws. The lawyer confirms which apply. Never claim certifications or practices the store does not have.
 
 ### 5. Terms of service
 
@@ -73,7 +74,7 @@ Start from Shopify's template and edit: who the seller is, prices and errors, or
 
 ### 6. Contact page
 
-Support email, phone or WhatsApp, hours, expected reply time, order tracking link, and the registered business address. India: name a grievance contact with how and when complaints are acknowledged; the lawyer confirms the current rule. Keep card or bank details out of contact forms; never ask buyers to send card numbers anywhere outside checkout [SEC-0006].
+Support email, phone or WhatsApp, hours, expected reply time, order tracking link, and the registered business address. UK and EU: show the trader's legal name, geographic address and a fast contact route; some markets also ask for a named complaints contact. The lawyer confirms the current rule. Keep card or bank details out of contact forms; never ask buyers to send card numbers anywhere outside checkout [SEC-0006].
 
 ### 7. Write plainly
 
@@ -91,7 +92,7 @@ Footer (all five), checkout policy links (Shopify settings, Policies), product p
 
 - Every sentence traces to a line in the signed fact sheet.
 - The delivery range matches the product page and checkout wording exactly.
-- Refund timing is stated per payment type, including COD.
+- Refund timing is stated per payment type, including pay on delivery where offered.
 - The window is counted from delivery and stated in days.
 - No template clause describes a service, certification or practice the store does not have.
 - Each page opens with a summary box and reads at grade 8 to 9.
@@ -135,4 +136,13 @@ Footer (all five), checkout policy links (Shopify settings, Policies), product p
 - SET-0003: test the flow before going live.
 - MEA-0037: gross margin uses delivered cost.
 
-What makes this skill ours: every policy sentence traces to a signed operations fact; each promise is tested against the busiest day and the last 90 days of tickets; refund timing is stated per payment type including COD; and the lawyer gets a short, specific review list instead of a blank template.
+What makes this skill ours: every policy sentence traces to a signed operations fact; each promise is tested against the busiest day and the last 90 days of tickets; refund timing is stated per payment type including pay on delivery; and the lawyer gets a short, specific review list instead of a blank template.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- Business identity includes the GSTIN; say how buyers get a GST invoice.
+- COD availability and fee go in the shipping page; COD refunds go by bank transfer or UPI after the return is received and checked, with a secure form for bank details.
+- Name a grievance contact with how and when complaints are acknowledged; the lawyer confirms the current rule.
+- India has its own data law; the lawyer confirms what applies.
+- Cut-off times are stated in IST.

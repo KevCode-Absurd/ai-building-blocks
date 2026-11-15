@@ -16,7 +16,7 @@ description: "A TikTok Shop launch plan and checklist: market and eligibility ch
 
 ## Not for
 
-- Stores selling only in India: TikTok is not available there; use Instagram and YouTube routes such as `grow-instagram-with-collabs` and `tiktok-live-selling-plan`'s India note.
+- Stores selling only in markets where TikTok Shop does not run: check TikTok's list of Shop countries first; if yours is not on it, use Instagram and YouTube routes such as `grow-instagram-with-collabs`.
 - Writing listings in depth: use `optimize-tiktok-shop-listings`.
 - Recruiting creators in depth: use `tiktok-shop-creator-affiliate-outreach`.
 - Paid campaigns for the shop: use `tiktok-shop-gmv-max-ads` after launch.
@@ -95,9 +95,10 @@ When 3 or more videos have sold at a profit organically, hand off to `tiktok-sho
 
 Per product: orders, net revenue, refunds, profit after all TikTok costs, samples sent, videos made, sales per 1,000 views, top 5 creators. Decide: scale, fix (listing, price, creators) or pull.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** TikTok is blocked in India, so an Indian brand can only use TikTok Shop through an eligible entity and warehouse in a market where it runs. For Indian buyers, use Instagram, YouTube and marketplaces instead.
+- **Where it runs:** TikTok Shop runs only in some countries (check TikTok's current list; it has included the US, UK and parts of Europe and Southeast Asia). A brand outside those markets can only sell through an eligible entity and warehouse in a market where it runs.
+- **UK and EU:** VAT applies to TikTok Shop sales as on any other channel; confirm with the accountant whether TikTok or the seller accounts for it, and check product safety and labelling rules (UKCA or CE marks where needed).
 - **US:** marketplace sales can fall under state marketplace facilitator rules for sales tax; confirm with the accountant who collects tax on TikTok Shop orders and how they show in the store's filings, and keep TikTok payouts as their own line in the monthly P&L.
 
 ## Checks before you hand it over
@@ -146,4 +147,8 @@ Per product: orders, net revenue, refunds, profit after all TikTok costs, sample
 - ORG-6405: plain disclosure in the post.
 - ADC-0062: set GMV Max return target above the suggestion.
 
-What makes this skill ours: no product is listed until its profit is worked out after TikTok's fees as read on the day, commission and spread sample cost; stock and restock time are a gate because a viral post can empty a shelf; samples go only to creators with category sales; and India sellers are told plainly that TikTok is not available there and pointed to routes that work.
+What makes this skill ours: no product is listed until its profit is worked out after TikTok's fees as read on the day, commission and spread sample cost; stock and restock time are a gate because a viral post can empty a shelf; samples go only to creators with category sales; and sellers in markets where TikTok Shop does not run are told so plainly and pointed to routes that work.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. TikTok is blocked in India, so an Indian brand can only use TikTok Shop through an eligible entity and warehouse in a market where it runs. For Indian buyers, use Instagram, YouTube and marketplaces instead; see `tiktok-live-selling-plan`'s India note.

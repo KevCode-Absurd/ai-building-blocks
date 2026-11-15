@@ -2891,5 +2891,1153 @@
     },
     "strength": "regulator_rule",
     "public": true
+  },
+  {
+    "id": "LPG-6605",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "persona pages",
+      "message match",
+      "CRO basics"
+    ],
+    "claim": "Build a persona landing page whenever a new persona or angle wins, opening on the same symptom the ad ended on, as IM8 does for GLP-1 users and afternoon bloating.",
+    "body": "Blue Sense says any consumer goods brand not doing this is well behind. When a GLP-1 ad is clicked, the visitor lands on a page that lists the reasons GLP-1 users choose IM8 and explains the solution in full. A bloating ad leads to a page about why bloating keeps returning in the afternoon whatever you cut out. Roughly 150 of IM8's 700 ads point to persona pages. Blue Sense found little to fault in the CRO basics: the rating and review count (4.8 from 22,104 reviews) sit above the fold, and the guarantee appears at the point of decision rather than in a footer. How to apply: when a persona or angle starts winning in your ads, make a page for it within days; open with the same symptom and words the ad used; list the specific reasons in a numbered format; show rating and review count above the fold and the guarantee by the buy button.",
+    "conditions": "Brands running several distinct personas or angles in acquisition ads.",
+    "fails_when": "Single-persona products, where one well-built product page already matches every ad.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 150 of 700 ads to persona pages",
+      "4.8 rating from 22,104 reviews above the fold"
+    ],
+    "asks": [
+      "Do I need different landing pages for different ads?",
+      "What should a persona landing page look like?",
+      "What CRO basics matter most on a landing page?",
+      "Where should reviews and guarantees go on my page?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6604",
+    "evidence": {
+      "where": "[47:30] persona pages; [48:43] persona congruency and CRO basics"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-6606",
+    "modules": [
+      "LPG",
+      "BRD"
+    ],
+    "topics": [
+      "trust signals",
+      "differentiation",
+      "authority"
+    ],
+    "claim": "Put trust on landing pages that competitors cannot copy: reviews and trust badges are table stakes, while IM8's ambassador wall and science stack (advisory board, a completed RCT, trials underway) set it apart.",
+    "body": "Blue Sense's rule: anything every brand can do, such as adding reviews or trust badges, adds little because everyone has it. The edge comes from proof only you can show. IM8 has two layers. The ambassador wall shows names such as Beckham, Lily Collins, Giannis Antetokounmpo, Aryna Sabalenka, Jay Shetty and Dustin Poirier, presented as partners rather than paid endorsers. The science stack is a nine-person advisory board including people from the Mayo Clinic, Cedars-Sinai and a former NASA chief scientist, a completed randomised controlled trial, and three more trials underway, one at the Mayo Clinic. The celebrities win attention; the scientific proof is what persuades an older, careful buyer. How to apply: list your trust assets and mark which ones a competitor could copy tomorrow. Lead with the rest: founder credentials, lab or clinical results, expert partners, retail stockists, awards or press, and put them above the fold.",
+    "conditions": "Brands in crowded categories where shoppers compare similar products.",
+    "fails_when": "Brands with no unique proof yet, who should build some before relying on badges; low-consideration impulse buys.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "nine-person advisory board",
+      "1 completed RCT, 3 further trials underway"
+    ],
+    "asks": [
+      "Do trust badges help conversion?",
+      "What trust signals should my landing page have?",
+      "How do I stand out from competitors with the same reviews?",
+      "Is scientific proof worth putting on my product page?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6604",
+    "evidence": {
+      "where": "[49:08] the ambassador wall and trust beyond reviews; [49:57] the science stack",
+      "quote": "Celebrity gets attention. The advisory board is what converts a 45-year-old."
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6607",
+    "modules": [
+      "LPG",
+      "ADC"
+    ],
+    "topics": [
+      "landing page routing",
+      "advertorials",
+      "quiz funnels"
+    ],
+    "claim": "Route traffic by awareness: IM8 sent unaware and advertorial ads to a separate advertorial and quiz funnel (137 of 708 ads), problem-aware ads to persona pages (about 150) and bottom-funnel traffic to product pages (about 280).",
+    "body": "Each tier has a different job. Very cold, unaware or advertorial ads go to a long advertorial or quiz, on its own subdomain or even a third-party site run from doctor or other non-brand pages, because the goal is education, not an instant sale; visitors are then sent to the store to buy. Problem and solution aware ads go to persona pages so the message matches. People who have seen many ads and visited before can go straight to a product page. IM8 seems to have retired its subdomain funnel in July 2026, but Blue Sense still rates advertorial and quiz funnels for consumer goods because they let you talk longer to colder buyers. Its push back: 88 ads still went to the homepage and 49 to the root domain, the weakest page because it tries to serve every persona at once; and the quiz was underused given how distinct the personas are. How to apply: map each live ad to an awareness stage and send it to the matching tier; split any advertorial by persona with its own quiz; keep homepage traffic for brand and retargeting.",
+    "conditions": "Consumer goods brands with distinct personas and ads across several awareness stages.",
+    "fails_when": "Simple products where one strong product page converts all traffic; small teams that cannot maintain several funnels.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "137 of 708 ads to the advertorial and quiz funnel",
+      "about 150 ads to persona pages",
+      "about 280 ads to product pages and homepage",
+      "88 ads to the homepage plus 49 to the root domain"
+    ],
+    "asks": [
+      "Where should I send cold traffic from my ads?",
+      "Should I use an advertorial or quiz funnel?",
+      "Is it bad to send ad traffic to my homepage?",
+      "How do I match landing pages to awareness stages?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6604",
+    "evidence": {
+      "where": "about [44:10] three tiers; [45:22] advertorial funnel retired; [47:53] destination by awareness stage; [50:18] homepage pushback; [51:17] quiz underused"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-6608",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "checkout optimisation",
+      "guarantees",
+      "reviews"
+    ],
+    "claim": "Use the checkout page to sell, not just take payment: IM8 restates its 90-day money-back guarantee for quarterly plans, three value points and a wall of reviews there.",
+    "body": "Most brands leave checkout bare, yet it is where doubt peaks, because the full charge finally appears. Blue Sense notes IM8 is one of few brands that use it: the checkout repeats the 90-day money-back guarantee for quarterly buyers, three short value propositions, and a large block of reviews. In cart, all the free welcome items also show as separate lines, so the buyer sees the full bundle before paying. How to apply: if your platform lets you add content to checkout, put your guarantee, two or three reasons to buy and a few strong reviews next to the order summary. Match the guarantee to the plan the buyer chose. Test against the plain checkout on checkout completion rate, and keep the additions light so the page still loads fast and the pay button stays obvious.",
+    "conditions": "Stores whose platform allows checkout content; offers where the final charge is larger than the headline price.",
+    "fails_when": "Platforms that lock checkout; cluttering checkout so much it slows completion.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "90-day money-back guarantee on quarterly plans",
+      "3 value propositions at checkout"
+    ],
+    "asks": [
+      "What should I put on my checkout page?",
+      "How do I reduce checkout abandonment?",
+      "Should I show reviews at checkout?",
+      "Where should my money-back guarantee appear?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6604",
+    "evidence": {
+      "where": "about [28:22] using the checkout"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6609",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "advertorial structure",
+      "education pre-lander"
+    ],
+    "claim": "Blue Sense's advertorial outline for a supplement: free lifestyle steps first, then how to read a label, the product as the answer, a test-it guarantee, reviews, founder credibility and a three-pack default.",
+    "body": "For Gorilla Mind's testosterone booster, Blue Sense mocked up an editorial-style advertorial that sells by teaching. Structure: 1) Headline aimed at men considering steroids, offering a step most skip first. 2) No product image at the top; the product should not appear yet. 3) Step one is free and boring: sleep, food, training and stress, which builds trust because it gives real advice. 4) How to read a testosterone booster label and what good and bad look like. 5) The product as the answer that meets those label standards, with what is inside, which gaps it fills and how it works. 6) Risk reversal: you do not need to trust it because there is a 30-day money-back guarantee. 7) Customer reviews. 8) Founder credibility: built by a well-known science-led creator. 9) The CTA to try one full cycle, defaulting to three bottles, linking to the product page or straight to Shopify checkout. 10) FAQ at the bottom. They stress that this page only makes sense behind longer, education-led ads; product-aware ads should keep going to product pages.",
+    "conditions": "Products that need explanation or carry scepticism (supplements, skincare, wellness devices), paired with education-led cold ads.",
+    "fails_when": "Traffic comes from product-aware ads or retargeting, where an article adds a step; or health claims in the advertorial break ad platform or local advertising rules.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30-day money-back guarantee",
+      "default to 3 bottles"
+    ],
+    "asks": [
+      "How do I write an advertorial for a supplement?",
+      "What should an advertorial page include?",
+      "Should the product appear at the top of my advertorial?",
+      "Where should my advertorial link to?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[47:45] advertorial redesign for the testosterone booster"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6610",
+    "modules": [
+      "LPG",
+      "ADC"
+    ],
+    "topics": [
+      "landing page mix",
+      "match page to awareness"
+    ],
+    "claim": "Match landing pages to ad awareness: Gorilla Mind sends 54% of ad traffic to product pages, 40% to offer pages and almost none to advertorials or quizzes, which fits only bottom-of-funnel ads.",
+    "body": "Blue Sense measured where Gorilla Mind's ads point: 54% to product pages, 40% to paid offer pages, 4% to the homepage, almost none to collections, and almost no advertorials, listicles or quizzes. They call this an underdeveloped paid funnel for a supplement brand, but note it currently fits the creative, which is mostly bottom-of-funnel product-aware ads. A product-aware shopper is fine landing on a product page; sending them to a long educational page adds friction. The problem arrives when the brand starts making longer, colder, education-led ads: those viewers need a page that continues the education before the offer. How to apply: tag each ad by stage of awareness and each landing page by type. Product and most-aware ads go to product or offer pages. Problem and unaware ads go to advertorials, listicles, quizzes or education pages that end on the offer. Pre-landers will not triple returns on their own, but they add diversity to the funnel and give a place to teach products that need explanation, such as testosterone boosters.",
+    "conditions": "Brands running a mix of awareness stages in paid social, especially products that need explanation.",
+    "fails_when": "All the brand's creative is product-aware retargeting, where product pages are the right destination and pre-landers only add a step.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "ad traffic: 54% product pages, 40% offer pages, 4% homepage, about 0% collections, almost no advertorials, listicles or quizzes"
+    ],
+    "asks": [
+      "Where should my Facebook ads send traffic?",
+      "Should I use advertorials or product pages?",
+      "When do I need a pre-lander?",
+      "Why do my top of funnel ads not convert on my product page?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[about 44:30] ad traffic by landing page type; [49:37] matching pages to creative"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-6611",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "product page rework",
+      "value proposition headline"
+    ],
+    "claim": "Rework the product page headline from the product name to its core value, as Blue Sense did with creatine gummies you will actually take every day, then follow with problem education and proof.",
+    "body": "Gorilla Mind's creatine gummies page is a decent but basic product page: three offers, subscription preselected, a short description and add to cart. Blue Sense's mobile rework keeps the offer but builds a case around it: 1) Headline states the core value, not just the product name: the reason to buy these is that they are creatine you will actually take daily. 2) The unique mechanism and a short value stack. 3) The subscribe and save offer, with a revised offer structure. 4) As the shopper scrolls, education on the problem: creatine works on rest days too, but most people skip it then, with a visual of under-saturation versus proper use. 5) Proof: every tub tested three times with results shown. 6) Reviews before the buy decision. 7) An honest comparison with other options. 8) How to take it, and more reviews. How to apply: write down the single reason a buyer picks your product over the obvious alternative, put it in the headline, and order sections as problem, proof, comparison and usage below the offer block.",
+    "conditions": "Product pages receiving paid traffic for products with a clear advantage over a familiar alternative.",
+    "fails_when": "The product is a commodity with no real advantage to headline, or the brand name itself is the main reason people buy.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "each tub tested 3 times"
+    ],
+    "asks": [
+      "What should the headline on my product page say?",
+      "How do I improve my product page for ad traffic?",
+      "What sections should a supplement product page have?",
+      "Should I compare my product with competitors on my PDP?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[50:06] creatine gummies product page rework"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6612",
+    "modules": [
+      "LPG",
+      "BRD"
+    ],
+    "topics": [
+      "localisation",
+      "trust signals",
+      "US launch"
+    ],
+    "claim": "Do not lead with being a foreign brand in the US: buyers fear tariffs, slow shipping and customs problems, so present as local with a US site and US copy and no home-country domain.",
+    "body": "Many Australian brands assume Americans love Australia and want to be proud of where they come from, keeping the .com.au site and saying Australian brand everywhere. Blue Sense says this does not work. US buyers prefer local brands for practical reasons: they do not want a surprise tax or duty after purchase, they do not want to wait for international shipping, and they worry about customs holds, currency and unknown last-mile couriers. When a brand looks international, conversion rates drop sharply. How to apply: use a US domain or US store with US currency, spelling and sizing; show US shipping times and returns; remove home-country cues from ads and landing pages; and study the copy and trust signals of your top US competitors, then match or beat them before launch.",
+    "conditions": "Non-US brands selling into the US online.",
+    "fails_when": "Brands whose origin is the selling point (Australian skincare made from native ingredients, for example), where origin can be a feature as long as shipping and duties are clearly local.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should I tell US customers we are an Australian brand?",
+      "Do I need a separate US website?",
+      "Why is my conversion rate lower in the US?",
+      "How do I make my store feel local to US shoppers?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6608",
+    "evidence": {
+      "where": "[18:22] trust signals and localisation depth; [19:21] advertising that you are not local"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6613",
+    "modules": [
+      "LPG",
+      "CRO",
+      "EML"
+    ],
+    "topics": [
+      "checkout design",
+      "express checkout",
+      "guest checkout"
+    ],
+    "claim": "A good checkout has express pay at the top, guest checkout by default, a lean address form, free shipping progress, visible returns and an abandonment email; one-page checkout converted slightly better in Blue Sense data.",
+    "body": "Blue Sense's side-by-side checkout lists what leaks and what fixes it. Leaks: extra costs added at the end (their bad example adds $26 in shipping, tax and handling), a price that differs from the product page, forced account creation, a cluttered form with many fields, trust badges instead of real trust, no express pay buttons, and a hidden returns policy. Fixes: Shop Pay, Apple Pay and Google Pay at the very top; guest checkout as the default; essential address fields only, while still collecting enough to verify the order; a single-page layout, which in their data converts a little better than multi-step but should still be tested; a free shipping progress line (spend $12 more for free shipping); the returns promise in plain words on the page (30-day free returns); and an abandoned checkout email flow. On tax: showing tax as a separate line can look like an extra charge even when it is included, so label it as included or tuck it away. How to apply: screenshot your mobile checkout and score it against each item.",
+    "conditions": "Stores on Shopify or similar platforms where the checkout can be configured.",
+    "fails_when": "Your platform locks the checkout layout; focus on the settings you control (accounts, payment methods, fields, shipping rules).",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "$26 of added fees in the bad checkout example",
+      "spend $12 more for free shipping progress message",
+      "free shipping over $75 and 30-day free returns in the good example"
+    ],
+    "asks": [
+      "What makes a good checkout page?",
+      "Should I use one-page or multi-step checkout?",
+      "Should I force customers to create an account?",
+      "Which payment options should I offer?"
+    ],
+    "platforms": [
+      "shopify",
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [56:07] bad versus good checkout comparison"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6614",
+    "modules": [
+      "LPG",
+      "CRO",
+      "CXP"
+    ],
+    "topics": [
+      "cart abandonment reasons",
+      "checkout friction",
+      "Baymard research"
+    ],
+    "claim": "About 70% of carts are abandoned and 43% of those were only browsing; for the rest, Baymard ranks extra costs (39%), slow delivery (21%) and card distrust and forced accounts (19% each) first.",
+    "body": "Blue Sense uses Baymard Institute's checkout research instead of guessing why people leave. Around 70% of carts never complete; 43% of abandoners were just browsing and were never going to buy, so the rate never reaches zero. The fixable reasons, in order: extra costs too high (39%), delivery too slow (21%), did not trust the site with card details (19%), forced to create an account (19%), checkout too long or complex (18%), returns policy not good enough (15%), and could not see the total cost up front (14%). Blue Sense's fixes: keep added costs under about 10% of AOV; make guest checkout the default (turn off forced accounts); cut form fields and make others optional; enable Shop Pay, Apple Pay and Google Pay; show the full price early. Card distrust mostly affects new brands; well-known retailers rarely see it, so for startups make the site look credible and back it with proof. How to apply: walk your checkout on a phone against this list and fix every item before testing anything else.",
+    "conditions": "Any online store; the list is general research, so weight it by your own checkout data where you have it.",
+    "fails_when": "Your own analytics show a different top leak (for example a payment error or a broken discount field); fix your actual top cause first.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "about 70% of carts abandoned",
+      "43% of abandoners only browsing",
+      "extra costs 39%",
+      "slow delivery 21%",
+      "card distrust 19%",
+      "forced account 19%",
+      "long checkout 18%",
+      "returns policy 15%",
+      "total cost not shown up front 14%"
+    ],
+    "asks": [
+      "Why are people abandoning their carts?",
+      "How do I reduce cart abandonment?",
+      "What is a normal cart abandonment rate?",
+      "What should I fix first in my checkout?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [50:30] Baymard cart abandonment reasons"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-6615",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "below the fold",
+      "FAQ objection handling",
+      "table stakes"
+    ],
+    "claim": "Below the fold, shrink table stakes (vegan, 30ml, fast dispatch), feature one review line no rival can claim, and use the FAQ only for your top three research-backed buying objections.",
+    "body": "The default Shopify layout below the fold is a short description with specs and three callouts (free shipping, fast dispatch, great service). Blue Sense says it fails three ways: it is feature led, it leads with things every brand offers, and it handles no objections. The better version opens with the benefit and then the mechanism (time-released retinol). It lifts a one-of-one line straight from reviews, such as customers saying it is the first retinol that did not make them peel, a claim most rivals cannot honestly make. Specs stay as small bullets low on the page. The FAQ answers what stops people buying, found through customer research: will it work on sensitive skin, how long until I see results, can I use it with my other actives. Generic FAQs on shipping policy or brand story waste the space. Near the end, also address the other options a buyer might fall back on (a cheaper product, something they already own) so yours reads as the answer to their problem. How to apply: pull objections from reviews, support tickets and post-purchase surveys, rank them, and write the top three into the FAQ.",
+    "conditions": "Product pages where buyers have real doubts (efficacy, side effects, compatibility, sizing).",
+    "fails_when": "Simple, low-risk impulse products where buyers have few objections and a long page only adds scrolling.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "top 3 objections answered in the FAQ"
+    ],
+    "asks": [
+      "What should go in my product page FAQ?",
+      "What should I put below the fold?",
+      "How do I handle objections on my product page?",
+      "Should I list free shipping and fast dispatch as features?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [32:05] below-the-fold rewrite and objection FAQ"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6616",
+    "modules": [
+      "LPG",
+      "CXP",
+      "EML"
+    ],
+    "topics": [
+      "product reviews",
+      "photo reviews",
+      "review incentives"
+    ],
+    "claim": "Going from no reviews to about 80 to 100 can roughly double conversion rate; beyond about 80 the gain fades, so sort photo and video reviews first and incentivise them.",
+    "body": "From the presenter's own stores in 2019 and 2020, adding reviews to a page that had none was one of the fastest ways to double conversion rate overnight. The jump happens between zero and roughly 80 reviews; going from 80 to 150 to 400 barely changes what a shopper thinks. Reviews with images and videos are worth much more than text alone, so set your reviews app to sort them to the top. For a newer brand, push for photo and video reviews with an incentive where it is legal: paying for reviews is illegal in most countries, but rewarding a review is often allowed, such as a $10 gift card on the next order, or $10 cash back on the current order when the review includes a photo. How to apply: if a product has under about 80 reviews, make review collection a priority with a post-delivery email and SMS flow plus the incentive. Check your country's consumer and advertising rules on incentivised reviews (for example disclosure) before launching.",
+    "conditions": "New or young products and brands with few reviews; any store using a reviews app with photo sorting.",
+    "fails_when": "Local rules ban or restrict incentivised reviews, or the brand is already well known and trusted, where reviews matter less to conversion.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "0 to about 100 reviews can roughly double conversion rate",
+      "main gain from 0 to about 80 reviews",
+      "$10 gift card or $10 cash back per photo review"
+    ],
+    "asks": [
+      "How many reviews do I need?",
+      "Do reviews really increase conversion rate?",
+      "How can I get more photo reviews?",
+      "Can I pay customers for reviews?"
+    ],
+    "platforms": [
+      "shopify",
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "[45:28] reviews as the first proof lever"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-6617",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "product page clarity",
+      "mobile first"
+    ],
+    "claim": "On mobile, a product page must answer four questions above the fold: what it is, why this one, why now, and why trust you; the default Shopify layout fails all four.",
+    "body": "Blue Sense compares two anonymised skincare pages. The weak one loads in 4.8 seconds, is titled 'face serum 30ml', has no reason to pick it, no urgency, no reviews and no hint that there is more below. The strong one loads in 0.9 seconds and leads with an outcome title (firmer skin by morning) and a subtitle that states the mechanism (the only overnight retinol buffered to work while you sleep). Why this one: a line that retinol loses strength on the shelf, so it is made in small batches filled this month. Why now: the same freshness line plus a pay-in-four price (four payments of $12) that pulls the purchase forward. Why trust: the star rating, where 4.8 reads as more genuine than a perfect 5. How to apply: open your top product page on your phone (around 80% of traffic is mobile, 60% to 95% depending on brand) and check each question in the first screen. Add an outcome headline, a one-line mechanism, a freshness or scarcity reason that is true, a pay-later price and the review stars. Add a visual cue (a fade or a 'more below' prompt) so people scroll.",
+    "conditions": "Product pages receiving cold paid traffic from people who do not know the brand yet.",
+    "fails_when": "Well-known brands with strong existing awareness, where visitors arrive already sold and a plain retail layout converts fine; urgency lines must also be true or they hurt trust and returns.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4.8 s versus 0.9 s load time in the example",
+      "about 80% of traffic on mobile (60% to 95% by brand)",
+      "4 payments of $12 as the why-now device",
+      "4.8 star rating preferred to 5.0"
+    ],
+    "asks": [
+      "What should be above the fold on my product page?",
+      "Why is my product page not converting cold traffic?",
+      "Is the default Shopify product page good enough?",
+      "Are 5 star reviews better than 4.8?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [16:30] four above-the-fold questions and the two serum page mockups"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6618",
+    "modules": [
+      "LPG",
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "page hierarchy",
+      "size and variant selectors"
+    ],
+    "claim": "Order the first screen by persuasive weight (value proposition, proof, price, button) and remove size and quantity pickers; default buyers into the larger size or a bundle instead.",
+    "body": "On the stronger page in the Blue Sense example, the first screen holds only what persuades: the value proposition first, then proof, then price, then the add to cart button. There are no SKU details, no size options and no quantity selector, because none of those help someone decide to buy. Choices like size slow the visitor down at the moment you want a simple yes. Deal with them later in the cart, or remove the choice by pushing everyone to the bigger size (for example the 50ml) or a bundle. That raises first-purchase gross profit at the same time. How to apply: list every element in your first mobile screen and ask whether it answers what, why this, why now or why trust. Move anything else (size charts, SKU codes, quantity steppers, long specs) below the fold or into the cart drawer, and test making the larger pack or bundle the default selection.",
+    "conditions": "Single hero products or products where one size or pack suits most buyers.",
+    "fails_when": "Apparel and footwear where size choice is essential to the purchase, or products where forcing a larger size raises returns or puts off first-time triers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "first-screen order: value proposition, proof, price, CTA"
+    ],
+    "asks": [
+      "Should I show size options above the fold?",
+      "How do I lay out the top of my product page?",
+      "How can I raise AOV on a single product page?",
+      "Should the bigger size be the default?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [20:48] ordering the first screen by persuasive weight"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6619",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "advertorials",
+      "VSL landing pages",
+      "unaware traffic"
+    ],
+    "claim": "Pair cold, unaware VSL ads with a long landing page, not a PDP, following hook, problem, mechanism, objections, proof, risk reversal and CTA, the same order as the VSL script.",
+    "body": "Blue Sense thinks custom landing pages are badly underused. A scalable long-form ad aimed at unaware or problem-aware people educates the viewer, but many click before the ad ends, and a bare product page with price, add to cart and a short description drops the story. The lander should carry it on. Structure: a hook that echoes the ad (their sleep example: waking at 3am is probably not a willpower problem but a mineral most adults run low on), the problem agitated, the unique mechanism, three common objections answered, proof through both a mechanism stat (before and after sleep quality) and reviews, a risk reversal (a 60-night money-back guarantee), and the call to action, which can lead to a cart drawer and upsell. This is the same order as a good VSL script, because good ads and good pages are both just good copywriting. Listicles, advertorials and quiz funnels are other page types worth testing for cold traffic. How to apply: for your top cold video concept, write the lander in this order using the ad's own words in the hook.",
+    "conditions": "Cold top-of-funnel traffic from long-form video or problem-aware ads, especially for products that need explanation.",
+    "fails_when": "Warm, product-aware or branded traffic, which converts better going straight to the product page with fewer steps.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "7 lander sections: hook, problem, mechanism, objections, proof, risk reversal, CTA",
+      "60-night money-back guarantee in the example"
+    ],
+    "asks": [
+      "Should I send my video ads to a landing page or product page?",
+      "How do I structure an advertorial?",
+      "What is the best landing page for cold traffic?",
+      "How do I write a landing page for a VSL?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [62:54] advertorial structure for VSL traffic and the 3am sleep example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6620",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "proof matching the claim",
+      "before and after",
+      "trust badges"
+    ],
+    "claim": "Proof only works when it backs the claim you advertise: five reviews about the exact benefit beat 400 generic ones, while trust badges and security seals close nobody.",
+    "body": "A visitor who clicked an ad promising firmer skin in four weeks wants evidence of that, not general praise. Blue Sense's bold rule is that a little relevant proof beats a lot of irrelevant proof: five reviews that speak to the claim outperform 400 that say the product is great. Best forms: before and after photos or testimonial videos, ideally four or more across different demographics, plus any specific stat you can honestly support. Filter or tag reviews so the ones shown match the page's claim and the main objection. Low-quality trust signals such as trust badges and footer security seals, a leftover from 2017 and 2018 dropshipping, do nothing. A guarantee or returns policy is table stakes, not a differentiator, but place it at the end as a risk reversal: if you still have doubts, get your money back. How to apply: for each landing page, list its one claim and its main objection, then pick reviews, before and afters and stats that prove exactly those, and remove the badges.",
+    "conditions": "Product pages and landers built around a specific outcome claim, with enough reviews to filter by topic.",
+    "fails_when": "You have too few reviews to filter by claim; then collect targeted reviews first. In some regulated categories, before and after claims are restricted.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 relevant reviews beat 400 generic ones",
+      "4 before and afters across different demographics as the ideal"
+    ],
+    "asks": [
+      "Do trust badges increase conversions?",
+      "Which reviews should I show on my landing page?",
+      "How do I use before and after photos?",
+      "Where should my guarantee go on the page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "[47:20] proof must match the claim, trust badges, risk reversal"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6621",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "benefit-led copy",
+      "so what test",
+      "headline testing"
+    ],
+    "claim": "Run every product page line through a 'so what?' test and lead with the outcome, then the feature (firmer skin in four weeks using a triple peptide complex); headlines are worth split testing.",
+    "body": "The most common copy mistake Blue Sense sees is writing about the product instead of the person. A line like 'triple peptide complex' means nothing to a buyer until it answers so what: firmer skin in four weeks. Flip the order so the outcome comes first and the feature justifies it underneath. A pain-led or benefit-led headline reliably beats a feature-led one, and because the headline sits above the fold and every visitor reads it, it is one of the few page elements big enough to be worth a real split test. The same test applies below the fold: specs like 30ml, vegan, made in Australia and 'apply nightly' are feature lines with no reason attached. How to apply: paste your page copy into a list, write 'so what?' after each line, and rewrite any line that does not end in a result the buyer cares about. Then test two headline versions (benefit versus pain) against each other on paid traffic.",
+    "conditions": "Product and landing pages for products sold on an outcome (beauty, health, home, fitness).",
+    "fails_when": "Technical buyers who shop on specs (components, hardware, replacement parts), where the feature is the outcome they search for.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "firmer skin in 4 weeks as the example outcome"
+    ],
+    "asks": [
+      "How do I write better product page copy?",
+      "Should my headline talk about features or benefits?",
+      "What is worth A/B testing on a product page?",
+      "Why does my product description not sell?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [25:30] benefit-led copy and the so what test"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6622",
+    "modules": [
+      "LPG",
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "price transparency",
+      "subscription pricing",
+      "checkout total"
+    ],
+    "claim": "Show the real total before the cart: a per-month price on a quarterly-only subscription that jumps to $300 to $400 in the cart (IM8, per Blue Sense) gives buyers a reason to leave.",
+    "body": "About 14% of abandoners say they could not see the total cost up front. For most stores this is just the surprise shipping or fee problem, but some brands cause it on purpose with how they show the price. Blue Sense's example is IM8: the product page shows a price per month in small print, so it looks like about $100, but it is only sold as a quarterly subscription, so the cart drawer jumps to roughly $300 to $400. The low headline price may win the add to cart, but it creates a shock at the moment of payment. How to apply: if you show a per-unit, per-month or per-serving price, also show the amount the buyer will pay today right next to it. If you think the per-month framing helps, split test it against showing the full charge and judge on completed orders and revenue per visitor, not add to cart rate. Also check that tax is shown as included rather than as an extra line that looks like a new charge.",
+    "conditions": "Subscription, multi-pack or financed products where the headline price differs from the amount charged today.",
+    "fails_when": "Buyers in your category expect per-month pricing (for example some subscriptions) and the full charge is clearly shown before the button, in which case the framing may be fine.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "14% abandon when total cost is not shown up front",
+      "price shown at about $100 per month jumps to about $300 to $400 at cart"
+    ],
+    "asks": [
+      "Should I show monthly pricing for my subscription?",
+      "Why do people drop off when they see the cart?",
+      "How should I show prices on a subscription product?",
+      "Does showing tax at checkout hurt conversion?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [55:23] IM8 per-month price example and total cost shown up front"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-6623",
+    "modules": [
+      "LPG",
+      "MCR",
+      "CRO"
+    ],
+    "topics": [
+      "ad to page continuity",
+      "persona landing pages",
+      "angle testing"
+    ],
+    "claim": "When an ad changes the persona, offer or angle, send it to a page built for that one message; listing every benefit on one PDP lowers belief and conversion.",
+    "body": "Blue Sense calls continuity between ad and page one of the biggest wins in CRO. If you test concepts properly on Meta, each concept changes one of three things: the persona you speak to, the offer, or the angle (the mechanism or benefit). Each needs a matching page. Their creatine example: an ad for women in menopause and an ad for 19-year-old men building muscle should not land on the same 'creatine 500g' page; build one page per persona. For angle, creatine for thinking versus creatine for recovery works better on separate pages. It matters most for supplements, where one ingredient can be sold 15 ways. A collagen buyer who clicks an arthritis ad and lands on a page listing arthritis as the ninth of ten benefits starts doubting that a cure-all will fix their one problem, and buys from a brand that sells only joint support. How to apply: map every live ad concept to its persona, offer and angle; for any concept with real spend, clone the PDP and rewrite the headline, subhead, top benefits, reviews and FAQ for that one message.",
+    "conditions": "Brands testing several personas or angles on paid social, especially supplements and multi-benefit products, with enough spend per concept to justify a page.",
+    "fails_when": "A concept spends too little to justify its own page, or you cannot keep many page variants up to date; then match the top two or three concepts only.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 things that define a concept: persona, offer, angle",
+      "about 15 possible angles for a single supplement"
+    ],
+    "asks": [
+      "Should every ad go to the same product page?",
+      "Do I need different landing pages for different audiences?",
+      "Why are my supplement ads getting clicks but no sales?",
+      "How do I match my landing page to my ad?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [21:19] continuity, creatine personas and the collagen arthritis example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6624",
+    "modules": [
+      "LPG",
+      "OFF",
+      "MCR"
+    ],
+    "topics": [
+      "subscription clarity",
+      "message continuity",
+      "checkout friction"
+    ],
+    "claim": "A cold buyer expecting one toy who lands on an auto-ship page that never says how often it ships or bills hits friction; name the subscription in the ad or a pre-lander and show the schedule on the page.",
+    "body": "Lovevery's ads rarely mention that the product is a subscription, and its main landing page defaulted to auto-ship at $88 with no clear statement of whether kits come monthly or quarterly or when billing happens. Blue Sense went all the way to checkout and still could not tell. A buyer who thought they were buying a single toy then meets a commitment they did not expect, which kills conversion or creates angry cancellations later. How to apply: 1. Mention the model in the call to action or final line of the ad (for example, a new kit for each stage, skip or cancel any time). 2. If you would rather not lead with it in the ad, send cold traffic to a pre-lander that explains how it works before the product page. 3. On the product page, show the schedule in plain words: what ships now, what ships next and when, what each costs, and the billing terms, near the add to cart button. 4. Keep cancel and skip terms visible. Check this by asking someone new to buy from the ad without help and noting every question they raise.",
+    "conditions": "Subscription or auto-ship offers sold to cold paid traffic, especially where the first impression is a single product.",
+    "fails_when": "Buyers who arrive already knowing the subscription (returning visitors, referral traffic); one-time products.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Default offer: $88 per kit on auto-ship, quarterly"
+    ],
+    "asks": [
+      "Should my ads say it's a subscription?",
+      "Why do people drop off on my subscription product page?",
+      "How do I explain a subscription clearly on the landing page?",
+      "Customers are surprised by recurring charges, how do I fix it?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[02:20] unclear quarterly subscription; [11:19] ad with no mention of subscription; [49:47] redesign subscription explainer"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6625",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "PDP redesign",
+      "promise headline",
+      "mechanism on page"
+    ],
+    "claim": "Blue Sense's Lovevery PDP redesign: a promise headline instead of the product name, the mechanism moved from the blog onto the page, a due date planner, contents by week, plain pricing and terms, and reviews used throughout.",
+    "body": "Most traffic went to the entry kit page, which showed reviews, the box and auto-ship but little about why it works. Blue Sense's redesign changes six things. 1. The H1 is a promise tied to the mechanism (your newborn cannot see much yet, give them what they can) rather than the product name; some disagree with dropping the name, so test it. 2. The mechanism, buried in blog posts, moves onto the page: babies see best at 8 to 12 inches and mostly in black, white and grey for the first months, and the kit's 11 items are made for that window. 3. A due date or birth date planner picks the right kit and shows when the next boxes come. 4. What is in the box, week by week, and why each item. 5. Pricing, billing cycle and terms in plain words, plus free shipping stated before checkout. 6. Reviews placed through the page, with the total (21,000) near the end. Blue Sense expects this to lift conversion substantially. How to apply: audit your best-selling page for each element; add the mechanism and a clear how-it-works first, then test the promise headline.",
+    "conditions": "Educational or considered products where buyers need to understand why it works; subscription pages with multiple stages.",
+    "fails_when": "Simple impulse products where long pages slow buyers; brands whose search traffic depends on the product name in the H1 (check SEO before changing).",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Babies see best at 8 to 12 inches for early months",
+      "11 items plus play guide in the entry kit",
+      "21,000 reviews"
+    ],
+    "asks": [
+      "How should I redesign my product page?",
+      "Should my product page headline be a promise or the product name?",
+      "What should go on a subscription product page?",
+      "Where should I explain how my product works?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[47:18] PDP redesign elements; [46:01] mechanism and timeline sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6626",
+    "modules": [
+      "LPG",
+      "EML",
+      "OFF"
+    ],
+    "topics": [
+      "quiz funnels",
+      "offer routing",
+      "lead capture"
+    ],
+    "claim": "For products sold by stage or need, a quiz that first asks expecting, baby, gift or already subscribed routes each person to the right offer and captures their email for education.",
+    "body": "Lovevery sells different kits for each development stage plus gifts, which makes a quiz a natural fit. Blue Sense's quiz opens by asking which kit fits right now, then sorts the visitor into one of four groups: expecting a baby, already a parent of a baby or toddler, shopping for a gift, or an existing subscriber. That first answer sorts people into the relevant offer. Then come the due date or birth date, what you are noticing now, what would help most, and an opt-in for weekly development emails (education, not product pushes), before ending on a page with the matching product and why it fits. Blue Sense is confident a quiz funnel would perform well in this niche because of how much education buyers want. How to apply: list the main ways buyers differ (stage, use, recipient). Make the first question route by that, then 3 to 6 questions that personalise the result. Offer a useful email series as the opt-in. Drive quiz-call-to-action ads to it for middle-funnel and some colder traffic, and compare cost per purchase and email capture rate with sending the same ads to the product page.",
+    "conditions": "Ranges where the right product depends on the buyer's situation (age, skin type, size, recipient); buyers who value guidance.",
+    "fails_when": "Single-product stores with no meaningful choice to guide; very impatient or low-price buyers who see a quiz as a hurdle.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should I build a quiz funnel for my store?",
+      "What questions should my product quiz ask?",
+      "How do I send different customers to different offers?",
+      "Do quizzes help grow my email list?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[48:38] quiz funnel questions and offer routing"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6627",
+    "modules": [
+      "LPG",
+      "ADC",
+      "MCR"
+    ],
+    "topics": [
+      "funnel routing",
+      "persona by awareness",
+      "landing page testing"
+    ],
+    "claim": "Send each persona and awareness level to its own page: cold expecting parents to a pre-lander, warm ones to a quiz, newborn parents to the product page, gift recipients to a handover page.",
+    "body": "Sending every ad to one product page wastes the work of targeting creative at different people. Blue Sense's plan for Lovevery maps each persona and stage to the page that fits their state of mind. Cold expecting parents are about to spend heavily on a baby and do not need toys yet, so they need convincing; they go to an educational pre-lander about the first 12 weeks. Warm expecting parents go to the quiz, enter a due date and see what they will get and how it works. Parents of newborns go straight to the redesigned entry kit page. Parents of babies three months and older go to the quiz, which finds the right stage. Gift buyers go to the quiz or a gift page, with ads asking them to take it. Gift recipients get a handover page that converts them to subscribers. How to apply: write a short routing table for your own personas and stages. Fix the main product page first and keep some traffic there, then test the other destinations for the matching ads, comparing cost per purchase for each route.",
+    "conditions": "Brands with several distinct personas and enough traffic to test more than one landing destination.",
+    "fails_when": "Low traffic accounts where splitting destinations means no test reaches a result; single-persona products.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should different ads go to different landing pages?",
+      "Where should I send cold traffic versus warm traffic?",
+      "How do I match landing pages to my ad audiences?",
+      "What landing page should gift buyers see?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[53:23] landing destinations by persona and awareness stage"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6628",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "pre-landers",
+      "advertorials",
+      "cold traffic education"
+    ],
+    "claim": "When a product needs explaining and the ads already teach, send part of cold traffic to an educational pre-lander that teaches first and sells second, before the product page.",
+    "body": "Lovevery is a toy brand, but buying it is really an education decision: new parents want to know why their baby behaves the way they do and what to do about it. Blue Sense would build an advertorial-style page about why a newborn can only focus at close range and what to do in the first 12 weeks. It covers what a newborn actually sees (with an interactive how you see it, how they see it), how the first 12 weeks unfold and a plan for each week, then introduces the kit as the easy way to follow the plan, with how it works and reviews, and a button to the product page. The product appears in images early but is not sold until the end. How to apply: pick your most effective mechanism angle from ads. Write a pre-lander that teaches it in depth, frames the problem, shows the solution category, then your product. Split cold traffic between the pre-lander and the product page in the same campaign, and compare purchases per click and cost per purchase over at least two weeks.",
+    "conditions": "Considered purchases, new categories or mechanism-led products where buyers want to learn; cold, price-sensitive audiences.",
+    "fails_when": "Simple, low-priced impulse buys; warm traffic that already understands the product, for whom an extra page is just friction.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Focus distance 8 to 12 inches; 12-week window"
+    ],
+    "asks": [
+      "Should I use a pre-lander or send ads straight to the product page?",
+      "What is an advertorial landing page?",
+      "How do I sell a product that needs a lot of explaining?",
+      "When is a pre-sell page worth it?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[47:11] prelanders for cold traffic and the newborn vision advertorial"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6629",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "message match",
+      "celebrity landing pages",
+      "influencer funnels"
+    ],
+    "claim": "Give each major celebrity or ambassador a dedicated landing page that ads featuring them point to, like Alo's Jisoo collaboration page, so the page matches the ad.",
+    "body": "When someone clicks an ad with a famous face, sending them to a generic collection page breaks the story. Alo built a custom page for its Jisoo collaboration, filled with that shoot's images, and ads featuring her go there. Blue Sense says this type of funnel performs very well and knows other fashion brands doing well with it, because it ties the person into the whole funnel instead of looking like a one-off post. They would improve Alo's version: add a product carousel so people can shop the looks, and a short story about how the collaboration came about. How to apply: for each ambassador or creator who drives results, build a page with their imagery, the products they wear in shoppable form, and a short story; point all of their ads to it. Check the contract first, because rights to use someone's image on your site can be limited, which may be why Alo does not do this for every ambassador.",
+    "conditions": "Brands running paid ads with well-known creators, celebrities or ambassadors.",
+    "fails_when": "Small creators with no name recognition, where a dedicated page adds little; contracts that do not allow site use of the person's image.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Where should influencer ads send traffic?",
+      "Should I build a landing page for each ambassador?",
+      "How do I improve message match for celebrity ads?",
+      "What should a collab landing page include?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6633",
+    "evidence": {
+      "where": "about [34:50] Jisoo collaboration page"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6630",
+    "modules": [
+      "LPG",
+      "CRO",
+      "OPS"
+    ],
+    "topics": [
+      "collection pages",
+      "size curves",
+      "merchandising"
+    ],
+    "claim": "If paid traffic lands on a collection grid, the top six products and their size and colour stock decide its conversion rate; assign someone to watch and re-sort it daily.",
+    "body": "About three quarters of Alo's paid traffic lands on category grids; new arrivals alone took 220 ads and best sellers 79. A grid answers what else is there, and its results depend on what appears first. If the first products are weak sellers, conversion falls; if they are winners, it rises. Size curves matter just as much. If the best-selling colours and the medium and large sizes sell out, a big share of visitors (Blue Sense guesses around 30%) hits out-of-stock variants and conversion drops. How to apply: put proven sellers that are in stock across core sizes in the first two rows; cut empty white space above the fold; check the order and variant stock every day while campaigns run; and make one person responsible for the grid's conversion rate. Outside fashion, Blue Sense would rather use custom landing pages than grids.",
+    "conditions": "Fashion and apparel stores sending paid traffic to collection pages.",
+    "fails_when": "Single-product stores, or non-fashion brands where a dedicated landing page usually does better.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 75% of paid traffic to category grids",
+      "220 ads to new arrivals, 79 to best sellers",
+      "top 6 products drive grid performance",
+      "about 30% of traffic may target the best-selling variants"
+    ],
+    "asks": [
+      "Why did my collection page conversion rate drop?",
+      "How should I sort products on a collection page?",
+      "Does stock of popular sizes affect conversion rate?",
+      "Should I send ad traffic to a collection page or a product page?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6633",
+    "evidence": {
+      "where": "about [33:52] three quarters to category grids; about [38:42] top six products; about [41:07] size curves; [47:13] watch the grid like a hawk"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6631",
+    "modules": [
+      "LPG",
+      "ADC"
+    ],
+    "topics": [
+      "collection vs product page",
+      "new market landing pages"
+    ],
+    "claim": "Known fashion brands can send most ad traffic to collection pages (Blue Sense does about 80% of the time), but in a new market where nobody knows you, send it to your home best seller's product page.",
+    "body": "Where fashion ads should land depends on how well the market knows you. An established brand with a following can point most ads to collection pages, giving people the wider range to browse; Blue Sense says it does this around 80% of the time, and the shift to collections is typical as Australian fashion brands grow into eight and nine figures. In a new market, such as an Australian brand entering the US, there is no brand to lean on, so you need to break in with your single best product. Sabo's ads in Australia went heavy on individual product pages, which Blue Sense thought it could ease off at home, but its US traffic going to its top Australian seller's product page was exactly right. Event pages also fit event-led ranges, like Sabo's Valentine's Day and bridal collections. How to apply: tag ads by landing page type, and in each market compare conversion rate and new customer CAC for collection versus product page traffic.",
+    "conditions": "Fashion brands choosing landing pages for Meta traffic across home and new markets.",
+    "fails_when": "A collection page is thin or poorly merchandised, or a product page has stock gaps in core sizes.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "collection pages used about 80% of the time for established brands"
+    ],
+    "asks": [
+      "Should my fashion ads go to a product page or a collection page?",
+      "What landing page should I use when launching in a new country?",
+      "Do collection pages convert better than product pages?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6634",
+    "evidence": {
+      "where": "about [81:00] to [83:00] Sabo landing page review; [90:18] collections 80% of the time"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-6632",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "educational landing pages",
+      "advertorial funnels",
+      "quiz funnels"
+    ],
+    "claim": "Curiosity-led statics only convert when they lead to an educational long-form page or advertorial; sending them straight to a product page is where most brands decide statics do not work.",
+    "body": "A GLP-1 companion static calls out GLP-1 users, shows an injection pen and promises the drug without the side effects (gut, energy, hair, skin), keeping the solution vague so viewers click to learn more. Blue Sense says it will convert well only if it lands on a highly educational, long-form page, and will not work sent straight to a product page, because the viewer needs much more education before seeing a supplement. Too many brands try to do everything in the creative; this one builds curiosity and hints at a solution without showing the product. A second example is an advertorial static styled as the best hair growth products of the year and the ones to avoid, run from a doctor's page. The click goes to a review site the brand owns, written by a dermatologist persona, ranking the brand first; its listing leads to a custom landing page and then a quiz before purchase. Competitor rows are full of red crosses and link to Amazon affiliate pages, so even non-buyers earn something. Build the page before you judge the ad.",
+    "conditions": "Upper-funnel statics for considered or education-heavy products, especially supplements and health.",
+    "fails_when": "Advertorial or review-site pages that hide who owns them or make claims about competitors you cannot back, which can breach ad policy and consumer law.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Where should my top of funnel ads send traffic?",
+      "Should I send ads to a product page or a landing page?",
+      "How do advertorial funnels work?",
+      "Why do my curiosity ads get clicks but no sales?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6638",
+    "evidence": {
+      "where": "[47:33] dermatologist advertorial funnel; [52:40] GLP-1 companion static"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
   }
 ]

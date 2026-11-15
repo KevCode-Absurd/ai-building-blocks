@@ -37,7 +37,7 @@ Drafting pages needs draft access (level 2); the client approves and publishes.
 ## Before you start: the gates
 
 1. **Questions are real.** Pass when each question has a count from tickets, reviews, search or a logged assistant sub-search. Invented questions are dropped.
-2. **Answers can be sourced.** Every number and claim has a source the store holds. In the US objective claims need a reasonable basis before publishing [MCR-6022]; in India verifiable claims must be substantiated on demand [ADC-6146]. Health, skin and safety answers go through `product-claims-profile`; anything medical points to a professional.
+2. **Answers can be sourced.** Every number and claim has a source the store holds. In the US objective claims need a reasonable basis before publishing [MCR-6022]; in the UK and EU, claims must be backed by evidence held before they are made. Health, skin and safety answers go through `product-claims-profile`; anything medical points to a professional.
 3. **Profit link.** The products each page leads to have gross profit per order known [MEA-0037]; pages leading only to loss-making products wait.
 4. **Readable without JavaScript.** The help or blog template shows text in the HTML; content loaded later by apps is invisible to most AI crawlers [AEO-0002].
 
@@ -49,7 +49,7 @@ Collect questions in buyers' own words with a count and source each. Add the sub
 
 ### 2. Group into pages
 
-One page per topic that a buyer would read in one sitting: "Will it fit my car: compatibility by model", "How to wash merino", "Delivery times to every Indian state". Each page holds 5 to 12 related questions. Do not make one thin page per question; many near-empty pages built to catch similar searches are doorway pages [SEO-6461].
+One page per topic that a buyer would read in one sitting: "Will it fit my car: compatibility by model", "How to wash merino", "Delivery times to every region we ship to". Each page holds 5 to 12 related questions. Do not make one thin page per question; many near-empty pages built to catch similar searches are doorway pages [SEO-6461].
 
 Rank pages by: question count x gross profit per order of the linked products. Write the top 5 to 10.
 
@@ -71,6 +71,14 @@ Structure:
 
 Length follows the question; cited pages are not longer on average [AEO-0009]. Most pages land between 500 and 1,200 words.
 
+Three rules that make answers easy to lift:
+
+- **No links inside the short answer.** Keep the 20 to 25 word answer clean (up to about 50 words when the question needs it); put links in the detail below it.
+- **Name the store's own method.** If the store has its own rule, test or fit method, give it the brand's name ("the [brand] two-finger fit test") and use the same name on product pages, social posts and emails, so assistants repeat it as the store's idea rather than a generic tip.
+- **Vague-claim sweep.** Before handing over, swap every "many customers", "most people" or "lasts for ages" for the store's real number with its source. Anything with no number or source either goes softer or onto the "still needs a source" list in the output.
+
+**Rewriting a page that already ranks.** When a guide, blog post or FAQ ranks in Google but is never named in AI answers, rewrite it in place rather than starting a new page: keep the URL, put the direct answer and summary at the top, turn H2s into buyer questions with stand-alone answers, add the facts table, and keep the page about the same length or shorter. Normal ranking still matters, since many assistants pull from top search results.
+
 ### 5. Truth and tone
 
 - Answer honestly, including "no": "It does not fit the 2015 model" earns more trust and fewer returns than silence.
@@ -88,7 +96,8 @@ Length follows the question; cited pages are not longer on average [AEO-0009]. M
 
 ### 7. Market notes
 
-- **India:** answer delivery, COD, returns pickup and GST invoice questions by region where they differ; give delivery days per zone or state, not "3 to 7 days" for all of India. Publish Hindi or regional versions only where the store supports buyers in that language.
+- **All markets:** answer delivery, payment, returns pickup and tax invoice questions by region where they differ; give delivery days per zone, state or country, not "3 to 7 days" for everywhere. Publish versions in the other languages your buyers use only where the store supports buyers in that language.
+- **UK and EU:** answer duties and VAT questions for cross-border orders plainly (who pays, and whether the price includes them), and state the legal returns window.
 - **US:** state shipping times by region if they differ; product safety answers for children's items refer to the certificate the store holds.
 
 ### 8. Publish, then keep fresh
@@ -103,6 +112,7 @@ After the client publishes, request indexing. Cited pages skew fresh, with most 
 - Every number has a source in the claims file; health and safety answers passed the claims profile.
 - Pages sit in a subfolder of the store's domain and render without JavaScript.
 - No near-empty one-question pages.
+- No links inside the short answers; no vague claim left without a number or a place on the "still needs a source" list.
 - Each page has a last checked date and a refresh date.
 - Nothing published without the client's yes.
 
@@ -125,6 +135,7 @@ After the client publishes, request indexing. Cited pages skew fresh, with most 
 | Last checked / refresh date | |
 
 4. **Claims file:** Claim, Source, Date checked, Reviewer.
+5. **Still needs a source:** Claim, Page, What is needed (number, test, source), Owner. Plus the store's named methods and where each name is used.
 
 ## Common mistakes
 
@@ -134,10 +145,10 @@ After the client publishes, request indexing. Cited pages skew fresh, with most 
 - **Unsourced numbers.** Gate 2 and the claims file.
 - **Answers hidden in app widgets.** Gate 4 checks with JavaScript off.
 - **Write once, never update.** Step 8 sets refresh dates.
+- **Starting a new page when one already ranks.** Step 4 rewrites the ranking page in place and keeps its URL.
 
 ## Sources
 
-- ADC-6146: India requires substantiation of verifiable claims.
 - AEO-0002: app-loaded content is invisible to most AI crawlers.
 - AEO-0009: length barely matters for citations; freshness does.
 - AEO-0016: reuse assistant sub-search wording.
@@ -152,4 +163,9 @@ After the client publishes, request indexing. Cited pages skew fresh, with most 
 - SEO-6160: FAQ rich results removed from Google.
 - SEO-6461: doorway pages.
 
-What makes this skill ours: questions come only from counted buyer sources and logged assistant sub-searches; pages are ranked by the profit of the products they lead to; every section is written to stand alone when quoted, with sourced numbers and honest "no" answers; and India's delivery, COD and GST questions are answered by region.
+What makes this skill ours: questions come only from counted buyer sources and logged assistant sub-searches; pages are ranked by the profit of the products they lead to; every section is written to stand alone when quoted, with sourced numbers and honest "no" answers; and delivery, payment and tax questions are answered by region.
+
+## Selling in India
+
+- Verifiable claims must be substantiated on demand [ADC-6146].
+- Answer COD and GST invoice questions by state, and give delivery days per zone, not one range for the whole country.

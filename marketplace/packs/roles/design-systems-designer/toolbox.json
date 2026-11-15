@@ -224,7 +224,7 @@
       "items": [
         { "ref": "library:design-style-analyst", "type": "skill", "use": "brief", "when": "When the brand is a set of screenshots or links, to turn them into a profile you can reuse" },
         { "ref": "library:visual-system-rules-writer", "type": "skill", "use": "build", "when": "When the feeling is agreed, to write firm rules for colour, type and grid" },
-        { "ref": "library:build-a-brand-file-and-style-guide-from-scratch", "type": "workflow", "use": "explore", "when": "When there is no brand file at all, to get a first one to react to" },
+        { "ref": "library:build-a-brand-file-and-style-guide-from-scratch", "type": "workflow", "use": "explore", "when": "When there is no org context at all, to get a first one to react to" },
         { "ref": "kit:skills/design-token-set", "use": "build", "when": "When the rules are agreed and must become tokens" }
       ]
     },

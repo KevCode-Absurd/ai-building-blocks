@@ -76,7 +76,7 @@ A structure that has carried strong founder ads in practitioner accounts [MCR-00
 
 For cold buyers, do not open on product benefits; open on the problem or the claim [MCR-0011]. Lo-fi footage is fine for a premium brand if the product itself is not shown in the lo-fi part [MCR-0010]. Write 3 to 5 hooks per script. Mark the proof file next to every factual line.
 
-India note: record in the language the buyers use; a Hindi or regional version is its own script, not subtitles on English. Mention COD or easy returns in the call to action only if live.
+Language note: record in the languages your buyers use; each language version is its own script, not subtitles on English. Mention pay on delivery or easy returns in the call to action only if live.
 
 ### 5. Plan one recording session
 
@@ -143,4 +143,4 @@ The founder speaks as the founder, never as a customer. Customers quoted in the 
 - MCR-6022 (proposed): US substantiation before claims run.
 - MCR-6025 (proposed): US endorsement disclosures and expected results.
 
-What makes this skill ours: every line of the founder's story carries a proof file or gets cut before a script exists; the founder can be on camera, a voice, a pile of evidence or a labelled stand-in, so shyness never blocks the ad; one recording session is planned to yield dozens of hook and body versions and a second setting for later; and regional-language versions are written as their own scripts.
+What makes this skill ours: every line of the founder's story carries a proof file or gets cut before a script exists; the founder can be on camera, a voice, a pile of evidence or a labelled stand-in, so shyness never blocks the ad; one recording session is planned to yield dozens of hook and body versions and a second setting for later; and versions in each buyer language are written as their own scripts.

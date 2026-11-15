@@ -117,6 +117,17 @@ At most five changes, each small enough for a yes or no, with what changes, the 
 
 Yes, after fixes, or not yet, with the reason in one line. Use 7-day read windows; day-to-day swings under about $1,000 a day are normal [ADC-0064].
 
+### 8. Purpose and setup sweep
+
+Run this sweep inside Check E (or as its own row group) on every campaign:
+
+- **One sentence per campaign.** Write what each campaign is for and why it cannot live inside another. If nobody can defend it in one sentence, mark it MERGE (name the target campaign) or CUT. Categories, margins, buyer groups and countries justify campaigns; spend level does not [ADC-6194].
+- **Name versus contents.** A campaign called cold prospecting that reaches existing customers, or runs catalog ads to past buyers, makes its ROAS meaningless. Flag every mismatch.
+- **Setup errors**, each a finding with money at stake: existing customers not excluded from cold campaigns; store-visit or local campaigns leaking into the app rewards placement; interest or lookalike targeting still layered on purchase campaigns; budgets judged on 1-day view [ADC-6154]; flexible ads or creative enhancements switched on at ad or advertiser level [ADC-6185]; the email-to-Meta customer sync broken [ADC-6227].
+- **One attribution setting** across campaigns, normally 7-day click plus 1-day engaged view [ADC-6258].
+- **Starting cut-offs for the surface checks**, editable and labelled as practitioner defaults, not Meta rules: purchase events deduplicated at 90% or more (70 to 89% is a warning); daily budget at least 10 times target cost per purchase on each purchase ad set (5 to 9 times is a warning); fewer than 20% of ad sets in learning limited (over 40% fails); audience overlap between cold ad sets under about 15%; at least 3 ads in every concept ad set; catalog ads under about 70% of spend [ADC-0026].
+- **Small accounts.** Under about 10,000 a month, skip the frequency and overlap checks and say so.
+
 ## Checks before you hand it over
 
 1. Every finding has evidence: an export row, a date range or a screenshot.
@@ -127,6 +138,8 @@ Yes, after fixes, or not yet, with the reason in one line. Use 7-day read window
 6. The week list has five items or fewer, each with risk, access level and review date.
 7. Nothing is presented as done; all changes are proposals until the owner says yes.
 8. The audit says what the data cannot tell (for example, incrementality without a lift test).
+9. Every campaign has a one-sentence purpose with KEEP, MERGE or CUT.
+10. Surface cut-offs are labelled as editable starting points.
 
 ## Output
 
@@ -146,6 +159,7 @@ Files: `meta-audit-<date>.md`, `meta-audit-findings.csv`, `meta-change-list.md`.
 - **Raising budget on an account that is not spending.** Check C looks for blocks first.
 - **Advertising products that are about to sell out.** Check B ties spend to stock.
 - **Treating "Learning limited" as an emergency on a small account.** Compare purchases per week with the guide and read on 7 days before changing anything.
+- **Trusting a campaign name.** Check what it reaches before reading its ROAS.
 
 ## Sources
 
@@ -176,6 +190,11 @@ Files: `meta-audit-<date>.md`, `meta-audit-findings.csv`, `meta-change-list.md`.
 - [MCR-0022]: a new colour is not a new ad.
 - [MCR-0040]: cold ad-level frequency above 2.
 - [MCR-0078]: near-duplicates share one entity.
+- [ADC-6154]: drop 1-day view from reporting.
+- [ADC-6185]: settings audit.
+- [ADC-6194]: campaigns only for business differences.
+- [ADC-6227]: email to Meta sync breaks.
+- [ADC-6258]: 7-day click plus 1-day engaged view.
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 

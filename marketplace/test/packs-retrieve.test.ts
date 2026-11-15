@@ -136,7 +136,7 @@ test("tools/ask-knowledge.mjs is generated from retrieve.ts and answers the same
 test("tools/blind-review.mjs counts a winner only when both orders agree, and flags a length win", async () => {
   const { sheet, tally, verdictOf } = await load("../packs/shared/tools/blind-review.mjs");
   const s = sheet("Write one subject line.", ["Draft one", "Draft two"], 2);
-  assert.match(s, /## Draft A \(2 words\)[\s\S]*## Draft B \(2 words\)/);
+  assert.match(s, /## Draft A\n\nDraft one[\s\S]*## Draft B\n\nDraft two/);
   assert.match(s, /Length is not quality/);
   assert.equal(verdictOf("reasons\n**VERDICT:** b\nGRAFT: none"), "B");
   assert.equal(verdictOf("no verdict here"), null);

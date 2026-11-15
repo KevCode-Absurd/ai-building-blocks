@@ -1,6 +1,6 @@
 ---
 name: build-meta-retargeting-and-exclusions
-description: "The Meta audience map for a store: which custom audiences to build (purchasers, customer list, lapsed buyers, site visitors, add-to-carts), which campaigns use or exclude each one, how much money goes to existing customers worked out from customer count, frequency and CPM, and a plain verdict on whether retargeting deserves its own budget at all or should ride inside prospecting. Includes frequency warning lines, a different-product rule for retargeting, a holdout test plan for the doubtful cases, and India notes on phone-based customer lists. Use when setting up or cleaning a Meta account, when retargeting looks too good to be true, or when existing customers soak up prospecting money."
+description: "The Meta audience map for a store: which custom audiences to build (purchasers, customer list, lapsed buyers, site visitors, add-to-carts), which campaigns use or exclude each one, how much money goes to existing customers worked out from customer count, frequency and CPM, and a plain verdict on whether retargeting deserves its own budget at all or should ride inside prospecting. Includes frequency warning lines, a different-product rule for retargeting, a holdout test plan for the doubtful cases, and notes on phone-based customer lists. Use when setting up or cleaning a Meta account, when retargeting looks too good to be true, or when existing customers soak up prospecting money."
 ---
 
 # Meta retargeting and exclusion audiences
@@ -104,10 +104,24 @@ Reported retargeting returns run high because view credit and existing buyers in
 
 List each change (audience created, exclusion added, campaign paused or capped) in order. The client approves the list; exclusions on live campaigns go in one sitting, logged in `daily-ad-account-review`'s decision log.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** many buyers give a phone number, not email; upload phones with country code 91. COD buyers who refused delivery are not customers: exclude refused or RTO orders from the "existing customers" list and consider them for a separate exclusion. Click-to-WhatsApp ad engagers can form their own engaged audience.
+- **Phone-first markets:** many buyers give a phone number, not email; upload phones in full international format with the country code. Buyers who refused delivery are not customers: exclude refused or failed-delivery orders from the "existing customers" list and consider them for a separate exclusion. Click-to-WhatsApp ad engagers can form their own engaged audience.
 - **US:** include both email and phone in the customer list for better match; honour opt-outs from state privacy laws by removing those customers before each upload.
+- **UK and EU:** upload only customers whose data you may use for ads under GDPR, and remove anyone who objected to marketing.
+
+### 9. Prove the existing-customer spend with a cut test
+
+The money formula in step 3 sets a ceiling; a cut test shows how much of it earns its keep [ADC-6274].
+
+- **Agree the floor first.** Before any cut, write the sales floor with the owner: for example "pause the cut if existing-customer orders fall more than 10% against the prior 7-day baseline, read daily". No floor, no test.
+- **Cut about 30%** of the existing-customer campaign for 14 days. Cost per extra sale = spend removed / store orders lost. If that number is above the existing-customer cost ceiling, keep the cut and move the money to acquisition. One account cut from 1,000 a day to 700 and kept 47 of 50 conversions [ADC-6274].
+- **Set a lower cost ceiling** for existing customers than for new ones, about half the new-customer target, because many would buy anyway [ADC-0020] [ADC-6273].
+- **Read frequency by its own window**, never merged: 30-day frequency at about 7 or under, or 7-day at about 8 or under, is in range. About 1 on 30 days means the layer is underspent; about 30 means heavy overspend [ADC-0029] [ADC-6190].
+- **Followers and engagers who never bought** sit between cold and existing customers. They are more worth reaching than buyers, less than cold people. Leave them inside the cold campaign's reach; do not give them their own budget unless a lift test backs it.
+- **Email-to-Meta sync.** Check the email platform's customer list sync each month. When it breaks, existing customers are treated as new in cold campaigns and every exclusion leaks [ADC-6227].
+- **Email attribution is view-like.** A 5-day open plus 5-day click window credits emails the way view-through credits ads. Use email revenue as a trend line, never to argue for more retargeting spend.
+- **When a separate retargeting layer is approved,** run it as one consolidated ad set, not separate cart, checkout and visitor ad sets, which only raise CPMs [ADC-6214]. Order the ads: first answer the top reason visitors gave for not buying, in their words; then proof that backs that answer; then a different product that fits what they viewed, picked from a pairing table with margin [ADC-0033]. Judge it on 7-day click or incremental results, never headline ROAS [ADC-6290].
 
 ## Checks before you hand it over
 
@@ -119,6 +133,8 @@ List each change (audience created, exclusion added, campaign paused or capped) 
 - Frequency warning lines are on the watch list.
 - A proof plan exists if retargeting is above about 10% of spend.
 - No live exclusion change without the client's yes.
+- Any existing-customer cut test has a written sales floor, a daily read and a 14-day end date before it starts.
+- Frequency is reported with its window (7-day or 30-day) and never mixed.
 
 ## Output
 
@@ -140,6 +156,8 @@ List each change (audience created, exclusion added, campaign paused or capped) 
 - **Same product shown again and again.** Step 5 rotates a related product [ADC-0033].
 - **Trusting retargeting's reported return.** Step 6 asks for a holdout [MEA-0042].
 - **Paying to reach people the email list reaches.** Step 3 checks owned channels first.
+- **Cutting existing-customer spend with no floor.** A cut test without an agreed stop line is just a cut; write the floor first.
+- **Splitting retargeting into cart, checkout and visitor ad sets.** One consolidated ad set, steered by frequency, costs less [ADC-6214].
 
 ## Sources
 
@@ -154,5 +172,16 @@ List each change (audience created, exclusion added, campaign paused or capped) 
 - ADC-0055: exclusions are hard controls.
 - MEA-0042: view credit inflates reported return.
 - MEA-0055: separate first-time and returning P&Ls.
+- ADC-6274: cut test that kept 47 of 50 conversions.
+- ADC-6273: existing-customer CPA about half the new-customer target.
+- ADC-6190: overspend above about 8 a month.
+- ADC-6227: check the email to Meta sync.
+- ADC-6214: retargeting as a capped, merged support layer.
+- ADC-6290: judge DPA and retargeting on incremental columns.
 
-What makes this skill ours: "no separate retargeting budget" is the default and must be argued away with three conditions; existing-customer money is sized from customer count, frequency and CPM; refused COD orders are kept out of the customer list; and owned channels are checked before paying to reach past buyers.
+What makes this skill ours: "no separate retargeting budget" is the default and must be argued away with three conditions; existing-customer money is sized from customer count, frequency and CPM; refused deliveries are kept out of the customer list; and owned channels are checked before paying to reach past buyers.
+
+## Selling in India
+
+- Upload phones with country code 91.
+- Exclude refused COD or RTO orders from the "existing customers" list.

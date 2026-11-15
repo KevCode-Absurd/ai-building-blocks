@@ -39,7 +39,7 @@ Writing is read-only. Loading ads and scheduling them needs draft access; the cl
 
 1. **The discount pays.** A discount eats gross margin, not revenue: a 30% cut on a 40% margin order can move break-even ROAS from 2.5 to about 7 [OFF-0065]; required ROAS rises steeply with depth [OFF-0069]. Pass when the break-even ROAS for this offer is known and the client accepts it. Fail: stop; send back to `how-deep-can-we-discount`.
 2. **Genuine reference price.** A "was" or compare-at price must be a price the store really charged, openly and for a reasonable recent time; a price raised just to be cut is fictitious [OFF-6145]. Fail: drop the "was" price and state the cut as money or percent off today's price.
-3. **Real end and real stock.** The end date will be kept. Any "limited stock" line needs stock records that prove it; in India the advertiser must be able to show the stock level when the message ran [ADC-6147]. Fail: no urgency lines beyond the true end date.
+3. **Real end and real stock.** The end date will be kept. Any "limited stock" line needs stock records that prove it; keep the stock level from when the message ran, since regulators in the US, UK, EU and elsewhere can ask the advertiser to show it. Fail: no urgency lines beyond the true end date.
 4. **Stock covers the window.** If a hero SKU sells out on day one, ads keep spending on a dead offer. Fail: cap the offer or drop that SKU from the ads.
 
 ## Steps
@@ -48,21 +48,21 @@ Writing is read-only. Loading ads and scheduling them needs draft access; the cl
 
 One short block every ad, page and email will copy word for word:
 
-- what: "20% off all cotton kurtas" (name the range, list exclusions);
-- how: "Code DIWALI20 at checkout" or "Price already reduced";
-- when: "Ends 2 Nov, 11:59 pm IST";
+- what: "20% off all linen shirts" (name the range, list exclusions);
+- how: "Code BFCM20 at checkout" or "Price already reduced";
+- when: "Ends 1 Dec, 11:59 pm GMT" (always name the time zone);
 - conditions: minimum order, one per customer, not with other codes;
-- India: prices shown include GST [ADC-6147]; US: tax as on the page.
+- UK, EU and Australia: prices shown include VAT or the local sales tax; US: tax as on the page.
 
 If the ad says "free", the buyer must pay nothing beyond delivery, and any delivery charge must be stated [ADC-6146].
 
 ### 2. Write the reason line
 
-A sale with a reason reads as an event; a sale without one reads as the normal price. Write one true line: "Our 5th birthday", "End of summer stock", "Diwali week". Never invent a reason ("warehouse fire").
+A sale with a reason reads as an event; a sale without one reads as the normal price. Write one true line: "Our 5th birthday", "End of summer stock", "Black Friday week". Never invent a reason ("warehouse fire").
 
 ### 3. Frame the number
 
-- Show whichever is bigger to the buyer: money saved or percent off [OFF-0017]. "Save ₹600" beats "15% off" on a ₹4,000 item.
+- Show whichever is bigger to the buyer: money saved or percent off [OFF-0017]. "Save $60" beats "15% off" on a $400 item (in the store's currency).
 - For multi-unit offers, prefer "Buy 2, get 1 free" or cost per day over percentage maths [OFF-0017].
 - Small 5 to 10% codes usually lose profit because buyers do not buy more units [OFF-0014]. If the offer is that small, flag it before writing.
 
@@ -99,13 +99,13 @@ Customers acquired on deep discounts had worse lifetime value at many brands [CX
 ### 6. Fit each platform
 
 - **Meta:** primary text first line carries the lead; headline carries the offer or product; description carries the end date.
-- **Google Search:** 3 offer headlines of 30 characters or fewer ("20% Off Cotton Kurtas", "Sale Ends 2 Nov") for `write-google-responsive-search-ads`, plus one description with the terms.
+- **Google Search:** 3 offer headlines of 30 characters or fewer ("20% Off Linen Shirts", "Sale Ends 1 Dec") for `write-google-responsive-search-ads`, plus one description with the terms.
 - **TikTok and Reels:** one spoken line for the offer, on-screen text with the end date.
 - Character counts shown for each.
 
 ### 7. Plan the end
 
-Write the swap plan: at the exact end time, sale ads pause and the no-discount version and evergreen ads continue. Name who switches what, or set the platform end date on each sale ad. In India and the US, a sale ad still live after the end is bait and switch if the price is gone [ADC-6147].
+Write the swap plan: at the exact end time, sale ads pause and the no-discount version and evergreen ads continue. Name who switches what, or set the platform end date on each sale ad. In the US, UK, EU and most other markets, a sale ad still live after the end misleads buyers if the price is gone.
 
 ### 8. Plan the read
 
@@ -118,7 +118,7 @@ Sale results distort ad analysis: ad ROAS mostly shows which product was discoun
 - Any "was" price matches the store's real price history.
 - No urgency or scarcity line without proof; no resetting timers.
 - Three sale versions with different leads, and one full no-discount version.
-- India copy says prices include GST; "free" lines meet the delivery-charge rule.
+- Copy for tax-inclusive markets says prices include VAT or the local sales tax; "free" lines meet the delivery-charge rule.
 - The swap plan pauses every sale ad at the end time.
 - Nothing published or scheduled without the client's yes.
 
@@ -153,10 +153,18 @@ Sale results distort ad analysis: ad ROAS mostly shows which product was discoun
 - OFF-0017: show the bigger of money or percent.
 - OFF-0007: gift with purchase can protect margin.
 - OFF-6145: genuine former prices only.
-- ADC-6146: "free" and buy-one-get-one rules in India.
-- ADC-6147: false urgency, drip pricing and bait and switch in India.
 - MCR-0069: offer-badged copies of evergreen ads absorb peak spend.
 - MCR-0068: sale periods distort ad-level analysis.
 - CXP-0016: discount-acquired cohorts repeat less.
 
-What makes this skill ours: copy is only written after the discount's break-even ROAS is known; one terms box keeps every ad identical on end time, exclusions and GST; every "was" price is checked against the store's real price history; and a no-discount version and an end-time swap plan are part of the deliverable, not an afterthought.
+What makes this skill ours: copy is only written after the discount's break-even ROAS is known; one terms box keeps every ad identical on end time, exclusions and tax; every "was" price is checked against the store's real price history; and a no-discount version and an end-time swap plan are part of the deliverable, not an afterthought.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- The advertiser must be able to show the stock level when a "limited stock" message ran [ADC-6147].
+- Prices shown include GST [ADC-6147]. Terms example: "20% off all cotton kurtas", "Code DIWALI20 at checkout", "Ends 2 Nov, 11:59 pm IST".
+- "Diwali week" is a true reason line when the sale runs then.
+- A sale ad still live after the end is bait and switch if the price is gone [ADC-6147].
+- ADC-6146: "free" and buy-one-get-one rules in India.
+- ADC-6147: false urgency, drip pricing and bait and switch in India.

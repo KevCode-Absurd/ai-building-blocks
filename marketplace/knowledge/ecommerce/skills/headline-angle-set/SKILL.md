@@ -95,7 +95,7 @@ Write a short and a long version where limits differ. Non-Latin scripts can coun
 
 ### 6. Run the claims pass
 
-Strike any headline that: uses "best" or "number one" without a dated ranking; changes a number from its source; uses cure, treat, heal or a disease name for a product not approved for it (India: Drugs and Magic Remedies Act and ASCI code; US: FTC substantiation); names an expert, lab or press outlet the store cannot document; or compares with a named rival without a current, checkable fact. This is general practice, not a legal ruling.
+Strike any headline that: uses "best" or "number one" without a dated ranking; changes a number from its source; uses cure, treat, heal or a disease name for a product not approved for it (US: FTC substantiation; UK: the CAP code and ASA; EU: health claims rules; elsewhere: your market's ad rules); names an expert, lab or press outlet the store cannot document; or compares with a named rival without a current, checkable fact. This is general practice, not a legal ruling.
 
 ### 7. Choose the pair to test first
 
@@ -166,3 +166,7 @@ Number of headlines the budget funds = test cash / (3 x target cost per purchase
 - [LPG-0016]: test the page headline first.
 
 What makes this skill ours: the number of headlines comes from test cash and target cost per purchase; every line must match a dated facts row and a real customer phrase; the first pair is chosen from the buyer's stage; and the winner is read on store orders, never CTR.
+
+## Selling in India
+
+- Health headlines must also pass the Drugs and Magic Remedies Act and the ASCI code: no cure, treat or disease words for products not approved for them.

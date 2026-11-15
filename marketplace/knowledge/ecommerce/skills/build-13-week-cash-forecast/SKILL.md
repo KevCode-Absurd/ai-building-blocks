@@ -1,6 +1,6 @@
 ---
 name: build-13-week-cash-forecast
-description: "A thirteen-week cash forecast sheet, one column per week, showing money in (payouts, COD remittances, marketplace settlements, wholesale invoices) and money out (stock deposits and balances, ad spend on its real billing dates, shipping, 3PL, payroll, apps, taxes, loan repayments), with the lowest-cash week and every week below the safety buffer flagged. Times each receipt by the actual payout or remittance lag and each payment by its due date, adds a downside case, and lists the actions that fix each short week before it arrives. Rolls forward every week against actuals. Use when cash feels tight, before a big stock order, a sale, a hire or a financing offer, or when profit is good but the bank balance is not."
+description: "A thirteen-week cash forecast sheet, one column per week, showing money in (payouts, pay-on-delivery remittances, marketplace settlements, wholesale invoices) and money out (stock deposits and balances, ad spend on its real billing dates, shipping, 3PL, payroll, apps, taxes, loan repayments), with the lowest-cash week and every week below the safety buffer flagged. Times each receipt by the actual payout or remittance lag and each payment by its due date, adds a downside case, and lists the actions that fix each short week before it arrives. Rolls forward every week against actuals. Use when cash feels tight, before a big stock order, a sale, a hire or a financing offer, or when profit is good but the bank balance is not."
 ---
 
 # Thirteen-week cash forecast
@@ -26,12 +26,12 @@ description: "A thirteen-week cash forecast sheet, one column per week, showing 
 Required (read access, level 1):
 
 1. **Bank balances** today for every operating account, and any credit line limit and amount drawn.
-2. **Payout and settlement history**, last 8 weeks: Shopify Payments payouts report (Payout date, Charges, Refunds, Fees, Reserved funds, Total), other gateway settlement reports, marketplace settlement reports, and courier COD remittance reports.
+2. **Payout and settlement history**, last 8 weeks: Shopify Payments payouts report (Payout date, Charges, Refunds, Fees, Reserved funds, Total), other gateway settlement reports, marketplace settlement reports, and courier cash-on-delivery remittance reports where the store offers pay on delivery.
 3. **Revenue forecast** by week from `forecast-next-month-revenue`, extended to 13 weeks.
 4. **Open purchase orders**: supplier, amount, deposit and balance dates, expected arrival.
 5. **Fixed bills**: payroll and dates, rent, apps and software, agency retainers, 3PL, insurance.
 6. **Ad billing**: how each ad account charges (card on threshold, monthly invoice or prepaid) and planned spend by week.
-7. **Taxes and loans**: GST or sales tax filing dates and expected amounts, income tax advances, loan and financing repayment schedules.
+7. **Taxes and loans**: sales tax, VAT or goods and services tax filing dates and expected amounts, income tax advances, loan and financing repayment schedules.
 
 Optional: supplier payment terms, wholesale invoices due, owner drawings.
 
@@ -52,9 +52,9 @@ Thirteen columns, one per week starting Monday. Rows: opening cash, receipts by 
 ### 2. Time the receipts
 
 - **Card and wallet payouts.** Shopify Payments in the US settles in at least 3 business days, groups Friday to Sunday sales into one payout, skips weekends and holidays, and banks can add 1 to 3 days [FIN-6240]. Payouts arrive net of fees, refunds, disputes and reserves [FIN-6241], so forecast the net, not the sales. For other gateways and countries, use the lag seen in the payouts history.
-- **COD remittances (India).** Courier or aggregator pays delivered COD orders on its own cycle, minus freight and COD fees if netted. Use the actual cycle from the remittance reports and count only orders expected to be delivered (1 minus RTO rate).
-- **UPI and prepaid in India** settle through the gateway on its settlement cycle; use the history.
-- **Marketplaces.** Amazon, Flipkart and others settle on their own schedule after fees, and in India deduct tax collected at source; use the settlement history.
+- **Pay-on-delivery remittances.** Where the store offers pay on delivery, the courier pays delivered orders on its own cycle, minus freight and collection fees if netted. Use the actual cycle from the remittance reports and count only orders expected to be delivered (1 minus the failed-delivery rate).
+- **Bank transfers, local payment methods and buy now pay later** settle through the provider on its own cycle; use the history.
+- **Marketplaces.** Amazon, Walmart, Etsy, eBay, Zalando and others settle on their own schedule after fees, and some deduct taxes at source; use the settlement history.
 - **Wholesale invoices** by their due date, pushed back by each buyer's usual delay.
 
 ### 3. Time the payments
@@ -64,7 +64,7 @@ Thirteen columns, one per week starting Monday. Rows: opening cash, receipts by 
 - **Shipping labels and 3PL.** Labels bought in Shopify are charged to the card on file at a billing threshold, not deducted from payouts [SET-0006]; put them on the card's payment date. 3PL invoices on their due date.
 - **Refunds** paid out from the gateway reduce payouts; count them once, inside the payout line, not again here.
 - **Payroll, rent, apps, retainers** on their dates.
-- **Taxes.** India: GST is paid monthly or quarterly depending on the store's scheme; US: sales tax by each state's filing frequency. Confirm dates with the accountant (`set-up-taxes-gst-and-us-sales-tax`).
+- **Taxes.** US: sales tax by each state's filing frequency; UK and EU: VAT monthly or quarterly by registration; Australia: goods and services tax on the business activity statement cycle; elsewhere, the local filing calendar. Confirm dates with the accountant (`set-up-taxes-gst-and-us-sales-tax`).
 - **Loans and financing** repayments, including sales-linked repayments taken from payouts (net them in the payout line if the lender deducts at source).
 - **Owner drawings** as a line of their own.
 
@@ -74,7 +74,7 @@ Flag every week where closing cash is under the buffer, and the single lowest we
 
 ### 5. Run the downside case
 
-Practitioner default, test it: sales 20% below base, cost per new customer 20% higher, one payout delayed a week, the largest inbound shipment two weeks late (so its sales slip, but its balance payment does not), and RTO rate 5 points higher for COD stores. Show the downside closing cash under the base.
+Practitioner default, test it: sales 20% below base, cost per new customer 20% higher, one payout delayed a week, the largest inbound shipment two weeks late (so its sales slip, but its balance payment does not), and the failed-delivery rate 5 points higher for stores with pay on delivery. Show the downside closing cash under the base.
 
 ### 6. Write actions for each short week
 
@@ -93,10 +93,11 @@ Each action gets an owner, a decide-by date and the cash effect by week. Every a
 
 Each Monday: replace last week's forecast with actuals, add week 14, record the forecast error for receipts and payments, and update the action list. If the receipts error is above 10% two weeks running, re-measure the lags. Growth funded by stock loans can push profit to near zero once repayments land [FIN-0011]; watch the loan rows in growth months.
 
-### India and US notes
+### Market notes
 
-- **India:** COD remittances, RTO deductions, GST and marketplace tax deductions are the usual surprises. Keep GST collected out of spendable cash; it belongs to the government.
-- **US:** sales tax collected is not the store's money either. Peak season reserves on Shopify Payments can hold back part of the busiest weeks' money [FIN-6242].
+- **All markets:** sales tax or VAT collected is not the store's money; keep it out of spendable cash. Courier remittances, failed-delivery deductions and marketplace tax deductions are the usual surprises.
+- **US:** peak season reserves on Shopify Payments can hold back part of the busiest weeks' money [FIN-6242].
+- **UK and EU:** a VAT bill after a big quarter can be the lowest week; put it in on its due date.
 
 ## Checks before you hand it over
 
@@ -119,7 +120,7 @@ Each Monday: replace last week's forecast with actuals, add week 14, record the 
 |---|---|---|---|---|
 | Opening cash | | | | |
 | Card and wallet payouts (net) | | | | |
-| COD remittances | | | | |
+| Pay-on-delivery remittances | | | | |
 | Marketplace settlements | | | | |
 | Wholesale receipts | | | | |
 | Other receipts | | | | |
@@ -169,4 +170,10 @@ Each Monday: replace last week's forecast with actuals, add week 14, record the 
 - FIN-0029: judge growth moves on 60 to 180-day cash.
 - FIN-0011: inventory-loan growth can push profit to near zero.
 
-What makes this skill ours: every receipt is timed by the store's measured payout and COD remittance lag, not by order date; reserved money and labels on the card are handled the way Shopify actually runs them; the lowest week, not the ending balance, drives the actions; and slow stock is treated as cash to release before any borrowing.
+What makes this skill ours: every receipt is timed by the store's measured payout and remittance lag, not by order date; reserved money and labels on the card are handled the way Shopify actually runs them; the lowest week, not the ending balance, drives the actions; and slow stock is treated as cash to release before any borrowing.
+
+## Selling in India
+
+- COD remittances arrive on the courier's cycle; count only orders expected to be delivered (1 minus RTO rate).
+- UPI and prepaid settle on the gateway's cycle. Marketplaces deduct tax collected at source.
+- GST is paid monthly or quarterly by the store's scheme; keep GST collected out of spendable cash.

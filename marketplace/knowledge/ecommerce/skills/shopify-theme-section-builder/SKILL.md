@@ -50,6 +50,8 @@ Access: draft (level 2) on an unpublished duplicate theme. Publishing the theme 
 
 Duplicate the live theme in the admin. Pull the duplicate with `shopify theme pull`. Never edit the live theme.
 
+**If an AI coding assistant writes the code** (Claude Code, Cursor or similar): work in a fresh, empty folder; tell it in the first message which theme copy it may edit and that it must never push to the live theme; ask it to read the theme and show a plan before it writes anything; and build one section at a time with a review after each, because long prompts with many asks get items dropped. Keep a log of which theme copy each session edited. Shopify CLI sign-in uses a code the person pastes themselves; never give the assistant a password. Real products should already be in the store so the section is built and previewed around them, not around demo data.
+
 ### 2. Read the theme's patterns
 
 Look through `sections/`, `blocks/`, `snippets/`, `assets/`, `locales/` and `config/settings_schema.json`. Note how the theme handles: colour schemes, spacing, headings, buttons, the image snippet, and loading of section CSS. Reuse these. A section that looks native and uses the theme's variables survives theme updates better.
@@ -78,6 +80,18 @@ Pick the right file type: a **section** for a full-width module the owner places
 - Put `{{ block.shopify_attributes }}` on each block's wrapper so the editor can select it, and scope ids and CSS with `section.id`.
 - No hard-coded shopper-facing text: use translation keys with the `t` filter, adding keys to `locales/en.default.json` and schema labels to `locales/en.default.schema.json`. Add other store languages if they exist.
 - Escape owner-entered text where it lands in attributes.
+
+**Liquid details that trip AI-written code** (check against shopify.dev, which wins if it differs):
+
+- `and` and `or` are read right to left, and brackets are not allowed, so split mixed conditions into nested `if` tags rather than trusting the order.
+- `contains` works on strings and arrays of strings only, not on arrays of objects.
+- Prices always go through the `money` filters from the product or variant; never type a price or currency symbol into the code.
+- Use `image_url` then `image_tag`; the older `img_url` family is retired.
+- Theme blocks render with `{% content_for 'blocks' %}` for owner-added blocks, or `{% content_for 'block', type: 'name', id: 'name' %}` for a fixed one; the schema accepts any theme block with `{ "type": "@theme" }` and app blocks with `{ "type": "@app" }`.
+- A `range` setting needs `min`, `max` and `default`; a `font_picker` needs a `default`. `visible_if` takes a Liquid expression in double braces, such as `"{{ section.settings.show_badge }}"`, and does not work on every setting type.
+- At most one `{% stylesheet %}` and one `{% javascript %}` per file, with no Liquid inside either.
+- Translation keys are snake_case and nested no more than three levels. Words the owner is meant to change (headline, reasons, FAQ answers) live in section and block settings with real starting text in each `default`, or in the page template JSON, not in locale files.
+- Never edit `layout/theme.liquid` to add a section; if the layout must change, it has to keep printing both `content_for_header` and `content_for_layout`.
 
 ### 5. Images
 
@@ -135,6 +149,9 @@ Give the owner: the preview link, a one-page guide (how to add, edit and remove 
 - First-screen images load eagerly; all others lazy; every image has dimensions.
 - Speed medians pass against the live theme.
 - Nothing was published without the owner's yes.
+- No price is typed into the code; every price uses the `money` filters.
+- Mixed `and` and `or` conditions are split into nested `if` tags.
+- If an AI assistant wrote the code, the session log names the theme copy it edited, and it never had a password.
 
 ## Output
 
@@ -153,6 +170,8 @@ Give the owner: the preview link, a one-page guide (how to add, edit and remove 
 - **Adding a library for one slider.** Step 6 keeps JavaScript small and deferred.
 - **Skipping the editor test.** Step 8 tests every setting and empty state.
 - **Trusting one speed run.** Step 9 compares medians of three.
+- **One giant prompt for the whole page.** Step 1 builds one section at a time with a review after each.
+- **Trusting AI-written conditions.** Step 4 splits `and` and `or` into nested tags, since Liquid reads them right to left.
 
 ## Sources
 

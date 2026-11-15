@@ -100,10 +100,12 @@ Turning a first order into reorders is where wholesale pays.
 - Opt-out, unsubscribe, "stop" or a WhatsApp block: stop at once on every channel and record it [EML-6385] [EML-6320].
 - Bounce or wrong person: find the right buyer once, then stop.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** WhatsApp is often the buyer's preferred channel, but only after they share the number for this; send outside the 24-hour window as approved templates [EML-6320]. Send in the language the buyer used. Festive deadlines (Diwali gifting) compress the corporate sequence to the order-by date. Avoid bulk SMS to cold numbers.
+- **Chat-first markets** (much of Latin America, Europe, Asia and Africa): WhatsApp is often the buyer's preferred channel, but only after they share the number for this; send outside the 24-hour window as approved templates [EML-6320]. Send in the language the buyer used. Avoid bulk SMS to cold numbers.
+- **Gifting peaks:** corporate gifting deadlines (year-end holidays, Lunar New Year, local festivals) compress the sequence to the order-by date.
 - **US:** email first; phone for interested and quoted leads. Every email carries the postal address and opt-out line [EML-6385].
+- **UK and EU:** cold B2B email to a named person at a company needs a legitimate interest, a clear opt-out and a privacy notice under GDPR and the local e-privacy rules; check each country, as some need prior consent.
 
 ### 10. Approve and track
 
@@ -146,3 +148,8 @@ Show the client all five sequences, the lead list with stages and the stop rules
 - FIN-0028: sell-through drives cash.
 
 What makes this skill ours: sequences are split by stage so a sampled or quoted lead never gets a cold-lead message; every touch must add a named new asset; the money gate means follow-ups never need a discount; and the sequence keeps going after the first order, timed to the stockist's sell-through so reorders arrive before the shelf is empty.
+
+## Selling in India
+
+- WhatsApp is often the buyer's first channel; follow the same opt-in and template rules.
+- Diwali corporate gifting compresses the sequence to the order-by date.

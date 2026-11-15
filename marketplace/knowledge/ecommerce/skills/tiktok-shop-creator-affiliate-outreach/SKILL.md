@@ -17,7 +17,7 @@ description: "A TikTok Shop affiliate plan ready to run: the target creator list
 ## Not for
 
 - Setting up the shop itself: use `launch-tiktok-shop`.
-- Creators outside TikTok Shop (Instagram, YouTube), and all creator work for Indian buyers, since TikTok is not available in India: use `find-and-vet-influencers` and `write-influencer-outreach`.
+- Creators outside TikTok Shop (Instagram, YouTube), and all creator work for buyers in countries where TikTok Shop is not open: use `find-and-vet-influencers` and `write-influencer-outreach`.
 - Running creator videos as Spark or GMV Max ads: use `tiktok-spark-ads-with-creators` or `tiktok-shop-gmv-max-ads`.
 - Scripts for creators: use `write-tiktok-ad-scripts` or `creator-video-script`.
 

@@ -1,6 +1,6 @@
 ---
 name: post-purchase-how-did-you-hear-survey
-description: "A post-purchase 'how did you hear about us' survey set up for first-time buyers, with the exact question, answer list and follow-up, where it goes on Shopify's upgraded thank-you page or in a WhatsApp or email message for COD buyers, and a monthly reading sheet that sets survey answers beside ad spend, UTM data and platform-reported purchases to show what really drives new buyers. Includes sample-size rules, the channels surveys under-count, and a free path. Use when platforms all claim the same sales, before moving budget between channels, or to see word of mouth, creators and AI assistants that leave no click."
+description: "A post-purchase 'how did you hear about us' survey set up for first-time buyers, with the exact question, answer list and follow-up, where it goes on Shopify's upgraded thank-you page or in a WhatsApp, SMS or email message for buyers who skip that page (such as pay-on-delivery buyers), and a monthly reading sheet that sets survey answers beside ad spend, UTM data and platform-reported purchases to show what really drives new buyers. Includes sample-size rules, the channels surveys under-count, and a free path. Use when platforms all claim the same sales, before moving budget between channels, or to see word of mouth, creators and AI assistants that leave no click."
 ---
 
 # How-did-you-hear-about-us survey
@@ -25,7 +25,7 @@ description: "A post-purchase 'how did you hear about us' survey set up for firs
 
 1. **Channels in use**: every paid, owned and earned channel the store runs, plus spend by channel for the last 3 months.
 2. **Shopify plan and thank-you page state**: whether the store can add app blocks to the Thank you and Order status pages (all stores were moved to the upgraded pages after 26 August 2026 [MEA-6226]).
-3. **Order volume**: first-time orders per month, and COD share (India).
+3. **Order volume**: first-time orders per month, and the share of orders that never see the thank-you page (pay on delivery, phone or chat orders).
 4. **A survey tool**: any post-purchase survey app that writes answers against the order number. Free path: a one-question form linked from the order confirmation email or WhatsApp message with the order number filled in, answers kept in a sheet.
 5. For reading: Shopify order export (Name, Created at, Email or Phone, Subtotal, Financial Status), ad spend by channel, platform-reported purchases on 7-day click.
 
@@ -66,7 +66,7 @@ Shuffle the order for each buyer, keeping Other last, so no channel wins by sitt
 
 - Show it to **first-time buyers only**, or tag every answer new or returning and read only new ones. Returning buyers answer "email" and blur the picture.
 - **Prepaid orders:** the survey block on the Thank you page, under the order summary.
-- **COD orders (India):** many buyers never wait on the thank-you page; send the question in the order confirmation WhatsApp message as tappable reply buttons or a short link, once, with the order number attached. One message, no reminder unless the client approves a reminder.
+- **Pay-on-delivery and other off-page orders:** many buyers never wait on the thank-you page; send the question in the order confirmation WhatsApp message as tappable reply buttons or a short link, once, with the order number attached. One message, no reminder unless the client approves a reminder.
 - **Marketplace and draft orders:** excluded.
 
 ### 4. Map answers to channels
@@ -75,7 +75,7 @@ Write a mapping table from each answer to the reporting channel used in GA4 and 
 
 ### 5. Set it up
 
-Prepare the list for the client: tool or form, question, options, shuffle, audience rule, placement, WhatsApp or email text, where answers land. After the yes, place one test order of each type (prepaid and COD) and confirm the answer lands with the right order number.
+Prepare the list for the client: tool or form, question, options, shuffle, audience rule, placement, WhatsApp or email text, where answers land. After the yes, place one test order of each type (prepaid, and pay on delivery if offered) and confirm the answer lands with the right order number.
 
 ### 6. Read it monthly
 
@@ -107,7 +107,7 @@ Group the "almost stopped me" answers into themes each month, top five with coun
 - The question asks where the buyer first heard, single choice, with shuffled options and Other last.
 - Options match the store's real channels and include AI assistant and friend or family.
 - Only first-time buyers are read; every answer carries the order number.
-- COD buyers are reached by one approved message; nothing sent without the client's yes.
+- Buyers who skip the thank-you page are reached by one approved message; nothing sent without the client's yes.
 - The mapping table links every answer to a reporting channel.
 - The monthly sheet shows survey share, spend share, claimed share and survey CAC.
 - Channels under 30 answers are marked unclear.
@@ -134,7 +134,7 @@ Group the "almost stopped me" answers into themes each month, top five with coun
 ## Common mistakes
 
 - **Asking returning buyers.** They answer "email" and drown discovery; step 3 limits to first-time buyers.
-- **Thank-you page only in a COD market.** COD buyers skip it; step 3 adds an approved WhatsApp question.
+- **Thank-you page only when many buyers skip it.** Pay-on-delivery and off-page buyers miss it; step 3 adds an approved WhatsApp, SMS or email question.
 - **A fixed option order.** The top option wins; step 2 shuffles.
 - **Reading low-volume months.** Step 6 merges until channels pass 30 answers.
 - **Cutting retargeting because nobody named it.** Step 6 marks it unknown, not zero.
@@ -149,4 +149,8 @@ Group the "almost stopped me" answers into themes each month, top five with coun
 - LPG-0042: post-purchase survey on the thank-you page, high completion.
 - CXP-0022: track word-of-mouth share over time.
 
-What makes this skill ours: COD buyers are reached with one approved WhatsApp question instead of a thank-you page they never see; answers are read for first-time buyers only and turned into a survey CAC set against first-order gross profit; and each channel gets a verdict that sends big budget moves to a holdout test rather than straight to a cut.
+What makes this skill ours: buyers who skip the thank-you page (such as pay-on-delivery buyers) are reached with one approved message instead of a page they never see; answers are read for first-time buyers only and turned into a survey CAC set against first-order gross profit; and each channel gets a verdict that sends big budget moves to a holdout test rather than straight to a cut.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. COD share is often high, and COD buyers rarely wait on the thank-you page. Send the question once in the order confirmation WhatsApp message as tappable reply buttons or a short link, with the order number attached, and test one COD order.

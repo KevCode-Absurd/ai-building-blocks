@@ -87,10 +87,10 @@ export function WorkLine(props: { does: NonNullable<AgentCardData["does"]>; clas
 }
 
 /** An agent card for the browse grid, the profile's related list and the home page. */
-export function AgentCard(props: { agent: AgentCardData; compact?: boolean; headingLevel?: 2 | 3 }) {
+export function AgentCard(props: { agent: AgentCardData; compact?: boolean; headingLevel?: 2 | 3 | 4 }) {
   const a = props.agent;
   const profile = `/agents/${a.id}`;
-  const H = props.headingLevel === 2 ? "h2" : "h3";
+  const H = props.headingLevel === 2 ? "h2" : props.headingLevel === 4 ? "h4" : "h3";
   return (
     <article class={`dir-card${props.compact ? " dir-card-compact" : ""}`} style={`--dir-accent:${a.accent}`}>
       <a href={profile} class="dir-card-art" tabIndex={-1} aria-hidden="true"

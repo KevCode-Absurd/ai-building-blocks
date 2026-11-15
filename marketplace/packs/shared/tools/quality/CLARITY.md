@@ -7,7 +7,7 @@ Start from the plain draft's correct useful content. Keep a private coverage led
 
 ## 1. Answer first
 - The first two sentences answer the request. No date line, audience list, method note or "what we won't do" list before it.
-- Follow the first-screen rule in WORK-METHOD.md: the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news and the first move this week.
+- Follow the first-screen rule in METHOD.md step 4: the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news and the first move this week.
 - Over 1,200 words: open with a one-screen summary (5-7 bullets or a two-column table).
 - Meet the reader's actual objection head-on before adding guards.
 - Every explicit ask in the brief gets a visible answer where the reader expects it; never drop one or fold it into another section.

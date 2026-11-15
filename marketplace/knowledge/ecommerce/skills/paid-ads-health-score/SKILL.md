@@ -51,7 +51,7 @@ A score is useful when it moves for the right reasons and cannot be gamed by tid
 
 ### 1. Compute the money frame
 
-Gross profit per purchase per hero SKU; break-even cost per purchase (equal to it); new-customer orders, spend and acquisition cost from Shopify. For cash-on-delivery stores in India and similar markets, count delivered orders and subtract return-to-origin losses (practitioner default: the store's own RTO rate).
+Gross profit per purchase per hero SKU; break-even cost per purchase (equal to it); new-customer orders, spend and acquisition cost from Shopify. For stores with pay on delivery or many refused deliveries, count delivered orders and subtract failed-delivery and return losses (practitioner default: the store's own failed-delivery rate).
 
 ### 2. Score each check
 
@@ -119,6 +119,18 @@ Each item: what changes, evidence, expected effect in money where possible, risk
 
 Save the check table with the date. Next month show the score change and which checks moved; a rise that came only from coverage is labelled so.
 
+### 6. Name the one bottleneck behind the score
+
+A score says how healthy the account is; the owner also needs the one thing holding growth back. After the roll-up:
+
+- **Trend table first.** By month, for 24 months where the store has them: ad spend, new customers, cost per new customer, average order value, first-order gross profit (order value x that month's margin, never one flat margin) and first-order gross profit / cost per new customer. Read the ratio as one agency reads it: under 1 loses money on the first order; 1 to 2 is workable but needs repeat buying before scaling; 2 to 3 is the scale zone; over 3 may be leaving growth on the table [MEA-0024].
+- **Platforms alone cannot be judged.** With only platform exports and no store orders, write "MISSING: store numbers" and give no bottleneck.
+- **Drill top down:** revenue, then new-customer volume or cost, then channel, campaign, ad set, ad. Stop at the first level where one number explains the change, with one piece of evidence.
+- **Name one constraint** in this order: data (acquisition MER does not reconcile with platform ROAS; spend leaking to existing customers), then structure (campaigns without a one-sentence purpose, no test path), then creative. When creative is the constraint, say which one: volume (too few new ads), diversity (too few distinct concepts) or quality (hooks and scripts lose).
+- **Size gate.** Under about 1 million a year in revenue, judge data and structure only; skip the creative split and the retention read.
+- **Retention read** for larger stores: cohort gross profit at day 90, 180 and 365 against the store's own earlier cohorts, not a benchmark.
+- **Coverage bands:** a platform score with under 60% of its check weight judged is not shown; 60 to 79% is provisional; 80% or more is graded. Never add conversions read on different windows (Meta 7-day and Google 30-day) into one total.
+
 ## Checks before you hand it over
 
 1. The money gate passed, or the score is withheld with the reason.
@@ -128,6 +140,8 @@ Save the check table with the date. Next month show the score change and which c
 5. Quick wins show minutes, points and the projected score.
 6. Every action states its access level; nothing changes without a yes.
 7. A plain settings checklist would not beat it: it reflects profit and tracking truth.
+8. The hand-over names one bottleneck with one piece of evidence and the fix order data, then structure, then creative.
+9. The monthly trend uses each month's own margin.
 
 ## Output
 
@@ -144,7 +158,8 @@ Save the check table with the date. Next month show the score change and which c
 - **Counting unknowns as fails.** Step 2 leaves them out and shows coverage.
 - **Format quotas as health.** Checks reward results and fit, not a share of carousels.
 - **Rebuilding everything on a low score.** Step 4 makes targeted fixes first.
-- **Counting placed cash-on-delivery orders as sales.** Step 1 uses delivered orders.
+- **Counting placed but undelivered orders as sales.** Step 1 uses delivered orders.
+- **A score with no bottleneck.** The owner acts on one named constraint, not a number.
 
 ## Sources
 
@@ -170,5 +185,10 @@ Save the check table with the date. Next month show the score change and which c
 - [ADC-0040]: customer frequency under 7 per 30 days.
 - [ADC-0026]: catalog ads are often overweighted.
 - [GAD-0036]: targeted fixes before rebuilds.
+- [MEA-0024]: first-order gross profit to CAC bands.
 
-What makes this skill ours: the score is withheld until gross profit per purchase can be computed and capped when tracking fails; unknowns lower coverage instead of the score; every point carries file, row and number from plain exports across Meta, Google and TikTok; and cash-on-delivery stores are scored on delivered orders.
+What makes this skill ours: the score is withheld until gross profit per purchase can be computed and capped when tracking fails; unknowns lower coverage instead of the score; every point carries file, row and number from plain exports across Meta, Google and TikTok; and stores with many failed deliveries are scored on delivered orders.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. For COD stores, count delivered orders and subtract RTO losses at the store's own RTO rate before scoring.

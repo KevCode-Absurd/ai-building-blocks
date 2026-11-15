@@ -68,6 +68,23 @@ Least access: each person gets the lowest role that lets them do their job, in e
 
 Turn on two-step login for every person in every tool that supports it, preferring an authenticator app or passkey over SMS. On Shopify Plus the store can require a secure sign-in method for all users; on other plans, check each user. Record who has it on; recovery codes stay in each person's own password manager, never in shared files or chat.
 
+Rank the second step, strongest first, and record which one each admin uses:
+
+1. **Passkey or security key:** tied to the real site, so a fake login page cannot catch it.
+2. **Authenticator app code:** good, but a convincing fake page can still collect the code.
+3. **Push approval:** people approve prompts they did not start when they get many in a row.
+4. **Text message code:** weakest; a SIM swap or forwarded number hands it over.
+
+Admin, staff, domain registrar, email and ad accounts need step 1 or 2. Text-message-only on an admin login is a high-risk gap. Passkey support depends on the tool and plan, so check before promising it.
+
+**Recovery is the weak door.** An email reset link gives full access to whoever reads that inbox, so the inbox that receives resets for the store, domain and ad accounts gets the strongest second step of all. Each admin keeps backup codes or a second key in their own password manager.
+
+**Password rules to write down** (one page, plain words, for staff and any custom login): at least 8 characters, long ones (64 or more, spaces allowed) accepted and never cut short; no forced symbols, no change every 90 days, no password history rules, because people just add a number to the end; change a password only when exposure is suspected; allow pasting so password managers work. Suggest four random words or a password-manager password. Tell the owner to check staff and customer emails against a breach list (for example Have I Been Pwned, which the owner runs, not the agent) and force resets for matches; list this as not run until they do it.
+
+**Ask again before risky changes.** Where the tool allows it, require the password or second step again before changing the account email, password, payout or bank details, adding a staff user or creating an API key. This limits the damage from a stolen session or an unlocked laptop.
+
+**Customers:** on stores with their own customer login, ask for a second step only on a new device, a new country or a flagged address. Asking every customer every time slows checkout and costs orders.
+
 ### 5. App permissions
 
 For each installed app: what it can read and change (shown in its access details), what job it does, who installed it, last used. Remove apps with no job. Question any app with write access to orders, customers or themes that its job does not need. Private or custom apps: the owner keeps their keys; rotate keys when a developer leaves. Data from customers and orders must never be copied to spreadsheets or emails with card details; on Shopify the merchant's job is never storing card numbers outside checkout [SEC-0006].
@@ -76,14 +93,19 @@ For each installed app: what it can read and change (shown in its access details
 
 If the store runs a custom app, headless front end or its own customer login, rate limit per username and per IP at about 10 times what the heaviest real user does, so one office or mobile carrier IP is not locked out [SEC-0011].
 
+On these custom builds, also check with the developer: passwords stored with a slow, salted password hash (bcrypt-type), never plain text, and the hash library does not silently cut long passwords; login request bodies never written to log files, since that stores passwords in plain text; a random session ID kept on the server and deleted at logout or password change, so a stolen cookie stops working. On Shopify's hosted accounts and checkout these are the platform's job; mark them "platform owns" and skip them.
+
+Do not copy old "security" features that do not help: a secret picture shown at login, on-screen keyboards, hint questions with a few possible answers, or a short maximum password length.
+
 ### 7. Offboarding checklist
 
 Run the same day someone leaves, in this order: payment gateway and domain (if they had any access), Shopify staff or collaborator, ad accounts and business portfolio, email and SMS, WhatsApp provider, analytics and Search Console, courier, accounting, shared drives, password manager vault, then rotate any key or shared code they knew. Tick each line with time and who did it.
 
-### 8. India and US notes
+### 8. Market notes
 
-- India: WhatsApp business provider and courier portals often sit with a freelancer; move ownership to the store. GST portal access stays with the owner and accountant only.
+- Everywhere: the WhatsApp business provider, SMS sender and courier portals often sit with a freelancer; move ownership to the store. Tax portal access (sales tax, VAT or goods and services tax) stays with the owner and accountant only.
 - US: payment and sales tax portals, and any SMS sender registration, stay with the owner.
+- UK and EU: the VAT account (HMRC or the EU One Stop Shop) and any marketplace seller account stay with the owner; staff with access to customer data are covered by GDPR, so remove leavers the same day.
 
 ### 9. Monthly review
 
@@ -97,6 +119,9 @@ First Monday: new users and apps since last month, users inactive 60 days (pract
 - Every app has a job, an installer and an access note.
 - The offboarding checklist covers every tool on the map.
 - No password, recovery code or key appears in any file.
+- Every admin's second step is recorded by type, and no admin is on text message only without a dated fix.
+- The inbox that receives password resets has the strongest second step.
+- The one-page password and second-step policy is written, and the breach-list check is marked done or not run.
 
 ## Output
 
@@ -108,6 +133,10 @@ First Monday: new users and apps since last month, users inactive 60 days (pract
 |---|---|---|---|---|---|---|---|---|---|
 
 **Change list for approval:** #, Tool, Change, Reason, Approved by, Done by and date.
+
+**Sign-in gaps, ranked:** Gap, Account type, Severity (critical: no second step on admin, email, registrar or ad accounts, shared admin login, passwords stored or logged in plain text; high: text-message-only on admin, email-only recovery on admin, no re-ask before risky changes; medium: forced rotation or symbol rules, paste blocked, no breach check where cards or subscriptions are saved; low: wording), Fix, Owner.
+
+**Password and second-step policy:** one page: password rules, second step by account type, recovery, risky changes, when customers get a second step.
 
 **Offboarding checklist:** Tool, Action, Done (time), By.
 
@@ -121,6 +150,9 @@ First Monday: new users and apps since last month, users inactive 60 days (pract
 - **Single owner.** Step 3 adds a backup on every critical tool.
 - **Offboarding one tool at a time over weeks.** Step 7 does all tools the same day.
 - **Collaborators kept after the project.** Step 9 removes them monthly.
+- **Text message codes on the owner login.** Step 4 ranks second steps and moves admins to a passkey or app.
+- **Forcing password changes every quarter.** Step 4 changes them only when exposure is suspected.
+- **Forgetting the reset inbox.** Step 4 treats recovery email as the weakest door.
 
 ## Sources
 
@@ -131,3 +163,7 @@ First Monday: new users and apps since last month, users inactive 60 days (pract
 - ADC-0038: backup ad account at high Meta spend.
 
 What makes this skill ours: every tool the store depends on sits in one map, not just Shopify; access is set by job, with two owners and two-step login on every critical tool; the offboarding checklist runs across all tools in one sitting; and the agent never touches a password, code or key.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. The GST portal stays with the owner and accountant only. WhatsApp provider and courier aggregator accounts often sit with a freelancer; move ownership to the store.

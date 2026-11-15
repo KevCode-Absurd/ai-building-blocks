@@ -98,7 +98,7 @@ Rules for every line:
 - Each primary text leads with its own angle's proof (quote, label fact, mechanism or scene). A price or spec line appears in at most 2 primary texts; headlines and descriptions carry it. Repeated strings can group variants as one ad [MCR-0078].
 - Every claim, number and price must sit in claims allowed and match the landing page as captured today. Never invent a count such as "10,000+ customers".
 - No "it's not X, it's Y" lines; buyers read the pattern as AI copy [MCR-0016].
-- Price, currency, shipping threshold and COD availability exactly as on the site.
+- Price, currency, shipping threshold and payment options (buy now pay later, pay on delivery where offered) exactly as on the site.
 - Count characters with a script or counter, not by eye, and show the count beside each line.
 
 ### 6. Write a visual brief per concept

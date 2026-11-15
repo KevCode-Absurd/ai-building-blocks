@@ -10,7 +10,7 @@ description: "Writes an about page that tells the store's true story in the orde
 ## When to use
 
 - The about page is a generic mission statement or a wall of values.
-- Buyers ask "who are you?", "where is this made?" or "is this a real company?" before paying, especially for COD or first orders.
+- Buyers ask "who are you?", "where is this made?" or "is this a real company?" before paying, especially for first orders or pay on delivery orders.
 - The store is about to run founder ads, pitch press or work with creators, and needs one true story everyone repeats.
 - AI assistants or search results repeat wrong facts about the brand.
 
@@ -37,7 +37,7 @@ If the founder will not be interviewed, use their past posts, emails and talks, 
 ## Before you start: the gates
 
 1. **The story is true and checkable.** Every event, date, number and place in the draft has a source: the interview, a document or a public record. Fail: cut the line. Never invent hardship, a sick relative, a garage start or a "secret recipe".
-2. **Origin and making claims are exact.** "Handmade", "made in India", "made in USA", "family-run", "sustainable" are used only if literally true for the products sold now. US "Made in USA" claims follow the FTC's strict rules; ask a professional before using one. Fail: use the exact factual wording ("designed in Pune, made by our partner workshop in Tiruppur").
+2. **Origin and making claims are exact.** "Handmade", "made in USA", "made in Britain", "made in Italy", "family-run", "sustainable" are used only if literally true for the products sold now. US "Made in USA" claims follow the FTC's strict rules; ask a professional before using one. Fail: use the exact factual wording ("designed in Brooklyn, made by our partner workshop in Porto").
 3. **People shown are real.** Team photos and quotes are of real people who agreed. AI-made people are never presented as staff or customers, and any testimonial follows the FTC review rule [MCR-6021].
 
 ## Steps
@@ -51,7 +51,7 @@ If the founder will not be interviewed, use their past posts, emails and talks, 
 7. **Add proof.** Real counts ("12,400 orders shipped since 2021", from Shopify), dated press quotes with links, two reviews about trust or the founder. Optional 30 to 60 second founder video; one practitioner saw a short founder video that sold the person lift a landing page's form conversion, with no sample size given [LPG-0023], so test it.
 8. **Write the brand fact box.** A short, plain block: brand name, founded, founder names, based in, made in, what it sells, price range, shipping regions, returns window, contact, registered business name. An official brand-facts page helped assistants cite correct facts in an Ahrefs test [AEO-0011], and repeating one corrected fact across the site and other channels shifted what an assistant said over time [AEO-0017]. Keep it as text, not an image.
 9. **Write the close.** "Where to start": two or three bestsellers with one line each and a button. Then contact routes that work.
-10. **India and US notes.** India: show the registered business name, address, customer care contact and grievance officer details where the Consumer Protection (E-Commerce) Rules 2020 require them; trust lines like "Made in Jaipur by 14 artisans" help first-time and COD buyers when true. Offer a Hindi or regional version only if the brand speaks that way. US: keep origin claims exact.
+10. **Market notes.** Show the registered business name, address and customer care contact where the market requires them (UK and EU stores must show trader identity; Germany expects an Impressum). Trust lines like "Made in Leeds by 14 makers" help first-time buyers when true. Offer a version in another language only if your buyers use it and the brand speaks that way. Keep origin claims exact: in the US the FTC's "Made in USA" rules are strict, and UK and EU origin claims must not mislead.
 11. **Founder read-through.** The founder reads the draft aloud. Any line they would not say in person is rewritten from the transcript.
 
 ## Checks before you hand it over
@@ -107,3 +107,9 @@ If the founder will not be interviewed, use their past posts, emails and talks, 
 - AEO-0017: one corrected fact repeated everywhere shifts AI answers.
 
 What makes this skill ours: the story is built from a recorded interview and a confirmed fact sheet, never invented; every value becomes a practice with proof; origin claims use exact wording; and a plain-text fact box makes the page the source answer engines repeat, closing on the products buyers should try first.
+
+## Selling in India
+
+- Show the registered business name, address, customer care contact and grievance officer details where the Consumer Protection (E-Commerce) Rules 2020 require them.
+- Exact trust lines like "Made in Jaipur by 14 artisans" help first-time and COD buyers when true.
+- Offer a Hindi or regional version only if the brand speaks that way.

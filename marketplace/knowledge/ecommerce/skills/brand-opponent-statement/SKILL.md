@@ -65,7 +65,7 @@ Paste quotes verbatim with source, stars and date. Do not summarise yet [AVT-000
 
 Sort every quote through three lenses: what buyers resent about the category as a whole, where specific sellers let them down (recorded as the behaviour, never the seller's name), and the old way of solving the problem that the product replaces (the routine, tool or workaround buyers describe giving up). Then group the quotes by the industry habit behind them, not by product fault. A habit is something many sellers do on purpose: filler ingredients, sizing that runs small to look slim, subscriptions that are hard to cancel, vague sourcing, prices inflated for a permanent "sale", packaging waste, slow refunds. Count quotes per habit and note how many sources they span. Three-star reviews that disagree with each other (too basic, too complex) are not a habit to fight [AVT-0008].
 
-Keep habits with at least ten quotes from at least two kinds of source (practitioner default, test it). Fewer means a hunch.
+Keep habits with at least ten quotes from at least two kinds of source (practitioner default, test it). Fewer means a hunch. If every habit is a hunch, do not stop: write one provisional statement, mark it provisional, and add one post-purchase survey question that would confirm or kill it (for example "What annoyed you most about the [category] you bought before?").
 
 ### 3. Keep only habits the store beats
 
@@ -80,8 +80,10 @@ In a market that already knows the category and has tried existing options, atta
 Format: **We oppose [habit] because [pain buyers name, in their words]. Instead, [what the store does, with proof].** Then one plain sentence for the website and one hook line for ads.
 
 Rules:
-- Name the habit, never a company or a product. Comparative claims about a named rival need proof and invite legal risk (US false advertising law; ASCI's code on disparagement in India).
+- Name the habit, never a company or a product. Comparative claims about a named rival need proof and invite legal risk (US false advertising law, the UK CAP Code and EU comparative advertising rules on disparagement).
 - Use the customers' own words for the pain.
+- Respect people who still buy the old way. Most future customers are using it today; a reader who bought the old way should feel understood, not foolish. Mock the habit, never the buyer.
+- Choose the clearest statement the proof supports, not the angriest.
 - A statement everyone on the team likes at once is usually too safe; one that splits the room has more energy [BRD-0016]. Keep at least one candidate that makes someone uncomfortable.
 - Write each as a short story beat too: the frustration, then the fix. Misconceptions and frustrations make strong story ads when the brand can prove its side [ORG-0027].
 
@@ -95,15 +97,18 @@ Rules:
 
 Adopt the winner only if it beat the store's current best ad or post on the decision metric. Write the adopted statement into `store-knowledge-folder` (`03-voice-and-look.md`) with test dates and numbers, and add the result to the learnings log. Add the "never do" list: the habit itself, as an operating promise the team signs up to.
 
+Turn the statement into a positive promise in one sentence (what buyers get, not only what the store refuses), and show what it changes: two rewrites of live copy (one product page line, one ad opener, before and after) and at least one product, policy or packaging decision the statement now forces (for example, refunds within two days, no permanent "sale" banner, sizing printed in centimetres). A statement that changes no decision is a slogan; send it back to step 3.
+
 ## Checks before you hand it over
 
 1. Every candidate habit shows a quote count, source count and date range.
 2. Every candidate names an operational proof the store holds, with a link or file.
 3. No statement names a rival company or product.
 4. No statement implies a health or results claim the product cannot support.
-5. The test plan shows budget per candidate, the decision rule, and that spend waits for the owner's yes.
-6. Test results are read from store orders when tracking failed gate 4.
-7. The plain one-pass answer (a statement written from the brief alone) is shown, and the final beats it on proof and customer words.
+5. No statement mocks buyers of the old way; the adopted one has a positive promise, two copy rewrites and at least one decision it forces.
+6. The test plan shows budget per candidate, the decision rule, and that spend waits for the owner's yes.
+7. Test results are read from store orders when tracking failed gate 4.
+8. The plain one-pass answer (a statement written from the brief alone) is shown, and the final beats it on proof and customer words.
 
 ## Output
 
@@ -112,6 +117,7 @@ Adopt the winner only if it beat the store's current best ad or post on the deci
 3. **Candidate cards (three):** statement, website sentence, ad hook line, two customer quotes, proof, "never do" promise.
 4. **Test plan:** candidate, format, budget cap, target cost per purchase, decision rule, start and end date, owner approval line.
 5. **Quotes file:** quote, habit, source, stars, date.
+6. **After adoption:** the positive promise, two before-and-after copy rewrites, and the decisions the statement forces.
 
 ## Common mistakes
 
@@ -121,6 +127,8 @@ Adopt the winner only if it beat the store's current best ad or post on the deci
 - **Adopting on team taste.** Step 6 tests on store orders or, at minimum, organic response.
 - **Mechanism fights with a parity product.** Step 3 moves to service, honesty or an ignored buyer instead.
 - **Judging a test on clicks.** The paid path judges on store-side purchases at three times target cost.
+- **Sneering at buyers of the old way.** Step 5 mocks the habit, never the buyer.
+- **A stance that changes nothing.** Step 7 names the decisions it forces.
 
 ## Sources
 

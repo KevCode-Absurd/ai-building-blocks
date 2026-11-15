@@ -1,6 +1,6 @@
 ---
 name: creator-video-script
-description: "Write a creator-style video script for a store's product that sounds like a real person talking, ready to hand to a creator. First fixes the spine (one buyer in one moment, the want, awareness stage, the one or two objections the demo must answer on camera, voice, story type, shooting and delivery style), then delivers a timestamped script sized to the concept, delivery notes fitted to the creator, a 4 to 8 shot list, three alternate openers labelled by stage, an optional cutdown only if it still works, and the creator brief: deliverables, raw files, usage rights and term, partnership ad access, disclosure, fee against gross profit, dates. Every claim passes two checks: the approved list and what this creator really experienced. India notes included. Read access only; sending or paying needs a yes."
+description: "Write a creator-style video script for a store's product that sounds like a real person talking, ready to hand to a creator. First fixes the spine (one buyer in one moment, the want, awareness stage, the one or two objections the demo must answer on camera, voice, story type, shooting and delivery style), then delivers a timestamped script sized to the concept, delivery notes fitted to the creator, a 4 to 8 shot list, three alternate openers labelled by stage, an optional cutdown only if it still works, and the creator brief: deliverables, raw files, usage rights and term, partnership ad access, disclosure, fee against gross profit, dates. Every claim passes two checks: the approved list and what this creator really experienced. Notes for selling across markets and languages included. Read access only; sending or paying needs a yes."
 ---
 
 # Creator video script for an online store
@@ -63,6 +63,8 @@ Missing 5: write for "a customer who has used it for at least two weeks", state 
 
 If a part cannot be filled from evidence, the spine is not ready; ask once.
 
+Then write the spine as one sentence: "[situation], but [snag], so [what they did]". The snag is the buyer's own doubt or hassle, in review words. If you cannot fill the "but", the script is not ready: a draft that runs "and, and, and" is a feature list wearing a story.
+
 ### 2. Pick one claim and one reason it works
 
 One main benefit from claims allowed and one plain reason. One named mechanism beats a stack of adjectives [MCR-0066]. For cold, problem-aware viewers, give a few seconds of how it works before the product appears [MCR-0014].
@@ -79,9 +81,23 @@ Beat order is fixed; the middle beats stretch to fit the length.
 | Honest turn | The true result, said modestly, plus one real limit ("took about a week to notice") |
 | Call to action (last 5 to 10 s) | A soft ask, and the offer and risk reducer exactly as on the page today |
 
+Size it to a word budget before writing. People talking to a phone run at about 2.5 words a second, so 15 seconds holds about 35 spoken words, 30 seconds about 70, 45 seconds about 105 and 60 seconds about 150. Check it the other way too: allow about 4 seconds per real use step in the demo, plus about 8 for the opener and setup and about 12 for the turn and call to action. If the two disagree, the length is wrong, not the pace. Starting split by length (seconds):
+
+| Length | Opener | Setup | Demonstration | Honest turn | Call to action |
+|---|---|---|---|---|---|
+| 15 | 0 to 3 | 3 to 5 | 5 to 11 | 11 to 13 | 13 to 15 |
+| 30 | 0 to 3 | 3 to 7 | 7 to 21 | 21 to 26 | 26 to 30 |
+| 45 | 0 to 3 | 3 to 9 | 9 to 31 | 31 to 39 | 39 to 45 |
+| 60 | 0 to 3 | 3 to 10 | 10 to 40 | 40 to 50 | 50 to 60 |
+
+Pick one **anchor**: a single concrete detail from the facts (a count, a size, a time of day, a week number), said once and also seen on screen as the **proof moment** (the label held to the lens, the timer, the count laid out). Price and offer terms do not count as the anchor. A second or third number turns a post into a pitch.
+
 Rules:
 
 - Talking points plus 2 or 3 exact lines (the claim, the offer). Contractions; short sentences; about grade 5 to 8.
+- Anything only the creator knows is a bracket they fill: `[CREATOR: what you used before]`, `[CREATOR: the day you noticed]`. The moment of surprise or doubt is always a bracket the creator confirms.
+- Avoid the stock patterns that make a script sound written: a question the speaker answers straight away (say the doubt as a statement instead: "I figured a gummy couldn't hold enough"), a "no this, no that" list, a run of clipped fragments, and a slogan as the last line.
+- Never "game-changer", "obsessed", "life-changing" or "revolutionary"; never "BUY NOW".
 - One concrete detail from the creator's real use (a time of day, a week count) when it is true; never invent one to sound specific.
 - No line in a customer's mouth that no real customer said; no lines labelled "illustrative".
 - No jabs at an unnamed "big brand"; compare with the usual way or not at all.
@@ -98,6 +114,10 @@ A line stays only if both pass. Results not yet had become "what I'm hoping for"
 ### 5. Write delivery notes fitted to the creator
 
 From their past videos, note what they do well (fast energy, calm explaining, humour) and bend the beats to it rather than fighting it. Then: pace per beat, the stressed word in the opener, where the pause goes, camera position per beat, wardrobe, setting, props. Ask for one take with talking points and one fully in their own words.
+
+When choosing between creators, ask each for two or three past videos and the brief behind each one; the pair shows whether they need a tight script or can turn loose direction into strong work [MCR-6679]. Cast creators native to the market the ad will run in: local accents carry, and home-market winners often need a local re-voice or reshoot before they work abroad [MCR-6677]. For fashion and other products where fit decides the sale, also ask for a no-talking cut with size details on screen, which travels across markets and cuts returns [MCR-6830].
+
+Who is speaking sets what they may say. A hired creator says "I" only about what they really did. An actor or AI presenter never claims a personal result or story; their lines become "you" lines, an observation, or a real customer's words quoted exactly with the source, and the ad carries the platform's AI or dramatisation label. Hand AI-presenter jobs to `ai-creator-style-video-ad`.
 
 ### 6. Shot list (4 to 8 shots, all 9:16)
 
@@ -126,15 +146,20 @@ Three openers on the same body, each a different tactic (question, call-out, bol
 | Usage rights | Paid use on Meta and TikTok for a set term (practitioner default: 6 to 12 months), organic reposting, no resale |
 | Partnership ads | Creator grants partnership ad access to the store's page and a TikTok ad code if used; they can carry a large share of spend in some accounts [ADC-0011] |
 | Fee | Flat per deliverable, not a share of spend [ORG-0033], set against the creator's recent average views [ORG-0041]; shown as orders needed to pay back at GPP |
-| Disclosure | Platform paid partnership label plus a clear tag such as #ad; FTC endorsement rules in the US; ASCI influencer guidelines in India |
+| Disclosure | Platform paid partnership label plus a clear tag such as #ad; FTC endorsement rules in the US; ASA and CAP Code rules in the UK; the local influencer rules in each market where it runs |
 | Dates | Ship date, draft due, one revision round, final due |
 | Do and do not | Claims allowed only; no competitor names; no medical or income claims |
+| Shoot run order | A 10-second test clip played back to check light, sound and framing; talk takes on the talking points; silent hands takes in the real order of use, including the proof moment; the openers last, two takes each, when the creator is warmed up; 5 seconds of room sound with nobody talking |
+| Must and maybe | Must: 9:16, face the light, quiet room, no music or TV, product name readable with fingers off it, no other brands in frame, raw files with no filters. Maybe: where in the home, what they wear (plain, no logos), sitting or standing, their own way into each point |
+| File names | One pattern, no folders: `brand_creator_part_take` (for example `brand_ana_hands-open_t1`), plus a note on which opener felt most like them, any line they changed or dropped and why, and any shot they could not get |
 
-### 9. India notes
+First-person openers in the brief are marked "film only if true for you". Filming a video does not by itself give the store the right to run it as an ad; the rights line above does.
 
-- Offer the script in Hindi, Hinglish or the creator's regional language where the store sells; a person translates the exact-claim lines (practitioner default, test it).
-- Mention cash on delivery only if the page shows it, and only after `store-meta-math` confirms refused COD orders still leave the product profitable.
-- Shoot in real Indian homes and settings when the buyers are Indian.
+### 9. Notes by market
+
+- Offer the script in the languages your buyers use, or in the creator's own language where the store sells; a person translates the exact-claim lines (practitioner default, test it).
+- Mention pay on delivery only if the market offers it and the page shows it, and only after `store-meta-math` confirms refused orders still leave the product profitable.
+- Shoot in real homes and settings from the buyers' own country, with local plugs, packaging, currency and seasons in view.
 
 ### 10. Log it
 
@@ -150,6 +175,8 @@ Add the concept key, spine, creator and date to the store's angle log so the nex
 6. Rights, term, raw files, partnership access and disclosure are written.
 7. The fee is shown as orders needed to pay back.
 8. Nothing is sent or paid without a yes.
+9. The spine has a real "but"; spoken words fit the budget for the length; one anchor is said once and seen on screen.
+10. Every creator-only detail is a bracket, and no actor or AI presenter claims a personal result.
 
 ## Output
 
@@ -182,8 +209,18 @@ Save as `CREATOR-BRIEF-<creator>-<product>.md`.
 - MCR-0066: one named mechanism beats adjectives.
 - MCR-0076: cut each ad with several openers.
 - MCR-0077: benefits before features; fix the first half.
+- MCR-6677: use creators native to the target market.
+- MCR-6679: ask creators for past work and the briefs behind it.
+- MCR-6830: ask fashion creators for a no-talking cut with sizes on screen.
 - ORG-0017: show the topic in the first frame.
 - ORG-0033: flat fees for partner ads.
 - ORG-0041: price creator deals from recent average views.
 
-What makes this skill ours: every claim must pass the store's approved list and the creator's real experience, with no invented customer lines; the creator fee is shown as orders needed to pay it back at gross profit per purchase; the script is fitted to the creator's own style and to the stage the account under-serves; and the brief carries the rights, raw files, partnership access and disclosure that decide whether the video can ever run as an ad, including in India.
+What makes this skill ours: every claim must pass the store's approved list and the creator's real experience, with no invented customer lines; the creator fee is shown as orders needed to pay it back at gross profit per purchase; the script is fitted to the creator's own style and to the stage the account under-serves; and the brief carries the rights, raw files, partnership access and disclosure that decide whether the video can ever run as an ad, in every market where it runs.
+
+## Selling in India
+
+- Offer the script in Hindi, Hinglish or the creator's regional language; a person translates the exact-claim lines.
+- Mention cash on delivery only if the page shows it, and only after `store-meta-math` confirms refused COD orders still leave the product profitable.
+- Shoot in real Indian homes and settings when the buyers are Indian.
+- Disclosure follows the ASCI influencer guidelines as well as the platform label.

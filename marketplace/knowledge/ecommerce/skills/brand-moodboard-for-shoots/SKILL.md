@@ -91,10 +91,11 @@ A 150-word section for creators: where to film (real home settings that match th
 
 Give the board to someone who has not seen the brand and show them 10 mixed images (5 on-brand, 5 not). Pass when they sort at least 8 correctly. Then agree the board with the named decision-maker and date it.
 
-### India and US notes
+### Market notes
 
-- **India:** settings, clothing and skin tones should match where the store's orders come from; a Mumbai flat, a Chennai home and a Delhi winter look different. Festive boards (Diwali, Eid, Onam, weddings) are separate seasonal pages, not a change to the base board. Avoid skin-lightening cues; ASCI has specific guidelines against ads that show darker skin as less attractive or less successful.
-- **US:** buyer diversity should reflect the real customer base from data, not a token mix. Seasonal looks (holiday, back to school) are separate pages.
+- **Settings:** settings, clothing and skin tones should match where the store's orders come from; a London flat, a Texas suburb and a Sydney summer look different. Buyer diversity should reflect the real customer base from data, not a token mix.
+- **Seasons:** seasonal looks (Christmas, back to school, Eid, Lunar New Year, local festivals, weddings) are separate pages, not a change to the base board.
+- **Skin tone:** avoid skin-lightening cues; several ad codes treat ads that show darker skin as less attractive or less successful as harmful.
 
 ## Checks before you hand it over
 
@@ -147,3 +148,9 @@ Give the board to someone who has not seen the brand and show them 10 mixed imag
 - MEA-0037: gross margin is the delivered cost to the door.
 
 What makes this skill ours: the board starts from the store's own best and worst ads, not a mood; it says what must stay fixed and what must vary so ads stay distinct for delivery; AI defaults and fake customers are named as don'ts; and the same rules travel in a prompt block and a creator brief, tested by a cold sorter before anyone shoots.
+
+## Selling in India
+
+- A Mumbai flat, a Chennai home and a Delhi winter look different; match the regions orders come from.
+- Diwali, Eid, Onam and wedding boards are separate seasonal pages.
+- ASCI has specific guidelines against ads that show darker skin as less attractive or less successful.

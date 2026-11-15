@@ -101,8 +101,8 @@ After each fix ships: URL Inspection live test, then Request indexing for the mo
 
 ### 10. Market notes
 
-- **India:** check the .in domain, if any, redirects or carries hreflang (`international-seo-hreflang`); COD and pincode checker apps sometimes inject text by JavaScript, so include them in step 6.
-- **US:** state-specific landing pages built only to rank for each state are doorway risks; flag them.
+- **Country domains and markets:** check each country domain or subfolder (.co.uk, .de, .com.au and so on) redirects or carries hreflang (`international-seo-hreflang`); delivery date, postcode checker and payment badge apps sometimes inject text by JavaScript, so include them in step 6.
+- **Location pages:** pages built only to rank for each state, region or city are doorway risks; flag them.
 
 ## Checks before you hand it over
 
@@ -147,3 +147,7 @@ After each fix ships: URL Inspection live test, then Request indexing for the mo
 - SEO-6464: canonical signals and what not to use.
 
 What makes this skill ours: each Search Console reason is translated into its usual Shopify cause; issues are ranked by the gross profit of the pages they hide; AI crawlers and CDN bot settings are part of the audit; and risky edits like robots.txt.liquid need their own client yes.
+
+## Selling in India
+
+- Check any .in domain redirects or carries hreflang. COD and pincode checker apps often inject text by JavaScript; include them in step 6.

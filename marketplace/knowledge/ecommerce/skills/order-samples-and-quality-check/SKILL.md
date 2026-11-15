@@ -20,6 +20,9 @@ description: "A sample order plan for the shortlisted suppliers and a quality ch
 - Writing the spec the samples are judged against: use `write-product-spec-sheet-for-factory`.
 - Rating suppliers over a quarter: use `supplier-scorecard`.
 - Customer return handling: hand to the support agent.
+- The golden sample record and defect list in full: use `golden-sample-and-defect-list`.
+- The AQL plan, inspection schedule and pass, rework or reject call on each report: use `aql-sampling-plan-and-inspection-calls`.
+- Lab tests and certificates: use `product-test-and-certificate-plan`.
 
 ## What you need
 
@@ -38,7 +41,7 @@ Paying for samples and inspections needs a client yes for each payment. Messages
 
 1. **Spec fixed.** Pass: there is a written spec with exact measures and a version number. Fail: write it first; you cannot reject a sample against words like "good quality".
 2. **Budget and time.** Pass: sample fees, courier and duty fit the budget, and three to six weeks for sampling fit the launch date. US note: small sample shipments now carry duty [COG-6261].
-3. **Product rules.** Pass: the required labels and certificates are listed (India: Legal Metrology pack declarations [COG-6264] and any BIS order; US: product-specific rules such as textile labels [COG-6263]).
+3. **Product rules.** Pass: the required labels and certificates are listed (your market's labelling and product safety rules, for example in the US product-specific rules such as textile labels [COG-6263] and CPSC rules; in the UK and EU, UKCA or CE marking and the General Product Safety Regulation; in Australia, the ACCC's mandatory standards; plus any pack declarations your market needs [COG-6264]).
 
 ## Steps
 
@@ -55,6 +58,8 @@ For custom products, approve in three stages and never skip one [COG-0007]:
 3. **Production sample:** pulled from the start of the bulk run, checked against the golden sample before the rest is made.
 
 For stock products with a logo or packaging change, stage 2 and 3 are enough. Send a physical reference sample with the spec where the look or feel is hard to describe [COG-0005].
+
+For apparel, add a size set (one sample in every size) before the pre-production sample, so grading is checked across sizes; a new garment style often takes 5 to 7 sample rounds (proto, fit, size set, salesman, test, pre-production, top of production), with bulk only after size set and pre-production approval. Where colour matters, approve lab dips per material first (`colour-standard-and-lab-dip-approval`).
 
 ### 3. Build the checklist before samples arrive
 
@@ -78,6 +83,8 @@ Run the same tests on every supplier's sample and the reference product, side by
 
 Score each sample: number of critical, major and minor fails. Reject any critical fail. Prefer the sample with fewest majors; send a written fix list to the others and allow one resample round.
 
+To compare samples on one number, weight each checklist line: critical 3, major 2, minor 1. Sample score = 100 x (weight of lines passed) / (weight of lines checked), with the count of lines not checked shown beside it. It is a house scale, not an industry figure. Any critical fail, or any critical line not checked, means hold whatever the score; a production sample that does not match the approved pre-production sample is also a hold.
+
 ### 5. Decide and lock
 
 Approve one supplier and keep the second warm. Record the golden sample's spec version and photos. A cheaper new supplier gets a small trial order first; one switch to a supplier about 20% cheaper produced mostly faulty units in a 500-unit trial [COG-0009].
@@ -90,6 +97,9 @@ Book a third-party pre-shipment inspection before the goods leave the factory, a
 - Allows zero critical defects. Major and minor limits are agreed in the purchase order (practitioner default: a tighter limit for major than minor).
 - Checks against the golden sample, measures, counts cartons, weighs cartons, checks labels and shipping marks, and photographs everything.
 - Confirms the export and customs documents are in the shipment; a single missing customs document once got a brand's stock held over its peak season [OPS-0001].
+- Opens at least the square root of the total export cartons, picked at random from all parts of the stack.
+
+Common defaults to write into the purchase order: ISO 2859-1 general inspection level II, AQL 0 for critical, 2.5 for major and 4.0 for minor defects. For a 4,000-unit lot that means 200 units inspected, rejecting at 11 majors or 15 minors. Book the pre-shipment inspection for when production is complete and at least 80% is packed, at least 3 days ahead; one inspector lists about 268 dollars per man-day in Asia. On a first order, add a during-production check at about 20% made, timed to the first finished units. Send the inspector a sealed golden sample yourself, because a sample left at the factory can be swapped. If the lot fails, the re-inspection is at the supplier's cost: pay the inspector and deduct the fee from the balance with a debit note. The full plan and the call on each report sit in `aql-sampling-plan-and-inspection-calls`.
 
 If you cannot afford an inspector, order about 10% extra to cover defects [COG-0009] and inspect a sample of cartons on arrival before stock goes live.
 
@@ -97,10 +107,13 @@ If you cannot afford an inspector, order about 10% extra to cover defects [COG-0
 
 Check a random set of cartons against the checklist before listing. Watch the return rate and return reasons on the new stock for 90 days and compare with the previous supplier or lot. Poor returns cost repeat buyers: 71% of consumers in one 2025 survey said a poor return makes them less likely to buy again [CXP-0007].
 
-### India and US notes
+On Alibaba.com Trade Assurance orders, refund claims must be made within 30 days of delivery (60 for Enterprise buyers), so open cartons as soon as stock lands. Before charging a factory for defects found in returns, check the returned goods: US retailers judged about 9% of returns fraudulent in 2025. Log every return with a reason in Shopify, since a refund issued without a return records none.
 
-- **India:** local suppliers will often courier samples within days; still use the same checklist. Check the pack declarations, including MRP inclusive of all taxes and the importer's address for imports [COG-6264].
+### Market notes
+
+- **Local suppliers anywhere:** they will often courier samples within days; still use the same checklist. Check the pack declarations your market needs, such as net quantity, maker or importer name and address, and price marking rules [COG-6264].
 - **US:** country of origin must be marked as required; for textiles it goes on the front of the label [COG-6263].
+- **UK and EU:** the importer's name and address must be on the product or pack, and a UK or EU responsible person may be needed for CE or UKCA goods.
 
 ## Checks before you hand it over
 
@@ -110,6 +123,8 @@ Check a random set of cartons against the checklist before listing. Watch the re
 - The golden sample is recorded with spec version and photos, one kept by each side.
 - The pre-shipment inspection brief states the sampling level and limits, agreed before production.
 - The balance payment is tied to a passed inspection.
+- Sample scores show the weights and the lines not checked, and no sample with an unchecked critical line is approved.
+- The inspector received the golden sample from the store, not the factory.
 - No payment or approval was made without the client's yes.
 
 ## Output
@@ -138,6 +153,8 @@ Check a random set of cartons against the checklist before listing. Watch the re
 - **Paying the balance before inspection.** Step 6 ties payment to a pass.
 - **Switching fully to a cheaper supplier.** Step 5 trials small first.
 - **Forgetting the pack and documents.** Steps 4 and 6 check labels and customs papers.
+- **Letting the factory hand the inspector the reference.** Step 6 sends the sealed golden sample from the store.
+- **Missing the claim window.** Step 7 opens cartons on arrival.
 
 ## Sources
 
@@ -151,7 +168,20 @@ Check a random set of cartons against the checklist before listing. Watch the re
 - OPS-0001: a missing customs document held peak stock.
 - COG-6261 (proposed): US duty on small shipments since August 2025.
 - COG-6263 (proposed): US textile label rules.
-- COG-6264 (proposed): India pack declarations.
+- COG-6264 (proposed): packaged-goods pack declaration rules.
 - COG-6265 (proposed): platform protection only on platform-paid orders.
+- QIMA, AQL Calculator and guide: https://www.qima.com/aql
+- QualityInspection.org, How to select the cartons to inspect: https://qualityinspection.org/select-cartons-to-inspect/
+- QIMA, The pre-shipment inspection procedure explained: https://www.qima.com/blog/quality-control/pre-shipment-inspection-procedure
+- QIMA, During Production Inspection: https://www.qima.com/during-production-inspection
+- QualityInspection.org, How to get approved samples in the hands of the inspector?: https://qualityinspection.org/samples-in-hands-of-inspector/
+- QualityInspection.org, When QC inspections are at the supplier's charge: https://qualityinspection.org/qc-inspections-at-the-suppliers-charge/
+- Techpacker, 12 types of garment samples: https://techpacker.com/blog/12-types-of-garment-samples-you-should-know-about-for-apparel-production/
+- Alibaba.com Trade Assurance, Money-back policy: https://tradeassurance.alibaba.com/ta/MoneyBackPolicy.htm
+- NRF, Consumers expected to return nearly $850 billion in merchandise in 2025: https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025
 
 What makes this skill ours: the checklist is written before samples arrive and sorted by what a buyer would return; every sample faces the same reference; the inspection limits are agreed before production and tied to the balance payment; and new stock gets a 90-day return watch so a quality slip shows up before the next order.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Check Legal Metrology pack declarations, including MRP inclusive of all taxes and the importer's address for imports [COG-6264], and any BIS order for the category. Local suppliers will often courier samples within days; still use the same checklist.

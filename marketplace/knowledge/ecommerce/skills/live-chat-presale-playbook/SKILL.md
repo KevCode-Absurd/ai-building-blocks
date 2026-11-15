@@ -72,7 +72,7 @@ One proactive invite per session at most. Never trigger on the first page view.
 The invite names the likely doubt on that page, not "How can I help?":
 
 - Product page: "Choosing between sizes? Tell me your usual size and I'll tell you how this one fits."
-- Cart: "Want me to check delivery time to your pincode before you check out?"
+- Cart: "Want me to check delivery time to your postcode before you check out?"
 
 ### 4. Find the need in three questions
 
@@ -115,10 +115,11 @@ Chatters are already keen, so "chat conversion" overstates what chat adds. Test 
 - Check the click-map: if the chat icon draws a tiny share of clicks on a page and few orders, remove it from that page [LPG-0043].
 - Ask "Did you chat with us before buying?" in the post-purchase survey.
 
-### India and US notes
+### Market notes
 
-- **India:** many buyers prefer WhatsApp to site chat. Offer "Chat on WhatsApp" as a second button using the store's tracked link from `set-up-whatsapp-sales-chat`. Delivery-by-pincode and COD questions lead pre-sale chats; keep a pincode checker handy.
+- **Chat apps:** in many markets (much of Europe, Latin America and Asia) buyers prefer WhatsApp to site chat. Offer "Chat on WhatsApp" as a second button using the store's tracked link from `set-up-whatsapp-sales-chat`. Delivery time by postcode and payment questions often lead pre-sale chats; keep a delivery checker handy.
 - **US:** buyers expect instant answers on shipping cut-offs and returns; state the returns window in days. If chats are recorded or used to train tools, say so in the privacy policy.
+- **UK and EU:** chat logs are personal data under GDPR; set how long you keep them and answer in the languages your buyers use.
 
 ## Checks before you hand it over
 
@@ -161,3 +162,7 @@ Chatters are already keen, so "chat conversion" overstates what chat adds. Test 
 - LPG-0043: prune page elements with tiny click share.
 
 What makes this skill ours: chat invites fire only on buying signals and never on checkout; every recommendation carries the buyer's own words and a real review; the bot is fenced to one-answer facts with hand-off triggers; and chat is judged on gross profit per session with chat on versus off, not on chat conversion.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Many buyers prefer WhatsApp to site chat. Delivery-by-pincode and COD questions lead pre-sale chats; keep a pincode checker handy.

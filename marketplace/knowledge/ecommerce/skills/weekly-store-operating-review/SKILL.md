@@ -59,7 +59,7 @@ Eight to ten numbers, each with this week, the four-week average, its normal ran
 - Orders shipped on time (percent) and orders delayed.
 - Stock: products with fewer weeks of cover than their restock lead time. Read demand on in-stock days only [OPS-0014].
 - Support: first response time, tickets per 100 orders, top reason.
-- Returns, refunds and (India) RTO rate.
+- Returns, refunds and failed delivery rate.
 - Cash: balance, next four weeks' bills, expected payouts. Payouts arrive net of fees, refunds and disputes [FIN-6241].
 
 A small dip in two numbers that compounds to about 10% is usually noise [MEA-0009]; only numbers outside their normal range become exceptions.
@@ -98,10 +98,11 @@ For each decision: what was decided, by whom, why, the signal to watch, and the 
 - Standing budgets the owner pre-approved, such as a fixed amount to act on a fast trend without waiting for sign-off [OPS-0018] or a weekly budget for making unhappy customers whole [CXP-0022], are reported with what was spent.
 - Monthly: one item checks courier and 3PL invoices against orders; overcharging is common [OPS-0012].
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** report COD orders waiting for courier remittance and RTO by courier and pin-code zone; WhatsApp support response time sits with other support numbers; four to six weeks before Diwali, stock and courier capacity become standing agenda items.
-- **US:** watch carrier delays and holiday shipping cutoffs; a late shipment needs the buyer told and offered a choice under the mail order rule [CXP-6160].
+- **Payments and delivery:** report cash waiting on payouts (payment provider, marketplace, and courier remittance for pay on delivery) and failed deliveries by courier and postcode zone; WhatsApp support response time sits with other support numbers where the store answers there.
+- **Peak season:** four to six weeks before Black Friday, the holidays or the store's main local festival, stock and courier capacity become standing agenda items.
+- **Late shipments:** watch carrier delays and holiday shipping cutoffs. In the US a late shipment needs the buyer told and offered a choice under the mail order rule [CXP-6160]; UK and EU buyers can cancel and get a refund if the agreed delivery date is missed.
 
 ## Checks before you hand it over
 
@@ -155,3 +156,8 @@ For each decision: what was decided, by whom, why, the signal to watch, and the 
 - CXP-6160: US late shipment duties.
 
 What makes this skill ours: it runs on one fixed status note from every agent, so the owner sees work, blockers and approvals in one place; only numbers outside their normal range are discussed; it checks clashes between agents before they reach buyers; and priorities are capped and tied to the quarter's plan, with new ideas sent to the backlog.
+
+## Selling in India
+
+- Report COD orders waiting for courier remittance, and RTO by courier and pin-code zone.
+- Four to six weeks before Diwali, stock and courier capacity become standing agenda items.

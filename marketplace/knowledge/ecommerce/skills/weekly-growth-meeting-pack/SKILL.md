@@ -107,7 +107,7 @@ For each entry in the log: done or not, the signal it predicted, what happened, 
 
 Up to five. Each needs: the issue, its size in the goal metric's unit and money per week (sum shown, one unit for all, so they rank by sorting), the exact next step, owner, due date, the signal that shows it worked, a guard line (what makes us stop), and the access level it needs. "Monitor" is not an action unless it names the number, the threshold and the response. Any spend, send or live change in an action still needs the owner's yes before it happens.
 
-India note: on COD-heavy stores add delivered orders and RTO rate to the headline table, as placed orders overstate the week.
+Failed delivery note: where many orders fail delivery or are paid later (pay on delivery, invoice), add delivered orders and the failed delivery rate to the headline table, as placed orders overstate the week.
 
 ### 8. Write the agenda
 

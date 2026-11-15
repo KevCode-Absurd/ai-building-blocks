@@ -110,9 +110,30 @@ A stall at peak is more often the offer or the response curve than running out o
 
 For each ready campaign: start date, step size, step dates, the stock arrival dates the steps depend on, and a review after each step's read window. Put the plan's weekly cash need beside it. A peak plan starts 6 to 8 weeks out so stock and staff arrive before the spend, practitioner default.
 
-### 7. India and cash-on-delivery stores
+### 7. Stores with many returns, failed deliveries or pay on delivery
 
-Use gross profit per placed order after return-to-origin losses from `store-meta-math`. Count returned-to-origin parcels in warehouse load: they come back through the same team. Add courier remittance days to test 7. WhatsApp order-confirmation calls or messages add support load per COD order; include them in test 6.
+Use gross profit per placed order after the losses from returns, refused parcels and failed deliveries, from `store-meta-math`. Count returned and undelivered parcels in warehouse load: they come back through the same team. Where the store offers pay on delivery or buy now, pay later, add the days until that cash reaches the store to test 7. Order confirmation calls or messages add support load per risky order; include them in test 6. In peak seasons such as Black Friday and Cyber Monday, return rates rise in the weeks after; plan warehouse and support load for that wave too.
+
+### 8. Pacing bands by month elapsed, and the hard stops
+
+Step 3 reads projected month-end spend. Tie the alarm to how much of the month has gone, so an early-month wobble is not called a problem:
+
+| Projected spend vs budget | Share of month gone | Call |
+|---|---|---|
+| 90 to 110% | any | On plan |
+| Under 80% | over 50% | Under-pacing: find the blocked campaign |
+| Under 60% | over 60% | Severely under: the budget will not be spent; reallocate or loosen targets |
+| Over 110% | over 40% | Over-pacing: check the campaign running ahead against all eight tests |
+
+Add these to the saturation watchlist as practitioner starting points, set by the owner, not platform rules: CPM more than 30% above its own 14-day average; click-through down more than 20% over 14 days; cost per purchase more than 50% above target for 3 days or more.
+
+Hard stops on any scaled campaign, written into the timeline: store-basis cost per purchase over 3 times target for 3 days or more means pause and review; ROAS below half of break-even for 7 days means cut. And one cash stop per step: pause the next raise if 30-day net cash after ad spend falls below the floor the owner names, even when ROAS holds. A falling ROAS is fine while 30-day cash still rises [ADC-0034].
+
+Pick the scaling method by risk, lowest first: raise in place; add a new concept or buyer group to the winning campaign; add a new format; open a new country with its own stock and pages; test a new platform at about 10% of spend through `test-a-new-ad-channel`.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. For COD-heavy stores, use gross profit per placed order after RTO losses, add courier COD remittance days to test 7, and count WhatsApp order-confirmation calls or messages in support load for test 6.
 
 ## Checks before you hand it over
 
@@ -124,6 +145,8 @@ Use gross profit per placed order after return-to-origin losses from `store-meta
 - Each step has a date, a size, a stop rule and a review date.
 - The weekly cash need never exceeds the cash stated.
 - No raise is shown as done; each waits for a client yes.
+- Pacing calls name the share of the month already gone.
+- Every scaling step carries the cash stop as well as the cost stop.
 
 ## Output
 
@@ -145,6 +168,7 @@ Use gross profit per placed order after return-to-origin losses from `store-meta
 - **Raising a budget the account cannot spend.** Step 3 checks pacing and impression share first.
 - **Answering saturation with money.** Step 4 sends it to new concepts.
 - **Relaunching a winner as a "scaling campaign".** Step 5 raises it where it runs [ADC-0067].
+- **Calling under-pacing on day 5.** The bands only trigger once enough of the month has gone.
 
 ## Sources
 
@@ -161,5 +185,6 @@ Use gross profit per placed order after return-to-origin losses from `store-meta
 - MEA-0024, MEA-0026: gross profit to CAC bands.
 - MEA-0047: conversion rate times order value floor before scaling.
 - OPS-0006, OPS-0014, OPS-0015, OPS-0019: support load, stock forecasting, 3PL pick slippage, do not sell out at peak.
+- ADC-0034: scale toward break-even judged on 30-day net cash.
 
 What makes this skill ours: warehouse, support and stock tests that profit cannot override; demand after the raise, not today's, drives the stock and capacity checks; marginal cost of the last sales as the stop rule; and a weekly cash line beside every scaling step.

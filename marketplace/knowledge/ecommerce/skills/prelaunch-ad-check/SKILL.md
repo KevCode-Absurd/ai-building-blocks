@@ -98,7 +98,7 @@ List every claim on screen, in copy and in voiceover. For each, write the buyer 
 
 - Size and ratio are right for the placement (feed 4:5 at 1080 x 1350; Stories and Reels 9:16 at 1080 x 1920; TikTok 9:16). On 9:16, nothing that must be read sits in roughly the top 14%, bottom 35% or side 6% (Meta Reels guidance; check the current Ads Manager template). TikTok's right-side buttons and bottom caption need similar clearance; check TikTok's current safe-zone overlay.
 - Platform AI rules: realistic AI people or scenes follow the platform's current AI disclosure rules.
-- Fake urgency fails: no countdown, "only X left" or "ends tonight" unless true on the page today. In India, false urgency is a listed dark pattern under the 2023 consumer protection guidelines.
+- Fake urgency fails: no countdown, "only X left" or "ends tonight" unless true on the page today. False urgency is treated as a misleading practice in many markets (FTC rules in the US, the CMA and ASA in the UK, the EU unfair commercial practices rules).
 
 ### 8. Run it automatically (optional)
 
@@ -112,6 +112,17 @@ Give any vision-capable model the frames, the copy, the proof table, the page ca
 | T4 | Proof, every claim sourced | Hard |
 | T5 | CTA, offer and page match | Hard |
 | T6 | Policy, size, safe zones | Hard |
+
+### 8b. Batch checks: the test, the people, the set
+
+Run these whenever the files are a batch or a planned test.
+
+- **Test contract.** When ads are meant to test one change against a control, write down the test question, the control file and version, the one intended change, and what must stay the same (audience, placement, page, offer). Compare each variant with the control on headline, body, claim and proof, offer and terms, CTA, scene and product, format and placement, and destination link. Mark each difference intended, unintended or not checked. A changed proof, price, implied promise or link changes the buying argument even when only one sentence moved; a layout shift made to fit a new hook still changes attention and must be recorded. A variant that changes more than the agreed factor is not a clean test: restore the locked part, or split it into its own test. The ad may still launch, but not as part of that test.
+- **Variant count.** Do not launch an unproven ad as eight near-identical text versions; Meta may group them as one or split budget across tiny differences. About three clearly different versions read better [MCR-6617].
+- **People shown.** The person in the image matches the buyer the copy speaks to. In a batch, faces are distinct rather than one repeated face, hands and bodies are physically right, and assistive devices, clothing and settings make sense. Nothing flattens a group into a stereotype, and no finding infers a person's traits, culture or beliefs from how they look. Cite the frame or image area for each finding, and fix through composition, casting or prompt wording, never by deleting required text.
+- **Consistency across the set.** Customer counts, ratings, review counts and claims agree across every ad in the batch and the live site. Ads launched the same day with different customer counts read as careless and can mislead [MCR-6609]. Once an account runs hundreds of ads, check the whole set for clashing statements by transcribing every ad and searching it [MCR-6750].
+
+Clashing proof numbers are a hard fail (T4). A broken test contract is logged on the test, not the ad.
 
 ### 9. Give the verdict
 
@@ -134,6 +145,9 @@ After about 30 launched ads with results (practitioner default, test it), compar
 5. Model verdicts were checked by eye: all fails and at least two passes.
 6. Nothing was uploaded, edited live or launched.
 7. The log has one row per ad with the verdict and the fixes.
+8. In a test batch, each variant's differences from the control are listed, and only the agreed change differs or the test is split.
+9. Proof numbers agree across every ad in the batch and the live site.
+10. Every people finding cites a frame or image area.
 
 ## Output
 
@@ -142,6 +156,7 @@ After about 30 launched ads with results (practitioner default, test it), compar
 3. **Fix notes per ad:** the failing line or frame, why it fails, the rewrite or edit.
 4. **`prelaunch-log.csv`** columns: ad ID, check date, T1 to T6, verdict, fixes made, launch date, spend, store-side purchases, cost per purchase, target cost per purchase, CTR (link), hook rate, review verdict.
 5. **Claims cut:** each claim with no proof on file, cut from the ad, one line each.
+6. **Variant table** (test batches only): variant, dimension, what changed, intended or unintended, repair.
 
 ## Common mistakes
 
@@ -152,6 +167,8 @@ After about 30 launched ads with results (practitioner default, test it), compar
 - **Trusting the model's pass.** Step 8 makes a person verify every fail and a sample of passes.
 - **Calling a high-CTR ad a winner.** Step 10 reads store-side purchases first.
 - **Changing the checks after five ads.** Step 10 waits for about 30 results and never loosens hard checks.
+- **A test that tests three things.** Step 8b compares every variant with its control.
+- **Two customer counts in one week of ads.** Step 8b checks proof numbers across the set.
 
 ## Sources
 
@@ -170,7 +187,14 @@ After about 30 launched ads with results (practitioner default, test it), compar
 - [ADC-0039]: judge after 3 times target cost per purchase.
 - [ADC-0059]: judge creative at ad set level.
 - [MCR-0029]: high CTR can be a false winner.
+- [MCR-6617]: about three very different versions, not eight near-identical ones.
+- [MCR-6609]: keep social proof numbers consistent across ads.
+- [MCR-6750]: at scale, check the whole ad set for clashing claims.
 
-Platform documentation: Meta Ads Guide sizes and Reels safe-zone guidance, Meta personal attributes policy, platform AI disclosure rules, India's 2023 dark patterns guidelines.
+Platform documentation: Meta Ads Guide sizes and Reels safe-zone guidance, Meta personal attributes policy, platform AI disclosure rules, FTC, CMA and EU guidance on false urgency and dark patterns.
 
 What makes this skill ours: hard checks that tie every claim to a dated proof row and every price to a same-day page capture; an offer check that needs the product's gross profit per purchase; a log that pairs each verdict with store-side results and changes the checks only after enough ads; a manual path and a model path that use the same rubric.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. False urgency is a listed dark pattern under India's 2023 consumer protection guidelines on dark patterns; check every countdown and stock claim against them.

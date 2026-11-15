@@ -1,0 +1,365 @@
+{
+  "id": "landing-page",
+  "name": "Landing page, from brief to live and checked",
+  "goal": "A new Shopify landing page for one offer and one traffic source, written from real customer words, laid out for phones first, built on an unpublished theme copy, checked for speed, signed off by you in preview, then made live and checked at its public address.",
+  "starts_from": "A growth plan task, an ad or email that needs a page that matches its promise, a page that gets traffic but too few sales, or you asking for a new landing page.",
+  "folder": "site",
+  "then": "site-results",
+  "metrics": [
+    "Main number: the one you set in context/goals.json. For most landing pages this is the conversion rate of sessions that land on the page, read from GA4 and checked against Shopify orders.",
+    "Page numbers: add-to-cart rate, bounce rate and revenue per session for sessions that land on the page, against the page or pages the same traffic used before.",
+    "Speed: p75 LCP, INP and CLS on phones, with lab results before launch and field data at day 28."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Gather what we know",
+      "agent": "annabel-landing-pages",
+      "access": "read",
+      "gate": "none",
+      "say": "Collects every fact the page needs before anyone writes: the one action the page asks for, who lands on it and from which ad, email or search, what that source promised them, the offer and its end date, the proof and claims we hold, what past pages taught us, and the numbers for the page this traffic lands on today. It also writes down which tools we can reach and at what level (Shopify connector or CLI, Google Analytics, Search Console). Anything missing becomes a question for you.",
+      "needs": [
+        "context/org-context/ (customers, voice, design, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/learnings.md",
+        "the ad, email or search terms that will send traffic, from the creatives folder if there is one",
+        "GA4 through the Analytics MCP (read): landing page sessions, bounce rate, add-to-cart and purchase events for the last 8 whole weeks",
+        "Shopify connector or CLI (read): the current page, the products on offer, recent sales for them",
+        "the task that started this job"
+      ],
+      "makes": [
+        "intake.md"
+      ],
+      "checks": [
+        "intake-complete"
+      ],
+      "done_when": "intake.md names the one action, the buyer, the traffic source and its promise, the gap the page solves, the offer, the proof we hold, the current numbers with dates, the access we have, and the questions you answered."
+    },
+    {
+      "id": "message",
+      "name": "Customer words and message brief",
+      "agent": "annabel-landing-pages",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Turns reviews, support questions, survey answers and sales notes into a bank of the customers' own words: what pushed them to buy, what they want, what worries them, what they used before. From that it writes a short message brief: the core promise, the reasons to believe, the top objections and the proof needed for each, and where the page should open for a reader at this stage of awareness. The page is not written until you agree the message, because changing the message after drafting wastes the most time.",
+      "needs": [
+        "intake.md",
+        "review app export, help desk export and any survey answers you shared",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "research/voc-bank.md",
+        "message-brief.md"
+      ],
+      "checks": [
+        "brief-review"
+      ],
+      "signoff": "You read the message brief: the promise, the reasons, the objections and the proof each one needs. Reply yes with the code to lock it, or say what to change. Any guarantee, trial or deadline in it must be one you will honour.",
+      "done_when": "message-brief.md has one core promise, three to five reasons, the top objections each paired with proof we hold, and every customer quote traced to its source in voc-bank.md."
+    },
+    {
+      "id": "page-copy",
+      "name": "Page copy",
+      "agent": "annabel-landing-pages",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the full page for one action: three headline options with the reason each fits, the lead, the offer and risk reversal, objection answers with proof beside each claim, the calls to action, the SEO title and meta description, and notes for the first phone screen. Every section says its job and every claim carries its evidence id. It then runs an honesty check on claims, reviews and urgency before anyone else sees it.",
+      "needs": [
+        "message-brief.md (signed off)",
+        "research/voc-bank.md",
+        "context/org-context/ voice and claims"
+      ],
+      "makes": [
+        "page-copy.md",
+        "claims-log.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "readability",
+        "copy-review",
+        "claims-review"
+      ],
+      "done_when": "page-copy.md has three headlines, every section with its job, every claim marked with its evidence id, and claims-log.md gives each claim a status of keep, narrow or cut."
+    },
+    {
+      "id": "product-copy",
+      "name": "Product page copy, where needed",
+      "agent": "georgia-product-copy",
+      "access": "draft",
+      "gate": "none",
+      "say": "If the page sends people to product pages whose copy does not match the new promise, rewrites only what is needed on those products: title, bullets, description, FAQ and alt text, from a checked fact sheet, with every unconfirmed fact marked for you to confirm. If no product copy needs to change, it says so in one line with the reason, and the job moves on.",
+      "needs": [
+        "page-copy.md",
+        "message-brief.md",
+        "Shopify connector (read): the linked products and their current copy",
+        "product labels and spec sheets"
+      ],
+      "makes": [
+        "product-copy.md"
+      ],
+      "checks": [
+        "product-copy-lint",
+        "product-match-review",
+        "claims-review"
+      ],
+      "done_when": "product-copy.md lists each product with its old and new text and the reason, or states that no product copy needs to change and why."
+    },
+    {
+      "id": "layout",
+      "name": "Layout and phone first screen",
+      "agent": "larissa-store-ux",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the page as a wireframe in words: the order of sections, what sits on the first phone screen, the one main button and where it repeats, each component with its exact words, and every state a shopper can hit (sold-out size, add-to-cart error, slow image, long product name). It then walks the page as the buyer named in the intake and fixes the problems it finds, and checks tap target size, contrast and reading order.",
+      "needs": [
+        "page-copy.md",
+        "product-copy.md",
+        "context/org-context/ design rules",
+        "the live theme's existing sections, from the Shopify connector or CLI (read)"
+      ],
+      "makes": [
+        "wireframe.md"
+      ],
+      "checks": [
+        "layout-review"
+      ],
+      "done_when": "wireframe.md covers every section in order with its words and states, names the theme section or new section each one uses, and lists the usability problems found and fixed."
+    },
+    {
+      "id": "build",
+      "name": "Build on an unpublished theme copy",
+      "agent": "yaroslav-shopify-dev",
+      "access": "publish",
+      "gate": "none",
+      "say": "Checks the page address (handle) is free, then shows you a build plan. On your yes it writes the new page template, and any new section, to an unpublished copy of your theme, and creates the page as hidden, set to use that template. Shoppers see nothing yet. It reuses the theme's own sections where it can, keeps the likely largest image loading first, gives every image its size, and adds no new scripts. It keeps a copy of every file it touches.",
+      "needs": [
+        "wireframe.md",
+        "page-copy.md",
+        "product-copy.md",
+        "an unpublished copy of your live theme (you duplicate it in the admin, or the CLI pushes one with shopify theme push --unpublished)",
+        "Shopify connector at level 2, or the Shopify CLI in Claude Code"
+      ],
+      "makes": [
+        "build-record.md"
+      ],
+      "checks": [
+        "theme-check",
+        "code-review"
+      ],
+      "publish": "Nothing goes live at this stage. Through the Shopify connector or the Shopify CLI: the new template and any new section files are written to the unpublished theme copy, and the page is created with isPublished false and its templateSuffix set. Product copy changes, if any, wait for the go-live plan.",
+      "done_when": "Every step of the build plan ran once and was read back, the hidden page exists with the right template, and build-record.md lists the theme copy id, the page id, the handle and every file written."
+    },
+    {
+      "id": "preview-check",
+      "name": "Render check at phone and desktop sizes",
+      "agent": "yaroslav-shopify-dev",
+      "access": "read",
+      "gate": "none",
+      "say": "Opens the page on the theme copy's preview, saves it as a local file with its styles and images, and renders it at phone (390 pixels wide) and desktop (1280 pixels wide) sizes with the render tool. The pictures are checked against the wireframe and the approved copy: the first phone screen, nothing cut off, no sideways scrolling, the words exactly as approved.",
+      "needs": [
+        "build-record.md",
+        "wireframe.md",
+        "page-copy.md"
+      ],
+      "makes": [
+        "preview/page.html",
+        "preview/shots-phone.png",
+        "preview/shots-desktop.png",
+        "preview-check.md"
+      ],
+      "checks": [
+        "render",
+        "visual-review",
+        "copy-match"
+      ],
+      "done_when": "Both renders exist, there is no horizontal overflow, the first phone screen matches the wireframe, and preview-check.md lists any difference found and how it was fixed."
+    },
+    {
+      "id": "speed",
+      "name": "Speed check before launch",
+      "agent": "arjun-page-speed",
+      "access": "read",
+      "gate": "none",
+      "say": "Runs Lighthouse on the preview page for phones 3 to 5 times and takes the middle result, and does the same for the live page the traffic uses today, so the two compare like with like. Checks the largest image is not lazy-loaded, images have sizes, fonts do not block the first screen, and no app script was added. Lab numbers are a guide; real-visitor numbers come at day 28.",
+      "needs": [
+        "build-record.md",
+        "preview link of the theme copy",
+        "intake.md (the current landing page)"
+      ],
+      "makes": [
+        "speed.md",
+        "numbers.json"
+      ],
+      "checks": [
+        "numbers-check",
+        "speed-review"
+      ],
+      "done_when": "speed.md gives the median LCP, CLS and total blocking time for the new and current page with run counts and the date, and any fix found was made on the theme copy and re-run."
+    },
+    {
+      "id": "owner-preview",
+      "name": "Preview pack for your sign-off",
+      "agent": "annabel-landing-pages",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts everything you need to decide on one page: the preview link, the phone and desktop pictures, the chosen headline, the claims log, any product copy changes, the speed result, and the exact go-live plan that will follow. You test the preview on your own phone.",
+      "needs": [
+        "preview-check.md",
+        "speed.md",
+        "claims-log.md",
+        "product-copy.md"
+      ],
+      "makes": [
+        "page-pack.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You open the preview on your phone and read the pack. Reply yes with the code to send it to go-live, or say what to change. Changing any file makes the code stop working.",
+      "done_when": "page-pack.md shows the preview link, both renders, the headline, the claims, the product changes, the speed numbers and the go-live steps on one page."
+    },
+    {
+      "id": "go-live",
+      "name": "Make the page live",
+      "agent": "yaroslav-shopify-dev",
+      "access": "publish",
+      "gate": "none",
+      "say": "Shows you the go-live plan: push only the new template and new section files to the live theme, then make the page visible, then any product copy changes, one step at a time. Nothing else on the live theme is touched. On your yes it runs those steps and only those. If you use only the Shopify connector, it cannot write to your live theme, so the plan gives you the exact steps to add the template in your admin, and the agent makes the page visible after you say it is done. Undo: hide the page again; the template file alone changes nothing for shoppers.",
+      "needs": [
+        "page-pack.md (signed off)",
+        "build-record.md",
+        "Shopify CLI in Claude Code (theme push with --only, --nodelete and --allow-live) or you, for the template step",
+        "Shopify connector at level 3 for the page and product updates"
+      ],
+      "makes": [
+        "go-live-record.md"
+      ],
+      "publish": "Through the Shopify CLI: shopify theme push to the live theme id with --only for each new file and --nodelete, which needs --allow-live. Through the Shopify connector or CLI: pageUpdate with isPublished true for this page id, then productUpdate for each approved product copy change, with old values saved first. Shoppers can see the page from this step.",
+      "done_when": "Every step of the go-live plan ran once and was read back, and go-live-record.md lists the live theme id, the files pushed, the page id and address, and each product change with its old value."
+    },
+    {
+      "id": "verify",
+      "name": "Check the live page",
+      "agent": "yaroslav-shopify-dev",
+      "access": "read",
+      "gate": "none",
+      "say": "Within an hour of going live, opens the public address and checks it returns 200, uses the new template, matches the signed-off preview at phone and desktop sizes, and has the right title, meta description and canonical tag. It adds a product to the cart, checks the cart opens, and checks in GA4 realtime that the page view and add-to-cart events arrive once each. It then runs the speed test on the live address. If anything is wrong, it stops and shows you an undo plan.",
+      "needs": [
+        "go-live-record.md",
+        "page-pack.md",
+        "GA4 through the Analytics MCP (realtime report)"
+      ],
+      "makes": [
+        "verify.md"
+      ],
+      "checks": [
+        "live-verify",
+        "seo-basics",
+        "tracking-check"
+      ],
+      "done_when": "verify.md records the status code, the template, the render match, the tags, the cart test, the events seen and the live lab speed, or an undo plan for anything that failed."
+    }
+  ],
+  "checks": {
+    "intake-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every heading in intake.md is filled from a named source with its date, the access table is filled, and missing facts are listed as answered questions, not guesses"
+    },
+    "brief-review": {
+      "kind": "reviewer",
+      "agent": "howard-copy-chief",
+      "passes_when": "the promise is one idea a buyer at this awareness stage will care about, each objection has proof we hold, and every quote traces to voc-bank.md"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/page-copy.md --limit \"SEO title=60\" --limit \"Meta description=155\"",
+      "passes_when": "the copy checker exits 0 (counts are right, no placeholders, no internal words in customer copy)"
+    },
+    "readability": {
+      "kind": "script",
+      "run": "node tools/quality/readability.cjs <folder>/page-copy.md --audience consumer",
+      "passes_when": "the readability check exits 0 for a consumer audience"
+    },
+    "copy-review": {
+      "kind": "reviewer",
+      "agent": "howard-copy-chief",
+      "passes_when": "in a separate pass from the writer, the page scores 2 or more on each of the 12 conversion checks, matches the traffic source's promise, and does at least as well as the live page on every point"
+    },
+    "claims-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "every claim, review, price, reduction, guarantee and deadline is proven or cut, customer names and quotes have permission, and the claims log matches the copy"
+    },
+    "product-copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/product-copy.md --limit \"SEO title=60\" --limit \"Meta description=155\"",
+      "passes_when": "the copy checker exits 0, or product-copy.md says no product copy needs to change"
+    },
+    "product-match-review": {
+      "kind": "reviewer",
+      "agent": "annabel-landing-pages",
+      "passes_when": "the product copy carries the same promise as the landing page, changes only what the reason requires, and marks every unconfirmed fact"
+    },
+    "layout-review": {
+      "kind": "reviewer",
+      "agent": "gretchen-store-testing",
+      "passes_when": "the first phone screen shows the promise and the main button, there is one main action, every state has words, and nothing adds a step between the page and the cart"
+    },
+    "theme-check": {
+      "kind": "script",
+      "run": "shopify theme check --path <folder>/theme",
+      "passes_when": "Theme Check reports no errors on the files written, and any warning is explained in build-record.md"
+    },
+    "code-review": {
+      "kind": "reviewer",
+      "agent": "facundo-store-setup",
+      "passes_when": "only new files were written, the code reuses theme sections where possible, has editor settings for text the owner will change, adds no script, and the page was created hidden"
+    },
+    "render": {
+      "kind": "script",
+      "run": "node tools/quality/render.cjs <folder>/preview/page.html <folder>/preview/shots",
+      "passes_when": "both phone and desktop renders are written and neither reports HORIZONTAL OVERFLOW"
+    },
+    "visual-review": {
+      "kind": "reviewer",
+      "agent": "larissa-store-ux",
+      "passes_when": "the renders match the wireframe section by section, the first phone screen shows the promise and the main button, and text is readable at phone size"
+    },
+    "copy-match": {
+      "kind": "reviewer",
+      "agent": "annabel-landing-pages",
+      "passes_when": "every word on the rendered page matches the approved page-copy.md exactly, headline included"
+    },
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/numbers.json --final <folder>/speed.md",
+      "passes_when": "every median and difference in speed.md recomputes from the runs in numbers.json"
+    },
+    "speed-review": {
+      "kind": "reviewer",
+      "agent": "facundo-store-setup",
+      "passes_when": "the new page is no slower than the current page on median LCP and CLS for phones, or the reason is stated and accepted, and lab results are not presented as field data"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "the pack has the preview link, both renders, the headline, the claims log, any product changes, the speed numbers and the exact go-live steps, and nothing signed off earlier is missing"
+    },
+    "live-verify": {
+      "kind": "reviewer",
+      "agent": "arjun-page-speed",
+      "passes_when": "the live page returns 200 with the new template, matches the signed-off preview, only the planned files and records changed, and live lab speed is within normal run-to-run noise of the preview"
+    },
+    "seo-basics": {
+      "kind": "reviewer",
+      "agent": "stuart-store-seo",
+      "passes_when": "the title, meta description and canonical are the approved ones, the page is indexable unless you chose otherwise, and it does not compete with an existing page for the same searches"
+    },
+    "tracking-check": {
+      "kind": "reviewer",
+      "agent": "emre-tracking",
+      "passes_when": "the page view, add-to-cart and purchase events fire once each on the new template, and consent settings behave the same as on other pages"
+    }
+  }
+}

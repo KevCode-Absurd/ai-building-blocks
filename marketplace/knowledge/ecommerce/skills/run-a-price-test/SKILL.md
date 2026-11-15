@@ -1,6 +1,6 @@
 ---
 name: run-a-price-test
-description: "A one-page price test design that is safe for buyers and the brand: which of four designs to use (a split test of offer structure such as pack sizes or tiers, a timed switch with comparison products, a market-by-market price, or a new variant at a new price), never two prices for the same product to different visitors at the same time. Sets the profit line the new price must beat, the main metric (contribution per visitor, not conversion), guardrails for refunds, returns, RTO and complaints, the run time in whole weeks from the store's own order volume, the stop rule, and how to read the result on profit. Use before raising or lowering a price, when the team wants to 'A/B test the price', or when a price change needs proof before it rolls out."
+description: "A one-page price test design that is safe for buyers and the brand: which of four designs to use (a split test of offer structure such as pack sizes or tiers, a timed switch with comparison products, a market-by-market price, or a new variant at a new price), never two prices for the same product to different visitors at the same time. Sets the profit line the new price must beat, the main metric (contribution per visitor, not conversion), guardrails for refunds, returns, failed deliveries and complaints, the run time in whole weeks from the store's own order volume, the stop rule, and how to read the result on profit. Use before raising or lowering a price, when the team wants to 'A/B test the price', or when a price change needs proof before it rolls out."
 ---
 
 # Run a price test
@@ -28,7 +28,7 @@ Required (read access):
 1. **Shopify order export**, 90 days: Created at, Lineitem sku, Lineitem quantity, Lineitem price, Discount Amount, Payment Method, Shipping Country, refunds.
 2. **Sessions by product page** (Shopify Analytics or GA4) for the same window.
 3. **Delivered cost per unit** from `build-sku-profit-sheet`.
-4. **Return, refund and RTO rates** for the product.
+4. **Return, refund and failed delivery rates** for the product.
 
 Optional: a list of similar products to act as a comparison group, market list (Shopify Markets), testing tool, rival prices from `track-competitor-prices`.
 
@@ -39,7 +39,7 @@ Setting up variants, market prices or a testing tool needs draft access (level 2
 1. **No same-product, same-time price split.** Showing two prices for one product to different visitors at once ended in refunds and a public apology for one large retailer; test structure, framing or a separate offering instead [CRO-0009]. Fail: change the design.
 2. **Order volume.** Under about 30 orders a month, do not test; change the price with care and watch. From 30 to 300, only big swings can be read [CRO-0011]. Fail: pick a bigger change or a design that pools products.
 3. **Costs known** so the profit line can be computed. Fail: stop.
-4. **Price consistency.** Feed, page, cart and ads must show the same price at any moment [GAD-6122]; a catalog sale price must sit below the regular price [ADC-6047]. India: never above MRP [COG-6264].
+4. **Price consistency.** Feed, page, cart and ads must show the same price at any moment [GAD-6122]; a catalog sale price must sit below the regular price [ADC-6047]. Never above any legal maximum or printed retail price where the market has one.
 
 ## Steps
 
@@ -63,7 +63,7 @@ Default to A or D; both keep one price per product at any time. Use B when the c
 ### 3. Set the metric and guardrails
 
 - **Main metric:** contribution per visitor = (orders x contribution per order) / product page sessions. Pick the winner by profit per session, not order value or conversion [OFF-0015].
-- **Guardrails:** refund and return rate, RTO rate (India), price complaints in chat and reviews, add-to-cart rate, share of COD orders.
+- **Guardrails:** refund and return rate, failed delivery rate (where pay on delivery is offered), price complaints in chat and reviews, add-to-cart rate, share of pay-on-delivery orders.
 - **Later check:** repeat rate at 60 and 90 days; price changes can show their real cash effect only after 60 to 180 days [FIN-0029].
 
 ### 4. Size it
@@ -99,16 +99,16 @@ Verdict rules:
 
 Turn the result into money per month: effect per visitor x monthly product sessions.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** price changes can shift buyers between prepaid and COD; wait 10 to 14 days after the last order before reading RTO. Keep MRP unchanged during a test unless the pack is reprinted.
-- **US:** do not later advertise the higher price as a "was" price unless it was genuinely the regular price for a real period [OFF-6145].
+- **Pay on delivery:** where offered, price changes can shift buyers between prepaid and pay on delivery; wait 10 to 14 days after the last order before reading failed deliveries. Keep any price printed on the pack unchanged during a test unless the pack is reprinted.
+- **US, UK, EU and beyond:** do not later advertise the higher price as a "was" price unless it was genuinely the regular price for a real period [OFF-6145]; in the EU, a price cut is shown against the lowest price of the prior 30 days.
 
 ## Checks before you hand it over
 
 - No design shows two prices for the same product to different visitors at once.
 - The profit line (largest order drop the new price can survive) is written before launch.
-- The main metric is contribution per visitor; guardrails include refunds and RTO.
+- The main metric is contribution per visitor; guardrails include refunds and failed deliveries.
 - Run time is in whole weeks with a fixed end date; order count needed is stated.
 - Feed, page, cart and ads change together.
 - Support has an answer and a refund rule.
@@ -141,6 +141,10 @@ Turn the result into money per month: effect per visitor x monthly product sessi
 - FIN-0029: cash effects show over 60 to 180 days.
 - OFF-0070: a launch price cut with the difference refunded.
 - GAD-6122, ADC-6047: feed and catalog price rules.
-- COG-6264, OFF-6145: India MRP; genuine former prices.
+- OFF-6145: genuine former prices.
 
-What makes this skill ours: it never splits one product's price across visitors, and instead offers four designs that keep one price per product at a time; the profit line is written before launch so the result is judged on profit, not conversion; timed tests use comparison products to remove the background trend; and RTO and repeat effects are checked after the test ends.
+What makes this skill ours: it never splits one product's price across visitors, and instead offers four designs that keep one price per product at a time; the profit line is written before launch so the result is judged on profit, not conversion; timed tests use comparison products to remove the background trend; and failed delivery and repeat effects are checked after the test ends.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Never price above MRP [COG-6264: India MRP], and keep MRP unchanged during a test unless the pack is reprinted. Price changes can shift buyers between prepaid and COD; wait 10 to 14 days after the last order before reading RTO.

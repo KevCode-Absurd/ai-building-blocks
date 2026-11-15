@@ -1,6 +1,6 @@
 ---
 name: train-support-chatbot-on-store-faqs
-description: "The knowledge pack to load into a store's support chatbot or AI assistant: the questions it may answer, each with an approved answer, a source and an owner; the order lookups it may do; the things it must never do (refunds, medical or legal advice, promises outside policy, posing as a person); and the handoff rule that passes a chat to a person with the context attached. Built from the store's real tickets and chats, tested on 50 past conversations before launch, with WhatsApp and site chat rules and India language notes. Tool-neutral. Use when the store adds a bot to site chat or WhatsApp, or an existing bot gives wrong or risky answers."
+description: "The knowledge pack to load into a store's support chatbot or AI assistant: the questions it may answer, each with an approved answer, a source and an owner; the order lookups it may do; the things it must never do (refunds, medical or legal advice, promises outside policy, posing as a person); and the handoff rule that passes a chat to a person with the context attached. Built from the store's real tickets and chats, tested on 50 past conversations before launch, with WhatsApp and site chat rules and language notes. Tool-neutral. Use when the store adds a bot to site chat or WhatsApp, or an existing bot gives wrong or risky answers."
 ---
 
 # Train a support chatbot
@@ -40,7 +40,7 @@ Loading the pack into the bot needs draft access (level 2). Turning the bot on f
 1. **Human path exists.** A person must be reachable from every bot conversation. On WhatsApp this is a policy rule: automation is allowed but needs prompt, clear and direct escalation paths [CXP-6302]. Fail: do not launch.
 2. **Disclosure.** The bot says it is an automated assistant in its first message and if asked. It never claims to be a person, never uses a fake human name and photo as if real.
 3. **Answers are sourced.** Every answer in the pack quotes a live policy or product page. No source, no answer.
-4. **Data safety.** The bot never asks for card numbers, UPI PINs, OTPs or passwords, and shows order details only after matching order number with email or phone.
+4. **Data safety.** The bot never asks for card numbers, bank or wallet PINs, one-time codes or passwords, and shows order details only after matching order number with email or phone.
 5. **Regulated topics.** Medical, legal, financial and safety questions go to a person or to the official label text, never to a generated answer.
 
 ## Steps
@@ -53,7 +53,7 @@ Not bot work: damaged items needing judgement, refunds, angry buyers, anything w
 
 ### 2. Write the question set
 
-For each bot reason, collect five to ten real ways buyers ask it (copy their wording, including Hinglish and spelling mistakes). Then write one approved answer:
+For each bot reason, collect five to ten real ways buyers ask it (copy their wording, including slang, mixed languages and spelling mistakes). Then write one approved answer:
 
 - Two to four short sentences, the answer first.
 - Facts exactly as in the policy page; link to that page.
@@ -93,7 +93,7 @@ Out of hours, the bot says when a person will reply and gives the tracking page 
 
 ### 6. Set languages
 
-Answer in the language the buyer writes in only where the pack has a checked translation; otherwise reply in the store's main language and offer a person. In India, cover Hindi plus the store's top regional language if over about 10% of chats use it (practitioner default, test it).
+Answer in the language the buyer writes in only where the pack has a checked translation; otherwise reply in the store's main language and offer a person. Cover each language that over about 10% of chats use (practitioner default, test it).
 
 ### 7. Test on 50 real conversations
 
@@ -103,10 +103,10 @@ Replay 50 past chats, chosen across the top reasons plus ten hard ones (angry, u
 
 Start on one channel or one part of the day. Each week, read 30 bot chats and the handoff tickets: wrong answers, new questions, loops, buyer complaints about the bot. Add or fix answers; any policy change updates the pack the same day. Judge the bot by tickets solved without a person and by the satisfaction of handed-off buyers, not by chats "deflected". A blended team can then focus people on complex tickets [OPS-0013].
 
-### 9. India and US notes
+### 9. Channel and claims notes
 
-- **India:** WhatsApp is often the main chat; use only approved templates outside the 24-hour window, and keep the human path visible. COD questions (can I pay at door, UPI at delivery, refund to bank) are bot-safe only as policy answers; refund details always go to a person or a secure form.
-- **US:** keep product claims to the label and page text; health or safety questions go to a person. State the bot's nature plainly at the start of each chat.
+- **WhatsApp and messaging apps:** in many markets (much of Europe, Latin America, Asia) WhatsApp is the main chat; use only approved templates outside the 24-hour window, and keep the human path visible. Payment questions (which methods, can I pay later, refund to card or bank) are bot-safe only as policy answers; refund details always go to a person or a secure form.
+- **Claims and bot disclosure:** keep product claims to the label and page text; health or safety questions go to a person. State the bot's nature plainly at the start of each chat; some places (for example California and the EU) have rules on telling people they are talking to a bot.
 
 ## Checks before you hand it over
 
@@ -148,4 +148,10 @@ Start on one channel or one part of the day. Each week, read 30 bot chats and th
 - CXP-6302: WhatsApp automation needs escalation to a person.
 - OPS-0013: route simple tickets one way and complex ones to people.
 
-What makes this skill ours: the bot answers only from approved, sourced text and never invents policy; the handoff rule carries the context so buyers never repeat themselves; launch waits for a 50-chat test with zero invented facts; and WhatsApp escalation and India language and COD rules are built in.
+What makes this skill ours: the bot answers only from approved, sourced text and never invents policy; the handoff rule carries the context so buyers never repeat themselves; launch waits for a 50-chat test with zero invented facts; and WhatsApp escalation, language and payment question rules are built in.
+
+## Selling in India
+
+- WhatsApp is often the main chat.
+- Cover Hindi plus the store's top regional language if over about 10% of chats use it. Collect Hinglish wording in step 2.
+- COD questions (can I pay at door, UPI at delivery, refund to bank) are bot-safe only as policy answers. The bot never asks for UPI PINs or OTPs.

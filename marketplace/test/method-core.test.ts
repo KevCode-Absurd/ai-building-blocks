@@ -1,4 +1,4 @@
-// The method core: WORK-METHOD.md stays short and complete, the craft weights are job-first, and each family's real
+// The method core: METHOD.md stays complete (and bloat-guarded), the craft weights are job-first, and each family's real
 // candidates and completeness list reach the job skills. The shared lists are checked against the library's copy in
 // site/test/jobs-grounding.test.mjs.
 import { test } from "node:test";
@@ -14,12 +14,12 @@ import type { CraftCriterion, DeliverableFamily, JobType } from "../src/core/typ
 import { FIXTURE_JOB_TYPES, LANDING_PAGE, NOVA } from "./fixtures.ts";
 
 const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8");
-const METHOD = shared("WORK-METHOD.md");
+const METHOD = shared("METHOD.md");
 const FAMILIES = Object.keys(WORD_BUDGETS) as DeliverableFamily[];
 const DATA = new URL("../src/modules/catalogue/data/", import.meta.url);
 const allJobTypes = (): JobType[] => readdirSync(DATA).filter(f => f.endsWith(".json")).flatMap(f => JSON.parse(readFileSync(new URL(f, DATA), "utf8")));
 
-test("WORK-METHOD.md is under 1,200 words and still covers every part of the method", () => {
+test("METHOD.md stays under its bloat guard and still covers every part of the method", () => {
   const words = METHOD.split(/\s+/).filter(Boolean).length;
   // 1,000 until 13 Nov 2026; the pack lookup, outside-evidence checks and two-order blind pick added about 100. The
   // owner rules (13 Nov) fit inside the same cap: their detail lives in the quality engine, and the whole one-shot
@@ -28,47 +28,51 @@ test("WORK-METHOD.md is under 1,200 words and still covers every part of the met
   // Ask or start (14 Nov) added the readiness check and the rubric. Owner, 14 Nov: no cap that costs quality, so this
   // is a bloat guard, not a target: raise it when the method needs the words, never cut useful lines to fit.
   // Brand brain v2 (14 Nov) made build, write and gate the first step of buyer-facing work and a hand-over gate: +40 words.
-  assert.ok(words < 1450, `WORK-METHOD.md has ${words} words`);
+  // One method (15 Nov 2026, CS329Z W2): WORK-METHOD.md, the quality engine's steps, INTAKE.md and ROUTING.md (4,895
+  // words in all) merged into METHOD.md, each rule once, plus the step table, the chat path and the stuck rule.
+  // The org context (15 Nov) named its sections in step 1, and rule 6 now says where facts come from (sound sources
+  // first, then the e-commerce library) and what to do without web search: about 200 words.
+  assert.ok(words < 5400, `METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
-    ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
-    ["signal pass", /\*\*Signal pass:\*\* the three strongest signals in the owner's data[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
+    ["spec sheet", /## 0\. Frame and ask[\s\S]*\*\*The spec sheet\.\*\*[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
+    ["signal pass", /\*\*Signal pass:\*\* the signals in the owner's data that change the decision: as many as the data holds, or none\.[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
     ["ground only what the job needs", /## 1\. Ground: foundation first, then only what the job needs\n\nFollow `tools\/quality\/FOUNDATION\.md`[\s\S]*Capture what the signals and the decision depend on, and no more/],
     ["toolbox", /\nYour `toolbox\.md` lists what to use when; pick at your own discretion and open only what you pick\.\n/],
     ["real candidates", /make about 3 candidates of the part that decides the outcome, as real work, not descriptions/],
     ["outside chooser", /fresh reviewer who has not seen your reasoning[\s\S]*SAME-CONTEXT[\s\S]*one more round only/],
-    ["craft floor", /New framing of true facts, never new facts\.[\s\S]*Never a menu\.[\s\S]*labelled as a projection; never in what a buyer reads, and never an invented result[\s\S]*5 real brand lines beside 5 of yours/],
+    ["craft floor", /New framing of true facts, never new facts\.[\s\S]*Never a menu\.[\s\S]*5 real brand lines beside 5 of yours/],
     ["truth gate with sourced claims", /Each claim a buyer or the client will read \(prices, counts, ratings, policies, names, delivery times, quotes, product properties\): sourced or not\.[\s\S]*Remove each unsourced claim, or rewrite it to what the source says\. Never flag or footnote it\./],
     ["buyer can act", /\*\*Can the buyer act today\?\*\* Confirm the thing sold is live, in stock[\s\S]*say so in your first line/],
     ["format completeness", /\*\*Finish the format\.\*\* Ads:[\s\S]*Emails:[\s\S]*Plans:[\s\S]*Pages:/],
-    ["client's-eye check", /## 5\. Check: the client's-eye review\n\nA fresh reviewer \(as in step 3\) gets only the client's brief, the finished deliverable and `context\/facts\.md`/],
-    ["hand-over shape", /The native work comes first[\s\S]*Nothing internal reaches the client[\s\S]*appendix inside the deliverable/],
-    ["rules I learned", /Add shared lessons to "Rules I learned" in playbook\.md/],
+    ["client's-eye check", /## 5\. Check: tools first, then one fresh pass[\s\S]*\*\*One fresh pass\.\*\* A fresh reviewer \(rule 7\) gets only the owner's original brief, the anonymous final and plain drafts in shuffled order, the actual renders and the facts the work rests on \(`context\/facts\.md`\)/],
+    ["hand-over shape", /Nothing internal reaches the client[\s\S]*appendix inside the deliverable[\s\S]*The native work comes first/],
+    ["rules I learned", /A lesson about this client goes in `context\/MEMORY\.md`, never in playbook\.md\. A general lesson goes to "Rules I learned" in playbook\.md only on the owner's yes/],
     // The Quality Engine v2.1 rules (11 Nov 2026 benchmark: 88% of 128 blind verdicts against a plain model).
-    ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*One is the expert's standard playbook done excellently; clever ones must beat it\./],
-    ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*a fresh reader chooses between anonymous final and plain/],
-    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source\. Recommendations are complete and decided\. Keep explicitly requested template fields; otherwise no blanks or placeholders\./],
-    ["length against the owner's limit", /\*\*Length follows use:\*\* stay within the owner's limit, counted the way the owner counts; without one, the family profile[\s\S]*ceiling is never a target\. No sections about method or assumptions\./],
+    ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*The expert draft is the expert's standard playbook done excellently; clever ones must beat it\./],
+    ["plain yardstick and final pick", /The plain draft is a one-pass answer from the brief alone: the yardstick[\s\S]*the anonymous final and plain drafts in shuffled order/],
+    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source and a date[\s\S]*labelled as projections; never in what a buyer reads\. Proposals are stated plainly and decided\.[\s\S]*Keep the fields a brief asks for in a template or per-customer macro; otherwise no blanks, placeholders/],
+    ["length against the owner's limit", /\*\*Length follows use\.\*\* Stay within the owner's limit, counted the way the owner counts[\s\S]*the family profile[\s\S]*A ceiling is never a target\. No sections about method, assumptions or how the work was made\./],
     // The owner rules (13 Nov 2026 owner bench): finish one-shot work, combine complementary levers, act fully, project.
-    ["owner override", /^# Work method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],
-    ["one-shot finish", /\*\*One-shot jobs\*\*[^\n]*decide every open point with the assumption a top practitioner would pick, and finish\. Deliver every piece the owner asked for; never drop or water one down to stay safe\. At most three assumption lines[^\n]*Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable/],
+    ["owner override", /^# Method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],
+    ["one-shot finish", /\*\*Finish and decide: the rule for doubt\.\*\* Deliver every piece the owner asked for; never drop or water one down to stay safe\. Decide each open point with the assumption a top practitioner would pick\. At most three assumption lines[^\n]*The deliverable never holds a "To confirm" list, open questions, or a request for a yes, a sign-off or a choice\./],
     ["legal sign-off next to its item", /A sign-off that law or a platform needs is one line next to its item\./],
     // Brand brain v2 (14 Nov 2026): the fast path once skipped brand DNA on every data-rich brief, so buyer-facing
-    // work had no voice to match. Now it never skips the brand brain for ads, copy, emails or pages.
-    ["fast path", /\*\*Fast path:\*\* when the brief carries the data and nothing in it is buyer-facing, skip site capture, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill\. Buyer-facing work \(ads, copy, emails, pages\) never skips the brand brain/],
+    // work had no voice to match. Now it never skips the org context (was the brand brain) for ads, copy, emails or pages.
+    ["fast path", /\*\*The fast path\*\* is one-shot work where the brief carries the data and nothing in it is buyer-facing[\s\S]*\| 1 Ground \| The brief's data, plus the org context if buyer-facing \|[\s\S]*Buyer-facing one-shot work is not the fast path[\s\S]*Buyer-facing work never skips the org context/],
     ["decide, combining complementary moves", /\*\*Decide\.\*\* One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other\. Never a menu\./],
     ["act fully", /\*\*Act fully\.\*\* If the deliverable keeps anything a signal says to cut, say why in one line with the number\./],
-    ["persona's real moment", /\*\*Fit the persona's real moment\*\* in every time, place, unit and channel \(quality engine step 4\)\./],
+    ["persona's real moment", /\*\*Fit the persona's real moment\*\* in every time, place, unit and channel\./],
     ["first screen", /its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week\./],
     ["nothing left to the owner", /4\. What is left for the owner to do: questions, sign-offs, choices, placeholders\.[\s\S]*Fix 1, 3 and 4, cut 5,/],
     // Round 2 rollback (13 Nov 2026): the owner's named priority, no bolder move in copy, counts by script, nothing
     // internal in customer copy, relative days.
     ["owner's priority", /A priority the owner names takes a top slot unless the data clearly says otherwise; then say why in one line\./],
-    ["no bolder move in copy", /Plans add one labelled bolder move \(quality engine rule 4\); customer copy never carries one\./],
+    ["no bolder move in copy", /Every plan, strategy or recommendation carries one labelled \*\*bolder move\*\*[^\n]*Customer copy never carries one\./],
     ["copy counted by script", /character counts checked with `node tools\/quality\/copy-check\.cjs`/],
     ["nothing internal in customer copy", /no working notes, signal maps, ledgers or monitoring lines in what the customer reads/],
     ["plans in relative days", /Plans: totals that add up, steps with owners and relative days\./],
-    ["fresh facts", /Re-check on the day facts that change/],
-    ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer> --profile <family>` and fix every hit\./],
+    ["fresh facts", /Recheck on the day facts that change/],
+    ["hand-over check tool", /With `--plain`, qe-check also runs the hand-over check; fix every hit\./],
   ];
   for (const [name, re] of parts) assert.match(METHOD, re, name);
   // Other pack files point at these steps by number: ground is step 1, the gates and craft are step 5, learning is step 6.
@@ -79,7 +83,7 @@ test("WORK-METHOD.md is under 1,200 words and still covers every part of the met
   assert.ok(METHOD.includes(`at least two of: ${CANDIDATE_AXES.join(", ")}.`));
   assert.doesNotMatch(METHOD, /job[- ]card|search the library|one-screen summary/i);
   // No homework: "To confirm" appears only in the rule that forbids it, and the runner-up is never the default.
-  assert.deepEqual(METHOD.split("\n").filter(l => l.includes("To confirm")).map(l => /no "To confirm" list/.test(l)), [true]);
+  assert.deepEqual(METHOD.split("\n").filter(l => l.includes("To confirm")).map(l => /never holds a "To confirm" list/.test(l)), [true]);
   assert.doesNotMatch(METHOD, /acceptance tests?|runner-up in a line|revenue forecast|Please confirm/i);
 });
 
@@ -143,7 +147,7 @@ test("a built job skill carries its family's candidates and completeness list, a
   const input: PackInput = {
     persona: { ...NOVA, profile: { ...NOVA.profile, outcomes: [{ ...NOVA.profile.outcomes[0], job_type_id: email.id }] } }, role: null, kit: null,
     jobTypes: [...FIXTURE_JOB_TYPES, email],
-    templates: Object.fromEntries(["AGENTS.md", "WORK-METHOD.md", "README.md", "LICENSE.md"].map(p => [p, shared(p)])),
+    templates: Object.fromEntries(["AGENTS.md", "METHOD.md", "WORK-METHOD.md", "README.md", "LICENSE.md"].map(p => [p, shared(p)])),
     tools: { "capture-brand-dna.mjs": "// capture\nexport {};\n", "brand-dna-snippet.js": "// snippet\n", "check-brand-fidelity.mjs": "// check\nexport {};\n", "ai-default-patterns.md": "# AI default patterns\n" },
     options: { kind: "agent", version: "t", updated: "2026-11-10" },
   };

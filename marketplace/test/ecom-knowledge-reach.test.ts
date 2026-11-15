@@ -97,11 +97,11 @@ test("any store job gets the store kit: a role an e-commerce agent shares carrie
 
   const ecom = await buildPack({ persona: persona("zara-tiktok-ads"), role: null, kit: null, jobTypes: FIXTURE_JOB_TYPES, templates: {}, vertical: BUNDLE, verticals: [BUNDLE], options: { ...OPTIONS, kind: "agent" } });
   assert.doesNotMatch(ecom.files.find(f => f.path === "AGENTS.md")!.content, /E-commerce briefs/);
-  // The one-file version keeps the agent's own modules and names the rest of the library by address.
+  // The one-file version carries a digest of the agent's own cards; every whole module is named by its path or address.
   const one = oneFileText(ecom, "https://agents.test");
-  assert.match(one, /===== FILE: knowledge\/ecommerce\/MCR\.md =====/);
-  assert.doesNotMatch(one, /===== FILE: knowledge\/ecommerce\/OFF\.md =====/);
-  assert.match(one, /https:\/\/agents\.test\/packs\/knowledge\/ecommerce\/OFF\.md/);
+  assert.doesNotMatch(one, /===== FILE: knowledge\/ecommerce\/(MCR|OFF)\.md =====/);
+  assert.match(one, /^===== CARD DIGEST/m);
+  assert.match(one, /https:\/\/agents\.test\/packs\/knowledge\/ecommerce\/MCR\.md/);
   assert.match(one, /===== FILE: knowledge\/ecommerce\/library-map\.md =====/);
 });
 

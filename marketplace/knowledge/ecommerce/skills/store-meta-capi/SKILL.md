@@ -14,7 +14,7 @@ Meta's delivery learns from the purchases it receives. If it receives 70 of 100 
 - `store-meta-attribution` found Meta far above or far below store orders, or values that do not match.
 - Before raising spend: data integrity comes before structure and creative [ADC-0028].
 - After a new theme, checkout change, app install, cookie banner or tag manager change.
-- The store sells cash on delivery and wants Meta to learn from paid orders, not refused ones.
+- Many orders fail delivery, are refused or have payments reversed, and the store wants Meta to learn from paid orders, not failed ones (common where pay on delivery is offered).
 - Someone proposes a paid server-side tracking tool or the Conversions API Gateway.
 
 ## Not for
@@ -34,7 +34,7 @@ Required:
 4. **The value definition** that `store-meta-math` used for break-even (subtotal after discounts, with or without shipping and tax).
 5. **The live store URL.**
 
-Optional: consent banner settings, courier delivery export for COD stores, and the Ads Manager export already used by `store-meta-attribution`.
+Optional: consent banner settings, courier export of delivered and failed orders, and the Ads Manager export already used by `store-meta-attribution`.
 
 Access: level 1 to diagnose everything here. Level 2 (draft) to prepare fixes such as a new tag in a paused workspace or a written spec for the developer. Changing the app's data-sharing level, theme code, consent settings or tag publishing changes the live store: the client does it, or approves it at level 3. Never ask for passwords or API tokens; the client signs in.
 
@@ -83,14 +83,14 @@ Hashing rules from Meta documentation: email lowercased and trimmed; phone as di
 - A test event code left in a live tag sends real purchases to the Test Events screen, not reporting [MEA-0005]. Search the tag setup for it.
 - EEA, UK and some US states need consent before events carry personal data. Do not give a legal ruling; point the client to their consent tool's documentation.
 
-### 8. Cash on delivery: decide what Meta should learn from
+### 8. Failed and unpaid orders: decide what Meta should learn from
 
-Standard setups send Purchase when a COD order is placed. Orders returned to origin never pay, yet Meta learns from them. Options, practitioner default, test it:
+Standard setups send Purchase when an order is placed. Orders that fail delivery, get refused, or have their payment fail or reversed never pay, yet Meta learns from them. This matters most where pay on delivery or invoice payment is offered, and where fraud or failed payments are high. Options, practitioner default, test it:
 
 - **Keep Purchase on placement** (default), and read profit per placed order from `store-meta-math`. Fastest learning.
 - **Also send a delivered or prepaid event** through the Conversions API when the courier confirms delivery, as a custom event. Meta accepts events up to 7 days after they happen (Meta documentation), so deliveries later than that cannot be sent as the original order. Optimise to it only once it reaches about 50 events per ad set per week, Meta's learning-phase guide; test it with `store-meta-test`.
 
-Never send refunded or RTO orders as negative purchases; correct for them in `store-meta-attribution`.
+Never send refunded, failed or returned orders as negative purchases; correct for them in `store-meta-attribution`.
 
 ### 9. Decide whether a paid tool is worth it
 
@@ -107,14 +107,14 @@ Ask the client to place one test order while you watch Test Events, or to share 
 - Deduplication, event coverage and match quality are each read from Events Manager, with the screenshot or date.
 - Event value follows the same definition as break-even in `store-meta-math`.
 - content_ids match the product feed on at least the ten sampled orders.
-- COD stores have a stated decision on what Meta learns from.
+- Stores with many failed or unpaid orders have a stated decision on what Meta learns from.
 - No fix is shown as done unless the client made or approved it, and each has a re-check date.
 
 ## Output
 
 **Summary, one screen:** "Meta receives X Purchase events per 100 store orders", the main cause of any gap, the top three fixes in order, and whether a paid tool is justified (usually no).
 
-**Table "Store orders versus Meta Purchase events, by day" (the reconciliation table):** Date, Store orders placed, Prepaid orders, COD orders, Cancelled or test orders removed, Meta Purchase events received, From browser, From server, Events per 100 orders, Event coverage, Duplicate warnings (yes or no), Note.
+**Table "Store orders versus Meta Purchase events, by day" (the reconciliation table):** Date, Store orders placed, Paid at checkout orders, Paid later orders (pay on delivery or invoice), Cancelled or test orders removed, Meta Purchase events received, From browser, From server, Events per 100 orders, Event coverage, Duplicate warnings (yes or no), Note.
 
 **Table "Ten-order spot check":** Order name, Store value (agreed definition), Meta event value, Currency match, Event ID on browser, Event ID on server, Deduplicated, Email or phone present, fbc present, content_ids match feed.
 
@@ -127,7 +127,7 @@ Ask the client to place one test order while you watch Test Events, or to share 
 - **Server events without the browser's event ID.** No merge, so double counts. Step 3.
 - **Value with tax against break-even without it.** ROAS looks better than it is. Step 5 aligns them.
 - **Buying a tool to fix a setup problem.** Step 9 puts free fixes first [MEA-0001].
-- **Training Meta on COD orders that never pay.** Step 8 makes it a choice, not an accident.
+- **Training Meta on orders that never pay.** Step 8 makes it a choice, not an accident.
 - **Leaving a test code live after debugging.** Step 7 [MEA-0005].
 
 ## Sources
@@ -146,3 +146,7 @@ Ask the client to place one test order while you watch Test Events, or to share 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
 What this skill does that the open-source one did not: counts store orders against Meta Purchase events day by day and spot-checks ten real orders instead of scoring a pipeline; works through the Shopify app's data-sharing levels and duplicate pixel sources; ties event value to the store's break-even definition; and decides what Meta should learn from when cash-on-delivery orders do not pay.
+
+## Selling in India
+
+- COD orders that return to origin (RTO) are the main case for step 8. Send a delivered event from the courier data only once it reaches the volume step 8 sets.

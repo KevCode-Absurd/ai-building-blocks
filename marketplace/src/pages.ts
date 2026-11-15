@@ -13,7 +13,8 @@ import { agentPayload, featuredPayload, HOME_FEATURED, verticalPayload } from ".
 import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
 import { groupByNature, lowerFirst, workLine, workLineText } from "./modules/directory/work.ts";
 import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, ECOMMERCE_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
-import { verticalIndex } from "./modules/knowledge/service.ts";
+import { verticalIndex, verticalShelf } from "./modules/knowledge/service.ts";
+import { isShelfKind, SHELF_KINDS, SHELF_LABELS, type ShelfItem, type ShelfKind } from "./modules/knowledge/shelf.ts";
 import type { Persona } from "./core/types.ts";
 import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
 
@@ -307,9 +308,20 @@ async function ecommercePage(env: Env): Promise<PageView> {
   const library = built ? librarySummary(built.file) : null;
   const origin = originOf(env);
   const lead = team[0];
+  // The team by stage of the work (team-stages.ts), so a reader or an answer engine sees who does each part.
+  const placed = new Set(payload.stages.flatMap(st => st.ids));
+  const byStage = payload.stages.map(st => `<h3>${esc(st.label)}</h3><p>${esc(st.summary)}</p><ul>${st.ids.map(id => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p).map(agentLine).join("")}</ul>`).join("");
+  const rest = team.filter(p => !placed.has(p.id));
   const teamHtml = lead
-    ? `<p>${esc(lead.name)}, ${esc(lead.title)}, leads the team.${team.length > 1 ? ` ${team.length - 1} specialists each own one part of the store.` : ""}</p><ul>${team.map(agentLine).join("")}</ul>`
+    ? `<p>${esc(lead.name)}, ${esc(lead.title)}, leads the team.${team.length > 1 ? ` ${team.length - 1} specialists each own one part of the store.` : ""}</p>${byStage}${rest.length ? `<ul>${rest.map(agentLine).join("")}</ul>` : ""}`
     : "<p>The team is on its way.</p>";
+  // The shelves (prompts, skills, tools, minds): counts for the tabs, and the first few of each for a reader.
+  const shelf = await verticalShelf(env, ECOMMERCE).catch(() => null);
+  const shelfBoot = shelf ? { vertical: shelf.file.vertical, built: shelf.file.built, stages: shelf.file.stages, counts: Object.fromEntries(SHELF_KINDS.map(k => [k, shelf.file[k].length])) } : null;
+  const shelfHtml = shelf ? SHELF_KINDS.filter(k => shelf.file[k].length).map(k => {
+    const items = (shelf.file[k] as ShelfItem[]).slice(0, 12);
+    return `<h3>${shelf.file[k].length} ${SHELF_LABELS[k].many}</h3><ul>${items.map(i => `<li><a href="${ECOMMERCE_PATH}/${k}/${esc(i.slug)}">${esc(i.title)}</a>: ${esc(i.summary)}</li>`).join("")}</ul>`;
+  }).join("") : "";
   const modules = library?.modules.filter(m => m.cards > 0) ?? [];
   const libraryHtml = library && library.cards > 0
     ? `<p>${library.cards} card${library.cards === 1 ? "" : "s"} from ${library.sources} source${library.sources === 1 ? "" : "s"}. A card is one tested idea from a trusted source, with when it holds and when it fails.</p><ul>${modules.map(m => `<li>${esc(m.name)}: ${m.cards} card${m.cards === 1 ? "" : "s"}</li>`).join("")}</ul><p>Each card has a trust level from 1 to 4: 1 is the platform's own guides, 2 is large studies, 3 is a named seller with proof, 4 is opinion.</p>`
@@ -329,8 +341,41 @@ async function ecommercePage(env: Env): Promise<PageView> {
         { "@type": "ListItem", position: 2, name: "E-commerce", item: `${origin}${ECOMMERCE_PATH}` },
       ] },
     ],
-    body: `<p><a href="/agents">All agents</a></p><h1>AI agents for your online store</h1><p>A team that knows e-commerce, built from expert sources, free to use in your own AI. Made for Shopify stores in India and the US, with Amazon as a second place to sell.</p><h2>The team</h2>${teamHtml}<h2>The library</h2>${libraryHtml}<h2>How to start</h2><ol><li>Pick an agent. Start with the team lead, or the specialist for the job.</li><li>Load it in your AI. <a href="/guides/use-an-agent-pack">Read the guide</a> or <a href="/connect">connect your AI</a>.</li><li>Ask your first job, in your own words.</li></ol>`,
-    boot: { [`/api/agents?vertical=${ECOMMERCE}`]: payload, ...(library ? { [`/api/knowledge/${ECOMMERCE}`]: library } : {}) },
+    body: `<p><a href="/agents">All agents</a></p><h1>AI agents for your online store</h1><p>A team that knows e-commerce, built from expert sources, free to use in your own AI. One agent for every job a store has, from finding a product to keeping customers, for Shopify stores anywhere, on Amazon and other marketplaces.</p><h2>The team</h2>${teamHtml}${shelfHtml ? `<h2>Prompts, skills, tools and minds</h2><p>Use them on their own in your AI, or let the agents use them for you.</p>${shelfHtml}` : ""}<h2>The library</h2>${libraryHtml}<h2>How to start</h2><ol><li>Pick an agent. Start with the team lead, or the specialist for the job.</li><li>Load it in your AI. <a href="/guides/use-an-agent-pack">Read the guide</a> or <a href="/connect">connect your AI</a>.</li><li>Ask your first job, in your own words.</li></ol>`,
+    boot: { [`/api/agents?vertical=${ECOMMERCE}`]: payload, ...(library ? { [`/api/knowledge/${ECOMMERCE}`]: library } : {}),
+      ...(shelfBoot ? { [`/api/knowledge/${ECOMMERCE}/shelf`]: shelfBoot } : {}) },
+  };
+}
+
+/** /e-commerce/:kind/:slug: one prompt, skill, tool or mind from the e-commerce shelves. */
+async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<PageView> {
+  const shelf = await verticalShelf(env, ECOMMERCE).catch(() => null);
+  const item = shelf ? (shelf.file[kind] as ShelfItem[]).find(i => i.slug === slug) : undefined;
+  if (!shelf || !item) return notFound();
+  const origin = originOf(env);
+  const path = `${ECOMMERCE_PATH}/${kind}/${slug}`;
+  const label = SHELF_LABELS[kind].one;
+  const people = await listPersonas(env);
+  const byId = new Map(people.map(p => [p.id, p]));
+  const users = item.agents.map(id => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p);
+  const extra = kind === "prompts" ? `<h2>What you fill in</h2><ul>${(item as { fill: string[] }).fill.map(f => `<li>${esc(f)}</li>`).join("")}</ul>`
+    : kind === "tools" ? `<h2>What a store uses it for</h2><ul>${(item as { jobs: string[] }).jobs.map(j => `<li>${esc(j)}</li>`).join("")}</ul>`
+    : kind === "minds" ? `<h2>Questions to ask about your store</h2><ul>${(item as { questions: string[] }).questions.map(q => `<li>${esc(q)}</li>`).join("")}</ul>`
+    : `<p>${esc((item as { when: string }).when)}</p>`;
+  return {
+    status: 200, index: true, path,
+    title: `${item.title} | E-commerce ${label}${SITE_SUFFIX}`,
+    description: item.summary.slice(0, 300),
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": kind === "tools" ? "SoftwareApplication" : "CreativeWork", name: item.title, description: item.summary, url: `${origin}${path}`,
+        isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY } },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "E-commerce", item: `${origin}${ECOMMERCE_PATH}` },
+        { "@type": "ListItem", position: 2, name: SHELF_LABELS[kind].many, item: `${origin}${ECOMMERCE_PATH}?tab=${kind}` },
+        { "@type": "ListItem", position: 3, name: item.title, item: `${origin}${path}` },
+      ] },
+    ],
+    body: `<p><a href="${ECOMMERCE_PATH}">E-commerce</a></p><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p>${extra}${users.length ? `<p>Used by ${users.map(p => `<a href="/agents/${p.id}">${esc(p.name)}, ${esc(p.title)}</a>`).join(", ")}.</p>` : ""}`,
   };
 }
 
@@ -341,7 +386,9 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
   if (path === "/guides") return guidesPage(env);
   if (path === "/connect") return connectPage(env);
   if (path === ECOMMERCE_PATH) return ecommercePage(env);
-  let m = path.match(/^\/agents\/([a-z0-9-]+)$/);
+  let m = path.match(/^\/e-commerce\/([a-z]+)\/([a-z0-9-]+)$/);
+  if (m) return isShelfKind(m[1]) ? shelfItemPage(env, m[1], m[2]) : notFound();
+  m = path.match(/^\/agents\/([a-z0-9-]+)$/);
   if (m) return agentPage(env, m[1]);
   m = path.match(/^\/agents\/([a-z0-9-]+)\/files\/.+$/);
   if (m) {
@@ -473,6 +520,10 @@ export async function sitemapXml(env: Env): Promise<Response> {
     ...roles.map(r => `/agents?role=${encodeURIComponent(r.id)}`),
     ...everyone.filter(p => p.kind === "house").map(p => `/agents/${p.id}`),
     ...(await publicProfileSlugs(env)).map(slug => `/experts/${slug}`),
+    ...await (async () => {
+      const shelf = await verticalShelf(env, ECOMMERCE).catch(() => null);
+      return shelf ? SHELF_KINDS.flatMap(k => (shelf.file[k] as ShelfItem[]).map(i => `${ECOMMERCE_PATH}/${k}/${i.slug}`)) : [];
+    })(),
   ];
   const urls = paths.map(p => `  <url><loc>${esc(`${origin}${p}`)}</loc></url>`).join("\n");
   return text(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, "application/xml");

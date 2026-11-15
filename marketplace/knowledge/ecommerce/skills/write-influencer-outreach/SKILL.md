@@ -39,7 +39,7 @@ Access: drafting needs no account access. Sending is a message to people on the 
 
 1. **Profit cap per creator.** Each creator's fee or commission is at or under the profit cap from the shortlist. Fail: lower the offer or switch the deal type in step 3. Commission and gifts come out of the same pool as discounts and ads [FIN-0015].
 2. **Stock and shipping.** Enough units for gifts plus the sales a good post brings. Fail: cut the batch.
-3. **Disclosure terms ready.** Each offer states the label the creator must use. US: plain words in the post itself [ORG-6405]. India: an ASCI label shown for the required time [ORG-6406]. Fail: do not send.
+3. **Disclosure terms ready.** Each offer states the label the creator must use. US: plain words in the post itself [ORG-6405]. UK: "Ad" or "#ad" up front, as the ASA and CMA expect. EU, Australia and other markets: the label the local ad rules ask for, shown for the time they require. Fail: do not send.
 4. **Contact route allowed.** Use only a business email or DM route the creator lists publicly. No scraped personal numbers, no bulk WhatsApp blasts.
 
 ## Steps
@@ -94,9 +94,9 @@ Practitioner default timing; test it.
 
 Add to every offer: "If you post, please label it clearly, for example 'Ad' or 'Gifted by [store]' in the first line and on screen, as the rules where you post require." The store must also check posts and ask for fixes [CXP-6303].
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** write the first message in the creator's language when they post in Hindi, Tamil, Bengali or another language; keep the offer numbers in rupees and say if the product is sent prepaid. Use WhatsApp only if the creator lists a business number for brand work, and send one message, not a broadcast. Kept products may need TDS [FIN-6423]; mention that an invoice or declaration may be needed.
+- **Any market:** write the first message in the creator's language when they post in a language other than the store's main one; keep the offer numbers in the creator's local currency and say if shipping and any duties are paid by the store. Use WhatsApp only if the creator lists a business number for brand work, and send one message, not a broadcast. Kept products and fees can be taxable income for the creator in many countries; mention that an invoice or tax form may be needed (for example a W-9 in the US).
 - **US:** email is the main route above 50,000 followers; many mid and macro creators use managers. Keep the offer in dollars and say if usage rights are included or priced separately.
 
 ## Checks before you hand it over
@@ -148,7 +148,14 @@ Status: draft, awaiting client yes
 - ORG-0032: aim to be a rising creator's first sponsor.
 - CXP-6303: the advertiser trains and monitors rewarded creators.
 - ORG-6405: FTC disclosure for influencers.
+
+What makes this skill ours: every offer carries a number capped by the store's own profit per order; the deal type changes by tier instead of one rate card; gift messages say posting is optional and ask for a label, which keeps the store inside US, UK and EU disclosure rules; and creators get messages in their own posting language through routes they list for brand work.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- Disclosure: an ASCI label shown for the required time [ORG-6406].
+- Write the first message in the creator's language when they post in Hindi, Tamil, Bengali or another language; keep the offer numbers in rupees and say if the product is sent prepaid.
+- Kept products may need TDS [FIN-6423]; mention that an invoice or declaration may be needed.
 - ORG-6406: ASCI labels for India.
 - FIN-6423: TDS on products Indian creators keep.
-
-What makes this skill ours: every offer carries a number capped by the store's own profit per order; the deal type changes by tier instead of one rate card; gift messages say posting is optional and ask for a label, which keeps the store inside both US and Indian rules; and Indian creators get messages in their own posting language through routes they list for brand work.

@@ -11,7 +11,7 @@ description: "Plans one collection page so shoppers find the right product fast:
 
 - A collection gets sessions from ads, search or the menu but a low share of them open a product.
 - A collection now holds more than about 12 products and shoppers scroll without choosing.
-- Shoppers ask support for things the filters should answer ("do you have it in cotton", "what fits under 1,000 rupees").
+- Shoppers ask support for things the filters should answer ("do you have it in cotton", "what fits under 50 dollars").
 - A seasonal or new collection is going live.
 
 ## Not for
@@ -50,8 +50,8 @@ If filter usage data is missing, rank filters by how often each attribute appear
 5. **Write the card rules.** Every card: one consistent image ratio, product name as buyers say it, final price (and a true compare-at only if the store really charged it), star rating with count only when the product has reviews, one key-difference line of 4 to 7 words, and stock or variant cue ("3 colours", "Sizes S to XL"). Write that key-difference line now for every product in rows one and two.
 6. **Write the top intro.** One or two sentences above the grid: what is in the collection and how to choose ("Start with the bestsellers, or filter by your skin type"). Keep it short so products stay in the first screen.
 7. **Write the bottom guide.** Below the grid: a short buying guide (how to choose, who each option suits, care or sizing notes) and 3 to 5 FAQs from tickets. On stores with many products, collection pages drive most organic revenue in one practitioner's audits [SEO-0003], and copy below the grid serves search without pushing products down [SEO-0005]. Hand titles and keyword targets to `optimize-collection-pages-for-seo`.
-8. **Plan sub-collections.** If one attribute dominates searches (for example "oversized" or "under 999"), recommend a separate sub-collection for it rather than a filter alone [SEO-0012].
-9. **India and US notes.** India: add a price band filter in rupees that matches common gifting and impulse bands, show "COD available" on cards only where it is true for the product, and keep prices GST-inclusive. Write filter values in English plus the Hindi or regional term buyers use if searches show it. US: show sale prices against a genuine former price only.
+8. **Plan sub-collections.** If one attribute dominates searches (for example "oversized" or "under 50"), recommend a separate sub-collection for it rather than a filter alone [SEO-0012].
+9. **Market notes.** Add a price band filter in the store's own currency that matches common gifting and impulse bands. Show payment cues such as "Pay on delivery" or "Buy now, pay later" on cards only where true for the product. Show prices the way the market expects: tax-inclusive in the UK, EU and Australia, before sales tax in the US. Write filter values in the main language plus the terms buyers use in their other languages if searches show it. Show sale prices against a genuine former price only (US rules; the EU requires the lowest price of the last 30 days as the reference).
 10. **Set the measure.** Record the current collection-view to product-view rate and filter use. Re-read after 4 weeks; test only if order volume allows, using `design-store-ab-test`.
 
 ## Checks before you hand it over
@@ -107,3 +107,8 @@ If filter usage data is missing, rank filters by how often each attribute appear
 - SEO-0012: sub-collections for searched variants.
 
 What makes this skill ours: filters are ranked by counted buyer mentions and data fill rate; the first row is gated on variant stock and gross profit; every badge and pin follows a written, dated rule; and the grid is planned for a two-column phone screen first.
+
+## Selling in India
+
+- Use rupee price bands for gifting and impulse buys, keep prices GST-inclusive, and show "COD available" only where true.
+- Add Hindi or regional filter terms if searches show them.

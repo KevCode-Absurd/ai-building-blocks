@@ -1655,5 +1655,776 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "FIN-6424",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "cash flow",
+      "working capital",
+      "US inventory"
+    ],
+    "claim": "Fund a US launch like a second business: duplicated inventory, lower early margins and localised creative all drain cash, and running out of working capital is a top way launches fail.",
+    "body": "Blue Sense calls cash flow the thing most likely to kill a US launch. Holding stock in the US means a second inventory buy on top of the home market one, which balloons inventory on the balance sheet. Most brands are less profitable in the US at first, which strains cash further. Localised creative with US creators and voices costs extra. And the cost people rarely count is focus: the founder's and the team's attention split across two markets, and the home market usually suffers. How to apply: build a 12-month cash plan for the US on its own, covering the first stock buy and reorders, tariffs, a lower first-year margin, creative production and any extra staff or agency fees. Ring-fence that capital, set a cash floor for the home business, and decide in advance at what point you would pause the US. Treat it as launching a separate business on purpose, with its own budget and owner.",
+    "conditions": "Non-US brands planning a US launch with local inventory.",
+    "fails_when": "Lean tests shipped from home with no US stock, where cash needs are small; brands with outside funding set aside for expansion.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How much cash do I need to launch in the US?",
+      "Why do international launches run out of money?",
+      "Should I hold inventory in the US from day one?",
+      "How do I plan cash flow for a new market?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6608",
+    "evidence": {
+      "where": "[25:00] the cash flow trap; [25:49] founder and team focus; [29:50] a second business on purpose"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6425",
+    "modules": [
+      "FIN",
+      "ADC"
+    ],
+    "topics": [
+      "US sales tax",
+      "state thresholds",
+      "geo targeting"
+    ],
+    "claim": "If you concentrate US sales in a few states, watch each state's sales tax threshold; crossing it cuts your margin, whereas spreading revenue across states can keep you under the thresholds longer.",
+    "body": "Unlike Australia's single 10% GST on all transactions, US sales tax is set state by state, each with its own threshold for when a seller must collect it. Blue Sense's point: if you target only a few states and push one of them to millions in revenue, you cross that state's threshold and your margin falls, when spreading the same revenue across the country might have kept you under thresholds for longer. How to apply: when choosing state-level or nationwide targeting, list each target state's threshold and forecast revenue per state; track revenue by state monthly in Shopify; register and collect once you cross a threshold; and price so the margin still works after tax in your largest states. Get advice from a US tax adviser, because thresholds and rules differ and change.",
+    "conditions": "Non-US brands selling to US consumers, especially with state-concentrated targeting.",
+    "fails_when": "Once revenue is large you will pass thresholds in many states anyway; marketplace sales where the platform collects tax; this is general guidance, not tax advice.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Australia GST 10% on all transactions",
+      "US sales tax set state by state"
+    ],
+    "asks": [
+      "Do I have to pay sales tax in every US state?",
+      "How does US sales tax work for foreign ecommerce brands?",
+      "Should my US targeting take sales tax into account?",
+      "What are US sales tax thresholds?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6608",
+    "evidence": {
+      "where": "[15:57] state sales tax thresholds"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6426",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "profit versus cash",
+      "working capital",
+      "growth funding"
+    ],
+    "claim": "A brand growing 40% a year can lift EBITDA from $910K to $1.27M and still end the year $200K shorter on cash, because growth soaks profit into inventory, receivables, tax, interest and capex.",
+    "body": "Profit on the P&L is not money you can spend. Blue Sense's worked example: revenue rises from about $14 million to $20 million and EBITDA from $910,000 to about $1.27 million. To support next year's higher sales without stocking out, the brand puts $1 million into building inventory, leaving about $200,000. Receivables take more, payables give some back, then tax, loan interest and capital spending push the year's change in cash to minus $200,000. So the business must find $200,000 just to keep growing. The lesson: for a fast-growing DTC brand with decent marketing, the limit on growth is usually working capital, not ads. It also explains why a $20 million brand at a healthy margin may let its owners draw almost nothing; the only way to pay a dividend can be borrowing against a facility. How to apply: each year, run a simple cash waterfall from EBITDA: minus inventory build, minus change in receivables, plus change in payables, minus tax, interest and capex. If the result is negative at your planned growth rate, line up funding (supplier terms, a facility, slower stock build) before you raise ad budgets.",
+    "conditions": "Inventory-holding brands growing quickly (roughly 20%+ a year), typically $5M to $50M revenue, that pay for stock months before selling it.",
+    "fails_when": "Print on demand, dropship or pre-order models that collect cash before paying suppliers; slow or flat growth where inventory needs do not rise.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Growth 40% a year",
+      "EBITDA $910K to $1.27M",
+      "Revenue about $14M to $20M",
+      "Inventory build $1M",
+      "Change in cash minus $200K"
+    ],
+    "asks": [
+      "Why do I have less cash even though we made more profit?",
+      "How do I know if I can afford to grow faster?",
+      "Why can't I take money out of my profitable business?",
+      "Is my growth limited by ads or by cash?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[04:58] cash statement waterfall: grew 40%, more profit, less cash"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-6427",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "foreign exchange",
+      "currency holdings",
+      "FX policy"
+    ],
+    "claim": "Brands selling in a non-US currency but buying stock in US dollars should decide how many US dollars to hold and convert when rates are good for purchases 3 to 6 months out.",
+    "body": "Most manufacturing countries price in or peg to the US dollar, so an Australian brand that sells in AUD pays suppliers in USD and its product cost rises and falls with the exchange rate through the year. Blue Sense's point is that this needs a deliberate policy, not a surprise at each invoice. When the rate is favourable, converting part of your cash into US dollars locks in better margin on the purchase orders you will pay over the next three to six months. Margins should be re-weighted with live exchange data rather than an old assumed rate. They place an FX policy in the finance stack from about $20 million to $50 million a year and formal hedging from $50 million up, and stress this is not financial advice; talk to your accountant or bank about hedging products. How to apply: list the US dollar payments due in the next 13 weeks from your cash forecast, decide what share to cover in advance, set a rate trigger for converting, and record the actual rate paid against each order so landed cost stays true.",
+    "conditions": "Non-US brands (Australia and similar) paying suppliers in US dollars, with predictable purchase orders.",
+    "fails_when": "Brands that buy and sell in the same currency; small brands where FX swings are minor next to other costs.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Cover purchases 3 to 6 months out",
+      "FX policy at $20M to $50M; hedging at $50M+"
+    ],
+    "asks": [
+      "How do exchange rates affect my product costs?",
+      "Should I hold US dollars for supplier payments?",
+      "When should an Australian brand start hedging currency?",
+      "How do I protect margins from the AUD dropping?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[15:25] exchange rates for brands outside the US; [17:07] holding US dollars and hedging"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6428",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "finance stack by stage",
+      "FP&A",
+      "cost of capital"
+    ],
+    "claim": "Build the finance stack by stage: at $10M to $20M accrual books, a weekly 13-week cash forecast, open-to-buy, channel P&Ls and landed cost per SKU; add fractional FP&A and scenarios at $20M to $50M.",
+    "body": "Blue Sense's checklist by revenue stage. At $10 million to $20 million: accrual accounting (the first fix if missing), a 13-week cash forecast updated weekly, an open-to-buy or other set method for inventory buys, separate P&Ls for each revenue channel (DTC, Amazon, wholesale), and landed cost tagged on every SKU in Shopify so you and your agency see real gross margin daily and know which categories to push. At $20 million to $50 million: someone owning financial planning and analysis, which Blue Sense would keep fractional at this stage, CAC payback by channel, every source of capital priced as an APR in one report, scenario planning (poor, on track, better) tied to the cash forecast, and a currency policy. At $50 million and up: books ready for a quality of earnings review, formal FX hedging, channel P&Ls, a board pack, a full-time finance lead, and cost of capital used as the hurdle for every spending decision. How to apply: check which items for your stage are missing and add them in that order; skipping the basics makes the later ones meaningless.",
+    "conditions": "Brands from about $10M to $100M+ revenue planning their finance function.",
+    "fails_when": "Brands under $5M, where most of this is overkill beyond basic books, landed cost and a simple cash forecast.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Stages: $10M to $20M, $20M to $50M, $50M+",
+      "Fractional FP&A at $20M to $50M; full-time at $50M+"
+    ],
+    "asks": [
+      "What finance setup do I need at $10 million revenue?",
+      "When should I hire a CFO or FP&A person?",
+      "What financial reports should a growing brand have?",
+      "Do I need a fractional CFO?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[64:46] finance by stage from $10M to $100M+"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6429",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "valuation",
+      "normalised EBIT",
+      "exit readiness"
+    ],
+    "claim": "Buyers value a DTC brand on normalised EBIT times a multiple: subtract the founder's market-rate replacement cost (often $600K to $700K at $20M to $50M), legal and stock provisions, then add back owner expenses.",
+    "body": "Reported EBIT is not what a buyer pays for. Blue Sense's walk to normalised EBIT: start with reported EBIT, subtract what it would cost to replace the founder at market rates (a founder paid $80,000 may be doing a $200,000 job, and at $20 million to $50 million the founder often covers two or three roles worth $600,000 to $700,000), subtract deal legal costs and any unbooked stock provisions, then add back personal costs run through the business, such as the owner's car. Apply a multiple that rises with size, growth, predictability and lower founder dependence. A $1 million revenue store making $200,000 EBIT might get 1 to 3 times; a $50 million brand at 20% margin and 20% growth, not founder reliant, is more like 5 to 6 times, since $4 million of EBIT is still too small for top multiples. To get market rates, ask business brokers what deals are closing, quoting normalised, not reported, EBIT. To be exit ready, have accrual books, an inventory provision policy, reconciled taxes, new versus returning revenue, top SKU shares, cash conversion and marketing efficiency trends, and documented add-backs for the past three to five years.",
+    "conditions": "Founders considering a sale in the next few years, or wanting to know what their brand is worth.",
+    "fails_when": "Strategic buyers paying for brand, IP or channel access above earnings; venture-style deals priced on revenue growth.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Founder replacement cost at $20M to $50M: about $600K to $700K",
+      "$1M revenue, $200K EBIT: 1 to 3x",
+      "$50M revenue, 20% margin, 20% growth: about 5 to 6x",
+      "Keep 3 to 5 years of documented add-backs"
+    ],
+    "asks": [
+      "How much is my e-commerce brand worth?",
+      "What multiple do DTC brands sell for?",
+      "What is normalized EBIT?",
+      "How do I get my business ready to sell?",
+      "What do buyers look for in an e-commerce brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[61:38] what a business is worth: normalised EBIT and multiples; [64:49] exit readiness list"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6430",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "capital allocation",
+      "five buckets",
+      "cost of capital"
+    ],
+    "claim": "Every dollar in a DTC brand goes to one of five buckets: ads, stock, people, site and ops (including 3PL), or debt; the operator's main job is choosing which gets the next marginal $100K.",
+    "body": "Above about $10 million a year, the hard decisions are rarely about any one channel; they are about where the next block of cash does the most good. Blue Sense frames it as five places a dollar can go: ads (more spend on Meta, Google and so on), stock (a bigger or earlier purchase order), people (a hire), site and ops (the website, the 3PL and other operating systems), and debt (paying down a loan). Each competes for the same cash, and each has a different return and payback. How to apply: keep a live list of the options competing for the next $100,000, with the expected return, the time until the money comes back, and what it costs if you fund it with borrowed money. Use your cost of capital as the hurdle: an option that cannot beat what your debt costs should wait. Revisit the list in a weekly finance meeting, and pick the option that removes the current bottleneck (for example, stock-outs limiting ad scaling means stock wins over ads).",
+    "conditions": "Brands with several real uses competing for limited cash, usually from about $5M to $10M revenue up.",
+    "fails_when": "Very early stores where one obvious bottleneck (product market fit, first creative) dominates and formal allocation adds little.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Five buckets: ads, stock, people, site/ops, debt",
+      "Decision unit: the next marginal $100K"
+    ],
+    "asks": [
+      "Should I spend extra cash on ads, inventory or a hire?",
+      "How do I decide where to invest money in my store?",
+      "What should I do with $100K of spare cash?",
+      "How do big brands allocate capital?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[14:45] five places a dollar goes; [69:04] allocating the next marginal $100K"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6431",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "13-week cash forecast",
+      "cash floor",
+      "weekly forecasting"
+    ],
+    "claim": "Every eight-figure brand should keep a rolling 13-week cash forecast built on cash movements, not revenue, with a minimum cash line (for example $500K) it must never cross.",
+    "body": "Thirteen weeks is one quarter: long enough to see a big stock payment or a quarterly tax bill coming, short enough to forecast week by week with some accuracy. Beyond 20 to 40 weeks it becomes guesswork about sales. Each week you roll it forward by one week. The forecast holds only cash: Shopify payouts (after fees and payout delays), not revenue; purchase order deposits and balances, not stock value; freight and duty when paid; ad spend; 3PL and shipping (a near-fixed share of payouts); payroll in the weeks it is paid; flat operating costs; and tax payments such as GST or sales tax in the weeks they fall. Blue Sense's example week: opening cash $700,000, plus $330,000 in payouts, minus a $60,000 PO deposit, $95,000 of ads, $36,000 of 3PL and shipping and $26,000 of opex, with no payroll that fortnight, for a net plus $113,000 and closing cash $813,000. How to apply: set a minimum cash floor from your risk tolerance, enough to survive a bad stretch of losses. Any week that dips below it is a decision point now: move a PO, negotiate terms, cut spend or arrange a facility.",
+    "conditions": "Brands roughly $10M a year and up, or any brand with lumpy stock payments and tight cash.",
+    "fails_when": "Stable, cash-rich businesses with no large lumpy payments, where a monthly view is enough.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Forecast horizon 13 weeks, rolled weekly",
+      "Example floor $500K",
+      "Example week: open $700K, payouts +$330K, PO deposit -$60K, ads -$95K, 3PL -$36K, opex -$26K, close $813K"
+    ],
+    "asks": [
+      "How do I build a cash flow forecast for my store?",
+      "Why 13 weeks for a cash forecast?",
+      "How much cash should I keep in the bank?",
+      "What goes into a weekly cash forecast?",
+      "How do I avoid running out of cash?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[19:08] 13-week cash forecast line by line"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-6432",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "scenario planning",
+      "cash requirements",
+      "facility planning"
+    ],
+    "claim": "Forecast bad, base and upside cases and the cash each needs; in Blue Sense's example the upside left only $200K and the bad case still needed a $700K facility.",
+    "body": "Many operators assume beating the plan solves cash problems. Usually the opposite: faster growth needs more stock and working capital up front, so the upside case is often the one that runs out of cash. Blue Sense's year-two example for a roughly $20 million brand: a bad case of about $18 million, a base case of about $20 million and an upside of about $21.5 million. The bad case had so little profit relative to revenue that it still needed a $700,000 facility. The base case dipped below the $500,000 minimum cash line, so it required negotiating longer supplier terms. The upside left only about $200,000 in the bank, calling for a loan facility, earlier stock purchases or several fixes together. How to apply: build three scenarios in your yearly plan, run each through your cash forecast (inventory buys, payouts, tax, payroll, debt), and note the lowest cash point in each. Arrange the funding for the most demanding case before it arrives: facilities take weeks to set up, and supplier terms are easier to negotiate before you need them.",
+    "conditions": "Inventory-holding brands with growth targets, roughly $5M a year and up.",
+    "fails_when": "Low-growth, cash-rich businesses; pre-order or made-to-order models that do not front stock.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Scenarios: bad ~$18M, base ~$20M, upside ~$21.5M",
+      "Bad case: $700K facility needed",
+      "Base case: breaches $500K minimum cash",
+      "Upside: about $200K cash left"
+    ],
+    "asks": [
+      "How do I plan for different growth scenarios?",
+      "Why would growing faster make me run out of cash?",
+      "Do I need a loan facility to hit my targets?",
+      "How do I forecast cash for next year?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[57:48] three scenarios and their cash requirements"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-6433",
+    "modules": [
+      "FIN",
+      "OPS",
+      "MEA"
+    ],
+    "topics": [
+      "weekly finance meeting",
+      "cash versus plan",
+      "marginal acquisition MER"
+    ],
+    "claim": "Hold a 15 to 30 minute weekly finance meeting covering cash against the 13-week plan, open-to-buy, marginal acquisition MER against plan, and price or discount volume maths.",
+    "body": "The tools only help if someone looks at them every week and changes decisions. Blue Sense recommends a short weekly finance meeting, ideally run by your finance hire or by the founder if there is none, kept to 30 minutes or even 15. The agenda: 1. Actual cash against the 13-week cash plan, and whether any week now dips below the minimum. 2. Open-to-buy: what future stock buys look like and whether they need cutting or pulling forward given how revenue is tracking against forecast. 3. Marginal acquisition MER and return on each marketing channel against plan: is the last dollar of spend still buying new customers at an acceptable rate, and what does that mean for spend and cash. 4. Price versus volume: for any planned price change or discount period, the volume needed to hold margin (using the break-even formulas), checked against the cash plan. How to apply: put the four items in a fixed sheet, update it before the meeting, and leave each week with named actions on spend, stock or offers.",
+    "conditions": "Brands with a cash forecast and inventory plan in place, typically $10M a year and up.",
+    "fails_when": "Very small teams where the founder already reviews these daily; meetings with no data prepared, which turn into talk without decisions.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Meeting length: 15 to 30 minutes weekly"
+    ],
+    "asks": [
+      "What should we review in a weekly finance meeting?",
+      "How often should I look at my cash forecast?",
+      "What is marginal MER?",
+      "How do I tie ad spend decisions to cash?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[67:50] 30-minute weekly finance meeting agenda"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6434",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "net working capital",
+      "growth funding",
+      "cash planning"
+    ],
+    "claim": "Net working capital as a share of revenue tells you the cash each new sales dollar needs; at 16%, growth costs 16 cents upfront to earn 6.5 cents of EBITDA, so adding $10M needs about $1.6M.",
+    "body": "Net working capital (inventory plus receivables minus payables, roughly) grows with revenue. Expressed as a percentage of yearly revenue, it tells you how much cash you must put in before new sales pay you back. Blue Sense's example brand ran at 15.7% to 16% with a 6.5% EBITDA margin: every extra dollar of revenue needs 16 cents of cash now to make 6.5 cents of profit later. Adding $10 million in sales next year would need about $1.6 million of cash in advance to carry the longer cycle. How to apply: compute it quarterly from your balance sheet and revenue. Multiply it by the extra revenue in your plan to see how much cash the plan needs, and compare that with cash on hand plus facilities. Watch it closely: if it creeps up (more stock per sales dollar, slower wholesale payers, shorter supplier terms), you are heading for a cash problem even while profitable. Bring it down with leaner buys, faster turns and better terms before you push growth.",
+    "conditions": "Inventory-holding brands planning growth, particularly with wholesale or long supplier lead times.",
+    "fails_when": "Pre-order or made-to-order models where customers pay before you buy stock.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "NWC 15.7% to 16% of revenue",
+      "EBITDA margin 6.5%",
+      "Adding $10M revenue needs about $1.6M cash"
+    ],
+    "asks": [
+      "How much cash do I need to grow by $10 million?",
+      "What is net working capital as a percent of revenue?",
+      "Why does growth use up so much cash?",
+      "How do I plan cash for next year's growth?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[13:49] working capital as a percentage of revenue: 16 cents to earn 6.5 cents"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-6435",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "cost of capital",
+      "revenue-based financing",
+      "APR comparison"
+    ],
+    "claim": "Price every funding source as an APR so they can be compared; for flat-fee products such as revenue-based financing, APR is the flat fee divided by (average balance times years).",
+    "body": "Lenders quote costs in different ways: an interest rate on a bank facility, a flat fee on revenue-based financing or a merchant cash advance, supplier terms with an early payment discount. A flat fee looks small, but because you repay it out of sales over a short period, the average amount you actually hold is much lower than the headline loan, and the time is short, so the annual cost can be high. Blue Sense's slide gives the conversion: APR equals the flat fee divided by the average balance outstanding multiplied by the term in years. For example, a $10,000 fee on $100,000 repaid evenly over six months has an average balance near $50,000 over half a year, about 40% APR, not 10%. They recommend putting the whole capital stack in APR terms in one report from the $20 million stage, and say they would do it even at $1 million. How to apply: list every facility and offer, convert each to APR, and use the cheapest as the hurdle any spend it funds must beat.",
+    "conditions": "Brands using or considering debt, revenue-based financing, inventory finance or supplier credit.",
+    "fails_when": "Brands funded entirely from their own cash.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "APR = flat fee / (average balance x years)",
+      "Worked example (ours): $10K fee on $100K over 6 months, about 40% APR"
+    ],
+    "asks": [
+      "Is revenue-based financing expensive?",
+      "How do I compare loan offers for my store?",
+      "What's the real interest rate on a flat fee loan?",
+      "How should I think about the cost of capital?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[27:07] what your money actually costs: APR from flat fee; [66:39] capital stack priced in APR"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6436",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "balance sheet health check",
+      "accrual accounting",
+      "finance metrics"
+    ],
+    "claim": "Run a balance sheet health check of DIO, DSO, DPO, inventory turns, GMROI, working capital percent and stock age; above $10M a year you need accrual accounting to get these at all.",
+    "body": "These numbers tell you whether growth is safe, but they only come out cleanly from accrual books, which record income and costs when earned or incurred, not when cash moves. Blue Sense's checklist: write down days inventory, days sales and days payable to get the cash conversion cycle; inventory turns (cost of goods sold divided by inventory); GMROI; net working capital as a percentage of revenue; and inventory age, meaning the share of SKUs and dollars in each A to D grade. They are blunt that a brand over $10 million still on cash accounting should switch immediately: it is usually less tax-efficient at that size and gives poor visibility, unless you keep both sets of books. How to apply: ask your accountant to move to accrual (or confirm you are on it), then build a one-page sheet with these metrics, updated monthly or quarterly. Look at trends rather than single readings, and investigate any metric moving the wrong way two periods running. Check tax implications for your country with your accountant.",
+    "conditions": "Brands around $10M a year and up holding inventory; useful earlier for any brand with stock on credit terms.",
+    "fails_when": "Tiny stores with simple cash flows; local tax rules where cash accounting is required or clearly better (check with an accountant).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Switch to accrual accounting above $10M revenue a year"
+    ],
+    "asks": [
+      "Should I be on accrual or cash accounting?",
+      "What financial numbers should I track each month?",
+      "How do I check the health of my balance sheet?",
+      "What finance metrics matter for an e-commerce brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "AU",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[12:20] balance sheet health check and accrual accounting"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6437",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "tariff refunds",
+      "US customs entry"
+    ],
+    "claim": "US importers who paid IEEPA tariffs, struck down in February 2026, can claim refunds with interest in ACE through CBP's CAPE declaration, but entries more than 80 days past liquidation are refused.",
+    "body": "After the Supreme Court ruled on 20 February 2026 that IEEPA does not allow tariffs, CBP built CAPE so importers can claim the money back in bulk. Only the importer of record or the broker that filed the entries can submit. You upload a CSV of up to 9,999 entry numbers in the CAPE tab of the ACE Portal; valid entries get a claim number. Unliquidated entries are set to liquidate 45 days after acceptance, liquidated entries are reliquidated if liquidation is not final, and CBP expects most refunds in 60 to 90 days, paid by ACH with interest. Entries more than 80 days past liquidation, drawback entries, entries with an open protest and some others are refused. Do not use a post summary correction to ask for the refund. Steps for a store: get an ACE Portal account, enrol for ACH refunds, ask your broker for a list of every 2025 to 2026 entry with an IEEPA Chapter 99 line, and file now, because each week more entries pass the 80-day line.",
+    "conditions": "US importers of record that paid IEEPA duties on entries before collection stopped in February 2026.",
+    "fails_when": "The entry is more than 80 days past liquidation, a surety paid the duty, or the entry is in an excluded type; CBP may have added phases since April 2026, so recheck.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 9,999 entries per CAPE CSV upload",
+      "refunds generally within 60 to 90 days of acceptance",
+      "unliquidated entries liquidate 45 days after acceptance",
+      "entries over 80 days past liquidation not accepted"
+    ],
+    "asks": [
+      "Can I get my 2025 tariffs refunded?",
+      "How do I claim an IEEPA tariff refund?",
+      "Is there a deadline for tariff refunds?",
+      "Do I need an ACE account to get my duty back?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6649",
+    "evidence": {
+      "where": "Eligibility and How to file sections",
+      "quote": "over 80 days past the liquidation date"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6438",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "IOSS",
+      "import VAT",
+      "cross-border fulfilment"
+    ],
+    "claim": "IOSS lets a non-EU seller charge EU VAT at checkout and file it in one member state for parcels up to €150; EU states agreed on 9 November 2026 to remove that cap, applying from 1 July 2028.",
+    "body": "Under the Import One-Stop Shop a seller, or the marketplace that is the deemed supplier, collects VAT at the buyer's country rate at checkout and pays it monthly through one EU registration, so parcels clear fast and the customer pays nothing on delivery. Today it only works for consignments up to €150 and never for excise goods. Above €150 the VAT is charged at import, usually to the buyer by the courier with a handling charge, which causes refused deliveries. On 9 November 2026 the Council reached a general approach to remove the €150 limit so IOSS and the deemed supplier rules cover all distance sales of imported goods, and to extend IOSS to sales from the new customs warehouses for distance sales. The change applies only once the EU Customs Data Hub is running, with 1 July 2028 given as the date, and still needs Parliament consultation and formal adoption. What to do now: if you ship direct to EU buyers, register for IOSS (most non-EU sellers must appoint an EU intermediary) and keep orders over €150 on a delivered-duty-paid service.",
+    "conditions": "Non-EU sellers making B2C distance sales of imported goods into the EU.",
+    "fails_when": "Excise goods, B2B sales, or stock imported in bulk into an EU warehouse; dates depend on formal adoption.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "IOSS limit today: consignments up to €150",
+      "threshold removal planned from 1 July 2028",
+      "Council general approach reached 9 November 2026"
+    ],
+    "asks": [
+      "What is IOSS and do I need it?",
+      "Can I use IOSS for orders over €150?",
+      "Why do EU customers refuse deliveries with VAT to pay?",
+      "Is the EU IOSS limit changing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6716",
+    "evidence": {
+      "where": "Body: current IOSS limit, what changes, application date",
+      "quote": "this system could only be used for consignments of up to €150"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6439",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "import VAT",
+      "landed cost"
+    ],
+    "claim": "EU import VAT is charged on customs value plus duties plus transport and other costs to the first destination in the importing country, so VAT is also charged on the duty.",
+    "body": "Article 85 and 86 of the VAT Directive set the base: customs value, plus duties, taxes and charges due because of importation (not the VAT itself), plus incidental costs such as commission, packing, transport and insurance up to the first place of destination in the importing country, and to a further EU destination if known at import. The first place of destination is the one on the consignment note or transport document. Worked example for Germany at 19%: CIF value at the EU border €10,000, duty at 12% €1,200, delivery from the port to the 3PL €300; VAT base €11,500; import VAT €2,185. EU landed cost formula = CIF + duty + EU inland delivery + broker fees, plus import VAT only if you cannot recover it. A business registered for VAT in that country normally recovers import VAT, and several member states let it be accounted for on the VAT return instead of paid at the border; the rules differ by country, so ask the local broker. A store with no EU VAT number usually cannot recover it, so the VAT becomes a real cost.",
+    "conditions": "Goods imported into an EU member state.",
+    "fails_when": "Distance sales under IOSS or the special arrangements, where VAT is collected differently; reduced rate goods.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example: base €11,500, VAT at 19% = €2,185",
+      "EU standard VAT rates vary by member state, for example 19% in Germany"
+    ],
+    "asks": [
+      "How is EU import VAT calculated?",
+      "Is VAT charged on customs duty in the EU?",
+      "What is my landed cost into Germany?",
+      "Can I recover import VAT in the EU?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6718",
+    "evidence": {
+      "where": "Importation of goods: what must be included and not included in the taxable amount",
+      "quote": "incurred up to the first place of destination"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6440",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "import VAT",
+      "postponed VAT accounting",
+      "cash flow"
+    ],
+    "claim": "A UK VAT-registered importer can use postponed VAT accounting with no approval, so import VAT is declared and reclaimed on the same VAT return instead of being paid in cash at the border.",
+    "body": "With postponed VAT accounting the import VAT is not paid when goods clear. It appears on a monthly postponed import VAT statement, and you declare it as output VAT and reclaim it as input VAT on the same return, so the net cash cost is usually zero. On a £40,000 shipment with £2,000 duty, that keeps roughly £8,400 of VAT in the business instead of tied up for one to three months until the return is filed. How to use it: be VAT registered; put your VAT number at header level in data element 3/40 of the import declaration; do not use payment method G in 4/8; if an agent or supplier makes the declaration, tell them in writing; download the monthly statement from the Customs Declaration Service financial dashboard and keep it with your records. The choice cannot be changed once the declaration is submitted. It works for goods into Great Britain from anywhere outside the UK, and into Northern Ireland from outside the UK and EU. Customs duty itself is still payable.",
+    "conditions": "UK VAT-registered businesses importing goods for business use that they own.",
+    "fails_when": "Royal Mail consignments over £135, consignments of £135 or less (which use point of sale VAT), commercial goods declared through the baggage route, or businesses not VAT registered.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "UK standard VAT 20% on import value",
+      "example: about £8,400 import VAT not paid up front on a £40,000 shipment",
+      "declaration fields: 3/40 VAT number; do not use payment method G in 4/8"
+    ],
+    "asks": [
+      "Do I have to pay import VAT at the UK border?",
+      "What is postponed VAT accounting?",
+      "How do I reclaim import VAT in the UK?",
+      "Where do I find my postponed import VAT statement?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "UK"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6765",
+    "evidence": {
+      "where": "Who can use it; How to account for import VAT on your declaration"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6441",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "import VAT",
+      "landed cost"
+    ],
+    "claim": "UK import VAT is charged on customs value plus duty plus delivery costs to the first UK destination, so VAT is charged on the duty too and lifts landed cost for stores that cannot reclaim it.",
+    "body": "HMRC builds the VAT value from the customs value, even when no duty is due, then adds incidental costs such as commission, packing, transport and insurance to the first UK destination (and to a further UK destination if known at import), customs duty and any excise. Worked example: factory price £10,000 FOB, freight and insurance to the UK port £800, so customs value £10,800. Duty at 12% is £1,296. UK delivery to the warehouse £300. VAT base £10,800 + £1,296 + £300 = £12,396; VAT at 20% is £2,479.20. Landed cost for a VAT-registered store = £10,800 + £1,296 + £300 + broker fees, about £12,400 plus fees, because the VAT comes back on the return (use postponed VAT accounting to avoid paying it up front). For a store that is not VAT registered, add the £2,479.20 as a real cost. If the actual UK costs are unknown, HMRC allows flat rates: air 55p per chargeable kg with a £135 minimum, groupage £125 per tonne plus £110 per consignment, and £760 per full load.",
+    "conditions": "Goods imported into Great Britain and valued for import VAT.",
+    "fails_when": "Low value consignments of £135 or less, where VAT is charged at the point of sale; reduced or zero VAT rate goods.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "UK standard VAT 20%",
+      "example VAT base £12,396 and VAT £2,479.20",
+      "flat rates: air 55p per chargeable kg, minimum £135",
+      "groupage £125 per gross tonne plus £110 per consignment, minimum £235",
+      "full load £760 per consignment"
+    ],
+    "asks": [
+      "How is UK import VAT calculated?",
+      "Is VAT charged on import duty in the UK?",
+      "What is my landed cost for goods into the UK?",
+      "Can I reclaim UK import VAT?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "UK"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6770",
+    "evidence": {
+      "where": "Items you must add to the customs value; Nationally agreed rates for Method 2",
+      "quote": "even if there's no duty payable"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

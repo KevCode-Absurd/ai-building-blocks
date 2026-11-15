@@ -96,7 +96,7 @@ Do not fix thin pages by generating hundreds of AI descriptions in a week; pages
 
 ### 6. Market notes
 
-- **India:** marketplace sellers often reuse the same description on Flipkart, Amazon and the store; the store's page should carry the fuller, original version. Pincode or COD widgets that add the same paragraph to every product do not count as unique text.
+- **Marketplace sellers:** many reuse the same description on Amazon, Walmart, eBay and the store; the store's page should carry the fuller, original version. Delivery checker or pay-on-delivery widgets that add the same paragraph to every product do not count as unique text.
 - **US:** keep product identifiers (GTIN, MPN) on the surviving product after a merge so feeds stay approved.
 
 ### 7. Ship and confirm

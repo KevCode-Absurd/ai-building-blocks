@@ -58,9 +58,11 @@ If `forecast-demand-per-sku` has given a forecast, use the forecast speed for th
 
 Full lead time = production + transit + customs or clearance + inbound receiving at the warehouse + the days between deciding and paying the supplier (your own review rhythm).
 
-Planning ranges from one practitioner for Chinese suppliers: production 20 to 30 days, sea 30 to 40 days door to door, air 7 to 10 [COG-0008]. Use the store's own history over these when it has it. India notes: domestic suppliers in Tiruppur, Surat or Jaipur can run 7 to 21 days, but add festival-season shutdowns and transporter delays; imports add customs clearance and possible BIS or labelling checks. US notes: add port congestion and duties paperwork since de minimis ended for imports.
+Planning ranges from one practitioner for Chinese suppliers: production 20 to 30 days, sea 30 to 40 days door to door, air 7 to 10 [COG-0008]. Use the store's own history over these when it has it. Domestic or nearby suppliers (for example in Mexico for the US, Turkey or Portugal for the EU and UK) can run 7 to 21 days, but add holiday shutdowns (Lunar New Year closes many Chinese factories for weeks; summer shutdowns in Europe) and haulier delays. Imports add customs clearance, duties paperwork and possible product safety or labelling checks under your market's rules (for example CPSC certificates in the US, CE or UKCA marking in the EU and UK). US imports also need duties paperwork since de minimis ended, and any market can add port congestion at peak.
 
 If the store checks stock once a week, add 7 days. A weekly review cycle is part of the lead time.
+
+Add a buffer for late ships: only about half of container ships arrived on schedule in September 2026, and late ships averaged about 6.65 days late, so add about a week to sea lead times. Add 3 to 4 weeks to a new supplier's quoted lead time and about 2 for a regular one. For Chinese suppliers, plan Chinese New Year as 2 to 4 weeks lost: order by mid-December to cover sales to about 1 April, plus 15 to 30 days of extra safety stock.
 
 ### 3. Grade every SKU
 
@@ -79,8 +81,10 @@ Use the simplest method the data supports:
 - **Days method (default for small stores):** safety stock = daily speed x buffer days. One practitioner holds about 5 to 10 days [OPS-0014]. Use 10 for A, 7 for B, 3 to 5 for C.
 - **Variability method (when you have 26+ weeks of clean data):** safety stock = z x daily standard deviation x square root of lead time in days, with z = 1.65 for A (about a 95% chance of not running out in a cycle), 1.28 for B (90%), 0.84 for C (80%). This is the standard textbook formula; treat the service levels as a practitioner default and test them.
 - **Lead time risk:** if the supplier has missed dates before, add daily speed x the worst delay of the last three orders.
+- **Demand and lead time both vary (when you have the data):** the spread of demand over the lead time is the square root of (lead time x daily standard deviation squared + daily speed squared x lead time standard deviation squared). An unreliable supplier can triple safety stock this way, which puts a number on the cost of late deliveries in `supplier-scorecard`.
+- **Use one-sided z values:** 1.28 for 90%, 1.65 for 95%, 2.05 for 98%, 2.33 for 99%. Using 1.96 for 95% overstocks by about 19%. Base the spread on forecast errors rather than raw sales once `forecast-demand-per-sku` is running.
 
-India note: for products sold heavily on COD, a share of units come back as return to origin after 7 to 15 days. Count returned sellable units as incoming, not as stock on hand.
+Returns note: for products with high return rates (fashion, or any market where pay on delivery is common and parcels get refused), a share of units come back after 7 to 30 days. Count returned sellable units as incoming, not as stock on hand, and plan for the return wave after peak seasons such as Black Friday and the winter holidays.
 
 ### 5. Set the reorder point
 
@@ -95,6 +99,8 @@ Order quantity = daily speed x (lead time + target days of cover) + safety stock
 Target days of cover: one practitioner holds 4, 8 or 12 weeks by how volatile the product is and how much cash is free [OPS-0014]. Default: A 8 weeks, B 6, C 4. Fit it to supplier float: when the store pays on terms longer than the lead time, stock is partly funded by the supplier [FIN-0005].
 
 When the minimum order is far above the target, compare three options in the sheet: pay the minimum (more cash locked up), pay a higher price for a smaller run, or switch the product to C and let it sell out. Hand price talks to `negotiate-moq-and-price`.
+
+Where ordering costs matter (inspection, freight minimums, admin per order), check the order size against EOQ = square root of (2 x yearly units x cost per order / holding cost per unit per year). Total cost is flat near EOQ, so ordering 20% off it adds only about 2%; round to cartons. Take a price break only when total yearly cost (goods plus ordering plus holding) falls. With two suppliers for one product, split each order by their scorecard (about 70% to the better one and 30% to the backup is a common pattern), as long as each share meets its MOQ.
 
 For a new supplier or a first bulk run, add about 3 to 10% for defects or pay for an inspection; one practitioner saw 300 bad units in 10,000 [COG-0009].
 
@@ -164,6 +170,8 @@ Weekly: update stock, recheck red and amber. Monthly: recompute speed, grades an
 - **Grades by revenue.** Step 3 ranks on gross profit.
 - **Orders that ignore cash.** Step 9 fits orders to the stock budget and cuts C first.
 - **Ads scaling a product about to run out.** Step 8 hands the red list to the media buyer.
+- **Trusting the quoted lead time.** Step 2 adds late-ship, new-supplier and holiday buffers.
+- **Using 1.96 for a 95% buffer.** Step 4 uses one-sided z values.
 
 ## Sources
 
@@ -177,5 +185,14 @@ Weekly: update stock, recheck red and amber. Monthly: recompute speed, grades an
 - ADC-0012: push or hold a winning ad by stock and cash.
 - OPS-0019: hiding in-stock items at peak to avoid selling out.
 - MEA-0037: gross profit on delivered cost.
+- Sea-Intelligence, Global Schedule Reliability (September 2026): https://www.sea-intelligence.com/press-room/415-global-schedule-reliability-records-a-marginal-gain-in-september
+- QualityInspection.org, Sourcing from China 101, Part 5: The Terms You Need to Discuss: https://qualityinspection.org/negotiations_terms_china/
+- QualityInspection.org, Chinese New Year: how to manage the disruption: https://qualityinspection.org/chinese-new-year-production-planning/
+- University of Iowa, Reorder Point lecture slides: https://user.engineering.uiowa.edu/~dbricker/Lecture_Slides/Reorder_Point.pdf
+- University of Houston, Operations Management Chapter 3: Inventory Management: https://www.bauer.uh.edu/egardner/3301H%20Operations%20Management/OM%20Text/3INVENTORY%20MANAGEMENT-1.pdf
 
 What makes this skill ours: speed is measured only on days the product could sell; the buffer follows a gross-profit grade instead of one flat number; the last safe order date turns the sheet into a red list the media buyer acts on; and orders are cut to the cash the store really has, C products first.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Domestic suppliers in Tiruppur, Surat or Jaipur can run 7 to 21 days, but add festival-season shutdowns around Diwali and transporter delays; imports add customs clearance and possible BIS or labelling checks. For products sold heavily on COD, a share of units come back as RTO after 7 to 15 days; count returned sellable units as incoming, not as stock on hand.

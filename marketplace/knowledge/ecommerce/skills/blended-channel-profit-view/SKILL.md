@@ -63,6 +63,8 @@ Split the profit line into new and returning customers; returning profit can hid
 
 Over-claim ratio = (Meta purchases + Google purchase conversions) / store orders from paid traffic, by week.
 
+**Comparability gate first.** Before any two platform numbers sit in one sum or one ratio, check they count the same thing: the same conversion event and value (purchase with or without tax and shipping), the same attribution window and click or view scope, the same counting (every conversion or one per click), the same time zone, the same currency, and whether modelled conversions are included. A Meta 7-day click figure and a Google 30-day figure cannot be added. Where they differ, show them side by side with their definitions and fix the settings or exports first; label any gap you cannot tie to a setting "possible, not confirmed". Recent days are not final: conversions keep arriving for the length of the window, so leave the last 7 days out of the ratio or mark them provisional. The store's orders are the total; platforms are only good for ranking campaigns inside themselves.
+
 A ratio above 1 means both claim the same orders; above about 1.3, practitioner default, platform numbers should not decide budgets at all until the store basis replaces them. Report Meta on 7-day click for this line; view-through credit often makes up 30 to 50% of reported return [MEA-0042]. Large retailers have seen new-customer MER of 3 to 7 against a reported Meta ROAS of 17 [MEA-0031]. Brand search sits apart: it often takes a small share of spend but a large share of conversions, inflating Google's figure [GAD-0003].
 
 ### 4. Check against the post-purchase survey
@@ -102,6 +104,12 @@ Write before launch: the claim, test and control regions or weeks, dates, the sp
 
 From steps 2 to 7: which channel gets more, which holds, which goes to a holdout, and the total. The detailed moves go to `cross-channel-budget-reallocation`.
 
+### 9. Read channel quality over time, and noise before moving money
+
+- **Cohort by channel:** once a quarter, take new customers by first-order month and the channel that brought them (survey answer or UTM), and compare their 90 and 180-day gross profit per customer against what each cost. A channel with a lower short-term return but buyers who come back more can be the better use of money; compare channels on payback or gross profit to CAC, not on platform ROAS [MEA-0024]. If a channel's newer cohorts are worth less than older ones for two months running, flag it before the weekly numbers show it.
+- **Noise:** a weekly move smaller than the channel's normal week-to-week swing is not a result. One practitioner rule of thumb (unsourced, check against your own history) is that a real change in a metric that moves 10 to 20% a week is about 30% or more. Agree the test length before reading a change.
+- **Traps to name when they show up:** a new campaign with a huge first-week return is often retargeting warm buyers; turning off a broad Google campaign without losing sales often means it was taking brand searches you would have won anyway; steady ROAS with falling profit usually means the product mix moved to lower-margin items.
+
 ## Checks before you hand it over
 
 - Every return is calculated from Shopify numbers, with gross profit, not revenue, on the bottom line.
@@ -110,6 +118,9 @@ From steps 2 to 7: which channel gets more, which holds, which goes to a holdout
 - Each cross-channel claim is labelled "hint" or "tested", with the test named.
 - The holdout has dates, spend at risk and a decision rule written before launch.
 - The channel-mix score shows all four lines per channel, not just the total.
+- Platform numbers were only combined after passing the comparability gate; otherwise they sit side by side with definitions.
+- The last 7 days are left out of the over-claim ratio or marked provisional.
+- Channel cohorts compare gross profit per customer at 90 and 180 days against cost, not platform ROAS.
 - No live campaign change without a client yes.
 
 ## Output
@@ -122,6 +133,10 @@ From steps 2 to 7: which channel gets more, which holds, which goes to a holdout
 
 **Table "Holdout plan":** Claim, Method, Test and control, Dates, Spend at risk, Success rule, Decision if yes, Decision if no.
 
+**Table "Definitions check":** Source, Conversion event, Value definition, Window, Click or view, Counting, Time zone, Currency, Modelled included, Comparable (yes or no), Fix.
+
+**Table "Channel cohorts" (quarterly):** Channel, First-order month, New customers, Cost per new customer, Gross profit per customer at 90 days, at 180 days, Ratio to cost, Trend.
+
 **File:** `blended-view.csv` or a Google Sheet that updates from the three exports.
 
 ## Common mistakes
@@ -132,6 +147,9 @@ From steps 2 to 7: which channel gets more, which holds, which goes to a holdout
 - **Rules of thumb on brand spend overruling a test.** Step 6 lets the holdout decide.
 - **Running a region test into Black Friday.** Step 7 ends it 3 weeks before [MEA-0034].
 - **Revenue instead of gross profit.** Gate 1 stops the view without it.
+- **Adding a 7-day figure to a 30-day figure.** Step 3's comparability gate keeps them apart until the definitions match.
+- **Cutting the channel with the lower ROAS.** Step 9 checks what its buyers are worth over 180 days first.
+- **Reacting to a normal weekly swing.** Step 9 sets a noise line before anyone moves money.
 
 ## Sources
 
@@ -148,6 +166,7 @@ From steps 2 to 7: which channel gets more, which holds, which goes to a holdout
 - MEA-0040: lift shows up in other channels.
 - MEA-0041: measurement method by store size.
 - MEA-0042: view-through inflates Meta.
+- Library items: Conversion reconciliation (adapted from ads-attribution by Daniel Agrici, MIT, https://github.com/AgriciDaniel/claude-ads/tree/main/skills/ads-attribution), used for the comparability gate; Ad dashboard reader (adapted from ads-performance-analytics by RampStack, MIT, https://github.com/rampstackco/claude-skills/tree/main/skills/ads-performance-analytics), used for channel cohorts, the noise line and the named traps.
 - MEA-0045: survey share should track spend share.
 - MEA-0055: split new and returning profit.
 

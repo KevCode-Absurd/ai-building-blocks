@@ -1,6 +1,6 @@
 ---
 name: voiceover-script-and-voice-pick
-description: "A timed voiceover script sized to the locked cut from the chosen voice's measured pace, with pause and emphasis marks and a pronunciation list, plus a voice brief that works for a human voice actor or an AI voice tool. Decides human or AI from the job (a voice that claims experience must be a real person who had it), picks between two or three candidate voices by a blind listen over the actual cut, records consent and usage terms for the voice, and applies the disclosure rules for synthetic voices on Meta, YouTube and TikTok and US and Indian advertising codes. Use when a video ad, explainer or product clip needs narration, when narration sounds read rather than spoken, or before cloning or buying any voice."
+description: "A timed voiceover script sized to the locked cut from the chosen voice's measured pace, with pause and emphasis marks and a pronunciation list, plus a voice brief that works for a human voice actor or an AI voice tool. Decides human or AI from the job (a voice that claims experience must be a real person who had it), picks between two or three candidate voices by a blind listen over the actual cut, records consent and usage terms for the voice, and applies the disclosure rules for synthetic voices on Meta, YouTube and TikTok and the ad codes in each market (FTC in the US, ASA in the UK, EU AI and consumer rules, and others). Use when a video ad, explainer or product clip needs narration, when narration sounds read rather than spoken, or before cloning or buying any voice."
 ---
 
 # Voiceover script and voice choice
@@ -51,7 +51,11 @@ List each section of the cut with its length in seconds: opener, problem, proof,
 
 ### 2. Measure the pace
 
-Have the candidate voice (or the actor's demo, or the AI voice) read a 20-second sample from the draft. Count words per second. Conversational English ads often sit around 2.3 to 2.8 words per second (practitioner default; measure, do not assume). Hindi and many Indian languages carry more syllables per word, so word counts run lower for the same time. Words per section = seconds x measured pace, minus pauses.
+Have the candidate voice (or the actor's demo, or the AI voice) read a 20-second sample from the draft. Count words per second. Conversational English ads often sit around 2.3 to 2.8 words per second (practitioner default; measure, do not assume). Many languages carry more syllables per word than English (German, Finnish and others), so word counts run lower for the same time; measure in each language your buyers use. Words per section = seconds x measured pace, minus pauses.
+
+Before a voice is chosen, draft to a starting pace and replace it with the measured one later. In published listening tests of audio ads, about 3.0 words a second (180 a minute) beat both 160 and 200, so use 3.0 for a confident ad read; 2.7 for a calm narrator, an older audience or a technical product; and 3.3 at most for a fast young creator, and then with fewer ideas, not more words. Whole-ad budget = (seconds minus 2 for the end card) x pace: at 3.0, 15 seconds holds about 39 words, 30 seconds about 84, 60 seconds about 174. When space is tight, fill in this order: opener, call to action, offer, the selling beat, problem, promise, proof, how it works, objection, guarantee. The opener and the offer never grow with length.
+
+**Write each length as its own script.** A 60-second ad cut down to 15 in the edit loses its bridges and plays as a weak ad [MCR-6729]. Above about 90 seconds, run a second round of how it works and proof on a new doubt, with an ask after each round.
 
 ### 3. Write for the ear
 
@@ -61,6 +65,10 @@ Have the candidate voice (or the actor's demo, or the AI voice) read a 20-second
 - Numbers written as spoken: "four ninety-nine", "ek hazaar".
 - Product and brand names spelled as said in the pronunciation list.
 - No line that the visuals contradict. If the picture shows it, the voice need not say it.
+- No "it's not X, it's Y" lines; viewers read the pattern as machine-written [MCR-0016].
+- Put the promise before the mechanism; leading with jargon loses viewers before they reach the point [MCR-6711].
+
+**Run the picture test on every line.** Read the script with the narration muted against the cut or storyboard, then mark each narration line **telling** (it says what the picture already shows: "here she opens the jar") or **adding** (it gives what the picture cannot: the why, the number, the feeling, the doubt). Cut or shorten every telling line, or turn it into an action you could film. Lines that must stay whatever the test says (price, offer terms, guarantee, legal wording) are never cut. After the trim, the ad must still make sense to someone watching with no sound, and no fact may be lost. A narrated ad where every line describes the picture plays like a slide show with a voice on top.
 
 ### 4. Mark the delivery
 
@@ -78,7 +86,7 @@ Use plain marks any actor or tool can follow: `/` short pause, `//` half-second 
 
 ### 6. Write the voice brief
 
-One paragraph, the same for an actor or a tool: age range, gender if relevant, accent (Indian English, Hindi, Tamil, US General, Southern US), pitch (low, mid), texture (warm, clear, slightly raspy), energy on a 0 to 5 scale, pace in words per second from step 2, and who they sound like they are talking to ("a friend across the table, not a crowd"). Add three words the voice should never sound like (salesy, breathless, robotic).
+One paragraph, the same for an actor or a tool: age range, gender if relevant, accent (US General, Southern US, British RP, Scottish, Australian, Irish, Canadian, or a local accent your buyers know), pitch (low, mid), texture (warm, clear, slightly raspy), energy on a 0 to 5 scale, pace in words per second from step 2, and who they sound like they are talking to ("a friend across the table, not a crowd"). Add three words the voice should never sound like (salesy, breathless, robotic).
 
 For AI tools, paste this brief word for word every time. Changing even a few words can change the voice between clips.
 
@@ -88,7 +96,7 @@ For AI tools, paste this brief word for word every time. Changing even a few wor
 - **Meta:** may label content as AI when it detects AI signals or when the uploader discloses; plan for the label to appear [MCR-6063].
 - **TikTok:** check the AI-generated content setting in TikTok Ads Manager on the day; realistic synthetic media is expected to be labelled.
 - **US:** a voice presented as a customer must be a real customer with that experience [MCR-6045].
-- **India:** check the current ASCI code and any AI guidance on ascionline.in at launch; disclose clearly where a voice is synthetic.
+- **UK and EU:** the ASA expects ads not to mislead about who is speaking; the EU AI Act asks for clear labels on realistic synthetic audio. Check the current ad code and any AI guidance in each market at launch; disclose clearly where a voice is synthetic.
 
 ### 8. Pick the voice by blind listen
 
@@ -111,6 +119,8 @@ Record the same 15-second section with two or three candidate voices. Play each 
 - The blind listen result and runner-up are recorded.
 - Disclosure needs are marked per platform.
 - Pronunciation of brand and product names is correct in the final audio.
+- Every narration line left is marked "adding"; no telling line survived unless it is a price, term or legal line.
+- Each length was written as its own script, inside its word budget.
 
 ## Output
 
@@ -139,6 +149,9 @@ Record the same 15-second section with two or three candidate voices. Play each 
 ## Sources
 
 - MCR-0005: founder voice or a proxy instead of the founder on camera.
+- MCR-0016: ban "it's not X, it's Y" lines.
+- MCR-6711: promise before mechanism.
+- MCR-6729: write each ad length as its own script.
 - MCR-0023: gross profit per ad after production cost.
 - MCR-0027: raise the sense of being sold gradually.
 - MCR-0063: opening words carry most of a video hook.
@@ -148,3 +161,9 @@ Record the same 15-second section with two or three candidate voices. Play each 
 - MEA-0037: gross margin uses delivered cost.
 
 What makes this skill ours: the script is sized from the chosen voice's measured pace, not a template word count; the speaker's role is fixed before writing so no hired or synthetic voice poses as a customer; voice clones need written consent; and the final voice is picked by a blind listen over the real cut on a phone speaker.
+
+## Selling in India
+
+- Hindi and many Indian languages carry more syllables per word, so measure pace in each one.
+- Accents to brief on include Indian English, Hindi and Tamil.
+- Check the current ASCI code and any AI guidance on ascionline.in at launch; disclose clearly where a voice is synthetic.

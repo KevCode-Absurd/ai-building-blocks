@@ -28,7 +28,7 @@ Required (read access, level 1):
 
 1. **Stock per SKU** with on hand, received date (or age bucket) and unit landed cost. Shopify's month-end inventory value needs cost per item filled in [COG-6285].
 2. **Shopify order export**, last 180 days: Created at, Lineitem sku, Lineitem quantity, Lineitem price, Discount Amount.
-3. **Variable cost to sell one unit**: payment fee, outbound shipping, pick and pack, packaging, return or return-to-origin allowance, marketplace commission where used.
+3. **Variable cost to sell one unit**: payment fee, outbound shipping, pick and pack, packaging, return or failed-delivery allowance, marketplace commission where used.
 4. **Storage cost per unit per month** from the 3PL invoice, or the owner's estimate of space cost.
 5. **The cash need**: how much, by when.
 
@@ -66,7 +66,7 @@ For each of the top 10 by cash: is the product page live, in navigation and in t
 
 The landed cost is already spent; it does not change whether one more sale helps. The floor is the price at which one more sale adds zero cash:
 
-Floor = payment fee + outbound shipping + pick and pack + packaging + expected return or return-to-origin cost + marketplace commission + ad cost per unit sold on that route.
+Floor = payment fee + outbound shipping + pick and pack + packaging + expected return or failed-delivery cost + marketplace commission + ad cost per unit sold on that route.
 
 Then compare with two more lines:
 
@@ -82,10 +82,10 @@ Work down this ladder and stop at the first route that clears the units in time 
 1. **Bundle with a winner.** Add the slow item to a best seller as a value pack, or as a gift with purchase above a threshold. A gift pays when it lifts order value or cuts cost per new customer by more than its cost, and listing it for sale gives it a real value [OFF-0007].
 2. **Past-buyer offer.** Email or WhatsApp to buyers of related products. Keep it to segments, not the whole list; customers trained on deep discounts can be worth less later [CXP-0016].
 3. **A separate ad funnel.** An unlisted page with the clearance offer, existing customers excluded, run at break-even or a small loss to turn stock into cash [FIN-0013] [FIN-0026]. When stock squeezes cash, briefly raising marketing to clear it can restore cash faster than cutting spend [FIN-0027]. Give it its own budget cap and a stop date.
-4. **Other channels.** Marketplaces (Amazon, Flipkart, Meesho in India; Amazon, eBay or off-price sites in the US), an outlet collection on the store, stockists, corporate gifting, pop-ups. Count commission, listing work and return rates in the floor.
+4. **Other channels.** Marketplaces (Amazon, eBay, Walmart, Etsy or the store's local marketplaces such as Zalando or bol, plus off-price and outlet sites), an outlet collection on the store, stockists, corporate gifting, pop-ups. Count commission, listing work and return rates in the floor.
 5. **Sitewide sale.** Only inside the store's one or two sitewide events a year [OFF-0008]; aged stock is a fair reason to include a product [ADC-0023].
 6. **Liquidator or jobber.** Fastest cash, lowest price; ask for a written quote, pickup date and a promise not to resell under the brand name where that matters.
-7. **Donate or recycle.** Last. US tax deductions and Indian CSR or GST treatment need the accountant's view.
+7. **Donate or recycle.** Last. Tax treatment of donated or destroyed stock (deductions in the US, VAT on goods given away in the UK and EU) needs the accountant's view, and some markets, such as France, limit destroying unsold goods.
 
 Model each discount before use. A 30% cut can triple the return on ad spend needed to break even [OFF-0065], and where unit cost is low, buy-one-get-one can earn far more per order than the same-looking half off [OFF-0066].
 
@@ -99,7 +99,7 @@ For direct-to-buyer routes, plan steps instead of one deep cut:
 
 Write each step's target units. If a step hits its target early, hold the price.
 
-India notes: GST is charged on the price actually charged; a jobber sale needs a proper tax invoice. Keep COD off deep-clearance items where return to origin would wipe the margin. US notes: a "was" price must be one the store genuinely charged; otherwise show "Clearance" and the price alone.
+Tax and pricing notes: sales tax or VAT is charged on the price actually charged; a sale to a jobber or liquidator needs a proper tax invoice. Where the store offers pay on delivery, keep it off deep-clearance items where a failed delivery would wipe the margin. A "was" price must be one the store genuinely charged (US, UK and EU rules all expect this, and the EU expects the lowest price of the last 30 days); otherwise show "Clearance" and the price alone.
 
 ### 6. Protect the brand and full-price sales
 
@@ -167,4 +167,11 @@ For each product and route: expected units x (price minus variable cost) by week
 - CXP-0016: deep-discount customers can be worth less.
 - COG-6285: Shopify sell-through, days-remaining and inventory value definitions.
 
-What makes this skill ours: the floor price treats purchase cost as sunk and comes from the cost to sell one more unit by route; the cause check stops discounting products that were only hidden; routes run in a ladder from brand-safe to liquidation with cash counted at 30, 60 and 90 days; and India COD and GST and US "was" price rules are built into the markdown steps.
+What makes this skill ours: the floor price treats purchase cost as sunk and comes from the cost to sell one more unit by route; the cause check stops discounting products that were only hidden; routes run in a ladder from brand-safe to liquidation with cash counted at 30, 60 and 90 days; and tax invoice, failed-delivery and "was" price rules are built into the markdown steps.
+
+## Selling in India
+
+- Indian clearance channels include Amazon.in, Flipkart and Meesho.
+- GST is charged on the price actually charged; a jobber sale needs a proper GST tax invoice.
+- Keep COD off deep-clearance items where RTO would wipe the margin.
+- Indian CSR or GST treatment of donated stock needs the accountant's view.

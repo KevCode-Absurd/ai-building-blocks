@@ -37,7 +37,7 @@ If no tool is installed, recommend one free tool, list the privacy settings in G
 ## Before you start: the gates
 
 1. **Enough sessions.** At least 100 recorded sessions on the page and device under review (practitioner default). Fewer: wait, or widen the date range.
-2. **Privacy is set.** Text inputs and personal fields masked (most tools mask by default; check it), no recording on account or payment pages, the privacy policy names the tool, and recording respects the store's consent banner where consent is required (EU and UK visitors; India's Digital Personal Data Protection Act expects notice and consent for personal data). Fail: fix settings before watching anything.
+2. **Privacy is set.** Text inputs and personal fields masked (most tools mask by default; check it), no recording on account or payment pages, the privacy policy names the tool, and recording respects the store's consent banner where consent is required (EU and UK visitors, and visitors from other countries whose privacy laws expect notice and consent for personal data). Fail: fix settings before watching anything.
 3. **Bots filtered.** Exclude very short sessions with no interaction and known bot traffic; Shopify's own session counts include bots [MEA-0012].
 4. **Gross profit per order known** [MEA-0037].
 
@@ -101,10 +101,10 @@ Admit a pattern as a fix only with a second, different piece of evidence: analyt
 
 Gross profit at stake a month = page sessions on that device a month x pattern share x expected conversion gain (working figure: 10% of the affected sessions recovered, marked) x conversion rate x gross profit per order. Bugs first, then by gross profit per hour of work. Mark each "ship" (repairs and clear information gaps) or "test" (layout changes, where the store has volume).
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** review sessions on low-end Android separately; watch for slow loads that look like hesitation, pincode checker use, COD questions and WhatsApp button taps. Recording scripts add weight; check speed before and after installing.
-- **US:** check that the consent banner and the recording tool agree for visitors from states with privacy laws, and that accessibility issues (tiny tap targets, low contrast) are logged as bugs.
+- **Every market:** review sessions on low-end Android phones separately; watch for slow loads that look like hesitation, delivery date or postcode checker use, payment and delivery questions and chat button taps. Recording scripts add weight; check speed before and after installing.
+- **US, UK, EU and beyond:** check that the consent banner and the recording tool agree for visitors from the EU, the UK and US states with privacy laws, and that accessibility issues (tiny tap targets, low contrast) are logged as bugs.
 
 ## Checks before you hand it over
 
@@ -154,4 +154,8 @@ Gross profit at stake a month = page sessions on that device a month x pattern s
 - MEA-0012: Shopify sessions include bots.
 - MEA-0037: gross margin is delivered cost.
 
-What makes this skill ours: sessions are picked by segment with buyers as a comparison group, so behaviours buyers share are not mistaken for problems; every observation is coded on one tag sheet and a pattern needs at least 3 of 20 sessions plus a second kind of evidence; privacy masking and consent (EU, UK, India DPDP, US states) are checked before any viewing; and bugs bypass testing.
+What makes this skill ours: sessions are picked by segment with buyers as a comparison group, so behaviours buyers share are not mistaken for problems; every observation is coded on one tag sheet and a pattern needs at least 3 of 20 sessions plus a second kind of evidence; privacy masking and consent (EU, UK, US states and other privacy laws) are checked before any viewing; and bugs bypass testing.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. The Digital Personal Data Protection Act expects notice and consent for personal data. Watch for pincode checker use, COD questions and WhatsApp button taps.

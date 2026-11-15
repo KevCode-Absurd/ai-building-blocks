@@ -1,13 +1,13 @@
-// The living brand file as data for packs: where it lives, how long each part stays fresh, and what each slice
-// reads. The same lists are in site/src/jobs/brand-file.mjs and in the tool a pack ships as tools/brand-file.mjs
-// (catalogue-items/general/brand-dna-capture/scripts/brand-file.mjs); site/test/brand-file-rules.test.mjs fails when
-// the copies differ. The brand file lives in the client's own project; AI Blocks stores none of it.
+// The living org context as data for packs: where it lives, how long each part stays fresh, and what each slice
+// reads. The same lists are in site/src/jobs/brand-file.mjs and in the tool a pack ships as tools/org-context.mjs
+// (catalogue-items/general/brand-dna-capture/scripts/org-context.mjs); site/test/brand-file-rules.test.mjs fails when
+// the copies differ. The org context lives in the client's own project; AI Blocks stores none of it.
 
-/** One name everywhere: brand file. `replaces` lists the three old index-file names this one index takes over from. */
+/** One name everywhere: org context (it was the brand brain, then the brand file). `replaces` lists the old index-file names this one index takes over from; the old context/brand-file/ folder is still read until it is moved. */
 export const BRAND_FILE = {
-  name: "brand file", folder: "context/brand-file", index: "context/brand-file/index.md", worked: "context/brand-file/worked.md",
-  raw: "context/brand-dna.json", tool: "brand-file.mjs", capture: "capture-brand-dna.mjs", schema: "ai-blocks-brand-file/1",
-  replaces: ["brand-brain/00-index.md", "brand-brain/INDEX.md", "00-start-here.md"],
+  name: "org context", folder: "context/org-context", index: "context/org-context/index.md", worked: "context/org-context/worked.md",
+  raw: "context/brand-dna.json", tool: "org-context.mjs", capture: "capture-brand-dna.mjs", schema: "ai-blocks-org-context/1",
+  replaces: ["brand-brain/00-index.md", "brand-brain/INDEX.md", "00-start-here.md", "brand-file/index.md"],
 } as const;
 
 /** Days a line stays fresh, by its `volatile` class. A line with no date is stale whatever its class. */
@@ -38,11 +38,11 @@ export const BRAND_FILE_PARTS: { id: string; file: string; holds: string; fresh:
 
 /** The short line a job skill or job context carries for each slice. */
 export const SLICE_LINES: Record<BrandSlice, string> = {
-  none: "Brand file: not needed for this job. Skip capture.",
-  facts: "Brand file: facts only. Run brand-file.mjs status, refresh stale prices and stock, then take slice facts.",
-  voice: "Brand file: facts and voice. Run brand-file.mjs status, refresh what is stale, then take slice voice.",
-  look: "Brand file: facts and look. Run brand-file.mjs status, refresh what is stale, then take slice look.",
-  full: "Brand file: facts, voice and look. Run brand-file.mjs status, refresh prices and stock first, then take slice full.",
+  none: "Org context: not needed for this job. Skip capture.",
+  facts: "Org context: facts only. Run org-context.mjs status, refresh stale prices and stock, then take slice facts.",
+  voice: "Org context: facts and voice. Run org-context.mjs status, refresh what is stale, then take slice voice.",
+  look: "Org context: facts and look. Run org-context.mjs status, refresh what is stale, then take slice look.",
+  full: "Org context: facts, voice and look. Run org-context.mjs status, refresh prices and stock first, then take slice full.",
 };
 
 /** The one short line for a slice level. Pass `contextNeed(family).level` from families.ts. */

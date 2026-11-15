@@ -12,7 +12,7 @@ description: "Plan an online store's Meta ads for the stage it is in: first 30 d
 - The store is about to run Meta ads for the first time, or restart after a month or more off.
 - The store has spent but no ad has held at its target cost per purchase.
 - One concept or product is working and the owner wants to spend more on it.
-- A sale season (Black Friday to New Year, Diwali, a big local sale) is 6 to 10 weeks away.
+- A sale season (Black Friday to New Year, a local festival, a big local sale) is 6 to 10 weeks away.
 - A new product or collection launches in the next 4 to 8 weeks.
 
 ## Not for
@@ -27,7 +27,7 @@ description: "Plan an online store's Meta ads for the stage it is in: first 30 d
 Required:
 
 1. **Cost sheet** for each product in the plan: price, usual discount, landed cost (purchase price, inbound freight, duty, branded box [FIN-0007]), shipping and pick-pack per order, payment fee %, return or refund rate. Shopify Products export with "Cost per item" filled, or the WooCommerce product CSV.
-2. **Shopify order export**, last 90 days (12 months for peak plans): Name, Created at, Financial Status, Subtotal, Shipping, Discount Amount, Total, Refunded Amount, Lineitem name, Lineitem quantity, Payment Method, customer email or ID. Cash on delivery stores add the courier's return-to-origin (RTO) report.
+2. **Shopify order export**, last 90 days (12 months for peak plans): Name, Created at, Financial Status, Subtotal, Shipping, Discount Amount, Total, Refunded Amount, Lineitem name, Lineitem quantity, Payment Method, customer email or ID. Stores with many failed deliveries or paid-later orders add the courier's failed delivery report.
 3. **Cash**: the monthly amount the owner can spend on ads, the most they will lose before stopping, and the date of the next stock payment.
 4. **Stock**: units on hand and inbound per SKU, and reorder lead time.
 
@@ -45,7 +45,7 @@ Missing 1 to 4: ask once, in one numbered message. Missing 5 to 8: plan at reduc
 ## Before you start: the gates
 
 1. **Money.** For each product, compute gross profit per purchase (GPP):
-   GPP = order value after discount − landed cost − shipping and pick-pack − payment fees − (return rate × money lost per return) − for cash on delivery, (RTO rate × outbound plus return shipping).
+   GPP = order value after discount − landed cost − shipping and pick-pack − payment fees − (return rate × money lost per return) − for failed deliveries and unpaid orders, (failed order rate × outbound plus return shipping).
    Use cost delivered to the door, not product margin [MEA-0037] [MEA-0023]. Then break-even ROAS = order value ÷ GPP, and break-even cost per purchase = GPP.
    *Pass:* GPP known for every product. *Fail:* stop and hand over the cost sheet with blanks marked.
 2. **Cash.** *Pass:* the owner has named a monthly budget and a loss limit, and the stage minimum from step 4 fits inside it. *Fail:* name a smaller stage that fits, or say Meta should wait.
@@ -63,7 +63,7 @@ Missing 1 to 4: ask once, in one numbered message. Missing 5 to 8: plan at reduc
 
 2. **Set the target cost per purchase (CPP).** Start at GPP (first-order break-even). Go above it only when 90-day gross profit per customer in the order export pays it back [MEA-0020] and cash can wait [FIN-0029]. Judge the plan on 30- and 90-day gross profit per new customer ÷ cost per new customer: under 1 loses money, 1 to 2 hold, 2 to 3 scale [MEA-0024]. The deciding number is acquisition MER (new-customer revenue from Shopify ÷ ad spend), read weekly; Meta's 7-day click view is for in-platform reads only [MEA-0025] [MEA-0039].
 
-3. **Check the page can pay for clicks.** Conversion rate × order value (percent sign removed) should reach about 250 to 300 at US or UK prices [MEA-0047] [OFF-0047]. Below that, fix the page with `store-meta-landing` first. Where clicks are cheap, as in India, check instead that revenue per visitor × (GPP ÷ order value) beats expected cost per click.
+3. **Check the page can pay for clicks.** Conversion rate × order value (percent sign removed) should reach about 250 to 300 at US or UK prices [MEA-0047] [OFF-0047]. Below that, fix the page with `store-meta-landing` first. Where clicks are cheap, as in many lower-priced markets, check instead that revenue per visitor × (GPP ÷ order value) beats expected cost per click.
 
 4. **Size budgets from CPP.** Meta's documentation says an ad set leaves learning after about 50 optimisation events in 7 days, so a fully learned ad set needs about 50 × CPP a week. So plan few ad sets. Read a concept after 3 × CPP spent (3+ purchases keep, 2 wait, 0 to 1 cut) and make a firm call at 5 × CPP [ADC-0039]. Daily test budget = purchases wanted × CPP ÷ test days [ADC-0066].
 
@@ -83,7 +83,7 @@ Missing 1 to 4: ask once, in one numbered message. Missing 5 to 8: plan at reduc
 
 7. **Peak and launch extras.** Recompute break-even ROAS for every discount depth before the sale; a 30% discount can triple it [OFF-0065] [OFF-0069]. Prefer a gift or multi-pack that keeps GPP positive over a deep sitewide cut [OFF-0007]. Scale on 3-day rolling marginal profit and cut after two poor reads [ADC-0050]. With thin stock, do not sell out into December [OPS-0019]. Plan a late-December offer if stock and shipping cut-offs allow [ADC-0043]. For launches, fly the first batch in and restock by sea [COG-0008]; selling out is fine only if restock takes two weeks or less [ORG-0038].
 
-8. **Cash on delivery markets (practitioner default, test it).** Meta counts a purchase when the order is placed, so RTO orders teach delivery to find more RTO buyers. Compute GPP on delivered orders, judge MER on delivered revenue, and test a prepaid incentive on the page.
+8. **Failed deliveries and unpaid orders (practitioner default, test it).** Meta counts a purchase when the order is placed, so orders that fail delivery, get refused or have payments reversed teach delivery to find more buyers like them. This is biggest where pay on delivery is offered. Compute GPP on delivered orders, judge MER on delivered revenue, and test an incentive to pay upfront on the page.
 
 9. **Hand off creative supply.** List the concepts the stage needs as persona × angle × offer × format. A new colour or background is not a new concept [MCR-0022]; near-copies are grouped and add no reach [MCR-0078]. Send the list to `store-meta-concepts`.
 
@@ -99,7 +99,7 @@ Missing 1 to 4: ask once, in one numbered message. Missing 5 to 8: plan at reduc
 ## Output
 
 1. **One-screen summary:** stage, target CPP, daily budget, first three actions, review date, confidence.
-2. **Unit economics table:** Product, Price, Avg discount, Landed cost, Ship and pack, Fees, Returns/RTO cost, GPP, Break-even ROAS, Target CPP.
+2. **Unit economics table:** Product, Price, Avg discount, Landed cost, Ship and pack, Fees, Returns and failed delivery cost, GPP, Break-even ROAS, Target CPP.
 3. **Campaign plan table:** Stage, Dates, Campaign, Ad set, Audience and exclusions, Optimisation event, Daily budget, Ads, Exit rule.
 4. **Week-by-week budget:** Week, Spend, Purchases at target, Cash left, Units left per SKU.
 5. **Creative supply list:** Concept, Persona, Angle, Offer, Format, Due date.
@@ -112,7 +112,7 @@ Missing 1 to 4: ask once, in one numbered message. Missing 5 to 8: plan at reduc
 - **Scaling a product about to run out.** The stock gate and [ADC-0023] stop it.
 - **Letting catalog ads eat the budget.** They reach near-buyers and look best; step 5 caps them.
 - **Same ROAS target in a sale.** Step 7 recomputes it.
-- **Counting RTO orders as sales.** Step 8 prevents it.
+- **Counting failed or unpaid orders as sales.** Step 8 prevents it.
 
 ## Sources
 
@@ -120,4 +120,10 @@ ADC-0007: batch ad set at 1 × CPA; ADC-0010: catalog ROAS inflated; ADC-0015: e
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
-What this skill does that the open-source one did not: it plans by store stage instead of by industry and sizes every budget from gross profit per purchase, cash and stock; it gates the plan on unit economics, cash, stock and tracking before any structure; it replaces the fixed 70/20/10 split, the 20% raise rule and "5 × CPA" ad set budgets with Meta's 50-events rule and card-backed read points; it covers peak discounts, launches and cash on delivery.
+What this skill does that the open-source one did not: it plans by store stage instead of by industry and sizes every budget from gross profit per purchase, cash and stock; it gates the plan on unit economics, cash, stock and tracking before any structure; it replaces the fixed 70/20/10 split, the 20% raise rule and "5 × CPA" ad set budgets with Meta's 50-events rule and card-backed read points; it covers peak discounts, launches and failed or unpaid orders.
+
+## Selling in India
+
+- Clicks are cheap in India, so use the revenue per visitor test in step 3 rather than the US or UK floor.
+- Diwali is the main peak; plan its ramp from last year's daily sales.
+- For COD, add the courier's RTO report and apply step 8 to COD orders.

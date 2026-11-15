@@ -91,10 +91,10 @@ Before hand-over, log every figure in `context/numbers.json` with its inputs, pe
 
 Re-rank every two weeks; collect new ideas through one form or one tab in between [OPS-0021]. When an item finishes, record the result in `recommendation-scorekeeping` so next round's chances use real hit rates.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** include RTO losses in gross profit per order, so ideas that cut RTO (prepaid nudges, address checks, COD confirmation on WhatsApp) are valued at their real worth. Ideas needing new language versions count translation and review hours in effort.
-- **US:** ideas touching claims, reviews or pricing carry a compliance check in their effort hours.
+- **Every market:** include failed delivery and return losses in gross profit per order, so ideas that cut them (prepaid nudges, address checks, order confirmation messages) are valued at their real worth. Ideas needing new language versions count translation and review hours in effort.
+- **US, UK, EU and other regulated markets:** ideas touching claims, reviews or pricing carry a compliance check in their effort hours (FTC rules in the US, CMA and ASA rules in the UK, EU consumer rules).
 
 ## Checks before you hand it over
 
@@ -143,3 +143,7 @@ Follow the house rule "Write for a busy owner."
 - ADC-0028: fix data first, structure second, creative third.
 
 What makes this skill ours: broken things and cheap answers to big unknowns are ranked before growth ideas; every growth score starts from honest base rates and only rises with counted evidence; the person who proposes an idea never scores it; and the top five must fit real owners' hours and the cash on hand.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Include RTO losses in gross profit per order, so ideas that cut RTO (prepaid nudges, address checks, COD confirmation on WhatsApp) are valued at their real worth.

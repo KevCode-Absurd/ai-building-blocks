@@ -34,7 +34,7 @@ The overall score is the owner's gut call, not an average: one serious fault (a 
 
 Then run three checks and quote the words that prove each:
 
-1. **Signals.** The three strongest signals in the owner's data, each with its number. Mark each draft fully, partly or not at all on each. Partly means it quotes the signal but keeps what the signal says to cut, or plays down what it says to push.
+1. **Signals.** The signals in the owner's data that change the decision, as many as the data holds, or none, each with its number. Mark each draft fully, partly or not at all on each. Partly means it quotes the signal but keeps what the signal says to cut, or plays down what it says to push.
 2. **Left for the owner.** Questions, confirm lists, requests for a yes or sign-off, alternates to pick between, placeholders, notes to the writer. A permission the law needs, in one line next to its item, does not count.
 3. **Rule over owner.** Any place a draft follows a stock rule or template where the owner's goal and data point the other way.
 

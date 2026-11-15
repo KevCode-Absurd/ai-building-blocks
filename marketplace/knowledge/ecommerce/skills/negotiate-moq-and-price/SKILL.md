@@ -54,6 +54,8 @@ For price, minimum order and payment terms, write:
 
 Price walk-away = the landed cost at which gross profit per order drops below the store's floor. Work the selling price down: price minus target gross profit minus outbound delivery, fees and returns allowance gives the most the unit can cost delivered [FIN-0012].
 
+Set the target from cost, not from the other quote, when you can: with a should-cost sheet (`should-cost-model-per-bom-line`), the target per line is should-cost plus a fair factory margin, and each gap line becomes one exact question. Find the factory's normal margin range for your category from public accounts or paid expert advice; aim inside it, and say "not known" if you cannot find one. One operator found about 5 to 9% earnings margins for jewellery factories; that is one category, not a benchmark for yours.
+
 ### 2. Set the minimum order walk-away from sales and cash
 
 Largest acceptable order = units the store expects to sell within its cover window (practitioner default: 90 days for a proven product, 45 to 60 days for a new one) and whose cash fits the forecast. Forecast from in-stock days only, since stock-out days hide demand [OPS-0014]. Tying growth to big stock buys has driven profit to near zero at brands that grew fast on inventory loans [FIN-0011]; a lower minimum at a slightly higher price is often the better deal early on.
@@ -70,6 +72,10 @@ Suppliers move when they get something. Rank these by cost to the store:
 
 Price breaks can come from how fully the factory's dedicated labour is used; one buyer put such volume credits at 1 to 3 dollars a unit [COG-0002].
 
+Ask the factory to show where its own costs fall with volume, line by line: when does the fabric, the zip or the labour get cheaper, and can any of that reach you? In cut and sew, fewer colours and sizes per run raise line efficiency; moving from 60% to 75% efficiency cuts real sewing time by 20%, which is a saving to share.
+
+Early runs: paying a little more per unit on the first one or two orders, while you learn sell-through, quality and delays, often buys a better long-term partner. Negotiate harder once you have the data.
+
 ### 4. Choose the asks, in order
 
 Open with the term that matters most for this store:
@@ -80,6 +86,13 @@ Open with the term that matters most for this store:
 
 Share the competing quote's numbers, not its supplier name; factories that know the buyer has options keep price and quality honest [COG-0003].
 
+Price every ask in money before you send it:
+
+- **Payment terms:** value = order value x share of payment moved x days moved / 365 x the store's yearly cost of cash. Paying a supplier 2% more to move from net 30 to net 60 is like a one-month loan at about 24% a year, dearer than most bank loans [COG-6291].
+- **Price breaks:** take a bigger tier only if total yearly cost (price plus ordering plus holding) falls. In one textbook case a 4% discount at a larger order raised total yearly cost about 2.5%; the break-even discount there was 6.4%, which is the number to ask for.
+
+Test how well the factory knows its costs: say your target is about 20% under its quote and ask what it would change to get there. A factory that suggests a cheaper material or a step to skip knows its costs, and you can judge each idea in `cost-down-levers-with-return-risk`. One that simply accepts may cheapen the product later. If the only route to your price is cheaper materials or skipped checks, stop pressing; a squeezed factory recovers margin in quality.
+
 ### 5. Protect what you win
 
 Ask for these in writing with any deal:
@@ -88,6 +101,9 @@ Ask for these in writing with any deal:
 - Same spec version and materials; any change needs your written approval.
 - Pre-shipment inspection before the balance is paid (see `order-samples-and-quality-check`).
 - If the supplier is your only source: continued supply if the factory changes owner, and no other buyer getting a better price or first claim on capacity [COG-0013].
+- Mould and tooling ownership in writing, with a tooling schedule (ID, photo, location, release deadline); an invoice that says "mould fee" does not prove you own it. Use `purchase-order-and-supply-terms`.
+- If price is tied to a material index, it moves both ways and only on the share the material drives (`cost-trigger-rules`).
+- Shared savings: when a factory's cost-down idea passes its test, agree in writing how the saving is split (for example half each for the first year). Never offer or accept side payments to staff on either side.
 
 A price cut that lowers quality shows up later as returns. Watch the return rate on the first lot made at the new price for 90 days and compare it with the last lot.
 
@@ -95,10 +111,13 @@ A price cut that lowers quality shows up later as returns. Watch the return rate
 
 Send one message at a time, wait for the reply, update the plan. Stop at the walk-away and move to the alternative; say so politely, and leave the door open.
 
-### 7. India and US notes
+For factories in China, send each message in English and Simplified Chinese with a back-translation (`bilingual-supplier-messages`) and confirm every agreed number by email. If Accio runs the talks, give it hard limits: it may report a number as acceptable pending the owner's approval, but it may never accept a price, MOQ, deposit or order.
 
-- **India:** domestic makers often quote including GST or with freight extra; negotiate on ex-GST price and ask who pays freight to the 3PL. Advance by UPI is common; keep advances to the sample or first lot until trust is built. Ask for credit of 15 to 30 days on repeat orders (practitioner default, test it).
+### 7. Market notes
+
+- **Domestic makers anywhere:** they often quote including VAT or sales tax, or with freight extra; negotiate on the price before tax and ask who pays freight to the 3PL. Keep advances to the sample or first lot until trust is built. Ask for credit of 15 to 30 days on repeat orders (practitioner default, test it).
 - **US imports:** tariffs can change between quote and shipment. Agree in writing who carries a tariff change before the goods ship, and on what price basis.
+- **UK, EU and Australian imports:** import VAT or goods and services tax and duty are due at the border; agree the Incoterm (for example FOB or DDP) so it is clear who pays them.
 
 ## Checks before you hand it over
 
@@ -106,6 +125,8 @@ Send one message at a time, wait for the reply, update the plan. Stop at the wal
 - The price walk-away comes from gross profit per order, not from the competing quote.
 - The minimum order walk-away fits both the sell-through window and the cash forecast.
 - Every ask has a matching give.
+- Payment term and price-break asks are priced in money with the formula shown.
+- Tooling ownership and any index clause are in the protection terms.
 - Spec, inspection and price-hold terms are in the plan.
 - Each message is short, has one ask, and has client approval.
 - Nothing was accepted on the store's behalf without a written client yes.
@@ -140,6 +161,8 @@ Send one message at a time, wait for the reply, update the plan. Stop at the wal
 - **Asking without giving.** Step 3 lists what the store can trade.
 - **Forgetting terms.** Step 4 treats days of credit as money.
 - **Naming the rival supplier.** Step 4 shares numbers only.
+- **Squeezing until quality goes.** Step 4 stops when the only route is cheaper materials or skipped checks.
+- **Taking a price tier that costs more to hold.** Step 4 judges it on total yearly cost.
 
 ## Sources
 
@@ -153,5 +176,16 @@ Send one message at a time, wait for the reply, update the plan. Stop at the wal
 - FIN-0012: price bottom-up from the profit target.
 - FIN-0023: grow on supplier net terms and honour them.
 - OPS-0014: forecast from in-stock days only.
+- COG-6291: paying more for longer terms can be a dear loan.
+- University of Houston, Operations Management Chapter 3: Inventory Management (quantity discounts): https://www.bauer.uh.edu/egardner/3301H%20Operations%20Management/OM%20Text/3INVENTORY%20MANAGEMENT-1.pdf
+- QualityInspection.org, Is It Possible To Get Credit from a Chinese Supplier?: https://qualityinspection.org/payment-credit-chinese-factory/
+- QualityInspection.org, China Supplier Vetting Part 10: Pricing, Negotiation, Contracts: https://qualityinspection.org/pricing-negotiation-contracts/
+- Fair Wear, Labour Minute and Product Costing Calculator guidance: https://api.fairwear.org/wp-content/uploads/2020/06/Guidance-for-Use-of-the-Fair-Wear-Labour-and-Minute-and-Product-Costing-Calculator-Final.pdf
+- Harris Sliwoski, Who Owns Your Molds?: https://harris-sliwoski.com/chinalawblog/who-owns-your-molds-how-overseas-factories-hold-tooling-hostage-and-how-to-stop-them/
+- BLS, Price Adjustment Guide for Contracting Parties: https://www.bls.gov/ppi/publications/price-adjustment-guide-for-contracting-parties.htm
 
 What makes this skill ours: walk-away points come from gross profit per order and the cash forecast, not from the other quote; the minimum order is capped by sell-through days; payment terms are bargained as money; and every price win is protected by a spec lock, inspection and a 90-day return watch on the first cheaper lot.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Domestic makers often quote including GST or with freight extra; negotiate on ex-GST price and ask who pays freight to the 3PL. Advance by UPI is common; keep advances to the sample or first lot until trust is built.

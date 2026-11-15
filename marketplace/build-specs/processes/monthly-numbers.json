@@ -1,0 +1,258 @@
+{
+  "id": "monthly-numbers",
+  "kind": "recurring",
+  "name": "Monthly numbers: profit, cash, products and prices",
+  "goal": "Each month you get one page with profit and cash from the warehouse and shop data, what each product really earns, a keep, fix, grow or kill call per product, and pricing and merchandising proposals with the margin beside each. Any price or discount change goes live only through a plan you approved.",
+  "starts_from": "The first working day of the month (a scheduled run reads and drafts only), or once your bookkeeper has closed the month.",
+  "folder": "finance",
+  "metrics": [
+    "Main number from context/goals.json for the month, next to last month and the same month last year.",
+    "Profit and cash: net profit, contribution margin per order, and the lowest cash week in the next 13 weeks against your cash floor.",
+    "Price changes: margin and conversion in the 14 days after a change, against the 14 days before."
+  ],
+  "stages": [
+    {
+      "id": "data-check",
+      "name": "Tie the month's data",
+      "agent": "callum-reporting",
+      "access": "read",
+      "gate": "none",
+      "say": "Refreshes the warehouse and ties the month: shop orders, revenue, refunds and new customers against the shop's own report, ad spend for every channel against each platform, and payouts against the bank export. Revenue is shown before sales tax or VAT, in the store's currency. If the bookkeeper has not closed the month yet, every affected number is marked provisional.",
+      "needs": [
+        "warehouse views shop_orders_daily, ads_daily and daily_blended",
+        "the shop's own monthly report (level 1, or an export)",
+        "bank and payout exports",
+        "metric-definitions.md from store setup"
+      ],
+      "makes": [
+        "data-check.md"
+      ],
+      "checks": [
+        "data-review"
+      ],
+      "done_when": "data-check.md shows each source total next to the warehouse total for the month, with every gap explained, and marks provisional numbers."
+    },
+    {
+      "id": "pnl-cash",
+      "name": "Profit and cash for the month",
+      "agent": "hemant-store-finance",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the monthly profit and cash summary in plain words: sales, gross profit, ad spend, fees, net profit and cash, with what moved and why against last month and the budget. Rolls the 13-week cash forecast on with actuals and flags any week below your cash floor. Prepares the pack for your accountant, with tax and VAT questions marked for them to confirm. It never files tax or moves money.",
+      "needs": [
+        "data-check.md",
+        "accounting export or bookkeeper's close",
+        "the last 13-week cash forecast"
+      ],
+      "makes": [
+        "pnl.md",
+        "cash-forecast.md",
+        "pnl-numbers.json"
+      ],
+      "checks": [
+        "pnl-numbers",
+        "pnl-review"
+      ],
+      "done_when": "pnl.md has every line with its source and the reason for each big change, cash-forecast.md shows 13 weeks with the lowest week flagged, and the accountant questions are listed."
+    },
+    {
+      "id": "unit-economics",
+      "name": "What each product and channel earns",
+      "agent": "radek-unit-economics",
+      "access": "read",
+      "gate": "none",
+      "say": "Updates gross profit per purchase by product, channel and market from this month's costs, fees, discounts and returns, and the break-even ad cost per first order. Says what moved since last month and why, for example a supplier price rise or more returns on one product. Updated costs feed the next growth plan and every offer.",
+      "needs": [
+        "data-check.md",
+        "product costs and landed costs from sourcing",
+        "warehouse view shop_orders_daily"
+      ],
+      "makes": [
+        "unit-economics.md",
+        "unit-numbers.json"
+      ],
+      "checks": [
+        "unit-numbers",
+        "unit-review"
+      ],
+      "done_when": "unit-economics.md gives gross profit per purchase and break-even cost by product and channel, with each input sourced and each change against last month explained."
+    },
+    {
+      "id": "portfolio",
+      "name": "Keep, fix, grow or kill for each product",
+      "agent": "sabelo-product-portfolio",
+      "access": "read",
+      "gate": "none",
+      "say": "Builds one row per product: units, revenue, contribution margin after returns, trend, ABC class by share of margin, XYZ class by how steady demand is, returns and review themes. Reads which products are bought together and which take sales from each other. Calls keep, fix, grow or kill for each, with the reason and first step. Every kill call shows the stock and cash left; clearance goes to merchandising.",
+      "needs": [
+        "unit-economics.md",
+        "orders and line items, last 12 months",
+        "returns, reviews and site search terms",
+        "stock on hand"
+      ],
+      "makes": [
+        "portfolio.md"
+      ],
+      "checks": [
+        "portfolio-review"
+      ],
+      "done_when": "portfolio.md has a row and a call for every active product, the bundle pairs worth testing with their margin, and the stock and cash left for every kill call."
+    },
+    {
+      "id": "proposals",
+      "name": "Price and merchandising proposals",
+      "agent": "juliet-merchandising",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Turns the month's numbers into a short list of proposals: price changes, discount depth by product, bundles (with the offer strategist), clearance for kill calls, and collection order so best sellers with good margins lead. Every proposal shows the margin before and after, the reason, the date and how to undo it. Sale wording follows the rules where you sell, such as the EU rule to show the lowest price of the last 30 days beside a discount. Nothing goes below the profit floor.",
+      "needs": [
+        "unit-economics.md",
+        "portfolio.md",
+        "context/org-context/ claims and offers allowed",
+        "discount history"
+      ],
+      "makes": [
+        "proposals.md",
+        "proposal-numbers.json"
+      ],
+      "checks": [
+        "proposal-numbers",
+        "proposals-review",
+        "compliance-review"
+      ],
+      "signoff": "You pick the proposals to make and see the margin effect of each. Reply yes with the code to approve the list as written, or say which to drop. Approving here does not change your store; the next stage shows the exact changes as a plan with its own code.",
+      "done_when": "proposals.md lists each proposal with its product, current and new value, margin before and after, the rule checked for each market, the start date and the undo step."
+    },
+    {
+      "id": "publish-changes",
+      "name": "Make the approved changes",
+      "agent": "juliet-merchandising",
+      "access": "publish",
+      "gate": "none",
+      "optional": true,
+      "say": "Shows you a plan with each approved change as one step: the product or variant, the old and new price or compare-at price, the discount with its start and end dates, or the new collection order, each with its undo. On your yes it makes the changes through the shop connector and reads each one back. Where your connector cannot make a change, the stage gives you click-by-click steps for the shop admin instead. If you approved no changes, this stage is skipped.",
+      "needs": [
+        "proposals.md (signed off)",
+        "shop connector at level 3, or the admin steps for you",
+        "context/limits.json"
+      ],
+      "makes": [
+        "changes.md"
+      ],
+      "publish": "Through the shop connector (for Shopify, the official connector or the Admin API): variant price and compare-at price updates, discounts created with set start and end dates, and collection sort order. Never deletes or archives a product. Product status changes need their own plan and yes.",
+      "done_when": "changes.md records each change with its plan code, the value read back after, and the undo step."
+    },
+    {
+      "id": "report",
+      "name": "The month on one page",
+      "agent": "callum-reporting",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the one-page monthly report: one line on what happened and what is suggested, then the main number against target, sales, orders, contribution margin, MER, new and returning revenue and the lowest cash week, each with its dates and source. Lists the decisions you made this month and the next check date. Refreshes the dashboard.",
+      "needs": [
+        "pnl.md",
+        "unit-economics.md",
+        "portfolio.md",
+        "proposals.md and changes.md"
+      ],
+      "makes": [
+        "monthly-report.md",
+        "report-numbers.json"
+      ],
+      "checks": [
+        "report-numbers",
+        "report-readability",
+        "report-review"
+      ],
+      "done_when": "monthly-report.md fits one page, every number names its dates and source, and it lists this month's decisions and the next check date."
+    },
+    {
+      "id": "price-watch",
+      "name": "Watch the price changes",
+      "agent": "radek-unit-economics",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 14,
+      "say": "Two weeks after any price or discount change, compares the 14 days after with the 14 days before for each changed product: conversion, units, margin per order, refunds and complaints. If conversion or complaints moved sharply, it drafts a rollback plan for you rather than waiting for next month. If nothing changed this month, it records that in one line.",
+      "needs": [
+        "changes.md",
+        "warehouse view shop_orders_daily",
+        "support ticket counts"
+      ],
+      "makes": [
+        "price-watch.md"
+      ],
+      "checks": [
+        "watch-review"
+      ],
+      "done_when": "price-watch.md gives before and after for each changed product over the same number of days, with a keep or roll back suggestion and its deciding number."
+    }
+  ],
+  "checks": {
+    "data-review": {
+      "kind": "reviewer",
+      "agent": "emre-tracking",
+      "passes_when": "revenue and orders come from the shop, each source total matches the warehouse or the gap is explained, and provisional numbers are marked"
+    },
+    "pnl-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/pnl-numbers.json --final <folder>/pnl.md",
+      "passes_when": "every total in the profit and cash summary matches its rows, and no total mixes two periods"
+    },
+    "pnl-review": {
+      "kind": "reviewer",
+      "agent": "radek-unit-economics",
+      "passes_when": "the profit lines tie to data-check.md, the cash floor is checked in every week, and tax questions are left for the accountant"
+    },
+    "unit-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/unit-numbers.json --final <folder>/unit-economics.md",
+      "passes_when": "gross profit per purchase and break-even recompute from their inputs"
+    },
+    "unit-review": {
+      "kind": "reviewer",
+      "agent": "hemant-store-finance",
+      "passes_when": "every cost has a source and date, estimates are marked, and changes from last month are explained"
+    },
+    "portfolio-review": {
+      "kind": "reviewer",
+      "agent": "omar-inventory-planning",
+      "passes_when": "every call fits the product's numbers, every kill call shows stock and cash left, and launches or stockouts that bend the numbers are noted"
+    },
+    "proposal-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/proposal-numbers.json --final <folder>/proposals.md",
+      "passes_when": "each margin before and after recomputes from price, cost and fees"
+    },
+    "proposals-review": {
+      "kind": "reviewer",
+      "agent": "brendan-offers",
+      "passes_when": "no proposal goes below the profit floor, each has a reason from the month's numbers, and each has an undo step"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "reference prices and sale wording follow the rules for each market, with no false was-price or fake deadline"
+    },
+    "report-numbers": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/report-numbers.json --final <folder>/monthly-report.md",
+      "passes_when": "every figure in the report recomputes from its ledger"
+    },
+    "report-readability": {
+      "kind": "script",
+      "run": "node tools/quality/readability.cjs <folder>/monthly-report.md --audience business",
+      "passes_when": "the readability checker exits 0"
+    },
+    "report-review": {
+      "kind": "reviewer",
+      "agent": "malcolm-ecommerce-growth",
+      "passes_when": "the report says what happened and what to do in its first line, and its numbers match pnl.md and unit-economics.md"
+    },
+    "watch-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "before and after use the same number of days and sources, and the suggestion follows its deciding number"
+    }
+  }
+}

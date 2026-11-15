@@ -248,12 +248,16 @@ test("/e-commerce has its own head tags, plain content for crawlers and the team
   assert.deepEqual(boot["/api/agents?vertical=ecommerce"], api);
   const page = html.slice(html.indexOf('<div id="app">'), html.indexOf('id="boot"'));
   const listed = [...page.matchAll(/<li><a href="\/agents\/([a-z0-9-]+)">/g)].map(m => m[1]);
-  assert.deepEqual(listed, api.agents.map((a: { id: string }) => a.id), "every team agent, lead first");
+  // Listed stage by stage (team-stages.ts): every team agent once, the lead first.
+  assert.deepEqual([...listed].sort(), api.agents.map((a: { id: string }) => a.id).sort(), "every team agent, once");
+  if (api.agents.length) assert.equal(listed[0], api.agents[0].id, "the lead first");
+  for (const st of api.stages) assert.ok(page.includes(`<h3>${esc(st.label)}</h3>`), `stage heading ${st.label}`);
   if (api.agents.length) assert.ok(page.includes(`${esc(api.agents[0].name)}, ${esc(api.agents[0].title)}, leads the team.`));
   // No library built here: a calm note, and nothing in boot for the app to mistake for one.
   assert.ok(page.includes("The library is on its way."));
   assert.equal(boot["/api/knowledge/ecommerce"], undefined);
-  assert.doesNotMatch(page, /\$\d|price|beta|—/i);
+  // No prices for AI Blocks and no dollar figures; agents may still talk about a store's own prices (Douglas, Akosua).
+  assert.doesNotMatch(page, /\$\d|our price|pricing plan|beta|—/i);
   // Found from /agents and the sitemap, and named in llms.txt.
   assert.ok(String((await t.api("GET", "/agents")).body).includes('<a href="/e-commerce">Run an online store? Meet the e-commerce team</a>'));
   const locs = [...String((await t.api("GET", "/sitemap.xml")).body).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);

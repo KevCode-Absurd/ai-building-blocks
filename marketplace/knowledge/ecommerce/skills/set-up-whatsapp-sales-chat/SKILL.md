@@ -1,6 +1,6 @@
 ---
 name: set-up-whatsapp-sales-chat
-description: "A working WhatsApp sales channel for a store: the right account type (free Business app or the API through a provider), a business profile, a catalog of the products worth selling in chat, greeting and away messages, quick replies, a label set that doubles as a sales pipeline, working hours with a reply target, trackable entry points from the site, Instagram and ads, and a 10-chat test before go-live. Built around WhatsApp's own opt-in, 24-hour window and human handoff rules, with India notes for COD, UPI and GST-inclusive prices. Use when a store is opening WhatsApp for sales, moving from a founder's personal phone to a business setup, or adding click-to-WhatsApp ads."
+description: "A working WhatsApp sales channel for a store: the right account type (free Business app or the API through a provider), a business profile, a catalog of the products worth selling in chat, greeting and away messages, quick replies, a label set that doubles as a sales pipeline, working hours with a reply target, trackable entry points from the site, Instagram and ads, and a 10-chat test before go-live. Built around WhatsApp's own opt-in, 24-hour window and human handoff rules, and works in any country, with notes on payment links, tax-inclusive prices, the languages your buyers use, and where WhatsApp leads or trails SMS. Use when a store is opening WhatsApp for sales, moving from a founder's personal phone to a business setup, or adding click-to-WhatsApp ads."
 ---
 
 # WhatsApp sales chat setup
@@ -17,7 +17,7 @@ description: "A working WhatsApp sales channel for a store: the right account ty
 ## Not for
 
 - Broadcasts, marketing templates and opt-in growth: use `set-up-whatsapp-marketing`.
-- Consent records, DLT, TCPA and quiet hours across SMS and WhatsApp: use `sms-and-whatsapp-compliance-setup`.
+- Consent records, sender registration, TCPA, GDPR and quiet hours across SMS and WhatsApp: use `sms-and-whatsapp-compliance-setup`.
 - Writing the replies themselves: use `write-chat-sales-scripts` (this skill loads them as quick replies).
 - One shared inbox for email, site chat, WhatsApp and social: use `set-up-helpdesk-and-response-times`.
 
@@ -29,9 +29,9 @@ Required:
 2. **Product list** with title, price, a 2-line description, main image and product URL (Shopify product export: Handle, Title, Variant Price, Image Src).
 3. **Gross profit per product**, from `build-sku-profit-sheet`. Missing: build it first or pick catalog items by units sold and mark the choice "provisional".
 4. **Chat volume estimate**: chats a day now (count the last 7 days on the current phone or inbox), and who will answer, with their hours.
-5. **Policies**: shipping areas and times, COD rules, returns, payment methods.
+5. **Policies**: shipping areas and times, payment methods (and pay-on-delivery rules if offered), returns.
 
-Optional: last 100 chats exported (WhatsApp lets you export a chat as a text file), Instagram handle, ad plans, regional languages the team can answer in.
+Optional: last 100 chats exported (WhatsApp lets you export a chat as a text file), Instagram handle, ad plans, the languages your buyers use and the team can answer in.
 
 Access: read access to the store (level 1). Creating the profile, catalog and messages is draft work (level 2) the client can see before anyone messages buyers. Switching on greeting messages, publishing the catalog and linking the number on the site happen only after the client says yes. The client signs in to WhatsApp and Meta themselves; never ask for codes or passwords.
 
@@ -55,7 +55,7 @@ The 40-chat line is a practitioner default; test it against how long buyers wait
 
 ### 2. Fill the business profile
 
-Display name matching the store name, category, short description (what you sell, where you deliver, COD yes or no), website, email, hours, and address or "online only". Every fact in the profile must match the site's policy pages.
+Display name matching the store name, category, short description (what you sell, which countries you deliver to, how buyers can pay), website, email, hours, and address or "online only". Every fact in the profile must match the site's policy pages.
 
 ### 3. Build the catalog
 
@@ -72,7 +72,7 @@ Away message: when someone will reply, plus a link to the FAQ or catalog so the 
 
 ### 5. Load the quick replies
 
-Load 15 to 25 shortcuts from `write-chat-sales-scripts`. Name them so any team member can find them: `/size`, `/delivery`, `/cod`, `/returns`, `/pay`, `/link`, `/thanks`. Each one is checked against the live policy page on the day it is loaded.
+Load 15 to 25 shortcuts from `write-chat-sales-scripts`. Name them so any team member can find them: `/size`, `/delivery`, `/payment`, `/returns`, `/pay`, `/link`, `/thanks`. Each one is checked against the live policy page on the day it is loaded.
 
 ### 6. Set the labels as a pipeline
 
@@ -83,9 +83,9 @@ Labels let the daily report count chats by stage. Use exactly these:
 | New enquiry | First message, not yet answered |
 | Needs info | Waiting on the buyer's answer |
 | Link sent | Product, cart or payment link sent |
-| Order: prepaid | Paid order placed |
-| Order: COD | COD order placed |
-| COD to confirm | COD order waiting for confirmation |
+| Order: paid | Paid order placed |
+| Order: pay later | Order placed with payment due later (pay on delivery, invoice or bank transfer) |
+| To confirm | Unpaid or risky order waiting for confirmation |
 | Lost: price | Left over price |
 | Lost: delivery | Left over delivery time, area or cost |
 | Lost: no reply | Went quiet after our last message |
@@ -107,7 +107,7 @@ Use WhatsApp's click-to-chat link (`https://wa.me/<number>?text=<prefilled text>
 | Instagram bio | "Hi, I came from Instagram" |
 | Click-to-WhatsApp ad | Set in the ad; one per campaign |
 
-Chats from click-to-WhatsApp ads get a free window of up to 7 days once the store replies inside 24 hours [EML-6363]; reply fast so it opens. In India, automated WhatsApp journeys have drawn far higher click rates than broadcasts in a large cross-brand data set [EML-0048], so chat entry points tied to buyer actions beat blasts.
+Chats from click-to-WhatsApp ads get a free window of up to 7 days once the store replies inside 24 hours [EML-6363]; reply fast so it opens. In one large cross-brand data set, automated WhatsApp journeys have drawn far higher click rates than broadcasts [EML-0048], so chat entry points tied to buyer actions beat blasts.
 
 ### 9. Add consent capture
 
@@ -115,12 +115,16 @@ When a chat ends with an order, ask once: "Can we send you offers and new arriva
 
 ### 10. Run the 10-chat test
 
-From two other phones, run 10 test chats: in hours, after hours, a catalog order, a COD question, a delivery-area question, a stop request, a price question, a size question, a request for a person, and a payment link. Pass each line on the test sheet before asking the client to go live.
+From two other phones, run 10 test chats: in hours, after hours, a catalog order, a payment question, a delivery-area question, a stop request, a price question, a size question, a request for a person, and a payment link. Pass each line on the test sheet before asking the client to go live.
 
-### India and US notes
+### Market notes
 
-- **India:** show prices including GST; say clearly if COD is open and any COD fee; send UPI payment links from the store's payment gateway, never personal UPI IDs. Load regional-language quick replies only if someone on the team reads that language. Never ask for card numbers, OTPs or UPI PINs in chat.
-- **US:** WhatsApp is less used; add Messenger, Instagram and SMS entry points. Texting consent rules differ: send SMS work to `sms-and-whatsapp-compliance-setup`.
+- **Prices:** show prices the way the market expects (including VAT in the UK, EU and Australia; before sales tax in the US and Canada) and in the buyer's currency where the store sells in several.
+- **Payment:** send payment or checkout links from the store's own gateway (cards, wallets, local bank methods), never personal bank or wallet details. Say clearly if pay on delivery is open and any fee. Never ask for card numbers, one-time codes or PINs in chat.
+- **Languages:** load quick replies in the languages your buyers use only if someone on the team reads that language.
+- **Where WhatsApp leads** (much of Europe, Latin America, the Middle East, Africa and Asia): make it the main chat button on the site.
+- **Where it trails** (US, Canada): add Messenger, Instagram and SMS entry points. Texting consent rules differ: send SMS work to `sms-and-whatsapp-compliance-setup`.
+- **Privacy:** for EU and UK buyers, name WhatsApp in the privacy notice and keep chat exports inside it.
 
 ## Checks before you hand it over
 
@@ -157,8 +161,12 @@ From two other phones, run 10 test chats: in hours, after hours, a catalog order
 - CRO-6361: automation needs a clear human path; 24-hour window.
 - EML-6322: per-message pricing, template categories, service message charges.
 - EML-6363: free entry point window after click-to-WhatsApp ads.
-- EML-0048: automated WhatsApp journeys beat broadcasts in India.
+- EML-0048: automated WhatsApp journeys beat broadcasts (one market's cross-brand data).
 - OPS-0006: higher order values bring more contacts per order.
 - CXP-0009: low-effort service builds loyalty; high effort breeds disloyalty.
 
 What makes this skill ours: the catalog is chosen by chat demand and gross profit, not uploaded whole; labels are a sales pipeline the daily report can count; every entry point carries its own source; and the account choice is costed against WhatsApp's 2026 pricing rather than picked by habit.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Show prices including GST; say clearly if COD is open and any COD fee, and keep "Order: COD" and "COD to confirm" labels in the pipeline. Send UPI payment links from the store's payment gateway, never personal UPI IDs, and never ask for UPI PINs. Load Hindi or regional-language quick replies only if someone on the team reads that language. The journey click data [EML-0048] comes from Indian brands. DLT rules for SMS go to `sms-and-whatsapp-compliance-setup`.

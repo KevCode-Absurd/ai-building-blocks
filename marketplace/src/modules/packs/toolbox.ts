@@ -637,6 +637,24 @@ export function buildToolbox(input: ToolboxInput): BuiltToolbox {
 }
 
 /**
+ * The tasks of a built toolbox.md with the items each lists in full (name and pack path), read back from the
+ * markdown: every "### task" heading above "## More", and the bold name and backticked path of each of its lines.
+ * The linter uses it to find an item listed under more than one task.
+ */
+export function toolboxTaskItems(markdown: string): { task: string; items: { name: string; path: string }[] }[] {
+  const out: { task: string; items: { name: string; path: string }[] }[] = [];
+  let current: (typeof out)[number] | null = null;
+  for (const line of markdown.replace(/\r\n?/g, "\n").split("\n")) {
+    if (/^## /.test(line)) { current = null; if (/^## (More|Also in this pack|Who to bring in)\b/.test(line)) break; continue; }
+    const h = /^### (.+)$/.exec(line);
+    if (h) { current = { task: h[1].trim(), items: [] }; out.push(current); continue; }
+    const item = current && /^- .*\*\*(.+?)\*\*.*`([^`\s]+)`\s*$/.exec(line);
+    if (item) current!.items.push({ name: item[1], path: item[2] });
+  }
+  return out;
+}
+
+/**
  * toolbox.md for a role with no toolbox.json yet: the pack's skills, prompts and workflows as one plain list, so
  * AGENTS.md can always send the agent here. No library items and no "when": that is the curated file's job.
  */
@@ -652,7 +670,7 @@ export function fallbackToolbox(input: { agentName: string; roleName: string; jo
     const list = input.files.filter(f => f.path.startsWith(prefix) && !jobPaths.has(f.path));
     if (list.length) out.push("", `## ${title}`, "", ...list.map(f => `- ${f.about ? `${stripEnd(f.about)}: ` : ""}**${f.name}** \`${f.path}\``));
   }
-  if (out.length === 3) out.push("", "This role's skills are coming with its researched knowledge. Until then, work from WORK-METHOD.md and playbook.md.");
+  if (out.length === 3) out.push("", "This role's skills are coming with its researched knowledge. Until then, work from METHOD.md and playbook.md.");
   return out.join("\n");
 }
 

@@ -83,6 +83,16 @@ For every fix:
 
 Score = impact (3 if it moves a failing metric across the threshold, 2 if it moves it more than 20%, 1 otherwise) x reach share / effort hours. Sort by score. Never defer or remove tracking pixels as a speed fix without the client knowing the cost; defer non-essential app scripts instead [SPD-0009].
 
+Tag each fix by type so the right person gets it: **no-code** (remove an app, compress an image, turn off autoplay; the owner can do it in the admin), **theme code** (defer a script, preload the hero, fix a layout shift; a developer, on a duplicate theme) or **server and hosting** (rarely the owner's lever on Shopify). A solo owner starts with the no-code fixes.
+
+### 4b. Put the gain in orders, as a range
+
+Owners decide on orders, not milliseconds. For each top fix: extra orders a month = monthly sessions on the templates it touches x current conversion rate on those templates x a relative lift; extra revenue = extra orders x average order value. Always show a low and a high case, never one number. Outside studies differ about tenfold and come from large sites (published cases tie faster LCP to sales [SPD-0004]); use them only to set the range, label them as third-party figures, and treat the top of the range as unlikely for a small store. Then cross-check with the store's own data: if mobile already converts close to desktop, or fast and slow sessions convert alike, lower the high case. Under about 1,000 sessions a month, the store's data cannot show small gains; give the plan as a direction only and say so. A 0.5 second gain on a template with 10,000 visits a month beats a 2 second gain on one with 100.
+
+### 4c. Split the list
+
+The top 3 fixes by score become **this week**. The next 5 become **next month**. Everything else is **parked**, each with its reason (small gain, high risk to checkout or tracking, needs a developer the store does not have, not enough data). Sum the low and high orders and revenue a month for this week's three, and say which numbers came from the store and which from outside studies.
+
 ### 5. Build and measure on the theme copy
 
 Duplicate the live theme, apply the top fixes one at a time, and record lab numbers after each. Preview on a real mid-range phone too. If a fix breaks a feature (reviews, cart drawer, tracking), roll it back and note it. Check tracking still fires (purchase test in test mode, or the pixel helper) before handing over.
@@ -91,10 +101,13 @@ Duplicate the live theme, apply the top fixes one at a time, and record lab numb
 
 Give the client the fix list with before and after lab numbers. After they approve and publish, record the release date and re-read field data 28 days later [SPD-0005]. Read conversion before and after by device for the same pages; published case studies tie faster LCP to higher sales [SPD-0004], but the store's own read decides, and no revenue forecast is promised.
 
-### 7. India and US notes
+### 7. Market and device notes
 
-- **India:** test on throttled slow 4G and a mid-range Android; many buyers are on patchy mobile data, so page weight under about 2 MB on product pages is a sensible working target (practitioner default). Check COD, pincode and WhatsApp widgets, which often load heavy scripts on every page.
-- **US:** check consent banners and tracking tags (several pixels plus a tag manager) for main-thread time, and test Safari on iPhone, where some app scripts behave differently.
+- **Slow networks and mid-range phones:** where many buyers are on patchy mobile data or mid-range Android phones (much of Latin America, Africa, South and Southeast Asia, and rural areas everywhere), test on throttled slow 4G; page weight under about 2 MB on product pages is a sensible working target (practitioner default).
+- **Widgets:** check delivery-date, postcode checker, payment-option, chat (WhatsApp, Messenger) and review widgets, which often load heavy scripts on every page.
+- **Consent and tracking:** check consent banners (required for EU and UK visitors) and tracking tags (several pixels plus a tag manager) for main-thread time.
+- **iPhone share:** test Safari on iPhone where the store's buyers lean iOS (often the US, UK, Australia and Japan), since some app scripts behave differently there.
+- **Several markets:** if the store uses Shopify Markets with translation or currency apps, test one page per main market; some apps add a script per market.
 
 ## Checks before you hand it over
 
@@ -104,6 +117,8 @@ Give the client the fix list with before and after lab numbers. After they appro
 - Fixes are ranked by impact x reach / effort, with owner and risk.
 - Tracking was checked after fixes; no pixel removed without the client knowing.
 - The field re-read date (28 days after release) is set.
+- Each top fix shows its gain as a low and high range in orders a month, built from the store's own sessions, conversion and order value, with outside figures labelled.
+- Every fix is tagged no-code, theme code or server, and the list is split into this week, next month and parked with reasons.
 - Nothing published, removed or changed live without the client's yes.
 
 ## Output
@@ -117,8 +132,8 @@ Give the client the fix list with before and after lab numbers. After they appro
 
 **Fix list:**
 
-| # | Fix | Template(s) | Metric | Cause and evidence | Lab before | Lab after | Reach | Effort (hours) | Score | Owner | Risk | Status |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| # | Fix | Template(s) | Metric | Cause and evidence | Lab before | Lab after | Reach | Effort (hours) | Score | Type (no-code, theme, server) | Orders a month (low to high) | When (this week, next month, parked) | Owner | Risk | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 **Release log:** Fix, Published date, Field re-read date, Field result, Conversion before and after by device.
 
@@ -130,6 +145,8 @@ Give the client the fix list with before and after lab numbers. After they appro
 - **Fixing on the live theme.** Gate 3 and Step 5 use a copy.
 - **Expecting field numbers to move next day.** Gate 2 and Step 6 set a 28-day re-read.
 - **Speed fixes that break tracking.** Step 5 checks pixels before handover.
+- **Promising one revenue number.** Step 4b gives a low and high range from the store's own numbers.
+- **A fix list of 15 with no first move.** Step 4c names this week's three.
 
 ## Sources
 
@@ -147,3 +164,7 @@ Give the client the fix list with before and after lab numbers. After they appro
 - SPD-6184: Shopify image limits and automatic WebP or AVIF.
 
 What makes this skill ours: five templates chosen by real sessions, judged on field Core Web Vitals (with INP, not the retired FID) rather than a lab score; every fix measured on an unpublished theme copy with median-of-3 lab numbers before anyone publishes; fixes scored by metric crossed x reach / hours; tracking checked after each fix; and a 28-day field re-read built in.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Test on throttled slow 4G and a mid-range Android; many Indian buyers are on patchy mobile data, so keep product pages under about 2 MB. Check COD, pincode and WhatsApp widgets, which often load heavy scripts on every page.

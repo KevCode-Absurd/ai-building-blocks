@@ -16,7 +16,7 @@ Meta reports what its model credits to ads. The store export reports what was ac
 - After a change to the attribution setting, the pixel, the Conversions API or the checkout.
 - Retargeting or catalog ads show a ROAS that looks too good to be true.
 - Before and after Black Friday or a big sale, when delayed credit swings hardest.
-- The store sells cash on delivery and many orders return to origin.
+- Many orders fail delivery, get refused, or have payments reversed after Meta counted them (pay on delivery stores see this most).
 
 ## Not for
 
@@ -34,7 +34,7 @@ Required, read access (level 1) throughout:
 3. **Money lines** from `store-meta-math`: break-even ROAS and target cost per purchase.
 4. **Total ad spend by week across all channels.**
 
-Optional: post-purchase survey answers ("Where did you first hear about us?"), courier delivery and RTO export for COD stores, Amazon sales by week if the brand sells there.
+Optional: post-purchase survey answers ("Where did you first hear about us?"), courier export of delivered and failed orders (most useful where pay on delivery is offered), Amazon sales by week if the brand sells there.
 
 If the Ads Manager export lacks the comparison columns, ask once. If the client cannot provide them, work on the default setting at reduced confidence and say so in the first line.
 
@@ -66,7 +66,7 @@ Practitioner default, test it: above about 30% on a prospecting campaign, judge 
 
 ### 4. Build the store side
 
-From the order export, per closed week: orders placed, orders cancelled, orders refunded (accrue at the expected return rate, because Shopify books refunds on the refund date [MEA-0011]), net revenue, new-customer orders and new-customer revenue. For COD stores, add orders delivered and orders returned to origin. Meta counts the COD order when it is placed, so RTO orders inflate Meta against cash.
+From the order export, per closed week: orders placed, orders cancelled, orders refunded (accrue at the expected return rate, because Shopify books refunds on the refund date [MEA-0011]), net revenue, new-customer orders and new-customer revenue. Add orders delivered and orders that failed delivery or were never paid. Meta counts the order when it is placed, so failed and unpaid orders inflate Meta against cash.
 
 ### 5. Explain the gap
 
@@ -74,7 +74,7 @@ Ratio = Meta purchases (7-day click plus 1-day engaged view) divided by store or
 
 | What you see | Usual cause | Next step |
 |---|---|---|
-| Meta above store | Double-counted pixel and server events, view credit, thank-you page reloads, RTO orders | `store-meta-capi` for dedup; step 3 for view credit |
+| Meta above store | Double-counted pixel and server events, view credit, thank-you page reloads, failed or unpaid orders | `store-meta-capi` for dedup; step 3 for view credit |
 | Meta far below store | Missing server events, consent blocking the first page view [MEA-0007], ad blockers [MEA-0001], strong email or search | `store-meta-capi`; check other channels' share |
 | Meta value far from store value | Value sent with tax or shipping, wrong currency, discounts not netted | `store-meta-capi`, event values |
 | Store sales rise on Amazon when Meta spend rises | Meta demand landing on Amazon; about 20% of Meta value in one study [MEA-0029] | Count Amazon in the store side if the brand sells there |
@@ -110,22 +110,42 @@ Under about $5M a year in revenue: 7-day click reporting plus a new-customer das
 
 One row per closed week, columns as in the Output section, totals at the bottom. Write one line under it saying which number decides budget questions and the factor to use until the next check.
 
+### 11. Say which rung of evidence each decision stands on
+
+Every budget call rests on some evidence. Name the rung, lowest to highest:
+
+1. Opinion or a platform's own claim.
+2. A simple correlation (daily 7-day click ROAS against daily acquisition MER).
+3. A model, such as a media mix model.
+4. A quasi-experiment (a geo split or a planned spend cut with a floor).
+5. A true experiment (a conversion lift test or randomised holdout).
+
+Decision order: the profit and loss account first; lift studies for big calls such as cutting a channel; platform numbers for daily steering only.
+
+- **Correlation bar.** Run CORREL on at least 8 weeks of daily series. About 0.8 or higher means the two numbers move together, which is enough to steer by, not proof the ads caused the sales.
+- **Store an incrementality factor from a holdout** only when it is completed, recent, on the same platform and a similar setup, with dates, spend and margin of error written down. A survey-based factor stays labelled as the weaker rung.
+- **Never compare ROAS across platforms, margins or funnel stages.** Pinterest claims view-throughs whenever any of several tiles was on screen, so 7x there against 2.5x on Meta says little [ADC-6152]. TikTok and Pinterest are read on 7-day click.
+- **A jump that is someone else's work.** If Meta's mid-funnel ROAS leaps (for example 4x to 12x) while a new channel looks weak, Meta is probably retargeting the new channel's traffic [ADC-6153]. Some large retail brands see more TikTok spend lift Meta and Google ROAS while TikTok's own number stays weak [ADC-6158].
+- **Confirm the click definition.** Around March or April 2026 Meta limited 7-day click to outbound clicks, so click ROAS fell overnight in many accounts [ADC-6151]; compare periods on the same definition.
+
 ## Checks before you hand it over
 
 - Only closed weeks are used, and the cut-off date is stated.
 - Every campaign's attribution setting is listed and mixed settings are flagged.
 - View-through share is shown per campaign.
 - The reconciliation table balances: weekly rows add up to the totals, and store orders match the export count.
-- COD stores show delivered and RTO orders as separate columns.
+- Delivered orders and failed or unpaid orders show as separate columns.
 - The factor states its method (survey or spend share) and its confidence.
 - Retargeting and catalog campaigns have their own factor or an incremental read.
 - One sentence names the number that decides budget questions.
+- Each recommendation names its evidence rung.
+- No ROAS is compared across platforms or funnel stages.
 
 ## Output
 
 **Summary, one screen:** the gap in one sentence (for example "Meta claims 1.4 times the store's orders"), its main cause, the chosen reporting basis, the store-truth factor for prospecting and for retargeting, and what to fix first.
 
-**Table "Meta versus store, by week" (the reconciliation table):** Week, Ad spend all channels, Meta spend, Meta purchases (default), Meta purchases (chosen basis), Meta purchase value (chosen basis), Store orders placed, Store orders cancelled or refunded, Store orders delivered (COD stores), New-customer orders, New-customer revenue, Meta-to-store order ratio, MER, New-customer MER, Survey share naming Meta.
+**Table "Meta versus store, by week" (the reconciliation table):** Week, Ad spend all channels, Meta spend, Meta purchases (default), Meta purchases (chosen basis), Meta purchase value (chosen basis), Store orders placed, Store orders cancelled or refunded, Store orders delivered, New-customer orders, New-customer revenue, Meta-to-store order ratio, MER, New-customer MER, Survey share naming Meta.
 
 **Table "Campaign factors":** Campaign, Attribution setting, View share, Meta ROAS, Factor used, Store-basis ROAS, Break-even ROAS, Verdict (above, near, below break-even).
 
@@ -136,10 +156,11 @@ One row per closed week, columns as in the Output section, totals at the bottom.
 - **Judging the last few days.** They are still filling in. Step 1 uses closed weeks.
 - **Comparing campaigns on different settings.** Step 2 flags them.
 - **Trusting retargeting ROAS.** Existing customers inflate it [ADC-0010]. Step 7 sets its own factor.
-- **Counting COD orders as revenue.** RTO orders never pay. Step 4 tracks delivered orders.
+- **Counting placed orders as revenue.** Failed deliveries and reversed payments never pay. Step 4 tracks delivered orders.
 - **Blended MER as proof that Meta works.** Returning customers lift it while acquisition worsens [MEA-0039]. Step 8 uses new-customer MER.
 - **A factor from one week.** A single week is noise; use 8 or more.
 - **Ignoring Amazon.** Meta demand can land there [MEA-0029].
+- **Cutting a channel on its own ROAS.** Check what the other channels' numbers did when it ran [ADC-6158].
 
 ## Sources
 
@@ -156,7 +177,15 @@ One row per closed week, columns as in the Output section, totals at the bottom.
 - ADC-0027: 7-day click plus 1-day engaged view; keep one setting.
 - ADC-0046: November credit lag roughly doubles.
 - Meta documentation: attribution settings, compare attribution settings and incremental attribution columns.
+- ADC-6151: 7-day click now outbound clicks only.
+- ADC-6152: do not compare ROAS across platforms.
+- ADC-6153: a Meta jump can be retargeted traffic from a new channel.
+- ADC-6158: TikTok spend can lift other channels.
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 
 What this skill does that the open-source one did not: reconciles Meta purchases and value with the store's own order export week by week instead of scoring settings; picks the reporting window by how well it tracks the store's new-customer orders; turns the gap into a store-truth factor, with a lower one for retargeting and catalog ads; and handles cash-on-delivery orders that never pay.
+
+## Selling in India
+
+- For COD stores, pull the courier's delivered and RTO export each week. Meta counts the COD order when it is placed, so a rising RTO rate makes Meta look better than cash.

@@ -19,7 +19,7 @@ description: "A monthly voice-of-customer report built from support tickets, cha
 - Writing reply templates: use `build-support-macros-from-top-tickets`.
 - Writing the FAQ page from the same data: use `write-faq-from-tickets-and-reviews`.
 - Turning reviews into ad angles in depth: use `mine-ad-angles-from-reviews`.
-- Return and RTO cost by product and pincode: use `returns-and-rto-cost-analysis`; this report links to it.
+- Return and failed delivery cost by product and area: use `returns-and-rto-cost-analysis`; this report links to it.
 
 ## What you need
 
@@ -89,10 +89,10 @@ For each fix shipped last month: the theme's rate before, the rate now, and a ve
 
 One page per owner (product, site, ads, fulfilment, support), each listing only their themes, quotes and fixes. The support lead presents it in the store's monthly or weekly review. Nothing changes in ads, site or product until that owner and the client agree.
 
-### 8. India and US notes
+### 8. Language and market notes
 
-- **India:** read regional-language and Hinglish tickets in the original and translate quotes faithfully; keep the original beside the translation. Track COD-specific themes on their own: fake orders, refused at door, cash or UPI at delivery, refund to bank. Pincode or state splits often explain delivery themes.
-- **US:** split themes by state or region only for delivery issues. Keep product safety complaints out of the general report and send them to the owner at once.
+- **Languages:** read tickets in every language your buyers use in the original, and translate quotes faithfully; keep the original beside the translation. Track payment and delivery themes on their own: fake orders, refused at the door, failed payments, pay later or pay on delivery questions, refund to card or bank. Postcode, state or country splits often explain delivery themes.
+- **Regions and safety:** split themes by state, region or country only for delivery, customs and duty issues. Keep product safety complaints out of the general report and send them to the owner at once; some may need a report to the market's product safety body.
 
 ## Checks before you hand it over
 
@@ -134,4 +134,10 @@ One page per owner (product, site, ads, fulfilment, support), each listing only 
 - CXP-0012: order-status contact rate bands.
 - LPG-0005: place reviews that answer the exact objection.
 
-What makes this skill ours: themes are ranked by cost per 100 orders, not raw counts; service failures, pre-sale doubts and expectation gaps go to different owners; every fix is measured the next month; and India COD and regional-language tickets are read in the original.
+What makes this skill ours: themes are ranked by cost per 100 orders, not raw counts; service failures, pre-sale doubts and expectation gaps go to different owners; every fix is measured the next month; and tickets in every buyer language are read in the original.
+
+## Selling in India
+
+- Read regional-language and Hinglish tickets in the original.
+- Track COD themes on their own: fake orders, refused at door, cash or UPI at delivery, refund to bank.
+- Pincode or state splits often explain delivery and RTO themes.

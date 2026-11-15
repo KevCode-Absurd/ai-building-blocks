@@ -1152,5 +1152,754 @@
     },
     "strength": "regulator_rule",
     "public": true
+  },
+  {
+    "id": "CRO-6607",
+    "modules": [
+      "CRO",
+      "OFF",
+      "MEA"
+    ],
+    "topics": [
+      "offer test metrics",
+      "revenue per session"
+    ],
+    "claim": "Judge offer and bundle tests on revenue per session: conversion rate alone undercounts a winning bundle, and AOV alone can claim a 40% win that is really a 10 to 20% gain.",
+    "body": "When you push shoppers towards bigger bundles, two numbers move in opposite directions: conversion rate usually falls a little and average order value rises. Blue Sense warns that judging the change on either one gives the wrong answer. On conversion rate alone the new offer looks worse. On AOV alone it can look like a huge win, say AOV up 40%, which ignores the lost orders. Revenue per session (revenue divided by sessions, which equals conversion rate times AOV) captures both, and that is the number that decides whether you make more money and can afford a higher cost per customer. How to apply: 1) Build two landing pages with different offers and send matched traffic to each at the same time. 2) Track sessions, orders, revenue and gross profit on each. 3) Compare revenue per session, and gross profit per session if discounts differ. 4) Only call a winner when the gap holds across enough orders. In Shopify, landing page split tools or separate URLs with matched ad sets can do this.",
+    "conditions": "Any offer, bundle, price or free shipping test on a store.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "example: AOV +40% looks big; true revenue per session lift about 10 to 20%"
+    ],
+    "asks": [
+      "How do I measure if a bundle offer worked?",
+      "My AOV went up but conversion rate dropped, is that good?",
+      "What metric should I use for landing page offer tests?",
+      "What is revenue per session?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[20:56] measuring offer changes on revenue per session"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6608",
+    "modules": [
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "price testing",
+      "geo tests",
+      "contribution per session"
+    ],
+    "claim": "Test price changes by country or by SKU rather than an A/B split, run them at least four weeks, and judge them on contribution margin per session, not conversion rate alone.",
+    "body": "A/B splitting price on the same site causes returning visitors to see a different price on their next visit or through another path, which is a poor experience whichever way it moves. Blue Sense prefers changing price in one country you sell to, or on one SKU, and comparing with the rest. Run it for at least four weeks: any price change disturbs the buyers already in your funnel. A cut causes a short spike, like a sale, and a rise causes some hesitation from people who saw the old price until the funnel refills. Read conversion rate as the first signal of price sensitivity, but decide on contribution margin per session (or revenue per session if you lack margin data), because a higher price will lower conversion and raise order value, and conversion alone would wrongly call a profitable rise a failure. How to apply: pick the test market or SKU, log the start date, keep ads and offers stable, and compare contribution per session against a matched control over the same weeks.",
+    "conditions": "Brands selling in more than one country or with several comparable SKUs, with enough sessions to read a four-week result.",
+    "fails_when": "Single-market, single-SKU brands with no clean comparison; heavy promotions or seasonality during the test window.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Minimum test length: 4 weeks"
+    ],
+    "asks": [
+      "How do I test a price increase?",
+      "Should I A/B test prices on my store?",
+      "How long should a price test run?",
+      "What metric should I use to judge a price change?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6610",
+    "evidence": {
+      "where": "[50:30] recommendations on price changes"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6609",
+    "modules": [
+      "CRO",
+      "MEA",
+      "MCR"
+    ],
+    "topics": [
+      "LTV risk of CRO",
+      "overclaiming angles",
+      "returns by angle"
+    ],
+    "claim": "A conversion win from dark patterns or overclaimed angles can lower CAC while cutting lifetime gross profit through returns, chargebacks and weak repeat rates, so check 365-day LTV by angle.",
+    "body": "Blue Sense warns that pushing conversion too hard backfires. Pressure tactics and promises the product cannot keep produce a short-term lift that later shows up as higher returns, more chargebacks, fewer repeat orders and lower lifetime value. CAC falls, but lifetime gross profit falls with it, so the trade is not worth it. Do not claim firmer skin in four weeks if the product cannot deliver it. The trap is sharpest when spinning new angles: a supplement might, based on a few studies, be pitched for eyesight; if that angle cuts through on Meta and the team scales it, check whether those buyers return it and whether their 365-day LTV is poor because nobody feels a difference. How to apply: tag orders by the ad concept or landing page that drove them (UTMs or a post-purchase survey), and compare refund rate, chargeback rate and 90 to 365 day gross profit per customer by angle. Cut angles that convert well but retain badly.",
+    "conditions": "Brands testing many claims and angles, especially supplements and beauty with variable efficacy.",
+    "fails_when": "One-off purchase categories with little repeat buying, where LTV by angle is hard to read; then watch refunds and chargebacks only.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "365-day LTV checked by angle"
+    ],
+    "asks": [
+      "Can a higher conversion rate hurt my business?",
+      "Why are customers from one ad returning more?",
+      "How do I know if an ad angle brings bad customers?",
+      "Is it worth using urgency tactics on my store?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [68:11] LTV warning on over-optimising conversion rate"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6610",
+    "modules": [
+      "CRO",
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "CAC maths",
+      "conversion rate leverage",
+      "expected action rate"
+    ],
+    "claim": "Because CAC equals ad spend divided by sessions times conversion rate, lifting conversion from 1% to 2% halves CAC with no extra spend, and also nudges Meta CPMs down a little.",
+    "body": "Conversion rate sits in the denominator of CAC, so a relative lift in conversion cuts CAC by the same proportion. Going from 1% to 2% halves it, which lets you raise spend until CAC climbs back to the old ceiling, often doubling or tripling new customer volume. The other two growth levers both cost money: more ad spend, or better in-platform numbers (higher click rate, lower CPC), which usually needs more creative production. Page and offer fixes mostly need clear thinking, which is why conversion rate is the cheapest lever in the funnel. A second, smaller effect: Meta prices auctions partly on expected action rate, which is predicted click rate times predicted conversion rate, built from your history. Better on-site conversion feeds that prediction, so CPMs can fall slightly. Blue Sense says this effect is real but small; do not run page work just to cut CPMs. Doubling conversion rate is extremely rare, so model realistic lifts (for example 10% to 20%) and convert them into a CAC and volume forecast before you invest.",
+    "conditions": "Brands buying traffic on Meta, TikTok or Google where CAC is the binding limit on how much they can spend.",
+    "fails_when": "The lift comes from warmer traffic rather than a better page, or from tactics that raise returns; CAC on the page looks better while real new-customer cost does not move.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "conversion 1% to 2% halves CAC",
+      "CAC = ad spend / (sessions x conversion rate)",
+      "expected action rate = expected CTR x expected conversion rate"
+    ],
+    "asks": [
+      "Why does conversion rate matter so much for ads?",
+      "How much would a better conversion rate lower my CAC?",
+      "Does my site conversion rate affect Meta CPMs?",
+      "What's the cheapest way to lower CAC?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [06:00] CAC maths and expected action rate in Meta CPMs"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6611",
+    "modules": [
+      "CRO",
+      "OPS",
+      "LPG"
+    ],
+    "topics": [
+      "delivery times at checkout",
+      "split testing checkout",
+      "express shipping"
+    ],
+    "claim": "If slow delivery drives abandonment, split test hiding delivery estimates against showing them for 7 to 10 days, or add a paid express option, rather than assuming either way.",
+    "body": "About 21% of abandoners leave because delivery is too slow. If your delivery really is slow, one option is to stop stating delivery times at checkout. That has a cost: removing the estimate adds doubt and lowers conversion for people who would have been fine with it. Whether the doubt costs less than the abandonment caused by showing a slow date is something only a test can answer. Blue Sense suggests running it for seven to ten days depending on revenue and reading the result on conversion and revenue per session. Better long-term options: genuinely faster delivery, or a faster paid shipping choice at checkout for buyers who care. Note that some abandoners are in regional areas with slow carrier times you cannot change. How to apply: check what share of your orders and abandoned checkouts are in slow-delivery regions, add an express option first (it is low risk), and only then test removing estimates.",
+    "conditions": "Stores with delivery times longer than buyers expect, such as overseas fulfilment or regional customers.",
+    "fails_when": "Your traffic is too small to read a 7 to 10 day test, or consumer law and marketplace rules require clear delivery estimates.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "21% abandon because delivery is too slow",
+      "test for 7 to 10 days depending on revenue"
+    ],
+    "asks": [
+      "Should I show delivery times at checkout?",
+      "My shipping is slow, how do I stop losing sales?",
+      "Should I offer express shipping?",
+      "How long should I run a checkout test?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [51:59] slow delivery fixes and the hide-estimate test"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6612",
+    "modules": [
+      "CRO",
+      "OPS"
+    ],
+    "topics": [
+      "ICE scoring",
+      "CRO program",
+      "heatmaps"
+    ],
+    "claim": "List every possible page change, score each 1 to 10 on impact, confidence and ease, multiply, sort, and work down the list; install Microsoft Clarity for heatmaps and recordings first.",
+    "body": "Blue Sense says a real ongoing CRO program with progressive split tests has value for eight and nine figure brands, provided traffic is large and the setup is correct. For everyone, two habits help. First, install Microsoft Clarity, which is free and records heatmaps and session replays for every visitor, so you can see where people stall, rage-tap or stop scrolling. Second, prioritise with ICE. Write down every change you could make (there are always many), then give each a score out of 10 for impact (how big the effect could be), confidence (how sure you are it helps) and ease (how easy it is to ship). Multiply the three to get a score, sort from highest to lowest, and do the top item first. How to apply: keep the list in a sheet, re-score when you learn something from Clarity or a test, and only run proper A/B tests on items where traffic allows a clean read; ship the rest on judgment.",
+    "conditions": "Any store with a backlog of page ideas; full test programs suit eight and nine figure brands with high traffic.",
+    "fails_when": "Scores are guessed without data, so the list just reflects opinions; ground impact and confidence in Clarity sessions, reviews and analytics.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "each of impact, confidence and ease scored out of 10",
+      "ICE score = impact x confidence x ease"
+    ],
+    "asks": [
+      "How do I prioritise website changes?",
+      "What is the ICE framework?",
+      "What tool should I use for heatmaps?",
+      "Should I run a CRO program?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [67:04] Microsoft Clarity and ICE scoring for a CRO program"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6613",
+    "modules": [
+      "CRO",
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "test contamination",
+      "multi-click journeys",
+      "landing page tests"
+    ],
+    "claim": "Run landing page tests on custom pages fed only by cold Meta traffic, because Klaviyo sends skew results and about half of Meta buyers click more than once (about 1.5 clicks per purchase).",
+    "body": "Even a properly sized test can be ruined by what else hits the page. Every Klaviyo campaign creates a spike of warm, high-converting visitors; if any of that traffic reaches the test pages, the numbers swing. Blue Sense's answer is to test on custom landing pages that receive only cold traffic from Meta. Even then, longer buying journeys blur the read. Across large brands they manage, it takes about 1.5 Meta ad clicks on average before a purchase, meaning roughly half of buyers click more than once, possibly landing on different variants or arriving through other channels. You can also fork traffic with a Meta A/B test at ad set or campaign level, but test design has to account for all of this. How to apply: create duplicate landing pages excluded from email, SMS and site navigation; send them only from separate cold ad sets with equal budgets; run full weeks; and read on revenue per visitor. Expect cleaner results in impulse categories than in considered purchases with long time to buy.",
+    "conditions": "Brands with enough Meta spend to feed two landing pages to a readable sample.",
+    "fails_when": "Considered purchases with long time to purchase and many touches, where page tests stay noisy even with clean traffic.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 1.5 Meta ad clicks per purchase on average",
+      "about 50% of buyers click more than once"
+    ],
+    "asks": [
+      "How do I run a clean landing page test?",
+      "Do email campaigns mess up my A/B tests?",
+      "Should I A/B test with Meta or with a testing app?",
+      "How many clicks does it take to buy from a Meta ad?"
+    ],
+    "platforms": [
+      "meta",
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [60:31] contamination from Klaviyo and multi-click journeys"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6614",
+    "modules": [
+      "CRO",
+      "MEA"
+    ],
+    "topics": [
+      "A/B test sample size",
+      "peeking",
+      "false positives"
+    ],
+    "claim": "To trust a 10% to 20% lift at a 2.5% conversion rate you need about 1,000 conversions, or 40,000 sessions, per variant; most seven-figure brands cannot reach that on one page in a month.",
+    "body": "This is the maths most CRO sellers skip. A simple two-variant test aiming to detect a 10% to 20% lift needs roughly 1,000 conversions in each arm at a 2.5% conversion rate, which is about 40,000 sessions per variant and 80,000 in total. A seven-figure brand rarely sends that to one product page in a month. So a green result after two weeks on a page with 100 conversions is noise dressed up as a win. It gets worse with peeking: checking daily and stopping as soon as the result looks significant greatly inflates false positives. Blue Sense's test of whether a CRO program worked: zoom out to a two-year trend in revenue per visitor. If it is flat after dozens of declared wins, the wins were not real. How to apply: before any test, compute required sessions from your conversion rate and the smallest lift you care about; if you cannot reach it in four weeks, do not run the test, ship the change on judgment, or test a bigger swing (headline, offer).",
+    "conditions": "Any store considering on-site A/B testing or paying for a CRO agency.",
+    "fails_when": "Very large sites with hundreds of thousands of sessions per page per month, which can read smaller lifts in reasonable time.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "about 1,000 conversions per variant to trust a 10% to 20% lift",
+      "2.5% conversion rate assumed",
+      "about 40,000 sessions per variant, 80,000 total",
+      "100 conversions in two weeks is noise"
+    ],
+    "asks": [
+      "How much traffic do I need for an A/B test?",
+      "My CRO agency says the test won after 2 weeks, is that real?",
+      "When can I stop an A/B test?",
+      "Is A/B testing worth it for a small store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [58:58] sample size maths and peeking"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6615",
+    "modules": [
+      "CRO",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "CRO priorities",
+      "ICE framework",
+      "landing page structure"
+    ],
+    "claim": "Work conversion in this order: clarity and hierarchy, copy, offer, proof, then friction; the offer has the biggest effect but is hardest, so fix clarity first for a quick win.",
+    "body": "Blue Sense ranks the five levers by overall ICE (impact, confidence, ease), not by impact alone. Clarity and hierarchy: can a visitor tell instantly, above the fold, what this is? Copy: does it speak to the real desire and remove doubt? Offer: is the deal worth acting on? Proof: do they believe the claim and the mechanism? Friction: is anything physically in the way of paying? The offer has the largest impact (give away a $1 million car and conversion goes to 80%, which no copy can match), but building a good offer is slow and hard. Clarity fixes are fast, need no split test and pay quickly, so they go first. The same order also works as the page layout from top to bottom: clear statement of what it is, persuasive copy and mechanism, the offer, social proof, then easy checkout. How to apply: audit your top product page against the five questions in order, list the gaps, and ship the clarity and copy fixes this week while you design the offer change.",
+    "conditions": "Product pages and landing pages for paid traffic where you have limited design and dev time.",
+    "fails_when": "The page is already clear and the real problem is a weak or overpriced offer; then jump straight to offer work.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 levers in order: clarity, copy, offer, proof, friction"
+    ],
+    "asks": [
+      "Where should I start improving my product page?",
+      "What matters most for conversion rate?",
+      "How should I lay out a product page?",
+      "Is the offer or the page design more important?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [13:50] five-step CRO priority order ranked by ICE"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6616",
+    "modules": [
+      "CRO",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "conversion rate ceiling",
+      "when to A/B test",
+      "CRO priorities"
+    ],
+    "claim": "Your conversion rate ceiling is set by category, price point and traffic quality; once clarity, offer and proof are fixed, small A/B tweaks only pay above about $40M a year online.",
+    "body": "Blue Sense sees brands redesign the same product page again and again hoping to find a higher ceiling, when the page was never the limit. After the page clearly says what the product is, carries a strong offer and backs the claim with proof, the next gains usually come from outside the page: first-order contribution margin, new product launches, product quality and repeat buying (returning buyers convert higher, which lifts the blended rate over time). Their rule of thumb: ongoing tweak testing to squeeze out another 0.1% is worth doing only at roughly $40 million or more in online revenue, where 0.1% is real money and traffic is big enough to read a result. How to apply: do one serious pass on clarity, copy, offer, proof and friction (in that order). Then stop testing button colours and move effort to offer building, bundles, new products and retention. Revisit the page when you change the offer, the persona or the angle you advertise, not on a monthly schedule.",
+    "conditions": "Brands that have already done a full pass on above-the-fold clarity, benefit copy, offer and proof.",
+    "fails_when": "The page still has basic gaps (no reviews, a generic default theme, slow load, forced account creation); then page work is the biggest lever. Very large brands with high traffic can profit from steady test programs.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $40M+ online revenue before small-tweak A/B testing pays",
+      "0.1% conversion lift as the typical size of tweak wins"
+    ],
+    "asks": [
+      "Should I keep redesigning my product page?",
+      "When is A/B testing worth it for my store?",
+      "We've tested a lot and conversion won't move, what now?",
+      "What limits my conversion rate?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6611",
+    "evidence": {
+      "where": "about [04:30] conversion rate ceiling and when tweak testing pays"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6617",
+    "modules": [
+      "CRO",
+      "OFF",
+      "EML"
+    ],
+    "topics": [
+      "post-purchase upsells",
+      "revenue per visit"
+    ],
+    "claim": "Add one-click post-purchase upsells: Blue Sense knows brands at 35 to 40% take rates; aim for post-purchase revenue per visit of 10 to 15% of AOV, about $20 extra on a $200 order.",
+    "body": "After payment is captured there is almost no friction: a one-click offer charges the saved card instantly. Blue Sense says it would always have this step, and knows operators running 35% to 40% take rates on post-purchase offers. You can also chain them: one time-limited offer (for example 30% off for the next 60 minutes), then a second for those who accepted, with take rates such as 25% on the first and 10% on the second. It has seen CPG brands lift average order value by 50% to 60% this way, which let them spend about double on Facebook acquisition. Measure it with revenue per visit (RPV): post-purchase revenue divided by visits to the post-purchase step, or average upsell value times conversion rate. Benchmark: 10% to 15% of AOV. With a $200 AOV and 10% RPV, that is $20 extra per order. Sequence matters: anchor high and then step down. Show a $50 to $60 upsell first; if declined, offer a $20 to $30 down-sell; if accepted, follow with a $30 to $40 offer. Leading with the cheapest offer anchors the buyer at $20 and makes everything after look expensive. How to apply: install a post-purchase upsell tool, start with an anchor-then-downsell sequence, and A/B test products.",
+    "conditions": "Shopify stores with a post-purchase upsell app; consumables and multi-SKU brands get the highest take rates.",
+    "fails_when": "Stores where the first purchase is very large and considered, leaving little room for impulse add-ons.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "take rates of 35% to 40% seen",
+      "chained example 25% then 10% take rate",
+      "AOV lifted 50% to 60% in some CPG brands",
+      "RPV benchmark 10% to 15% of AOV; $200 AOV gives $20",
+      "sequence: $50 to $60 first, then $20 to $30 or $30 to $40"
+    ],
+    "asks": [
+      "Are post-purchase upsells worth it?",
+      "What is a good post-purchase take rate?",
+      "How should I order my post-purchase offers?",
+      "How do I measure post-purchase upsell performance?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6614",
+    "evidence": {
+      "where": "about [3:36:55] post-purchase offers; [3:37:30] RPV; [3:38:30] anchor high then downsell"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6618",
+    "modules": [
+      "CRO",
+      "OFF",
+      "LPG"
+    ],
+    "topics": [
+      "upsell placement",
+      "take rates"
+    ],
+    "claim": "Expect in-cart upsell take rates of about 5 to 15% and lower at checkout; at checkout sell a low-friction add-on such as $4.99 shipping protection, which Blue Sense saw taken by about 30% at near 100% margin.",
+    "body": "Where you place an add-on changes how often it is taken. In the cart, the buyer is still deciding, so friction is medium: a pushy offer can make them less likely to buy, and they are less likely to accept because they are not yet committed. Typical take rates are 5% to 15%. Use thresholds there (a bar showing how close they are to a price break or free item), samples, or one matching product. At checkout, Blue Sense now finds take rates fall further, which it calls counter-intuitive and a change from its earlier view: buyers are committed to the order and price they built and resist new items. What works at checkout is a low-friction add-on rather than another product. Shipping protection at about $4.99 got roughly a 30% take rate in the presenter's past stores at almost 100% margin, because refunds are rare and carriers often cover lost parcels, adding about $1 to $2 of gross profit to every order. Post-purchase, after payment, friction is near zero and take rates are highest. How to apply: use thresholds in cart, one low-friction add-on at checkout, and your main product upsells after purchase.",
+    "conditions": "Shopify stores with cart drawer and checkout customisation; shipping protection depends on local rules and carrier claims.",
+    "fails_when": "Markets or platforms where shipping protection fees are restricted or must be opt-in; very high trust brands where buyers find add-on fees off-putting.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "in-cart take rate 5% to 15%",
+      "shipping protection $4.99, about 30% take, near 100% margin",
+      "adds about $1 to $2 gross profit per order"
+    ],
+    "asks": [
+      "Where should I put upsells in my store?",
+      "Do checkout upsells work?",
+      "Is shipping protection worth adding?",
+      "What take rate should I expect from an in-cart upsell?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6614",
+    "evidence": {
+      "where": "about [3:35:00] placement and friction; [3:36:10] shipping protection add-on"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6619",
+    "modules": [
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "in-cart upsells",
+      "upsell rules"
+    ],
+    "claim": "Five in-cart upsell rules: one offer per slot, relevance over price, high-margin SKUs, a simple flat offer readable in 2 to 3 seconds, and success measured by gross margin lift, not AOV lift.",
+    "body": "Blue Sense's rules for upsells in the cart drawer. 1) Show only one offer per slot. Three offers at once cause decision fatigue and lower take rates more than they help. 2) Relevance beats price. A good deal on something unrelated to what is in the cart will not be taken. 3) Favour high-margin SKUs. An add-on that brings only $4 or $5 of gross profit wastes the slot when a relevant, attractive, higher-margin item is available. 4) Keep it simple. Front-end offers can be layered and clever, but in the cart you have two to three seconds of attention, so the offer usually has to be a clear flat discount when added. 5) Measure on gross margin lift, not order value lift. If you judge on AOV, you will drift toward cheap, low-margin add-ons that raise order value but not profit. How to apply: audit your cart drawer against these five rules, cut it to one offer, swap in the highest-margin relevant product, and report the add-on's gross profit per order.",
+    "conditions": "Stores using a cart drawer or upsell app.",
+    "fails_when": "Single-product stores with nothing relevant to add in the cart.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "one offer per slot",
+      "2 to 3 seconds of attention"
+    ],
+    "asks": [
+      "How many upsells should I show in my cart?",
+      "What makes a good cart upsell?",
+      "Should I measure upsells by AOV?",
+      "Why is nobody taking our cart upsells?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6614",
+    "evidence": {
+      "where": "about [3:39:10] five rules of upselling in cart"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6620",
+    "modules": [
+      "CRO",
+      "MCR",
+      "LPG"
+    ],
+    "topics": [
+      "full funnel diagnosis",
+      "ad library review"
+    ],
+    "claim": "Diagnose a struggling store before opening the ad account: read Shopify, the Meta Ad Library and the landing page, because weak ads, page and offer outweigh any campaign structure choice.",
+    "body": "Blue Sense trains this internally as an exercise: the account is underperforming, fix it, but you may not open it. The point is to stop the common media buyer reflex of answering a business problem with a structural change, such as moving from ad set budgets to Advantage+ campaigns. That might add 10 or 20%, but a business that is 3 times below where it should be needs a step change, not a bet on structure. Steps: 1. In Shopify, look at revenue, conversion rate, average order value, and new against returning customers over time. 2. In the Meta Ad Library, look at the live ads as a buyer would: are they clear, varied and current, or a few tired ones? 3. Click through to the landing page and check it carries on the ad's promise. 4. Compare the offer with two or three competitors. Read the funnel from the numbers you can see: a poor click through rate points to the ads; a poor conversion rate points to the page, the offer or a mismatch with the ad. Then act in that order: a better offer, page fixes, better ads, and only then look at structure. The habit also trains the full funnel thinking clients pay for.",
+    "conditions": "Stores with a large gap to their goals, where the cause is unclear.",
+    "fails_when": "A sudden drop with a clear in-account cause such as broken tracking, disapprovals, a spent card limit or a paused campaign; small gaps where structure and bidding are the real issue.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Structure changes worth about 10 to 20%",
+      "Business underperforming by about 3 times"
+    ],
+    "asks": [
+      "My ads stopped working. Where do I start?",
+      "Should I switch to Advantage+ to fix performance?",
+      "How do I tell if the problem is my ads, landing page or offer?",
+      "How can I audit my marketing without logging into Ads Manager?"
+    ],
+    "platforms": [
+      "meta",
+      "shopify"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6616",
+    "evidence": {
+      "where": "[19:47] fix it without opening the ad account"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6621",
+    "modules": [
+      "CRO",
+      "ADC"
+    ],
+    "topics": [
+      "test kill rule",
+      "test budget",
+      "CPA threshold"
+    ],
+    "claim": "Before judging a new concept, spend 3x target CPA (keep at 3 or more sales, wait at 2, cut at 0 or 1); Blue Sense prefers 5x for a clean yes or no.",
+    "body": "You need a spend line set in advance, or tests get killed on noise. The common rule: multiply target CPA by three and let the ad set spend that much. With a $50 target that is $150. Three or four purchases means keep it and scale. Two means a yellow light, so let it spend another $50 or so. Zero or one means cut. Blue Sense is more patient where the client allows. The first dollars go to Meta working out who to show the ads to, and efficiency often climbs after that. Their preferred line is 5x target CPA, $250 in this example, with no yellow light: at that point it is a firm yes or no. How to apply: write the threshold into the ad set name or test log when you launch. Set the daily budget so the threshold is reached in about a week, not a day. Then read the result on 7-day click with existing customers excluded.",
+    "conditions": "Concept tests in ad sets where target CPA is known and purchases are the success metric.",
+    "fails_when": "CPA is very high (hundreds or thousands of dollars), where 3x to 5x is too costly and an earlier event like add to cart must stand in; or tests are judged in a sale period.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3x target CPA: keep at 3 plus purchases, extend at 2, cut at 0 or 1",
+      "Blue Sense preference: 5x target CPA",
+      "example: $50 target CPA, $150 or $250 test spend"
+    ],
+    "asks": [
+      "How much should I spend on a new ad before turning it off?",
+      "When should I kill a Facebook ad test?",
+      "How many sales does a test need before I decide?",
+      "Is 3x CPA enough to judge an ad?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6617",
+    "evidence": {
+      "where": "[53:30] to [55:00] ad set test budget and the 3x vs 5x CPA rule"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6622",
+    "modules": [
+      "CRO",
+      "ADC"
+    ],
+    "topics": [
+      "test duration",
+      "day of week effects",
+      "time to purchase"
+    ],
+    "claim": "Run most Meta creative tests for about a week to cover day-of-week swings and the few days people take to buy; 3 to 4 days for big stable brands, 10 to 14 for small ones.",
+    "body": "You could spend a whole test budget in one day, but two things bend short tests. Day of week: most stores have strong and weak days, so a test launched on a good day looks better than it is. Time to purchase: most buyers need a few impressions and maybe a couple of clicks over three or four days. If you stop a top-of-funnel ad after a day, those warmed-up people later buy through other ads and the tested ad never gets credit. A week usually balances speed and accuracy. Big brands with steady daily sales and short buying cycles can read in 3 to 4 days. Tiny brands with small budgets, long consideration and big daily swings may need 10 to 14 days. How to apply: pick the window first, then set the daily budget as the test threshold divided by days. At under $50k a month, do not read data on any window shorter than about 5 days. When an ad set hits KPI, raise its budget about 20% a day.",
+    "conditions": "Creative and concept tests on Meta, Google and similar platforms.",
+    "fails_when": "Flash sales or launches where a test only matters for a 1 to 2 day window; or very high volume accounts with thousands of daily purchases that can read in 2 days.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 7 days default test window",
+      "3 to 4 days for large stable brands",
+      "10 to 14 days for small brands with long buying cycles",
+      "no reads under about 5 days below $50k a month",
+      "scale winners about 20% a day"
+    ],
+    "asks": [
+      "How long should I run a Facebook ad test?",
+      "Can I judge a new ad after one day?",
+      "How fast should I increase budget on a winning ad set?",
+      "Why did my test look bad but sales went up later?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6617",
+    "evidence": {
+      "where": "[52:03] read windows; [55:10] to [57:38] test duration: seasonality and time to purchase"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6623",
+    "modules": [
+      "CRO",
+      "ADC",
+      "MEA"
+    ],
+    "topics": [
+      "test budget formula",
+      "learning phase",
+      "statistical threshold"
+    ],
+    "claim": "Set daily test budget as target conversions times expected CPA divided by test days; 20 sales at $100 CPA over 14 days is $143 a day, while Meta's 50 per week rule needs $714.",
+    "body": "Two questions decide a test budget: how many conversions you will accept as enough to call it, and how fast you want the answer. Then daily budget equals target conversions times expected CPA, divided by days. Blue Sense's example: 20 conversions, $100 expected CPA, 14 days, so about $143 a day. Meta's advice that an ad set needs 50 conversions in 7 days to leave learning gives 50 times $100 over 7 days, about $714 a day for one concept. Run 10 concepts that way and the testing campaign alone costs about $7,000 a day, which almost no brand can fund. So most advertisers should not size ad set budgets to the 50 per week rule; setting budgets from it is one of the four common mistakes Blue Sense lists for small accounts. How to apply: pick a threshold you can afford (often 10 to 20 sales or 3x to 5x CPA), pick a window near a week, and compute budget per concept. If the total is too high, test fewer concepts at a time.",
+    "conditions": "Planning concept or creative test budgets where purchases are the success event.",
+    "fails_when": "Very large accounts that can fund 50 conversions per ad set per week, or tests where a statistically rigorous lift study is needed rather than a practical call.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "20 conversions x $100 CPA / 14 days = about $143 a day",
+      "50 conversions x $100 CPA / 7 days = about $714 a day",
+      "10 concepts at that rate = about $7,000 a day"
+    ],
+    "asks": [
+      "How do I work out my Facebook testing budget?",
+      "Do I really need 50 conversions a week per ad set?",
+      "How much daily budget should a test ad set get?",
+      "How many concepts can I test at once?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6617",
+    "evidence": {
+      "where": "[94:47] to [96:36] testing discipline and the daily test budget formula"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-6624",
+    "modules": [
+      "CRO",
+      "MCR"
+    ],
+    "topics": [
+      "concept testing",
+      "hit rate",
+      "creative volume"
+    ],
+    "claim": "Test each new concept with at least 10 ads, and plan volume from your hit rate: at a typical 5% hit rate you need about 20 ads to expect one winner.",
+    "body": "The common mistake is spending weeks building a concept and then launching one to three ads. With so few you cannot tell a bad concept from a bad execution. Blue Sense's cycle: write a hypothesis (which of persona, angle, offer or format you are testing), produce many ads for it, launch them in the concept's own ad set, then compare results with what you expected (spend, conversions and return), scale what worked and iterate. Work out your own hit rate: of the ads you launched last quarter, what share became winners by your definition, for example ads that took meaningful spend at target ROAS? Divide one by that rate to see how many ads a concept needs before you should expect a winner. At 5% that is 20; at 10% it is 10. The bigger your budget, the faster this loop runs.",
+    "conditions": "Accounts with budget to fund 10 or more ads per concept test.",
+    "fails_when": "Very small budgets where 20 ads per concept cannot each get enough spend; then use statics, trial reels or fewer concepts.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "at least 10 ads per concept",
+      "typical hit rate about 5%",
+      "about 20 ads to expect one winner at 5%"
+    ],
+    "asks": [
+      "How many ads should I make per concept?",
+      "What is a normal creative hit rate?",
+      "Why do my concept tests never find winners?",
+      "How do I run a creative test on Meta?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6637",
+    "evidence": {
+      "where": "about [87:28] testing cycle and hit rate maths"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
   }
 ]

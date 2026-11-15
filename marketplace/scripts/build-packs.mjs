@@ -2,6 +2,7 @@
 //
 //   node scripts/build-packs.mjs [--only=id,id] [--out=dist/packs]        build (fails when packs/versions.json is stale)
 //   node scripts/build-packs.mjs --lock [--date=YYYY-MM-DD] [--only=id,id] rewrite packs/versions.json (npm run packs:lock)
+//   node scripts/build-packs.mjs --onefile [--only=id,id] [--out=dir]   just the one-file texts and their budget table
 //
 // Versions come from packs/versions.json, not the build day: each pack ("<id>" and "<id>-train") has a content hash
 // (packContentHash: every file rendered with a placeholder version) and the version and date of its last change.
@@ -12,7 +13,7 @@
 // For every live house persona the build writes (URLs are the same paths under the site):
 //   dist/packs/<id>.zip                    "Download this agent"
 //   dist/packs/<id>-train.zip              "Train your own"
-//   dist/packs/<id>.txt                    the whole agent in one file, for chat apps ("Start in your AI")
+//   dist/packs/<id>.txt                    the agent in one file for chat apps ("Start in your AI"): core, card digest, links
 //   dist/packs/<id>/<path>                 the agent's own files of its pack (browsable copy)
 //   dist/packs/<id>/files.json             every file of the pack with its url, bytes, purpose and kind, plus the zips
 //   dist/packs/roles/<role-id>/<path>      each ready role kit, once: its files as they stand, plus sources.md and
@@ -34,16 +35,20 @@
 // A role kit counts only once it has role.json and knowledge.md; until then its agents' knowledge is "pending".
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { housePersonas } from "../src/modules/directory/index.ts";
 import { listJobTypes } from "../src/modules/catalogue/index.ts";
 import { checkRoleKitJson, getRole, listRoles, personasWithUnknownRole } from "../src/modules/directory/roles.ts";
 import {
-  buildPack, fileUrl, filesIndex, lockKey, lockText, nextLockEntry, normalizeText, oneFileText, packContentHash, packZip, PackBuildError,
-  RESERVED_PACK_PATHS, validateRoleKit,
+  buildPack, fileUrl, filesIndex, lockKey, lockText, nextLockEntry, normalizeText, ONE_FILE_BUDGET, oneFileStats, oneFileText, packContentHash, packZip,
+  PackBuildError, RESERVED_PACK_PATHS, validateRoleKit,
 } from "../src/modules/packs/build.ts";
 import { validateMegaKit } from "../src/modules/packs/mega.ts";
 import { verticalBundle } from "../src/modules/knowledge/bundle.ts";
+import { buildShelf } from "../src/modules/knowledge/shelf.ts";
+import { ECOMMERCE_MODULE_STAGES, ECOMMERCE_STAGES } from "../src/modules/directory/team-stages.ts";
+import { LIBRARY_ORIGIN } from "../src/modules/packs/format.ts";
 import { cardProblems } from "../src/modules/knowledge/cards.ts";
 import { lintNotes, lintPack, MADE_UP_BUSINESSES } from "../src/modules/packs/lint.ts";
 import { checkToolbox, leadAgentOfRole, renderLibraryItem, renderToolGuide, toolboxIndex, toolboxLibraryRefs, yamlLite } from "../src/modules/packs/toolbox.ts";
@@ -315,7 +320,21 @@ if (existsSync(KNOWLEDGE)) {
     }
     for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
     warnings.push(...verticalNotes);
-    verticals.set(id, verticalBundle(vertical, cards, sources, { toolbox, vendor, names }));
+    // Craft principles by discipline (principles/index.json and one <id>.md each): what great work in each trade looks
+    // like, shared by the agents who practise it. A named agent must exist; a discipline with no file yet is skipped.
+    const principlesDir = path.join(dir, "principles");
+    let principles = null;
+    if (existsSync(path.join(principlesDir, "index.json"))) {
+      const index = JSON.parse(readFileSync(path.join(principlesDir, "index.json"), "utf8"));
+      const texts = {};
+      for (const d of index.disciplines) {
+        const f = path.join(principlesDir, `${d.id}.md`);
+        if (existsSync(f)) texts[d.id] = normalizeText(readFileSync(f, "utf8"));
+        else warnings.push(`knowledge/${id}/principles: ${d.id}.md is missing, so ${d.title} ships with no principles yet`);
+      }
+      principles = { index, texts };
+    }
+    verticals.set(id, verticalBundle(vertical, cards, sources, { toolbox, vendor, names, principles }));
   }
 }
 
@@ -336,13 +355,81 @@ for (const u of personasWithUnknownRole(personas)) warnings.push(`persona ${u.id
 const verticalRoles = new Map(); // role id -> vertical id (the first vertical, by id, whose agents have it)
 for (const p of housePersonas()) if (p.kind === "house" && p.status === "live" && p.vertical && verticals.has(p.vertical) && p.role && !verticalRoles.has(p.role)) verticalRoles.set(p.role, p.vertical);
 const verticalList = [...verticals.values()];
+// Each agent's build folder: build-specs/make.mjs writes build-specs/dist/ (git-ignored, the same bytes every run) and
+// stops when a process, access guide or kit file breaks one of its rules, so this build stops too.
+const BUILD_DIR = path.join(ROOT, "build-specs", "dist", "agents");
+{
+  const made = spawnSync(process.execPath, [path.join(ROOT, "build-specs", "make.mjs")], { encoding: "utf8" });
+  if (made.status !== 0) fatal(`build-specs/make.mjs failed:
+${(made.stdout + made.stderr).trim()}`);
+}
+const buildFolders = new Map();
+const buildFolderFor = id => {
+  if (!buildFolders.has(id)) {
+    const dir = path.join(BUILD_DIR, id);
+    buildFolders.set(id, existsSync(path.join(dir, "BUILD.md")) ? Object.fromEntries(walk(dir).map(rel => [rel, readFileSync(path.join(dir, rel), "utf8")])) : null);
+  }
+  return buildFolders.get(id) ?? undefined;
+};
 const inputFor = (persona, kind, version) => {
   const role = getRole(persona.role);
   const mega = persona.mega ? megaKits.get(persona.mega.kit) ?? null : null;
   const storeKit = !persona.vertical && verticalRoles.has(persona.role) ? verticals.get(verticalRoles.get(persona.role)) : undefined;
-  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, vertical: persona.vertical ? verticals.get(persona.vertical) : undefined, storeKit, verticals: verticalList, options: { kind, ...version } };
+  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, vertical: persona.vertical ? verticals.get(persona.vertical) : undefined, storeKit, verticals: verticalList, build: kind === "agent" ? buildFolderFor(persona.id) : undefined, options: { kind, ...version } };
 };
 const started = Date.now();
+
+// ---------- One-file budget (the chat-app .txt) ----------
+// The one file must stay small enough for a chat window, with the rules near the top (ONE_FILE_BUDGET, oneFileStats):
+// the core before the card digest within coreTokens, the whole file under totalTokens, and AGENTS.md, the method,
+// the intake and the output policy each starting within ruleDepth of the file. Any agent over budget stops the build;
+// --gate=report prints the rows and goes on.
+//   node scripts/build-packs.mjs --onefile [--only=id,id] [--out=dir]   only the one-file texts and the gate table:
+//   no lock needed, nothing else written (to measure a change while the lock is stale).
+const oneFileRows = [];
+function oneFileRow(id, text) {
+  const s = oneFileStats(text);
+  const pct = d => (d === null ? "-" : `${(d * 100).toFixed(1)}%`);
+  oneFileRows.push({ id, ...s, mega: /^===== FILE: traction-playbook.md =====$/m.test(text), line: `${id}: core ${s.coreTokens} tokens, total ${s.tokens} tokens, ${s.digestCards} digest cards; starts: AGENTS ${pct(s.depth.agents)}, method ${pct(s.depth.method)}, intake ${pct(s.depth.intake)}, output policy ${pct(s.depth.outputPolicy)}` });
+}
+function oneFileGate() {
+  if (!oneFileRows.length) return;
+  const max = (rows, key) => rows.reduce((a, r) => (r[key] > a[key] ? r : a));
+  // A mega agent's core also holds its traction playbook, so it has its own core limit (megaCoreTokens).
+  const plain = oneFileRows.filter(r => !r.mega), mega = oneFileRows.filter(r => r.mega);
+  const total = max(oneFileRows, "tokens");
+  const cores = [
+    plain.length ? `largest core ${max(plain, "coreTokens").id} ${max(plain, "coreTokens").coreTokens} tokens (limit ${ONE_FILE_BUDGET.coreTokens})` : "",
+    mega.length ? `largest mega agent core ${max(mega, "coreTokens").id} ${max(mega, "coreTokens").coreTokens} tokens (limit ${ONE_FILE_BUDGET.megaCoreTokens})` : "",
+  ].filter(Boolean).join("; ");
+  console.log(`build-packs: one-file budget: ${cores}; largest file ${total.id} ${total.tokens} tokens (limit under ${ONE_FILE_BUDGET.totalTokens}); rules start within ${ONE_FILE_BUDGET.ruleDepth * 100}% of the file`);
+  if (args.onefile === "true" || oneFileRows.length <= 8) for (const r of oneFileRows) console.log(`build-packs: one-file ${r.line}`);
+  const over = oneFileRows.filter(r => r.problems.length);
+  if (!over.length) return;
+  const lines = over.map(r => `${r.id}: ${r.problems.join("; ")}`);
+  const summary = `${over.length} one-file text(s) break the budget (src/modules/packs/build.ts ONE_FILE_BUDGET)`;
+  if (args.gate === "report") console.warn(`build-packs: ${summary}:\n  ${lines.join("\n  ")}`);
+  else fatal(`${summary}. Move bulk into a linked file, or merge repeated rules (run with --gate=report to see all and keep going):\n  ${lines.slice(0, 40).join("\n  ")}${lines.length > 40 ? `\n  ...and ${lines.length - 40} more` : ""}`);
+}
+if (args.onefile === "true") {
+  if (!args.out) fatal("--onefile writes the texts to the folder you name with --out, never into dist/packs");
+  mkdirSync(OUT, { recursive: true });
+  try {
+    await pool(personas, async persona => {
+      const pack = await buildPack(inputFor(persona, "agent", { version: "0000.00.00", updated: "0000-00-00" }));
+      const text = oneFileText(pack);
+      writeFileSync(path.join(OUT, `${persona.id}.txt`), text);
+      oneFileRow(persona.id, text);
+    });
+  } catch (err) {
+    if (err instanceof PackBuildError) fatal(err.message);
+    throw err;
+  }
+  oneFileRows.sort((a, b) => (a.id < b.id ? -1 : 1));
+  console.log(`build-packs: wrote ${oneFileRows.length} one-file text(s) to ${path.relative(ROOT, OUT) || "."}; ${((Date.now() - started) / 1000).toFixed(1)}s`);
+  oneFileGate();
+  process.exit(0);
+}
 
 // ---------- Content hashes and the version lock ----------
 
@@ -419,6 +506,40 @@ for (const [id, b] of verticals) {
   writeAt(`/packs/knowledge/${id}/index.json`, `${JSON.stringify(b.index)}\n`);
 }
 
+// Each vertical's shelves (src/modules/knowledge/shelf.ts): the prompts, skills, tools and minds a store owner can use
+// beside the agents, from knowledge/<vertical>/library/*.json, the vertical's own skills and the library's minds and AI
+// tool guides. Only the e-commerce team has stages, so only it has shelves for now.
+const shelfCounts = {};
+for (const [id] of verticals) {
+  if (id !== "ecommerce") continue;
+  const dir = path.join(KNOWLEDGE, id), libDir = path.join(dir, "library");
+  const list = name => (existsSync(path.join(libDir, `${name}.json`)) ? JSON.parse(readFileSync(path.join(libDir, `${name}.json`), "utf8")) : []);
+  const toolbox = existsSync(path.join(dir, "toolbox.json")) ? JSON.parse(readFileSync(path.join(dir, "toolbox.json"), "utf8")) : { modules: {} };
+  const skills = [];
+  for (const [code, items] of Object.entries(toolbox.modules ?? {})) for (const i of items) {
+    if (!i.ref.startsWith("skill:")) continue;
+    const name = i.ref.slice(6), f = path.join(dir, "skills", name, "SKILL.md");
+    skills.push({ name, title: i.title ?? "", outcome: i.outcome ?? "", when: i.when ?? "", module: code, agents: i.agents ?? [], text: existsSync(f) ? readFileSync(f, "utf8") : "" });
+  }
+  const minds = list("minds"), tools = list("tools");
+  const mindSources = {};
+  for (const m of minds) {
+    const md = path.join(CATALOGUE, "minds", m.slug);
+    if (!existsSync(path.join(md, "SKILL.md"))) continue;
+    const meta = yamlLite(readIf(path.join(md, "mind.yaml")) ?? "") ?? {};
+    mindSources[m.slug] = { name: String(meta.name ?? m.slug), identity: String(meta.identity ?? ""), area: String(meta.area ?? ""), skill: normalizeText(readFileSync(path.join(md, "SKILL.md"), "utf8")) };
+  }
+  const toolGuides = {};
+  for (const t of tools) if (t.ai_tools_slug && existsSync(path.join(CATALOGUE, "ai-tools", `${t.ai_tools_slug}.yaml`)))
+    toolGuides[t.ai_tools_slug] = renderToolGuide(t.ai_tools_slug, readFileSync(path.join(CATALOGUE, "ai-tools", `${t.ai_tools_slug}.yaml`), "utf8")).text;
+  const team = new Set(housePersonas().filter(p => p.vertical === id && p.status === "live").map(p => p.id));
+  const built = buildShelf({ vertical: id, built: day, stages: ECOMMERCE_STAGES, moduleStage: ECOMMERCE_MODULE_STAGES,
+    agents: team, prompts: list("prompts"), skills, tools, minds, mindSources, toolGuides, libraryOrigin: LIBRARY_ORIGIN });
+  for (const [p, text] of Object.entries(built.files)) writeAt(p, p.endsWith(".json") ? text : normalizeText(text));
+  warnings.push(...built.notes.map(n => `knowledge/${id}/library: ${n}`));
+  shelfCounts[id] = { prompts: built.file.prompts.length, skills: built.file.skills.length, tools: built.file.tools.length, minds: built.file.minds.length };
+}
+
 // Each ready role kit once, as it stands (text files with LF endings and a final newline, as packs carry them).
 for (const [roleId, files] of kitFilesAsTheyStand) {
   for (const [p, text] of Object.entries(files)) writeShared(`/packs/roles/${roleId}/${p}`, normalizeText(text));
@@ -444,7 +565,9 @@ async function buildOne(persona) {
   const [agentZip, trainZip] = await Promise.all([packZip(agent), packZip(train)]);
   writeFileSync(path.join(OUT, `${persona.id}.zip`), agentZip);
   writeFileSync(path.join(OUT, `${persona.id}-train.zip`), trainZip);
-  const oneFile = Buffer.from(oneFileText(agent), "utf8");
+  const oneText = oneFileText(agent);
+  oneFileRow(persona.id, oneText);
+  const oneFile = Buffer.from(oneText, "utf8");
   writeFileSync(path.join(OUT, `${persona.id}.txt`), oneFile);
   fileCount += 3;
   zipBytes += agentZip.length + trainZip.length;
@@ -503,6 +626,7 @@ if (lintIssues.length) {
     fatal(`${summary}. Fix the template, role kit or job type named in each line (run with --lint=report to see all and keep going):\n  ${lines.slice(0, 40).join("\n  ")}${lines.length > 40 ? `\n  ...and ${lines.length - 40} more` : ""}`);
   }
 }
+oneFileGate();
 writeAt("/packs/index.json",`${JSON.stringify({ schema: "ai-blocks-pack-index/1", count: index.length, packs: index }, null, 2)}\n`);
 // Which job roles (and their live agents) carry each library item. Built from every role kit, also with --only.
 const roleAgents = Object.fromEntries([...toolboxes.keys()].map(roleId => [roleId, {
@@ -524,10 +648,16 @@ for (const [message, rule] of lintNoteSet) {
   if (m && Number(m[2]) > (longest.get(m[1])?.words ?? 0)) longest.set(m[1], { words: Number(m[2]), message });
 }
 for (const { message } of longest.values()) console.warn(`build-packs: note: ${message}`);
+// Overlap notes from the pack linter (an item under two tasks, two job skills for one deliverable): never a failure.
+for (const rule of ["toolbox_overlap", "deliverable_overlap"]) {
+  const list = [...lintNoteSet].filter(([, r]) => r === rule).map(([m]) => m);
+  if (list.length) console.warn(`build-packs: note: ${list.length} ${rule.replace("_", " ")} note(s), for example: ${list.slice(0, 3).join(" | ")}`);
+}
 if (withoutToolbox.length) console.warn(`build-packs: note: ${withoutToolbox.length} role(s) have no toolbox.json yet, so their toolbox.md is the plain list of the pack's skills: ${withoutToolbox.slice(0, 12).join(", ")}${withoutToolbox.length > 12 ? `, and ${withoutToolbox.length - 12} more` : ""}`);
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);
 console.log(`build-packs: mega kits ready: ${megaKits.size}; mega agents: ${index.filter(p => p.mega).length}`);
+for (const [id, c] of Object.entries(shelfCounts)) console.log(`build-packs: shelves ${id}: ${c.prompts} prompts, ${c.skills} skills, ${c.tools} tools, ${c.minds} minds`);
 for (const [id, b] of verticals) console.log(`build-packs: vertical ${id}: ${b.cards.length} public cards from ${b.sources.length} public sources in ${Object.values(b.index.counts).filter(Boolean).length} modules; ${personas.filter(p => p.vertical === id).length} agents carry it, ${personas.filter(p => !p.vertical && verticalRoles.get(p.role) === id).length} more carry its store kit`);
 // The largest zip of an agent that carries a vertical library or its store kit: packs must stay small enough to download.
 {

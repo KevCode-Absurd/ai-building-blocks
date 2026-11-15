@@ -1,6 +1,6 @@
 ---
 name: cut-where-is-my-order-tickets
-description: "A plan and the ready parts to remove most 'where is my order' tickets: the store's own order-status contact rate, where in the delivery path buyers get anxious, a tracking page on the store's domain, four proactive order messages (confirmed, shipped, out for delivery, delivered) with exact wording for email, SMS and WhatsApp, an order-status FAQ block, and the fulfilment fixes that messages cannot hide. Includes India COD and pincode delivery notes and US delay-notice rules, with a free path using Shopify's own notifications. Use when order status is the top ticket reason, contacts per order are rising, or the store is changing carrier or 3PL."
+description: "A plan and the ready parts to remove most 'where is my order' tickets: the store's own order-status contact rate, where in the delivery path buyers get anxious, a tracking page on the store's domain, four proactive order messages (confirmed, shipped, out for delivery, delivered) with exact wording for email, SMS and WhatsApp, an order-status FAQ block, and the fulfilment fixes that messages cannot hide. Includes failed-delivery, pay-on-delivery and postcode-level delivery notes, US delay-notice rules and UK and EU delivery rules, with a free path using Shopify's own notifications. Use when order status is the top ticket reason, contacts per order are rising, or the store is changing carrier or 3PL."
 ---
 
 # Cut where-is-my-order tickets
@@ -27,7 +27,7 @@ Required (read access, level 1):
 
 1. **Ticket export, last 90 days**, with reason tags, created time and order number.
 2. **Shopify order export**: Name, Created at, Fulfilled at, Shipping Method, Shipping Province or Zip, Payment Method, Tags.
-3. **Carrier or aggregator tracking export**: order number, pickup scan, in-transit scans, out-for-delivery, delivered, exceptions (NDR in India).
+3. **Carrier or aggregator tracking export**: order number, pickup scan, in-transit scans, out-for-delivery, delivered, exceptions (failed delivery attempts).
 4. **Current notifications**: Shopify notification templates in use, any SMS or WhatsApp order messages, the tracking link sent today.
 5. **Delivery promise** shown on product page and checkout.
 
@@ -90,16 +90,17 @@ Channels: email for all four; SMS or WhatsApp for shipped and out for delivery, 
 
 ### 5. Write the order-status FAQ block
 
-Six to eight answers, each two sentences, used on the tracking page, in order emails and in the help centre: when does my order ship; why is tracking not moving; can I change my address; it says delivered but I do not have it; can I get it faster; what if I am not home; (India) can I pay cash at the door; (India) the courier did not call. Answers must match the policies and carrier rules exactly.
+Six to eight answers, each two sentences, used on the tracking page, in order emails and in the help centre: when does my order ship; why is tracking not moving; can I change my address; it says delivered but I do not have it; can I get it faster; what if I am not home; (pay on delivery stores) can I pay at the door; the courier did not come or call. Answers must match the policies and carrier rules exactly.
 
 ### 6. Fix what messages cannot
 
 List each fulfilment issue found in step 2 with an owner: late pickups, lanes with long silent gaps, a carrier with high failed-delivery rates. Vet the 3PL on error rate and peak throughput [OPS-0008]. Send carrier problems to `compare-shipping-carriers`.
 
-### 7. India and US notes
+### 7. Notes by market
 
-- **India:** COD buyers get a call or WhatsApp from the courier; the out-for-delivery message says to keep cash or UPI ready and gives the courier's contact if the aggregator shares it. Failed delivery (NDR) gets its own message asking the buyer to confirm address or a new date within 24 hours, since each failed attempt raises return-to-origin risk; send RTO work to `cut-rto-on-cod-orders`. Add pincode-level expected dates if lanes differ a lot. Offer messages in the buyer's language where the store supports it.
+- **Failed deliveries and pay on delivery:** a failed delivery attempt gets its own message asking the buyer to confirm the address or a new date within 24 hours, since each failed attempt raises the chance the parcel goes back to the store; send that work to `cut-rto-on-cod-orders`. Where buyers pay on delivery, the out-for-delivery message says to have payment ready and gives the courier's contact if the carrier shares it. Add postcode or region-level expected dates if lanes differ a lot. Offer messages in the languages your buyers use.
 - **US:** if an order will miss the stated ship date, the FTC mail order rule expects a delay notice with the option to cancel and a prompt refund (general practice, not a legal ruling); hand those messages to `delay-and-stockout-customer-messages`.
+- **UK and EU:** the seller is responsible for the parcel until the buyer has it, so lost parcels and "delivered but not received" are the store's to solve with the carrier; with no agreed date, delivery is due within 30 days.
 
 ### 8. Measure
 
@@ -145,4 +146,10 @@ Record WISMO rate for 4 weeks before and 4 weeks after launch, on similar order 
 - OPS-0008: vet a 3PL on error rate and peak throughput.
 - OPS-0015: picked-on-time standard in the 3PL agreement.
 
-What makes this skill ours: tickets are bucketed by the last tracking scan to find the exact anxious moment; the shipped message waits for the first real scan; fulfilment problems are fixed before messages hide them; and India gets COD, NDR and pincode-level handling.
+What makes this skill ours: tickets are bucketed by the last tracking scan to find the exact anxious moment; the shipped message waits for the first real scan; fulfilment problems are fixed before messages hide them; and failed deliveries, pay on delivery and postcode-level dates get their own handling.
+
+## Selling in India
+
+- COD buyers get a call or WhatsApp from the courier; the out-for-delivery message says to keep cash or UPI ready.
+- A failed delivery (NDR) gets its own message within 24 hours, since each failed attempt raises RTO risk.
+- Add pincode-level expected dates where lanes differ a lot, and FAQ answers for "can I pay cash at the door" and "the courier did not call".

@@ -80,6 +80,8 @@ Set the bands once and keep them for a year so trends mean something. A starting
 
 Weighted total out of 100. Band: green 80 or more, amber 60 to 79, red under 60.
 
+Keep the inspection record beside the score. Under the Z1.4 switching rules (the same tables as ISO 2859-1), 2 rejected lots out of 5 in a row move a supplier to tightened inspection, 5 straight passes return it to normal, and 10 straight passes can allow reduced inspection (`aql-sampling-plan-and-inspection-calls`). A supplier under 90% on time in full is on probation whatever its total.
+
 ### 3. Put a money figure on the misses
 
 Scores rank; money decides. For each supplier, add up:
@@ -90,6 +92,8 @@ Scores rank; money decides. For each supplier, add up:
 
 Poor returns also cost future orders: 71% of consumers in a 2025 survey said a bad return makes them less likely to buy again [CXP-0007]. Note it; do not add a made-up figure for it.
 
+Sort quality money into the four cost of quality buckets so the supplier review shows where it leaks: prevention (specs, golden samples, planning), appraisal (inspections, audits), internal failure (rework and scrap before delivery) and external failure (returns, complaints and refunds after delivery). External failure is the dearest; money spent on prevention and appraisal should push it down.
+
 ### 4. Decide the action per band
 
 - **Green:** share the forecast early, ask for better terms on the next order (float is payment terms minus lead time [FIN-0005]), and keep them as first choice.
@@ -98,9 +102,15 @@ Poor returns also cost future orders: 71% of consumers in a 2025 survey said a b
 
 For any sole supplier, whatever its band, plan a second source and check the contract has continued-supply and most-favoured-customer terms [COG-0013]. Moving to another country is a lead time against cost decision; model the extra stock and cash a longer lead time needs before deciding [COG-0004].
 
+Where two suppliers make the same product, split volume by score rather than evenly: the top supplier about 70% and the second about 30% is a common pattern, so the backup stays warm and both have a reason to improve.
+
+Watch these early warning signs between scorecards, and start the backup plan when two appear: reply times creeping up, the usual contact leaving, sudden asks for bigger deposits or new bank details, quotes far below the market (often a sign of cash trouble), a big new customer taking the factory's capacity, or repeated small changes to materials or packing.
+
 ### 5. Share the score
 
 Send each supplier its own scorecard (not others' names or numbers). Factories that know the buyer measures them and has alternatives tend to keep price and quality honest [COG-0003]. Praise the green measures as well as naming the weak one.
+
+For the one or two suppliers that matter most, hold a short quarterly review on a call: the scorecard, the next two quarters' forecast, open corrective actions, cost-down ideas with how any saving is shared, capacity for peak season, and holiday plans (Chinese New Year usually costs 2 to 4 weeks, so agree mid-December order dates). Write the actions down with owners and dates and send them after the call.
 
 ### 6. Feed other plans
 
@@ -108,10 +118,10 @@ Send each supplier its own scorecard (not others' names or numbers). Factories t
 - Price drift and landed cost go to `calculate-landed-cost-per-unit` and `monthly-store-pnl`.
 - Red suppliers' products go to `rank-products-to-push-or-cut` if no backup exists.
 
-### India and US notes
+### Tax paperwork and import notes
 
-- **India:** add a paperwork line under response: correct GST tax invoices, matching GSTIN, e-way bills with goods. Invoices that do not reach the GST returns block the store's input tax credit, which is a real cost; record it under cost.
-- **US imports:** track customs holds and documentation errors under delivery; a single missing document can strand stock in peak season.
+- **Tax paperwork:** add a paperwork line under response: correct VAT or sales tax invoices with the right tax numbers, and the transport papers the goods need. Where the store reclaims tax paid to suppliers (VAT in the UK and EU, goods and services tax in Australia and elsewhere), a wrong or missing invoice blocks that reclaim, which is a real cost; record it under cost.
+- **Imports:** track customs holds and documentation errors under delivery (wrong codes, missing origin papers, unpaid duties); a single missing document can strand stock in peak season.
 
 ## Checks before you hand it over
 
@@ -121,6 +131,8 @@ Send each supplier its own scorecard (not others' names or numbers). Factories t
 - Money figures use gross profit per unit, not revenue.
 - Bands and weights are the same as last quarter, or the change is stated.
 - Every amber and red supplier has an action, owner and date.
+- Two-supplier products show the volume split and the reason.
+- Any early warning signs seen this quarter are listed with the response.
 - No supplier was dropped or volume moved without the client's yes.
 
 ## Output
@@ -147,6 +159,8 @@ Send each supplier its own scorecard (not others' names or numbers). Factories t
 - **Dropping a red supplier overnight.** Step 4 moves volume after a backup passes a real lot.
 - **Changing the bands each quarter.** Step 2 keeps them fixed for a year.
 - **Keeping the score private.** Step 5 shares it so the supplier can fix it.
+- **Waiting for the quarter to spot trouble.** Step 4 lists warning signs to act on between scorecards.
+- **Splitting volume evenly.** Step 4 splits by score.
 
 ## Sources
 
@@ -158,5 +172,15 @@ Send each supplier its own scorecard (not others' names or numbers). Factories t
 - FIN-0005: float is payment terms minus lead time.
 - OPS-0014: forecast from in-stock days.
 - OPS-0022: missing a retailer's order can end the relationship.
+- IndustryWeek, Supplier Scorecards: Choose These Metrics: https://www.industryweek.com/supply-chain/supplier-scorecards-choose-these-metrics-improve-your-partners-performance
+- QualityInspection.org, Setting up a Supplier Evaluation System that Works in China: https://qualityinspection.org/supplier-evaluation-system/
+- SQC Online, Switching Rules (MIL-STD-105E, Z1.4): https://www.sqconline.com/switching-rules-mil-std-105e-z14
+- ASQ, What is Cost of Quality (COQ)?: https://www.asq.org/quality-resources/cost-of-quality
+- QualityInspection.org, When a Chinese Factory Quote Is Too Low: https://qualityinspection.org/when-a-chinese-factory-quote-is-too-low-the-hidden-risks-for-buyers/
+- QualityInspection.org, Chinese New Year: how to manage the disruption: https://qualityinspection.org/chinese-new-year-production-planning/
 
-What makes this skill ours: supplier misses are priced in gross profit lost, not just scored; quality is measured on product-fault returns tied back to the lot; India's GST paperwork counts as a cost when it blocks input credit; and a red supplier is never dropped before a backup passes a real batch.
+What makes this skill ours: supplier misses are priced in gross profit lost, not just scored; quality is measured on product-fault returns tied back to the lot; tax paperwork counts as a cost when it blocks a tax reclaim; and a red supplier is never dropped before a backup passes a real batch.
+
+## Selling in India
+
+- Check GST tax invoices carry a matching GSTIN and that e-way bills travel with the goods. Invoices missing from the supplier's GST returns block input tax credit; record that under cost.

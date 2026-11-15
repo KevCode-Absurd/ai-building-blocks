@@ -1,6 +1,6 @@
 ---
 name: full-funnel-30-day-plan
-description: "Plan one month of ads and email so new, warm and ready-to-buy shoppers each get the right message, all month, not one stage per week, with past winners relaunched first: a Day 1 to Day 30 calendar of ad creative and emails by stage, SMS or WhatsApp sends, one offer timeline, and a budget split worked out from the store's own gross profit per purchase, cash, stock, audience sizes and past results instead of a fixed percentage. Existing-customer ad spend is set in money from audience size, cost per thousand and frequency; testing spend from target cost per purchase; email volume from revenue band and list health. Platform-neutral, with India payment and delivery notes. Use at the start of each month or before a sale."
+description: "Plan one month of ads and email so new, warm and ready-to-buy shoppers each get the right message, all month, not one stage per week, with past winners relaunched first: a Day 1 to Day 30 calendar of ad creative and emails by stage, SMS or WhatsApp sends, one offer timeline, and a budget split worked out from the store's own gross profit per purchase, cash, stock, audience sizes and past results instead of a fixed percentage. Existing-customer ad spend is set in money from audience size, cost per thousand and frequency; testing spend from target cost per purchase; email volume from revenue band and list health. Platform-neutral, with notes for pay-on-delivery markets, failed deliveries and local payment methods. Use at the start of each month or before a sale."
 ---
 
 # 30-day plan across ads and email
@@ -102,12 +102,12 @@ One offer at a time across ads, email and site; ads name the offer the page show
 
 Four weeks, every stage live every week, in relative days (Day 1 to Day 30) unless the brief gives dates. Each row: day, channel, stage, asset, product, offer, audience or segment, budget or send size, who does it, status. Put the moves that earn most for the least work (relaunching a winner, fixing a missing flow) in week 1.
 
-### 7. India and similar markets
+### 7. Pay-on-delivery and chat-app markets
 
-- Gross profit per purchase uses delivered orders; subtract return-to-origin losses on cash-on-delivery orders, at the store's own RTO rate (by pin code band where the data has it).
-- Nudge prepaid and UPI in email and WhatsApp to cut cash-on-delivery share; confirm cash-on-delivery orders by WhatsApp before dispatch.
+- Gross profit per purchase uses delivered orders; subtract failed-delivery losses on pay-on-delivery orders, at the store's own failed-delivery rate (by postcode band where the data has it).
+- Nudge prepaid and local payment methods in email and chat messages to cut the pay-on-delivery share; confirm pay-on-delivery orders by WhatsApp or SMS before dispatch.
 - Automated WhatsApp journeys report far higher click rates than broadcasts [EML-0048]; opted-in contacts only.
-- Plan around the buyer's festive dates; GST-compliant invoices with every order.
+- Plan around the buyer's own peak seasons (Black Friday and Cyber Monday, holidays, local festivals); send a correct VAT or sales tax invoice with every order where the law asks for one.
 
 ### 8. Set the weekly read and the adjust rules
 
@@ -180,4 +180,10 @@ Follow the house rule "Write for a busy owner."
 - [EML-0048]: WhatsApp journeys out-click broadcasts.
 - [EML-0056]: attributed email revenue overstates impact.
 
-What makes this skill ours: the budget split is computed line by line from gross profit, cash, stock, audience sizes and frequency; every stage runs every week with matched ads and emails; flows are checked before campaigns; one offer timeline binds ads, email and site; and India notes cover cash on delivery, return to origin and WhatsApp.
+What makes this skill ours: the budget split is computed line by line from gross profit, cash, stock, audience sizes and frequency; every stage runs every week with matched ads and emails; flows are checked before campaigns; one offer timeline binds ads, email and site; and market notes cover pay on delivery, failed deliveries and WhatsApp.
+
+## Selling in India
+
+- Subtract RTO losses on COD orders at the store's own RTO rate, by pin code band where the data has it.
+- Nudge prepaid and UPI in email and WhatsApp to cut COD share; confirm COD orders by WhatsApp before dispatch.
+- Plan around festive dates such as Diwali, and send a GST-compliant invoice with every order.

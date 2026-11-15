@@ -85,7 +85,7 @@ Write at a simple reading level in full, flowing sentences, with comparisons clo
 
 ### 6. Check the seams
 
-Read the draft and mark every sentence where the story stops and the pitch starts. Each is a likely exit point [LPG-0012]. Rewrite each inside the story: instead of "Our tiffin has a silicone seal," write "So I made the lid with a silicone seal, the kind used in pressure cookers."
+Read the draft and mark every sentence where the story stops and the pitch starts. Each is a likely exit point [LPG-0012]. Rewrite each inside the story: instead of "Our lunch box has a silicone seal," write "So I made the lid with a silicone seal, the kind used in pressure cookers."
 
 ### 7. Hold the claims
 
@@ -95,9 +95,10 @@ Every product claim in the story is either proven or a personal experience the n
 
 40 to 80 words from the same story: the opening line, the turn in one sentence, the product in one sentence, the call to action. It runs as its own ad and as the test against the long one.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** a Hinglish or regional version goes through `write-ad-copy-in-indian-languages`; prices include GST; name COD only if live. Ads must not mislead by omission [ADC-6146].
+- **UK, EU and Australia:** prices include VAT or the local sales tax; name pay later or any payment offer only if live. Ads must not mislead by leaving out facts a buyer needs, under UK CAP Code and CMA rules and EU unfair practice rules.
+- **Other languages:** a version in another language your buyers use is written or checked by a native speaker, not machine translated alone.
 - **US:** a customer story paid for with free product or money needs that relationship disclosed [MCR-6021].
 
 ### 10. Plan the read
@@ -160,7 +161,11 @@ Run long and short in the same ad set, same image, same audience. Judge on store
 - ADC-0001: match the lead to how aware the market is.
 - ADC-0039: judge a concept after about 3x target cost per purchase.
 - MCR-6021: real, disclosed testimonials only (US).
-- ADC-6146: no misleading omissions (India).
 - MEA-0037: margin from delivered cost.
 
 What makes this skill ours: the story must be true, sourced beat by beat and consented before a word is written; the story type is chosen by what actually stops the buyer; every seam where story turns to pitch is found and rewritten; and the long ad ships with a short twin and a matched short page so the test can tell whether length helped.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. A Hinglish or regional version goes through `write-ad-copy-in-indian-languages`; prices include GST; name COD only if live. Ads must not mislead by omission [ADC-6146].
+- ADC-6146: no misleading omissions (India).

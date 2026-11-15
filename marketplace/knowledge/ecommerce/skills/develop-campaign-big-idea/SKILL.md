@@ -40,7 +40,7 @@ If buyer words are missing, stop and gather them; an idea with no buyer truth in
 1. **Profit line.** Gross profit per purchase known for the campaign's products. Fail: the idea can be written but no offer or budget can be set.
 2. **Stock and capacity.** Featured products have stock for the window; the team can make every asset on the rollout sheet. Fail: cut channels before cutting quality.
 3. **Truth.** The idea's core line rests on a provable fact or real buyer words. Fail: replace it.
-4. **List rules.** Email, SMS and WhatsApp go only to people who opted in; WhatsApp business-started messages in India use approved templates.
+4. **List rules.** Email, SMS and WhatsApp go only to people who opted in; WhatsApp business-started messages use approved templates in every market.
 
 ## Steps
 
@@ -84,9 +84,9 @@ The idea works only if every touch speaks to the same buyer: creative, copy, pho
 - **Email:** the idea as the subject theme for the window, inside a normal rhythm of about 3 to 4 campaigns a week at most [EML-0063]; plan via `plan-monthly-email-calendar`.
 - **SMS:** only for the launch, the offer and its end, about once a week at most [EML-0025].
 - **Social posts:** the idea as a series, with each strong post remade in new formats [ORG-0026]; calendar via `plan-30-day-instagram-calendar`.
-- **WhatsApp (India):** one approved template for the launch and one for the deadline, in the buyer's language.
+- **WhatsApp (where buyers use it):** one approved template for the launch and one for the deadline, in the buyer's language.
 
-India note: write Hindi or regional versions as their own lines, not translations; show prices with GST and say COD if offered. US note: check SMS consent and quiet hours.
+Language note: write each language version as its own lines, not translations; show prices the way each market expects (tax included in the UK, EU and Australia) and mention pay on delivery only if offered. US note: check SMS consent and quiet hours.
 
 ### 7. Build the rollout sheet
 
@@ -142,4 +142,10 @@ Date every asset from the window backwards: briefs 3 weeks before, assets 1 week
 - ORG-0026: remake strong posts in new formats.
 - MCR-6023 (proposed): Meta personal attributes policy.
 
-What makes this skill ours: the idea is built from the store's own buyer words, provable facts and the habit it opposes, then has to pass a stretch test of ten executions before anyone designs; one line, one visual device and one proof are fixed and carried through ads, page, email, SMS, social and WhatsApp; channel volumes stay inside the store's normal rhythm and opt-ins; and the campaign is judged on store gross profit, with Indian language versions written as their own lines.
+What makes this skill ours: the idea is built from the store's own buyer words, provable facts and the habit it opposes, then has to pass a stretch test of ten executions before anyone designs; one line, one visual device and one proof are fixed and carried through ads, page, email, SMS, social and WhatsApp; channel volumes stay inside the store's normal rhythm and opt-ins; and the campaign is judged on store gross profit, with each language version written as its own lines.
+
+## Selling in India
+
+- Write Hindi or regional versions as their own lines, not translations.
+- Show prices with GST and say COD if offered.
+- WhatsApp is often the strongest channel; use one approved template for the launch and one for the deadline.

@@ -42,7 +42,7 @@ Access: creators send codes or approve requests in their own app; the store neve
 3. **No fake proof.** No scripted "customer" who is not one, and no AI person passed off as a buyer [MCR-6021]. Fail: drop the post.
 4. **Disclosure is switched on.** Paid or gifted posts carry TikTok's content disclosure setting on the post itself. Fail: ask the creator to switch it on before authorizing.
 5. **Claims are allowed.** Health, before-and-after and comparison lines pass `check-ad-copy-for-policy-and-claims`. Fail: pick another post.
-6. **Market.** TikTok is blocked in India; India stores use Spark Ads only for buyers abroad, and follow disclosure rules in that buyer's country.
+6. **Market.** TikTok is blocked in a few countries; stores based there use Spark Ads only for buyers abroad, and every store follows the disclosure rules in its buyer's country (for example the FTC in the US, the ASA in the UK).
 
 ## Steps
 

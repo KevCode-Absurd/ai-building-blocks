@@ -38,7 +38,7 @@ If specs are missing for many products, run the fact sheet step first and hand t
 ## Before you start: the gates
 
 1. **Facts exist.** For each product type, decide the required facts (step 2). A product missing any required fact is not written; it goes on the flag sheet. No exceptions.
-2. **Claims are allowed.** Category claim rules apply: cosmetics, supplements, food, baby and health products may only carry approved claims; India listings show MRP, net quantity, country of origin and manufacturer or importer details under Legal Metrology rules for packaged goods. Fail: the product waits for the claims sheet.
+2. **Claims are allowed.** Category claim rules apply: cosmetics, supplements, food, baby and health products may only carry approved claims; packaged goods listings show what your market's labelling rules require, such as net quantity, country of origin and maker or importer details (for example FTC and FDA labelling rules in the US, and UK and EU product information and food and cosmetics rules). Fail: the product waits for the claims sheet.
 3. **Scale with care.** Machine-written pages published in bulk can spike then crash in search [AEO-0018], and fully AI-written pages are rare among top-ranked and cited pages [AEO-0033]. Every batch is human-edited and spot-checked before import.
 
 ## Steps
@@ -58,7 +58,7 @@ If specs are missing for many products, run the fact sheet step first and hand t
 6. **Write the batch.** Fill each template only from the fact sheet row. Keep sentences short. Vary the summary's opening by the product's main result so pages are not near-copies. Where one product sells to different buyers, write the summary for the biggest buyer group; angle-specific pages are a separate job [LPG-0064].
 7. **Put text in the page.** Descriptions go into Body (HTML) or metafields rendered in the theme as plain HTML, not loaded by an app script, so search and AI crawlers can read them [AEO-0002].
 8. **Check the batch.** Run three checks: a near-duplicate check (any two descriptions sharing more than about half their sentences get rewritten, practitioner default), a machine-tell scan with `machine-copy-scrubber`, and a fact check of 10% of products (minimum 10) against spec sheets. One fact error in the sample means the whole type is rechecked.
-9. **India and US notes.** India: show prices GST-inclusive in copy that mentions price, keep Legal Metrology declarations in their own block, and add Hindi or regional language descriptions only for products whose buyers write reviews in that language. US: no "Made in USA" or health claims beyond the claims sheet.
+9. **Market notes.** UK, EU and Australia: show prices tax-inclusive in copy that mentions price, keep required declarations in their own block, and add descriptions in another language your buyers use only for products whose buyers write reviews in that language. US: no "Made in USA" or health claims beyond the claims sheet.
 10. **Hand over the import file and flags.** The CSV holds only approved products. The flag sheet lists every held product with the missing fact and who should supply it.
 
 ## Checks before you hand it over
@@ -70,7 +70,7 @@ If specs are missing for many products, run the fact sheet step first and hand t
 - No two descriptions share more than about half their sentences.
 - A 10% fact sample passed against spec sheets.
 - Text renders as HTML in the page, not via script.
-- India listings carry the Legal Metrology block.
+- Listings carry the declarations block your market's labelling rules require.
 
 ## Output
 
@@ -114,3 +114,7 @@ If specs are missing for many products, run the fact sheet step first and hand t
 - AEO-0002: script-loaded text is invisible to many AI crawlers.
 
 What makes this skill ours: each description is filled only from a fact sheet row, so missing facts become a flag list instead of invented copy; templates are set per product type with word budgets; a 10-product pilot locks the voice before the batch; and duplicate, machine-tell and fact checks run before anything is imported.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Listings show MRP, net quantity, country of origin and manufacturer or importer details under Legal Metrology rules for packaged goods; keep these declarations in their own block. Show prices GST-inclusive in copy that mentions price. Add Hindi or regional language descriptions only for products whose buyers write reviews in that language.

@@ -38,7 +38,7 @@ Access: the owner authorises the ad account for the shop and adds payment; the a
 ## Before you start: the gates
 
 1. **Profit per product is known** from the settlement report, not from the list price. Product margin is not gross margin once fees, shipping and allowances are taken out [MEA-0023] [MEA-0037]. Fail: build the table in step 1 first.
-2. **The shop is eligible.** GMV Max and TikTok Shop are open only in some countries and TikTok is blocked in India. Fail: no Shop ads; use the store's website channels.
+2. **The shop is eligible.** GMV Max and TikTok Shop are open only in some countries, and TikTok itself is blocked in a few. Check the current list for the shop's country. Fail: no Shop ads; use the store's website channels.
 3. **Videos exist.** GMV Max runs on the shop's own and affiliate videos that tag the product. Fail: fewer than about 5 usable videos per product means seed or brief creators first (`tiktok-shop-creator-affiliate-outreach`).
 4. **Stock covers a spike.** Fail: leave out any product with less stock than its lead time [ADC-0023].
 5. **Claims are allowed.** Health, beauty and supplement claims in affiliate videos follow TikTok Shop rules and advertising law. Fail: exclude that video.

@@ -91,8 +91,8 @@ Rank fixes by: gross profit per order of the products in affected questions x nu
 
 ### 7. Market notes
 
-- **India:** run the panel with India as location and include Hinglish and regional-language questions where the store sells in them; marketplace pages (Amazon.in, Flipkart) are often the cited source for Indian buying questions, so check how the store's own listings are described there.
-- **US:** check that review platforms cited for the store show current ratings and responses.
+- **Each country:** run the panel with each country the store sells in as location, and include questions in the languages your buyers use. Marketplace pages (Amazon, Walmart, Etsy, Zalando, bol, Mercado Libre and the local leaders) are often the cited source for buying questions, so check how the store's own listings are described there.
+- **Reviews:** check that review platforms cited for the store (Trustpilot, Google reviews, local review sites) show current ratings and responses.
 
 ### 8. Paid trackers (optional)
 
@@ -146,3 +146,8 @@ If the client uses one, read it alongside the manual panel, not instead of it. C
 - MEA-0045: check the survey against channel spend.
 
 What makes this skill ours: the panel is weighted to the store's highest-profit products and kept fixed so trends mean something; no-search answers are discounted; mention share is joined to purchases, gross profit and survey answers, not clicks alone; and every finding leaves the report as a fix handed to a named skill.
+
+## Selling in India
+
+- Set the panel location to India and add Hinglish and regional-language questions where the store sells in them.
+- Amazon.in and Flipkart pages are often the cited source for Indian buying questions; check how the store's listings read there.

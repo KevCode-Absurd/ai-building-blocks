@@ -1,0 +1,262 @@
+{
+  "id": "organic-social",
+  "kind": "recurring",
+  "name": "Weekly organic social and community",
+  "goal": "Each week: a content calendar built from what we learned and the Org context, every post written and signed off by you as one week's pack, scheduled through the platform's own tools or your scheduler (with the manual steps listed for you), community replies drafted for you to send, and a readout that feeds next week.",
+  "starts_from": "The weekly cycle on a fixed day (for example Thursday for the following week), once you post at least once a week on Instagram, Facebook, TikTok or Pinterest.",
+  "folder": "social",
+  "metrics": [
+    "Main number: the one you set in context/goals.json for social (for most stores, link clicks to the store or orders from social, read in the shop's own data).",
+    "Post numbers: shares, saves, sends, non-follower reach and link taps per post, by pillar and format. Likes alone are not judged.",
+    "Community: share of comments and messages answered within your target time, and complaints handed to customer care the same day.",
+    "Shop: orders from TikTok Shop videos, where the shop is live."
+  ],
+  "stages": [
+    {
+      "id": "last-week",
+      "name": "Read last week and what we know",
+      "agent": "tomas-social-community",
+      "access": "read",
+      "gate": "none",
+      "say": "Reads last week's posts on each platform: shares, saves, sends, non-follower reach, link taps and comment themes, from the platforms' insights, your scheduler's analytics, or the screenshots and exports you send. It reads the Org context and context/learnings.md, so next week builds on what worked and drops what did not. Account warnings or a sudden reach drop go to the top.",
+      "needs": [
+        "context/org-context/ (customers, voice, design, claims, do's and don'ts)",
+        "context/goals.json",
+        "context/learnings.md",
+        "last week's readout (results/week-readout.md from the last job)",
+        "post insights for the last 7 days (connector, scheduler analytics or your export)"
+      ],
+      "makes": [
+        "last-week.md"
+      ],
+      "checks": [
+        "insights-review"
+      ],
+      "done_when": "last-week.md ranks last week's posts by shares, saves, sends and link taps, names the best and worst with a reason, and lists the comment themes and any account warning."
+    },
+    {
+      "id": "calendar",
+      "name": "Next week's calendar",
+      "agent": "tomas-social-community",
+      "access": "draft",
+      "gate": "none",
+      "say": "Fills next week's slots from the monthly plan: platform, day and time, pillar, format, the one idea, the hook, and the offer or product if any. Each slot traces to a lesson, a customer question, a product moment or a date in the calendar. It leaves the TikTok Shop slots for the shop manager.",
+      "needs": [
+        "last-week.md",
+        "context/learnings.md",
+        "context/org-context/ customers and pillars",
+        "the monthly social plan, stock and offer dates"
+      ],
+      "makes": [
+        "calendar.md"
+      ],
+      "checks": [
+        "calendar-review"
+      ],
+      "done_when": "calendar.md has every slot for the week with platform, time, pillar, format, idea and the reason it is there."
+    },
+    {
+      "id": "tiktok-shop",
+      "name": "TikTok Shop videos",
+      "agent": "ploy-tiktok-shop",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the week's shoppable video briefs for TikTok Shop, building on the formats that sold last week: the hook, the product moment, the price and offer from the approved plan, and the product link to add. It runs the claims, price and disclosure check on every script and caption. Shop listings and product links on videos are set in TikTok Shop's own tools, so it lists those steps for you.",
+      "needs": [
+        "calendar.md",
+        "last week's TikTok Shop results (Seller Center export)",
+        "context/org-context/ claims",
+        "the approved price and offer plan"
+      ],
+      "makes": [
+        "tiktok-shop.md"
+      ],
+      "checks": [
+        "claims-check"
+      ],
+      "done_when": "tiktok-shop.md has a brief for each TikTok Shop slot with hook, product, price, offer, disclosure line and the manual steps for the product link."
+    },
+    {
+      "id": "drafts",
+      "name": "Write the posts",
+      "agent": "tomas-social-community",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes each post in full for its platform: first line, caption, slide copy, alt text, hashtags only where they help, the ask, video script with on-screen text, and the disclosure for anything paid, gifted, affiliated or made with AI. It names the image or clip for each post, using your real photos and footage. Facts to confirm are marked.",
+      "needs": [
+        "calendar.md",
+        "tiktok-shop.md",
+        "context/org-context/ voice, design and claims",
+        "your photo and video library"
+      ],
+      "makes": [
+        "posts.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "readability",
+        "copy-review",
+        "disclosure-review"
+      ],
+      "done_when": "posts.md has every slot written in full with its asset, alt text, disclosure and facts marked with proof."
+    },
+    {
+      "id": "week-pack",
+      "name": "Week pack for your sign-off",
+      "agent": "tomas-social-community",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts the whole week on one page: each post with its platform, date and time, asset, caption and disclosure, and which route it goes out by. Where there is no official route, or a setting must be switched on in the app (for example a paid partnership label, or music from the platform's library), it says so and lists the steps you click.",
+      "needs": [
+        "posts.md",
+        "tiktok-shop.md",
+        "calendar.md"
+      ],
+      "makes": [
+        "week-pack.md",
+        "manual-steps.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You read the week's posts. Reply yes with the code to sign off the week as written, or say which posts to change. Nothing is scheduled before this yes.",
+      "done_when": "week-pack.md shows every post with platform, time, asset, caption, disclosure and route, and manual-steps.md lists each step only you can do."
+    },
+    {
+      "id": "schedule",
+      "name": "Schedule the week",
+      "agent": "tomas-social-community",
+      "access": "publish",
+      "gate": "none",
+      "say": "Shows you the schedule plan: one scheduled post per approved slot, through your connected scheduler (for example Buffer's connector) or the platform's own API where your app has access, never post now. Facebook Page posts can be scheduled 10 minutes to 30 days ahead. Instagram's API has no schedule field, so Instagram goes through the scheduler or you schedule it in Meta Business Suite. TikTok posts from an app that has not passed TikTok's audit stay private, so those go to your TikTok inbox as drafts for you to post. Pinterest goes through the scheduler or Pinterest's own scheduler. On your yes it schedules exactly the approved posts and reads each back.",
+      "needs": [
+        "week-pack.md (signed off)",
+        "a scheduler or platform connector at level 3 (see access/social-platforms.md)"
+      ],
+      "makes": [
+        "schedule-record.md"
+      ],
+      "publish": "Through your scheduler's connector or the platform's own API: the approved posts scheduled for their approved times, or saved as drafts where a platform keeps that step for you. Nothing is posted outside the signed-off week.",
+      "done_when": "Every approved post reads back as scheduled for its time or is on the manual list, and schedule-record.md lists each post id, platform and time."
+    },
+    {
+      "id": "replies",
+      "name": "Community replies, drafted",
+      "agent": "tomas-social-community",
+      "access": "draft",
+      "gate": "none",
+      "say": "Each day of the week, reads new comments and messages (a scheduled run may do this, because it only reads and drafts) and writes a reply table: routine questions answered from the approved fact sheet, holds with a reason, and spam to hide. Complaints, refunds, delivery problems, safety, legal and press questions go to customer care or you the same day, with a draft. Replies are never sent by the agent; you send them, or approve the exact list in the next stage.",
+      "needs": [
+        "schedule-record.md",
+        "the approved fact sheet in context/org-context/",
+        "new comments and messages (connector read access, or what you paste)"
+      ],
+      "makes": [
+        "replies.md"
+      ],
+      "checks": [
+        "reply-review"
+      ],
+      "done_when": "replies.md covers every day of the week, each comment or message has a draft, a hold reason or a hand-off, and every hand-off to customer care has a time."
+    },
+    {
+      "id": "send-replies",
+      "name": "Send the replies you approved",
+      "agent": "tomas-social-community",
+      "access": "publish",
+      "optional": true,
+      "gate": "none",
+      "say": "If you would rather not paste replies yourself, shows you a plan with each exact reply and where it goes. On your yes it posts only those, where the platform's official API allows it (Instagram and Facebook comment replies), and reads each back. Instagram messages can only be answered within 24 hours of the customer's last message. TikTok and Pinterest replies stay with you.",
+      "needs": [
+        "replies.md",
+        "Instagram or Facebook connector with comment access at level 3"
+      ],
+      "makes": [
+        "replies-sent.md"
+      ],
+      "publish": "Through the Instagram or Facebook Pages API: the exact approved replies to named comments, or hiding the spam you approved. Never deletes a comment.",
+      "done_when": "Each approved reply ran once and reads back as posted, and replies-sent.md lists comment ids, replies and times."
+    },
+    {
+      "id": "week-readout",
+      "name": "Weekly readout",
+      "agent": "tomas-social-community",
+      "access": "read",
+      "gate": "none",
+      "wait_days": 1,
+      "say": "The day after the posting week ends and the reply log closes, reads every post from the week against the slot's idea: shares, saves, sends, non-follower reach and link taps, and clicks and orders in the shop's own data for the same dates. It writes one dated lesson to context/learnings.md for the next calendar, marked as a hunch when the numbers are small.",
+      "needs": [
+        "schedule-record.md",
+        "post insights for the week",
+        "warehouse view shop_orders_daily or the shop's referral report",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "results/week-readout.md",
+        "numbers.json"
+      ],
+      "checks": [
+        "numbers-check",
+        "learning-review"
+      ],
+      "done_when": "week-readout.md gives each post's numbers with dates, the best and worst with a reason, one lesson with its confidence, and the same lesson appended to context/learnings.md."
+    }
+  ],
+  "checks": {
+    "insights-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "every number comes from a named source and date range, and the best and worst posts are ranked by shares, saves, sends and link taps, not likes"
+    },
+    "calendar-review": {
+      "kind": "reviewer",
+      "agent": "kemal-creative-director",
+      "passes_when": "each slot has one idea that fits the platform, the mix follows the monthly plan, and every slot traces to a lesson, a customer question or a real date"
+    },
+    "claims-check": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "every claim is proven, prices and offers match the approved plan, and disclosure lines and TikTok's disclosure setting are present where needed"
+    },
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/posts.md",
+      "passes_when": "the copy checker exits 0"
+    },
+    "readability": {
+      "kind": "script",
+      "run": "node tools/quality/readability.cjs <folder>/posts.md --audience consumer",
+      "passes_when": "the readability checker exits 0 for a consumer audience"
+    },
+    "copy-review": {
+      "kind": "reviewer",
+      "agent": "howard-copy-chief",
+      "passes_when": "the first line earns the next, each post has one idea and one ask, and the voice matches the Org context"
+    },
+    "disclosure-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "anything paid, gifted, affiliated or made with AI carries a clear label and the platform setting is listed, and no claim goes beyond the proof"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every post in the pack has platform, time, asset, caption, disclosure and route, and every manual step is listed"
+    },
+    "reply-review": {
+      "kind": "reviewer",
+      "agent": "darlene-support-lead",
+      "passes_when": "replies match the fact sheet and store policy, nothing promises a refund or fix, and every complaint or risky item is handed to customer care or the owner"
+    },
+    "numbers-check": {
+      "kind": "script",
+      "run": "node tools/quality/numbers.cjs <folder>/numbers.json --final <folder>/results/week-readout.md",
+      "passes_when": "every rate and total in the readout recomputes from the figures pulled from the platforms and the shop"
+    },
+    "learning-review": {
+      "kind": "reviewer",
+      "agent": "pilar-creators",
+      "passes_when": "the lesson is supported by its evidence, its confidence fits the numbers, and the next calendar could use it"
+    }
+  }
+}

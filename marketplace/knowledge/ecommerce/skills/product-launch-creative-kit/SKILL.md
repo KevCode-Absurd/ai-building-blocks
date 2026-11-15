@@ -28,7 +28,7 @@ Required:
 1. **Launch facts**: product, launch date, price, launch offer and its real end date, stock arriving and its date, restock lead time.
 2. **Gross profit per purchase and target cost per purchase** for the new product (`store-meta-math`), built from the supplier quote and shipping costs.
 3. **The claims sheet** with proof files (`product-claims-profile`); samples or prototypes for filming.
-4. **Audiences the store owns**: email and SMS list size, WhatsApp opted-in list (India), Instagram followers, past buyers.
+4. **Audiences the store owns**: email and SMS list size, WhatsApp opted-in list (where buyers use it), Instagram followers, past buyers.
 5. **Ad budget for the launch window**, signed off.
 
 Optional: early tester feedback (with permission), creators who have used the product, the angle table from `mine-ad-angles-from-reviews` for related products.
@@ -50,7 +50,7 @@ Two to three weeks out, run 3 to 5 angles as plain product images with one bold 
 
 ### 2. Teaser stage (14 to 1 days before)
 
-Job: build a waitlist, not sales. Concepts: the problem the product fixes, the "why now" if a real trend exists [MCR-0004], behind the scenes of making it, the founder's reason. Show enough to explain, keep the full reveal for launch day. Audience: owned lists, followers, past buyers and engaged visitors, plus organic posts. A waitlist with product rewards for referrals, not cash, can make referrals most of the list [ORG-0030]. Track cost per waitlist sign-up. India note: collect WhatsApp opt-ins with clear consent; it is often the strongest launch-day channel.
+Job: build a waitlist, not sales. Concepts: the problem the product fixes, the "why now" if a real trend exists [MCR-0004], behind the scenes of making it, the founder's reason. Show enough to explain, keep the full reveal for launch day. Audience: owned lists, followers, past buyers and engaged visitors, plus organic posts. A waitlist with product rewards for referrals, not cash, can make referrals most of the list [ORG-0030]. Track cost per waitlist sign-up. Where buyers use WhatsApp (much of Europe, Latin America, the Middle East and Asia), collect opt-ins with clear consent; it is often the strongest launch-day channel there.
 
 ### 3. Reveal stage (launch day to day 3)
 
@@ -58,7 +58,7 @@ Job: first sales from the warmest people. Concepts: the product doing its job, t
 
 ### 4. Proof stage (day 3 to day 21)
 
-Job: convince people who need evidence. Swap in proof as it arrives: first real reviews, unboxings by real buyers, demonstrations, creator videos, test results. Until real reviews exist, use demonstrations, specs and the founder; never write or generate reviews. Creators who got free product must be disclosed in the US, and a standout result needs the usual result beside it [MCR-6025]. Every objective claim needs proof before it runs [MCR-6022].
+Job: convince people who need evidence. Swap in proof as it arrives: first real reviews, unboxings by real buyers, demonstrations, creator videos, test results. Until real reviews exist, use demonstrations, specs and the founder; never write or generate reviews. Creators who got free product must be disclosed (FTC in the US, ASA and CMA in the UK, and similar rules in the EU, Canada and Australia), and a standout result needs the usual result beside it [MCR-6025]. Every objective claim needs proof before it runs [MCR-6022].
 
 ### 5. Last-chance stage (final 3 days of the real deadline)
 

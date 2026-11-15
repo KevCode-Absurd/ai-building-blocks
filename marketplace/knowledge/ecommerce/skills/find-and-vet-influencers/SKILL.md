@@ -27,7 +27,7 @@ Required:
 
 1. **Buyer profile:** who buys (age, gender, city tier or state, language, budget) from the Shopify customer export or `store-knowledge-folder`. If missing, pull the last 90 days of orders by shipping state and ask the owner the age and gender split.
 2. **Gross profit per order** for the hero product, from `build-sku-profit-sheet`.
-3. **Market:** India, US or both, and the platforms that matter (Instagram, YouTube, TikTok in the US).
+3. **Market:** the countries the store sells in, and the platforms that matter there (Instagram, YouTube, and TikTok where it is available).
 4. **Budget** for the round: cash for fees plus units for gifting.
 
 Optional: names the team already likes, competitor brands whose creators to study, past creator results (codes, links, survey answers).
@@ -39,7 +39,7 @@ Access: read only (level 1). The agent browses public profiles. Creator insight 
 1. **Profit per order known.** Pass when gross profit per order after product, shipping, fees and returns is on the sheet. Fail: stop and run `build-sku-profit-sheet`. A fee cannot be judged without it [MEA-0037].
 2. **Product ready to demo.** In stock for at least 60 days of expected orders and shows its benefit on camera. Fail: fix stock first; creators cannot sell what is out of stock.
 3. **Claims list exists.** What creators may and may not say (health, results, comparisons). Fail: run `check-ad-copy-for-policy-and-claims` first.
-4. **Category rules.** For health, nutrition or finance products in India, creators who give advice must hold and state relevant qualifications [ORG-6420]. Fail on a creator without them: they may show the product but not advise.
+4. **Category rules.** For health, nutrition or finance products, check your market's rules on who may give advice; some markets require creators who give advice to hold and state relevant qualifications [ORG-6420]. Fail on a creator who lacks what your market requires: they may show the product but not advise.
 
 ## Steps
 
@@ -58,7 +58,7 @@ Free routes first:
 
 Paid discovery tools are optional; they speed up the long list but never replace the checks below.
 
-Tag each by tier (practitioner default): nano under 10,000 followers, micro 10,000 to 100,000, mid 100,000 to 500,000, macro above. New brands get more sales per rupee or dollar from many micro and nano creators than from one big name [ORG-0036].
+Tag each by tier (practitioner default): nano under 10,000 followers, micro 10,000 to 100,000, mid 100,000 to 500,000, macro above. New brands get more sales per dollar, pound or euro from many micro and nano creators than from one big name [ORG-0036].
 
 ### 3. Fit score (cut to 25 to 40)
 
@@ -83,7 +83,7 @@ Do these checks on every name still in. Mark each pass, flag or fail:
 3. **Follower growth.** Sudden jumps with no viral post behind them (visible in free public trackers or the creator's own insights) suggest bought followers. Flag.
 4. **Comment quality.** Generic emoji comments from the same accounts, or comments in a language the creator never uses, are a flag.
 5. **Audience insights.** After the client approves contact, ask each finalist for screenshots of their audience insights (top countries or cities, age, gender) dated within 30 days. No screenshot, no paid deal.
-6. **Disclosure habit.** Look at past sponsored posts. In the US, the relationship should be stated in the post in plain words, not only a platform tool or a vague "collab" [ORG-6405]. In India, one of ASCI's labels must be used and kept on screen long enough [ORG-6406]. A creator who hides past deals will expose the store too.
+6. **Disclosure habit.** Look at past sponsored posts. In the US, the relationship should be stated in the post in plain words, not only a platform tool or a vague "collab" [ORG-6405]. In the UK, the ASA and CMA expect a clear label such as "Ad" at the start. In the EU and elsewhere, use the label your market's ad rules require and keep it on screen long enough. A creator who hides past deals will expose the store too.
 
 Two flags: ask the creator about them. Three or more, or a failed insight check: drop.
 
@@ -97,9 +97,9 @@ Ask finalists (after approval) for proof from past campaigns: code redemptions, 
 2. **Profit cap:** maximum fee = expected orders x gross profit per order. Expected orders = median views / 1,000 x a sales-per-1,000-views rate from your own past creators; with no history, use a cautious planning figure and say it is one.
 3. Suggest the lower of the two. If the creator's quote is above the cap, propose gift plus commission or a floor-or-commission deal instead.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** search regional-language creators for tier 2 and 3 buyers; they are often cheaper and closer to COD buyers. Check that their audience's states are ones you ship to without high return-to-origin rates. Product gifts that creators keep may need TDS under Section 194R [FIN-6423].
+- **All markets:** search creators who speak the languages your buyers use; they are often cheaper and closer to those buyers. Check that their audience lives where you ship, with low failed-delivery and return rates. Ask the accountant whether products creators keep count as taxable income or need reporting by the store.
 - **US:** creators outside the US who reach US buyers still fall under US disclosure rules [ORG-6405]. TikTok creators can also be recruited through TikTok Shop; hand off to `tiktok-shop-creator-affiliate-outreach`.
 
 ## Checks before you hand it over
@@ -154,8 +154,14 @@ Ask finalists (after approval) for proof from past campaigns: code redemptions, 
 - MCR-0046: rank on sales per 1,000 views, not views.
 - ORG-0041: price fees from recent views and cut for off-market audience.
 - ORG-6405: FTC disclosure rules for influencers.
-- ORG-6406: ASCI labels and on-screen durations.
-- ORG-6420: ASCI health and finance influencer qualifications.
-- FIN-6423: India TDS on products creators keep.
 
-What makes this skill ours: every fee is capped by the store's own gross profit per order, not a rate card; the audience check uses median views and dated insight screenshots instead of follower counts; past disclosure habits are a pass or fail; and India buyers are matched by language and by states the store can deliver to without high RTO.
+What makes this skill ours: every fee is capped by the store's own gross profit per order, not a rate card; the audience check uses median views and dated insight screenshots instead of follower counts; past disclosure habits are a pass or fail; and buyers are matched by language and by regions the store can deliver to with low failed-delivery and return rates.
+
+## Selling in India
+
+- One of ASCI's labels must be used and kept on screen long enough [ORG-6406].
+- Creators who give health, nutrition or finance advice must hold and state relevant qualifications [ORG-6420].
+- Search regional-language creators for tier 2 and 3 buyers; they are often cheaper and closer to COD buyers. Check that their audience's states are ones you ship to without high RTO rates.
+- Product gifts that creators keep may need TDS under Section 194R [FIN-6423].
+
+Sources: ORG-6406 (ASCI labels and on-screen durations); ORG-6420 (ASCI health and finance influencer qualifications); FIN-6423 (India TDS on products creators keep).

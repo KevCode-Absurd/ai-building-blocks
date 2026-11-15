@@ -956,5 +956,283 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "AVT-0026",
+    "modules": [
+      "AVT",
+      "OPS"
+    ],
+    "topics": [
+      "AI research",
+      "LLM prompts",
+      "voice of customer"
+    ],
+    "claim": "Asking an LLM what objections buyers might have returns generic averages; use it only to retrieve real quotes with links, never to invent customer language.",
+    "body": "Blue Sense asked ChatGPT for objections to a hair thinning supplement and got the predictable list: will it work for me, where is the proof, how long will it take, side effects. Any model gives the same average, so ads built on it sound like everyone else. The fix is to treat the model as a search tool. Prompt it to find public posts, reviews and threads, pull exact quotes, and return the link for each so you can check it. Then add your own reviews, tickets and call transcripts. How to apply it: in your research prompt, say retrieve, do not generate; require a source URL per quote; reject any line without one. For volume, batch one large research pass, then organise quotes by persona and angle so the whole team writes from the same bank.",
+    "conditions": "Teams using ChatGPT, Claude or similar for ad research.",
+    "fails_when": "The model has no browsing or file access, so it can only answer from training data; then it cannot do this job.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Can I use ChatGPT to research my customers?",
+      "How do I prompt AI for customer objections?",
+      "Why does AI ad copy sound generic?",
+      "How do I build a customer quote bank?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6615",
+    "evidence": {
+      "where": "[35:37] ChatGPT objection test; [36:28] retrieve, do not invent, with hyperlinks"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0027",
+    "modules": [
+      "AVT",
+      "MCR",
+      "OPS"
+    ],
+    "topics": [
+      "review mining",
+      "call transcripts",
+      "objections"
+    ],
+    "claim": "Mine 2 to 4 star reviews for objections, and search cleaned call transcripts for phrases like I nearly didn't to find the last thing that almost stopped a purchase.",
+    "body": "Five star reviews mostly praise. Middle reviews come from people who think the product is fine but have doubts, and those doubts are the reasons others never buy. Use them two ways: feed product fixes back to the team, and write the doubt, in the reviewer's words, into the objection beat of the script. Blue Sense adds that using the objection without fixing the product is just deceiving buyers. For calls: transcribe them, have a model clean up the transcript so the words and sentences are correct (raw transcripts mishear accents and garble terms), then make the set searchable. Ask the model to find spots where customers say they nearly didn't buy or explain why they waited. Clean source text gives much better search results than raw transcripts.",
+    "conditions": "Brands with a review base and some recorded sales, support or customer interview calls.",
+    "fails_when": "Very few mid-star reviews or no recorded calls; then use return reasons and forum complaints instead.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2 to 4 star reviews"
+    ],
+    "asks": [
+      "How do I find my customers' real objections?",
+      "What should I do with my 3 star reviews?",
+      "How do I use customer call recordings for ads?",
+      "How do I search interview transcripts with AI?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6615",
+    "evidence": {
+      "where": "[27:00] 2 to 4 star reviews hold objections; [28:02] clean and search call transcripts for I nearly didn't"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0028",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "customer research sources",
+      "research by yield and effort",
+      "voice of customer"
+    ],
+    "claim": "Rank research sources by yield and effort: call recordings (high, high), support tickets and returns (high, very low), reviews (high, lowest), post-purchase surveys (medium, low), forums and Reddit (medium to low, medium).",
+    "body": "Each source gives something the others cannot. Customer calls reveal the final objection that nearly stopped the purchase. Support tickets and return reasons show the failure modes: where the product disappoints, in the customer's own heated words. Reviews give you the exact words buyers use to describe the product. Post-purchase surveys capture what got the person over the line at checkout, but they need to stay multiple choice because submit rates drop sharply with open text, and the buyer has not used the product yet, so the data is shallower. Reddit, Facebook groups and forums give the language of people who have not bought, plus what they hate about competitors. How to apply it: if you can only do some, start from the top of the list by yield; a startup with no customers has to start from forums and work up as orders arrive. Tickets can be piped into an LLM and a Slack channel at almost no effort.",
+    "conditions": "Any brand writing ads or pages; the order assumes you already have customers.",
+    "fails_when": "Pre-launch brands with no customers, where only forums, competitor reviews and Reddit are available.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 research sources ranked by yield and effort",
+      "post-purchase surveys: multiple choice to keep submit rates up"
+    ],
+    "asks": [
+      "Where do I find customer language for my ads?",
+      "Which customer research should I do first?",
+      "Are post-purchase surveys worth it?",
+      "How do I research my customers with no budget?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6615",
+    "evidence": {
+      "where": "[22:26] research sources table, yield, effort and what each one uniquely gives"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0029",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "target persona",
+      "age targeting",
+      "proof type"
+    ],
+    "claim": "Fast Meta-first DTC brands nearly always sell to men or women over 40, where spending power sits; launching to 20 or 30 year olds makes paid scaling harder.",
+    "body": "Blue Sense's observation across Smooch, Hostage Tape and Resilia is that the core buyer is always 40 plus. Smooch sells to women over 40 who want to look younger, which Blue Sense calls about the best persona you could sell to because so much consumer spend sits there. Hostage Tape targets men in that range and Resilia older health-minded buyers. Younger buyers have less to spend and more choice, which makes paid acquisition costlier. How to apply: if you are launching or choosing which segment to lead with on Meta, check whether a 40 plus group has the problem your product solves and the money to pay. Look at your Shopify and Meta breakdowns by age to see where revenue per buyer and ROAS are highest; many brands find their best buyers are older than the audience they make ads for. Cast creators and write hooks for that group, using cultural cues from their era (as Smooch does with 90s brow trends).",
+    "conditions": "Choosing a launch segment or lead persona for a Meta-first brand in beauty, health, wellness and similar categories.",
+    "fails_when": "Products made for younger buyers (student, fashion trends, gaming), or categories where a younger segment has proven higher value in your own data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Core persona age: 40 plus"
+    ],
+    "asks": [
+      "What age group should I target with Facebook ads?",
+      "Are older customers better for DTC brands?",
+      "Who should my first product be for?",
+      "Why do so many brands target women over 40?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6622",
+    "evidence": {
+      "where": "[17:40] women over 40 persona; [49:38] playbook: persona 40 plus"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0030",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "persona definition",
+      "persona specificity"
+    ],
+    "claim": "Define a persona as a problem, a desire and a buying trigger, with enough detail to picture one person, not a broad label like agency owners.",
+    "body": "Blue Sense's test of a real persona: it carries a pain, a desire and a buying trigger, with proof attached. A label such as agency owners is not a persona. A usable one is an agency owner at about $60,000 a month whose delivery still runs through them and who has not had a clear week off in two years. The same applies in e-commerce: not women who run, but a specific runner with a specific injury, routine and worry. Once the persona is this specific, scripts improve almost by themselves, because the writer can feel who the viewer is and speak to their day. Specific personas also change messaging sharply: the same offer for a $150,000 a month agency needs different words than for a $40,000 one. How to apply: for each persona, write one line each for the problem, the desire, the trigger that made them buy now, and the proof they need. Use these lines directly in the hook, problem and objection sections of scripts.",
+    "conditions": "Any brand writing ad scripts, emails or landing pages for defined buyer types.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "example persona: agency owner at about $60,000 per month, no week off in 2 years"
+    ],
+    "asks": [
+      "How do I write a customer persona for ads?",
+      "What makes a good buyer persona?",
+      "Why are my ad scripts so generic?",
+      "How specific should my target customer be?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6625",
+    "evidence": {
+      "where": "[08:20] a persona is a problem, a desire and a buying trigger"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0031",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "persona research process",
+      "AI enrichment"
+    ],
+    "claim": "Write 20 personas by hand from your last 20 real buyers first, then let AI expand them, and cut back to the five best.",
+    "body": "Blue Sense's order for building personas puts people before AI. Step one, by hand with pen and paper, takes an hour or two: look at the last 20 people who bought, and for each one note what they do, what they care about, why they came, what problem they had and which angle actually landed. Use whatever records you have: order notes, reviews, post-purchase survey answers, support chats, and sales call recordings where they exist. Step two: give those personas to an AI model and ask it to expand them with more detail and ideas. Step three: cut. The AI output will include plenty that does not match your real buyers, so keep only the five strongest personas. Reason for the order: AI tends to return the average, so starting from it gives the same personas your competitors get; starting from real buyers anchors it in your actual market. How to apply: schedule the manual session, store the 20 profiles and the final five in your org context, and brief new concepts from the five.",
+    "conditions": "Brands with recent buyers they can study through orders, reviews, surveys or calls.",
+    "fails_when": "A pre-launch brand with no buyers yet, which must start from competitor reviews and forums instead; or very high volume brands that should also use survey data at scale.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "20 personas from the last 20 buyers",
+      "cut to the 5 best after AI expansion",
+      "about 1 to 2 hours by hand"
+    ],
+    "asks": [
+      "How do I research my customer personas?",
+      "Can I use AI to create buyer personas?",
+      "How many personas should I have?",
+      "Where do I find information about my customers?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6625",
+    "evidence": {
+      "where": "[08:58] build personas manually first; [31:12] write 20 personas from real buyers"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0032",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "personas",
+      "AI in creative",
+      "ideation"
+    ],
+    "claim": "Expand personas with an LLM only after writing 30 to 40 good ones by hand: give full context, take its 20 ideas, keep the best 4 or 5, then feed those back for 10 to 20 more.",
+    "body": "Language models return the average answer. Ask one for personas from your website and a few examples and you get the same list every competitor gets, which leads to the same ads. The work that creates an edge is the manual list: who has bought, what problem each one had, and how their pain, words and proof needs differ. Spend real thought on it before touching a model. Once you have a strong base, load the model with everything you know about the business, product and buyers, ask for 20 more, cut hard to the 4 or 5 that feel real and new, and ask again using only those as the pattern. This roughly doubles a good list without letting it drift back to the mean. Keep a human creative strategist as the final judge of which personas get briefed into production.",
+    "conditions": "Teams using ChatGPT, Claude or Gemini in creative planning.",
+    "fails_when": "When the manual list is thin or generic, the model only amplifies the weakness; it cannot replace customer research such as reviews, surveys and support chats.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30 to 40 manual personas first",
+      "20 generated, keep 4 to 5, then ask for 10 to 20 more"
+    ],
+    "asks": [
+      "Can ChatGPT write my customer personas?",
+      "How do I use AI for ad ideas without getting generic ones?",
+      "How many personas should we have?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6637",
+    "evidence": {
+      "where": "[29:39] using LLMs to expand persona lists"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
   }
 ]

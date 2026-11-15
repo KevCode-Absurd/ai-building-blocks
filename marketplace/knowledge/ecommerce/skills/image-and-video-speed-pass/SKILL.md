@@ -60,6 +60,18 @@ For each image slot (hero, collection card, product main image, thumbnails, cont
 - **Set width and height** (or aspect ratio) on every image so the layout does not jump.
 - **Slideshows:** only the first slide loads eagerly; a static hero usually beats a slider for speed.
 
+### 2b. Fix the first-screen image (when it is the LCP element)
+
+Run this when lab diagnostics name an image as the LCP element and LCP is over 2.5 seconds. If the LCP element is text, or the server response is over about 0.8 seconds, image work will not fix it alone: say so and hand the rest to `shopify-speed-audit-and-fix-list`.
+
+1. **One eager image per template.** The hero, the first slide, the logo and the first product image are never lazy. Set `loading="eager"` and `fetchpriority="high"` on the single LCP image; lazy-load everything below the fold. Making extra images eager slows the real one and wastes mobile data.
+2. **Loops pick the first item in Liquid.** In a slider or product grid, wrap the loading and fetch priority attributes in a test on `forloop.first` (or `forloop.index == 1`), so only the first item is eager and the rest are lazy, whatever the owner adds later.
+3. **Remove entrance effects on that image.** Fade-in, slide-in and placeholder loaders make the browser wait for an effects script before it shows the picture.
+4. **Preload it.** Add one preload link in the theme head per template, written in Liquid so it picks the right file: the product's featured image on product templates, the section's image setting on the home page. One preload per template, never a list.
+5. **Gallery scripts.** If a gallery plugin needs JavaScript before the first image appears, the LCP is late even when the file arrived early. Render the first image as plain HTML and let the gallery start after.
+6. **Serve fitted sizes.** Use the theme's image filters with widths or a srcset, never the master file.
+7. **Test it slow.** Throttle to slow 4G with the cache off, then run PageSpeed three times and take the median. Check that below-the-fold images still lazy-load and that the gallery, add to cart and checkout still work.
+
 ### 3. Write the media rules sheet
 
 | Item | Rule |
@@ -99,9 +111,9 @@ Set image width requests and srcset per slot, eager loading and high priority fo
 
 On a real phone, compare old and new for 10 products and the hero: colour, sharpness at 2x pinch-zoom, texture detail (fabric, finish), and any banding in gradients. If a product type (jewellery, textiles, art) loses detail, raise its quality setting or size for that type only and note the exception in the rules sheet.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** many buyers browse on slow mobile data and smaller screens; serve mobile-specific hero crops and keep product pages under about 2 MB total (practitioner default). Avoid autoplay video entirely on mobile.
+- **Mobile-first markets (much of Asia, Africa and Latin America):** many buyers browse on slow mobile data and smaller screens; serve mobile-specific hero crops and keep product pages under about 2 MB total (practitioner default). Avoid autoplay video entirely on mobile.
 - **US:** larger screens and fast connections hide the problem on desktop; judge on mobile field data, since the target is LCP 2.5 seconds or less at the 75th percentile on mobile and desktop separately [SPD-6183].
 
 ## Checks before you hand it over
@@ -113,6 +125,8 @@ On a real phone, compare old and new for 10 products and the hero: colour, sharp
 - Re-exports come from masters, not recompressed web copies.
 - Before and after page weight and lab LCP are shown per template.
 - The side-by-side phone quality check passed, with exceptions noted.
+- Each template has exactly one eager, high-priority image and one preload line, and slider loops make only the first item eager.
+- No fade-in or loader effect remains on any LCP image.
 - No live media or theme change without the client's yes.
 
 ## Output

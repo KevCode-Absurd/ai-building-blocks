@@ -2194,5 +2194,212 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "ORG-6423",
+    "modules": [
+      "ORG",
+      "OFF"
+    ],
+    "topics": [
+      "creator affiliate codes",
+      "commission structure"
+    ],
+    "claim": "Gorilla Mind's creator program is simple: large influencers get a 20% commission on new customers' orders and their followers get 10% off with the creator's code.",
+    "body": "Alongside paid ads, Gorilla Mind runs a creator engine that is different from commission-heavy TikTok Shop programs. Blue Sense found a plain structure: well-known fitness creators with large followings each have a personal code; the creator earns 20% commission on a new customer's order and the customer receives 10% off. Paying commission only on new customers stops creators earning on buyers who would have reordered anyway, and the 10% discount is modest enough to protect margin. The total cost is 30% of the first order (20% commission plus 10% discount), which a high-margin, repeat-purchase product like supplements can afford when lifetime value is strong. How to apply: if you run affiliate codes, price the program as an acquisition cost. Work out the first-order cost (commission plus discount plus shipping and product cost) and check it against your target new-customer cost and expected repeat rate. Limit commission to first orders, track redemptions by code in Shopify, and use the best creators' content in paid ads as well.",
+    "conditions": "Consumable, high-margin products with repeat purchase, where a 30% first-order cost can be recovered over later orders.",
+    "fails_when": "Gross margin is thin or repeat rate is low, so 30% of the first order cannot be earned back; or codes leak to coupon sites and get used by existing customers.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "creator commission 20% of new customer order",
+      "customer discount 10% with code"
+    ],
+    "asks": [
+      "How much commission should I pay influencers?",
+      "How do I set up an affiliate code program?",
+      "Should creators earn on repeat orders?",
+      "What discount should an influencer code give?"
+    ],
+    "platforms": [
+      "shopify",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[14:07] creator engine and code structure"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-6424",
+    "modules": [
+      "ORG",
+      "ADC"
+    ],
+    "topics": [
+      "founder-led audience limits",
+      "organic to paid transition"
+    ],
+    "claim": "Track views on each product launch video as a sign of organic reach fading: Gorilla Mind's launches fell from about 500,000 views to 300,000, 170,000 and then 100,000 before the brand moved weight to paid and retail.",
+    "body": "Gorilla Mind was built on its founder's large YouTube channel, which explained every ingredient dose in long launch videos. Blue Sense traced the launch videos: the first big launch in 2020 got about half a million views, the energy drink about 300,000, Gorilla Mode 2.0 about 170,000 and Rush about 100,000. Long-form uploads fell from 41 between June and December 2024 to just 6 in the year from March 2025 to February 2026, and the founder had not posted on Instagram in about six months. He has described creator-led growth as a treadmill with diminishing returns and named retail as the next leg. Blue Sense's read: a founder audience can launch a brand, but scaling to nine figures needs paid media, retail and wider distribution, and time spent on the business eventually returns more than time spent on content. How to apply: if your sales lean on your own audience, log views, clicks and day-one sales for each launch. If each launch reaches fewer people, start building paid acquisition and other channels before the audience stalls, not after.",
+    "conditions": "Founder-led or creator-led brands where launches rely on the founder's own channel or following.",
+    "fails_when": "The founder's channel is still growing quickly, or launch views fall for reasons like a weaker product or platform algorithm changes, not audience fatigue.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "launch video views: about 500,000, 300,000, 170,000, 100,000",
+      "long-form uploads: 41 (Jun to Dec 2024) to 6 (Mar 2025 to Feb 2026)",
+      "revenue about $6 to $8 million per month in 2023"
+    ],
+    "asks": [
+      "Can I keep growing my brand off my own audience?",
+      "When should a creator brand start running paid ads?",
+      "My product launches are getting fewer views, what does it mean?",
+      "How did Gorilla Mind grow beyond Derek's YouTube?"
+    ],
+    "platforms": [
+      "youtube",
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6605",
+    "evidence": {
+      "where": "[09:09] declining launch views and upload volume"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-6425",
+    "modules": [
+      "ORG",
+      "EML",
+      "ADC"
+    ],
+    "topics": [
+      "renting versus owning demand",
+      "organic reach",
+      "new customer acquisition"
+    ],
+    "claim": "Owned channels (email, SMS, community, brand) mostly drive returning revenue; new customers are almost always rented, and even 50,000 followers rarely see a post, so do not try to quit paid.",
+    "body": "Email agencies often say rising CPMs prove paid is broken and you should own your audience instead. Blue Sense agrees owned channels are worth building, but says they sit almost entirely on the returning-customer side: you first have to acquire a customer, and only then do you own the data to market to them again. New customer acquisition is nearly always some form of renting attention. Even organic content and a founder's personal brand are not truly owned: the presenter has about 50,000 followers, and posts rarely reach 50,000 views, so getting something in front of that audience still means effort or paid amplification on the platform. How to apply: invest in email, SMS, community and brand to lift LTGP, and invest in paid to win new customers; judge each on its own side of the LTGP to CAC ratio. Be wary of any plan that relies on cutting paid acquisition to grow.",
+    "conditions": "DTC brands weighing paid acquisition against owned channels or organic content.",
+    "fails_when": "Brands with a large, highly engaged creator or community audience that reliably brings new buyers through word of mouth, where organic does drive meaningful acquisition.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 50,000 followers, posts rarely reach 50,000 views"
+    ],
+    "asks": [
+      "Should I stop paying for ads and focus on email?",
+      "Can organic social replace paid ads?",
+      "What does owning your audience mean?",
+      "Do I always need paid ads to grow?"
+    ],
+    "platforms": [
+      "meta",
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6620",
+    "evidence": {
+      "where": "about [11:48] renting versus owning demand"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-6426",
+    "modules": [
+      "ORG",
+      "BRD"
+    ],
+    "topics": [
+      "community building",
+      "ambassador programs",
+      "influencer strategy"
+    ],
+    "claim": "Gymshark grew through ambassadors and community rather than paid reads, showing up at creators, events, pop-ups and ads alike; but this style is costly and Gymshark runs single-digit net margin.",
+    "body": "Community differs from paying influencers because it ties the brand to a buyer's identity, and identity is built by appearing everywhere that person spends time. Gymshark did not buy ad reads with discount codes; it signed creators as full ambassadors, so the creator's announcement felt like a milestone and viewers wanted to join the same identity. The brand then showed up at expos and events, ran pop-ups in places it wanted to be linked with, and echoed the same message in retargeting ads. The result was revenue near $1 billion (AUD). The warning Blue Sense adds: Gymshark's net margin is single digit, partly because this approach is expensive and fails if you back the wrong people or events, alongside wider gross margin issues. How to apply: choose a small number of creators who fit your identity and sign them as long-term ambassadors rather than one-off reads. Appear at the events and places your buyer goes. Track the cost of the full program against contribution margin, not just reach or revenue.",
+    "conditions": "Identity-led categories (fitness, sport, lifestyle) with an engaged creator scene and budget for long-term relationships.",
+    "fails_when": "Small brands who need direct returns from each dollar now; categories without a community or identity to join; picking creators or events that do not match the buyer.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Gymshark revenue close to $1B in AUD",
+      "Single-digit net margin"
+    ],
+    "asks": [
+      "Should I pay influencers for ad reads or ambassadorships?",
+      "How did Gymshark grow?",
+      "Is community building worth it for my brand?",
+      "How do I build a brand identity customers want to be part of?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6622",
+    "evidence": {
+      "where": "[04:30] Gymshark community versus influencer reads; [06:46] margin"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-6427",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "organic content",
+      "founder-led content",
+      "retention graphs"
+    ],
+    "claim": "Small founders should post organic short-form content daily before or alongside paid, because learning what holds attention (retention graphs, shares, saves) is what makes their paid ads good.",
+    "body": "Blue Sense's view for 2026 and 2027 is that content-first brands have an edge, not because organic outsells paid but because daily posting forces the founder to learn creative fast. Every post returns a retention graph and share and save rates for free, which show whether hooks land and where people drop off. Those lessons carry straight into ads, and winning organic posts can become ads directly. How to apply: post one short video a day, review the retention graphs weekly, note which hooks and topics hold viewers past three and fifteen seconds, and repost your best performers, since repeated winners usually reach new people. Reuse the same scripts and structures in your first paid tests. This fits the wider advice that below about $30,000 a month in spend, the founder should be making the content.",
+    "conditions": "Founder-led brands at an early stage, roughly under $30,000 a month in ad spend.",
+    "fails_when": "Founders who cannot be on camera or post consistently; categories where organic reach is very limited.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "post daily",
+      "check hold past 3 and 15 seconds"
+    ],
+    "asks": [
+      "Should we do organic content before running ads?",
+      "Does posting on Instagram help our ads?",
+      "How do I get better at making ads?"
+    ],
+    "platforms": [
+      "meta",
+      "instagram",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6637",
+    "evidence": {
+      "where": "about [133:49] content-first brands"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
   }
 ]

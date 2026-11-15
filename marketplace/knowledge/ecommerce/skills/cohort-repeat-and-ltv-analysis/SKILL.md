@@ -29,14 +29,14 @@ Required, read access (level 1):
 2. **Gross profit per order or per SKU** from `build-sku-profit-sheet` or `store-meta-math`. Without it, the tables show revenue only and no CAC target is set.
 3. **First channel per order**, best source first: Shopify's sales by marketing attribution report joined on order number; a GA4 exploration of transaction_id with session source and medium; the post-purchase survey answer (`post-purchase-how-did-you-hear-survey`); the discount code if codes are channel-specific.
 
-Optional: RTO list from the courier (India), subscription flag, wholesale and marketplace order tags.
+Optional: failed-delivery or returned-to-sender list from the courier, subscription flag, wholesale and marketplace order tags.
 
 If the export is shorter than 15 months, build 90 and 180-day tables only and say 365 waits. No step writes to any tool, so no approval is needed; customer data stays inside the job and leaves only as counts.
 
 ## Before you start: the gates
 
-1. **Identity.** Pass when at least 95% of orders carry an email or a phone that can be matched. In India, phone is often the only key: normalise it (strip spaces, leading 0 and +91) before matching. Fail: say the repeat rate is a floor, because unmatched repeat buyers count as new.
-2. **Real purchases only.** Cancelled, voided, test, RTO and fully refunded orders are not purchases. Remove them before finding each customer's first order, or a refused COD parcel becomes a "first order".
+1. **Identity.** Pass when at least 95% of orders carry an email or a phone that can be matched. Where guest checkout by phone is common, phone is often the only key: normalise it to one international format (strip spaces and the leading 0, add the country code) before matching. Fail: say the repeat rate is a floor, because unmatched repeat buyers count as new.
+2. **Real purchases only.** Cancelled, voided, test, undelivered (returned to sender) and fully refunded orders are not purchases. Remove them before finding each customer's first order, or a refused pay-on-delivery parcel becomes a "first order".
 3. **Maturity.** A cohort is read at day N only when N days plus the return window have passed since its last first order. Rank on customers acquired at least 12 months ago for 365-day value [MEA-0048]. Immature cells stay blank, never estimated in the main table.
 4. **Gross profit known.** Pass when per-order gross profit exists. Fail: deliver the revenue tables and block any CAC target, per the rule that nothing is ranked before gross profit per purchase is known.
 
@@ -44,7 +44,7 @@ If the export is shorter than 15 months, build 90 and 180-day tables only and sa
 
 ### 1. Build the customer table
 
-One row per customer: first order date, first order number, first product (the highest-value line on the first order), first channel, first discount code, first payment method (COD or prepaid), province. Exclude wholesale and marketplace orders; they are different buyers.
+One row per customer: first order date, first order number, first product (the highest-value line on the first order), first channel, first discount code, first payment method (card, wallet, buy now pay later, or pay on delivery where offered), country and province or state. Exclude wholesale and marketplace orders; they are different buyers.
 
 ### 2. Tag every later order
 
@@ -68,7 +68,7 @@ Repeat the 90, 180 and 365 metrics grouped by first product (top 10 by customers
 Add two cuts the owner rarely sees:
 
 - **First discount code.** At many brands, buyers won on deep discounts had markedly worse lifetime value [CXP-0016].
-- **COD versus prepaid first order** (India). Report both repeat rate and value; prepaid first-timers often behave differently and that changes how hard to push prepaid.
+- **First payment method.** Report repeat rate and value by how the first order was paid (card, wallet, buy now pay later, pay on delivery). Buyers who paid up front often behave differently, and that changes how hard to push one method over another.
 
 ### 5. Check against known patterns
 
@@ -98,7 +98,7 @@ Choose one, with the number that justifies it:
 
 ## Checks before you hand it over
 
-- RTO, cancelled and fully refunded orders are excluded before first orders are set.
+- Undelivered, cancelled and fully refunded orders are excluded before first orders are set.
 - No immature cell is filled; blanks are labelled "not yet".
 - Value is shown in gross profit as well as revenue.
 - Shopify's returning customer rate appears nowhere as a repeat rate.
@@ -124,14 +124,14 @@ Choose one, with the number that justifies it:
 
 **3. Cohort by first product** and **4. by first channel**: same columns plus First-order GP, Lift 180d, Affordable CAC, Current CAC, Ratio band.
 
-**5. Cuts tab:** discount code, COD versus prepaid, province (top 10).
+**5. Cuts tab:** discount code, first payment method, country and province or state (top 10).
 
 **6. Method tab:** exclusions, merge rules, identity key, maturity rule, data dates.
 
 ## Common mistakes
 
 - **Shopify's returning customer rate as repeat rate.** It moves with acquisition; step 3 builds the real one.
-- **RTO orders as first purchases.** They inflate new customers and sink repeat rate; gate 2 removes them.
+- **Undelivered orders as first purchases.** They inflate new customers and sink repeat rate; gate 2 removes them.
 - **Reading young cohorts.** A March cohort cannot have a 365-day value in June; gate 3 leaves it blank.
 - **Revenue LTV for CAC targets.** A cheap first product with high repeat can earn less profit than it looks; step 6 uses gross profit.
 - **One store-wide LTV.** It hides that one first product or channel carries the value; step 4 splits it.
@@ -151,4 +151,10 @@ Choose one, with the number that justifies it:
 - CXP-0016: deep-discount cohorts had worse lifetime value.
 - EML-0053: under about 10 to 20 million a year, first-to-second order is the constraint.
 
-What makes this skill ours: RTO and refused COD orders are removed before anyone becomes a "customer"; phone numbers are normalised as the identity key for Indian guest checkouts; immature cells stay blank instead of being projected; and every lifetime value turns into an affordable CAC on gross profit with its window stated.
+What makes this skill ours: undelivered, refused and refunded orders are removed before anyone becomes a "customer"; phone numbers are normalised as the identity key for guest checkouts; immature cells stay blank instead of being projected; and every lifetime value turns into an affordable CAC on gross profit with its window stated.
+
+## Selling in India
+
+- Phone is often the only identity key. Strip spaces, the leading 0 and +91 before matching.
+- Pull the RTO list from the courier and remove RTO and refused COD orders before setting first orders.
+- Cut repeat rate and value by COD versus prepaid first order; prepaid first-timers often behave differently.

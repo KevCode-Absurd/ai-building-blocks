@@ -1,6 +1,6 @@
 ---
 name: review-screenshot-ads
-description: "Builds testimonial and review-screenshot ads only from verified buyer reviews: picks 6 to 10 reviews that each answer one buying objection, records each one's source, order match and permission, lays them out as review cards, screenshot-style ads and review walls, and applies strict edit rules (trim only, never reword, show name, date and source). Covers the US fake-review rule, Indian advertising code, typical-results disclosure and how to ask customers for permission. Use when the store has real reviews and wants proof-led ads, or before reusing a review someone found online."
+description: "Builds testimonial and review-screenshot ads only from verified buyer reviews: picks 6 to 10 reviews that each answer one buying objection, records each one's source, order match and permission, lays them out as review cards, screenshot-style ads and review walls, and applies strict edit rules (trim only, never reword, show name, date and source). Covers the US fake-review rule, UK and EU consumer and advertising rules, typical-results disclosure and how to ask customers for permission. Use when the store has real reviews and wants proof-led ads, or before reusing a review someone found online."
 ---
 
 # Ads made from real reviews
@@ -39,7 +39,7 @@ Read access is enough. Emailing customers for permission is a message to custome
 
 1. **Gross profit per order is known** for the product the ads sell [MEA-0037]. Fail: compute it first; proof ads still need a product worth pushing.
 2. **Every review is real and verifiable.** Pass: it matches an order in the export, or carries the platform's verified-buyer flag. Fail: the review is not used. Fake or AI-made reviews and testimonials, undisclosed staff reviews and suppressing bad ones are banned in the US [MCR-6045].
-3. **Permission is on file** for any review shown with a name, face or photo outside the review widget. Pass: the reviewer agreed in writing (email reply, form tick) or the review app's terms grant marketing use and the store has checked them. In India the ASCI Code asks for permission to refer to a person and for proof on request (Chapter I, point 3). Fail: ask, or use first name and initial with no photo only if the app's terms allow it.
+3. **Permission is on file** for any review shown with a name, face or photo outside the review widget. Pass: the reviewer agreed in writing (email reply, form tick) or the review app's terms grant marketing use and the store has checked them. In the UK and EU, data protection law expects the reviewer's consent before a name or photo is used in ads, and the CAP Code asks that testimonials be genuine and backed by proof on request. Fail: ask, or use first name and initial with no photo only if the app's terms allow it.
 4. **The claim inside the review is allowed.** A review saying "cured my eczema" cannot be used for a cosmetic. Fail: skip that review.
 
 ## Steps
@@ -89,9 +89,9 @@ For each ad: format, review id, the exact trimmed quote, attribution line, star 
 
 Draft a short email or WhatsApp message for the client to send: what review, where it will appear (ads on Meta, Google, site), how long, how the name will show, and an easy yes or no. No discount or gift in exchange for a positive review; any thank-you gift goes to every reviewer whether they agree or not, and is disclosed if the review was given in return for something [MCR-6045]. Record the reply in the log.
 
-### India and US notes
+### Market notes
 
-- **India:** ASCI Code Chapter I asks that claims be truthful and provable on request, and that references to a person have their permission. For health, beauty and food claims, a review cannot make a claim the product is not allowed to make. WhatsApp permission messages go only to customers who opted in to WhatsApp from the store.
+- **UK and EU:** the CAP Code and the EU consumer rules ask that claims be truthful and provable on request, that testimonials be genuine and held on file, and that references to a person have their permission. In every market, for health, beauty and food claims, a review cannot make a claim the product is not allowed to make. WhatsApp permission messages go only to customers who opted in to WhatsApp from the store.
 - **US:** the FTC rule on reviews (16 CFR Part 465) applies to ads, emails and the site [MCR-6045]. Keep the evidence log for as long as the ad runs, and longer.
 
 ## Checks before you hand it over
@@ -141,3 +141,7 @@ Draft a short email or WhatsApp message for the client to send: what review, whe
 - MEA-0037: gross margin is the delivered cost to the door.
 
 What makes this skill ours: each review is matched to a real order and logged with a dated screenshot before design starts; the edit rule is trim-only with meaning kept; standout results need the typical result beside them; and permission is asked without any reward tied to a positive review.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. The ASCI Code (Chapter I, point 3) asks for permission to refer to a person and for proof of claims on request.

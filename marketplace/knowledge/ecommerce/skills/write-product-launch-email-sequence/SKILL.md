@@ -96,10 +96,11 @@ A cultural date the brand can own gives a launch a natural reason to buy now [EM
 - **Last call 2:** plain text from a named person, three or four lines, to non-buyers who clicked during the sequence. If units are close to sold out, give the real count from the stock report that morning.
 - After the end: the price changes, the gift ends, or the pre-order closes as stated. No extension unless announced as a new decision with its reason.
 
-### 7. Texts and India notes
+### 7. Texts and market notes
 
 - One launch text on launch morning and one on the final day to SMS opt-ins; SMS is best kept for launches, sales and restocks [EML-0025]. Write them with `write-sms-and-whatsapp-messages`.
-- **India:** WhatsApp marketing templates for waitlist members who opted in, submitted at least two days ahead; COD availability for the new product stated plainly; festival launch dates checked against courier cut-offs.
+- **Any market:** WhatsApp marketing templates for waitlist members who opted in, submitted at least two days ahead; payment options for the new product stated plainly; launch dates near peak seasons (Black Friday, Christmas, local festivals) checked against courier cut-offs.
+- **UK and EU:** launch emails and texts go only to people who gave consent or, in the UK, past buyers under the soft opt-in.
 - **US:** pre-order ship dates need a reasonable basis; if the date slips, send the delay notice before the promised date [CXP-6160].
 
 ## Checks before you hand it over
@@ -153,3 +154,7 @@ Sources: [stock report date / tester permission / spec sheet]
 - OPS-6282: Shopify pre-order set-up (proposed).
 
 What makes this skill ours: waitlist and VIP customers get time, not deeper discounts; last-call emails exist only when something truly ends and nothing is quietly extended; stock counts, ship dates and tester quotes are checked on the day; and resends go to engaged non-clickers rather than unreliable non-openers.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. WhatsApp marketing templates go to waitlist members who opted in, submitted at least two days ahead; COD availability for the new product is stated plainly; Diwali and other festival launch dates are checked against courier cut-offs.

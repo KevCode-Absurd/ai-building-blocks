@@ -87,7 +87,7 @@ Checklist for the client and their lawyer (this is not legal advice):
 - Trademark use, artwork approvals, and who approves every asset.
 - Customer data: each brand emails only its own list; buyers' details pass to the other brand only with consent.
 - Exclusivity (if any), dates, cancellation, unsold stock.
-- Tax invoices between the brands (GST in India; sales tax handled by the seller of record in the US).
+- Tax invoices between the brands (VAT or goods and services tax invoices where the countries use them; sales tax handled by the seller of record in the US).
 
 ### 6. Plan the drop
 
@@ -105,10 +105,11 @@ Dated plan: proposal agreed, samples, shoot, page draft, ads in review, launch d
 - Contribution from the drop, and 60-day repeat of new buyers.
 - Decide: repeat with this partner, try the next one, or stop.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** check both brands can invoice each other with GST; COD on a limited drop raises RTO risk, so consider prepaid-only for the drop and say so. Festival timing (Diwali, Raksha Bandhan) suits gift bundles.
+- **All markets:** check both brands can invoice each other correctly for tax. If the store offers pay on delivery, a limited drop raises failed-delivery risk, so consider prepaid-only for the drop and say so. Peak season timing (Christmas, Valentine's, local festivals) suits gift bundles.
 - **US:** the seller of record collects sales tax; check product insurance and labelling for any new co-made item.
+- **UK and EU:** both brands must be VAT registered where they sell above the threshold; a co-made item needs the right UKCA or CE marking and a named responsible person in the market.
 
 ## Checks before you hand it over
 
@@ -151,3 +152,9 @@ Dated plan: proposal agreed, samples, shoot, page draft, ads in review, launch d
 - EML-6385: CAN-SPAM for business pitches.
 
 What makes this skill ours: partners are scored on a shared buyer with evidence from the store's own surveys and reviews; the cheapest format comes first so a minimum order never sinks the idea; the money is checked for both brands before the pitch; and new customers from the partner are counted with codes and the survey, so the next collab is chosen on results.
+
+## Selling in India
+
+- Check both brands can invoice each other with GST.
+- COD on a limited drop raises RTO risk; consider prepaid-only and say so.
+- Diwali and Raksha Bandhan suit gift bundles.

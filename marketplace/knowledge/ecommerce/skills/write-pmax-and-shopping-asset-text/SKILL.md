@@ -28,7 +28,7 @@ Required:
 1. **Asset group list** with the listing group (products or product types) each one covers.
 2. **Search terms insight** for the campaign (Insights tab, Search terms or categories) or, for a new campaign, the Search search terms report and Keyword Planner terms for each product type.
 3. **Product facts** per product type: materials, sizes, uses, proof, prices, from `product-claims-profile` if it exists.
-4. **Live offer and policy lines**: delivery times, returns window, payment options (COD, UPI, pay later), current promotion with dates.
+4. **Live offer and policy lines**: delivery times, returns window, payment options (cards, wallets, pay later, local methods, pay on delivery where offered), current promotion with dates.
 5. **Gross profit per order** by product type.
 
 Optional: current asset report with performance labels; image and video list per asset group (text must suit the images it will sit beside).
@@ -58,7 +58,7 @@ Write the choice and reason in the summary. Google's minimum text counts apply t
 
 ### 2. Gather the words per asset group
 
-From search terms for that product type, list the 5 to 10 phrases buyers use: product words ("cotton kurta set"), attribute words ("plus size", "for oily skin"), use words ("for office"), and gift words ("gift for her") if they appear. Google uses this text across many surfaces, so it should name the product type plainly, not only the brand.
+From search terms for that product type, list the 5 to 10 phrases buyers use: product words ("cotton pyjama set"), attribute words ("plus size", "for oily skin"), use words ("for office"), and gift words ("gift for her") if they appear. Google uses this text across many surfaces, so it should name the product type plainly, not only the brand.
 
 ### 3. Write to Google's counts
 
@@ -71,7 +71,7 @@ Google's specs per asset group [GAD-6141]:
 | Descriptions | 90 characters, 2 to 5, 4+ recommended | 5 |
 | Business name | 25 characters, must match the domain or verified business name | 1 |
 
-Spread headlines across jobs: 3 product-type names in buyer words, 3 benefits, 2 proof, 2 offer or risk (delivery, returns, COD), 1 to 2 short call-outs of 15 characters or fewer ("Wide Fit Shoes"), 1 brand line.
+Spread headlines across jobs: 3 product-type names in buyer words, 3 benefits, 2 proof, 2 offer or risk (delivery, returns, payment), 1 to 2 short call-outs of 15 characters or fewer ("Wide Fit Shoes"), 1 brand line.
 
 Long headlines carry a full idea for Display and YouTube placements, where they often show alone: product type plus benefit plus proof, as one sentence.
 
@@ -91,15 +91,15 @@ Business name: exactly the domain or verified name, no promotion ("Store Name Sa
 
 ### 6. Editorial and offer pass
 
-Remove ALL CAPS, repeated phrases across assets, gimmicky punctuation and phone numbers [ADC-6142]. Check each offer line against the live site: delivery promise by region, returns window, COD and prepaid terms in India, tax wording ("incl. GST"). No "was" price unless genuinely charged [OFF-6145].
+Remove ALL CAPS, repeated phrases across assets, gimmicky punctuation and phone numbers [ADC-6142]. Check each offer line against the live site: delivery promise by region, returns window, payment terms, tax wording ("incl. VAT" in the UK and EU, "plus tax" in the US only if the site says so). No "was" price unless genuinely charged [OFF-6145].
 
 ### 7. Fit text to the images
 
 For each asset group, read the image set. If images show the product on white, text can carry the use and benefit. If images show people using it, text can carry proof and offer. Never describe something the images or product do not show.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** name payment ease where true ("COD and UPI available"); for regional targeting, write the business name and product terms in English and add a Hindi or regional language asset group only if the store's site serves that language, handed to `write-ad-copy-in-indian-languages`. Google counts characters the same across languages, with double-width scripts counting 2 [GAD-6141].
+- **Any market:** name payment ease where true ("Pay in 3 with Klarna", "PayPal accepted"); for each language your buyers use, add an asset group in that language only if the store's site serves that language, written or checked by a native speaker. Google counts characters the same across languages, with double-width scripts counting 2 [GAD-6141].
 - **US:** shipping speed and free returns carry weight in Shopping; Google's store quality signals include shipping speed and cost and a 30-day-plus returns window [GAD-0018]. Write those lines only if true.
 
 ### 9. Plan the read
@@ -151,4 +151,8 @@ After 30 days, read asset performance labels and store orders by asset group. Re
 - OFF-6145: a "was" price must be genuine.
 - MEA-0037: margin from delivered cost.
 
-What makes this skill ours: it decides text or feed-only per asset group before writing a word; every line is tested as true for every product in the listing group, not just the hero; payment, GST and delivery lines are checked by region for India; and the text is judged on store gross profit, not Google's own ROAS.
+What makes this skill ours: it decides text or feed-only per asset group before writing a word; every line is tested as true for every product in the listing group, not just the hero; payment, tax and delivery lines are checked for each market and region; and the text is judged on store gross profit, not Google's own ROAS.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Name payment ease where true ("COD and UPI available"); check COD and prepaid terms and "incl. GST" wording against the live site. For regional targeting, write the business name and product terms in English and add a Hindi or regional language asset group only if the store's site serves that language, handed to `write-ad-copy-in-indian-languages`.

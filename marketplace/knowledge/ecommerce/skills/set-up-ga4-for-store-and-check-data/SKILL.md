@@ -1,6 +1,6 @@
 ---
 name: set-up-ga4-for-store-and-check-data
-description: "A GA4 property set up for an online store (settings, ecommerce events, purchase as the key event, channel groups, Google Ads link) and then checked day by day against the store's own orders, with every gap named, sized and given a fix and an owner. Covers Shopify's official Google channel versus a custom pixel, the upgraded thank-you page, transaction ID duplicates, third-party checkouts common in India, and why GA4 conversion rate is wrong until filtered to purchases. Use for a new store, after a theme, checkout or tracking change, or when GA4 and Shopify disagree."
+description: "A GA4 property set up for an online store (settings, ecommerce events, purchase as the key event, channel groups, Google Ads link) and then checked day by day against the store's own orders, with every gap named, sized and given a fix and an owner. Covers Shopify's official Google channel versus a custom pixel, the upgraded thank-you page, transaction ID duplicates, third-party and one-click checkouts, payment redirects, orders taken by chat or phone, and why GA4 conversion rate is wrong until filtered to purchases. Use for a new store, after a theme, checkout or tracking change, or when GA4 and Shopify disagree."
 ---
 
 # GA4 setup and data check for a store
@@ -38,7 +38,7 @@ If GA4 does not exist, create the property only after the client says yes; the c
 1. **Owner access.** The client's own Google account is the property's admin. Fail: stop and have them create or reclaim it; an agency-owned property can be lost.
 2. **One install path.** Find every way GA4 is loaded: the Shopify Google and YouTube channel, a custom pixel, a GTM container, theme code, old checkout scripts. Pass when you know the list. Two paths for the same event double-count page views and add-to-carts.
 3. **Thank-you page state.** Shopify's deadline to upgrade the Thank you and Order status pages was 26 August 2026, after which stores were upgraded automatically and old scripts there must be replaced [MEA-6226]. If purchase tracking lived in old additional scripts, assume it broke on upgrade until the check in step 7 proves otherwise.
-4. **Consent rules.** Name the laws and markets in play (EU or UK consent, US state laws, India's data protection law). This skill does not rule on law; it records which banner the store uses and checks that tags respect it.
+4. **Consent rules.** Name the laws and markets in play (EU or UK consent under GDPR and the ePrivacy rules with Google Consent Mode, US state privacy laws such as California's, Canada's PIPEDA, Australia's Privacy Act, and any other market's data protection law). This skill does not rule on law; it records which banner the store uses and checks that tags respect it.
 
 ## Steps
 
@@ -92,10 +92,10 @@ Then compare revenue per order in GA4 and the store. A gap here with matching co
 
 For each gap: what is missing, how many orders a week, likely cause, fix, owner (store, developer, app vendor), and whether the fix needs level 3. Common causes:
 
-- **Third-party checkout (India).** One-click and COD checkouts that replace Shopify's checkout often send their own purchase event, or none. Ask the vendor how they send GA4 purchases and test one order.
-- **Orders made outside the site.** COD orders confirmed over WhatsApp or phone and entered as draft orders never fire GA4. Report them as their own line, not a tracking failure.
+- **Third-party checkout.** One-click, headless and pay-on-delivery checkouts that replace Shopify's checkout often send their own purchase event, or none. Ask the vendor how they send GA4 purchases and test one order.
+- **Orders made outside the site.** Orders taken over WhatsApp, Instagram, email or phone and entered as draft orders never fire GA4. Report them as their own line, not a tracking failure.
 - **Consent.** Purchases from visitors who declined are missing by design; size the share, do not "fix" it.
-- **Payment redirects** (UPI apps, wallets, buy-now-pay-later) that return to a different domain can start a new session and steal credit; check referral exclusions for the gateway domains.
+- **Payment redirects** (PayPal, Klarna, Afterpay and other buy-now-pay-later, bank-redirect methods such as iDEAL, local payment apps and wallets) that return to a different domain can start a new session and steal credit; check referral exclusions for the gateway domains.
 
 ## Checks before you hand it over
 
@@ -136,7 +136,7 @@ Rows: owner, time zone, currency, retention, internal filter, session timeout, i
 - **Two install paths.** Gate 2 finds them all; step 2 keeps one.
 - **Comparing sessions with Shopify.** Bots differ; step 7 compares purchases.
 - **Chasing 100%.** Blockers and declined consent are expected; step 7 bands the capture rate.
-- **Ignoring third-party and WhatsApp orders.** Step 8 lists them as their own lines.
+- **Ignoring third-party checkout and chat orders.** Step 8 lists them as their own lines.
 - **Default 2-month retention.** Year-on-year explorations come up empty; step 1 sets 14 months.
 
 ## Sources
@@ -156,4 +156,8 @@ Rows: owner, time zone, currency, retention, internal filter, session timeout, i
 - GAD-0042: GA4 events as primary conversion miss about 10 to 15%.
 - AEO-0010: most AI-assistant influence arrives without a referral link.
 
-What makes this skill ours: the check is against store orders by day with banded capture rates instead of a "tags fire" test; third-party Indian checkouts, WhatsApp draft orders and UPI redirects are named as separate gap causes; the post-upgrade thank-you page is treated as broken until proven; and every fix carries its access level and the client's approval.
+What makes this skill ours: the check is against store orders by day with banded capture rates instead of a "tags fire" test; third-party checkouts, chat and phone draft orders and payment redirects are named as separate gap causes; the post-upgrade thank-you page is treated as broken until proven; and every fix carries its access level and the client's approval.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Third-party one-click and COD checkouts are common in India and often send their own GA4 purchase event, or none; test one order through each. COD orders confirmed over WhatsApp or phone and entered as draft orders get their own line. Add UPI app redirects to referral exclusions. Name India's data protection law (DPDP) in the consent gate.

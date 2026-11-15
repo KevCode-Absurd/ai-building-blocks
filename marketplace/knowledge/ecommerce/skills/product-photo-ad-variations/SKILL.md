@@ -70,7 +70,7 @@ On paths B and C, the model never draws text longer than a few words and never d
 - Reviews with a name and source; press logos with the outlet's quote [LPG-0037].
 - Discounts as the bigger number, money saved or percent off [OFF-0017].
 - Each static clear in 3 to 4 seconds or a deliberate curiosity gap pointed at a page that explains [MCR-0024].
-- India: price inclusive of taxes as on the site; a cash-on-delivery badge only where COD is live.
+- Prices exactly as the site shows them (tax included in the UK, EU and Australia; before sales tax in the US); a pay-on-delivery badge only where that option is live.
 
 ### 4. Edit by layer, not by regenerating
 

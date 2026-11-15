@@ -39,7 +39,7 @@ Access: read only. Buying a music licence or subscription is a purchase: the cli
 
 1. **Money.** Gross profit per order is known from delivered costs [MEA-0037]. Paid library fees count as production cost spread over the ads that use them [MCR-0023].
 2. **Licence covers this use.** For every track: the licence names advertising or commercial use, the platform, paid placements, and the term. Fail: replace the track.
-3. **No borrowed fame.** No popular song without a licence from its owners, no sound-alike of a named artist, no "under 30 seconds is fine" assumptions. In India, film and label music trending on Reels still belongs to its label; trending does not mean licensed.
+3. **No borrowed fame.** No popular song without a licence from its owners, no sound-alike of a named artist, no "under 30 seconds is fine" assumptions. Film, chart and label music trending on Reels or TikTok in any market still belongs to its label; trending does not mean licensed.
 4. **Disclosure.** AI-generated music that is the main focus of a realistic video needs disclosure on YouTube [MCR-6064]; background beds generally do not, but check each platform on the day.
 
 ## Steps
@@ -99,10 +99,11 @@ For a creator post running as a partnership or Spark ad, check the sound in the 
 
 One row per track per ad: track title, artist or library, source link, licence type, licence ID or a saved screenshot of the terms, date downloaded, platforms covered, paid use allowed, term or expiry, attribution needed. Keep the file with the ad.
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** many buyers watch with sound on in regional languages; a familiar folk or festive feel can help, but only from a licensed library. Avoid devotional music in sales ads unless the brand and audience fit; it can offend.
+- **Every market:** where buyers watch with sound on in the languages they use, a familiar local or festive feel can help, but only from a licensed library. Avoid religious or devotional music in sales ads unless the brand and audience fit; it can offend.
 - **US:** a copyright claim on a paid ad can stop delivery mid-campaign; the rights log is the fastest way to contest a wrong claim.
+- **UK and EU:** collecting societies (PRS for Music and PPL in the UK, GEMA in Germany, SACEM in France) license music separately from the library in some cases; check the licence covers paid ads in each country you run them.
 
 ## Checks before you hand it over
 
@@ -151,3 +152,7 @@ One row per track per ad: track title, artist or library, source link, licence t
 - MEA-0037: gross margin uses delivered cost.
 
 What makes this skill ours: every track is cleared per platform and per paid use, with proof saved in a rights log; creator post sounds are checked before any paid promotion; the product's own recorded sounds come before library effects; and the free path is each platform's own library, with paid tools only when their licence names paid social ads.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Film and label music trending on Reels still belongs to its label. Many buyers watch with sound on in regional languages; a folk or festive feel can help, only from a licensed library. Avoid devotional music in sales ads unless the brand and audience fit.

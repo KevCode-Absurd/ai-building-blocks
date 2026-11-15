@@ -1,6 +1,6 @@
 ---
 name: gift-with-purchase-offer
-description: "A free gift offer ready to approve: which gift to give (scored on buyer-perceived value, landed cost, whether it helps the buyer use the main product, stock and parcel weight), the spend or product threshold that unlocks it, the cost per order and change in gross profit per order and per month, the offer terms, where it shows in page and cart, and the end rule. Separates threshold gifts that lift order value from acquisition gifts that must lower cost per new customer, and checks the US free-offer rules and India's cash-on-delivery losses. Use when order value has stalled, when a sale needs a cheaper mechanic than a discount, or when the team wants to 'add a free gift' and needs to know which and at what line."
+description: "A free gift offer ready to approve: which gift to give (scored on buyer-perceived value, landed cost, whether it helps the buyer use the main product, stock and parcel weight), the spend or product threshold that unlocks it, the cost per order and change in gross profit per order and per month, the offer terms, where it shows in page and cart, and the end rule. Separates threshold gifts that lift order value from acquisition gifts that must lower cost per new customer, and checks free-offer rules in the US, UK and EU and the losses on failed pay-on-delivery orders. Use when order value has stalled, when a sale needs a cheaper mechanic than a discount, or when the team wants to 'add a free gift' and needs to know which and at what line."
 ---
 
 # Gift with purchase offer
@@ -61,7 +61,7 @@ Drop any gift that adds a shipping band unless step 3 shows it still pays.
 
 **Threshold gift (lift order value):**
 
-- Plot the order value distribution in steps (5 or 10 dollars, 100 to 200 rupees). Set the line just above a peak, not from the mean; a mean-based line moves few buyers and gives the gift to everyone already above it [OFF-0013] [OFF-0079].
+- Plot the order value distribution in steps (5 or 10 in the store's currency, such as dollars, pounds or euros). Set the line just above a peak, not from the mean; a mean-based line moves few buyers and gives the gift to everyone already above it [OFF-0013] [OFF-0079].
 - A line about 30 to 40% above the current average is a common starting point for a coveted gift [OFF-0076]; check it against the peaks.
 - If a free-shipping threshold already exists, place the gift as the next rung above it in a cart progress bar [LPG-0001]. One brand ran free shipping, then a free shirt, then free joggers at rising lines [LPG-0072].
 
@@ -95,9 +95,10 @@ Show gross profit per session before and after, since a gift can raise order val
 - Cart: progress bar with the amount left to unlock, and the gift added automatically once unlocked.
 - Ads and email: the same terms word for word. Hand copy to `write-sale-and-discount-ad-copy` and visuals to `design-sale-banners-and-hero`.
 
-### 6. India and US notes
+### 6. Market notes
 
-- **India:** on cash-on-delivery orders the gift is lost on every RTO along with shipping; add gift cost x RTO rate to the cost per order, or unlock the gift on prepaid orders only and say so on the product page. Ask the store's accountant how GST applies to free items in the offer.
+- **Pay-on-delivery orders (any market):** the gift is lost on every failed delivery along with shipping; add gift cost x failed-delivery rate to the cost per order, or unlock the gift on prepaid orders only and say so on the product page. Ask the store's accountant how sales tax or VAT applies to free items in the offer.
+- **UK and EU:** a "free" gift must be truly free: the buyer pays nothing for it beyond the unavoidable delivery cost, and the main item's price is not raised to cover it.
 - **US:** keep the paid item's price unchanged during the offer, state conditions next to the offer, and do not run a free offer on the same product size more than 6 months a year [OFF-6500].
 
 ### 7. Read it after 14 days
@@ -109,7 +110,7 @@ Compare with the 14 days before: share of orders at or above the line, gross pro
 - The gift was chosen from a scored shortlist with its landed cost and perceived value.
 - The line sits above a real peak in the order value distribution, with the chart attached.
 - Gross profit change is shown at low, middle and high uptake, and the middle case pays.
-- Gift cost includes any extra shipping band and the RTO loss on COD orders.
+- Gift cost includes any extra shipping band and the failed-delivery loss on pay-on-delivery orders.
 - Gift stock covers the window, or the cap is stated and true.
 - Terms (dates, stacking, returns, sold-out rule) are written.
 - Nothing was switched on without a client yes.
@@ -131,7 +132,7 @@ Compare with the 14 days before: share of orders at or above the line, gross pro
 - **Forgetting the buyers already above the line.** Step 3 charges the gift to every qualifying order.
 - **More of the same as the gift.** Step 1 prefers items that help use.
 - **Gift out of stock while ads still promise it.** Step 4 sets the sold-out rule.
-- **COD losses ignored.** Step 6 adds the gift to RTO cost.
+- **Failed-delivery losses ignored.** Step 6 adds the gift to failed-delivery cost.
 
 ## Sources
 
@@ -145,4 +146,10 @@ Compare with the 14 days before: share of orders at or above the line, gross pro
 - LPG-0001, LPG-0072: cart progress bar and gift ladder.
 - OFF-6500: US free-offer rules.
 
-What makes this skill ours: the gift is chosen from a scored shortlist that includes parcel weight and whether it helps the buyer use the product; the money model charges the gift to every order above the line, not just the new ones; uptake is shown at three levels and only launched if the middle case pays; and COD orders carry the gift's RTO loss.
+What makes this skill ours: the gift is chosen from a scored shortlist that includes parcel weight and whether it helps the buyer use the product; the money model charges the gift to every order above the line, not just the new ones; uptake is shown at three levels and only launched if the middle case pays; and pay-on-delivery orders carry the gift's failed-delivery loss.
+
+## Selling in India
+
+- On COD orders the gift is lost on every RTO along with shipping; add gift cost x RTO rate to the cost per order, or unlock the gift on prepaid orders only.
+- Ask the store's accountant how GST applies to free items.
+- Plot order values in steps of 100 to 200 rupees.

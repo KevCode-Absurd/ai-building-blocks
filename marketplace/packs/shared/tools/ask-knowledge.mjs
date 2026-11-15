@@ -8,9 +8,10 @@
 //   node tools/ask-knowledge.mjs "free shipping threshold for bundles" --module OFF,MEA
 //
 // Several quoted phrasings of one need are searched together and their rankings merged (ask it two or three ways
-// when the first words may not be the pack's words). It prints the best passages, best first, each with its file and
-// lines, its heading trail and the sources it cites (with the date each was checked, and STALE when a source is past
-// twice its review window). When the best passage covers too little of the question, it says the pack does not know:
+// when the first words may not be the pack's words). It prints the best passages, best first, each with an id to note
+// (a library card's own id and tier: each card comes back whole, with its source line), its file and lines, its
+// heading trail and the sources it cites (with the date each was checked, and STALE when a source is past twice its
+// review window). A passage that repeats one already shown is left out. When the best passage covers too little of the question, it says the pack does not know:
 // then ask the client or research it, and never fill the gap from memory.
 //
 // Generated from the AI Blocks marketplace (src/modules/packs/retrieve.ts by scripts/gen-ask-knowledge.mjs).
@@ -66,6 +67,11 @@ export function tokens(text        )           {
   return out;
 }
 
+/** The line that opens a library card under its claim heading (cards.ts cardMarkdown): "Card MCR-0002. Tier 3, growth." */
+const CARD_LINE = /^Card ([A-Z]{2,4}-\d{4})\. Tier (\d)\b/;
+/** A card is one record, so it is one passage up to this many words (cards run about 350, at most about 480). */
+export const CARD_MAX_WORDS = 650;
+
 /** Target and ceiling for a passage, in words. Lecture 3: 100 to 500 tokens; a word is about 1.3 tokens. */
 export const CHUNK_TARGET_WORDS = 180;
 export const CHUNK_MAX_WORDS = 260;
@@ -85,9 +91,12 @@ function citesOf(text        )           {
 /**
  * A markdown file as passages. Front matter is dropped, but a skill's description is kept as the first passage's
  * text. Headings (# to ####) start sections; code fences never do. Long sections are cut at paragraph ends near
- * CHUNK_TARGET_WORDS, repeating the last paragraph of one passage at the start of the next when it is short.
+ * CHUNK_TARGET_WORDS, repeating the last paragraph of one passage at the start of the next when it is short. A library
+ * card stays one passage (its id, tier and source line always come back with it); `{ wholeCards: false }` cuts cards
+ * like any section, which is how KnowledgeIndex scores them (small units ranked, the whole card returned).
  */
-export function chunkMarkdown(path        , md        )          {
+export function chunkMarkdown(path        , md        , opts                           = {})          {
+  const wholeCards = opts.wholeCards ?? true;
   const lines = md.replace(/^﻿/, "").replace(/\r\n?/g, "\n").split("\n");
   let start = 0;
   let description = "";
@@ -122,14 +131,14 @@ export function chunkMarkdown(path        , md        )          {
 
   const chunks          = [];
   const ids = new Map                ();
-  const push = (s                , paras                                                 ) => {
+  const push = (s                , paras                                                 , card                               ) => {
     const text = paras.map(p => p.text).join("\n\n").trim();
     if (!text) return;
     const ctx = [title, ...s.trail.filter((t, i) => !(i === 0 && t === title))].join(" > ");
     const base = `${path}#${slug(s.heading || title)}`;
     const n = (ids.get(base) ?? 0) + 1;
     ids.set(base, n);
-    chunks.push({ id: n === 1 ? base : `${base}-${n}`, path, context: ctx, heading: s.heading, lines: [paras[0].first, paras[paras.length - 1].last], text, cites: citesOf(text) });
+    chunks.push({ id: n === 1 ? base : `${base}-${n}`, path, context: ctx, heading: s.heading, lines: [paras[0].first, paras[paras.length - 1].last], text, cites: citesOf(text), ...(card ? { card } : {}) });
   };
   let usedDescription = false;
   for (const s of sections) {
@@ -155,6 +164,13 @@ export function chunkMarkdown(path        , md        )          {
     flush();
     if (!usedDescription && description) { paras.unshift({ first: s.first, last: s.first, text: description }); usedDescription = true; }
     if (!paras.length) continue;
+    // A library card is an atomic record (claim, body, holds when, fails when, numbers, source): one passage, never
+    // cut, so every passage that comes back carries its card id, tier and source line (lecture 3: one record, one chunk).
+    const cardLine = CARD_LINE.exec(paras[0].text);
+    if (wholeCards && cardLine && wordCount(paras.map(p => p.text).join(" ")) <= CARD_MAX_WORDS) {
+      push(s, paras, { id: cardLine[1], tier: Number(cardLine[2]) });
+      continue;
+    }
     let group               = [];
     let words = 0;
     for (const p of paras) {
@@ -277,11 +293,23 @@ export const RRF_K = 60;
 export const MAX_PASSAGES = 10;
 /** Most passages from one section, so one long section cannot crowd out the rest. */
 export const PER_SECTION = 2;
+/** Word overlap (Jaccard) above which a passage repeats one already picked and is skipped. */
+export const DUPLICATE_OVERLAP = 0.45;
+const jaccard = (a             , b             ) => { let n = 0; for (const w of a) if (b.has(w)) n++; return n / (a.size + b.size - n || 1); };
 /** Below this share of the question's informative words in the best passage, the pack is said not to know. */
 export const MIN_COVERAGE = 0.34;
 
 export class KnowledgeIndex {
+  /** The passages answers return: sections as cut by chunkMarkdown, each library card whole. */
            chunks         ;
+  /**
+   * What the rankers score: the same passages, except that a card is cut into its usual ~180-word units (claim and
+   * body; holds, fails and the owner questions it answers), each pointing at its whole card. Small units keep ranking
+   * sharp (a question in owner words meets the card's "Asked as" without the body diluting it); the reader still gets
+   * the whole card with its id and source (small-to-big retrieval).
+   */
+          units         ;
+          parentOf          ;
           body      ;
           heads      ;
           glossary                       ;
@@ -293,11 +321,28 @@ export class KnowledgeIndex {
    * sources.json); other files number their own sources, so their [n] stay as they are.
    */
   constructor(files                                  , opts                                                                                              = {}) {
-    this.chunks = files.flatMap(f => chunkMarkdown(f.path, f.text));
+    this.chunks = [];
+    this.units = [];
+    this.parentOf = [];
+    for (const f of files) {
+      const whole = chunkMarkdown(f.path, f.text);
+      const base = this.chunks.length;
+      this.chunks.push(...whole);
+      // Both cuts walk the file in the same order: outside cards a unit is the passage itself; a card's units are the
+      // ones inside its lines.
+      const units = chunkMarkdown(f.path, f.text, { wholeCards: false });
+      let u = 0;
+      whole.forEach((w, j) => {
+        const inside = () => u < units.length && units[u].lines[0] >= w.lines[0] && units[u].lines[1] <= w.lines[1];
+        // A passage with no unit (never expected) is scored as itself.
+        if (!inside() && w.card) { this.units.push(w); this.parentOf.push(base + j); return; }
+        do { this.units.push(units[u]); this.parentOf.push(base + j); u++; } while (w.card && inside());
+      });
+    }
     this.citeFiles = new Set(opts.citeFiles ?? ["knowledge.md"]);
     // The situating context counts once in the body ranker and alone in the heading ranker.
-    this.body = new Bm25(this.chunks.map(c => tokens(`${c.context}\n${c.text}`)));
-    this.heads = new Bm25(this.chunks.map(c => tokens(c.context)));
+    this.body = new Bm25(this.units.map(c => tokens(`${c.context}\n${c.text}`)));
+    this.heads = new Bm25(this.units.map(c => tokens(c.context)));
     const gloss = opts.glossaryFrom ?? files.find(f => f.path === "knowledge.md")?.text ?? "";
     this.glossary = glossaryOf(gloss);
     this.sources = new Map((opts.sources ?? []).filter(s => s && Number.isFinite(s.n)).map(s => [s.n, s]));
@@ -329,7 +374,7 @@ export class KnowledgeIndex {
     const top = first.map((s, i) => [s, i]         ).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]).slice(0, TUNING.prfDocs);
     const gain = new Map                ();
     for (const [, i] of top) {
-      const words = tokens(`${this.chunks[i].context}\n${this.chunks[i].text}`);
+      const words = tokens(`${this.units[i].context}\n${this.units[i].text}`);
       const tf = new Map                ();
       for (const w of words) tf.set(w, (tf.get(w) ?? 0) + 1);
       for (const [w, f] of tf) if (!qt.includes(w)) gain.set(w, (gain.get(w) ?? 0) + (f / words.length) * this.body.idf(w));
@@ -344,15 +389,18 @@ export class KnowledgeIndex {
    * The passages that answer a question, best first. `questions` may hold several phrasings of one need (the
    * agent's own rewrites); their rankings fuse like the rankers do. `today` (YYYY-MM-DD) marks stale sources.
    * `adjust` lets a caller with metadata (knowledge cards: tier, freshness, market) rescale a passage's fused score
-   * or drop it (null) before the top k are picked.
+   * or drop it (null) before the top k are picked. `max` raises the MAX_PASSAGES ceiling on k, for a caller that
+   * builds a wider pool and reranks it before anyone reads it (prepare-job's shortlist). `distinct` skips a passage
+   * that nearly repeats one already picked (tools/ask-knowledge.mjs sets it; callers that dedupe by card do not).
    */
-  ask(questions                   , opts                                                                                                                                = {})         {
+  ask(questions                   , opts                                                                                                                                                                  = {})         {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
-    const k = Math.max(1, Math.min(MAX_PASSAGES, opts.k ?? 6));
+    const k = Math.max(1, Math.min(opts.max ?? MAX_PASSAGES, opts.k ?? 6));
     // A module filter narrows the search to those modules' files (and any paths given); none found: the whole pack.
     const routed = opts.modules?.length ? modulePaths([...new Set(this.chunks.map(c => c.path))], opts.modules) : [];
     const scope = [...(opts.paths ?? []), ...routed];
     const allowed = scope.length ? new Set(scope) : null;
+    const fusedUnits = new Map                ();
     const fused = new Map                ();
     const qWords = [...new Set(qs.flatMap(tokens))];
     for (const q of qs) {
@@ -366,25 +414,40 @@ export class KnowledgeIndex {
       if (TUNING.prf > 0) rankers.push(this.feedback(first, qt, weights));
       for (const scores of rankers) {
         if (!scores) continue;
-        const order = scores.map((s, i) => [s, i]         ).filter(([s, i]) => s > 0 && (!allowed || allowed.has(this.chunks[i].path))).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
-        order.forEach(([, i], rank) => fused.set(i, (fused.get(i) ?? 0) + 1 / (RRF_K + rank + 1)));
+        const order = scores.map((s, i) => [s, i]         ).filter(([s, i]) => s > 0 && (!allowed || allowed.has(this.units[i].path))).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
+        order.forEach(([, u], rank) => fusedUnits.set(u, (fusedUnits.get(u) ?? 0) + 1 / (RRF_K + rank + 1)));
       }
+    }
+    // A passage scores as its best unit (a card is found by its best part and returned whole, in one place).
+    const bestUnit = new Map                ();
+    for (const [u, s] of fusedUnits) {
+      const i = this.parentOf[u];
+      if (!fused.has(i) || s > fused.get(i) ) { fused.set(i, s); bestUnit.set(i, u); }
     }
     const adjusted = opts.adjust ? [...fused].flatMap(([i, s]) => { const v = opts.adjust (this.chunks[i], s); return v === null ? [] : [[i, v]                    ]; }) : [...fused];
     const ranked = adjusted.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
     const perSection = new Map                ();
     const picked                     = [];
+    const pickedWords                = [];
     for (const [i, s] of ranked) {
       const c = this.chunks[i];
       const key = `${c.path}#${c.context}`;
       if ((perSection.get(key) ?? 0) >= PER_SECTION) continue;
+      // Near-duplicates: a passage that says nearly what a picked one says (often one rule from one source, written
+      // into two cards) takes no second slot.
+      const w = opts.distinct ? new Set(tokens(c.text)) : new Set        ();
+      if (opts.distinct && pickedWords.some(p => jaccard(p, w) > DUPLICATE_OVERLAP)) continue;
       perSection.set(key, (perSection.get(key) ?? 0) + 1);
       picked.push([i, s]);
+      pickedWords.push(w);
       if (picked.length >= k) break;
     }
     const informative = qWords.filter(w => this.body.idf(w) > 0.2);
     const has = (i        ) => new Set(tokens(`${this.chunks[i].context}\n${this.chunks[i].text}`));
-    const bestWords = picked.length ? has(picked[0][0]) : new Set        ();
+    // Coverage is judged on the unit that matched, so a long card does not pass the stopping rule on words it only
+    // holds elsewhere.
+    const top = picked.length ? this.units[bestUnit.get(picked[0][0]) ?? -1] : undefined;
+    const bestWords = top ? new Set(tokens(`${top.context}\n${top.text}`)) : new Set        ();
     const coverage = informative.length ? informative.filter(w => this.knows(w, x => bestWords.has(x))).length / informative.length : 0;
     const anywhere = new Set(picked.flatMap(([i]) => [...has(i)]));
     const passages            = picked.map(([i, score]) => {
@@ -433,11 +496,11 @@ function daysBetween(a        , b        )         {
 
 /**
  * The files of a pack the knowledge index covers: what the agent opens on demand. The always-loaded core (AGENTS.md,
- * WORK-METHOD.md and the rest), the about files, skills.md (a copy of skills/) and the training logs stay out.
+ * METHOD.md and the rest), the about files, skills.md (a copy of skills/) and the training logs stay out.
  */
 export function indexedPath(path        )          {
   if (!path.endsWith(".md")) return false;
-  if (/^(README|AGENTS|CLAUDE|LICENSE|CHANGELOG|WORK-METHOD|skills|soul|personality|QUALITY-METHOD|toolbox|knowledge-map|sources|library|access|LICENSE)\.md$/.test(path)) return false;
+  if (/^(README|AGENTS|CLAUDE|LICENSE|CHANGELOG|WORK-METHOD|METHOD|MEMORY-TEMPLATE|skills|soul|personality|QUALITY-METHOD|toolbox|knowledge-map|sources|library|access|LICENSE)\.md$/.test(path)) return false;
   if (/^(context|training|examples|\.agents|\.claude)\//.test(path)) return false;
   if (/^tools\/(?!quality\/cards\/)/.test(path)) return false;
   return true;
@@ -445,13 +508,17 @@ export function indexedPath(path        )          {
 
 /** Render an answer as plain text for a chat: each passage with its place, then its sources. */
 export function answerText(a        , agentName        )         {
-  if (!a.passages.length) return `${agentName}'s pack has nothing on this. Say so, then ask the client or research it (WORK-METHOD.md step 1). Do not answer from memory as if it were the pack's knowledge.`;
+  if (!a.passages.length) return `${agentName}'s pack has nothing on this. Say so, then ask the client or research it (METHOD.md step 1). Do not answer from memory as if it were the pack's knowledge.`;
   const head = a.enough
     ? `${a.passages.length} passage${a.passages.length === 1 ? "" : "s"} from ${agentName}'s pack, best first. Use only what they say; cite the sources shown.`
     : `Weak match: the best passage covers ${Math.round(a.coverage * 100)}% of the question${a.missing.length ? ` (nothing on: ${a.missing.slice(0, 8).join(", ")})` : ""}. Treat this as not in the pack: ask the client or research it, and say which.`;
   const body = a.passages.map((p, i) => {
     const src = p.cites.length ? `\nSources: ${p.cites.map(c => `[${c.n}] ${c.title}, checked ${c.checked}${c.stale ? " (STALE: recheck before use)" : ""} ${c.url}`).join("; ")}` : "";
-    return `--- ${i + 1}. ${p.path}:${p.lines[0]}-${p.lines[1]} | ${p.context} ---\n${p.text}${src}`;
+    // Every passage carries an id to note in context/trace.md: a card's own id, or the passage's place in the pack.
+    const id = p.card ? `card ${p.card.id}, tier ${p.card.tier}` : `id ${p.id}`;
+    // A card's "Asked as" line is there for the search, not for the reader.
+    const text = p.card ? p.text.replace(/\n*^\*\*Asked as:\*\*.*$/m, "") : p.text;
+    return `--- ${i + 1}. ${id} | ${p.path}:${p.lines[0]}-${p.lines[1]} | ${p.context} ---\n${text}${src}`;
   }).join("\n\n");
   return `${head}\n\n${body}`;
 }
@@ -559,10 +626,12 @@ async function main(argv) {
   const today = new Date().toISOString().slice(0, 10);
   const modules = args.modules.map(m => m.trim()).filter(Boolean);
   if (modules.length && !modulePaths(files.map(f => f.path), modules).length) console.error("No knowledge file for module " + modules.join(", ") + " in this pack, so the whole pack is searched.");
-  const answer = index.ask(args.q, { k: args.k, today, paths: args.in, modules });
+  const answer = index.ask(args.q, { k: args.k, today, paths: args.in, modules, distinct: true });
   let name = "this agent";
   try { name = JSON.parse(fs.readFileSync(path.join(pack, "pack.json"), "utf8")).name || name; } catch {}
   console.log(args.json ? JSON.stringify(answer, null, 2) : answerText(answer, name));
+  // One line in context/job-log.jsonl (hashes only), when the job folder exists; it never stops the tool.
+  try { const { logEvent } = await import("./log-event.mjs"); logEvent({ tool: "ask-knowledge", cmd: "ask", args: argv, inputs: [], result: "PASS", counts: { passages: answer.passages.length, enough: answer.enough ? 1 : 0 } }); } catch {}
   return 0;
 }
 

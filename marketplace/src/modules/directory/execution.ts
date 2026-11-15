@@ -4,14 +4,14 @@ import {buildExecutionPlan, validateProductionQuality} from '../../../../site/sr
 import {validateJobDocument} from '../../../../site/src/jobs/contracts.mjs';
 
 /**
- * QUALITY-METHOD.md in packs and seats. The plain method is WORK-METHOD.md; this file is only the optional receipt
+ * QUALITY-METHOD.md in packs and seats. The plain method is METHOD.md; this file is only the optional receipt
  * layer for hosts that call the AI Blocks MCP job tools, so a chat user can skip it. Each receipt field maps to a GJP
  * step instead of restating it. The machine contract it describes is the library's (site/src/jobs/), unchanged.
  */
 export function qualityMethodMarkdown(): string {
   return `# Quality method: optional receipts
 
-The work method is \`WORK-METHOD.md\`. In a chat, follow it and skip this file.
+The work method is \`METHOD.md\`. In a chat, follow it and skip this file.
 
 ## Optional: for hosts that use the AI Blocks MCP job tools
 

@@ -10,6 +10,8 @@ How the editor uses a profile:
 4. Read time fits `reader_minutes` at about 230 words a minute.
 5. Short is not clear: spell out codes, say shared lines once, define each term once.
 
+Each family also says `buyer_facing` and `required`: the checks qe-check fails when they did not run.
+
 Dev evidence (engine/plain words; engine wins of 8):
 
 | Task kind | Ratio | Verdict |

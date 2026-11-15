@@ -1,6 +1,6 @@
 ---
 name: write-welcome-series
-description: "A welcome email series of four to six emails written in full, with two subject lines and a preview per email, the timing, the exit rules and the offer logic: whether to give a sign-up offer at all, how big, in money or percent, and when it really expires, checked against gross profit per order first. Each email has one job (deliver, story, proof, doubts, deadline) built from the store's real reviews, policies and founder facts, with a no-discount version, India notes for COD and WhatsApp, and US email law checks. Use when a store has no welcome flow, a generic one copied from a template, or a sign-up offer nobody has costed."
+description: "A welcome email series of four to six emails written in full, with two subject lines and a preview per email, the timing, the exit rules and the offer logic: whether to give a sign-up offer at all, how big, in money or percent, and when it really expires, checked against gross profit per order first. Each email has one job (deliver, story, proof, doubts, deadline) built from the store's real reviews, policies and founder facts, with a no-discount version, market notes for payment options and WhatsApp, and US, UK and EU email law checks. Use when a store has no welcome flow, a generic one copied from a template, or a sign-up offer nobody has costed."
 ---
 
 # Welcome email series
@@ -29,7 +29,7 @@ Required (read access, level 1):
 2. **Gross profit per order** and average order value, from `store-meta-math` or `build-sku-profit-sheet`.
 3. **Best sellers by first orders**: from the Shopify order export (Name, Created at, Customer Id, Lineitem name, Lineitem quantity, Subtotal, Discount Code), the top five products bought in first orders over the last 90 days.
 4. **Reviews export** (CSV from the reviews app) and the **top ten support questions** from the helpdesk or WhatsApp chats.
-5. **Policies as published**: shipping times and costs, returns, guarantee, COD (India).
+5. **Policies as published**: shipping times and costs, returns, guarantee, payment options.
 6. **Founder facts**: why the store started, in the founder's words, with anything provable marked.
 7. **Brand voice**: five real lines from the site or past emails that the owner likes.
 
@@ -73,7 +73,7 @@ Default five emails; use six only for products over about three times the averag
 | 1b (optional) | About 8 hours later | Short plain-text note from a person [EML-0060] |
 | 2 | Day 1 | Why the store exists (founder facts) |
 | 3 | Day 2 | Proof: reviews that each answer one doubt |
-| 4 | Day 4 | Doubts: shipping, returns, sizing, COD |
+| 4 | Day 4 | Doubts: shipping, returns, sizing, payment |
 | 5 | Day 6 | Deadline, plain text, 24 hours before expiry [EML-0045] |
 
 Exit on Placed Order for every email after email 1. Existing customers who join the list skip the offer emails and get emails 2 and 3 only. If the person enters a cart or checkout flow, pause the welcome emails until that flow ends.
@@ -85,8 +85,9 @@ Rules for every email: one job, one button, one main link, read at grade 8 or be
 - **Email 1, deliver.** Subject states the offer plainly. First line: the code or value and how to use it. Then what the store sells in one sentence, one best seller with its price, and the button. No story yet.
 - **Email 2, story.** Founder facts only: the problem they hit, what they made, one specific detail. No claims the founder cannot show. If the store has no founder story, use "how we make it" with real sourcing facts.
 - **Email 3, proof.** Two or three reviews, each picked because it answers one of the four doubts, not generic praise [EML-0033] [LPG-0053]. Quote exactly, first name and date, with the review app as source. A star average only if the app shows it.
-- **Email 4, doubts.** Answer the top shipping, returns and sizing questions in the store's real terms, copied from the live policy. In India, say clearly whether COD is available and any COD fee.
+- **Email 4, doubts.** Answer the top shipping, returns and sizing questions in the store's real terms, copied from the live policy. Say clearly which payment options are available (pay later, local methods, pay on delivery where offered) and any fee.
 - **Email 5, deadline.** Plain text from a named person. The exact expiry date and time with time zone, what the code covers, and what happens after. If there is no real expiry, this email becomes "the one product most people start with" instead.
+- **Every email after email 1:** repeat the code or value in one line near the top, with its expiry, so a reader who skipped email 1 can still use it. Keep email 1's body under about 100 words with the offer, code and button in the first screen, because many readers only see the top of an email (practitioner view, test it).
 
 Write two subjects per email: one plain, one curiosity or benefit. Preview text adds what the subject leaves out. Open with the offer, proof or a promise, not the category's shared pain [LPG-0045]. Cut AI tells such as "it's not X, it's Y" [MCR-0016].
 
@@ -96,9 +97,11 @@ Swap the offer for something that costs less: a best-seller guide, the free ship
 
 ### 6. Market notes
 
-- **India:** prices in rupees as shown on site; say "COD available" only if it is on for all pin codes or name the limit. If the store offers a prepaid saving, mention it only when `cod-and-prepaid-checkout-for-india` shows it pays. A WhatsApp welcome goes only to WhatsApp opt-ins, through `write-sms-and-whatsapp-messages`.
+- **Any market:** prices in the store's currency as shown on site; say "pay on delivery available" only if it is on for every region or name the limit.
+- **UK and EU:** the series goes only to people who gave consent at sign-up, and the form says what they will get.
+- **WhatsApp:** a WhatsApp welcome goes only to WhatsApp opt-ins, through `write-sms-and-whatsapp-messages`.
 - **US:** every email carries the postal address and a working unsubscribe; subjects must not mislead [EML-6341]. Gmail expects one-click unsubscribe and honest subjects; never a fake "Re:" [EML-6340].
-- **Fake urgency** fails in both markets: no "only today" unless it is true [ADC-6147].
+- **Fake urgency** fails in every market: no "only today" unless it is true [ADC-6147].
 
 ### 7. Plan the one test
 
@@ -164,3 +167,7 @@ Sources: [review id / policy URL / founder note]
 - OFF-0017, OFF-0026: money versus percent.
 
 What makes this skill ours: the offer is costed against gross profit per order and checked against repeat behaviour by discount code before any copy is written; every deadline must be enforced by the platform; each email answers a doubt taken from the store's own reviews and tickets; and there is always a no-discount version that doubles as the test control.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Prices in rupees as shown on site. Say "COD available" only if it is on for all pincodes or name the limit, and say any COD fee in email 4. If the store offers a prepaid saving, mention it only when `cod-and-prepaid-checkout-for-india` shows it pays.

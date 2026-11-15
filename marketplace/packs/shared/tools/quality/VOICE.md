@@ -1,7 +1,7 @@
 # Voice match (v1)
 
 ## Writer
-1. Read `context/brand-file/voice.md` first; if missing, use voice notes in the brief or `facts.md`, else write plain and calm.
+1. Read `context/org-context/voice.md` first; if missing, use voice notes in the brief or `facts.md`, else write plain and calm.
 2. Pick the channel voice that fits the deliverable (site, email, social, ads, docs, support, blog, B2B). Copy its person, formality, sentence length, punctuation and the brand's own terms.
 3. Customer-facing copy must sound like the brand wrote it. For internal or analytical work, clarity beats house style: keep only the brand's terms and no-go words.
 4. Never put in a phrase from the voice file's "words not seen" or "don't" list.

@@ -113,10 +113,10 @@ Keep the top twenty. Make sure no single product holds more than five.
 
 For each idea, name the metric: 3-second hold and shares for reach ideas, comments and profile visits for selling ideas [ORG-0019]. An organic Reel with about 5 times the account's usual views is a candidate for ads, run as-is or with its hook on a product ending [ORG-0035]; hand those to `repurpose-ads-into-organic-posts` or the ad team.
 
-### 10. India and US notes
+### 10. Market notes
 
-- **India:** write a Hinglish or regional-language text hook for ideas aimed at a state where the product sells well; keep the price on screen in rupees and exact. Show COD or free delivery only if the store offers it. Festival and wedding-season gifting ideas work well 2 to 3 weeks before the date (practitioner default, test it).
-- **US:** keep text hooks in plain American English; any gifted creator in the Reel needs a clear in-video disclosure [ORG-6405].
+- **Every market:** write a text hook in the languages your buyers use for ideas aimed at a region where the product sells well; keep the price on screen in the store's currency and exact. Show pay on delivery or free delivery only if the store offers it. Holiday, festival and gifting-season ideas work well 2 to 3 weeks before the date (practitioner default, test it).
+- **US, UK, EU, Canada and Australia:** keep text hooks in plain local English (American or British spelling to match the market); any gifted creator in the Reel needs a clear in-video disclosure [ORG-6405], and the UK expects an "ad" label.
 
 ## Checks before you hand it over
 
@@ -164,3 +164,7 @@ For each idea, name the metric: 3-second hold and shares for reach ideas, commen
 - MCR-6063: Meta's AI info label.
 
 What makes this skill ours: every idea starts from a sourced product seed (reviews, questions, specs) instead of a trend list; ideas are scored on gross profit, ease and proof before anyone shoots; audio rights and claims are checked before the shoot; and winning Reels have a clear path into ads.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Write a Hinglish or regional-language text hook for ideas aimed at a state where the product sells well, keep the price in rupees and exact, and show COD only if the store offers it. Festival and wedding-season gifting ideas work well 2 to 3 weeks before the date (practitioner default, test it).

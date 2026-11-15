@@ -1,6 +1,6 @@
 ---
 name: write-gifting-ad-copy
-description: "Writes ad copy for the person buying a gift, not the person who will use it: copy sets that speak to the giver's real worries (will they like it, will it fit, will it arrive in time, will it look special, can they exchange it), each promise on delivery dates, gift wrap, gift messages, hidden prices and exchanges checked against what the store and its couriers can really do by region. Includes a dated delivery cutoff table, a last-safe-day swap to gift cards, and India and US gifting notes. Use before Diwali, Raksha Bandhan, Valentine's, Mother's or Father's Day, Christmas, or any time a product sells as a gift."
+description: "Writes ad copy for the person buying a gift, not the person who will use it: copy sets that speak to the giver's real worries (will they like it, will it fit, will it arrive in time, will it look special, can they exchange it), each promise on delivery dates, gift wrap, gift messages, hidden prices and exchanges checked against what the store and its couriers can really do by region. Includes a dated delivery cutoff table, a last-safe-day swap to gift cards, and gifting notes by market. Use before Christmas and the winter holidays, Valentine's, Mother's or Father's Day, Lunar New Year, Eid or any local gifting festival, or any time a product sells as a gift."
 ---
 
 # Gifting ad copy
@@ -26,7 +26,7 @@ description: "Writes ad copy for the person buying a gift, not the person who wi
 Required:
 
 1. **Order export** (Shopify): Created at, Billing name, Shipping name, Shipping city and province or state, Shipping zip, Note or gift message field, Lineitem name, Total. Orders where billing and shipping names differ, or with a gift note, show who gives what to whom.
-2. **Courier transit times** by region and the warehouse's last dispatch time, from the courier or aggregator dashboard. For India include COD availability by pincode.
+2. **Courier transit times** by region and the warehouse's last dispatch time, from the courier or aggregator dashboard. Where the store offers pay on delivery, include where it is available.
 3. **What the store really offers for gifts:** gift wrap (and its cost per order), gift message, price-free packing slip or invoice, exchange for the recipient, gift cards.
 4. **The season and its key date**, and the products to push, with stock.
 5. **Gross profit per order** including any gift wrap cost.
@@ -38,7 +38,7 @@ Writing is read-only. Loading and scheduling ads needs draft access; the client 
 ## Before you start: the gates
 
 1. **Gift promises are real.** Every gift line (wrap, message, no price on slip, recipient exchange) is live on the site and in the warehouse process. Fail: drop that line.
-2. **Delivery dates are kept.** The "arrives by" promise must hold for each region the ads reach, based on courier transit times plus dispatch time. Fail: narrow the ad's regions or stop the line earlier. A promise the store cannot keep turns into refunds, and ads that imply an outcome the buyer then does not get are treated as misleading in India [ADC-6147].
+2. **Delivery dates are kept.** The "arrives by" promise must hold for each region the ads reach, based on courier transit times plus dispatch time. Fail: narrow the ad's regions or stop the line earlier. A promise the store cannot keep turns into refunds, and ads that imply an outcome the buyer then does not get are treated as misleading by consumer regulators such as the FTC in the US, the CMA and ASA in the UK, and EU consumer authorities.
 3. **Gross profit per order covers wrap and packing.** A branded unboxing can cost from under 0.50 to several dollars per order [CXP-0008]. Pass when `store-meta-math` includes it [MEA-0037]. Fail: charge for wrap or drop it.
 4. **Stock covers the season.** A gift that sells out mid-season leaves ads selling a dead product. Fail: cap or swap the product.
 
@@ -70,8 +70,8 @@ Write 5 to 7 sets. Each names the recipient and the moment, then answers one wor
 |---|---|---|---|
 | 1 | Mother, Mother's Day | Will she like it? | The proof: a review from a mother, the product's story |
 | 2 | Husband, Valentine's | Will it fit? | "Size exchange for him, free, within 30 days" |
-| 3 | Sister, Raksha Bandhan | Will it arrive? | "Order by 15 Aug for delivery in Delhi NCR" |
-| 4 | Team, Diwali | Looks special? | "Wrapped in our festive box, with your message" |
+| 3 | Sister, Christmas | Will it arrive? | "Order by 18 Dec for delivery in Greater London" |
+| 4 | Team, end of year | Looks special? | "Wrapped in our festive box, with your message" |
 | 5 | Anyone, last minute | Too late? | "Send a gift card by email today" |
 
 Write the copy to the giver ("Your mum will..." or "For the sister who..."), not to the user ("You'll love how soft..."). Keep the product's proven benefit in, but as a reason the recipient will be happy.
@@ -80,15 +80,15 @@ Write the copy to the giver ("Your mum will..." or "For the sister who..."), not
 
 Every gift promise is written as the exact operating rule:
 
-- **Delivery:** "Order by [date], [time] for delivery by [date] in [regions]". Never "Arrives in time for Diwali" without a date and region.
-- **Wrap:** "Gift wrap available, ₹99" or "Free gift wrap" only if free for every order.
+- **Delivery:** "Order by [date], [time] for delivery by [date] in [regions]". Never "Arrives in time for Christmas" without a date and region.
+- **Wrap:** "Gift wrap available, $5" (in the store's currency) or "Free gift wrap" only if free for every order.
 - **Message:** "Add a handwritten note at checkout" only if a person really writes it.
-- **Price:** "No price on the packing slip" only if the warehouse removes it and the invoice goes to the buyer; in India check that GST invoice handling allows it.
+- **Price:** "No price on the packing slip" only if the warehouse removes it and the invoice goes to the buyer; check that your market's tax invoice rules allow it.
 - **Exchange:** who can exchange (buyer or recipient), how many days, who pays return shipping.
 
 ### 5. Build the cutoff table and the swap
 
-For each region the ads reach, compute the last safe order day: festival date minus courier transit days minus dispatch days minus one buffer day (practitioner default; widen it for remote pincodes and peak weeks). Then:
+For each region the ads reach, compute the last safe order day: festival date minus courier transit days minus dispatch days minus one buffer day (practitioner default; widen it for remote postcodes and peak weeks). Then:
 
 - ads with an "arrives by" line stop or switch the day after the cutoff for that region;
 - after the last cutoff, switch to gift card copy ("Instant e-gift card, sent by email") or "Order now, arrives after [date], with a card you can give on the day".
@@ -97,7 +97,9 @@ No urgency beyond the real cutoff. "Last chance" copy runs only on the real last
 
 ### 6. Season and timing notes
 
-- **India:** Diwali, Raksha Bandhan, Karva Chauth, Bhai Dooj and wedding season dates move each year; check the calendar. COD is common for gifts but RTO risk rises when the recipient is not expecting a parcel; push prepaid for gift orders where the store can (`cut-rto-on-cod-orders`). Prices include GST [ADC-6147]. Corporate Diwali gifting goes to `corporate-gifting-sales-pitch`.
+- **UK, EU and Australia:** Christmas cutoffs follow national post and courier peak schedules (Royal Mail, DHL, DPD, Australia Post), so publish your own dates. Mother's Day falls in spring in the UK but in May in the US and Australia, so set cutoffs per market. Prices include VAT or the local sales tax.
+- **Local festivals:** Lunar New Year, Eid and other gifting festivals move each year; check the calendar for each market the ads reach.
+- **Anywhere:** if the store offers pay on delivery, failed deliveries and returns rise when the recipient is not expecting a parcel; push prepaid for gift orders where the store can. Corporate gifting goes to `corporate-gifting-sales-pitch`.
 - **US:** Black Friday to Christmas cutoffs depend on carrier peak schedules; publish the cutoff dates on the site. 16 to 31 December can be the cheapest Meta auction of the quarter, so plan post-Christmas copy for gift-card spenders and self-gifters [ADC-0043].
 - Beyond the big holidays, owning a cultural moment can create extra demand peaks [EML-0055].
 
@@ -113,7 +115,7 @@ Gift-season ads look weak in real time because purchases backdate across longer 
 - The cutoff table gives each ad's stop or switch date by region.
 - A gift card or late-delivery version is ready for after the last cutoff.
 - Wrap and packing cost is inside gross profit per order.
-- No urgency beyond the real cutoff; India prices include GST.
+- No urgency beyond the real cutoff; prices include tax where the market expects it.
 - Nothing published or scheduled without the client's yes.
 
 ## Output
@@ -153,7 +155,15 @@ Gift-season ads look weak in real time because purchases backdate across longer 
 - MEA-0035: gift-season customers may repeat less.
 - EML-0055: owning a cultural moment adds demand peaks.
 - CXP-0008: unboxing cost per order bands.
-- ADC-6147: bait and switch and false urgency are misleading in India.
 - MEA-0037: margin from delivered cost.
 
 What makes this skill ours: gift buyers are found in the store's own orders (different billing and shipping names, gift notes); every gift promise is written as the exact operating rule with its proof; a cutoff table by region tells each ad when to stop or switch to gift cards; and wrap cost and weaker repeat rates are counted before the season starts.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- Diwali, Raksha Bandhan, Karva Chauth, Bhai Dooj and wedding season dates move each year; check the calendar. Example cutoff line: "Order by 15 Aug for delivery in Delhi NCR".
+- COD is common for gifts, but RTO risk rises when the recipient is not expecting a parcel; push prepaid for gift orders (`cut-rto-on-cod-orders`).
+- Prices include GST [ADC-6147]; check that GST invoice handling allows a hidden price on the packing slip.
+- Corporate Diwali gifting goes to `corporate-gifting-sales-pitch`.
+- ADC-6147: bait and switch and false urgency are misleading in India.

@@ -1,6 +1,6 @@
 ---
 name: build-google-search-campaign
-description: "Builds a ready-to-approve Google Search campaign for an online store from scratch: separate brand, product and competitor groups, keywords by intent with match types, a starting negative list, one ad per group with assets, and starting bids and budgets worked back from the store's gross profit per purchase. Delivered as a Google Ads Editor sheet plus a one-page settings list, built paused for the client to approve. Covers India notes (Hinglish queries, cash on delivery, GST in cost) and the US. Use when a store has no Search campaign, when an old one is a tangle of mixed brand and non-brand traffic, or when Shopping is running and the store wants Search for extra volume."
+description: "Builds a ready-to-approve Google Search campaign for an online store from scratch: separate brand, product and competitor groups, keywords by intent with match types, a starting negative list, one ad per group with assets, and starting bids and budgets worked back from the store's gross profit per purchase. Delivered as a Google Ads Editor sheet plus a one-page settings list, built paused for the client to approve. Covers market notes (local language and spelling queries, payment and delivery wording, tax on ad invoices) for the US, UK, EU and other markets. Use when a store has no Search campaign, when an old one is a tangle of mixed brand and non-brand traffic, or when Shopping is running and the store wants Search for extra volume."
 ---
 
 # Google Search campaign from scratch
@@ -25,7 +25,7 @@ description: "Builds a ready-to-approve Google Search campaign for an online sto
 
 Required:
 
-1. **Gross profit per purchase** from `store-meta-math` or `build-sku-profit-sheet`: price after discount minus product cost, shipping, payment fees, returns and, in India, return-to-origin losses on cash on delivery.
+1. **Gross profit per purchase** from `store-meta-math` or `build-sku-profit-sheet`: price after discount minus product cost, shipping, payment fees, returns and, where the store offers pay on delivery, failed-delivery losses.
 2. **Product list** with URLs, prices and stock: Shopify product export (Handle, Title, Variant Price, Variant Inventory Qty) or a live collection URL.
 3. **Search demand**: Keyword Planner (free inside Google Ads) for 30 to 80 seed terms, and the Search terms report from any Shopping or Performance Max campaign (last 90 days: Search term, Clicks, Cost, Conversions, Conv. value).
 4. **Conversion tracking state**: one primary purchase action with real order values. If unsure, run `check-google-ads-conversion-tracking` first.
@@ -52,14 +52,14 @@ Access: read access to research; draft access (level 2) to load the paused campa
 - Break-even cost per purchase (CPA) = gross profit per purchase. Break-even ROAS = 1 / gross margin [GAD-0023].
 - Target CPA = break-even CPA minus the profit the client wants per order.
 - Starting max CPC = target CPA x expected conversion rate. Use the store's own Google conversion rate if it exists; if not, use the store's sitewide rate halved (practitioner default, test it). CPA = CPC / conversion rate, so a high CPC is fine only if the rate rises with it [GAD-0038].
-- India: add the GST shown on the Google Ads invoice to ad cost before comparing with profit. Count a cash-on-delivery order only after delivery when working out conversion rate from Shopify.
+- Tax: if the store cannot reclaim the VAT or other tax shown on the Google Ads invoice, add it to ad cost before comparing with profit. If the store offers pay on delivery, count those orders only after delivery when working out conversion rate from Shopify.
 
 ### 2. Sort keywords into four groups
 
 | Group | What it holds | Example pattern |
 |---|---|---|
-| Brand | Store name, store name plus product, misspellings | "storename", "storename kurta" |
-| Product: transactional | Product type plus buying words, size, colour, material, use | "linen kurta men", "buy steel water bottle 1 litre" |
+| Brand | Store name, store name plus product, misspellings | "storename", "storename linen shirt" |
+| Product: transactional | Product type plus buying words, size, colour, material, use | "linen shirt men", "buy steel water bottle 1 litre" |
 | Product: problem | The problem the product solves, only where the product truly solves it | "water bottle that keeps cold all day" |
 | Competitor | Rival brand names, kept in their own campaign | "rivalname bottle" |
 
@@ -67,7 +67,7 @@ Rules:
 - One theme per ad group, 5 to 20 close keywords each. A theme is one product type plus one buyer need.
 - Drop terms with research intent only ("how is X made", "X meaning") unless a page answers them and sells.
 - Keep comparison terms ("X vs Y", "best X for Y") in their own ad group, with a page that compares honestly.
-- India: add Hinglish and transliterated forms buyers really type ("kurta for men cotton", "bottle ka price"), and regional-language terms only if the landing page and ads exist in that language.
+- Language: add the spellings and mixed-language forms buyers really type (US and UK spelling such as "color" and "colour", local words, common misspellings), and terms in the other languages your buyers use only if the landing page and ads exist in that language. Run one campaign per country or language.
 
 ### 3. Choose match types
 
@@ -91,7 +91,7 @@ Each ad group gets one responsive search ad. Start with 8 to 10 strong headlines
 - Headline 1 to 3 candidates repeat the ad group's theme in buyer words.
 - Include price or offer only if it is live today and matches the page.
 - Competitor ads must not use the rival's trademark in ad text; Google can restrict that after a complaint, while bidding on the name as a keyword is not restricted [GAD-6120].
-- India: say "Cash on delivery available" or "Free delivery above 499" only if true on the site. US: state the real shipping and returns terms.
+- All markets: say "Pay on delivery available", "Free delivery over 50" or "Free returns" only if true on the site, and state the real shipping and returns terms.
 - Assets: 4 sitelinks (best seller collection, size guide or how to choose, reviews, returns or delivery), 4 callouts, 1 structured snippet (Types or Styles). Google's limits: headline 30 characters, description 90, path fields 15 each.
 
 Landing pages: product groups go to the closest product or collection page, never the home page. Brand goes to the home page or the best seller page.
@@ -119,6 +119,16 @@ Test spend for each product campaign = target CPA x 20 purchases (practitioner d
 - Day 7: search terms reviewed, waste added to negatives; non-brand click-through rate checked against a rough 7 to 8% floor from one agency's norms [GAD-0020].
 - Day 14: cost per purchase by ad group against target CPA, judged on "conversions by conversion time" because recent days under-count [GAD-0035].
 
+### 9. Category campaigns and converting searches
+
+**Category campaign** for a popular collection: one ad group per collection, 3 to 5 phrase keywords (10 at most), never two collections in one ad group, ads that send to the collection page, brand terms as negatives. Build it only when the category has real search volume, and start at about 20 to 30 a day (more for high order values).
+
+- **Mine winners first.** Pull converting queries from the Shopping and Performance Max search terms and add them as exact match before guessing new ones.
+- **Drop terms the margin cannot pay for.** Keyword Planner's top-of-page bid / the store's conversion rate gives a likely cost per sale; drop the term if that is above break-even cost per sale.
+- **Intent decides the page.** Buying terms go to product or collection pages; research terms go to a blog post or advertorial or are left out; competitor-name terms stay in their own campaign.
+- **Ad group size.** Single-topic ad groups of about 10 to 20 related keywords have replaced one-keyword groups, because exact match now matches meaning [GAD-6167]. Small stores start with 3 to 5 groups.
+- **Negatives rhythm.** Weekly in the first 30 days, daily on big budgets, then weekly or fortnightly, plus an account-wide negative list [GAD-6168].
+
 ## Checks before you hand it over
 
 - Every non-brand campaign carries the brand negative list; the brand campaign has no non-brand keywords.
@@ -128,6 +138,7 @@ Test spend for each product campaign = target CPA x 20 purchases (practitioner d
 - No ad uses a rival's trademark, an untrue offer or a claim outside the claims profile.
 - Search partners, Display and auto-apply are off; location option is Presence.
 - Everything is built paused; nothing is enabled without the client's yes.
+- Each category ad group holds one collection and points to that collection page.
 
 ## Output
 
@@ -147,6 +158,7 @@ Test spend for each product campaign = target CPA x 20 purchases (practitioner d
 - **Rival names in ad text.** Step 5 keeps them to keywords only.
 - **Home page as the landing page for product terms.** Step 5 points each group to its own page.
 - **Judging last week on default columns.** Step 8 uses conversion time.
+- **Two collections in one ad group.** The ad and page can match only one of them.
 
 ## Sources
 
@@ -164,5 +176,13 @@ Test spend for each product campaign = target CPA x 20 purchases (practitioner d
 - GAD-6120: trademark as keyword allowed; in ad text restricted.
 - GAD-6121: brand exclusions and inclusions in Search.
 - MEA-0016, MEA-0017: real order values, one primary purchase action.
+- GAD-6167: single-topic ad groups of 10 to 20 keywords.
+- GAD-6168: negatives rhythm.
 
-What makes this skill ours: max CPC and every budget are worked back from the store's gross profit per purchase, not a benchmark; the competitor campaign is capped and kept out of the trademark trap; India queries in Hinglish and cash-on-delivery wording are built in only where true; and the build ships paused with a dated 14-day check plan.
+What makes this skill ours: max CPC and every budget are worked back from the store's gross profit per purchase, not a benchmark; the competitor campaign is capped and kept out of the trademark trap; local language queries and payment wording are built in only where true; and the build ships paused with a dated 14-day check plan.
+
+## Selling in India
+
+- Add the GST on the Google Ads invoice to ad cost, and count cash-on-delivery orders only after delivery.
+- Add Hinglish and transliterated forms buyers type ("kurta for men cotton", "bottle ka price").
+- Say "Cash on delivery available" only if true on the site.

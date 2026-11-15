@@ -100,7 +100,7 @@ Order by: gross profit per order of the target x impressions at positions 4 to 2
 
 ### 8. Market notes
 
-- **India:** if the store runs translated pages, link within the same language version; do not send Hindi readers to English pages mid-sentence. City or festival collections (Diwali gifts) need links from the home page only while in season, then from a gifts hub.
+- **Multi-language stores:** if the store runs translated pages, link within the same language version; do not send readers of one language to pages in another mid-sentence. Festival or holiday collections (Lunar New Year gifts, Eid gifts, Christmas gifts) need links from the home page only while in season, then from a gifts hub.
 - **US:** seasonal collections (Black Friday, holiday gifts) stay live all year with a hub link, so they keep their links for next season.
 
 ### 9. Ship and measure

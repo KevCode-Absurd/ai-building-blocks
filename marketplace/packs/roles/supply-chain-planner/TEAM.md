@@ -4,7 +4,7 @@ Forecasts demand and plans stock and production so best sellers stay in stock wi
 
 This role is a discovery group, not a fixed place in a company hierarchy. The general coordinator assigns a task lead and working groups for each job.
 
-Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (WORK-METHOD.md, step 1), are current and have been read. For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.
+Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (METHOD.md, step 1), are current and have been read: for a business, the org context (`context/org-context/`) first. Read the store memory first: `context/MEMORY.md`, or the memory packet the owner pasted (MEMORY-TEMPLATE.md). For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.
 
 ## How I critique
 
@@ -28,6 +28,15 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Kalpana (kalpana-demand)
 - Zhenyu (zhenyu-sourcing)
 - Omar (omar-inventory-planning)
+- Alistair (alistair-packaging)
+- Ishita (ishita-india-commerce)
+- Gurdeep (gurdeep-shipping-returns)
+- Tunde (tunde-supplier-search)
+- Douglas (douglas-should-cost)
+- Akosua (akosua-cost-forecast)
+- Wenhao (wenhao-procurement)
+- Phuong (phuong-quality-control)
+- Sheila (sheila-inbound-freight)
 - Hideki (hideki-stock-planner)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

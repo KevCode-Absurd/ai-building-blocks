@@ -43,6 +43,10 @@ Reading is level 1. Creating collections and menus is level 2: build them unpubl
 
 ## Steps
 
+### 0. Count the clicks today
+
+Before changing anything, count the clicks from the home page to each of the top 10 collections by sales, on a phone and on desktop, and write the numbers in the sheet. Do the same again after the new menu is built. Fewer clicks helps buyers and helps search engines find the pages that earn; the before and after table shows the client what changed.
+
 ### 1. Find the shopping paths
 
 From search terms, messages and reviews, list how buyers start: by problem ("for dry skin"), by product kind ("serums"), by person ("for him"), by occasion ("gifts under 1,000"), by collection or drop. Count how often each appears. The top 3 or 4 paths become the menu's spine.
@@ -65,7 +69,7 @@ Rules run on fields, so design tags before rules. Use prefixes so tags sort and 
 - `type:` is the product type field itself (Serum, Cleanser).
 - `need:dry-skin`, `need:acne`.
 - `for:men`, `for:kids`.
-- `occasion:diwali`, `occasion:gift`.
+- `occasion:christmas`, `occasion:gift`.
 - `range:` for a product line.
 
 Write each tag in lowercase with hyphens. No free-text tags. List every allowed tag in the sheet.
@@ -88,10 +92,19 @@ Manual collections only for hand-picked edits like a founder's picks. Set the so
 - Add images or icons to category items in the mobile menu; replacing a text menu with image category navigation lifted conversion in one agency test [LPG-0039].
 - New visitors often open the mobile menu first, so put bestsellers at its top and move contact, FAQ and reviews lower [LPG-0061].
 - Use mega menus only above about 6 categories with sub-collections.
+- Pick the menu style by range size: a small range gets one "Shop" item that opens the core collections; a large range puts sub-collections straight in the menu so buyers skip a click (Protein, then whey, plant and clear); buyers who shop by attribute get a "Shop by" item (type, colour, room, concern). Many themes limit menu depth, so check before designing three levels.
+
+### 5b. Home page, sub-collections, filters and grids
+
+- **Home page order:** feature the collections with the most sales and gross profit near the top, in that order. The home page holds the most links on the site, so it also passes the most search weight to the collections you most want to rank. Hand the layout to `merchandise-homepage-and-collections`.
+- **Sub-collection links on the parent:** show each parent's sub-collections as image tiles or chips at the top of the parent collection page, so buyers narrow down without going back to the menu and search engines see the hierarchy.
+- **Filters only when the range needs them:** filters pay off with a few hundred products (around 200 is a practitioner mark, not a Shopify rule); below that they add clutter. Shopify filter URLs are usually not indexed, so a filter value buyers search for (for example "linen duvet covers") needs its own collection page. Check in Search Console whether filter URLs appear, and list which filter values become collections.
+- **Grid rules:** the product grid should show without waiting for scripts (Shopify's Search and Discovery filters do), with 36 to 48 products per page (practitioner default) and numbered pages rather than endless scroll, so buyers can come back to the same place.
+- **Product page links back:** breadcrumbs to the collection, links to related collections, and a related products block, so no product page is a dead end.
 
 ### 6. Footer and utility links
 
-Footer: shipping, returns, contact, track order, FAQ, about, policy pages, and in India the grievance contact. Never put core categories only in the footer.
+Footer: shipping, returns, contact, track order, FAQ, about, policy pages, and any contact or complaint details local law requires (for example the EU's trader contact and dispute details, or a grievance contact where the law names one). Never put core categories only in the footer.
 
 ### 7. Point product links at product URLs
 
@@ -101,10 +114,13 @@ Shopify themes often link products inside a collection with a collection-scoped 
 
 On a phone, each top path should reach a product in 2 taps. The first screen of each main collection should show four products in a two by two grid with prices [LPG-0059]. About 60% of visitors drop after the hero and around 10% more per row on grids [LPG-0041], so the sort order matters as much as the menu.
 
-### 9. India and US notes
+### 9. Market notes
 
-- India: regional language labels only if the store's pages are translated; a "COD available" collection is a poor idea, since it trains buyers to look for COD. Festive collections (Diwali, Rakhi) built 4 to 6 weeks before and hidden after.
-- US: holiday and gifting collections by price band ("under $25", "under $50") match how gift buyers search.
+- Languages: menu labels in the languages your buyers use only if the store's pages are translated; a half-translated menu looks broken.
+- Payment and offer collections: a collection built around a payment method (for example "pay on delivery available") is a poor idea, since it trains buyers to shop by payment terms rather than product.
+- Seasonal collections: peak season collections (Black Friday and Cyber Monday, Christmas and the winter holidays, Valentine's Day, local festivals such as Lunar New Year or Eid) built 4 to 6 weeks before and hidden after.
+- Gift price bands: holiday and gifting collections by price band in the store's own currency ("under 25", "under 50") match how gift buyers search.
+- Several markets: where Shopify Markets sells to many countries, hide collections for products a market cannot receive, and check sizes and units (US and EU sizes, inches and centimetres) match each market.
 
 ## Checks before you hand it over
 
@@ -115,6 +131,9 @@ On a phone, each top path should reach a product in 2 taps. The first screen of 
 - Each top path reaches a product in 2 taps on a phone.
 - Product links point to `/products/` URLs, or the change is listed for the developer.
 - Nothing is published without the client's yes.
+- The click count from the home page to the top 10 collections is recorded before and after.
+- Every filter value with search demand either has its own collection or is listed as a gap.
+- Each parent collection shows links to its sub-collections.
 
 ## Output
 
@@ -131,6 +150,8 @@ On a phone, each top path should reach a product in 2 taps. The first screen of 
 
 **Product fix list:** Handle, Field, Old value, New value.
 
+**Click depth table:** Collection, Sales rank, Clicks from home before (phone, desktop), Clicks after (phone, desktop).
+
 ## Common mistakes
 
 - **Menus built from the warehouse view.** Step 1 starts from buyer words and search terms.
@@ -139,6 +160,8 @@ On a phone, each top path should reach a product in 2 taps. The first screen of 
 - **Thin collections.** Step 2 merges those under about 4 products.
 - **"Sale" built on invented compare-at prices.** Step 4 uses only real past prices.
 - **Collection-scoped product URLs.** Step 7 [SEO-0004].
+- **Filters on a 40-product store.** Step 5b adds filters only when the range needs them.
+- **Expecting filter pages to rank.** Step 5b turns searched filter values into real collections.
 
 ## Sources
 
@@ -155,3 +178,7 @@ On a phone, each top path should reach a product in 2 taps. The first screen of 
 - MEA-0037: gross margin uses delivered cost.
 
 What makes this skill ours: the menu spine comes from counted buyer words and search terms; the tag scheme is designed before any rule so new products file themselves; every collection has an owner and a minimum size; and the structure doubles as the store's search landing pages.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Put the grievance contact in the footer. Use Hindi or regional language labels only if the store's pages are translated. A "COD available" collection is a poor idea, since it trains buyers to look for COD. Festive collections (Diwali, Rakhi) are built 4 to 6 weeks before and hidden after, with tags such as `occasion:diwali`.

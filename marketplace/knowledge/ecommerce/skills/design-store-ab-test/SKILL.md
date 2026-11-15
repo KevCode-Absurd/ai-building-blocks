@@ -30,13 +30,13 @@ Required (read access, level 1):
 4. **The change** for each test, in one sentence, with a mockup or link.
 5. **The testing tool**, and whether it splits in the browser or on the server.
 
-Optional: COD share by page, past test log, planned promotions in the coming weeks.
+Optional: payment method share by page (including pay on delivery where offered), past test log, planned promotions in the coming weeks.
 
 Building variants needs draft access (level 2) on an unpublished theme copy; starting a test is a live change and needs the client's yes, asked in your message.
 
 ## Before you start: the gates
 
-1. **Gross profit per order known.** Pass when it includes product cost, shipping, payment fees, returns and RTO [MEA-0037]. Fail: compute it first.
+1. **Gross profit per order known.** Pass when it includes product cost, shipping, payment fees, returns and failed deliveries [MEA-0037]. Fail: compute it first.
 2. **Is it a repair?** If the current state is plainly broken (add to cart fails on one browser, a field rejects valid input, a wrong price, an event firing twice), fix it now. Do not test a bug.
 3. **Tracking matches orders.** GA4 or the test tool counts purchases within about 5% of Shopify orders for the same days; GA4 conversion rate is filtered to the purchase event [MEA-0002]; Shopify sessions include bots, so check them against GA4 [MEA-0012]. Fail: fix tracking first with `set-up-ga4-for-store-and-check-data`.
 4. **Order volume, a default with reasons.** Under 30 orders a month: research and ship only. 30 to 300: one big swing at a time, built to catch a 20% or bigger lift. 300 to 3,000: regular tests at 10 to 20%. Above 3,000: smaller lifts and more variants [CRO-0011]. Each test is then sized on the traffic that sees its change; say in one line when a test departs from its band.
@@ -59,7 +59,7 @@ List every chat topic, return reason and survey answer with its share. Each one 
 - **Visitors in scope:** only those the change touches. A mobile layout change is tested on mobile, a one-browser fix on that browser, a landing page change on the source that lands there.
 - **One baseline per scope:** take every rate from the same visitors in scope. Never mix a mobile rate with an all-device rate in one sum.
 - **Primary:** the conversion at the step the change moves [CRO-0014]. Product image, gallery or copy: add to cart rate. Cart or shipping message: checkout start rate. Offer, trust or payment near the purchase: orders per visitor in scope.
-- **Guardrails:** orders per visitor whenever the primary sits earlier, order value, gross profit per order, return rate, page speed, and for India COD share and RTO.
+- **Guardrails:** orders per visitor whenever the primary sits earlier, order value, gross profit per order, return rate, page speed, and, where pay on delivery is offered, its share and the failed-delivery rate.
 - **Money metric:** gross profit per visitor = conversion x gross profit per order; the ship decision uses this [OFF-0015].
 - **Segments:** at most two named in advance. Each extra metric or segment raises the false winner rate: one 5%, two about 10%, three about 14% [CRO-0010].
 
@@ -93,11 +93,31 @@ Run time = (visitors per variant x variants) / weekly visitors in scope, from th
 - **Split check** at the end with a chi-square test; a mismatch voids the result [CRO-0007].
 - **Ship rule:** the primary wins at 95%, gross profit per visitor is up, no guardrail breach. A fully powered flat test means the effect is below the MDE: ship the cheaper version [CRO-0015].
 
+### 7b. Pick the route the store's plan allows
+
+Sort every idea into "before checkout" (home, collection, product, cart, add to cart, trust lines, price display) or "in checkout". Most tests worth running sit before checkout anyway.
+
+- **Basic, Shopify and Advanced plans:** test everything before checkout; the checkout itself cannot be split by a browser tool since the checkout rebuild [CRO-0016]. An in-checkout idea gets a "not testable here" line plus the nearest idea before checkout that sets the same expectation (for example a delivery cost line in the cart instead of the shipping step).
+- **Plus:** checkout blocks and UI extensions can change checkout, and some apps run limited checkout tests through them. Check what the chosen tool supports on the store's plan today; Shopify changes these rules, so re-check once a year.
+
+Then pick the route for each test:
+
+| Route | Suits | Costs |
+|---|---|---|
+| Browser tool (visual editor) | Front-end copy, layout and image tests on product, cart and home pages; quick for a marketer | Can flicker, adds page weight, breaks more easily after theme changes |
+| Server or theme-level split (including Shopify's own theme rollouts) | Speed-sensitive pages, pricing display logic, anything near checkout | Needs a developer or theme change; slower to set up; theme rollouts show numbers but no significance verdict, so the read still goes through `read-store-ab-test-result` |
+
+**Flicker:** a hide-the-page snippet stops the original flashing but can hold the page blank for up to a few seconds by default (ask the vendor for its current setting) [CRO-0008]. Accept that cost on purpose, or move the test server-side.
+
+**Ask every tool five questions before trusting it,** and name tools only as examples, since free tiers and prices change: what is the free limit and what happens past it; does it split in the browser or on the server; how does it handle flicker; which statistics does it use (fixed sample, always-valid sequential or Bayesian), so you know whether watching the results is safe; and does it work on this Shopify plan and theme?
+
+**Do not stack tests.** Never two tests on the same page and visitors at once. A home page test plus a cart test is fine; a test above the fold plus one far below it can work if the client accepts the risk. Check that no email, SMS or ad link sends traffic to only one version by accident.
+
 ### 8. A plan with several tests
 
 Each test gets its own sheet: scope, baseline, primary, expected lift, MDE, sample, weeks. A shared block holds only settings true for every test. Tests on the same visitors and page run one after another, highest expected gross profit first [CRO-0013]; tests on different pages or devices run at once. Name the start week of each. Run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>` before hand-over.
 
-India: if a change could shift COD share, the primary is delivered or prepaid-plus-confirmed orders, read 2 to 3 weeks after the test ends. US: tax and shipping later in a non-Plus checkout cannot be tested; test the cart and product page messages that set expectations.
+Pay on delivery: if a change could shift the share of pay-on-delivery orders, the primary is delivered or prepaid-plus-confirmed orders, read 2 to 3 weeks after the test ends. Checkout limits: tax and shipping shown later in a non-Plus checkout cannot be tested; test the cart and product page messages that set expectations. In the UK, EU and Australia, page prices already include tax, so test delivery cost and timing messages instead.
 
 ## Checks before you hand it over
 
@@ -108,6 +128,8 @@ India: if a change could shift COD share, the primary is delivered or prepaid-pl
 - Sample size shows its inputs; run time is 2 to 6 whole weeks from median traffic in scope, scheduled by start week.
 - Ship uses gross profit per visitor; stop, harm and split rules are written before launch.
 - Starting a test needs the client's yes, asked in your message, not in the plan.
+- Every test names its route (browser or server or theme) for the store's plan, with the flicker cost stated; in-checkout ideas on non-Plus plans are marked not testable with the nearest alternative.
+- The chosen tool's statistics method is named, and no two tests share a page and visitors at once.
 
 ## Output
 
@@ -144,6 +166,8 @@ Add the row to the store's test log for `read-store-ab-test-result`.
 - **An add-to-cart lift applied to orders.** Step 4 carries it through the pass-through rate.
 - **Mixed baselines.** Step 3 keeps one per scope.
 - **Peeking and stopping on the first green number.** Step 7 fixes the read before launch.
+- **Buying a test tool before checking the plan.** Step 7b sorts ideas by checkout or not and picks the route the plan allows.
+- **Trusting a theme rollout's numbers as a verdict.** Step 7b sends them through the readout skill.
 
 ## Sources
 
@@ -166,3 +190,8 @@ Add the row to the store's test log for `read-store-ab-test-result`.
 - OFF-0015: profit per session.
 
 What makes this skill ours: every big objection gets a test or a fix, each test is sized on the visitors its change reaches with its own baseline, the forecast and the MDE stay apart, and earlier-step lifts reach orders only through the store's own funnel.
+
+## Selling in India
+
+- Track COD share and RTO as guardrails on every test.
+- If a change could shift COD share, the primary is delivered or prepaid-plus-confirmed orders, read 2 to 3 weeks after the test ends.

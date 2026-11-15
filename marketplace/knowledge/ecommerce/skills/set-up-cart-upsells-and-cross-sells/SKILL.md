@@ -39,7 +39,7 @@ If gross profit per unit is missing, stop: offers cannot be ranked. Building off
 1. **Gross profit per unit known** for both the anchor and the offered product [MEA-0037]. Fail: compute it first.
 2. **Enough orders.** At least about 300 multi-item orders in the window for basket analysis (practitioner default). Fewer: build pairings from product logic and reviews (Step 2), and mark them as untested.
 3. **Stock can carry it.** An offered SKU needs cover for the whole offer window plus lead time. Fail: drop it or cap it.
-4. **Honest mechanics.** No pre-ticked add-ons, no items added to the cart without a tap, no fake "only today" on always-on offers. India's 2023 dark-pattern guidelines name adding items without consent (basket sneaking) and false urgency [CRO-6606] [OFF-6607], and from 1 January 2027 stores must self-audit against them [MCR-6605]; US consumer protection law treats them as deceptive too.
+4. **Honest mechanics.** No pre-ticked add-ons, no items added to the cart without a tap, no fake "only today" on always-on offers. Consumer rules in most markets treat adding items without consent (basket sneaking), hidden extra charges and false urgency as unfair or deceptive [CRO-6606] [OFF-6607]: the FTC and state laws in the US, the CMA and the consumer protection rules in the UK, the EU's consumer rules and Digital Services Act, and the ACCC in Australia. Some markets also require a yearly self-audit against dark patterns [MCR-6605].
 
 ## Steps
 
@@ -89,10 +89,12 @@ For each slot: trigger product or collection, offer product and variant, price o
 
 Offers can take credit for items buyers would have bought anyway. Where the app allows, hold out 10% of carts from offers for 4 weeks (practitioner default) and compare gross profit per order and conversion between groups. If the app cannot hold out, compare 4 weeks before and after, with no promotion in either window, and label it weaker evidence. Keep an offer only if gross profit per order rises and conversion does not fall beyond noise.
 
-### 8. India and US notes
+### 8. Market and payment notes
 
-- **India:** on COD orders, a post-purchase add-on raises the cash due at the door; confirm it with the buyer (chat or call) and watch RTO on orders with add-ons. One-click post-purchase works only with payment methods that can be charged again without re-entry; for COD and UPI, use the thank-you page and a WhatsApp or email follow-up instead. Show prices with GST included.
-- **US:** check that the add-on price shown includes any extra shipping, and that subscription add-ons state the renewal terms before the tap.
+- **Payment methods:** one-click post-purchase works only with payment methods that can be charged again without re-entry (most cards, Shop Pay, some wallets). For bank transfers, buy now, pay later, local bank-redirect methods (iDEAL, Bancontact, BLIK and similar) and pay on delivery, use the thank-you page and an email or chat follow-up instead.
+- **Pay on delivery:** where the store offers it, a post-purchase add-on raises the cash due at the door; confirm it with the buyer (chat or call) and watch refused parcels on orders with add-ons.
+- **Prices shown:** check that the add-on price shown includes any extra shipping, and show it the way the market requires (tax-inclusive in the UK, EU and Australia; before sales tax in the US and Canada).
+- **Subscriptions:** subscription add-ons state the renewal terms and how to cancel before the tap; the US, UK and EU all have auto-renewal rules.
 
 ## Checks before you hand it over
 
@@ -126,7 +128,7 @@ Offers can take credit for items buyers would have bought anyway. Where the app 
 - **Too many offers.** Step 3 allows one per slot.
 - **Pre-ticked add-ons.** Gate 4 rules them out.
 - **Assuming every add-on is extra profit.** Step 7 holds out a group to check.
-- **Post-purchase one-click on COD orders.** Step 8 moves those to the thank-you page and follow-up.
+- **Post-purchase one-click on orders that cannot be charged again.** Step 8 moves those (pay on delivery, bank transfer, bank-redirect methods) to the thank-you page and follow-up.
 
 ## Sources
 
@@ -142,6 +144,10 @@ Offers can take credit for items buyers would have bought anyway. Where the app 
 - OFF-0074: deep-discount post-purchase offer of the same item.
 - [CRO-6606]: checkout dark patterns: basket sneaking, drip pricing, forced action.
 - [OFF-6607]: offer dark patterns: false urgency, bait and switch, confirm shaming.
-- [MCR-6605]: from 2027, yearly dark-pattern self-audit for every e-commerce entity.
+- [MCR-6605]: a yearly dark-pattern self-audit for every e-commerce entity, where a market requires one (see the last section).
 
-What makes this skill ours: pairings come from the store's own baskets (attach rate and lift) and second orders, not an app's generic suggestions; each slot gets one offer ranked by added gross profit after discount and shipping; mechanics that India's dark-pattern guidelines and US law treat as deceptive are banned up front; COD orders are routed away from one-click offers; and a holdout proves the offers add profit rather than just taking credit.
+What makes this skill ours: pairings come from the store's own baskets (attach rate and lift) and second orders, not an app's generic suggestions; each slot gets one offer ranked by added gross profit after discount and shipping; mechanics that consumer rules in the US, UK, EU and other markets treat as deceptive are banned up front; orders that cannot be charged again are routed away from one-click offers; and a holdout proves the offers add profit rather than just taking credit.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. India's 2023 dark-pattern guidelines name basket sneaking and false urgency [CRO-6606] [OFF-6607], and from 1 January 2027 stores must self-audit against them every year [MCR-6605]. On COD orders, a post-purchase add-on raises the cash due at the door; confirm it with the buyer and watch RTO on orders with add-ons. For COD and UPI, use the thank-you page and a WhatsApp follow-up instead of one-click. Show prices with GST included.

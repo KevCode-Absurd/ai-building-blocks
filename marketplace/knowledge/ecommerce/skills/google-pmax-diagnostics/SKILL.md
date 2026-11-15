@@ -99,6 +99,18 @@ Goal: how many new customers Performance Max adds when it cannot take brand sear
 
 Verdict: new-customer orders hold or rise while reported return falls, so the old return was brand sales: keep the exclusion. New-customer orders fall and brand Search did not pick them up: Performance Max was adding real buyers; lift the exclusion and recheck.
 
+### 7. Feed-only build, kill rules and the routine
+
+**Feed-only build** when the remedy is feed-only [GAD-0006] [GAD-0048]: Sales goal, purchases only; Maximize Conversion Value with no target for the first months [GAD-0016]; one asset group with all products and every asset field cleared (no final URL, headlines, descriptions, logo, images or video); audience signals blank; automatic text, image and video enhancements and final URL expansion off. Check the ads are approved with no policy warning; ignore "Poor" ad strength. If Google will not accept a blank group, add the minimum assets and stop calling it feed-only; do not work around a rejection. Exclude brand twice, with a brand list and brand negatives [GAD-6154]. When it sits behind a new-customer Standard Shopping campaign, that campaign runs at High priority so Performance Max serves the rest [GAD-0029].
+
+**Kill rules, reviewed at 2 and 4 weeks:** pause if more than 10% of spend lands on Display or YouTube after assets were confirmed blank, or if new-customer store sales fall more than 15% over 4 weeks while total revenue stays flat.
+
+**Routine:**
+- **Daily or every few days:** search term insights for irrelevant queries and brand terms carrying conversions.
+- **Weekly (7-day window):** product spend; flag a product whose spend in the window passes its break-even cost per sale with no sale; replace low-rated assets; exclude high-spend, non-converting landing pages and placements; Merchant Center errors, disapprovals and stale price or stock [GAD-6215].
+- **Monthly (30-day window):** refresh search themes from converting terms; propose a customer list refresh for the owner's yes, never upload one without it.
+- Raise budget 10 to 20% only when ROAS is above break-even on store numbers and the campaign spends its budget; "limited by budget" is a hint, not proof. Wait 2 to 4 weeks after a bidding change, never double a budget overnight.
+
 ## Checks before you hand it over
 
 - Channel shares add up to campaign cost.
@@ -108,6 +120,7 @@ Verdict: new-customer orders hold or rise while reported return falls, so the ol
 - The test plan names dates, the one change, the metric and the stop rule.
 - No verdict rests on in-platform return alone.
 - Nothing changes in the account without the client's yes; the test starts only after approval.
+- A feed-only build lists every cleared asset field and has dated 2-week and 4-week kill reviews.
 
 ## Output
 
@@ -129,6 +142,7 @@ Verdict: new-customer orders hold or rise while reported return falls, so the ol
 - **Fixing goal problems with overrides.** One purchase goal fixes the cause.
 - **Judging the brand test on Performance Max return.** New-customer orders decide.
 - **Starting Performance Max too early** [GAD-0033].
+- **Chasing ad strength on a feed-only campaign.** Check approval, not the strength label.
 
 ## Sources
 
@@ -141,5 +155,9 @@ Verdict: new-customer orders hold or rise while reported return falls, so the ol
 - GAD-0055: YouTube and Gmail click spikes.
 - MEA-0016, MEA-0017: one purchase goal with real values.
 - MEA-0033, MEA-0039, MEA-0050: acquisition MER and regional tests.
+- GAD-0016: no target ROAS on a new PMax for months.
+- GAD-0029: feed-only PMax behind high-priority Shopping.
+- GAD-6154: exclude brand twice.
+- GAD-6215: check stock and disapprovals first when PMax slips.
 
 What makes this skill ours: the verdict rests on Shopify new-customer orders and acquisition MER, not Performance Max's own return; a step-by-step brand-exclusion test measures real new-customer lift; asset groups are scored on stock and product coverage as well as assets; and card conflicts on video, signals and budget share are settled by the store's own results.

@@ -1,6 +1,6 @@
 ---
 name: corporate-gifting-sales-pitch
-description: "A corporate gifting offer (three gift boxes by budget, with quantity price bands, branding options and order deadlines), a target list of 40 companies with the buyer role to reach, a pitch email and LinkedIn note, and a quote template, for Diwali, year-end, client or employee gifts. Prices every box from real kitting, packaging and per-address shipping costs, finds the first leads in the store's own orders, works back from a delivery date the store can meet, and covers GST invoices in India and the US gift deduction limit. Use six to ten weeks before a gifting season, or when companies have started placing bulk orders on the site."
+description: "A corporate gifting offer (three gift boxes by budget, with quantity price bands, branding options and order deadlines), a target list of 40 companies with the buyer role to reach, a pitch email and LinkedIn note, and a quote template, for year-end holidays, local festivals, client or employee gifts. Prices every box from real kitting, packaging and per-address shipping costs, finds the first leads in the store's own orders, works back from a delivery date the store can meet, and covers sales tax or VAT invoices and the US gift deduction limit. Use six to ten weeks before a gifting season, or when companies have started placing bulk orders on the site."
 ---
 
 # Corporate gifting sales
@@ -9,7 +9,7 @@ description: "A corporate gifting offer (three gift boxes by budget, with quanti
 
 ## When to use
 
-- Diwali, Christmas or year-end is 6 to 10 weeks away and the store wants bulk orders.
+- Christmas, year-end, Lunar New Year, Eid or another gifting season is 6 to 10 weeks away and the store wants bulk orders.
 - Company buyers have already placed large or repeated orders on the site.
 - The store wants year-round employee onboarding or client thank-you orders.
 - A one-off corporate enquiry came in and the store has no offer or price bands.
@@ -17,7 +17,7 @@ description: "A corporate gifting offer (three gift boxes by budget, with quanti
 ## Not for
 
 - Consumer gifting ads and pages: use `seasonal-gifting-creative-plan` and `build-gift-guide-page`.
-- Producing the formal quote, proforma and GST invoice for a won order: use `bulk-order-quote-and-invoice`.
+- Producing the formal quote, proforma and tax invoice for a won order: use `bulk-order-quote-and-invoice`.
 - Follow-ups after the first two touches: use `b2b-sales-follow-up-sequence`.
 - Selling to shops that will resell: use `find-and-pitch-retail-stockists`.
 
@@ -29,7 +29,7 @@ Required:
 2. **Landed cost per SKU** and **stock on hand**, with supplier lead time for a top-up.
 3. **Packaging and kitting costs**: gift box, sleeve, filler, card, logo printing setup and per-unit cost, labour minutes per box.
 4. **Shipping quotes**: one bulk shipment to an office versus per-address delivery, for 2 or 3 cities.
-5. **Season and delivery date** the buyer will want (for Diwali, the date changes each year; check the calendar).
+5. **Season and delivery date** the buyer will want (for festivals that move, such as Lunar New Year, Eid or Easter, the date changes each year; check the calendar).
 
 Optional: past corporate orders and their feedback, branded packaging the store already uses.
 
@@ -40,7 +40,7 @@ If kitting costs are unknown, get one quote from a local packer or time the owne
 1. **Gross profit per box.** Pass when each box's price covers contents at landed cost, packaging, kitting labour, branding setup spread over the order, and shipping per address, using delivered-cost thinking [MEA-0037]. Fail: reprice or drop the box.
 2. **Capacity by deadline.** Pass when stock plus a top-up order can cover the largest likely order, and the team can kit the boxes per day needed before the last ship date. One late corporate order loses the account the way a missed retail order does [OPS-0022]. Fail: cap total boxes for the season and say so in the offer.
 3. **Cash.** Corporate orders tie up stock and packaging before payment. Pass when advances cover packaging and stock bought for the order [FIN-0011].
-4. **Rules.** US email outreach follows CAN-SPAM: postal address, opt-out, honoured within 10 business days [EML-6385]. WhatsApp only after a buyer shares their number for this [EML-6320]. India: buyers will need a GST tax invoice with their GSTIN [FIN-6380].
+4. **Rules.** US email outreach follows CAN-SPAM: postal address, opt-out, honoured within 10 business days [EML-6385]. Elsewhere the rules vary: the UK allows cold email to company addresses if you say who you are and offer an opt-out, while Germany and some other EU countries expect prior consent, and Canada's anti-spam law usually needs consent too; personal data such as named work emails falls under GDPR in the UK and EU. WhatsApp only after a buyer shares their number for this [EML-6320]. Business buyers in VAT markets will need a proper VAT invoice with their VAT number.
 
 ## Steps
 
@@ -52,7 +52,7 @@ Work back from the delivery date the buyer wants: last order date = delivery dat
 
 From products the store already makes and has in stock:
 
-- **Starter:** one hero product plus card. US client gifts often sit at or under 25 dollars because that is the most a US business can deduct per client per year; packaging and mailing usually do not count toward it [FIN-6387]. Do not give tax advice; just make one box fit that line.
+- **Starter:** one hero product plus card. US client gifts often sit at or under 25 dollars because that is the most a US business can deduct per client per year; packaging and mailing usually do not count toward it [FIN-6387]. Other countries have their own limits on deductible or tax-free gifts, so ask the buyer which budget line they use. Do not give tax advice; just make one box fit that line.
 - **Classic:** two or three products, the default and the one the email leads with.
 - **Premium:** fuller set, best packaging, room for a client's own item.
 
@@ -90,7 +90,7 @@ One sample box per lead who has a headcount and a date, delivered to the decisio
 
 Under 130 words:
 
-- Subject: the occasion and the date ("Diwali gifts for your team, delivered by [date]").
+- Subject: the occasion and the date ("Year-end gifts for your team, delivered by [date]").
 - Line 1: why them (they ordered before, or a reason tied to their team or clients).
 - Line 2: the three boxes with price from a quantity, and what customisation is possible.
 - Line 3: the real "order by" date and how many boxes the store can take this season.
@@ -104,7 +104,7 @@ LinkedIn note (under 300 characters): reason, occasion, offer to send the three-
 
 Fields: Quote number and date, Valid until, Buyer company, GSTIN or tax ID, Contact, Box type and contents, Customisation, Quantity, Unit price (ex tax), Tax rate and amount, Packaging and branding setup, Shipping (office drop or per address, number of addresses), Total, Advance due, Balance due, Last date to approve artwork, Delivery date, Cancellation rule.
 
-Practitioner default terms, test them: 50% advance with order, balance before dispatch for new clients; artwork approval in writing before printing; no cancellation after printing starts. India: GST shown separately, tax invoice at dispatch [FIN-6380]. Hand the won order to `bulk-order-quote-and-invoice`.
+Practitioner default terms, test them: 50% advance with order, balance before dispatch for new clients; artwork approval in writing before printing; no cancellation after printing starts. Show sales tax or VAT separately, with a proper tax invoice at dispatch. Hand the won order to `bulk-order-quote-and-invoice`.
 
 ### 8. Approve, send, track
 
@@ -147,8 +147,15 @@ Show the client the offer, list, emails and quote template. Send nothing until t
 - CXP-0008: unboxing material cost benchmarks.
 - OFF-0057: samples pay when requested.
 - FIN-6387: US 25 dollar business gift deduction limit and exclusions.
-- FIN-6380: India GST tax invoice fields.
 - EML-6385: CAN-SPAM covers business email.
 - EML-6320: WhatsApp needs opt-in.
 
 What makes this skill ours: the first leads come from company buyers already in the store's orders; every box is priced with per-address shipping and kitting labour shown; order-by dates work back from a delivery the store can meet with a season cap; and the starter box is shaped around the US gift limit without giving tax advice.
+
+## Selling in India
+
+- Diwali is the biggest corporate gifting season. Its date changes each year, so check the calendar and work order-by dates back from it. A subject line shape: "Diwali gifts for your team, delivered by [date]".
+- Company buyers will need a GST tax invoice with their GSTIN [FIN-6380]. Show GST separately and issue the tax invoice at dispatch.
+
+Sources for this section:
+- FIN-6380: India GST tax invoice fields.

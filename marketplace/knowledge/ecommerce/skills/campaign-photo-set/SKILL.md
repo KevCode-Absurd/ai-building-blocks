@@ -73,7 +73,7 @@ Shot list as a grid of buyer group, situation and product moment (unboxing, firs
 
 - **Real shoot:** photographer or the owner's phone, real customers or models, signed releases covering channels and time.
 - **Creators:** seed product to creators who match the casting sheet, brief the look and shot list, buy ad usage rights in writing. Expect low yield: one brand finds about two good creators per hundred products gifted and pays them flat fees [ORG-0033]. A large creator's shoot can feed a matching landing page when rights allow [LPG-0068].
-- **Generator:** every frame showing the product is anchored on a real product photo; never describe the product from text alone. Paste the truth sheet's format and label lines into each prompt. Once one frame renders the product right, add it as a further reference for the rest. Made-up people appear only as styled models, never as customers, reviewers or results. Follow each platform's AI labelling rules and the FTC rule against fake testimonials; in India, ASCI's code on misleading ads applies.
+- **Generator:** every frame showing the product is anchored on a real product photo; never describe the product from text alone. Paste the truth sheet's format and label lines into each prompt. Once one frame renders the product right, add it as a further reference for the rest. Made-up people appear only as styled models, never as customers, reviewers or results. Follow each platform's AI labelling rules and the FTC rule against fake testimonials; in the UK the CAP Code, and in the EU the unfair commercial practices rules, also ban misleading ads.
 
 A mix is normal; one agency sources roughly a third each from AI-assisted work, creators and in-house [MCR-0037].
 

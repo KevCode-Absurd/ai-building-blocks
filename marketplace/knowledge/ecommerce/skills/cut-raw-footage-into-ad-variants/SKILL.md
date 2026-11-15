@@ -51,6 +51,10 @@ Access: read only for files and the ad account. Uploading finished ads is draft 
 
 Watch everything once at normal speed with sound. For each usable clip, log: clip ID, start and end time, what happens, which claim it proves, energy (low, medium, high), and any problem (focus, noise, product hidden). Mark the single best take of each body line and each opener. Note any moment that is honest and specific, such as a small doubt or a precise detail; those often become the best openers.
 
+Give each usable moment one job: stop the scroll, name the problem or benefit, show the product or how it works, prove it, or ask for the action. If a job has no footage, name the pickup shot that would fill it rather than covering the gap with an unrelated picture. Record each clip's source in and out seconds; every later cut point and caption edge is taken from the real speech, never from the script's estimate, so no cut or caption lands in the middle of a word.
+
+If any take was made or changed by an AI tool, watch it right through, including the middle and the last word: mouth timing, teeth and jaw, the exact words, the same voice, and faces, clothes or background people nobody asked to change. Pick a clean take or name a reshoot; music and fast cuts do not fix a broken performance.
+
 ### 2. Pick the body
 
 Build one body from the best takes: problem, product in use, proof, honest verdict, ask. Keep the viewer's sense of being sold low early and raise it slowly; sudden jumps from story to pitch cause the biggest drop-offs [MCR-0027]. If the product needs explaining, keep 4 to 6 seconds of how it works before the product is named [MCR-0014]. This body is fixed for variants 1 to 3 so only the opener changes.
@@ -62,6 +66,8 @@ Pick the three most different openers from the log, not three wordings of one. T
 - Show the topic in the first frame, not unrelated b-roll [ORG-0017].
 - Filter for the buyer, not just stop the scroll; a broad attention grab trains delivery toward non-buyers [MCR-0026].
 - Bridge into the first body line without a jump.
+
+**Check every join** before you lock an opener onto the body: pronouns ("this", "it" must point at something already seen), the argument (the body answers the doubt the opener raised), the voice and energy, the product's state (sealed or opened), the light, the room sound and the music. If a join fails, record or pick a one-line bridge rather than stapling the opener on [MCR-6715]. When the hook changes to reach a new buyer or awareness stage, the body must change too; a new hook on a word-for-word old body is a mismatch [MCR-6626].
 
 ### 4. Build the variant matrix
 
@@ -77,15 +83,18 @@ Five ads, each with a job:
 
 V1 to V3 differ only in the opener. V4 and V5 each change one more thing from V1. If the account already knows its best opener, use it as A.
 
+Beyond the first five: with sound scripts, more openers on fewer bodies usually beats more bodies with few openers, because most viewers leave during the opener [MCR-6863]. A founder or creator shoot planned as 10 openers and 3 bodies gives 30 ads from a few minutes of recording [MCR-6773]. Release them in later rounds of 2 to 4 openers per body so each gets enough spend to read.
+
 ### 5. Cut the short version
 
-Only about 15% of viewers reach the second half of a video ad, so the first half carries the sale [MCR-0077]. Build the short cut by keeping opener, the single strongest proof shot, product name and ask. Never speed up footage to fit; drop beats instead. If the story collapses without its build-up, skip V4 and say so; make V5 with a second ending instead.
+Only about 15% of viewers reach the second half of a video ad, so the first half carries the sale [MCR-0077]. Build the short cut by keeping opener, the single strongest proof shot, product name and ask. Never speed up footage to fit; drop beats instead. If the story collapses without its build-up, skip V4 and say so; make V5 with a second ending instead. A long ad cut down in the edit often plays weak because its bridges no longer fit; if the short version needs new joins, flag that it needs its own short script and pickup lines rather than forcing it [MCR-6729].
 
 ### 6. Write the endings
 
 - **Soft ask (V1 to V4):** the speaker in their own words, plus the product name and where to buy on screen.
 - **Offer ending (V5 option):** the live offer exactly as on the product page today, with its end date if it has one. No invented deadlines.
 - **Proof ending (V5 option):** a real review line with first name and source, or the store's real review count, never a rounded-up number.
+- If a price has renewal or subscription terms, they go in the same caption as the price or the very next one, with no gap. Never crop off an instruction, a condition or a disclosure, and no transition hides the label or cuts into a demo.
 
 ### 7. Set pacing
 
@@ -104,6 +113,8 @@ Hand captions and on-screen text to `captions-and-text-for-sound-off` and music 
 - 4:5 at 1080 x 1350 for feeds, re-framed so face and product stay centred, not just cropped.
 - H.264 or the platform's listed codec, 30 frames a second, the platform's file size limit checked on the day.
 - Even loudness across all five; practitioner default about minus 14 LUFS, then check on a phone speaker.
+- MP4 in the yuv420p colour format with audio, which every placement plays. Deliver each shape as a clean copy (no added text) and a captioned copy, and keep the source files. Watch the first and last frame of every export small and muted, and listen at each cut for clicks, doubled audio or music that starts abruptly.
+- Music must be cleared for paid ads, not only for organic posts.
 
 ### 10. Name, tag and hand over
 
@@ -113,7 +124,7 @@ Name each ad with the store's pattern and tag opener, body, length, ending, crea
 
 Judge each variant on store-side cost per purchase against the store's break-even, then on gross profit per ad after the shoot cost [MCR-0023]. Click rate alone can crown a false winner that sends curious viewers who never buy [MCR-0029]. Compare V1 to V3 for the opener, V1 to V4 for length and V1 to V5 for the ending. Call nothing on a few days of small spend.
 
-India: if the store runs Hindi and English, the language is a sixth variable. Keep it out of this set: make five in one language and a matching set later. If cash on delivery is offered, an offer ending can mention it only if the product page shows it today.
+Languages: if the store runs ads in more than one language, the language is a sixth variable. Keep it out of this set: make five in one language and a matching set later. If pay on delivery is offered, an offer ending can mention it only if the product page shows it today.
 
 ## Checks before you hand it over
 
@@ -125,6 +136,8 @@ India: if the store runs Hindi and English, the language is a sixth variable. Ke
 - Disclosure appears on screen early and is spoken where required.
 - Exports exist in 9:16 and 4:5 with names and tags filled in.
 - Nothing was uploaded or launched without the client's yes.
+- Every opener's join was checked (pronouns, argument, product state, light, sound), and no cut or caption lands mid-word.
+- Any AI-made or AI-changed take was watched end to end before use.
 
 ## Output
 
@@ -163,6 +176,11 @@ India: if the store runs Hindi and English, the language is a sixth variable. Ke
 - MCR-0051: tag every ad on the same fields.
 - MCR-0077: about 15% reach the second half.
 - MCR-6060: disclosures on screen and spoken, early.
+- MCR-6626: a new hook for a new buyer needs a matching body.
+- MCR-6715: stitched hooks break at the bridge.
+- MCR-6729: write each length as its own script.
+- MCR-6773: 10 hooks and 3 bodies make 30 ads.
+- MCR-6863: more hooks on fewer bodies.
 - MEA-0037: gross margin uses delivered cost.
 - ORG-0017: first frame shows the topic.
 

@@ -27,7 +27,7 @@ Required:
 
 1. **Shortlist** with fit scores and who has agreed to receive product, from `find-and-vet-influencers` and `write-influencer-outreach`.
 2. **Landed cost per unit** and packaging cost, from `calculate-landed-cost-per-unit`.
-3. **Shipping cost** per parcel by zone or pincode band.
+3. **Shipping cost** per parcel by zone or postcode band.
 4. **Gross profit per order** for the gifted product, from `build-sku-profit-sheet`.
 5. **Stock**: units free for gifting without risking orders.
 
@@ -37,9 +37,9 @@ Access: building codes, links and draft orders needs draft access (level 2) in S
 
 ## Before you start: the gates
 
-1. **Round cost fits cash.** Total cost = units x (landed cost + packaging + shipping) + any TDS or tax handling. Pass when the client approves that total as cash out. Fail: cut the list.
+1. **Round cost fits cash.** Total cost = units x (landed cost + packaging + shipping) + any withholding or tax handling. Pass when the client approves that total as cash out. Fail: cut the list.
 2. **Gross profit per order known.** Needed for the payback sheet. Fail: run `build-sku-profit-sheet`.
-3. **Disclosure ready.** A gift is a material connection, even unsolicited, so any post needs a label: US plain words in the post [ORG-6405], India an ASCI label [ORG-6406]. Fail: no dispatch without the note in step 4.
+3. **Disclosure ready.** A gift is a material connection, even unsolicited, so any post needs a label: US plain words in the post [ORG-6405]; elsewhere, the label your market's ad disclosure rules require (for example "#ad" under the UK's ASA rules) [ORG-6406]. Fail: no dispatch without the note in step 4.
 4. **Product works on first use.** If the benefit takes weeks, the ask and timing must allow it (step 3).
 
 ## Steps
@@ -58,6 +58,15 @@ Wide seeding suits products cheap enough to send in volume [ORG-0009]. Expect mo
 
 Ask first ("Can I send you one to try?") and send only to yeses. Free product earns more when the person asked for it and gave a little effort, such as filling an address form [OFF-0057]. Unrequested parcels mostly get ignored.
 
+Before asking, give each shortlisted creator a quick fit check on evidence, one point each, on top of the vetting score:
+
+- They already post about the moment or problem the product touches.
+- Their comments hold questions from people like the store's buyers (quote only real comments; never write example comments in quote marks).
+- They have said something critical about a product before, so a positive post will be believed.
+- Their face, hands and sound are clear enough that a post could run as an ad later.
+
+Ask only creators with 3 or 4 points. A creator who normally charges for posts goes on the paid list for `write-influencer-outreach`, not the gift list. Round size is the approved round budget divided by the full cost of one box (product, packaging, postage), never the other way round.
+
 ### 3. Set the ask
 
 Default: **no posting obligation.** Say: "No need to post. If you love it and share it, please tag us and label it." This keeps goodwill and is honest.
@@ -70,7 +79,8 @@ One card in the box and the same text in a message:
 
 - Thanks and why you picked them (one line).
 - How to use it for the best result (two lines).
-- "No posting needed. If you share, please label it 'Gifted' or 'Ad' at the start, and tag us."
+- "No posting needed. If you share, please label it 'Gifted' or 'Ad' at the start, and tag us." For video, ask for the gift to be said out loud and shown on screen in plain words ("[Brand] sent me this for free"); a tag or a line under the video is easy to miss.
+- One open question buyers really ask, as a prompt they can answer in their own words ("Does it hold up after a week of daily use?"), never a script.
 - Their personal code and link (step 5).
 - Who to message with questions.
 
@@ -102,19 +112,34 @@ At day 30 and day 60, for the round and per creator:
 
 Rebook list: creators who posted, drew good comments or sales, and labelled correctly go to paid deals via `write-influencer-outreach`.
 
-### 8. India and US notes
+Read each post against the creator's own normal, not the store's: compare its views at 7 days with the median of their last 10 posts. Then sort every recipient:
 
-- **India:** send prepaid, never COD. Use a courier that covers the creator's pincode reliably. Products creators keep can fall under Section 194R TDS at 10%; log the value per creator per financial year and check the threshold with the accountant [FIN-6423]. Ask health and nutrition creators not to give advice unless they hold and state a qualification [ORG-6420].
+| Group | When | Next |
+|---|---|---|
+| Ask to run | Labelled correctly, above their own median, at least one buyer comment (where to buy, price, does it work on) | Ask for ad permission and a written agreement |
+| Fix first | Posted without a clear label | Ask them to fix it; do not share or run it until they do |
+| Send again | Posted and labelled, no lift | Keep for the next round |
+| Stop | No post by the cutoff date | Thank them; do not send again |
+
+A post runs as an ad only with both in place: the platform's own permission (Meta partnership ad approval, or a TikTok authorization code for that video) and a written agreement covering where it runs, for how long, any fee, whether it may be cut, and what happens when it ends. Record both on the recipient sheet before the ad goes live; hand the paperwork to `influencer-contract-and-usage-rights`.
+
+After round one, write down the store's own rates: share who posted, share worth running, cost per usable video. Plan round two on those numbers, not on any outside ratio.
+
+### 8. Market notes
+
+- **Every market:** send gifts prepaid, never as pay on delivery. Use a courier that covers the creator's postcode reliably. Products creators keep can count as taxable income or carry withholding rules in some countries; log the value per creator per tax year and check with the accountant [FIN-6423]. Ask health and nutrition creators not to give advice unless they hold and state a qualification [ORG-6420]. Cross-border gifts may carry duty and import VAT; say who pays.
 - **US:** a gifted post counts as an endorsement even if the creator was not asked to post, so the label request in the note matters [ORG-6405]. Reposting a creator's video in ads needs a written licence; organic tagging does not give it.
 
 ## Checks before you hand it over
 
-- Every recipient said yes to receiving the gift.
+- Every recipient said yes to receiving the gift and scored 3 or 4 on the fit check.
+- Every post is sorted into ask to run, fix first, send again or stop, read against the creator's own median.
+- No post runs as an ad without platform permission and a written agreement on file.
 - The ask says posting is optional and never asks for a positive review.
 - Every parcel has a note with the label request and a personal code and link.
 - Total round cost is shown and approved as cash out.
 - Payback rule (sales profit + content value against cost) is written down before dispatch.
-- India parcels are prepaid and logged for TDS.
+- Gift parcels are prepaid and their value logged per creator for tax.
 - No dispatch, order or message happened without the client's yes.
 
 ## Output
@@ -135,8 +160,10 @@ Rebook list: creators who posted, drew good comments or sales, and labelled corr
 - **Hidden strings.** Step 3 removes the posting obligation and never asks for positive reviews.
 - **No tracking.** Step 5 gives every creator a code, a link and a survey option before dispatch.
 - **Judging on views.** Step 7 judges on profit plus reusable content.
+- **Judging against the store's numbers.** Step 7 compares each post with the creator's own median, so a small creator's lift is not missed.
+- **Gifting by follower count.** Step 2 sends only to creators with fit evidence, and moves usual paid posters to the paid list.
 - **Counting content you cannot use.** Only posts with written reuse rights get a content value.
-- **COD gifts in India.** Step 8 sends prepaid only.
+- **Pay on delivery gifts.** Step 8 sends prepaid only.
 
 ## Sources
 
@@ -148,8 +175,12 @@ Rebook list: creators who posted, drew good comments or sales, and labelled corr
 - MEA-0045: post-purchase survey as a channel check.
 - ORG-0035: posts with about 5 times usual views belong in ads.
 - ORG-6405: FTC disclosure including free products.
-- ORG-6406: ASCI labels; unsolicited gifts count.
-- ORG-6420: ASCI health influencer qualifications.
-- FIN-6423: India TDS on products creators keep.
+- ORG-6406: local ad labels; unsolicited gifts count.
+- ORG-6420: health influencer qualifications.
+- FIN-6423: tax on products creators keep.
 
-What makes this skill ours: the payback rule (sales profit plus reusable content against full landed cost) is set before a single parcel ships; gifts go only to creators who asked and carry no posting obligation, which keeps reactions honest and legal; the plan assumes a realistic posting rate instead of hoping for one; and India parcels are prepaid and logged for TDS.
+What makes this skill ours: the payback rule (sales profit plus reusable content against full landed cost) is set before a single parcel ships; gifts go only to creators who asked and carry no posting obligation, which keeps reactions honest and legal; the plan assumes a realistic posting rate instead of hoping for one; and gift parcels are prepaid and logged for tax.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Send prepaid, never COD. Use a courier that covers the creator's pincode reliably. Products creators keep can fall under Section 194R TDS at 10%; log value per creator per financial year and check the threshold with the accountant [FIN-6423]. Gifted posts need an ASCI label [ORG-6406], and ASCI asks health creators to hold and state a qualification [ORG-6420].

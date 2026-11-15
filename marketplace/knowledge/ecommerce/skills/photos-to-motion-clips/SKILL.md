@@ -112,7 +112,7 @@ For camera-only and scene-motion clips where the product drifted, put the origin
 
 Clips are inputs, so judge the ads that use them: store cost per purchase against break-even and gross profit per ad after production cost [MCR-0023]. A clip that wins attention but not purchases is b-roll, not an opener. Rough native statics can beat expensive video in some accounts, so keep testing the static the clip came from [MCR-0060].
 
-India and US notes: never let a generator draw a price, MRP or offer; add these as real text from the live page. In India, a clip showing a product in a home setting should look like Indian homes the buyer recognises; generic Western kitchens read as foreign stock.
+Market notes: never let a generator draw a price, label price or offer; add these as real text from the live page. In every market, a clip showing a product in a home setting should look like the homes the buyer recognises in their own country; generic stock kitchens from somewhere else read as foreign stock.
 
 ## Checks before you hand it over
 
@@ -157,4 +157,8 @@ India and US notes: never let a generator draw a price, MRP or offer; add these 
 - MEA-0037: gross margin uses delivered cost.
 - ORG-0017: first frame shows the topic.
 
-What makes this skill ours: each move is graded by how likely it is to damage the product before any credit is spent; low-risk clips are made free by hand with no generator; drifted takes are repaired by putting the real product cut-out back on top; and prices, MRP and offers are never drawn by a model.
+What makes this skill ours: each move is graded by how likely it is to damage the product before any credit is spent; low-risk clips are made free by hand with no generator; drifted takes are repaired by putting the real product cut-out back on top; and prices, label prices and offers are never drawn by a model.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Never let a generator draw an MRP; add it as real text. Home-setting clips should look like Indian homes the buyer recognises; generic Western kitchens read as foreign stock.

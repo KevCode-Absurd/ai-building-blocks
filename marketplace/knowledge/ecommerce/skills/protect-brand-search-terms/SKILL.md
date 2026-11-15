@@ -28,7 +28,7 @@ Required (read access):
 1. **Google Ads exports, last 90 days**: Search terms report (Search term, Campaign, Clicks, Cost, Conversions, Conv. value) and Auction insights for any brand campaign (Display URL domain, Impression share, Overlap rate, Position above rate, Top of page rate).
 2. **Brand term list**: the store name, common misspellings, the name with product words, and any sub-brand or hero product names.
 3. **Gross profit per purchase** from `store-meta-math`.
-4. **Who sells the brand**: own store, Amazon, Flipkart or other marketplaces, wholesalers, affiliates, and their agreed rules on bidding.
+4. **Who sells the brand**: own store, Amazon, Walmart, eBay or other marketplaces, wholesalers, affiliates, and their agreed rules on bidding.
 5. **Trademark status**: registered or not, in which countries.
 
 Optional: Google Search Console brand queries (impressions and clicks, free), screenshots of the brand search results on mobile in the main cities served.
@@ -65,9 +65,9 @@ For each brand term: monthly searches, share where a rival shows above the store
 ### 3. Build the brand Search campaign
 
 - Keywords: brand terms in exact and phrase; brand plus product words in their own ad group.
-- Ads: headline 1 is the store name; one headline with the real offer or proof (reviews count, delivery promise) taken from the live site; sitelinks to best sellers, new arrivals, reviews and returns. India: show "Cash on delivery" or prepaid offers only if live.
+- Ads: headline 1 is the store name; one headline with the real offer or proof (reviews count, delivery promise) taken from the live site; sitelinks to best sellers, new arrivals, reviews and returns. Show payment offers (pay on delivery, buy now pay later, prepaid discounts) only if live.
 - Bidding: Target impression share, absolute top, 90 to 95%, with a max CPC cap, or manual CPC with a cap. One agency runs brand at 95% absolute top with a cap around 3 dollars [GAD-0024]; set the store's cap from step 2, never above break-even CPA x brand conversion rate.
-- Budget: never limited on brand. Brand spend usually sits around 3 to 8% of Google spend [GAD-0024], and $10 to $20 a day is a common start for smaller brands [GAD-0028]; it rises legitimately when rivals bid hard. One brand's holdouts put branded search under 1% of spend [ADC-0051]; the store's own test decides.
+- Budget: never limited on brand. Brand spend usually sits around 3 to 8% of Google spend [GAD-0024], and $10 to $20 a day (or the same in your currency) is a common start for smaller brands [GAD-0028]; it rises legitimately when rivals bid hard. One brand's holdouts put branded search under 1% of spend [ADC-0051]; the store's own test decides.
 - A higher ROAS target than non-brand is fine, but if rivals bid aggressively a high target can lose the top slot [GAD-0052]; prefer the impression share strategy then.
 
 ### 4. Build the brand Shopping campaign
@@ -78,7 +78,7 @@ Standard Shopping, all products, manual CPC around a low cap (one practitioner u
 
 - Performance Max: add the store's brand list as a brand exclusion; it covers Search and Shopping inventory [GAD-6121] [GAD-0003].
 - Non-brand Search and Shopping: shared negative list of brand terms in exact match [GAD-0028].
-- Check the brand list picks up other spellings and scripts; Google's brand lists match across languages, which helps for Hindi or regional-script searches in India [GAD-6121]. Add separate entries for sub-brands that share no word with the store name.
+- Check the brand list picks up other spellings and scripts; Google's brand lists match across languages, which helps for searches in the other languages and scripts your buyers use [GAD-6121]. Add separate entries for sub-brands that share no word with the store name.
 - If the brand name is also a common word, use negative keywords instead of a brand exclusion, so real non-brand searches are not blocked.
 
 ### 6. Prepare the trademark complaint pack (only for ad-text use)
@@ -103,6 +103,17 @@ Brand ads often take sales that the organic result would have won. Test before d
 
 Every week: brand impression share, top of page rate, new domains in Auction insights, brand CPC, brand spend as a share of Google spend, and brand terms leaking into non-brand search terms. Recent days under-count conversions, so read brand cost per purchase by conversion time [GAD-0035].
 
+### 9. Prove the leak before you plug it
+
+- **Coverage check.** The search terms report hides some queries. Compare its spend and value with campaign totals for the same dates and state the share it covers. Never count hidden or unclassified queries as non-brand.
+- **Three buckets.** Sort terms with the owner's brand list (name, misspellings, no-space version, product line names) into brand, non-brand and ambiguous. Report each bucket's share of spend and conversions per campaign.
+- **Observed non-brand ROAS** = reported value / spend on covered non-brand terms, set against break-even ROAS = 1 / contribution margin, only when the margin and what it covers are given. Report brand and non-brand targets separately [GAD-6184].
+- **Exact negatives are narrow.** An exact-match [brand] negative blocks only that query, not brand plus another word; add phrase negatives or a brand list where that leaks. For brand names that are common words, check what the negative would also block.
+- **Shopping split.** With Standard Shopping, non-brand at High priority and brand at Low with different targets keeps the two apart; this design applies to Standard Shopping only.
+- **Branded Shopping** may exclude existing customers through an uploaded list only where the privacy policy and consent allow.
+- **Advertiser verification** done before brand campaigns scale, so the ads show the verified name.
+- Re-check the leak in 2 to 4 weeks.
+
 ## Checks before you hand it over
 
 - Every domain on brand searches is typed, with a dated screenshot or Auction insights row.
@@ -112,6 +123,7 @@ Every week: brand impression share, top of page rate, new domains in Auction ins
 - Ad claims (offers, reviews counts, delivery promises) match the live site today.
 - A holdout plan exists, or the reason it cannot run (a rival on the name) is written down.
 - Everything is paused until the client says yes.
+- The leak report states how much of spend the search terms report covered.
 
 ## Output
 
@@ -130,6 +142,7 @@ Every week: brand impression share, top of page rate, new domains in Auction ins
 - **Filing complaints against keyword bidding.** Google does not restrict that [GAD-6120]; step 6 is for ad text only.
 - **Ignoring coupon sites and affiliates.** Step 1 types them and step 6 sets rules.
 - **Judging the holdout on Google numbers.** Step 7 reads total store orders.
+- **Calling hidden queries non-brand.** That inflates the non-brand ROAS the owner scales on.
 
 ## Sources
 
@@ -144,5 +157,10 @@ Every week: brand impression share, top of page rate, new domains in Auction ins
 - GAD-6121: brand exclusions and how brand lists match.
 - MEA-0017: one primary purchase action.
 - MEA-0033: switching brand search off by region to test it.
+- GAD-6184: split brand from non-brand; non-brand ROAS should track acquisition MER.
 
 What makes this skill ours: it first proves who is taking brand searches and what that costs in gross profit before spending anything; it splits rivals, resellers, coupon sites and affiliates into different fixes; it uses Google's own trademark rule correctly (ad text, not keywords); and it tests whether brand ads add any orders at all, judged on store sales.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Show "Cash on delivery" in brand ads only if it is live. Google's brand lists match across languages, which helps for Hindi or regional-script searches. List Flipkart and other Indian marketplace sellers in step 1 with their agreed bidding rules.

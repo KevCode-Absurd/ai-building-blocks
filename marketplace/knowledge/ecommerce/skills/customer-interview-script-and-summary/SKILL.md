@@ -1,6 +1,6 @@
 ---
 name: customer-interview-script-and-summary
-description: "Everything to run customer interviews for a store: who to invite (recent buyers, repeat buyers, refunders and people who nearly bought), a recruiting message for email and WhatsApp that gets replies, a 30-minute interview script that walks the buyer through their purchase from first thought to first use without leading them, consent and privacy steps for India and the US, and a summary template that turns each call into counted buying reasons, triggers, doubts and exact phrases. Ends with a cross-interview summary and a short survey to check the findings at scale. Use before new ads, a page rewrite, a new product, or when sales stall and nobody knows why people buy."
+description: "Everything to run customer interviews for a store: who to invite (recent buyers, repeat buyers, refunders and people who nearly bought), a recruiting message for email and WhatsApp that gets replies, a 30-minute interview script that walks the buyer through their purchase from first thought to first use without leading them, consent and privacy steps for each market (GDPR in the UK and EU, US state rules and others), and a summary template that turns each call into counted buying reasons, triggers, doubts and exact phrases. Ends with a cross-interview summary and a short survey to check the findings at scale. Use before new ads, a page rewrite, a new product, or when sales stall and nobody knows why people buy."
 ---
 
 # Customer interviews
@@ -25,7 +25,7 @@ description: "Everything to run customer interviews for a store: who to invite (
 
 Required:
 
-1. **Customer list** from the Shopify customer and order export: Customer ID, first name, email or phone, marketing consent, first order date, number of orders, products bought, refund or return flag, payment method (COD or prepaid).
+1. **Customer list** from the Shopify customer and order export: Customer ID, first name, email or phone, marketing consent, first order date, number of orders, products bought, refund or return flag, payment method (card, wallet, buy now pay later, or pay on delivery).
 2. **The research question** in one line, for example "Why do first-time buyers choose us over the marketplace version?"
 3. **A thank-you the store can afford** (see step 2).
 4. **A calendar link** and a call tool the buyer already has (phone, WhatsApp, Google Meet, Zoom).
@@ -36,8 +36,8 @@ Access: drafting the messages is level 2. Sending any message to customers needs
 
 ## Before you start: the gates
 
-1. **Consent to contact.** Pass: each invitee agreed to marketing or service contact on that channel. In India, WhatsApp messages need the buyer's opt-in and an approved template; SMS needs a registered sender and template under TRAI's DLT rules. Fail: invite only those who opted in.
-2. **Consent to record.** Ask every person on the call before recording, and keep the yes in the notes. Some US states require all parties to agree; India's Digital Personal Data Protection Act 2023 expects clear consent and limited use. Fail: take notes by hand instead.
+1. **Consent to contact.** Pass: each invitee agreed to marketing or service contact on that channel. WhatsApp messages need the buyer's opt-in and an approved template in every market; SMS rules vary by country (US texts need prior consent, and some countries require a registered sender and template). In the UK and EU, check that the store's privacy notice covers contact for research. Fail: invite only those who opted in.
+2. **Consent to record.** Ask every person on the call before recording, and keep the yes in the notes. Some US states require all parties to agree; GDPR in the UK and EU expects a clear lawful reason, limited use and a stated time to keep the recording; other countries have similar privacy laws. Fail: take notes by hand instead.
 3. **One research question.** Pass: written and agreed with the owner. Fail: the calls drift into feedback chats.
 4. **No selling.** The calls collect facts. No offers, no upsells, no discount codes on the call.
 
@@ -51,10 +51,10 @@ Aim for 12 to 20 completed calls; about 20 calls of 30 minutes surface most of w
 |---|---|---|
 | Recent first-time buyers (last 30 to 60 days) | memory of the decision is fresh | about half |
 | Repeat buyers (3 or more orders) | why they stay | about a quarter |
-| Refunders, returners or COD refusers | what broke | a few |
+| Refunders, returners or refused deliveries | what broke | a few |
 | Near-buyers (abandoned checkout, asked a question, did not buy) | what stopped them | a few |
 
-Weight the most loyal and the most unhappy over the middle; they say the most useful things [AVT-0021]. In India, include COD and prepaid buyers, tier 2 and 3 pincodes, and offer the call in Hindi or the buyer's language.
+Weight the most loyal and the most unhappy over the middle; they say the most useful things [AVT-0021]. Include buyers from each main country or region, from big cities and smaller towns, and from each payment method, and offer the call in the languages your buyers use.
 
 ### 2. Recruit
 
@@ -71,6 +71,8 @@ WhatsApp version (approved template, opted-in buyers only):
 > Hi {first name}, {founder name} from {store} here. Could we have a 20-minute call about how you chose {product}? No sales, just listening. Thank-you: {credit}. Pick a time: {link}. Reply STOP to opt out.
 
 Send a reminder the day before and one hour before.
+
+**Pre-fill a sheet for each booked buyer from the order record.** Under the buyer's code (B1, B2), write the order facts the call needs: order date and weekday, time of day, device, items bought together, order value, discount code used, and first or repeat order. Read them out at the start of the call and let the buyer correct them; concrete details bring back the day of the purchase, and the call becomes a timeline from first thought to first use [AVT-0003]. Then write gap questions only where the record leaves a gap: a phone order at 11 pm invites "Where were you when you decided?"; a gift-wrap order invites "Who was it for, and what was the occasion?"; two sizes in one order invites "How did you choose between them?". Never ask what the record already shows. Keep names, emails, phone numbers and addresses off the sheet; the code links back to the customer list held where the client keeps customer data.
 
 ### 3. Run the call (script)
 
@@ -93,7 +95,7 @@ Rules: ask about what happened, not what they would do. No "would you buy...?" A
 
 **Deciding (6 minutes).**
 - What made you pick us in the end?
-- What almost stopped you? What worried you about buying online, the price, the delivery, COD or prepaid?
+- What almost stopped you? What worried you about buying online: the price, the delivery, paying, or sending it back?
 - What did you check before paying? Reviews, returns, the founder, the ingredients?
 
 **After (5 minutes).**
@@ -108,6 +110,15 @@ For refunders and near-buyers, swap "Deciding" for "What made you stop or send i
 ### 4. Summarise each call within a day
 
 Fill the per-call template (Output). Copy exact phrases; do not polish them, because cleaned-up notes lose the words copy needs [AVT-0007]. Note the buyer's dominant feeling (fear, frustration, embarrassment, pride) and the real names of products they tried before [AVT-0010]. Note self-descriptions ("as a new mum") that may mark a buyer group [AVT-0016].
+
+Tag every note before it goes into the summary:
+
+- **Fact:** something they did, tried, paid for or used, with when if known.
+- **Compliment:** praise ("love the colours").
+- **Vague:** always, never, would, might, usually.
+- **Idea:** a feature, size, flavour or product they suggest.
+
+Only facts count toward buying reasons in step 5. For every vague line or idea worth chasing, write the follow-up for the next call ("When did that last happen, and what did you do?"; "Why do you want that? What do you do today instead?"). An idea from one buyer goes on a watch list, not the roadmap.
 
 ### 5. Cluster across calls
 
@@ -133,6 +144,8 @@ Send the cross-interview sheet to `buyer-decision-map`, top doubts to `write-faq
 - No call included an offer, upsell or discount.
 - Each per-call summary has at least three exact quotes.
 - Buying reasons show counts (for example 9 of 16 calls), not adjectives.
+- Each booked buyer had a pre-filled order sheet with no contact details, and gap questions only where the record was silent.
+- Buying reasons are counted from notes tagged fact, not from compliments, vague lines or ideas.
 - Refunders or near-buyers are in the sample, not only happy buyers.
 - Personal data is stored only where the client keeps customer data, and recordings have a delete date.
 
@@ -154,6 +167,8 @@ Send the cross-interview sheet to `buyer-decision-map`, top doubts to `write-faq
 | Dominant feeling | |
 | Self-description | |
 | Exact phrases (3 to 6) | |
+| Order facts read out, and what the buyer corrected | |
+| Notes tagged fact, compliment, vague or idea, with follow-ups | |
 | Recording consent (yes or no) | |
 
 **Cross-interview sheet:** Theme, Type (trigger, pull, doubt, habit), Calls showing it, Of total, Best two quotes, Buyer group, Where to use it (ad, page, FAQ, product).
@@ -166,11 +181,14 @@ Send the cross-interview sheet to `buyer-decision-map`, top doubts to `write-faq
 - **Only happy buyers.** Step 1 adds refunders and near-buyers.
 - **Selling on the call.** Gate 4 bans it.
 - **Polished notes.** Step 4 keeps exact phrases.
+- **Opening cold.** Step 2 pre-fills the order facts so the buyer remembers the day.
+- **Counting praise as evidence.** Step 4 tags notes and counts facts only.
 - **Counting single answers.** Step 5 clusters whole stories.
 - **Stopping at 20 calls.** Step 6 checks the findings with a survey.
 
 ## Sources
 
+- AVT-0003: interview recent buyers as a timeline from their first thought.
 - AVT-0017: about 20 interviews surface most sentiment; verify by survey.
 - AVT-0018: no-pitch invites and charity thank-you.
 - AVT-0021: weight the most loyal and most unhappy.
@@ -181,4 +199,10 @@ Send the cross-interview sheet to `buyer-decision-map`, top doubts to `write-faq
 - AVT-0025: everyone-gets-something survey incentive.
 - AVT-0019: behaviour tools for what, interviews for why.
 
-What makes this skill ours: the sample deliberately includes refunders, COD refusers and near-buyers; the script follows the purchase from first thought to first use instead of asking opinions; India consent, WhatsApp template and language rules are built in; and every finding is a counted reason with exact phrases that copy can use the same day.
+What makes this skill ours: the sample deliberately includes refunders, refused deliveries and near-buyers; the script follows the purchase from first thought to first use instead of asking opinions; consent, recording, WhatsApp template and language rules for each market are built in; and every finding is a counted reason with exact phrases that copy can use the same day.
+
+## Selling in India
+
+- WhatsApp invites need the buyer's opt-in and an approved template; SMS needs a registered sender and template under TRAI's DLT rules.
+- India's Digital Personal Data Protection Act 2023 expects clear consent and limited use of recordings.
+- Include COD and prepaid buyers and COD refusers, buyers in tier 2 and 3 pincodes, and offer the call in Hindi or the buyer's language.

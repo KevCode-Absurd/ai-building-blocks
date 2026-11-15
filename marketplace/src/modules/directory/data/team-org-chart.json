@@ -20,6 +20,8 @@
             "achieng-content-strategy",
             "rocio-tour-scripts",
             "tomas-social-community",
+            "marnie-pinterest-ads",
+            "corinne-reviews",
             "andile-seo-articles",
             "celeste-case-studies",
             "donghyun-repurposing",
@@ -28,6 +30,7 @@
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
             "maker",
             "strategist"
           ]
@@ -65,9 +68,12 @@
             "malik-audio-ads",
             "marsha-jingles",
             "ursula-book-blurbs",
-            "kofi-ad-copy"
+            "kofi-ad-copy",
+            "meenakshi-compliance",
+            "howard-copy-chief"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "judge",
             "maker",
@@ -82,6 +88,7 @@
             "georgia-product-copy",
             "kofi-ad-copy",
             "lucia-email-copy",
+            "howard-copy-chief",
             "yasmin-foodmaker",
             "faye-product-pages"
           ],
@@ -115,6 +122,7 @@
           "persona_ids": [
             "kofi-ad-copy",
             "lucia-email-copy",
+            "howard-copy-chief",
             "beverley-editor",
             "lorraine-paper-review"
           ],
@@ -122,7 +130,8 @@
             "critic",
             "judge",
             "maker",
-            "red_team"
+            "red_team",
+            "strategist"
           ]
         },
         {
@@ -131,9 +140,11 @@
           "persona_ids": [
             "phoebe-captions",
             "kofi-ad-copy",
+            "wenhao-procurement",
             "behrouz-translation"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "judge",
             "maker",
@@ -158,11 +169,14 @@
           "persona_ids": [
             "mariam-impact-reports",
             "sela-faith",
+            "margot-pr",
+            "fiona-account-manager",
             "teodor-tutoring",
             "sabrina-childcare"
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
             "maker",
             "strategist"
           ]
@@ -203,6 +217,8 @@
             "loretta-cs-training",
             "darlene-support-lead",
             "rohan-chat-sales",
+            "corinne-reviews",
+            "gurdeep-shipping-returns",
             "vanessa-vet",
             "joshua-ai-quality",
             "araceli-inbox",
@@ -246,6 +262,7 @@
           "persona_ids": [
             "rhiannon-clientonboarding",
             "mercedes-cancel-save",
+            "fiona-account-manager",
             "graciela-insurance",
             "kavitha-renewals",
             "imani-onboarding",
@@ -253,6 +270,7 @@
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
             "maker",
             "red_team",
             "strategist"
@@ -304,13 +322,16 @@
             "jihan-knowledgebase",
             "sung-min-chat-flows",
             "rohan-chat-sales",
+            "ishita-india-commerce",
             "joshua-ai-quality"
           ],
           "seat_suitability": [
             "coordinator",
             "critic",
+            "fact_checker",
             "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -351,6 +372,9 @@
             "haruto-powerquery",
             "kwame-benchmarks",
             "heidi-clubdata",
+            "duncan-category-trends",
+            "akosua-cost-forecast",
+            "sabelo-product-portfolio",
             "valeria-data-analysis"
           ],
           "seat_suitability": [
@@ -365,9 +389,11 @@
           "name": "Product analyst",
           "persona_ids": [
             "hyun-woo-retention",
+            "sabelo-product-portfolio",
             "jaya-product-analytics"
           ],
           "seat_suitability": [
+            "coordinator",
             "fact_checker",
             "strategist"
           ]
@@ -380,6 +406,7 @@
             "gustavo-dashboards",
             "ilse-kpitree",
             "glenys-pivots",
+            "callum-reporting",
             "shalini-kpireports"
           ],
           "seat_suitability": [
@@ -394,11 +421,13 @@
           "persona_ids": [
             "katya-charts",
             "linh-infographics",
+            "callum-reporting",
             "meron-data-storytelling"
           ],
           "seat_suitability": [
             "fact_checker",
-            "maker"
+            "maker",
+            "strategist"
           ]
         },
         {
@@ -436,11 +465,16 @@
           "id": "data-engineer",
           "name": "Data engineer",
           "persona_ids": [
-            "ilya-data-pipelines"
+            "ilya-data-pipelines",
+            "emre-tracking"
           ],
           "seat_suitability": [
+            "critic",
             "fact_checker",
-            "maker"
+            "judge",
+            "maker",
+            "red_team",
+            "strategist"
           ]
         },
         {
@@ -469,7 +503,9 @@
             "rania-menu-design",
             "lorenzo-merch",
             "riley-carousels",
-            "ayaka-ad-design"
+            "ayaka-ad-design",
+            "tanvi-listing-images",
+            "lerato-creative-producer"
           ],
           "seat_suitability": [
             "coordinator",
@@ -498,11 +534,16 @@
           "persona_ids": [
             "sebastian-brand-guidelines",
             "renata-brand-identity",
-            "ondrej-illustration-briefs"
+            "ondrej-illustration-briefs",
+            "tanvi-listing-images",
+            "alistair-packaging"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -511,10 +552,17 @@
           "name": "Packaging designer",
           "persona_ids": [
             "ffion-packaging-copy",
-            "noor-packaging-layout"
+            "noor-packaging-layout",
+            "meenakshi-compliance",
+            "alistair-packaging",
+            "maxine-tech-packs"
           ],
           "seat_suitability": [
+            "coordinator",
+            "critic",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -525,9 +573,12 @@
             "bongani-explainer-videos",
             "octavio-storyboards",
             "ryo-motion",
-            "devon-video-ugc"
+            "devon-video-ugc",
+            "cody-video-editor",
+            "lerato-creative-producer"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "judge",
             "maker",
@@ -540,6 +591,7 @@
           "persona_ids": [
             "ryota-navigation",
             "nolan-wireframes",
+            "larissa-store-ux",
             "jenna-ux-writing",
             "rahul-ux-review"
           ],
@@ -582,9 +634,11 @@
           "persona_ids": [
             "kioko-shotlists",
             "lwazi-photo-style",
-            "aurelio-product-photos"
+            "aurelio-product-photos",
+            "tanvi-listing-images"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "judge",
             "maker",
@@ -595,7 +649,8 @@
           "id": "website-designer",
           "name": "Website designer (Squarespace, Wix, Webflow)",
           "persona_ids": [
-            "eloise-site-builders"
+            "eloise-site-builders",
+            "larissa-store-ux"
           ],
           "seat_suitability": [
             "maker"
@@ -605,17 +660,21 @@
           "id": "video-editor",
           "name": "Video editor",
           "persona_ids": [
-            "tevita-video-edits"
+            "tevita-video-edits",
+            "cody-video-editor"
           ],
           "seat_suitability": [
-            "maker"
+            "coordinator",
+            "maker",
+            "strategist"
           ]
         },
         {
           "id": "ui-designer",
           "name": "UI designer",
           "persona_ids": [
-            "chae-won-ui-design"
+            "chae-won-ui-design",
+            "larissa-store-ux"
           ],
           "seat_suitability": [
             "maker"
@@ -637,11 +696,13 @@
             "houda-catalogue",
             "malcolm-ecommerce-growth",
             "marivic-fulfilment",
+            "sudhir-marketplaces",
             "estelle-order-value"
           ],
           "seat_suitability": [
             "coordinator",
             "critic",
+            "fact_checker",
             "judge",
             "maker",
             "strategist"
@@ -655,13 +716,17 @@
             "nabin-shopifytheme",
             "facundo-store-setup",
             "arjun-page-speed",
+            "meenakshi-compliance",
+            "yaroslav-shopify-dev",
             "javier-store-launch"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "fact_checker",
             "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -670,6 +735,10 @@
           "name": "Amazon marketplace manager",
           "persona_ids": [
             "garrett-amazon",
+            "junaid-amazon-ads",
+            "tanvi-listing-images",
+            "sudhir-marketplaces",
+            "corinne-reviews",
             "gina-amazon-launch",
             "hassan-product-research"
           ],
@@ -690,12 +759,20 @@
             "kemar-ebaywalmart",
             "shanice-marketplace-service",
             "mei-wholesale-sales",
+            "junaid-amazon-ads",
+            "tanvi-listing-images",
+            "sudhir-marketplaces",
+            "ishita-india-commerce",
+            "duncan-category-trends",
             "huiling-cross-border"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -703,10 +780,12 @@
           "id": "etsy-shop-manager",
           "name": "Etsy shop manager",
           "persona_ids": [
-            "ligaya-etsy"
+            "ligaya-etsy",
+            "sudhir-marketplaces"
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
             "strategist"
           ]
         },
@@ -732,13 +811,27 @@
             "nurlan-rfm",
             "intan-storereports",
             "radek-unit-economics",
-            "zara-tiktok-ads"
+            "zara-tiktok-ads",
+            "lindsey-meta-media-buyer",
+            "junaid-amazon-ads",
+            "emre-tracking",
+            "callum-reporting",
+            "sudhir-marketplaces",
+            "ishita-india-commerce",
+            "gurdeep-shipping-returns",
+            "kelsey-snapchat-ads",
+            "duncan-category-trends",
+            "douglas-should-cost",
+            "akosua-cost-forecast",
+            "sabelo-product-portfolio"
           ],
           "seat_suitability": [
             "coordinator",
             "critic",
             "fact_checker",
             "judge",
+            "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -746,10 +839,14 @@
           "id": "amazon-ppc-specialist",
           "name": "Amazon PPC specialist",
           "persona_ids": [
-            "khoa-amazon-ppc"
+            "khoa-amazon-ppc",
+            "junaid-amazon-ads"
           ],
           "seat_suitability": [
-            "maker"
+            "coordinator",
+            "fact_checker",
+            "maker",
+            "strategist"
           ]
         }
       ]
@@ -765,6 +862,7 @@
             "brooke-ui-components",
             "ezra-browser-extensions",
             "destiny-landing-pages",
+            "yaroslav-shopify-dev",
             "leandro-frontend-build",
             "ernesto-page-speed"
           ],
@@ -809,11 +907,13 @@
           "name": "QA engineer",
           "persona_ids": [
             "dagny-test-writer",
+            "yaroslav-shopify-dev",
             "navid-qa-testing"
           ],
           "seat_suitability": [
             "critic",
-            "judge"
+            "judge",
+            "maker"
           ]
         },
         {
@@ -897,6 +997,8 @@
             "aoife-accessible-code",
             "nora-alt-text",
             "hilary-easy-read",
+            "larissa-store-ux",
+            "yaroslav-shopify-dev",
             "melanie-accessibility-audit"
           ],
           "seat_suitability": [
@@ -978,6 +1080,8 @@
             "oskar-business-cases",
             "janelle-variance",
             "hemant-store-finance",
+            "callum-reporting",
+            "akosua-cost-forecast",
             "nadia-cashflow",
             "nicole-fpa",
             "aditya-financemodel",
@@ -998,6 +1102,7 @@
             "radhika-services-profit",
             "duane-construction-wip",
             "zoran-jobcosting",
+            "douglas-should-cost",
             "ruben-monthend",
             "karthik-margins",
             "orla-nonprofit",
@@ -1073,6 +1178,9 @@
             "joaquin-priceeffect",
             "juliet-merchandising",
             "mei-wholesale-sales",
+            "sudhir-marketplaces",
+            "ishita-india-commerce",
+            "sabelo-product-portfolio",
             "olu-pricing",
             "osman-subscriptionpricing",
             "delphine-offers"
@@ -1083,6 +1191,7 @@
             "fact_checker",
             "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -1232,9 +1341,11 @@
             "lindiwe-local-aeo",
             "sigrid-b2b-geo",
             "rustam-ai-answers",
+            "margot-pr",
             "bakary-ai-search"
           ],
           "seat_suitability": [
+            "coordinator",
             "maker",
             "strategist"
           ]
@@ -1243,7 +1354,8 @@
           "id": "link-building-specialist",
           "name": "Link building specialist",
           "persona_ids": [
-            "bojana-link-building"
+            "bojana-link-building",
+            "margot-pr"
           ],
           "seat_suitability": [
             "coordinator",
@@ -1276,6 +1388,8 @@
             "brett-meta-store-ads",
             "efrain-meta-lead-ads",
             "dustin-ad-deployment",
+            "lindsey-meta-media-buyer",
+            "kelsey-snapchat-ads",
             "bianca-meta-ads"
           ],
           "seat_suitability": [
@@ -1306,6 +1420,10 @@
             "tendai-ad-creative",
             "kemal-creative-director",
             "zara-tiktok-ads",
+            "lindsey-meta-media-buyer",
+            "cody-video-editor",
+            "lerato-creative-producer",
+            "kelsey-snapchat-ads",
             "bruno-ad-copy",
             "brittany-image-ads",
             "bryony-video-ads",
@@ -1323,6 +1441,8 @@
           "name": "Social media manager",
           "persona_ids": [
             "tomas-social-community",
+            "marnie-pinterest-ads",
+            "cody-video-editor",
             "ximena-social-media",
             "emilio-short-video",
             "abena-instagram",
@@ -1342,10 +1462,12 @@
           "name": "Pinterest marketing specialist",
           "persona_ids": [
             "chanida-pinterest",
-            "tomas-social-community"
+            "tomas-social-community",
+            "marnie-pinterest-ads"
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
             "strategist"
           ]
         },
@@ -1418,6 +1540,7 @@
             "kofi-ad-copy",
             "lucia-email-copy",
             "rohan-chat-sales",
+            "howard-copy-chief",
             "pooja-lead-funnels",
             "bao-website-copy",
             "bilal-sales-letters"
@@ -1438,6 +1561,7 @@
           "persona_ids": [
             "harriet-abtests",
             "gretchen-store-testing",
+            "larissa-store-ux",
             "dawei-landing-pages",
             "imran-conversion"
           ],
@@ -1467,9 +1591,12 @@
           "persona_ids": [
             "anahera-brand-naming",
             "philippa-brand",
+            "margot-pr",
+            "howard-copy-chief",
             "ayumi-brand-voice"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "judge",
             "maker",
@@ -1483,6 +1610,7 @@
             "brendan-offers",
             "barnaby-wild-bets",
             "jared-performance-marketing",
+            "lindsey-meta-media-buyer",
             "cedric-marketing-plan",
             "corey-saas-growth",
             "rhys-traction-saas",
@@ -1495,6 +1623,7 @@
           "seat_suitability": [
             "coordinator",
             "critic",
+            "fact_checker",
             "judge",
             "maker",
             "strategist"
@@ -1518,6 +1647,7 @@
           "persona_ids": [
             "alyssa-testimonials",
             "tomas-social-community",
+            "corinne-reviews",
             "brenda-reputation"
           ],
           "seat_suitability": [
@@ -1533,11 +1663,15 @@
             "monique-membership",
             "bernadette-moderation",
             "tomas-social-community",
+            "ritika-influencer-outreach",
             "dario-community"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -1548,12 +1682,16 @@
             "varun-affiliates",
             "pilar-creators",
             "zara-tiktok-ads",
+            "ritika-influencer-outreach",
             "chelsea-creator-partnerships"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -1565,6 +1703,7 @@
             "gavin-awards-speaking",
             "curtis-podcast-guesting",
             "xavier-musicbooking",
+            "margot-pr",
             "bayo-press-releases"
           ],
           "seat_suitability": [
@@ -1580,11 +1719,19 @@
             "felix-ga4",
             "kendra-attribution",
             "zara-tiktok-ads",
+            "lindsey-meta-media-buyer",
+            "marnie-pinterest-ads",
+            "emre-tracking",
+            "fiona-account-manager",
+            "kelsey-snapchat-ads",
             "bogdan-marketing-reports"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
+            "red_team",
             "strategist"
           ]
         },
@@ -1624,6 +1771,7 @@
           "persona_ids": [
             "crystal-coach-marketing",
             "yu-ting-designstudio",
+            "clayton-new-business",
             "sanjay-law-intake",
             "gaurav-accounting-firm",
             "graciela-insurance"
@@ -1674,6 +1822,17 @@
             "maker",
             "strategist"
           ]
+        },
+        {
+          "id": "snapchat-ads-media-buyer",
+          "name": "Snapchat ads media buyer",
+          "persona_ids": [
+            "kelsey-snapchat-ads"
+          ],
+          "seat_suitability": [
+            "fact_checker",
+            "strategist"
+          ]
         }
       ]
     },
@@ -1688,14 +1847,20 @@
             "clifford-business-systems",
             "deirdre-bottlenecks",
             "xochitl-opsmanual",
+            "gurdeep-shipping-returns",
+            "lerato-creative-producer",
+            "sheila-inbound-freight",
             "faisal-sops",
             "tove-process",
             "sunita-ops"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -1704,13 +1869,15 @@
           "name": "Chief of staff",
           "persona_ids": [
             "margaret-job-orchestrator",
+            "fiona-account-manager",
             "tamsin-okrs",
             "ugo-chiefofstaff"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
+            "fact_checker",
             "judge",
-            "maker",
             "strategist"
           ]
         },
@@ -1736,11 +1903,21 @@
           "persona_ids": [
             "emeka-energy-costs",
             "huong-sourcing",
+            "tunde-supplier-search",
+            "douglas-should-cost",
+            "akosua-cost-forecast",
+            "wenhao-procurement",
+            "phuong-quality-control",
+            "sheila-inbound-freight",
+            "maxine-tech-packs",
             "neil-costs",
             "soren-vendors"
           ],
           "seat_suitability": [
+            "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
             "maker",
             "red_team",
             "strategist"
@@ -1754,9 +1931,16 @@
             "armando-contracts",
             "tahmina-governance",
             "kofi-ad-copy",
+            "emre-tracking",
+            "meenakshi-compliance",
+            "alistair-packaging",
+            "ishita-india-commerce",
+            "ritika-influencer-outreach",
+            "sheila-inbound-freight",
             "farid-data-privacy"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "fact_checker",
             "judge",
@@ -1773,7 +1957,10 @@
             "trevor-safety",
             "wayne-continuity",
             "poppy-sustainability",
-            "gordon-toolbox-talks"
+            "gordon-toolbox-talks",
+            "tunde-supplier-search",
+            "phuong-quality-control",
+            "maxine-tech-packs"
           ],
           "seat_suitability": [
             "coordinator",
@@ -1864,12 +2051,15 @@
           "persona_ids": [
             "hamish-estimates",
             "itzel-redesign",
+            "fiona-account-manager",
+            "lerato-creative-producer",
             "whitney-projects",
             "shauna-agency-ops"
           ],
           "seat_suitability": [
             "coordinator",
             "critic",
+            "fact_checker",
             "judge",
             "maker",
             "strategist"
@@ -1883,13 +2073,24 @@
             "kalpana-demand",
             "zhenyu-sourcing",
             "omar-inventory-planning",
+            "alistair-packaging",
+            "ishita-india-commerce",
+            "gurdeep-shipping-returns",
+            "tunde-supplier-search",
+            "douglas-should-cost",
+            "akosua-cost-forecast",
+            "wenhao-procurement",
+            "phuong-quality-control",
+            "sheila-inbound-freight",
             "hideki-stock-planner"
           ],
           "seat_suitability": [
+            "coordinator",
             "critic",
             "fact_checker",
             "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -1901,11 +2102,18 @@
             "kyle-shippingcosts",
             "vivek-delivery",
             "rashid-carrier-claims",
+            "gurdeep-shipping-returns",
+            "tunde-supplier-search",
+            "sheila-inbound-freight",
             "helga-orders-watch"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
+            "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -2164,12 +2372,16 @@
           "id": "product-manager",
           "name": "Product manager",
           "persona_ids": [
+            "duncan-category-trends",
+            "maxine-tech-packs",
             "neha-product-management",
             "leon-roadmap-planning",
             "jocelyn-product-launch"
           ],
           "seat_suitability": [
             "coordinator",
+            "fact_checker",
+            "maker",
             "strategist"
           ]
         },
@@ -2180,11 +2392,18 @@
             "nasrin-tech-packs",
             "takeshi-product-development",
             "revathi-product-research",
-            "thanh-product-sourcing-lead"
+            "thanh-product-sourcing-lead",
+            "tunde-supplier-search",
+            "douglas-should-cost",
+            "wenhao-procurement",
+            "phuong-quality-control",
+            "maxine-tech-packs"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
             "maker",
             "strategist"
           ]
@@ -2205,6 +2424,7 @@
             "desmond-segments",
             "shannon-market-research",
             "sipho-product-hunter",
+            "duncan-category-trends",
             "keisha-market-research",
             "kojo-competitor-analysis",
             "lewis-idea-validation",
@@ -2247,6 +2467,10 @@
             "kirsty-nps",
             "alejandra-journeys",
             "latoya-post-purchase",
+            "meenakshi-compliance",
+            "alistair-packaging",
+            "corinne-reviews",
+            "phuong-quality-control",
             "wenjing-behaviour-research"
           ],
           "seat_suitability": [
@@ -2255,6 +2479,7 @@
             "fact_checker",
             "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -2302,11 +2527,17 @@
             "sunil-cold-calls",
             "tyler-inbound-leads",
             "rohan-chat-sales",
+            "clayton-new-business",
+            "ritika-influencer-outreach",
             "isaiah-outreach"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
             "fact_checker",
+            "judge",
+            "maker",
+            "red_team",
             "strategist"
           ]
         },
@@ -2320,6 +2551,7 @@
             "ricardo-buyer-progress",
             "darnell-sales-training",
             "rohan-chat-sales",
+            "clayton-new-business",
             "felicia-discovery",
             "vikram-deal-strategy",
             "hector-negotiation"
@@ -2358,6 +2590,7 @@
             "yaw-freelance-bids",
             "neville-bid-no-bid",
             "mei-wholesale-sales",
+            "clayton-new-business",
             "terrence-rfps",
             "claire-proposals"
           ],
@@ -2409,10 +2642,16 @@
           "name": "Retail store manager",
           "persona_ids": [
             "bayani-retail-shops",
-            "joanne-popups"
+            "joanne-popups",
+            "ishita-india-commerce",
+            "sabelo-product-portfolio"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
+            "fact_checker",
+            "judge",
+            "red_team",
             "strategist"
           ]
         },
@@ -2447,11 +2686,17 @@
           "name": "Business development manager",
           "persona_ids": [
             "carlton-commercial-accounts",
-            "mei-wholesale-sales"
+            "mei-wholesale-sales",
+            "clayton-new-business",
+            "ritika-influencer-outreach",
+            "wenhao-procurement"
           ],
           "seat_suitability": [
             "coordinator",
+            "critic",
+            "judge",
             "maker",
+            "red_team",
             "strategist"
           ]
         }
@@ -2749,6 +2994,43 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "akosua-cost-forecast",
+      "name": "Akosua",
+      "title": "Materials and landed cost forecaster",
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "data-analyst",
+        "ecommerce-analyst",
+        "explain-a-warehouse-stock-count-variance",
+        "fpa-analyst",
+        "plan-the-cash-for-your-next-stock-order",
+        "prepare-a-supplier-corrective-action-review",
+        "procurement-specialist",
+        "reorder-stock-before-you-run-out-and-track-the-shipment",
+        "set-your-order-size-and-split-it-across-suppliers",
+        "supply-chain-planner",
+        "weekly-stock-and-cash-reorder-watcher"
+      ],
+      "families": [
+        "data-model-query",
+        "sourcing-suppliers",
+        "stock-cash"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Warn early and calmly",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "alejandra-journeys",
       "name": "Alejandra",
       "title": "Service designer",
@@ -2812,6 +3094,45 @@
       ],
       "department": "content",
       "stance": "Repairing before replacing",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "alistair-packaging",
+      "name": "Alistair",
+      "title": "Packaging and unboxing designer",
+      "roles": [
+        "brand-designer",
+        "compliance-specialist",
+        "cx-manager",
+        "packaging-designer",
+        "plan-a-branded-unboxing-that-customers-film-and-reorder-for",
+        "product-brand-sheet-planner",
+        "product-sample-approval-loop",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "experience-ritual",
+        "physical-experience",
+        "production-capacity",
+        "sourcing-suppliers",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "maker",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "The box must get there in one piece",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -3795,7 +4116,7 @@
     {
       "id": "ayaka-ad-design",
       "name": "Ayaka",
-      "title": "E-commerce ad creative designer",
+      "title": "E-commerce ad graphics designer",
       "roles": [
         "design-brief-rules-writer",
         "graphic-designer",
@@ -5152,6 +5473,40 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "callum-reporting",
+      "name": "Callum",
+      "title": "E-commerce reporting and dashboards analyst",
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-visualisation-specialist",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "ecommerce-analyst",
+        "fpa-analyst",
+        "report-definition-drift-review-assistant",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "One definition per number, shared by everyone",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "camille-traction-ecommerce",
       "name": "Camille",
       "title": "Growth lead for ecommerce founders",
@@ -5795,6 +6150,41 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "clayton-new-business",
+      "name": "Clayton",
+      "title": "Agency new business lead",
+      "roles": [
+        "business-development-manager",
+        "cold-outreach-batch-runner",
+        "prepare-an-enterprise-account-plan",
+        "professional-services-marketer",
+        "proposal-writer",
+        "sales-enablement-specialist",
+        "sdr",
+        "stalled-deal-revival-desk"
+      ],
+      "families": [
+        "discovery",
+        "outbound",
+        "proposals-proof",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Show something useful before asking",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "clifford-business-systems",
       "name": "Clifford",
       "title": "Business systems coach",
@@ -5860,6 +6250,40 @@
       ],
       "department": "engineering",
       "stance": "Low voltage and safe wiring, always",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "cody-video-editor",
+      "name": "Cody",
+      "title": "Short-form video ad editor",
+      "roles": [
+        "ad-creative-strategist",
+        "captioned-product-reel",
+        "cut-a-raw-recording-and-get-chapters-and-short-clips",
+        "cut-caption-and-check-a-video-ad-before-launch",
+        "cut-chapter-and-clip-a-long-video-into-five-shorts",
+        "monthly-content-repurposer",
+        "social-media-manager",
+        "video-editor",
+        "video-producer"
+      ],
+      "families": [
+        "spoken-publishing",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "The first three seconds decide everything",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -5957,6 +6381,43 @@
       ],
       "department": "marketing",
       "stance": "Small experiments first",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "corinne-reviews",
+      "name": "Corinne",
+      "title": "Reviews and ratings manager",
+      "roles": [
+        "amazon-marketplace-manager",
+        "build-a-vip-program-for-your-best-customers",
+        "content-marketer",
+        "customer-support-specialist",
+        "cx-manager",
+        "monthly-customer-voice-keeper",
+        "monthly-review-proof-keeper",
+        "public-review-reply-desk",
+        "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+        "reputation-manager",
+        "turn-a-customer-interview-into-a-case-outline",
+        "turn-reviews-into-a-checked-sales-video-and-cut-list"
+      ],
+      "families": [
+        "change-crisis",
+        "empathetic-replies",
+        "personal-correspondence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every review is a real buyer talking",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -7138,6 +7599,43 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "douglas-should-cost",
+      "name": "Douglas",
+      "title": "BOM and should-cost analyst",
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "ecommerce-analyst",
+        "find-duplicate-and-unused-business-subscriptions",
+        "management-accountant",
+        "monthly-contract-renewal-keeper",
+        "physical-product-developer",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every number has a source and a date",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "duane-construction-wip",
       "name": "Duane",
       "title": "Construction WIP and progress billing analyst",
@@ -7170,6 +7668,44 @@
       ],
       "department": "finance",
       "stance": "Update the estimates every month",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "duncan-category-trends",
+      "name": "Duncan",
+      "title": "Category trends and demand analyst",
+      "roles": [
+        "customer-interview-program-keeper",
+        "data-analyst",
+        "ecommerce-analyst",
+        "idea-market-test",
+        "idea-validation-analyst",
+        "market-research-analyst",
+        "marketplace-manager",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "product-manager",
+        "quarterly-battle-card-keeper"
+      ],
+      "families": [
+        "customer-discovery",
+        "data-model-query",
+        "interviews-observation",
+        "segments-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Two dated sources before any call",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -7547,6 +8083,46 @@
       ],
       "department": "marketing",
       "stance": "Ideas that fit the business",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "emre-tracking",
+      "name": "Emre",
+      "title": "E-commerce tracking and attribution specialist",
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "compliance-specialist",
+        "data-engineer",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "ecommerce-analyst",
+        "marketing-analyst",
+        "monthly-tracking-health-keeper",
+        "set-up-tracking-you-can-trust-before-you-scale",
+        "set-your-cac-limit-and-test-what-ads-really-add"
+      ],
+      "families": [
+        "causal-tests",
+        "experiments",
+        "growth-routes",
+        "instrumentation",
+        "launch-measurement",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Shopify orders are the truth",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -8278,6 +8854,45 @@
       ],
       "department": "content",
       "stance": "Winning within three seconds on the shelf",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "fiona-account-manager",
+      "name": "Fiona",
+      "title": "Agency account manager for store clients",
+      "roles": [
+        "chief-of-staff",
+        "communications-coordinator",
+        "customer-onboarding-keeper",
+        "customer-success-manager",
+        "discount-and-price-change-checker",
+        "make-onboarding-instructions-match-the-product",
+        "marketing-analyst",
+        "monthly-renewal-watcher",
+        "prepare-an-enterprise-account-plan",
+        "project-manager",
+        "subscription-churn-watcher",
+        "weekly-customer-health-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "onboarding-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Bad news early, with a plan",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -9096,6 +9711,45 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "gurdeep-shipping-returns",
+      "name": "Gurdeep",
+      "title": "Shipping, delivery and returns manager",
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "customer-support-specialist",
+        "daily-order-and-shipping-watcher",
+        "ecommerce-analyst",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer",
+        "operations-manager",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every RTO costs two trips and a lost sale",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "gustavo-dashboards",
       "name": "Gustavo",
       "title": "BI developer",
@@ -9853,6 +10507,43 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "howard-copy-chief",
+      "name": "Howard",
+      "title": "Direct-response copy chief",
+      "roles": [
+        "advertising-copywriter",
+        "brand-strategist",
+        "buyer-aware-headline",
+        "conversion-copywriter",
+        "ecommerce-copywriter",
+        "editor",
+        "headline-test",
+        "product-review-mining"
+      ],
+      "families": [
+        "customer-evidence",
+        "direct-response",
+        "experiment-first",
+        "outreach",
+        "promise-proof",
+        "risk-urgency"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "The buyer's words beat mine",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "hugo-pipeline",
       "name": "Hugo",
       "title": "Sales pipeline analyst",
@@ -10458,6 +11149,50 @@
       ],
       "department": "data",
       "stance": "It answers from your facts or not at all",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "ishita-india-commerce",
+      "name": "Ishita",
+      "title": "India e-commerce specialist",
+      "roles": [
+        "chatbot-specialist",
+        "compliance-specialist",
+        "customer-inbox-triage-and-reply-drafter",
+        "discount-and-price-change-checker",
+        "ecommerce-analyst",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketplace-manager",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "pricing-strategist",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "retail-manager",
+        "supply-chain-planner",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Availability first, ads second",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -11268,6 +12003,35 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "junaid-amazon-ads",
+      "name": "Junaid",
+      "title": "Amazon ads (PPC) specialist",
+      "roles": [
+        "amazon-marketplace-manager",
+        "amazon-monthly-account-keeper",
+        "amazon-ppc-specialist",
+        "ecommerce-analyst",
+        "marketplace-manager"
+      ],
+      "families": [
+        "growth-routes"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Profit per order over ACoS",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "kagiso-python",
       "name": "Kagiso",
       "title": "Python automation developer",
@@ -11663,6 +12427,43 @@
       ],
       "department": "data",
       "stance": "Rules people can remember",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "kelsey-snapchat-ads",
+      "name": "Kelsey",
+      "title": "Snapchat ads media buyer",
+      "roles": [
+        "ad-creative-strategist",
+        "ad-fatigue-watcher",
+        "ecommerce-analyst",
+        "marketing-analyst",
+        "meta-media-buyer",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-tracking-health-keeper",
+        "snapchat-ads-media-buyer"
+      ],
+      "families": [
+        "budget-pacing",
+        "creator-partnerships",
+        "creator-proof",
+        "retargeting",
+        "shopping-feed",
+        "video-social"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Store orders beat platform claims",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -12329,6 +13130,43 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "larissa-store-ux",
+      "name": "Larissa",
+      "title": "Store UX designer",
+      "roles": [
+        "accessibility-specialist",
+        "check-a-prototype-before-user-testing",
+        "cro-specialist",
+        "find-where-new-users-leave-and-prove-the-fix-works",
+        "give-developers-a-complete-component-brief",
+        "make-a-long-form-easier-to-finish",
+        "new-screen-design-reviewer",
+        "page-usability-review",
+        "quarterly-accessibility-keeper",
+        "turn-a-design-review-into-fixes",
+        "ui-designer",
+        "ux-designer",
+        "website-designer",
+        "write-helpful-error-and-empty-states"
+      ],
+      "families": [
+        "interface-systems",
+        "research-handoff"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Watch real buyers before redesigning anything",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "lars-export-markets",
       "name": "Lars",
       "title": "Export market analyst",
@@ -12594,6 +13432,47 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "lerato-creative-producer",
+      "name": "Lerato",
+      "title": "Agency creative producer",
+      "roles": [
+        "ad-creative-strategist",
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "graphic-designer",
+        "honest-project-review",
+        "operations-manager",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-a-client-scope-change-brief",
+        "prepare-your-first-freelance-project-quote",
+        "project-manager",
+        "trace-why-work-keeps-missing-deadlines",
+        "turn-meetings-into-owned-actions",
+        "video-producer",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "publishing",
+        "scope-blueprints"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Real hours, real dates",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "lesley-regsummary",
       "name": "Lesley",
       "title": "Regulatory compliance analyst",
@@ -12795,6 +13674,39 @@
       ],
       "department": "marketing",
       "stance": "Correct facts everywhere come first",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "lindsey-meta-media-buyer",
+      "name": "Lindsey",
+      "title": "Meta ads media buyer",
+      "roles": [
+        "ad-creative-strategist",
+        "ad-fatigue-watcher",
+        "ad-test-sprint-runner",
+        "ecommerce-analyst",
+        "growth-marketer",
+        "marketing-analyst",
+        "meta-ads-weekly-account-keeper",
+        "meta-media-buyer",
+        "monthly-tracking-health-keeper"
+      ],
+      "families": [
+        "campaign-launch",
+        "creative-divergence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Store orders over platform numbers",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -13352,16 +14264,13 @@
       "name": "Margaret",
       "title": "E-commerce job orchestrator",
       "roles": [
-        "big-decisions-first-sorter",
         "chief-of-staff",
         "decision-checklist-keeper",
         "executive-work-keeper",
-        "monthly-roles-and-goals-reviewer",
-        "prepare-a-board-decision-brief",
-        "prepare-a-small-team-offsite",
-        "quarterly-strategy-reviewer",
-        "team-goals-one-on-ones",
-        "weekly-meeting-actions-keeper",
+        "general-coordinator",
+        "hand-off-the-work-only-you-do-and-keep-it-handed-off",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-an-engagement-closeout-evidence-pack",
         "weekly-priorities-plan"
       ],
       "families": [
@@ -13375,10 +14284,47 @@
         "sceptic"
       ],
       "seat_suitability": [
-        "maker"
+        "coordinator",
+        "strategist"
       ],
       "department": "ecommerce",
       "stance": "Every job gets a spec and tests",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "margot-pr",
+      "name": "Margot",
+      "title": "E-commerce PR and gift guide specialist",
+      "roles": [
+        "aeo-geo-specialist",
+        "brand-strategist",
+        "communications-coordinator",
+        "link-building-specialist",
+        "pr-specialist",
+        "prepare-a-partner-launch-announcement-pack"
+      ],
+      "families": [
+        "answers-citations",
+        "brand-business-story",
+        "change-crisis",
+        "growth-routes",
+        "humour-events",
+        "psychology-journeys",
+        "spoken-pitches",
+        "spoken-publishing"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Pitch early, on the editor's calendar",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -13561,6 +14507,42 @@
       ],
       "department": "product",
       "stance": "A first working call, fast",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "marnie-pinterest-ads",
+      "name": "Marnie",
+      "title": "Pinterest ads and pins specialist",
+      "roles": [
+        "content-marketer",
+        "marketing-analyst",
+        "monthly-content-repurposer",
+        "pinterest-marketer",
+        "social-media-manager",
+        "weekly-social-content-planner"
+      ],
+      "families": [
+        "answers-citations",
+        "creator-partnerships",
+        "growth-routes",
+        "intent-content",
+        "jobs-switching",
+        "shoot-retouch",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Plan the season before the season",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -13844,6 +14826,38 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "maxine-tech-packs",
+      "name": "Maxine",
+      "title": "Product developer and tech pack specialist",
+      "roles": [
+        "compare-supplier-prices-on-the-same-basis",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+        "packaging-designer",
+        "physical-product-developer",
+        "procurement-specialist",
+        "product-manager",
+        "product-sample-approval-loop",
+        "qhse-manager"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "If it isn't written, it won't be made",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "mazen-warranty",
       "name": "Mazen",
       "title": "Warranty claims specialist",
@@ -13877,6 +14891,44 @@
       ],
       "department": "customer-support",
       "stance": "Fair claims for honest customers",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "meenakshi-compliance",
+      "name": "Meenakshi",
+      "title": "E-commerce compliance and ad policy specialist",
+      "roles": [
+        "advertising-copywriter",
+        "compliance-evidence-request-assistant",
+        "compliance-specialist",
+        "contract-intake-reviewer",
+        "cx-manager",
+        "make-a-new-policy-understandable-to-staff",
+        "monthly-contract-renewal-keeper",
+        "packaging-designer",
+        "prepare-a-board-decision-brief",
+        "prepare-a-contract-renewal-negotiation",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-evidence-for-a-compliance-review",
+        "quarterly-compliance-readiness-keeper",
+        "review-employee-data-access-before-a-change",
+        "rule-change-policy-keeper",
+        "shopify-specialist"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "maker",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every claim needs proof you can show",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -16133,6 +17185,40 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "phuong-quality-control",
+      "name": "Phuong",
+      "title": "Quality control and inspection manager",
+      "roles": [
+        "compare-supplier-prices-on-the-same-basis",
+        "cx-manager",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+        "physical-product-developer",
+        "procurement-specialist",
+        "product-sample-approval-loop",
+        "qhse-manager",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Judge quality by what buyers send back",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "pilar-creators",
       "name": "Pilar",
       "title": "E-commerce creator and organic content manager",
@@ -17258,6 +18344,44 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "ritika-influencer-outreach",
+      "name": "Ritika",
+      "title": "Influencer outreach manager",
+      "roles": [
+        "affiliate-influencer-manager",
+        "build-a-clear-sponsorship-decision-brief",
+        "business-development-manager",
+        "community-manager",
+        "compliance-specialist",
+        "creator-gifting-brief",
+        "sdr",
+        "turn-your-best-organic-posts-and-creator-videos-into-meta-ads"
+      ],
+      "families": [
+        "creator-partnerships",
+        "creator-proof",
+        "growth-routes",
+        "loyalty-community"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "One real message per creator",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "roberta-direct-mail",
       "name": "Roberta",
       "title": "Direct mail marketer",
@@ -17852,6 +18976,42 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "sabelo-product-portfolio",
+      "name": "Sabelo",
+      "title": "Product portfolio analyst",
+      "roles": [
+        "data-analyst",
+        "ecommerce-analyst",
+        "monthly-repeat-buyer-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "monthly-tracking-health-keeper",
+        "pricing-strategist",
+        "product-analyst",
+        "retail-manager",
+        "weekly-product-funnel-watcher",
+        "weekly-store-numbers-watcher"
+      ],
+      "families": [
+        "data-model-query",
+        "unit-costs",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every product earns its place",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "sabrina-childcare",
       "name": "Sabrina",
       "title": "Childcare communications coordinator",
@@ -18420,6 +19580,47 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "sheila-inbound-freight",
+      "name": "Sheila",
+      "title": "Inbound freight and customs coordinator",
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "compliance-specialist",
+        "daily-order-and-shipping-watcher",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer",
+        "operations-manager",
+        "procurement-specialist",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Paperwork right before the ship sails",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "sian-apprentices",
       "name": "Sian",
       "title": "Apprentice and trainee programme coordinator",
@@ -18843,6 +20044,46 @@
       ],
       "department": "ecommerce",
       "stance": "Pages that answer real searches",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "sudhir-marketplaces",
+      "name": "Sudhir",
+      "title": "Marketplace channel manager",
+      "roles": [
+        "amazon-marketplace-manager",
+        "customer-inbox-triage-and-reply-drafter",
+        "discount-and-price-change-checker",
+        "ecommerce-analyst",
+        "ecommerce-manager",
+        "etsy-shop-manager",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketplace-manager",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "pricing-strategist",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Profit after every fee, per order",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -19270,6 +20511,43 @@
       ],
       "department": "operations",
       "stance": "Few goals people remember",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "tanvi-listing-images",
+      "name": "Tanvi",
+      "title": "Marketplace listing and A+ content designer",
+      "roles": [
+        "amazon-marketplace-manager",
+        "brand-designer",
+        "graphic-designer",
+        "make-a-readable-event-poster",
+        "marketplace-manager",
+        "product-photographer"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every image answers one buyer doubt",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -20146,6 +21424,43 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "tunde-supplier-search",
+      "name": "Tunde",
+      "title": "Supplier search and AI sourcing specialist",
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "find-duplicate-and-unused-business-subscriptions",
+        "logistics-coordinator",
+        "monthly-contract-renewal-keeper",
+        "physical-product-developer",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "qhse-manager",
+        "supply-chain-planner"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Check before you pay",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "tyler-inbound-leads",
       "name": "Tyler",
       "title": "Inbound lead response rep",
@@ -20966,6 +22281,44 @@
       "provenance": "deterministic-existing-profile"
     },
     {
+      "id": "wenhao-procurement",
+      "name": "Wenhao",
+      "title": "Procurement and supplier negotiation manager",
+      "roles": [
+        "business-development-manager",
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-contract-renewal-keeper",
+        "physical-product-developer",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "supply-chain-planner",
+        "translator"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers",
+        "voice-edit-translation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Same basis or no comparison",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
       "id": "wenjing-behaviour-research",
       "name": "Wenjing",
       "title": "Behavioural scientist",
@@ -21343,6 +22696,43 @@
       ],
       "department": "learning",
       "stance": "Practice people can use the same day",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "yaroslav-shopify-dev",
+      "name": "Yaroslav",
+      "title": "Shopify theme developer",
+      "roles": [
+        "accessibility-specialist",
+        "ai-code-change-steps",
+        "design-handoff-completeness-assistant",
+        "find-what-is-slow-fix-it-and-show-the-numbers",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "frontend-developer",
+        "give-developers-a-complete-component-brief",
+        "monthly-design-system-keeper",
+        "pull-request-reviewer",
+        "qa-engineer",
+        "quarterly-accessibility-keeper",
+        "shopify-specialist",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "built-experiences",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Work on a copy, always",
       "provenance": "deterministic-existing-profile"
     },
     {
@@ -21867,8 +23257,8 @@
     }
   ],
   "coverage": {
-    "personas": 550,
-    "linked_families": 197,
+    "personas": 581,
+    "linked_families": 198,
     "approach_index_available": true
   }
 }

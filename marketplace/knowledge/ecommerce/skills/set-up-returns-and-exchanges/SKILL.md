@@ -1,6 +1,6 @@
 ---
 name: set-up-returns-and-exchanges
-description: "A complete returns and exchanges process for the store: the policy terms (window, condition, who pays shipping, refund method and timing, final sale), the self-serve portal flow that offers an exchange or store credit before a refund without hiding the refund, the inspection and restock checks, the reason codes that feed product fixes, and the Shopify settings, all costed per return. Covers India reverse pickup, COD refunds and exchanges, and US expectations. Use when returns are handled by email chaos, refunds are slow, return costs are rising, or the store is writing its first policy."
+description: "A complete returns and exchanges process for the store: the policy terms (window, condition, who pays shipping, refund method and timing, final sale), the self-serve portal flow that offers an exchange or store credit before a refund without hiding the refund, the inspection and restock checks, the reason codes that feed product fixes, and the Shopify settings, all costed per return. Works for stores in any country: covers prepaid labels, drop-off points and courier pickup, legal minimums such as the UK and EU 14-day right to cancel, refunds for buyers who paid on delivery or by bank transfer, and cross-border returns. Use when returns are handled by email chaos, refunds are slow, return costs are rising, or the store is writing its first policy."
 ---
 
 # Returns and exchanges process
@@ -18,9 +18,9 @@ description: "A complete returns and exchanges process for the store: the policy
 ## Not for
 
 - Writing the public returns policy page in full: use `write-store-policy-pages` (this skill gives it the terms).
-- The cost of returns and return to origin by product and pincode: use `returns-and-rto-cost-analysis`.
+- The cost of returns and failed deliveries by product and delivery area: use `returns-and-rto-cost-analysis`.
 - Size and fit guides that prevent returns: use `write-size-fit-and-how-to-use-guides`.
-- Refused COD parcels: use `cut-rto-on-cod-orders`.
+- Parcels refused at the door or never delivered: use `cut-rto-on-cod-orders`.
 
 ## What you need
 
@@ -38,7 +38,7 @@ Settings and wording are prepared at draft access (level 2). Turning on the port
 ## Before you start: the gates
 
 1. **Gross profit per order known.** Pass when it includes a return allowance. Fail: compute the allowance in step 1; every policy choice is a cost.
-2. **Legal minimum checked.** Pass when the terms meet local rules: in India, the Consumer Protection (E-Commerce) Rules, 2020 expect clear return, refund and exchange terms shown before purchase; in the US, some states require a clearly posted policy. Fail: have the client's adviser confirm before publishing.
+2. **Legal minimum checked.** Pass when the terms meet your market's consumer rules: in the UK and EU, buyers have a 14-day right to cancel from delivery for most goods, with a refund within 14 days, and must be told who pays return shipping; in Australia, the consumer guarantees mean faulty items must be fixed, replaced or refunded whatever the policy says; in the US, some states require a clearly posted policy; most markets expect clear return, refund and exchange terms shown before purchase. Fail: have the client's adviser confirm before publishing.
 3. **Capacity.** Pass when someone can inspect and process returns within 2 working days of arrival. Fail: name the person or the 3PL before launch.
 
 ## Steps
@@ -57,7 +57,7 @@ A return can cost 20 to 65% of the item's cost to process [CXP-0018]. Write the 
 
 | Term | Default (practitioner, adjust) | Why |
 |---|---|---|
-| Window | 14 to 30 days from delivery | Shopify can count from delivery and set shorter windows per product [CXP-6284] |
+| Window | 14 to 30 days from delivery, never below the legal minimum (14 days in the UK and EU) | Shopify can count from delivery and set shorter windows per product [CXP-6284] |
 | Condition | Unused, tags on, original pack; hygiene items final sale | Keeps resale possible |
 | Exchange shipping | Free for size or colour swaps | Pushes exchange over refund |
 | Refund return shipping | Flat fee or buyer-paid, shown before purchase | Covers cost without surprise |
@@ -66,9 +66,11 @@ A return can cost 20 to 65% of the item's cost to process [CXP-0018]. Write the 
 | Final sale | Clearance and personalised items, labelled on the product page | Shopify lets products or collections be final sale, not bundles [CXP-6284] |
 | Damaged or wrong item | Store pays everything; photo on request; no return for low-value items | Effort kills loyalty [CXP-0009] |
 
-For low-value items, usually under $20 or a similar rupee level, refund or replace without asking for the item back when shipping it back costs more than it is worth; about 9% of returns are fraudulent, so cap it per buyer [CXP-0018]. On low-ticket consumables, a long satisfaction guarantee has drawn fewer claims than a short one [OFF-0060].
+For low-value items, usually under 20 in the store's own currency, refund or replace without asking for the item back when shipping it back costs more than it is worth; about 9% of returns are fraudulent, so cap it per buyer [CXP-0018]. On low-ticket consumables, a long satisfaction guarantee has drawn fewer claims than a short one [OFF-0060].
 
-India notes: for apparel, offer exchange by reverse pickup with a quality check at the doorstep where the courier supports it. COD buyers have no card to refund to; offer store credit (instant), a UPI refund collected through a secure form or payment link, never by asking for bank details in open chat. US notes: buyers expect prepaid labels or drop-off; a flat label fee is common and must be shown before purchase.
+Return method notes: in the US, UK, Canada and Australia buyers expect prepaid labels or drop-off (post office, parcel lockers, pickup points); a flat label fee is common and must be shown before purchase. Across Europe, drop-off at parcel shops and lockers is common, and label-free returns with a QR code help. Where couriers offer courier pickup from the door, offer exchange by pickup for apparel. Cross-border returns: give a local return address or a consolidator in the main markets, or refund without return under a value line, since international return shipping can cost more than the item.
+
+Refund method notes: buyers who paid on delivery, by bank transfer or by invoice have no card to refund to; offer store credit (instant) or a bank refund collected through a secure form or payment link, never by asking for bank details in open chat. Buy now, pay later refunds go back through the provider.
 
 ### 3. Design the portal flow
 
@@ -115,15 +117,34 @@ Shopify books returns on the refund date, so a strong month is followed by a fal
 
 Update the policy page through `write-store-policy-pages`, link the portal from the footer, order confirmation and shipping emails, train support with a one-page rule card, and run 10 test returns (refund, exchange, credit, damaged, final sale) before going live. Review monthly: return rate, exchange share, refund time, cost per return, top reasons.
 
+### 8. Measure refund speed from the buyer's request
+
+The buyer's clock starts when they ask for the return, not when the warehouse scans the parcel. From the returns export, for every completed return: refund days = refund or credit date minus return request date. Report the median and the slowest 10%, and list:
+
+- completed returns that took longer than the store's promise (for example 7 days from request, a practitioner default to tune);
+- open returns already past the promise, oldest first, with the step they are stuck at (label not used, in transit, received but not inspected, inspected but not refunded).
+
+Fix the stage where most of the delay sits. For trusted buyers (past orders kept, no past returns) or orders under a value cap the owner sets, consider refunding or crediting on the first carrier scan of the return instead of after inspection; it speeds the refund but carries fraud and cash risk, so start with a small group, cap it, and watch repeat abusers.
+
+### 9. Set the keep-it line and a recovery budget, then track the loyalty effect
+
+- **Keep-it line per product group:** refund without return when the refund amount is at or below the full cost of the return (step 1), or when the item is perishable, hygiene-sensitive or hard to resell. Offer it case by case, not as a banner, cap it per buyer, and for bulky goods ask the buyer to donate the item.
+- **Recovery budget:** support may fix a problem order (refund part, replace, add a gift or upgrade shipping) up to a set amount per incident without asking. Start it at about a quarter to a half of one order's gross margin (order value minus product cost and shipping); this is a starting suggestion, raise it only if the review shows returners coming back.
+- **Three baseline numbers, then every 90 days:** median days from request to refund, share of returns kept as exchange or store credit, and the repurchase rate within 60 days for buyers who returned something against buyers who did not. If returners buy again less than non-returners, look first at refund speed and effort.
+
 ## Checks before you hand it over
 
 - Each outcome (refund, exchange, credit) has a cost per return for the top 10 products.
 - Every term is in the table with its reason and matches the platform setting.
 - The refund option is visible on the same screen as exchange and credit.
-- COD refunds have a safe method that never collects bank details in open chat.
+- Refunds for buyers with no card on file (pay on delivery, bank transfer) have a safe method that never collects bank details in open chat.
+- The window meets the legal minimum in every market the store sells to.
 - The inspection checklist has a 2-working-day limit and an owner.
 - Reason codes are fixed and mapped to who fixes each one.
 - Returns are accrued, not just booked on refund date.
+- Refund speed is measured from the buyer's request, with late and stuck returns listed.
+- The keep-it line comes from each product group's own return cost, with a cap per buyer.
+- The recovery budget is a set amount per incident worked out from order margin.
 - Nothing goes live and no refund is issued without the client's yes.
 
 ## Output
@@ -135,15 +156,21 @@ Update the policy page through `write-store-policy-pages`, link the portal from 
 5. **Warehouse checklist and grading card.**
 6. **Reason-code list** with owner per reason.
 7. **Monthly returns report template:** Month, Orders, Returns, Return rate, Exchange %, Credit %, Refund %, Median refund days, Cost per return, Top 3 reasons, Top 3 products.
+8. **Refund speed list:** Return, Order, Requested, Refunded, Days, Over promise (yes or no), Stuck at.
+9. **Keep-it and recovery card:** Product group, Refund amount, Cost of return, Keep-it (yes or no), Cap per buyer, Recovery budget per incident.
+10. **90-day loyalty check:** Repurchase within 60 days for returners and non-returners, median refund days, exchange and credit share.
 
 ## Common mistakes
 
 - **Refund hidden to force exchanges.** Step 3 shows all three choices on one screen.
 - **Slow refunds after inspection.** Step 2 sets 2 working days.
 - **Restocking fee assumed to come off automatically.** Step 4 deducts it by hand.
-- **Asking COD buyers for bank details in chat.** Step 2 uses credit or a secure form.
+- **Asking buyers for bank details in chat.** Step 2 uses credit or a secure form.
+- **A window shorter than the law allows.** Gate 2 checks each market's minimum.
 - **Free-text reasons nobody reads.** Step 5 fixes codes and owners.
 - **A false revenue dip after a big month.** Step 6 accrues returns.
+- **Timing refunds from the warehouse scan.** Step 8 measures from the buyer's request.
+- **Keep-it offered to everyone as a banner.** Step 9 sets it case by case with a cap.
 
 ## Sources
 
@@ -155,5 +182,10 @@ Update the policy page through `write-store-policy-pages`, link the portal from 
 - OFF-0060: long guarantees on consumables.
 - FIN-0009: where return costs sit in the accounts.
 - MEA-0011, MEA-0028: Shopify refund dating and return accruals.
+- Library items: Returns policy designer (AI Blocks skill), used for the three baseline numbers, refund on carrier scan, the keep-it line and the recovery budget; Refund speed checker (adapted from shopify-admin-return-processing-sla by 40rty AI, MIT, https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/returns/shopify-admin-return-processing-sla), used for the refund speed list in step 8.
 
-What makes this skill ours: each outcome is costed per return before the policy is set; exchange and credit are offered first but the refund is never hidden; COD buyers in India get a safe refund path; and every reason code is wired to the person who fixes it, so returns drop instead of just being processed.
+What makes this skill ours: each outcome is costed per return before the policy is set; exchange and credit are offered first but the refund is never hidden; buyers without a card on file get a safe refund path; and every reason code is wired to the person who fixes it, so returns drop instead of just being processed.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. The Consumer Protection (E-Commerce) Rules, 2020 expect clear return, refund and exchange terms shown before purchase. For apparel, offer exchange by reverse pickup with a quality check at the doorstep where the courier supports it. COD buyers have no card to refund to; offer instant store credit or a UPI refund collected through a secure form or payment link, never by asking for bank details in open chat. Track returns and RTO by pincode.

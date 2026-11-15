@@ -146,7 +146,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const pack = await build();
   assert.equal(pack.folder, "nova-seo");
   assert.deepEqual(pack.files.map(f => f.path), [
-    "README.md", "AGENTS.md", "CLAUDE.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "knowledge-map.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
+    "README.md", "AGENTS.md", "CLAUDE.md", "toolbox.md", "WORK-METHOD.md", "METHOD.md", "MEMORY-TEMPLATE.md", "context/README.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "knowledge-map.md", "access.md", "QUALITY-METHOD.md", "OUTPUT-POLICY.md",
     "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "library.md", "sources.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
   ]);
   const file = (p: string) => pack.files.find(f => f.path === p)!.content;
@@ -189,7 +189,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
     assert.equal(fm.name, id);
     assert.ok(fm.description.length > 20 && fm.description.length <= 1024);
   }
-  assert.match(file("skills/landing-page-copy/SKILL.md"), /- And the gates for every job: WORK-METHOD\.md, step 5\./);
+  assert.match(file("skills/landing-page-copy/SKILL.md"), /- And the gates for every job: METHOD\.md, step 5\./);
 
   const manifest = JSON.parse(file("pack.json"));
   assert.equal(manifest.schema, PACK_SCHEMA);
@@ -436,13 +436,14 @@ test("one-file version: every file the agent reads, AGENTS.md first, in one text
   const text = oneFileText(pack, "https://agents.test/");
   const parts = [...text.matchAll(/^===== FILE: (.+) =====$/gm)].map(m => m[1]);
   assert.equal(parts[0], "AGENTS.md", "the AI starts with its operating instructions");
-  for (const p of ["soul.md", "personality.md", "playbook.md", "knowledge.md", "access.md", "skills.md", "LICENSE.md"]) assert.ok(parts.includes(p), p);
+  for (const p of ["soul.md", "personality.md", "playbook.md", "knowledge.md", "access.md (summary)", "skills.md", "LICENSE.md"]) assert.ok(parts.includes(p), p);
+  assert.equal(parts[parts.length - 1], "LICENSE.md", "the licence closes the file");
   for (const p of ["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json"]) assert.ok(!parts.includes(p), `${p} is for people, not the agent`);
   assert.ok(!parts.some(p => /^skills\/.+\/SKILL\.md$/.test(p)), "each SKILL.md is already in skills.md");
   assert.equal(new Set(parts).size, parts.length);
   const agents = pack.files.find(f => f.path === "AGENTS.md")!.content.trim();
   assert.ok(text.includes(agents), "files go in whole");
-  assert.match(text, /^# Nova, .+: the whole agent in one file$/m);
+  assert.match(text, /^# Nova, .+: the agent in one file$/m);
   assert.match(text, /https:\/\/agents\.test\/agents\/nova-seo/);
   assert.ok(text.endsWith("\n") && !text.includes("\r"));
   assert.equal(oneFileText(pack), oneFileText(pack), "the same pack gives the same bytes");

@@ -1,6 +1,6 @@
 ---
 name: guarantee-and-risk-reversal
-description: "A guarantee buyers trust and the store can afford: the guarantee type matched to the product and the buyer's biggest fear (money back, free exchange, repair-first warranty, results trial or returnless refund), its exact terms, the expected claim cost per order and the conversion lift it must buy to pay, the cash it ties up, and the lines and placements that show it on product page, cart, checkout and ads. Keeps 'money back' and 'lifetime' claims inside US advertising rules and states statutory rights in India. Use when buyers hesitate on a new or pricey product, when the current returns promise is vague, or when the owner wants a bolder guarantee but fears refunds."
+description: "A guarantee buyers trust and the store can afford: the guarantee type matched to the product and the buyer's biggest fear (money back, free exchange, repair-first warranty, results trial or returnless refund), its exact terms, the expected claim cost per order and the conversion lift it must buy to pay, the cash it ties up, and the lines and placements that show it on product page, cart, checkout and ads. Keeps 'money back' and 'lifetime' claims inside US advertising rules and states buyers' legal rights in the UK, EU, Australia and other markets. Use when buyers hesitate on a new or pricey product, when the current returns promise is vague, or when the owner wants a bolder guarantee but fears refunds."
 ---
 
 # Guarantee and risk reversal
@@ -18,7 +18,7 @@ description: "A guarantee buyers trust and the store can afford: the guarantee t
 
 - Writing every store policy page: use `write-store-policy-pages` (this skill hands it the guarantee terms).
 - Finding every doubt across the journey: use `trust-and-reassurance-audit`.
-- Analysing what returns and RTO already cost: use `returns-and-rto-cost-analysis`.
+- Analysing what returns and failed deliveries already cost: use `returns-and-rto-cost-analysis`.
 - Handling a single angry claim: use `handle-angry-customer-escalations`.
 
 ## What you need
@@ -26,7 +26,7 @@ description: "A guarantee buyers trust and the store can afford: the guarantee t
 Required:
 
 1. **Shopify order and refund data**, 6 to 12 months: orders, refunds, refund reasons, refund amounts by product.
-2. **Returns or RTO report** by product and reason, from the returns app or courier.
+2. **Returns and failed-delivery report** by product and reason, from the returns app or courier.
 3. **Gross profit per order** from `build-sku-profit-sheet`.
 4. **The buyer's biggest fear**, from at least one of: post-purchase survey "what almost stopped you", pre-sale chats, reviews, abandoned-checkout replies.
 5. **Current policy text** and the Shopify return rules set up.
@@ -97,9 +97,9 @@ Include, in plain words:
 
 Give support a one-page rule: who approves, what evidence, refund route, and a flag for customers with more than one claim. Track claim rate and cost per claim by product each month; narrow cover on any product whose claims climb [OFF-0064].
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** refunds for cash-on-delivery orders go to a bank account or UPI ID the buyer gives; state the time. Write terms in plain English plus the main regional language if the store sells in it. Keep the buyer's legal rights for defective goods; do not write "no returns" where the law gives one.
+- **UK, EU, Australia and other markets:** buyers have legal rights a guarantee cannot remove: a cooling-off period for most online orders in the UK and EU (usually 14 days), and repair, replacement or refund for faulty goods under consumer law (the Australian Consumer Law in Australia). Your guarantee adds to these rights; never write "no returns" where the law gives one. Refunds for pay-on-delivery orders go to a bank account the buyer gives; state the time. Write terms in plain English plus the main language your buyers use.
 - **US:** call it a money-back guarantee only if the full price is refunded on request [OFF-6501]; state any condition next to the claim, and define any "lifetime" period [OFF-6502].
 
 ## Checks before you hand it over
@@ -144,3 +144,9 @@ Give support a one-page rule: who approves, what evidence, refund route, and a f
 - OFF-6501, OFF-6502: US money-back and lifetime claims.
 
 What makes this skill ours: the guarantee is picked from the buyer's counted fear and the product type, not from a famous brand; the cost model turns the promise into the conversion lift it must buy and the cash it ties up; the system's return rules are set to match the words; and support gets a claim rule so a bold promise does not become an abuse channel.
+
+## Selling in India
+
+- Refunds for COD orders go to a bank account or UPI ID the buyer gives; state the time.
+- Write terms in plain English plus the main regional language if the store sells in it.
+- Keep the buyer's legal rights for defective goods; do not write "no returns" where the law gives one.

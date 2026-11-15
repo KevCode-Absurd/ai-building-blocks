@@ -1,6 +1,6 @@
 ---
 name: validate-demand-before-buying-stock
-description: "A cheap, legal demand test for one product before the store pays for stock: a pre-order, a deposit waitlist or a small ad test, with the go and no-go lines written down before any money is spent. Works out the gross profit per order and the most the store can pay to win a buyer, picks the test that fits the product and cash, sets the spend cap and stopping rule, writes the page and messages, then reads the result into one decision: order, change and retest, or drop. Covers US mail order rules, Shopify pre-order settings, COD and UPI in India and honest scarcity. Use before a first stock order, a new product, a large reorder of an unproven variant or a factory minimum order."
+description: "A cheap, legal demand test for one product before the store pays for stock: a pre-order, a deposit waitlist or a small ad test, with the go and no-go lines written down before any money is spent. Works out the gross profit per order and the most the store can pay to win a buyer, picks the test that fits the product and cash, sets the spend cap and stopping rule, writes the page and messages, then reads the result into one decision: order, change and retest, or drop. Covers mail order and pre-order rules in the US, UK and EU, Shopify pre-order settings, deposits and payment options, and honest scarcity. Use before a first stock order, a new product, a large reorder of an unproven variant or a factory minimum order."
 ---
 
 # Validate demand before buying stock
@@ -27,7 +27,7 @@ Required:
 
 1. **Supplier quote:** unit price, minimum order, lead time, deposit terms. Without it there is no stock decision to make; ask once.
 2. **Landed cost per unit** from `calculate-landed-cost-per-unit`, or freight, duty and packaging figures to build it.
-3. **Planned price** and the delivered costs per order: shipping, pick and pack, payment fee, expected return or RTO rate.
+3. **Planned price** and the delivered costs per order: shipping, pick and pack, payment fee, expected return and failed delivery rate.
 4. **Cash available** for the stock order and for the test, from the owner or `build-13-week-cash-forecast`.
 5. **Product photos or renders** honest enough to show what will ship.
 
@@ -37,11 +37,11 @@ Access: building the test page, pre-order app setting and paused ads needs draft
 
 ## Before you start: the gates
 
-1. **Gross profit per order.** Price minus landed cost, shipping, pick and pack, payment fees and a return or RTO allowance [MEA-0037]. Pass: a number exists. Fail: build it first; a test that sells at a loss proves nothing useful.
+1. **Gross profit per order.** Price minus landed cost, shipping, pick and pack, payment fees and a return and failed delivery allowance [MEA-0037]. Pass: a number exists. Fail: build it first; a test that sells at a loss proves nothing useful.
 2. **Room to pay for a buyer.** Pass: gross profit per first order is at least the cost to win a buyer the store can expect. A floor is cost per click divided by conversion rate: about 23 at 0.70 and 3%, about 50 at 1 and 2% [MEA-0019]. If the product is priced so low that it cannot fund that, flag it; low single-item prices struggle to pay for ads at launch [PRD-0006].
 3. **Cash.** Pass: the store can pay the minimum order and still cover 13 weeks of costs if every unit sells slowly. Fail: test a smaller first batch or a deposit model, or stop.
 4. **Ship-date promise.** Pass: the supplier lead time plus freight plus a buffer gives a date the store can keep. Fail: no pre-order; use a waitlist or a dry test (step 3).
-5. **Product rules.** Food, cosmetics, supplements, toys and electricals may need licences, labels or certification in India and the US. Check before taking money.
+5. **Product rules.** Food, cosmetics, supplements, toys and electricals may need licences, labels or certification under your market's labelling and product safety rules (for example FDA, CPSC and FCC in the US, CE or UKCA marking in the EU and UK). Check before taking money.
 
 ## Steps
 
@@ -72,13 +72,14 @@ Rule: stock decisions rest on money taken, not on email sign-ups or likes. A fre
 - **US mail order rule.** A stated ship date needs a reasonable basis; with no date the store must ship within 30 days; if late, the buyer must be offered a free way to cancel and a prompt refund, never store credit [CXP-6160] [OPS-6281].
 - **Dry test.** Taking interest for a product that may never be made is allowed only when the page says plainly the product is planned and may not ship, promises no ship date, and refunds if the store decides not to make it [OPS-6281].
 - **Shopify pre-orders** can take full, partial or no payment at checkout and charge the rest at fulfilment; they need Shopify Payments or PayPal Express and a pre-order app, and uninstalling the app deletes its pre-order data after 48 hours [OPS-6282]. Export pre-order data before changing apps.
-- **India.** Cash on delivery does not work for a pre-order: there is nothing to collect against. Use a small UPI token (refundable, stated in rupees with GST shown) or a full prepaid pre-order. Show the expected dispatch window on the product page and in the WhatsApp or SMS confirmation. Follow the Consumer Protection (E-Commerce) Rules 2020 on refund terms; confirm specifics with the store's advisor.
-- **Honest scarcity.** "Only 200 in the first batch" is fine if true; false urgency, drip pricing and fake stock counts are misleading under the ASCI guidelines [ADC-6147]. No countdown that resets.
+- **UK and EU.** Buyers keep a 14-day right to cancel most online orders, and pre-orders are no different; state the delivery window before payment and refund in full if the store misses it.
+- **Deposits and payment.** Pay on delivery does not work for a pre-order: there is nothing to collect against. Use a small refundable deposit (stated in the store's currency, with sales tax or VAT shown as the market expects) or a full prepaid pre-order. Show the expected dispatch window on the product page and in the email, WhatsApp or SMS confirmation. Follow your market's consumer rules on refund terms; confirm specifics with the store's advisor.
+- **Honest scarcity.** "Only 200 in the first batch" is fine if true; false urgency, drip pricing and fake stock counts are misleading under ad standards codes and consumer rules in most markets (FTC, CMA and ASA, EU consumer law) [ADC-6147]. No countdown that resets.
 - **Images.** If renders or AI images are used, label them "render" or "prototype" so buyers are not misled.
 
 ### 4. Build the page and the traffic
 
-Page: product, price, what is included, the dispatch window in plain words, the refund line, and one action ("Pre-order now, ships by 15 March" or "Reserve with a 199 rupee refundable deposit").
+Page: product, price, what is included, the dispatch window in plain words, the refund line, and one action ("Pre-order now, ships by 15 March" or "Reserve with a small refundable deposit", with the amount in the store's currency).
 
 Traffic, in order of cost:
 
@@ -105,7 +106,7 @@ Log daily: spend, link clicks, page views, add to carts, paid orders or deposits
 - Go and no-go lines were written and signed before the first spend.
 - Gross profit per order uses delivered costs, not product cost against price.
 - The page states the dispatch window and refund terms; the dry test, if used, says the product may never ship.
-- No COD option on a pre-order; India deposits are refundable and shown with GST.
+- No pay on delivery option on a pre-order; deposits are refundable and shown with tax as the market expects.
 - Own-list and paid-traffic results sit in separate columns.
 - The decision rests on money taken, not sign-ups.
 - No scarcity line that the store cannot prove.
@@ -141,7 +142,7 @@ Log daily: spend, link clicks, page views, add to carts, paid orders or deposits
 - **Promising a date the supplier cannot keep.** Gate 4 and step 3 apply the mail order rules.
 - **Mixing warm and cold buyers.** Step 6 splits own-list and paid results.
 - **Calling a no-go on 20 clicks.** Step 4 sets a minimum spend per angle.
-- **COD pre-orders in India.** Step 3 uses a UPI token or prepaid instead.
+- **Pay on delivery pre-orders.** Step 3 uses a refundable deposit or prepaid instead.
 
 ## Sources
 
@@ -152,8 +153,15 @@ Log daily: spend, link clicks, page views, add to carts, paid orders or deposits
 - MEA-0047: conversion rate times order value warning line.
 - PRD-0006: low-price products struggle to fund paid launch.
 - ADC-0052: small zero-to-one Meta test cadence.
-- ADC-6147: ASCI false urgency and drip pricing.
+- ADC-6147: an ad standards code on false urgency and drip pricing.
 - CXP-6160, CXP-6160, OPS-6281: US mail order rule, delays and dry tests.
 - OPS-6282: Shopify pre-order payment options and app data.
 
-What makes this skill ours: the go and no-go lines are set from the store's own gross profit per order before any spend; only money taken can trigger a stock order; the US dry-test rule and India's no-COD pre-order are built into the setup; and warm list buyers are kept apart from cold ad buyers so the result is not flattered.
+What makes this skill ours: the go and no-go lines are set from the store's own gross profit per order before any spend; only money taken can trigger a stock order; the US dry-test rule, UK and EU cancel rights and the no pay on delivery pre-order rule are built into the setup; and warm list buyers are kept apart from cold ad buyers so the result is not flattered.
+
+## Selling in India
+
+- COD does not work for a pre-order. Use a small refundable UPI token, stated in rupees with GST shown, or a full prepaid pre-order.
+- Follow the Consumer Protection (E-Commerce) Rules 2020 on refund terms.
+- The ASCI guidelines treat false urgency and fake stock counts as misleading [ADC-6147].
+- Food, cosmetics, toys and electricals may need FSSAI, BIS or other approvals before you take money.

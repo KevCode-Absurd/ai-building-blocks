@@ -27,7 +27,7 @@ description: "A geo or time holdout test, sized from the store's own orders, tha
 2. **Gross profit per order** from `store-meta-math` or `build-sku-profit-sheet`.
 3. **Spend by region by day** for the channel under test, from its ads manager breakdown by region.
 4. **Calendar**: planned sales, launches, stock arrivals and email pushes for the test window.
-5. India: courier report of delivered and RTO orders by pincode, so the read uses delivered orders.
+5. Where many orders fail delivery or come back (common with pay on delivery), a courier report of delivered and returned orders by postcode, so the read uses delivered orders.
 
 The plan is level 1. Changing location targeting or budgets is level 2 (built paused or as a draft) and goes live only on the client's yes, with the cost cap agreed in writing. Owned-channel holdouts (email, WhatsApp) only stop messages to a group; the client approves the group.
 
@@ -56,7 +56,7 @@ Write the decision rule now: keep or scale the channel if incremental gross prof
 
 ### 3. Pick matched regions and check the size
 
-Regions: US states or metro areas; in India, states or groups of cities (use the platform's location options to confirm what it can target). Using the 12-week history, group regions so the test group and control group move together on three series: ad spend, new-customer revenue and new-customer orders. Single regions rarely match, so combine them [MEA-0050]. Put about 20 to 30% of new-customer orders in the test group for a holdout, to cap what the test can cost (practitioner default).
+Regions: US states or metro areas; UK regions or postcode areas; EU countries or regions; Australian states; elsewhere, states or groups of cities (use the platform's location options to confirm what it can target). Using the 12-week history, group regions so the test group and control group move together on three series: ad spend, new-customer revenue and new-customer orders. Single regions rarely match, so combine them [MEA-0050]. Put about 20 to 30% of new-customer orders in the test group for a holdout, to cap what the test can cost (practitioner default).
 
 Size check: compute the weekly ratio of test-group to control-group new-customer orders over the 12 weeks and its normal swing (standard deviation). The expected change from the test must be at least twice that swing to be readable (practitioner default, test it). Expected change = the channel's share of new-customer orders as the platform claims it, discounted by half for over-claiming, in the test regions. If it fails, enlarge the test group, lengthen the test, or switch to gate 3's fallback.
 
@@ -78,7 +78,7 @@ Prepare the set-up list: exact location exclusions or budget changes, start and 
 
 ### 7. Read the result
 
-Use store orders by shipping region, new customers only, delivered orders in COD markets.
+Use store orders by shipping region, new customers only, delivered orders where many orders fail delivery or are refused.
 
 - Expected test-group orders = control-group orders in the test period x the pre-period ratio.
 - Incremental orders = actual minus expected for a scale test, or expected minus actual for a holdout.
@@ -146,4 +146,8 @@ Apply the decision rule as written. Record the test in the store's log with date
 - MEA-0050: match regions on spend, new-customer revenue and orders; incremental ROAS.
 - CRO-0015: run at least one full week, in practice two.
 
-What makes this skill ours: the size check uses the store's own region-to-region noise before any money moves; the holdout cuts total budget by the test share so control regions are not inflated; COD stores read delivered orders by shipping region; and the result becomes an incrementality factor applied to platform numbers until the next test.
+What makes this skill ours: the size check uses the store's own region-to-region noise before any money moves; the holdout cuts total budget by the test share so control regions are not inflated; stores with many failed deliveries read delivered orders by shipping region; and the result becomes an incrementality factor applied to platform numbers until the next test.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Ask for the courier report of delivered and RTO orders by pincode, and read delivered orders only for COD-heavy stores. Regions for a geo test: states or groups of cities.

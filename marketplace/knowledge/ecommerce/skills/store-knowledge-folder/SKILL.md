@@ -30,7 +30,7 @@ Every job for a store needs the same facts. This skill writes them down once, ea
 - The live store URL: home page, top product pages, about page, shipping, returns and payment policies, FAQ, reviews page.
 - Shopify products CSV (Title, Handle, Variant SKU, Variant Price, Variant Compare At Price, Cost per item, Variant Inventory Qty, Status, Image Src) or the platform's equivalent.
 - Shopify Analytics "Sales by product variant SKU", last 90 days (net quantity, gross sales, discounts, returns, net sales).
-- Per order costs: pick, pack and shipping, payment fee percentage, return rate (by product if known). Where cash on delivery is offered, the COD share and the return to origin (RTO) rate.
+- Per order costs: pick, pack and shipping, payment fee percentage, return rate (by product if known). Where pay on delivery is offered, its share of orders and the rate of refused or failed deliveries sent back.
 - Reorder lead time per active product, and the most the owner can spend on marketing per month.
 - The owner intake sheet (step 1).
 
@@ -46,7 +46,7 @@ Every job for a store needs the same facts. This skill writes them down once, ea
 
 ## Before you start: the gates
 
-1. **Gross profit per purchase can be computed.** Per product: price actually paid (after the usual discount), minus landed cost, pick, pack and shipping, payment fees and expected returns cost; in COD markets also RTO cost (RTO rate times forward plus return shipping). Use cost delivered to the door [MEA-0037]. Fail: build the rest, mark the products table "not ranked: gross profit unknown", and put the missing costs first under Gaps.
+1. **Gross profit per purchase can be computed.** Per product: price actually paid (after the usual discount), minus landed cost, pick, pack and shipping, payment fees and expected returns cost; where pay on delivery runs, also the cost of refused parcels (refusal rate times forward plus return shipping). Use cost delivered to the door [MEA-0037]. Fail: build the rest, mark the products table "not ranked: gross profit unknown", and put the missing costs first under Gaps.
 2. **Cash and capacity are stated.** Monthly marketing cap, orders per day the team or warehouse can ship, days of stock cover per product. Fail: write "limits unknown" at the top of the README; later jobs add no spend or volume until answered.
 3. **Tracking is good enough for the ads record.** Compare Meta purchases with Shopify orders for the same 30 days. If Meta reports more, or the gap swings week to week, label every ad result "platform-reported, not store-checked". The rest runs on store data.
 
@@ -54,7 +54,7 @@ Every job for a store needs the same facts. This skill writes them down once, ea
 
 ### 1. Send the intake sheet once
 
-One sheet, not a chat interview: the story in the owner's words, three admired brands and one to never resemble, the best past offers with dates and results, the best customers and the worst-fit ones (who returns or complains most), words never to use, claims they know they cannot make, markets shipped to. Save answers word for word with the date in `10-owner-answers.md`. They are hypotheses until step 4 checks them against customers.
+One sheet, not a chat interview: the story in the owner's words, three admired brands and one to never resemble, the best past offers with dates and results, the best customers and the worst-fit ones (who returns or complains most), words never to use, claims they know they cannot make, markets shipped to, and the currency and languages each market uses. Save answers word for word with the date in `10-owner-answers.md`. They are hypotheses until step 4 checks them against customers.
 
 ### 2. Capture the site and catalogue, dated
 
@@ -93,6 +93,8 @@ From the ad exports, every ad that spent in the last 180 days: ad ID, name, firs
 
 Before handover: the hero product is the same in every file; every price traces to the catalogue capture; every selling point traces to a page, review or proof row; voice rules each rest on a real brand line; no offer appears that the store is not running. Fix contradictions; do not average them. Then write a two-line diagnosis at the top of the README: who actually buys (step 4) versus who the current ads speak to (step 7), and the biggest gap between them.
 
+**Close what is left with one founder call.** Turn every remaining gap into a question: each `null`, each contradiction you could not fix, each unverified proof row, each buyer group marked hunch. Rank them: first the gaps that block work today (claims and proof, who may appear in ads, the live offer, costs), then the ones that shape every ad (the buyer, the voice), with history last. Split the list: questions that need a story or a judgement go to a call of about 30 minutes, about ten in rank order; facts, lists and files (numbers, policies, logo files, past emails) go on a written form sent before the call, each item naming the file it will fill. On the call, ask about one real moment ("Tell me about the last customer who surprised you"), and after any claim ask "How do you know?", noting whether the answer is a document, a belief or a story. When the founder answers with an adjective ("premium", "fun"), ask for a sentence they would say or a photo they would post. If the founder's picture of the buyer differs from step 4, keep both, side by side. File each answer word for word in `10-owner-answers.md` tagged `confirmed: founder, <date>, Q<n>` and update the file it fills. The founder's word settles a fact about the business; it never proves a selling claim, which stays unverified in `06-proof.csv` until the document arrives. Send a one-page readback: what was heard, what is still needed, what was decided.
+
 ### 10. Set recheck dates and write-back rules
 
 Every file gets "checked on" and "recheck by" dates. Practitioner defaults, test them: prices, offers and stock before every job; rivals 90 days; ads record and learnings monthly; customer words and proof every 6 months; voice and look yearly.
@@ -103,9 +105,9 @@ Later jobs may append dated, sourced entries to the change log, learnings log, a
 
 If AI assistants or search show wrong facts about the store, draft an FAQ of official facts (prices, materials, shipping, ownership); assistants cited an official FAQ far more reliably than planted third-party claims in one test [AEO-0011]. Publishing needs the owner's yes.
 
-### India and similar markets
+### Market details
 
-Add per product the HSN code and GST rate, the COD share and RTO rate in the cost line, and any prepaid versus COD price difference. Note whether WhatsApp is used for orders or updates.
+Add per product the HS code and the tax rate for each market (VAT, sales tax or similar), and whether shown prices include tax there. For each market shipped to, record currency, price list or rounding rule, duties collected or not, and the main payment methods. Where pay on delivery runs, put its share and the refusal rate in the cost line, and any pay-now versus pay-on-delivery price difference. Note which channels buyers use for orders or updates (email, SMS, WhatsApp or other chat apps), and the languages your buyers use.
 
 ## Checks before you hand it over
 
@@ -117,12 +119,13 @@ Add per product the HSN code and GST rate, the COD share and RTO rate in the cos
 6. The consistency check in step 9 passed or its fixes are listed.
 7. Every file has a recheck date; the change log exists.
 8. The truth set covers every variant in the Advertise list.
-9. Nothing was published or sent to customers.
+9. Remaining gaps went to a ranked founder call and written form; answers are tagged with date and question number, and no selling claim was marked verified on the founder's word alone.
+10. Nothing was published or sent to customers.
 
 ## Output
 
 1. `README.md`, one screen first: the diagnosis; the product to lead with and why in money; cash and capacity limits; the three strongest customer phrases with counts; the three strongest Verified proofs; biggest gaps (missing costs first); a file index with checked-on and recheck-by dates.
-2. `00-recent-changes.md`, `01-facts.md`, `02-products.csv` (product, SKU, variant, price paid, landed cost, ship and pack, fees, returns cost, RTO cost, gross profit per purchase, break-even ROAS, days of cover, lead time, status).
+2. `00-recent-changes.md`, `01-facts.md`, `02-products.csv` (product, SKU, variant, price paid, landed cost, ship and pack, fees, returns cost, failed-delivery cost, gross profit per purchase, break-even ROAS, days of cover, lead time, status).
 3. `03-voice-and-look.md`: five real brand lines, three voice traits each backed by a line, banned words, link to the visual identity sheet.
 4. `04-customers.md` and `05-customer-words.csv` (quote, tag, group, source, stars, date, ads permission).
 5. `06-proof.csv`, `07-competitors.md`, `08-ads-record.csv`, `09-learnings-log.md`, `10-owner-answers.md`, and `images/`.
@@ -130,11 +133,12 @@ Add per product the HSN code and GST rate, the COD share and RTO rate in the cos
 ## Common mistakes
 
 - **Profiles from the owner's view.** Step 4 makes every group show counted evidence.
-- **Price minus product cost as margin.** Gate 1 uses cost to the door, with RTO where COD runs.
+- **Price minus product cost as margin.** Gate 1 uses cost to the door, with refused parcels where pay on delivery runs.
 - **Hero product chosen by the home page.** Step 3 ranks by gross profit and stock.
 - **Files that contradict each other.** Step 9 checks them before handover.
 - **Advice from stale facts.** The change log is read first; every file expires.
 - **Ads judged on platform ROAS.** Step 7 uses store-side break-even.
+- **Treating the founder's word as proof.** Step 9 files it as a confirmed business fact; claims still need their document.
 
 ## Sources
 
@@ -153,4 +157,8 @@ Add per product the HSN code and GST rate, the COD share and RTO rate in the cos
 - [ORG-0025]: people write the original ideas; AI remixes them.
 - [AEO-0011]: an official facts FAQ gets cited.
 
-What makes this skill ours: products are ranked by gross profit per purchase to the door (with RTO where COD runs), not by what the home page features; buyer groups carry counts, share and intensity instead of invented demographics; the files are checked against each other and every fact expires; and later jobs may only append dated, sourced entries, so the folder improves without drifting.
+What makes this skill ours: products are ranked by gross profit per purchase to the door (with refused parcels where pay on delivery runs), not by what the home page features; buyer groups carry counts, share and intensity instead of invented demographics; the files are checked against each other and every fact expires; and later jobs may only append dated, sourced entries, so the folder improves without drifting.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. For Indian products, add the HSN code and GST rate, the COD share and RTO rate in the cost line, RTO cost in the products table, and any prepaid versus COD price difference. Note whether WhatsApp is used for orders or updates.

@@ -25,9 +25,9 @@ description: "A creator results sheet that shows, for every creator, the codes a
 
 Required:
 
-1. **Shopify order export** for the period: Name, Created at, Financial Status, Fulfillment Status, Subtotal, Discount Code, Discount Amount, Refunded Amount, Shipping, Lineitem sku, Lineitem quantity, Payment Method, Customer Email, Tags. For India, also the delivery status per order from the courier panel (delivered or RTO).
+1. **Shopify order export** for the period: Name, Created at, Financial Status, Fulfillment Status, Subtotal, Discount Code, Discount Amount, Refunded Amount, Shipping, Lineitem sku, Lineitem quantity, Payment Method, Customer Email, Tags. Where many orders fail delivery or are paid later, also the delivery status per order from the courier panel (delivered or failed).
 2. **Landing data:** GA4 report of sessions and purchases by utm_source, utm_medium, utm_content, or Shopify's sessions by UTM.
-3. **Creator cost log:** fees paid, product sent (units x landed cost), shipping, commission, usage fees, TDS or tax handling, by creator and month.
+3. **Creator cost log:** fees paid, product sent (units x landed cost), shipping, commission, usage fees, withholding tax or other tax handling, by creator and month.
 4. **Gross profit per order** by SKU from `build-sku-profit-sheet`.
 
 Optional: post-purchase survey answers; views per post; TikTok Shop affiliate report if the store sells there.
@@ -39,7 +39,7 @@ Access: read only (level 1). Creating codes and links in Shopify is draft work (
 1. **Gross profit per order known.** Revenue alone ranks creators wrongly. Fail: stop and run `build-sku-profit-sheet`. Gross margin here means the delivered cost with all fees [MEA-0037].
 2. **Every creator has a unique code and link.** Fail: build them in step 1 and start tracking from that date; earlier sales stay "untracked".
 3. **Costs logged in full.** Fees alone undercount; product, shipping and commission count too. Fail: rebuild the cost log from payments and dispatch records before ranking.
-4. **Delivered orders only.** In COD markets, count an order only when delivered and paid. Fail: mark India figures "provisional" until courier status is in.
+4. **Delivered orders only.** Where pay on delivery is offered or many orders fail delivery, count an order only when delivered and paid. Fail: mark those figures "provisional" until courier status is in.
 
 ## Steps
 
@@ -55,11 +55,11 @@ From the order export, filter by Discount Code; from GA4 or Shopify, take purcha
 
 ### 3. Clean the orders
 
-Remove cancelled orders, test orders and staff orders. Subtract refunds. For COD, keep only delivered and paid orders. Tag each order new or returning customer from the customer's first order date.
+Remove cancelled orders, test orders and staff orders. Subtract refunds. For pay on delivery orders, keep only delivered and paid orders. Tag each order new or returning customer from the customer's first order date.
 
 ### 4. Cost each creator
 
-Total cost = fee + usage fee + (units sent x landed cost) + shipping + commission paid + payment fees on commission (2.9% on Shopify Collabs automatic payouts [ORG-6422]) + any TDS cost the store bears.
+Total cost = fee + usage fee + (units sent x landed cost) + shipping + commission paid + payment fees on commission (2.9% on Shopify Collabs automatic payouts [ORG-6422]) + any withholding tax cost the store bears.
 
 ### 5. Compute profit per creator
 
@@ -101,7 +101,7 @@ Export orders, refresh step 2 to 5, update the summary, list rebook and drop nam
 
 - Every creator row has full cost, not just fees.
 - No order is counted twice across code, link and survey.
-- COD orders count only when delivered and paid; provisional figures are marked.
+- Pay on delivery orders count only when delivered and paid; provisional figures are marked.
 - Creators are ranked on profit ratio and sales per 1,000 views, not on views or revenue.
 - Survey-only orders sit in their own column.
 - Each rebook, renegotiate or drop call names the rule it met.
@@ -134,7 +134,7 @@ Export orders, refresh step 2 to 5, update the summary, list rebook and drop nam
 
 - **Ranking by revenue.** Step 5 ranks by gross profit over full cost.
 - **Fees only.** Step 4 adds product, shipping, commission and fees.
-- **Counting RTO orders.** Step 3 keeps only delivered, paid COD orders.
+- **Counting failed orders.** Step 3 keeps only delivered, paid orders.
 - **Double counting.** Step 2 merges code, link and survey by order number.
 - **Trusting codes as the whole truth.** Step 6 checks survey share and halo before dropping anyone.
 - **Rebooking discount-led winners blindly.** Step 7 checks repeat behaviour first.
@@ -150,4 +150,9 @@ Export orders, refresh step 2 to 5, update the summary, list rebook and drop nam
 - ORG-0041: retail-heavy brands price creators from views.
 - CXP-0016: discount-led buyers repeat less.
 
-What makes this skill ours: every creator is judged on gross profit against full cost, including product, shipping and commission fees; COD orders count only when delivered; codes, links and survey answers are merged without double counting, with survey-only sales kept apart; and the rebook call has written rules that also look at repeat behaviour.
+What makes this skill ours: every creator is judged on gross profit against full cost, including product, shipping and commission fees; pay on delivery orders count only when delivered and paid; codes, links and survey answers are merged without double counting, with survey-only sales kept apart; and the rebook call has written rules that also look at repeat behaviour.
+
+## Selling in India
+
+- Pull delivered or RTO status per order from the courier panel; count COD orders only when delivered and paid.
+- Log any TDS the store deducts or bears on creator fees.

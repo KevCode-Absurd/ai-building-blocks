@@ -36,7 +36,7 @@ Posting replies needs publish access (level 3) to each platform, or the client p
 
 ## Before you start: the gates
 
-1. **Platform rules.** On Google, a business may not offer incentives for reviews or for removing a negative one, may not discourage negative reviews and may not ask only happy customers [CXP-6300]. In the US, the FTC bans using threats or intimidation to get a review removed or changed, and a store may hide reviews on its own site only under rules applied equally to good and bad ones [CXP-6301]. Fail: any planned step that breaks these is dropped.
+1. **Platform rules.** On Google, a business may not offer incentives for reviews or for removing a negative one, may not discourage negative reviews and may not ask only happy customers [CXP-6300]. In the US, the FTC bans using threats or intimidation to get a review removed or changed, and a store may hide reviews on its own site only under rules applied equally to good and bad ones [CXP-6301]. In the UK and EU, fake reviews and hiding negative ones are unfair practices under consumer law, and EU rules expect stores to say whether and how they check reviews are from real buyers. Fail: any planned step that breaks these is dropped.
 2. **The buyer's problem first.** If the reviewer has an open problem, solve it privately before or alongside the public reply.
 3. **Facts checked.** Each reply states only what the order record shows. If you cannot match the reviewer to an order, the reply asks them to get in touch rather than guessing.
 4. **Privacy.** No order numbers, addresses, health details or purchase history in a public reply.
@@ -93,10 +93,10 @@ After client approval, post the replies, newest and most-read first (store produ
 
 Reviews and the replies under them are what buyers and AI assistants read about the store; assistants often cite review profiles, so fixing those sources pays [AEO-0014]. A clear, fair reply under a one star review can reassure buyers more than another five star review.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** many reviews arrive in Hindi, Hinglish or a regional language; reply in the same language and script when the store can do so accurately. Complaints about COD delivery or failed delivery attempts are common; own the delivery and offer the next step. Keep phone numbers out of public replies; point to the store's support WhatsApp or email.
-- **US:** do not use review replies to push sales or discount codes, and never ask an employee or relative to post counter-reviews; insider reviews must be disclosed under FTC rules.
+- **Every market:** reviews may arrive in any of the languages your buyers use; reply in the same language and script when the store can do so accurately. Complaints about late delivery or failed delivery attempts are common; own the delivery and offer the next step. Keep phone numbers out of public replies; point to the store's support chat or email.
+- **US, UK, EU and beyond:** do not use review replies to push sales or discount codes, and never ask an employee or relative to post counter-reviews; insider reviews must be disclosed under FTC rules in the US and count as fake reviews under UK and EU consumer law.
 
 ## Checks before you hand it over
 
@@ -137,3 +137,7 @@ Reviews and the replies under them are what buyers and AI assistants read about 
 - LPG-0037: anonymous-looking proof reads as fake.
 
 What makes this skill ours: replies are written for the next buyer and sorted by review type; the problem is fixed privately before any public word; nothing is ever traded for a changed review, under Google and FTC rules; and clusters become a product or shipping fix rather than more apologies.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Many reviews arrive in Hindi, Hinglish or a regional language; reply in the same language and script when the store can do so accurately. Complaints about COD delivery are common; own the delivery and offer the next step.

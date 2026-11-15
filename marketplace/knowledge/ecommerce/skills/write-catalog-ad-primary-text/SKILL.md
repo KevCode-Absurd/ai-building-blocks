@@ -10,7 +10,7 @@ description: "Writes the text templates for a store's Meta catalog ads (dynamic 
 ## When to use
 
 - Catalog ads are being set up or moved to a new product set.
-- Live catalog ads show odd text: "Shop Now Women's Cotton Kurta Set With Dupatta Pack Of 3 Blue Xl" as a headline, a missing brand, a wrong price.
+- Live catalog ads show odd text: "Shop Now Women's Cotton Pyjama Set With Eye Mask Pack Of 3 Blue Xl" as a headline, a missing brand, a wrong price.
 - One template runs for cold buyers and cart abandoners alike.
 - A sale is coming and catalog ads need to show sale prices correctly.
 
@@ -55,7 +55,7 @@ From the feed, pull: the 3 longest titles, the 3 shortest, 2 with no brand, 2 on
 
 Feed titles are written for search matching (product type, material, colour, size first) [GAD-0009] [GAD-0017], so they read badly as ad headlines. Do not insert the full title into the headline if long titles appear. Instead:
 
-- put a short, human product-type line in a custom label, per product type: custom_label_1 = "Everyday cotton kurta" or "Leak-proof steel tiffin" (25 characters or fewer);
+- put a short, human product-type line in a custom label, per product type: custom_label_1 = "Everyday cotton shirt" or "Leak-proof lunch box" (25 characters or fewer);
 - put one proven benefit per product type in another label: custom_label_2 = "Breathes in 40 degree heat";
 - keep labels used for bidding or reporting untouched; agree which labels are free with the media buyer.
 
@@ -72,9 +72,9 @@ Write the label plan as a table the feed owner can paste.
 
 For each template:
 
-- **Primary text:** one or two short lines that are true for every product in the set. Insert a field only where it reads naturally: "Our {custom_label_1} is made for Indian summers. Free returns for 15 days."
+- **Primary text:** one or two short lines that are true for every product in the set. Insert a field only where it reads naturally: "Our {custom_label_1} is made for hot summers. Free returns for 15 days."
 - **Headline:** the short label or the brand plus the label, not the long title: "{custom_label_1}".
-- **Description:** current_price when sale dates are in the feed, otherwise price: "{current_price} incl. GST, COD available."
+- **Description:** current_price when sale dates are in the feed, otherwise price: "{current_price}, free returns." (add "incl. VAT" for UK and EU sets)
 
 Keep every non-inserted word true across the whole set: no "100% cotton" if one product is a blend; no "ships today" if some products ship in 5 days.
 
@@ -86,9 +86,10 @@ Render each template for each of the 10 rows (preview in Ads Manager, or fill a 
 
 If a sale is coming, add sale_price and sale dates to the feed and use current_price so the ad shows the sale price only during the sale [ADC-6143]. Do not write "Sale" or a percentage in the static text unless every product in the set is on sale for the same dates. A "was" price shown in the ad must be one genuinely charged [OFF-6145].
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** prices in ads should include GST and fixed charges most buyers pay [ADC-6147]; check that the feed price is GST-inclusive. Mention COD only if live for all products in the set. For regional language audiences, Meta supports localized catalogs; send the text to `write-ad-copy-in-indian-languages`.
+- **UK, EU and Australia:** prices in ads should be the full price buyers pay, including VAT or the local sales tax and fixed charges most buyers pay; check that the feed price is tax-inclusive. Mention pay on delivery, pay later or any regional offer only if it is live for all products in the set.
+- **Other languages:** for audiences in other languages, Meta supports localized catalogs; have a native speaker write or check each language version, since machine translation alone can change product facts.
 - **US:** shipping and tax wording must match checkout; "free shipping" only if free on every product in the set.
 
 ### 8. Keep catalog ads in their place
@@ -103,7 +104,7 @@ Catalog ads reach mostly bottom-funnel buyers and are rarely incremental; audito
 - Price fields show the right currency; current_price is used only when sale dates are in the feed.
 - Separate templates exist for new buyers, viewers and cart abandoners.
 - The custom label plan does not overwrite labels used for bidding or reporting.
-- India prices are GST-inclusive; COD and free-shipping lines hold for the whole set.
+- Prices are tax-inclusive where the market expects it (UK, EU, Australia); payment and free-shipping lines hold for the whole set.
 - Nothing published or changed in the feed without the client's yes.
 
 ## Output
@@ -141,6 +142,14 @@ Catalog ads reach mostly bottom-funnel buyers and are rarely incremental; audito
 - ADC-0023: tie ads to stock cover.
 - GAD-0009, GAD-0017: feed titles are written for matching, not people.
 - OFF-6145: genuine former prices only.
-- ADC-6147: Indian prices include charges most buyers pay.
 
 What makes this skill ours: every template is rendered against the feed's ten hardest rows before it ships; short custom labels replace long search-style titles in headlines; sale prices come from feed dates instead of static "Sale" text; and catalog ads are kept small and judged on new-buyer orders, not their inflated ROAS.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Points to keep:
+- Prices in ads should include GST and fixed charges most buyers pay [ADC-6147]; check that the feed price is GST-inclusive.
+- Mention COD only if it is live for all products in the set.
+- For Hindi or regional language audiences, send the text to `write-ad-copy-in-indian-languages`.
+- Local fields read well when they are true for the set, for example "Our {custom_label_1} is made for Indian summers."
+- ADC-6147: Indian prices include charges most buyers pay.

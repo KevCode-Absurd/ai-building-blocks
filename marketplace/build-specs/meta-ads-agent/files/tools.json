@@ -1,0 +1,152 @@
+{
+  "about": "What this agent may touch in Meta's ads connector. Every connector tool not named here is blocked. Reads run freely. Writes run only as the next step of a plan you approved with yes <code>. Budgets are worked out from each input's budget fields (Meta budgets are in cents, so divided by 100) and checked against your daily cap.",
+  "governed_prefixes": [
+    "ads_"
+  ],
+  "require_review": true,
+  "read": [
+    "ads_get_ad_accounts",
+    "ads_get_ad_account_pages",
+    "ads_get_pages_for_business",
+    "ads_get_user_pages",
+    "ads_get_field_context",
+    "ads_get_ad_entities",
+    "ads_get_creatives",
+    "ads_get_creative_ads",
+    "ads_get_ad_images",
+    "ads_get_ad_videos",
+    "ads_get_ad_preview",
+    "ads_library_search",
+    "ads_get_ig_accounts",
+    "ads_get_ig_media",
+    "ads_get_ad_account_custom_audiences",
+    "ads_get_custom_audience",
+    "ads_get_custom_audience_adsets",
+    "ads_get_errors",
+    "ads_account_get_activity_logs",
+    "ads_get_async_result",
+    "ads_get_datasets",
+    "ads_get_dataset_details",
+    "ads_get_dataset_quality",
+    "ads_get_dataset_stats",
+    "ads_get_customconversions",
+    "ads_pixel_event_read",
+    "ads_pixel_parameter_read",
+    "ads_experiment_check_eligibility",
+    "ads_experiment_list_tests",
+    "ads_experiment_abtest_get_test",
+    "ads_experiment_lift_get_test",
+    "ads_insights_performance_trend",
+    "ads_insights_performance_vs_peers",
+    "ads_insights_industry_benchmark",
+    "ads_insights_anomaly_signal",
+    "ads_insights_auction_ranking_benchmarks",
+    "ads_insights_advertiser_context",
+    "ads_get_opportunity_score",
+    "ads_get_help_article"
+  ],
+  "write": {
+    "ads_create_upload_url": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_finalize_upload": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_creative_upload_media": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_create_creative": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_create_campaign": {
+      "spends": true,
+      "budget_fields": {
+        "daily_budget": 100,
+        "campaign_daily_budget": 100
+      },
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_create_ad_set": {
+      "spends": true,
+      "budget_fields": {
+        "daily_budget": 100,
+        "campaign_daily_budget": 100
+      },
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_create_ad": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_create_custom_audience": {
+      "spends": false,
+      "account_field": [
+        "ad_account_id",
+        "account_id"
+      ]
+    },
+    "ads_update_entity": {
+      "spends": true,
+      "budget_fields": {
+        "daily_budget": 100
+      }
+    },
+    "ads_activate_entity": {
+      "spends": true
+    },
+    "ads_experiment_abtest_create_test": {
+      "spends": true
+    }
+  },
+  "never": [
+    "ads_delete_custom_audience",
+    "ads_creative_delete",
+    "ads_update_custom_audience_users",
+    "ads_update_custom_audience",
+    "ads_boost_ig_post",
+    "ads_experiment_lift_create_test",
+    "ads_experiment_abtest_update_test",
+    "ads_pixel_event_create",
+    "ads_pixel_event_update",
+    "ads_pixel_event_delete",
+    "ads_pixel_parameter_create",
+    "ads_pixel_parameter_update",
+    "ads_pixel_parameter_delete",
+    "ads_creative_update",
+    "ads_creative_update_image_elements",
+    "ads_creative_create_image_variations"
+  ],
+  "volatile_fields": [
+    "client_conversation_id",
+    "client_model",
+    "advertiser_request",
+    "advertiser_job",
+    "scheduled_task_run",
+    "hide_ui"
+  ]
+}

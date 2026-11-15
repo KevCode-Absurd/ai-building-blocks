@@ -100,10 +100,12 @@ For each bet, write:
 
 Put all bets on one 13-week grid, in relative weeks (Week 1 to Week 13) unless the brief gives dates. Then write the weekly scorecard, goal metric first: each line has its baseline (or "set in week 1"), day-90 target, owner, and the threshold that triggers action.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** count RTO in gross profit per order; cash from COD orders arrives after courier remittance, so the cash plan must use remittance dates, not order dates. If Diwali or a wedding season falls inside the 90 days, plan stock and the sale calendar first; it can outweigh any bet.
-- **US:** if Black Friday to Cyber Monday falls inside the window, its customers may repeat less; set their cost allowance separately (`plan-yearly-sale-calendar`).
+- **Returns and failed deliveries:** count returns, refused parcels and failed deliveries in gross profit per order. Where cash arrives late (pay on delivery, marketplace payouts, buy now, pay later), the cash plan must use payout or remittance dates, not order dates.
+- **Peak seasons:** if Black Friday to Cyber Monday, the winter holidays, Singles' Day, a summer sale or a big local festival falls inside the 90 days, plan stock and the sale calendar first; it can outweigh any bet. Peak-season customers may repeat less; set their cost allowance separately (`plan-yearly-sale-calendar`).
+- **Several markets:** if the store sells in more than one country, find the constraint per main market before ranking bets; a new market is a bet of its own, sized with `set-up-markets-and-currencies`.
+- **Currency:** size every bet in the store's own reporting currency, and say which one.
 
 ### 8. Reconcile the numbers, then start
 
@@ -166,3 +168,7 @@ Follow the house rule "Write for a busy owner."
 - MEA-0041: measurement matched to size.
 
 What makes this skill ours: the constraint is found in a fixed order, data and unit economics before traffic; only three bets survive, each sized in the owner's goal metric with an owner; the budget is checked weekly against a cash floor; and every bet carries its stop line before it starts.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Count RTO in gross profit per order. Cash from COD orders arrives after courier remittance, so the cash plan must use remittance dates, not order dates. If Diwali or a wedding season falls inside the 90 days, plan stock and the sale calendar first; it can outweigh any bet.

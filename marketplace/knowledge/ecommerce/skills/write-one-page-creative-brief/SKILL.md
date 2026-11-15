@@ -39,7 +39,7 @@ If the offer or landing page cannot be confirmed live, write the brief with no o
 
 1. **Judging line known.** Pass when target cost per purchase comes from gross profit per purchase. Fail: send to `store-meta-math` first; an ad with no line to beat cannot be called a win or a loss later.
 2. **Buyer can act.** Product in stock for the test window (at least 4 weeks of cover) and the landing page live at the stated price. Fail: pick another product or hold.
-3. **Every claim has proof.** Pass when each claim in the brief maps to a file. In the US an objective claim needs a reasonable basis before it runs, and "tests show" needs the test [MCR-6022]; in India the ASCI Code asks the same. Fail: cut or narrow the claim.
+3. **Every claim has proof.** Pass when each claim in the brief maps to a file. In the US an objective claim needs a reasonable basis before it runs, and "tests show" needs the test [MCR-6022]; the UK CAP Code, EU consumer law and Australia's consumer law ask the same. Fail: cut or narrow the claim.
 4. **Rights.** Any face, voice, music or customer quote has written permission for paid use, or the brief says how to make the ad without it.
 
 ## Steps
@@ -75,7 +75,7 @@ Placements and ratios (9:16 for Reels and Stories, 4:5 for feed, 1:1 if needed),
 - Founder, staff, relatives and gifted creators are labelled as such in the US, and a standout result shows what buyers generally get [MCR-6025].
 - AI-made people or voices are never presented as real customers; follow the platform's AI label setting.
 - In AI-written scripts, no "it's not X, it's Y" lines; viewers read the pattern as machine copy [MCR-0016].
-- India: price shown includes GST; say COD if offered; if the page is in Hindi or another language, the ad language matches it.
+- UK, EU and Australia: price shown includes VAT or the local sales tax. Anywhere: name a payment option (pay later, pay on delivery) only if offered; if the page is in another language, the ad language matches it.
 
 ### 8. Read it as the maker
 
@@ -152,4 +152,8 @@ Read the brief as someone who has never met the store. Every blank they would as
 - MCR-6023 (proposed): Meta personal attributes policy.
 - MCR-6025 (proposed): US endorsement disclosures and expected results.
 
-What makes this skill ours: the brief starts from the test and a money line built on gross profit, not from a mood board; the offer and page are checked live and dated; every proof line points to a file a reviewer can open; and the must-nots carry the real US, India and Meta rules, so the ad is not rejected after the money is spent making it.
+What makes this skill ours: the brief starts from the test and a money line built on gross profit, not from a mood board; the offer and page are checked live and dated; every proof line points to a file a reviewer can open; and the must-nots carry the real US, UK, EU and Meta rules, so the ad is not rejected after the money is spent making it.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Price shown includes GST; say COD if offered; if the page is in Hindi or another Indian language, the ad language matches it. Objective claims need proof under the ASCI Code, as in the US.

@@ -1,6 +1,6 @@
 ---
 name: trust-and-reassurance-audit
-description: "Maps every point where a buyer may doubt the store (is it real, will it work for me, is the price fair, is payment safe, when will it arrive, what if it is wrong, will anyone answer) from first visit to delivery, checks what the store shows at each point, and writes the exact reassurance to add, where it goes and the true fact or proof behind it. Uses the store's own surveys, tickets and reviews to find which doubts cost sales, rejects fake badges, counters and borrowed press logos, and checks India e-commerce disclosure rules and US review and shipping rules. Use when new visitors convert poorly, after a run of 'is this legit?' messages, or before sending cold traffic."
+description: "Maps every point where a buyer may doubt the store (is it real, will it work for me, is the price fair, is payment safe, when will it arrive, what if it is wrong, will anyone answer) from first visit to delivery, checks what the store shows at each point, and writes the exact reassurance to add, where it goes and the true fact or proof behind it. Uses the store's own surveys, tickets and reviews to find which doubts cost sales, rejects fake badges, counters and borrowed press logos, and checks each market's seller disclosure, review and shipping rules (FTC in the US, UK and EU consumer rules, and the rest). Use when new visitors convert poorly, after a run of 'is this legit?' messages, or before sending cold traffic."
 ---
 
 # Trust and reassurance audit
@@ -10,7 +10,7 @@ description: "Maps every point where a buyer may doubt the store (is it real, wi
 ## When to use
 
 - New visitors convert much worse than returning buyers.
-- Support, DMs or comments ask "is this legit?", "is COD available?", "how do returns work?".
+- Support, DMs or comments ask "is this legit?", "can I pay later?", "how do returns work?".
 - Before sending cold paid traffic to a young brand with few reviews.
 - After a policy change (returns, shipping) that pages may not reflect.
 
@@ -38,7 +38,7 @@ If doubt evidence is missing, add the question "What almost stopped you buying t
 ## Before you start: the gates
 
 1. **Every reassurance is true.** A line goes in only if the store can keep it: a delivery date the courier data supports, a return window the team honours, a review count from the review app. Fail: change the line to what is true, or drop it.
-2. **Proof is real and permitted.** Reviews must be from real buyers, not edited to change meaning; press logos only with the outlet's actual quote and link [LPG-0037]; no AI-made people shown as customers. US: the FTC's rule on consumer reviews bans fake reviews and hiding negative ones. India: ASCI's code and the 2023 dark-pattern guidelines cover false urgency and misleading claims.
+2. **Proof is real and permitted.** Reviews must be from real buyers, not edited to change meaning; press logos only with the outlet's actual quote and link [LPG-0037]; no AI-made people shown as customers. US: the FTC's rule on consumer reviews bans fake reviews and hiding negative ones. UK: consumer protection law bans fake reviews and the CMA enforces it; the ASA covers misleading claims. EU: consumer rules require stores to say whether and how reviews are checked, and ban false urgency.
 3. **Policies exist and match operations.** If the written returns policy and what support does differ, fix the policy first (`write-store-policy-pages`).
 4. **Gross profit per order known** [MEA-0037], so actions can be ranked.
 
@@ -55,7 +55,7 @@ Code each piece of evidence into one of 8 doubts and count how often each appear
 1. **Is this store real?** (who runs it, where, how to reach them)
 2. **Will it work for me?** (results, fit, size, compatibility)
 3. **Is the price fair?** (value, versus rivals, versus discounts elsewhere)
-4. **Is payment safe?** (card trust, UPI, COD)
+4. **Is payment safe?** (card trust, wallets, local methods, buy now pay later, pay on delivery where offered)
 5. **When will it arrive?**
 6. **What if it is wrong or I do not like it?** (returns, refunds, exchanges)
 7. **Will anyone help me?** (support speed and channel)
@@ -71,7 +71,7 @@ On a phone, for each page type (landing page, home, collection, product, cart, c
 - **Product page:** rating near the title and two kinds of proof on the first screen [LPG-0036]; reviewer name and source shown [LPG-0037]; a headline that says how many customers got which outcome, with a real number [LPG-0049]; risk reducers (returns, guarantee, delivery) in the line under the button [LPG-0038]. When buyers object to price against rivals, trust elements placed above the price and risk badges under add to cart lifted conversion in agency tests [LPG-0017].
 - **Reviews:** count and recency; most of the lift comes in the first 80 or so, then photo reviews that match the claim matter more [LPG-0062].
 - **Cart:** a trust bar (easy returns, support, guarantee) in place of an idle discount box [LPG-0058].
-- **Checkout and payment:** payment icons only for methods really offered; COD and UPI shown where buyers expect them.
+- **Checkout and payment:** payment icons only for methods really offered; local methods buyers expect (iDEAL, Klarna, PayPal, pay on delivery where offered) shown where they look.
 - **Delivery:** a specific padded date beats a vague range [CXP-0010].
 - **After purchase:** order status page and tracking; what happens if a delivery fails.
 
@@ -93,9 +93,9 @@ List for removal: generic "secure checkout" padlock images that add nothing, bad
 
 Priority = how often the doubt appears in evidence x share of sessions that see the page x ease. Put legal disclosure gaps first, then false signals to remove, then the top doubts by evidence count. Keep the list to 10 actions.
 
-### 7. India and US notes
+### 7. Market rules and notes
 
-- **India:** the Consumer Protection (E-Commerce) Rules, 2020 expect sellers to show their legal name, address, customer care contact, a grievance officer, return, refund, exchange, warranty and delivery terms, payment methods and the total price with all charges; check the current text. Show COD availability and any COD fee early, UPI options, and a WhatsApp support line if the store answers there. Delivery estimates by pincode reduce "when will it arrive" doubts.
+- **Seller identity and terms:** most markets expect an online store to show its legal name, address and contact details, return, refund and delivery terms, payment methods and the total price with all charges. The UK and EU require this before purchase, plus a 14-day right to cancel for most goods bought online, and Germany expects a full legal notice page (Impressum). Check the current text for each market. Show the payment options buyers expect early, and a WhatsApp support line if the store answers there. Delivery estimates by postcode reduce "when will it arrive" doubts.
 - **US:** the FTC's mail order rule expects a reasonable basis for any shipping time stated; reviews and testimonials fall under its consumer review rule. Show tax and shipping notes in the cart; a 30-day or longer return window also feeds Google's store quality signals [GAD-0018].
 
 ## Checks before you hand it over
@@ -147,4 +147,10 @@ Priority = how often the doubt appears in evidence x share of sessions that see 
 - OFF-0060: longer guarantees on consumables can mean fewer claims.
 - OFF-0064: generous guarantees only where the product lasts.
 
-What makes this skill ours: doubts are counted from the store's own surveys, tickets and reviews and sorted into eight buyer questions; every reassurance line must point to a dated fact the store can keep; fake counters, resetting timers and quote-less press logos go on a remove list; and India's e-commerce disclosure rules and COD and UPI signals are checked beside US review and shipping rules.
+What makes this skill ours: doubts are counted from the store's own surveys, tickets and reviews and sorted into eight buyer questions; every reassurance line must point to a dated fact the store can keep; fake counters, resetting timers and quote-less press logos go on a remove list; and each market's seller disclosure, payment signals, review and shipping rules are checked.
+
+## Selling in India
+
+- The Consumer Protection (E-Commerce) Rules, 2020 expect sellers to show legal name, address, customer care contact, a grievance officer, return, refund, exchange, warranty and delivery terms, payment methods and the total price with all charges; check the current text.
+- The ASCI code and the 2023 dark-pattern guidelines cover false urgency and misleading claims.
+- Show COD availability and any COD fee early, plus UPI options. Delivery estimates by pincode reduce "when will it arrive" doubts.

@@ -1,6 +1,6 @@
 ---
 name: upsell-and-cross-sell-in-chat
-description: "Rules and ready lines for suggesting a bundle, upgrade or add-on in a sales chat without pushing: an offer sheet per hero product ranked by added gross profit, the moment to suggest (only after the main item is decided), the signals that mean do not suggest, one suggestion per chat tied to the buyer's own words, permission-based wording, a ban on adding anything without a clear yes, and a weekly read of offers made, taken, added gross profit and refunds. Works on WhatsApp, Instagram, site chat and calls. India notes for COD baskets and dark-pattern rules; US notes for honest reference prices. Use when chat orders are mostly single items, or agents push add-ons that buyers resent."
+description: "Rules and ready lines for suggesting a bundle, upgrade or add-on in a sales chat without pushing: an offer sheet per hero product ranked by added gross profit, the moment to suggest (only after the main item is decided), the signals that mean do not suggest, one suggestion per chat tied to the buyer's own words, permission-based wording, a ban on adding anything without a clear yes, and a weekly read of offers made, taken, added gross profit and refunds. Works on WhatsApp, Instagram, site chat and calls. Market notes for tax-inclusive prices, risky pay on delivery baskets, consent rules and honest reference prices. Use when chat orders are mostly single items, or agents push add-ons that buyers resent."
 ---
 
 # Upsell and cross-sell in chat
@@ -70,7 +70,7 @@ Do **not** suggest when:
 
 - the buyer has said money is tight or asked for a discount;
 - the chat is a complaint or a delivery problem;
-- it is a first COD order in a pincode the store marks risky (a bigger COD basket puts more cash at risk; see `cut-rto-on-cod-orders`);
+- it is a first pay on delivery order to an area the store marks risky (a bigger unpaid basket puts more cash at risk; see `cut-rto-on-cod-orders`);
 - the add-on is low on stock or late;
 - the buyer already said no to one suggestion.
 
@@ -86,7 +86,7 @@ The buyer's answer decides. "No thanks" gets "Sure, here's your link" and nothin
 
 ### 5. Never add without a yes
 
-Nothing goes into a cart, draft order or COD order without the buyer's clear yes in the chat. India's 2023 dark-pattern guidelines name adding items without consent ("basket sneaking") as a banned practice, and most markets treat pre-ticked add-ons as a consumer-law risk. Read back the final items and total before sending the link.
+Nothing goes into a cart, draft order or pay on delivery order without the buyer's clear yes in the chat. Adding items without consent ("basket sneaking") is a banned dark pattern in many markets; EU consumer law bans pre-ticked paid extras, and the FTC and UK CMA treat hidden add-ons as unfair. Treat any pre-ticked add-on as a consumer-law risk. Read back the final items and total before sending the link.
 
 ### 6. Prefer value over discount
 
@@ -96,10 +96,10 @@ Where a sweetener is needed, a low-cost gift of real value can lift order value 
 
 Tag each chat where an offer was made: Offered, Taken, Declined. Weekly per offer: times offered, take rate, added gross profit, refunds or returns on the added item, complaints. Drop an offer whose refunds eat its added profit or that draws complaints; promote the one with the highest added gross profit per offer made.
 
-### India and US notes
+### Market notes
 
-- **India:** prices include GST; a multipack can also lower shipping cost per unit, which is often where bundle savings come from. Keep COD baskets in risky pincodes to the main item. Write lines in the buyer's language where the team can.
-- **US:** state the real unit price in multipacks; a compared "regular price" must be a price the store actually charged for a meaningful period [OFF-6145]. Sales tax is added at checkout.
+- **Tax-inclusive markets** (UK, EU, Australia and others): prices include VAT or goods and services tax; a multipack can also lower shipping cost per unit, which is often where bundle savings come from. Keep pay on delivery baskets in risky areas to the main item. Write lines in the languages your buyers use where the team can.
+- **Reference prices and unit prices:** state the real unit price in multipacks (the UK and EU require unit pricing for many goods); a compared "regular price" must be a price the store actually charged for a meaningful period [OFF-6145]. In the US, sales tax is added at checkout.
 
 ## Checks before you hand it over
 
@@ -139,4 +139,10 @@ Tag each chat where an offer was made: Offered, Taken, Declined. Weekly per offe
 - OFF-6145: genuine former prices.
 - OPS-6286: offers turn WhatsApp utility templates into marketing.
 
-What makes this skill ours: each chat offer is ranked by added gross profit per offer made; the agent card says when not to suggest as clearly as when to; nothing is added without a yes and a read-back; and risky COD baskets stay small instead of being grown.
+What makes this skill ours: each chat offer is ranked by added gross profit per offer made; the agent card says when not to suggest as clearly as when to; nothing is added without a yes and a read-back; and risky pay on delivery baskets stay small instead of being grown.
+
+## Selling in India
+
+- Prices include GST.
+- Keep COD baskets in risky pincodes to the main item.
+- India's 2023 dark-pattern guidelines name basket sneaking as a banned practice.

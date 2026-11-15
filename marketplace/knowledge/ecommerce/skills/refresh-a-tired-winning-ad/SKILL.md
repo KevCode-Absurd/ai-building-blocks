@@ -61,6 +61,11 @@ If one of these explains the drop, verdict **not tired**; fix that cause.
 
 On cold campaigns, an ad frequency above about 2 over 30 to 60 days points to fatigue or too little variety in the account [MCR-0040]. Then look at weekly trends against the ad's own best four weeks: hook rate (3-second views over impressions) falling, click rate falling, CPM rising faster than the account's, and cost per purchase rising while the site converts as before. Two or more of these together, with step 1 clear, gives **tired**. One alone gives **unclear**: run the cheapest refresh (new hooks) as the test.
 
+**Name the kind of tired.** Ads tire for one of two reasons, and the refresh differs [MCR-6641]:
+
+- **Stale:** the ad has reached its lifetime spend, or its look and audience repeat other ads in the account. Every ad has a fixed spend capacity, and ramping it faster only uses that up sooner [MCR-6790]. Fix with new hooks, presenters, settings or formats (refreshes 1 to 4).
+- **Pool too small:** the buyer the ad speaks to is a narrow group that cannot absorb the daily spend. A tight call-out can saturate its group after roughly $10,000 of spend, and then frequency or cost climbs [MCR-6630] [MCR-6842]. Fix by widening the buyer (refresh 5) or by resting the ad and bringing it back later as people enter and leave that group. New hooks for the same narrow buyer will tire just as fast.
+
 ### 3. Name the parts of the winner
 
 Write the ad as parts: buyer, angle, offer, hook (visual, text, voice), body, presenter, setting, format, length, call to action. Mark which part most likely carries it (often the angle and the body) and which part viewers have seen most (always the hook and the presenter). Keep the carrying parts; refresh the most-seen ones first.
@@ -76,13 +81,19 @@ Write the ad as parts: buyer, angle, offer, hook (visual, text, voice), body, pr
 | 5 | Same ad, new buyer named in hook and copy | angle, body | naming a segment in the copy can open a new group under broad targeting [ADC-0032] |
 | 6 | Same ad, new offer framing (bundle, gift, per-use price), only if live and profitable | angle, body | a new offer is a new concept to buyers |
 
+For refresh 1, film or design the new openings fresh; do not recut lines from the old opening, because most of the market has already seen it and scrolled past. A different person, setting or first image matters more than new words, and each new opening gets its own creative ID, so hook swaps still bring fresh reach under Meta's current delivery: one agency reports reviving ads that had spent $50,000 to $100,000 with about 50 new hooks [MCR-6652]. Treat every hook as three layers, the visual, the spoken line and the on-screen text, and change at least the visual [MCR-6743]. For a **static** winner, the opening is the image and headline: keep the primary text and offer, and make a new image and headline pair, or move the same message to a long-copy static.
+
+Match the number of refreshes to the budget. Each needs enough spend to read; with a small budget, test three hooks, not ten.
+
 Each change must be big enough to count as new to the delivery system: a new colour, crop or pose usually is not, and near-duplicates get grouped and shown to the same people [MCR-0022] [MCR-0078]. Rank the six by cost to make and how much of the winner they keep; hooks and new presenter usually first.
 
-India note: a winner that ran only in English can take a Hindi or regional-language version spoken by a native speaker as refresh 5. On COD stores, every cost per purchase in this skill uses delivered orders, not placed ones.
+Language note: a winner that ran only in English can take a version in another language your buyers use, spoken by a native speaker, as refresh 5. On stores with many pay-on-delivery orders or high returns, every cost per purchase in this skill uses delivered, kept orders, not placed ones.
 
 ### 5. Plan the test
 
-Do not switch the original off. Launch refreshes in their own test ad set at a small budget; move a refresh beside the original only after it reaches the store's keep rule (`call-creative-test-winners`). Some practitioners keep winners running far longer than fast-rotating brands do; a winner still under target cost per purchase stays on [MCR-0065].
+Do not switch the original off. **Set the pace by stock and cash first** [ADC-0012]: with plenty of stock and fast-returning cash, push the revived winner; with low stock, a long restock or slow cash, run it lower for longer and save the push until stock lands. Launch refreshes in their own test ad set at a small budget; move a refresh beside the original only after it reaches the store's keep rule (`call-creative-test-winners`). Some practitioners keep winners running far longer than fast-rotating brands do; a winner still under target cost per purchase stays on [MCR-0065].
+
+When a refresh wins and moves to a scaling campaign, use the existing post (its post ID, through "use existing post" in Ads Manager) rather than a fresh upload, so its likes and comments carry over; do not edit the live ad, since edits can reset learning.
 
 ## Checks before you hand it over
 
@@ -93,6 +104,8 @@ Do not switch the original off. Launch refreshes in their own test ad set at a s
 - Offer refreshes use only live, profitable offers.
 - The original keeps running until a refresh passes the keep rule.
 - Raw files needed for each refresh exist, or the refresh is marked blocked.
+- The kind of tired (stale or pool too small) is named, and the refreshes match it.
+- New openings are freshly made, not recut, and their count fits the test budget.
 
 ## Output
 
@@ -115,6 +128,8 @@ Do not switch the original off. Launch refreshes in their own test ad set at a s
 - **Killing the original before a replacement works.** Step 5 keeps it running.
 - **A new offer the store cannot afford.** Refresh 6 needs a live, profitable offer.
 - **Refreshing a fluke.** Gate 1 checks it was a real winner first.
+- **New hooks for a buyer pool that is used up.** Step 2 names a small pool and widens the buyer instead.
+- **Recutting the old opening.** Step 4 films or designs new ones.
 
 ## Sources
 
@@ -130,5 +145,15 @@ Do not switch the original off. Launch refreshes in their own test ad set at a s
 - MCR-0052: new formats on proven ideas.
 - MCR-0065: some keep winners running longer.
 - MCR-0078: near-duplicate ads get grouped.
+- MCR-6641: ads tire from staleness or a buyer pool too small.
+- MCR-6790: each ad has a fixed lifetime spend capacity.
+- MCR-6630: a tight call-out saturates its group quickly.
+- MCR-6842: a narrow persona caps daily spend.
+- MCR-6652: new hooks get new creative IDs and revive fatigued ads.
+- MCR-6743: a hook has three layers: visual, audio and on-screen text.
 
 What makes this skill ours: fatigue is only called after the auction, site, offer, tracking, season and budget are ruled out, so the store does not rebuild an ad that was never the problem; each refresh changes exactly one named part that is big enough to count as new; the original keeps selling until a refresh passes the store's own keep rule; and an offer refresh needs a live, profitable offer.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. A winner that ran only in English can take a Hindi or regional-language version as refresh 5. On COD stores, every cost per purchase uses delivered orders, not placed ones.

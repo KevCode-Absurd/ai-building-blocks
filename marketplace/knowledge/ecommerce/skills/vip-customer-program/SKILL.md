@@ -1,6 +1,6 @@
 ---
 name: vip-customer-program
-description: "A VIP program built from the store's own data: who qualifies (top customers by 12-month gross profit with at least two orders, high returners and fraud excluded), a ranked list of perks that cost little but feel big, each priced per VIP per year against a cap, how members are told and welcomed, an early warning when a VIP slows down, and a holdout to see if the program adds orders. Service fixes come before perks. Includes India notes (WhatsApp, COD fees, festival access) and US notes. Use when a small group of customers earns a large share of profit, when the owner wants to reward best customers without discounting, or after RFM segments are built."
+description: "A VIP program built from the store's own data: who qualifies (top customers by 12-month gross profit with at least two orders, high returners and fraud excluded), a ranked list of perks that cost little but feel big, each priced per VIP per year against a cap, how members are told and welcomed, an early warning when a VIP slows down, and a holdout to see if the program adds orders. Service fixes come before perks. Includes market notes on the VIP channel (WhatsApp, SMS, email), shipping and payment perks, and peak season early access. Use when a small group of customers earns a large share of profit, when the owner wants to reward best customers without discounting, or after RFM segments are built."
 ---
 
 # VIP customer program
@@ -47,7 +47,7 @@ If gross profit is missing, rank on net revenue after refunds and say so. Taggin
 Rank customers by trailing 12-month gross profit after refunds, measured only on customers who have had at least 12 months to buy [MEA-0048]. VIP = top 10% (or top 5% if the list is large), with at least two delivered orders. Exclude:
 
 - Return rate over twice the store's average.
-- Chargebacks, fraud flags, or two or more refused COD parcels.
+- Chargebacks, fraud flags, or two or more refused or failed delivery parcels.
 - Staff, friends and wholesale accounts.
 
 If the store uses Klaviyo's RFM groups, Champions is a good starting list; check it against the gross profit rule [EML-6325].
@@ -78,7 +78,7 @@ Pick three to five perks whose total cost per VIP per year fits the cap. Prefer 
 
 Announced status is what changes behaviour, so tell each VIP:
 
-1. **Welcome message** (email, plus WhatsApp in India or SMS in the US if opted in): a personal note, what they now get, how to reach the priority line.
+1. **Welcome message** (email, plus WhatsApp or SMS if opted in, whichever buyers in that market use): a personal note, what they now get, how to reach the priority line.
 2. **Physical touch** with their next order: the founder note, and the perk card.
 3. **Personal letters work:** one retailer's tailored second-purchase letters doubled conversion against a control [CXP-0020]; a short handwritten line is the low-cost version.
 
@@ -100,15 +100,17 @@ Rescore every quarter. Give a grace period of one quarter before removing anyone
 
 Hold 10 to 20% of qualifying VIPs out of the announced perks for two quarters (they still get normal service). Compare orders per customer and gross profit per customer, after perk costs. With under about 200 VIPs, the holdout will not show a clear result; then track VIP retention (share still buying within 1.5 times their gap) quarter by quarter instead, and say the read is directional.
 
-### 8. India and US notes
+### 8. Channel and market notes
 
-- **India:** WhatsApp is the VIP channel; a WhatsApp list for early access works well if opt-ins are recorded. Waiving the COD fee for VIPs, or giving them prepaid-only express shipping, costs little. Festival early access (Diwali, Raksha Bandhan) must be planned against stock.
-- **US:** SMS early access for opted-in VIPs; free express shipping is the most valued low-cost perk in many categories.
+- **WhatsApp markets** (much of Europe, Latin America, Asia): WhatsApp is the VIP channel; a WhatsApp list for early access works well if opt-ins are recorded.
+- **SMS markets** (US, Canada, UK, Australia): SMS early access for opted-in VIPs, within each market's consent rules; free express shipping is the most valued low-cost perk in many categories.
+- **Payment and shipping perks:** waiving a payment option fee, free returns, or free express shipping costs little per VIP.
+- **Peak season early access** (Black Friday, the holidays, local festivals) must be planned against stock.
 
 ## Checks before you hand it over
 
 - VIPs are ranked on 12-month gross profit after refunds, with at least two orders.
-- High returners, fraud flags, repeat COD refusers and staff are excluded.
+- High returners, fraud flags, repeat parcel refusers and staff are excluded.
 - Perk cost per VIP per year is priced and under the written cap.
 - No perk is a standing discount code.
 - Every perk has an owner and stock or staff to deliver it.
@@ -148,4 +150,11 @@ Hold 10 to 20% of qualifying VIPs out of the announced perks for two quarters (t
 - EML-0035: replies in SMS conversations and value.
 - OFF-0043: subscriber-only offers during public sales.
 
-What makes this skill ours: VIPs are chosen on 12-month gross profit with heavy returners and COD refusers removed; every perk is priced per member per year against a written cap; service effort is fixed before any delight is added; and an at-risk alert on each VIP's own buying gap catches slippage before win-back is needed.
+What makes this skill ours: VIPs are chosen on 12-month gross profit with heavy returners and parcel refusers removed; every perk is priced per member per year against a written cap; service effort is fixed before any delight is added; and an at-risk alert on each VIP's own buying gap catches slippage before win-back is needed.
+
+## Selling in India
+
+- WhatsApp is the VIP channel.
+- Waive the COD fee for VIPs, or give them prepaid-only express shipping.
+- Exclude buyers with two or more refused COD parcels.
+- Plan Diwali and Raksha Bandhan early access against stock.

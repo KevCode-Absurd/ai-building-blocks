@@ -118,9 +118,9 @@ For a full check of every Google smart-bidding campaign, use `google-smart-biddi
 
 Each change gets one line: date, campaign, old cap, new cap, delivery rate, cost per purchase, reason, review date. Feed it to `recommendation-scorekeeping` so the store learns which cap moves paid off.
 
-### 9. India and cash-on-delivery stores
+### 9. Stores with refunds, returns or pay on delivery
 
-Build the cap from gross profit per placed order after return-to-origin losses, because Meta counts COD orders that never pay. Without that, the cap allows sales that lose money. If a prepaid-only event exists from `store-meta-capi`, cap on it only once it reaches about 50 events a week per ad set.
+Build the cap from gross profit per placed order after losses from returns, refunds and failed deliveries, because Meta counts orders that are later refunded or, for pay-on-delivery orders, never paid. Without that, the cap allows sales that lose money. If a prepaid-only event exists from `store-meta-capi`, cap on it only once it reaches about 50 events a week per ad set.
 
 ## Checks before you hand it over
 
@@ -165,3 +165,7 @@ Build the cap from gross profit per placed order after return-to-origin losses, 
 - MEA-0020, MEA-0026: target cost from first-order or time-bound gross profit.
 
 What makes this skill ours: a gate that asks whether a cap fits this store before building one; a cap derived from gross profit and the store-truth factor with break-even as a hard ceiling; a spend-and-cost grid instead of guesswork; and a cap log that feeds the store's own scorekeeping.
+
+## Selling in India
+
+- Meta counts COD orders that are later refused. Build the cap from gross profit per placed order after the store's RTO loss, or cap on a prepaid-only event once it has enough volume.

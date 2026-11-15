@@ -30,7 +30,7 @@ Required (read access, level 1):
 3. **Traffic sources to the homepage**: brand search, direct, social, email, paid.
 4. **Top 10 products by gross profit and units** (from `build-sku-profit-sheet` or the Shopify sales by product report with costs).
 5. **Reviews export** and the store's real rating and review count.
-6. **Policies**: shipping times by region, free-shipping line, returns window, COD and payment options.
+6. **Policies**: shipping times by region, free-shipping line, returns window and payment options.
 
 Optional: post-purchase survey answers, heatmap or scroll map of the homepage, a list of press mentions with links.
 
@@ -47,21 +47,22 @@ If analytics are missing, write the copy but mark every "proof it works" metric 
 1. **Set the score.** Judge the homepage by its view-product rate: the share of homepage sessions that open a product page [LPG-0033]. A healthy store-wide view-product step sits around 50 to 70% in one practitioner's GA4 benchmark [LPG-0040]; record the store's current number as the baseline.
 2. **Split the two visitors.** From analytics, note the new versus returning share of homepage sessions and what each does next. New visitors need "what is this, is it for me, where do I start". Returning buyers need "reorder, what is new, my account". If returning buyers are under 15% of homepage sessions, write for new visitors and give returning buyers one clear reorder link.
 3. **Write the announcement bar.** One line, one fact: the free-shipping line, a real delivery promise or a live offer with its end date. No rotating messages.
-4. **Write the hero.** Headline: what the store sells and for whom or with what result, under 10 words, in buyer words from reviews. Subhead: one line on why this store (the one difference buyers mention most). One button to the best entry point (best-seller collection, quiz or hero product), with a label that says where it goes ("Shop bestsellers", not "Learn more"). Directly under the button, the risk reducers (returns, delivery, COD where relevant) [LPG-0038]. Static hero, not a slideshow. Many visitors never scroll, so test the headline first and the image second [LPG-0016].
+4. **Write the hero.** Headline: what the store sells and for whom or with what result, under 10 words, in buyer words from reviews. Subhead: one line on why this store (the one difference buyers mention most). One button to the best entry point (best-seller collection, quiz or hero product), with a label that says where it goes ("Shop bestsellers", not "Learn more"). Directly under the button, the risk reducers (returns, delivery, payment options where relevant) [LPG-0038]. Static hero, not a slideshow. Many visitors never scroll, so test the headline first and the image second [LPG-0016]. Write five headline options that state the reward in different ways and pick one with a reason. Find the reward with a "so that" chain (the store does X, so that Y, so that Z) and use the deepest link a buyer would still believe. When paid traffic lands here, the headline repeats the ad's promise in the ad's words. Score the first screen 1 to 10 on four parts: the dream outcome (headline), how likely it feels (proof and the line under the button), how soon (a stated delivery or result time) and how little effort; fix the weakest part first. Under about 1,000 homepage visits a week, compare matching weeks before and after rather than splitting traffic.
 5. **Proof in the first scroll.** Real star rating with count plus one short named quote: two different kinds of proof [LPG-0036]. Add press only with the outlet's words.
 6. **Shop-by paths.** Three to six tiles named the way buyers shop (by need, by type, by recipient), each with an image and a 2 to 4 word label. Image-led category links lifted results in agency tests [LPG-0039]; keep the visible menu under about 7 items [LPG-0007]. Put bestsellers at the top of the mobile menu, since new visitors often open it first [LPG-0061].
 7. **Best sellers.** Section heading that says why these ("Most reordered", "Start here"), product cards with name, price, rating and one key difference. Order by demand and margin; about 60% of visitors may leave after the hero and more drop with each row [LPG-0041], so the first row carries the store.
 8. **Why us or how it works.** Three short points, each a difference buyers confirm in reviews, with a proof line. For paid social traffic put this problem-and-education block high; for search and brand traffic put proof first [LPG-0050].
 9. **Returning-buyer block.** "Reorder your favourite", "New this month" and a link to account or subscription management. Where the theme allows, show it only to logged-in or returning visitors.
 10. **Story teaser.** Two sentences from the true origin story and a link to the about page.
-11. **FAQ strip.** The 3 to 4 questions new visitors ask most (delivery time, returns, COD, sizing), answered in one line each, taken from tickets.
+11. **FAQ strip.** The 3 to 4 questions new visitors ask most (delivery time, returns, payment, sizing), answered in one line each, taken from tickets.
 12. **Footer trust lines.** Contact routes that really work, policy links, business name and address, payment marks.
-13. **India and US notes.** India: name COD and UPI in the hero reassurance line if COD share is high, add a pincode delivery check link, and keep prices GST-inclusive; a regional-language hero variant only where reviews show that language. US: a specific delivery date beats a vague range when the store can keep it [CXP-0010].
+13. **Market notes.** UK, EU and Australia: keep prices tax-inclusive, and name free returns or the 14-day return right in the reassurance line where it applies. Anywhere: name a payment option buyers ask about often (pay later, a local method, or pay on delivery where offered) in the hero reassurance line, add a delivery check link if delivery time varies by area, and add a hero variant in another language only where reviews show buyers use that language. US: a specific delivery date beats a vague range when the store can keep it [CXP-0010].
 
 ## Checks before you hand it over
 
 - A stranger shown the first screen for 3 seconds can say what the store sells and where to click.
 - Exactly one primary button in the hero, labelled with its destination.
+- Five hero headlines were written and the pick has a reason; the weakest of the four value parts was fixed.
 - Every number (rating, count, customers, delivery days) has a source and date.
 - Each section has a stated job and a metric (view-product rate, tile clicks, reorder clicks).
 - Returning buyers can reach reorder or account in one tap.
@@ -70,7 +71,7 @@ If analytics are missing, write the copy but mark every "proof it works" metric 
 
 ## Output
 
-**Summary (one screen):** current view-product rate, new versus returning split, the hero promise and why, the section order, and the runner-up headline in one line.
+**Summary (one screen):** current view-product rate, new versus returning split, the hero promise and why, the section order, and the runner-up headline in one line. Add the five hero headlines with the pick, and the four value scores in one line.
 
 **Section sheet:**
 
@@ -97,6 +98,7 @@ If analytics are missing, write the copy but mark every "proof it works" metric 
 - **Judging the page by bounce rate.** Step 1 uses view-product rate.
 - **Hero products that lose money or run out.** Gate 1 checks profit and stock.
 - **Inflated proof numbers.** Gate 2 drops anything without a source.
+- **One headline, no options.** Step 4 writes five and picks one with a reason.
 
 ## Sources
 
@@ -111,5 +113,10 @@ If analytics are missing, write the copy but mark every "proof it works" metric 
 - LPG-0050: order sections by traffic source.
 - CXP-0010: specific delivery dates lift conversion when accurate.
 - CXP-6160: US ship-time claims need a reasonable basis.
+- Five headline options, the so-that chain and the four-part value score come from the AI Blocks store hero section writer.
 
 What makes this skill ours: every section has a named visitor, a job and a metric; the homepage is scored on view-product rate from the store's own analytics; returning buyers get their own fast path; and hero picks are gated on profit and stock before any words are written.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Name COD and UPI in the hero reassurance line if COD share is high, add a pincode delivery check link, and keep prices GST-inclusive. Add a Hindi or regional-language hero variant only where reviews show that language.

@@ -40,7 +40,7 @@ Access: the client signs in and links the Google account to Microsoft's import; 
 
 1. **Profit on Google.** Only campaigns earning above break-even ROAS on Google in the last 90 days go across [GAD-0023]. Fail: no campaign qualifies, so stop and fix Google.
 2. **Tracking.** Google tracking passed, and Microsoft's own tag and purchase goal can be installed before import. Fail: do not import yet.
-3. **Market.** Microsoft's search share in the store's countries is high enough that a test can reach 30 purchases in six weeks at the store's conversion rate (practitioner default, test it). India: Bing's share is small; check the current figure and expect a slow test, or skip it. US: usually worth a test.
+3. **Market.** Microsoft's search share in the store's countries is high enough that a test can reach 30 purchases in six weeks at the store's conversion rate (practitioner default, test it). Microsoft's share is highest in the US, UK, Canada and Australia, and on desktop; in markets where it is small, check the current figure and expect a slow test, or skip it. US and UK: usually worth a test.
 4. **Cash.** The client can carry the capped test in step 6.
 
 ## Steps

@@ -3272,5 +3272,584 @@
     },
     "strength": "platform_rule",
     "public": true
+  },
+  {
+    "id": "EML-6386",
+    "modules": [
+      "EML",
+      "ADC",
+      "MEA"
+    ],
+    "topics": [
+      "churned subscriber win-back",
+      "holdout test",
+      "Meta for retention"
+    ],
+    "claim": "Test Meta as a win-back channel cheaply: split churned subscribers, upload half from Klaviyo as a custom audience, run a reacquisition campaign, and compare resubscribe rates with the held-out half, for about $1,000.",
+    "body": "Retargeting past customers often looks great in Ads Manager because many would have come back anyway. A holdout tells you whether Meta actually brings them back. Blue Sense's example for Lovevery: take every churned subscriber whose child is likely still in range (say estimated three to five years old), split the list randomly in two in Klaviyo, upload one half as a Meta custom audience and run a dedicated reacquisition campaign to it, and leave the other half untouched. After the test window, compare the share of each half that resubscribed (from your subscription app or Shopify, not Meta's reported conversions). The difference is the incremental lift; divide spend by the extra resubscribers to get cost per incremental win-back. Blue Sense estimates about $1,000 is enough for a useful read. How to apply: keep email and SMS the same for both halves, so the only difference is the ads. If the lift is real and the cost per win-back is below the gross profit a returning subscriber brings, make it an always-on campaign.",
+    "conditions": "Subscription or repeat brands with a few thousand or more churned customers and a list that matches well in Meta.",
+    "fails_when": "Churned lists too small for a split to show a difference; customers who churned because they no longer need the product.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Test budget about $1,000",
+      "Example segment: churned subscribers with children estimated 3 to 5 years old"
+    ],
+    "asks": [
+      "Do Meta ads work to win back cancelled subscribers?",
+      "How do I test if retargeting past customers is incremental?",
+      "How much should I spend on a win-back test?",
+      "How do I run a holdout test with my Klaviyo list?"
+    ],
+    "platforms": [
+      "meta",
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[50:36] retention strategy and the churned subscriber holdout test"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6387",
+    "modules": [
+      "EML",
+      "OFF",
+      "MEA"
+    ],
+    "topics": [
+      "retention discount ladder",
+      "churn points",
+      "lifetime gross profit"
+    ],
+    "claim": "To cut subscription churn, build a discount that grows the longer someone stays, timed to the months your cohorts usually cancel, and judge it on lifetime gross profit, not lifetime revenue.",
+    "body": "Blue Sense first thought Lovevery's rising discount on later kits was a loyalty ladder; it was not, the brand had simply raised the one-time price on pricier kits so the subscription looked like a bigger saving. The real idea is worth doing: a retention discount ladder, where the price drops the longer a customer stays and resets if they cancel, gives subscribers a concrete reason not to leave. How to apply: 1. From your subscription app or Shopify cohort data, find when customers usually churn (for example after order 2 or month 4). 2. Place the next price step just before those points, and tell subscribers the next step is coming. 3. Make cancelling reset the ladder. 4. Model the margin: deeper discounts compress gross margin on later orders, so check that the extra orders you keep beat the margin you give away. 5. Measure lifetime gross profit per subscriber against a control group; lifetime value in revenue will look better even when the ladder loses money. Retention fixes come before deeper acquisition discounts.",
+    "conditions": "Subscription brands with enough cohort history to see churn points and margin room for stepped discounts.",
+    "fails_when": "Thin gross margins that cannot absorb later discounts; churn driven by life stage ending (child outgrew it), which no discount fixes; no cohort data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I reduce subscription churn?",
+      "Should I give long-term subscribers a bigger discount?",
+      "When do I offer a discount to stop cancellations?",
+      "Should I measure retention offers on LTV or gross profit?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[03:38] perceived discount ramp; [67:15] retention before discount and discount ladder"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6388",
+    "modules": [
+      "EML",
+      "OFF",
+      "ADC"
+    ],
+    "topics": [
+      "gift recipient conversion",
+      "handover page",
+      "QR code offers"
+    ],
+    "claim": "Turn gift recipients into subscribers with a printed QR card leading to a handover page and a credit from the giver, such as $30 off the next kit, and test a one-click upsell that gifts future kit credits.",
+    "body": "Every gift puts the product in a new home that has not chosen the brand. Blue Sense suggests a handover mechanism: in the box, a printed letter with a QR code goes to a dedicated page that explains what comes next and offers a credit framed as part of the gift (for example, the giver is also giving you $30 toward the next kit if you subscribe). At checkout for the gift, offer a one-click upsell to gift credits for the month three and month four kits; nothing extra ships, just a printed card the recipient scans to redeem, which leads them into future boxes. If you collect the recipient's email, you could add them to a Meta custom audience and show soft ads pointing to the handover page, but check privacy and consent rules first. How to apply: design the insert and page, give it a unique code so you can track redemptions, and measure the share of gift orders that create a subscriber within 90 days and the gross profit from those subscribers.",
+    "conditions": "Gifted products with a follow-on purchase or subscription; ability to add printed inserts.",
+    "fails_when": "No natural next purchase for the recipient; markets or setups where emailing or targeting recipients lacks valid consent.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Example recipient credit: $30",
+      "Upsell: credits for month 3 and month 4 kits"
+    ],
+    "asks": [
+      "How do I turn gift recipients into customers?",
+      "What should I put in a gift package insert?",
+      "Can I advertise to people who received my product as a gift?",
+      "How do I use QR codes in packaging to drive repeat sales?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6613",
+    "evidence": {
+      "where": "[55:25] gift recipient handover and custom audience; [63:44] QR code handover and one-click credit upsell"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6389",
+    "modules": [
+      "EML",
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "exit intent",
+      "abandonment offers"
+    ],
+    "claim": "Split exit or abandonment offers by funnel stage: be generous with browsers who left, give a small offer to cart abandoners, and give checkout abandoners risk reversal or free shipping, not a discount.",
+    "body": "Someone can leave while browsing, after adding to cart, or after reaching checkout, and each tells you how close they were. Browsers have shown no commitment and are still product aware rather than most aware, so give them a real reason and some urgency to come back. Cart abandoners have shown they want to buy and may simply buy in a day or two, so an offer is fine but keep it small. Checkout abandoners were almost there; some friction stopped them. Blue Sense would be skeptical of giving away margin here, because many will buy in the next two to three days anyway. Use a reminder, a risk reversal (returns, guarantee) or free shipping instead. Blue Sense dislikes exit-intent pop-ups as gimmicky and prefers abandoned flows by email (and SMS). How to apply: in Klaviyo or your email tool, build three separate flows triggered by browse abandonment, cart abandonment and checkout abandonment, with offer generosity decreasing in that order, and check margin given away per recovered order in each flow.",
+    "conditions": "Stores with browse, cart and checkout abandonment flows set up.",
+    "fails_when": "Very high priced items with long research cycles, where even checkout abandoners may need more help.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should I give a discount in my abandoned cart emails?",
+      "What should my browse abandonment offer be?",
+      "Do exit intent pop-ups work?",
+      "How do I stop giving away margin in recovery flows?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6614",
+    "evidence": {
+      "where": "about [3:33:40] three stages of exit intent"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6390",
+    "modules": [
+      "EML",
+      "CRO"
+    ],
+    "topics": [
+      "email testing",
+      "offers structure timing messaging",
+      "retention constraint"
+    ],
+    "claim": "Aim Klaviyo tests at your retention constraint and at offers, structure, timing and messaging, not at subject lines, click rates and time delays.",
+    "body": "Teams told to test more usually test subject lines, things that lift click rate, and a few time delays. Angus Cowan says that is acting like an email marketer, not a retention marketer. There is always one constraint, the most common drop-off point, and every test should target it: if first to second order conversion is the constraint, all tests in flows and campaigns should aim at that. The test themes that move retention are offers (what you give and when), structure (flow branches, campaign cadence, segmentation, sends per day, time delays as part of the overall design) and messaging (copy, angles, new headlines, creative). It is fine to have executors focused on good subject lines and segment hygiene, but someone must own the question of how customers will be worth more in 90 days than today, because that gain compounds every month as new cohorts arrive. How to apply: write your current constraint at the top of the test log and reject any test that does not plausibly move it.",
+    "conditions": "Brands with flows built and a team or agency running tests in Klaviyo.",
+    "fails_when": "Deliverability is broken (low inbox placement), in which case fix sending reputation before testing offers or messaging.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "What should I A/B test in my emails?",
+      "Are subject line tests worth it?",
+      "How do I improve repeat purchase rate with email?",
+      "What should my email agency be testing?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [18:02] test offers, structure and messaging against the constraint"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6391",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "engaged segment growth",
+      "list re-engagement",
+      "Black Friday"
+    ],
+    "claim": "Grow your engaged segment by adding a random slice of unengaged profiles to each strong send; one activewear brand went from 200,000 max sends to its full 750,000 list and beat Black Friday by 40%.",
+    "body": "A nine-figure activewear retailer Angus Cowan took on in 2025 had about 750,000 profiles but never sent to more than 200,000 at once, leaving about 550,000 paid-for profiles idle. Method: define an engaged segment mixing email and on-site signals (opened or clicked, added to cart or started checkout, placed an order), each with a lookback such as 180, 220 and 280 days, set by how often your customers buy. That gave roughly 375,000. Aim for at least 50% of the list to qualify. Split the rest into random slices (here ten of about 37,500) and add one slice to each strong campaign, so a send goes to about 410,000. If 20% to 30% of the slice opens, they join the engaged segment. Repeat for six to nine months, watching deliverability. By the end of 2025 the brand could email all 750,000 for its Black Friday launch and beat the prior year's Black Friday by 40%, helped by waking dormant subscribers. How to apply: track engaged segment size monthly as a goal, and pair re-engaged slices with your best content and offer moments.",
+    "conditions": "Large lists with many dormant but valid profiles and healthy sender reputation.",
+    "fails_when": "Lists with old, bought or bouncing addresses, where sending to unengaged profiles can damage deliverability; check bounce and spam rates after each slice.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "750,000 profiles, 200,000 maximum send before",
+      "about 375,000 engaged",
+      "engaged lookbacks of 180, 220 and 280 days",
+      "10 slices of about 37,500",
+      "20% to 30% open rate on added slices",
+      "at least 50% of list engaged as a target",
+      "Black Friday up 40% year on year"
+    ],
+    "asks": [
+      "Should I email my unengaged subscribers?",
+      "How do I grow my engaged email audience?",
+      "How do I define an engaged segment in Klaviyo?",
+      "How can I get more revenue from email on Black Friday?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [41:45] activewear retailer engaged segment expansion"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "EML-6392",
+    "modules": [
+      "EML",
+      "MEA"
+    ],
+    "topics": [
+      "customer journey stages",
+      "first to second order conversion",
+      "Klaviyo account structure"
+    ],
+    "claim": "Map retention into three stages (acquisition, first to second order conversion, revenue from the top 20% of customers) so each lagging metric points to one part of your flows.",
+    "body": "Angus Cowan's team structures every Klaviyo account around three functions, which they label F1, F2 and F3. F1 is acquisition: none of the rest matters if you cannot win the first order. F2 is first to second order conversion, usually the biggest drop-off after the first purchase, and closely tied to 90-day LTV. F3 is revenue from the top 20% of customers adjusted for gross profit, tied to 365-day LTV. The point of naming the stages is diagnosis: when 90-day LTGP lags, you know the problem sits in F2 and can work on that part of the journey, instead of guessing whether to add a winback flow, send more discount campaigns or rebuild cross-sell. How to apply: report each stage monthly with its metric (new customers, first to second order rate, top 20% revenue), pick the weakest as the constraint, and point all testing at it. Most brands with over 80% of customers who never buy twice have simply never looked at it this way.",
+    "conditions": "Brands with live flows and enough customers to measure second-order rates by cohort.",
+    "fails_when": "Very new brands with few repeat cycles yet; focus on F1 and product quality first.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 stages: acquisition, first to second order, top 20% revenue",
+      "over 80% of customers never buying twice at most brands"
+    ],
+    "asks": [
+      "How should I structure my Klaviyo account?",
+      "What is the biggest drop-off in retention?",
+      "How do I find my retention bottleneck?",
+      "What does first to second order conversion mean?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "[11:38] F1, F2, F3 customer journey stages"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6393",
+    "modules": [
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "lifecycle cohorts",
+      "subscription segments",
+      "spend tiers"
+    ],
+    "claim": "Plan lifecycle cohorts with one goal each: never purchased (first sale), purchased but not subscribed (upsell), active subscriber (retain), cancelled (reactivate); non-subscription brands use spend tiers or RFM.",
+    "body": "Angus Cowan separates two meanings of segmentation: how you segment campaign sends, and how you define lifecycle cohorts. The cohorts matter most for strategy because they give each part of the customer journey a clear goal. For a subscription brand: people who have never bought (goal: first sale, ideally onto a subscription), people who bought once but did not subscribe (goal: upsell to subscription), active subscribers (goal: keep them), and cancelled subscribers (goal: win them back). For non-subscription brands, use RFM scoring, or a simple loyalty ladder: never purchased, purchased once, then lifetime spend tiers such as $500+, $1,000+ and $3,000+. How to apply: create these cohorts as segments in Klaviyo, write one goal and one metric for each, and map which flows and campaigns serve which cohort. Use the cohorts to plan and measure; do not slice every campaign by them.",
+    "conditions": "Brands with a subscription offer or a wide spread of customer spend.",
+    "fails_when": "Very small customer bases where tiers hold too few people to act on separately.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4 subscription cohorts: never purchased, purchased not subscribed, active, cancelled",
+      "spend tiers $500+, $1,000+, $3,000+"
+    ],
+    "asks": [
+      "How should I segment my subscription customers?",
+      "What customer segments should I set up in Klaviyo?",
+      "How do I organise my customers by loyalty?",
+      "What goal should each customer group have?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [36:45] lifecycle cohorts for subscription and non-subscription brands"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6394",
+    "modules": [
+      "EML",
+      "CXP",
+      "MEA"
+    ],
+    "topics": [
+      "retention hierarchy",
+      "acquisition quality",
+      "product portfolio"
+    ],
+    "claim": "Retention is driven first by product quality, then portfolio, acquisition quality and customer experience; email and SMS come fifth, as an amplifier that cannot fix the four above it.",
+    "body": "Angus Cowan, an email and SMS specialist who works with Blue Sense, says most brands with a retention problem jump straight to Klaviyo, when owned media is the last of five levers. Check them top down. 1) Product quality: use real data (surveys, NPS, verbatim feedback), not your own belief that it is great. 2) Product portfolio: without a natural cross-sell, upsell or refill, people have no reason to return; you may need new products or collections. 3) Acquisition quality: how a customer first buys predicts whether they stay. A $20 AOV buyer from TikTok Shop is less likely to return than someone who spent $200, and Black Friday buyers at 40% to 50% off are bargain hunters. 4) Customer experience at every touch: on-site shopping, shipping updates, and how support handles problems, since a well-handled problem can keep a customer. 5) Owned media, which finds the drop-off point in the journey and amplifies what already works. How to apply: before rebuilding flows, check which of the first four is weak.",
+    "conditions": "Brands with low repeat rates looking for a fix.",
+    "fails_when": "The product, portfolio and experience are already strong and the only gap is missing or poor flows; then owned media is the right first fix.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "5 levers in order: product quality, portfolio, acquisition quality, customer experience, owned media",
+      "$20 AOV TikTok Shop buyer versus $200 first order",
+      "Black Friday buyers at 40% to 50% off"
+    ],
+    "asks": [
+      "Why don't my customers buy again?",
+      "Will better emails fix my retention?",
+      "Do Black Friday customers come back?",
+      "What affects repeat purchase rate the most?"
+    ],
+    "platforms": [
+      "klaviyo",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [05:30] the five-level retention hierarchy"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6395",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "campaign segmentation",
+      "80/20 reach rule",
+      "personalisation in flows"
+    ],
+    "claim": "Spend about 80% of email campaigns on broad reach to the whole engaged list and 20% on narrow goal segments; keep one-to-one personalisation for behaviour-triggered flows.",
+    "body": "Angus Cowan pushes back on the hyper-personalisation trend. Splitting campaigns into tiny segments takes far more work than it returns, and it stops you learning what great content looks like, because every send goes to a different sliver. His principle: make excellent content and send it to as many people as possible. Repeat-customer revenue arrives in waves driven by moments (sales, launches, restocks), and the peaks are bigger when the audience has stayed engaged all year. Only about 3% of a list may be ready to buy on a given day; broad educational, entertaining and social proof content keeps the other 97% warm. The rule of thumb is 80% reach, 20% specific goals. For a nine-figure retailer in his portfolio, the 20% means things like emailing buyers of one protein brand to clear excess stock of it, not sending a protein blog to 1,000 of a 100,000-person list. Personalisation belongs in flows, which trigger on real behaviour, such as a recent purchase or an abandoned product. How to apply: plan the campaign calendar with four broad sends for every targeted one.",
+    "conditions": "Brands with lists large enough that narrow segments are a small share, sending regular campaigns.",
+    "fails_when": "Brands with very distinct customer groups (for example men and women in separate product ranges) where a single broad message fits nobody.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "80% reach, 20% specific goals",
+      "about 3% of a list ready to buy on a given day",
+      "1,000 of 100,000 as a wasted micro segment"
+    ],
+    "asks": [
+      "Should I personalise every email campaign?",
+      "How should I segment my email campaigns?",
+      "Should I send campaigns to my whole list?",
+      "Where should I use personalisation in email?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [39:54] 80/20 reach rule, and [45:14] personalisation belongs in flows"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6396",
+    "modules": [
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "flow splits",
+      "new versus returning customers",
+      "VIP pathways"
+    ],
+    "claim": "Split every Klaviyo flow at the top by new, returning and loyal or subscriber customers before any product split, and treat each group differently on incentives and messaging.",
+    "body": "Most accounts Angus Cowan audits fall into one of two traps: a single linear line of emails that every person gets no matter their history, or a tangle of product splits (left denim, left a dress, left a t-shirt) that ignores who the customer is. A five-time buyer and a stranger should never get the same abandoned cart email; their objections differ. His rule is to split from the top of every flow, abandoned cart, checkout, browse, post-purchase and cross-sell alike, into three branches. New customers are the priority to convert, so be more forceful on trust, price and introducing the brand. Returning customers need no brand story; go straight to what they want, and avoid rushing to incentives. Loyal and subscription customers: protect the relationship, nurture, and ideally offer no discounts at all. Once that split exists, you can add product or cart value splits inside a branch, though he rates those as low leverage. How to apply: rebuild your top five flows with this three-way split first, then measure each branch against its stage metric.",
+    "conditions": "Brands with enough volume that each branch of a flow receives meaningful traffic.",
+    "fails_when": "Tiny lists where splitting leaves branches with too few people to learn from; start with a new versus returning split only.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 top-level branches: new, returning, loyal or subscriber"
+    ],
+    "asks": [
+      "How should I set up my abandoned cart flow?",
+      "Should repeat customers get the same emails as new ones?",
+      "Should I split my flows by product?",
+      "Should I give discounts to loyal customers?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [15:38] splitting every flow by customer stage"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6397",
+    "modules": [
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "RFM segments",
+      "winback timing",
+      "at risk customers"
+    ],
+    "claim": "Trigger winbacks from RFM at-risk status, not a fixed day count: a customer who buys every 200 days should not get a 20% off winback at day 120.",
+    "body": "RFM scores each customer on recency, frequency and monetary value relative to your own customer base, not an outside benchmark, and groups them as champions (top on all three), loyal (one step below), recent (bought lately but not often or big), at risk (slowing against their own pattern, for example usually buying every three months but now at three and a half) and needs attention. Angus Cowan treats at risk and needs attention as one group to get in front of quickly, especially if they used to be champions. Klaviyo offers RFM in its marketing analytics tab. Useful segments: ex-champions now at risk (a strong campaign target when VIP revenue is the goal), and recent buyers who are not yet loyal (a first to second order segment: what offer lifts them up?). The big win is winbacks: a fixed '120 days since last order' rule hits customers on their own schedule, like a high spender who buys every 200 days, with an unneeded discount. How to apply: rebuild winback and replenishment flows to trigger on RFM status change, and use RFM groups as splits in other flows too.",
+    "conditions": "Brands with enough repeat history for RFM scores to be meaningful, using Klaviyo or a similar tool.",
+    "fails_when": "Young brands where most customers have bought once, so frequency carries no signal yet; a simple days-since-order rule is fine until history builds.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 RFM groups: champions, loyal, recent, at risk, needs attention",
+      "fixed winback at 120 days versus a customer cycle of 200 days",
+      "20% winback discount as the waste example"
+    ],
+    "asks": [
+      "When should my winback flow send?",
+      "What is RFM analysis?",
+      "How do I find customers about to churn?",
+      "How do I use RFM segments in Klaviyo?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "[48:30] RFM groups, ex-champions and RFM-triggered winbacks"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6398",
+    "modules": [
+      "EML",
+      "MEA"
+    ],
+    "topics": [
+      "Klaviyo metrics",
+      "attributed revenue",
+      "pop-up conversion"
+    ],
+    "claim": "Use Klaviyo attributed revenue (aim for over 30% of store revenue) only as a rough north star; manage on pop-up conversion, flow gaps, year-on-year growth and 90 and 365 day LTGP.",
+    "body": "Angus Cowan splits retention metrics into two camps and says you need both. Attribution metrics run day-to-day work: total Klaviyo attributed revenue from campaigns and flows should be above about 30% of store revenue, but treat it as an indicator of reach, engagement, flow coverage and send cadence, not as proof of profit. Some studies put campaign revenue at 70% to 80% incremental; other accounts are far worse, and bigger brands can run incrementality tests. Within attribution, watch campaign revenue, pop-up conversion (how many sign-ups go on to buy, their AOV and gross profit, rather than the opt-in rate), flow revenue broken out by flow to find weak spots, and Klaviyo revenue growth year on year relative to the whole business. Profitability metrics set the high-level target: LTGP mapped at 30, 60, 90, 180 and 365 days by cohort, and revenue from your top 20% of customers. How to apply: report both camps monthly; judge the retention program on the profit metrics, and use the attribution metrics to decide what to fix next.",
+    "conditions": "Brands using Klaviyo or a similar ESP with flows and campaigns live.",
+    "fails_when": "Very small lists or brands that send mostly to already-engaged buyers, where attributed revenue overstates impact; a holdout test is needed to know.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 30% of store revenue attributed to Klaviyo as a rough benchmark",
+      "campaign revenue 70% to 80% incremental in some studies",
+      "LTGP at 30, 60, 90, 180, 365 days",
+      "revenue from top 20% of customers"
+    ],
+    "asks": [
+      "What percentage of revenue should come from email?",
+      "Is Klaviyo attributed revenue real?",
+      "What email metrics should I track?",
+      "Should I care about pop-up opt-in rate?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "about [08:30] attribution versus profitability metrics"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "EML-6399",
+    "modules": [
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "VIP customers",
+      "retention constraint",
+      "first to second order"
+    ],
+    "claim": "VIPs should drive 50% or more of revenue and about 80% of profit, but below roughly $10M to $20M a year the bigger constraint is usually first to second order conversion.",
+    "body": "Your best customers come back more often, buy more and rarely need discounts, so Angus Cowan expects VIPs to drive 50% or more of revenue and roughly 80% of profit. Reward them with exclusives rather than treating them like everyone else: early access, VIP-only products or sales, offline events and community, and reminders of loyalty perks. In flows, add VIP pathways or dedicated VIP flows; in campaigns, VIP sends sit in the 20% of targeted work. But only push VIP revenue if it is your actual constraint. Most brands doing under $10 million to $20 million a year are already fine on VIPs and are losing people between the first and second order, so effort belongs there. Above that size, VIP value becomes a higher-leverage target. How to apply: compute the share of revenue and gross profit from your top 20% of customers; if it already meets the benchmark and second-order rate is weak, put next quarter's retention work on the second order.",
+    "conditions": "Brands with a clear spread of customer value and enough customers to define a VIP tier.",
+    "fails_when": "Brands where a few wholesale or bulk buyers distort the top tier; separate them before applying the benchmark.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "VIPs 50%+ of revenue",
+      "about 80% of profit from VIPs",
+      "under about $10M to $20M a year the constraint is usually the second order"
+    ],
+    "asks": [
+      "How much revenue should come from my best customers?",
+      "Should I build a VIP program?",
+      "What should I focus on in retention first?",
+      "How do I treat VIP customers in email?"
+    ],
+    "platforms": [
+      "klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6629",
+    "evidence": {
+      "where": "[46:32] VIP revenue benchmarks and when to focus on them"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
   }
 ]

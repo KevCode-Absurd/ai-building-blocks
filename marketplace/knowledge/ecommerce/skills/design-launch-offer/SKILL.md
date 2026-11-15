@@ -25,7 +25,7 @@ description: "A launch offer for a new product or a new store that pulls in the 
 
 Required:
 
-1. **Product cost sheet:** landed cost per unit, delivery cost per order, payment fees, expected return and RTO rate (from similar products if new).
+1. **Product cost sheet:** landed cost per unit, delivery cost per order, payment fees, expected return and failed-delivery rate (from similar products if new).
 2. **Planned full price** and the prices of 3 to 5 close alternatives buyers will compare (live URLs, checked on the day).
 3. **Launch stock:** units arriving, date, and the restock lead time.
 4. **What proof exists:** reviews from testers, press, creator use, founder story, test results with their source.
@@ -40,7 +40,7 @@ If costs are missing, stop and run `build-sku-profit-sheet` or `calculate-landed
 1. **Contribution per order at full price is known** (price minus delivered cost). Fail: stop; no launch offer can be checked.
 2. **Stock and restock.** Selling out is fine only if restock lands within about two weeks; longer gaps waste the launch traffic [ORG-0038]. Fail: cap the offer to the units you have and plan a waitlist for the rest.
 3. **Cash.** The launch budget (ads, gifts, samples) plus the stock bill must fit the cash plan; check with `build-13-week-cash-forecast`.
-4. **Truth.** Every end date, unit cap and "first batch" claim must be real. False urgency and limited-stock claims you cannot prove are misleading under India's ASCI rules [ADC-6147] and US law. Fail: drop the claim.
+4. **Truth.** Every end date, unit cap and "first batch" claim must be real. False urgency and limited-stock claims you cannot prove are misleading under consumer law and ad codes in the US, UK, EU and most other markets (the FTC, the ASA and CAP Code, the EU unfair practices rules). Fail: drop the claim.
 
 ## Steps
 
@@ -75,6 +75,8 @@ Rules:
 - A waitlist with product rewards for referrals can grow the list faster than cash rewards [ORG-0030].
 - If the perk is a discount, keep it 15 to 20% at most and check it against `how-deep-can-we-discount`. Small codes often lose money without moving buyers [OFF-0014].
 - In the US, a "free" gift needs a stable paid price and terms stated up front [OFF-6500].
+- **Pre-orders: pick the perk by how far away delivery is.** When the ship date is three or more weeks out, give a gift (a useful add-on or extra content) rather than a price cut; a discount that far from delivery is a saving the buyer cannot feel yet. Within about a week of shipping, a gift or a modest discount both work. This comes from one academic study of pre-order promotions; treat it as a test, not a law.
+- **Frame a companion product as the gift.** "Get the [wanted add-on] at no cost with [product]" reads as more value than "both for a special price", and the same study series linked gift framing to fewer returns. Use it only where the add-on is listed for sale at its real price.
 
 ### 4. Cost the perk
 
@@ -100,15 +102,16 @@ Pick the perk with the best contribution per order that still answers the barrie
 - If the first batch sells out, a restock announcement can itself sell strongly [WLD-0012]; collect back-in-stock sign-ups instead of discounting.
 - Book a check at day 14: conversion and contribution at full price against the launch window. If full price does not convert, the problem is price or proof, not the end of the discount.
 
-### 7. India and US notes
+### 7. Notes by market
 
-- **India:** offer the perk on prepaid orders, or add a small COD fee shown on the product page, to protect against RTO on a new product; collect the waitlist on WhatsApp only with clear opt-in; never show a launch price against an MRP the product was never sold at. Launching inside a festival week means competing with deep discounts; a gift or early access usually reads better than another percentage.
-- **US:** an "introductory price" must actually rise when stated; do not compare to a "regular" price that was never charged [OFF-6145].
+- **All markets:** where pay on delivery is offered, give the perk on prepaid orders, or add a small pay-on-delivery fee shown on the product page, to protect a new product against failed deliveries; collect the waitlist on WhatsApp, SMS or email only with clear opt-in; never show a launch price against a reference price the product was never sold at. Launching inside a peak week (Black Friday, the holidays or a local festival) means competing with deep discounts; a gift or early access usually reads better than another percentage.
+- **US, UK and EU:** an "introductory price" must actually rise when stated, and soon; do not compare to a "regular" price that was never charged [OFF-6145].
 
 ## Checks before you hand it over
 
 - The launch price is compared with live alternatives, with dates.
 - Exactly one perk is chosen, with its contribution per order and break-even ROAS.
+- For a pre-order, the perk type matches the time to delivery (gift when three or more weeks out).
 - The end date, cap and full-price-day switch are written down.
 - Every scarcity or "first batch" claim can be proven with stock records.
 - Stock covers the cap, and restock timing is stated.
@@ -124,7 +127,7 @@ Pick the perk with the best contribution per order that still answers the barrie
 | Field | Value |
 |---|---|
 | Product and variant | |
-| Full price (net of GST or before sales tax) | |
+| Full price (net of VAT or before sales tax) | |
 | Launch price | |
 | Perk and its real price or cost | |
 | Who qualifies | |
@@ -143,6 +146,7 @@ Pick the perk with the best contribution per order that still answers the barrie
 
 - **Launching high, then "discounting to normal".** Step 2 fixes the everyday price first.
 - **Stacking perks.** Step 3 allows one.
+- **A discount on a pre-order that ships in two months.** Step 3 prefers a gift that far out.
 - **Fake scarcity.** The gates and step 5 tie every cap to stock records.
 - **Discount that never ends.** Step 5 sets the switch date and step 6 checks it happened everywhere.
 - **Reading a weak full-price week as "needs another sale".** Step 6 asks whether price or proof is the gap.
@@ -161,3 +165,10 @@ Pick the perk with the best contribution per order that still answers the barrie
 - ADC-6147, OFF-6145, OFF-6500: false urgency, genuine former prices, free-offer terms.
 
 What makes this skill ours: the price is tested against what a store with no reviews can defend before any perk is chosen; the perk is picked by the barrier stopping the first buyer and by what it teaches buyers, not by habit; one perk only, with a written full-price-day switch; and every cap and end date must be provable from stock records.
+
+## Selling in India
+
+- Offer the launch perk on prepaid orders, or add a small COD fee shown on the product page, to protect a new product against RTO.
+- Never show a launch price against an MRP the product was never sold at.
+- False urgency and unprovable limited-stock claims are misleading under the ASCI rules [ADC-6147].
+- Launching in Diwali or another festival week means competing with deep discounts; a gift or early access usually reads better.

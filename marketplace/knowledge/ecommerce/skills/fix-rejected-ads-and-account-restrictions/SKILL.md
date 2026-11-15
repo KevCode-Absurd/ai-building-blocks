@@ -1,6 +1,6 @@
 ---
 name: fix-rejected-ads-and-account-restrictions
-description: "A fix sheet for every rejected Meta ad and every restricted ad account, Page or business portfolio: what was hit and where, the most likely cause traced to the exact line, image or landing page, the fix or the decision to ask for another review, a short factual appeal text ready to paste into Account Quality, and the change to every similar ad and to the pre-launch check so it does not happen again. Never gets around a restriction with new accounts. Covers the personal attributes rule that rejects most health and beauty hooks, landing page problems, India and US claim rules. Use the day an ad is rejected or an account is restricted."
+description: "A fix sheet for every rejected Meta ad and every restricted ad account, Page or business portfolio: what was hit and where, the most likely cause traced to the exact line, image or landing page, the fix or the decision to ask for another review, a short factual appeal text ready to paste into Account Quality, and the change to every similar ad and to the pre-launch check so it does not happen again. Never gets around a restriction with new accounts. Covers the personal attributes rule that rejects most health and beauty hooks, landing page problems, and claim rules in the US, UK, EU and other markets. Use the day an ad is rejected or an account is restricted."
 ---
 
 # Fix rejected ads and account restrictions
@@ -100,9 +100,9 @@ Search the full export for the same pattern (for example "your", "you have", "ar
 - If ads are approved but delivery is capped by the number of ads a Page can run, that is a limit, not a policy problem; add Pages ahead of heavy launches [ADC-0045].
 - For stores at high spend, a second ad account in the same verified business keeps sales going during a review; one practitioner keeps about 10% of spend on one above 250,000 a month [ADC-0038]. This is for continuity, never for dodging a restriction.
 
-### 7. India and US notes
+### 7. Market notes
 
-- **India:** ASCI's code requires claims to be truthful and backed by evidence, and health product claims face extra law; avoid "cure" and disease words for supplements and cosmetics. Regional-language ads are reviewed too; translate the fix into each language version.
+- **UK, EU and other markets:** the UK CAP code (enforced by the ASA) and EU consumer rules require claims to be truthful and backed by evidence, and health product claims face extra law; avoid "cure" and disease words for supplements and cosmetics. Other markets have their own ad codes; check the one for each country you sell in. Ads in other languages are reviewed too; translate the fix into each language version.
 - **US:** the FTC expects claims to be backed before they run, and endorsements to be real and disclosed. A rejected testimonial ad is a prompt to check the testimonial is genuine and permitted.
 
 ## Checks before you hand it over
@@ -145,3 +145,8 @@ Search the full export for the same pattern (for example "your", "you have", "ar
 - SEC-6084: two-factor setting and business admins (proposed card).
 
 What makes this skill ours: each rejection is traced to the exact line, image or page before anyone resubmits; the fix sweeps every similar live and draft ad, not just the one Meta caught; appeals are short factual templates the client approves; and restrictions are never dodged with new accounts.
+
+## Selling in India
+
+- ASCI's code requires claims to be truthful and backed by evidence, and health product claims face extra law (such as the Drugs and Magic Remedies Act); avoid "cure" and disease words for supplements and cosmetics.
+- Regional-language ads are reviewed too; translate the fix into each language version.

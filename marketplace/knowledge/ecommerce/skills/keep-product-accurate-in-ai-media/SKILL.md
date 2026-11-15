@@ -45,7 +45,9 @@ Access: read only. Nothing is uploaded or published by this skill; a pass hands 
 
 ### 1. Build the truth card
 
-One page per product variant:
+**Admit only honest photos first.** Check each candidate reference photo at full size with three questions, and keep it only if all three are yes: is it this exact variant (not a sibling size, colour or flavour, a mock-up, a render or a generated picture); can you read the smallest word you will need; is the colour honest (even, neutral light, no filter, no coloured backdrop throwing colour onto the product)? A photo you would have to edit is out, except for cropping away a sticker or caption. One wrong photo leaks into every generated picture, so leave it out rather than keep it "for angles".
+
+One page per product variant, with a source tag on every line (the photo's file name, a brand fact, or `MISSING`):
 
 - Three to five reference photos.
 - Size, with a common object for scale (hand, phone, cup).
@@ -54,6 +56,15 @@ One page per product variant:
 - Parts count: buttons, straps, holes, compartments, pieces in a set.
 - Label text transcribed letter by letter, including small print, and logo position.
 - Must-never-show list: old packaging, discontinued colours, features it does not have.
+- Identity: what tells this variant apart from its siblings, and the look-alike a model tends to draw instead ("not a jar", "not glossy", "not a round lid").
+- Build: how the parts meet where a close shot would show it, where it opens, the closure, and what comes in one order.
+- Use: the steps, how much one use is, how it looks in use, and anything that changes with use (a candle's top, a pan's colour, a balm's surface).
+
+**Lock lines.** Pick the 3 to 5 visible details a model gets wrong first for this product and write each as one short phrase ("small flat green sachet, torn straight across the top"). Every prompt repeats them word for word, and every check in step 3 starts with them, because restating what must stay fixed is the cheapest guard against drift.
+
+**Blocked shots.** For each `MISSING` line, name the shots it blocks: no back photo blocks any turned or held shot that shows the back; no in-hand photo blocks scale shots. Then ask the owner for the one photo that unblocks the most shots, naming the angle, the background and why. A phone photo on a plain surface is fine.
+
+**Garments.** For clothing, AI images drift from how the garment really looks and fits, and return rates rise when buyers get something different [MCR-6833]. Use AI for scenes, props and backgrounds around real garment photos, never to generate the garment itself on a model. More generally, generate the parts of an ad around the real product (the scene, a hand holding it) rather than the whole ad, since full AI ads still come out with garbled text and changed products [MCR-6732].
 
 ### 2. Sample the frames
 
@@ -72,7 +83,7 @@ One page per product variant:
 | 6 | Label and printed text | Any letter added, missing, changed or blurred into fake text |
 | 7 | Parts count | Extra or missing parts, buttons, straps or pieces |
 | 8 | Variant | Not the colour or size the ad, offer and landing page sell |
-| 9 | Invented claims | Seals, badges, awards, ratings, certifications, prices or MRP that the store did not supply |
+| 9 | Invented claims | Seals, badges, awards, ratings, certifications, prices or printed price marks that the store did not supply |
 | 10 | Physics and hands | Liquid, steam, shadows or hands behave impossibly; fingers wrong |
 | 11 | People | Unconsented likeness, a person shown as a customer, or a person who looks like a real public figure |
 | 12 | Context | The product shown doing something it cannot do, or used unsafely |
@@ -107,13 +118,15 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 
 ### 8. Market notes
 
-- **India:** the MRP and maker label on packaged goods must show correctly if visible; never let a generator draw an MRP or price. Packaging in regional languages is checked letter by letter by someone who reads that script.
+- **Packaged goods (all markets):** any printed price, maker label or required pack label must show correctly if visible; never let a generator draw a price. Packaging in other languages or scripts is checked letter by letter by someone who reads that script. In the UK and EU, a generated image must not change or invent required marks such as CE or allergen labels.
 - **US:** an image or clip that shows the product better than it is can be a misleading ad; ratings and reviews shown must be real.
 - **Marketplaces and Shopping feeds:** many require that main images show the actual product; use real photos for main images and keep generated scenes for secondary slots.
 
 ## Checks before you hand it over
 
 - A truth card exists for the exact variant in the asset.
+- Every reference photo passed the three admission questions, and every truth card line has a source or `MISSING`.
+- The lock lines appear word for word in every prompt used for the asset.
 - Video frames were sampled by the rule, including every frame where the product moves.
 - All twelve checks have a result per asset.
 - No asset with a block defect is marked pass.
@@ -126,7 +139,7 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 
 **One-screen summary:** assets checked, passed, fixed, blocked; the most common defect; prompts retired; what is ready for launch.
 
-**Truth card:** Product, Variant, Reference photos, Size and scale object, Colours (name and value), Finish, Parts count, Label text, Logo position, Never show.
+**Truth card:** Product, Variant, Reference photos (kept and rejected, with reasons), Identity and look-alike, Size and scale object, Colours (name and value), Finish, Parts count, Build, Use, Label text, Logo position, Never show, Lock lines, Blocked shots and the one photo to take next. Each line carries its source.
 
 **Check sheet per asset:**
 
@@ -145,6 +158,8 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 - **Checking on a laptop only.** Step 6 checks at phone size too.
 - **One reviewer who made it.** Step 6 adds fresh eyes.
 - **Reusing a prompt that drifted.** Step 7 retires it.
+- **Keeping a sibling variant's photo "for angles".** Step 1 admits only photos of the exact variant.
+- **Generating a garment on a model.** Step 1 keeps garments real and uses AI only around them.
 
 ## Sources
 
@@ -153,5 +168,11 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 - MCR-6063: Meta's AI info label and self-disclosure.
 - MCR-6064: which synthetic content needs disclosure.
 - MEA-0037: gross margin uses delivered cost.
+- MCR-6833: AI garment images drift and raise returns in fashion.
+- MCR-6732: use AI image generation for parts of an ad around the real product, since full AI ads still garble text and products.
 
 What makes this skill ours: video is checked by a fixed frame rule that catches mid-motion drift; generated seals, ratings and prices are treated as false claims, not design flaws; each defect has the cheapest repair route, usually putting the real product or real text back in; and drifting prompts are retired so the same mistake is not paid for twice.
+
+## Selling in India
+
+- The MRP and maker label on packaged goods must show correctly if visible; never let a generator draw an MRP.

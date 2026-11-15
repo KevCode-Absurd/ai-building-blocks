@@ -1,0 +1,681 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "snapchat-ads-media-buyer",
+  "reviewed": "2026-11-15",
+  "tasks": [
+    {
+      "id": "weekly-review",
+      "task": "Run the weekly account review and call each ad",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/weekly-review-routine",
+          "use": "brief",
+          "when": "Once a week on the same day, plus a quick mid-week look at spend, rejections and catalog sync"
+        },
+        {
+          "ref": "kit:skills/snapchat-creative-test-and-weekly-review",
+          "use": "build",
+          "when": "When the weekly export is in and each ad needs a pause, keep or scale call"
+        },
+        {
+          "ref": "library:creative-test-reader",
+          "type": "skill",
+          "use": "check",
+          "when": "When test numbers are small, to check each call against sample size and the kill rule"
+        },
+        {
+          "ref": "library:platform-roas-reality-check",
+          "type": "skill",
+          "use": "check",
+          "when": "When Snapchat reports a high return on its 28-day window, to test it against the shop's own totals"
+        },
+        {
+          "ref": "library:ad-spend-analyst",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you want a second read of where the week's spend went and what it bought"
+        }
+      ]
+    },
+    {
+      "id": "campaign-plan",
+      "task": "Plan a Snapchat campaign with a test and a scale phase",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:skills/snapchat-campaign-plan",
+          "use": "build",
+          "when": "When a client needs the objective, bid strategy, budgets and rules for test and scale"
+        },
+        {
+          "ref": "library:break-even-roas-and-cpa-calculator",
+          "type": "skill",
+          "use": "brief",
+          "when": "Before any budget is set, to work out the cost per order the margin can bear"
+        },
+        {
+          "ref": "library:ad-test-budget-calculator",
+          "type": "skill",
+          "use": "build",
+          "when": "When you need the test budget, the days to run and the keep or cut rule"
+        },
+        {
+          "ref": "library:creative-volume-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When the plan must say how many new ads are needed each week"
+        },
+        {
+          "ref": "library:channel-budget-mix-planner",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the client asks how much of the total budget Snapchat should get next to Meta, Google or TikTok"
+        },
+        {
+          "ref": "library:claude-hopkins",
+          "type": "mind",
+          "use": "think",
+          "when": "When the plan bets big on a guess, to shrink it to a small test that proves the claim"
+        },
+        {
+          "ref": "library:two-plan-shapes",
+          "type": "skill",
+          "use": "explore",
+          "when": "Before the plan is agreed, to compare two plans that split the budget between testing and scaling differently"
+        }
+      ]
+    },
+    {
+      "id": "account-intake",
+      "task": "Run new client intake before touching Ads Manager",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:prompts/account-intake",
+          "use": "build",
+          "when": "In the first conversation, to collect the facts every later decision depends on"
+        },
+        {
+          "ref": "library:product-context-builder",
+          "type": "skill",
+          "use": "build",
+          "when": "When product facts are scattered, to put them in one file every later step reads"
+        },
+        {
+          "ref": "library:break-even-roas-and-cpa-calculator",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the client has no target cost, to work one out from price and margin"
+        }
+      ]
+    },
+    {
+      "id": "campaign-launch",
+      "task": "Launch a first campaign or rebuild after costs climbed",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:workflows/campaign-launch",
+          "use": "build",
+          "when": "For a first campaign, a new product or market, or a rebuild after costs climbed"
+        },
+        {
+          "ref": "kit:prompts/change-request-for-approval",
+          "use": "build",
+          "when": "Before launch, to get the client's yes to the one-time action list"
+        },
+        {
+          "ref": "kit:prompts/ad-rules-and-age-check",
+          "use": "check",
+          "when": "When ads are built, to catch age, claim, disclosure and safe-zone issues before Snap's review"
+        },
+        {
+          "ref": "library:pre-launch-ad-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When ads are loaded, to find issues against the approved facts and audience"
+        }
+      ]
+    },
+    {
+      "id": "tracking-setup",
+      "task": "Set up and check the Snap Pixel and Conversions API",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:skills/snap-pixel-capi-and-catalog-check",
+          "use": "build",
+          "when": "Before a first Sales campaign, or when Snap and the shop disagree on purchases"
+        },
+        {
+          "ref": "library:conversion-tracking-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When sales from ads are missing or doubled and the repair needs a full plan"
+        },
+        {
+          "ref": "library:monthly-tracking-health-keeper",
+          "type": "agent",
+          "use": "check",
+          "when": "Each month, to catch tracking that broke after a site or checkout change"
+        },
+        {
+          "ref": "library:india-data-privacy-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before server events or customer lists for Indian shoppers go to Snap, to check consent and notices"
+        }
+      ]
+    },
+    {
+      "id": "catalog-dynamic-ads",
+      "task": "Get the catalog ready and run Dynamic Ads",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:skills/snap-pixel-capi-and-catalog-check",
+          "use": "check",
+          "when": "When Dynamic Ads will not deliver, to check required fields and the Pixel to catalog match"
+        },
+        {
+          "ref": "library:monthly-catalogue-clean-up-keeper",
+          "type": "agent",
+          "use": "check",
+          "when": "Each month, to find product data gaps before they knock items out of ads"
+        },
+        {
+          "ref": "library:shopping-feed-title-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When feed titles are vague and Dynamic Ads show unclear product names"
+        },
+        {
+          "ref": "library:retargeting-ad-sequence-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When viewers and cart adders need a planned sequence next to Dynamic Ads"
+        },
+        {
+          "ref": "library:buyer-can-act-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Before Dynamic Ads scale, to confirm the top products are in stock at the stated price"
+        }
+      ]
+    },
+    {
+      "id": "creative-test-matrix",
+      "task": "Plan the next round of creative and format tests",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:prompts/creative-test-matrix",
+          "use": "build",
+          "when": "When each test must change one thing and have a kill rule before it starts"
+        },
+        {
+          "ref": "kit:skills/snapchat-creative-test-and-weekly-review",
+          "use": "build",
+          "when": "When tests need named concepts, a dated log and rules set before launch"
+        },
+        {
+          "ref": "library:short-video-hook-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you want ten more openings for full-screen vertical video"
+        },
+        {
+          "ref": "library:five-tactic-ad-hook-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you need openings from five different tactics, ranked by buyer fit and proof"
+        },
+        {
+          "ref": "library:video-hook-scorer",
+          "type": "skill",
+          "use": "check",
+          "when": "Before filming, to score each opening for this audience and rewrite the weak ones"
+        },
+        {
+          "ref": "library:ad-sameness-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When a batch is ready, to catch concepts that look and sound like the same ad"
+        }
+      ]
+    },
+    {
+      "id": "creator-ad-script",
+      "task": "Write creator scripts and run Paid Partnership posts as ads",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "kit:prompts/creator-paid-partnership-script",
+          "use": "build",
+          "when": "When a creator needs a short script with the right disclosure for the US or India"
+        },
+        {
+          "ref": "library:five-part-creator-ad-script-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the script should follow five parts from hook to call to action with timings"
+        },
+        {
+          "ref": "library:selfie-style-ad-script",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you want a selfie-style version built on the buyer's main doubt to compare"
+        },
+        {
+          "ref": "library:creator-filming-brief-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the script is approved and the creator needs a filming brief and shoot order"
+        },
+        {
+          "ref": "library:creator-pay-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When you need a fair flat fee or a floor plus commission for one creator post"
+        },
+        {
+          "ref": "library:creator-audience-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before a deal, to check who the creator's audience is and whether it fits"
+        },
+        {
+          "ref": "kit:prompts/ad-rules-and-age-check",
+          "use": "check",
+          "when": "Before the post runs as an ad, to check claims, disclosure and age rules"
+        }
+      ]
+    },
+    {
+      "id": "concept-batch",
+      "task": "Develop a batch of ad concepts and angles",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:seven-bucket-ad-concept-brainstormer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you need concepts from seven different groups with the best eight ranked"
+        },
+        {
+          "ref": "library:ad-angle-multiplier",
+          "type": "skill",
+          "use": "explore",
+          "when": "When one idea works and you want 10 to 15 other angles on it with openings"
+        },
+        {
+          "ref": "library:ad-concept-matrix-builder",
+          "type": "skill",
+          "use": "brief",
+          "when": "When you have reviews, to map personas, angles and offers in the order to test"
+        },
+        {
+          "ref": "library:make-ad-concept-spread",
+          "type": "skill",
+          "use": "explore",
+          "when": "When a new batch is due, to write nine or more one-line concepts across promises, proofs and formats"
+        },
+        {
+          "ref": "kit:prompts/creative-test-matrix",
+          "use": "check",
+          "when": "When concepts are chosen, to check each test changes one thing and has a kill rule"
+        },
+        {
+          "ref": "library:luke-sullivan",
+          "type": "mind",
+          "use": "think",
+          "when": "When every concept is a feature list, to find one true, simple idea"
+        }
+      ]
+    },
+    {
+      "id": "image-and-collection-ads",
+      "task": "Make single image, Story and Collection ads",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:single-image-ad-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When a full-screen image ad needs one clear message and layout"
+        },
+        {
+          "ref": "library:image-ad-copy-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the brand name, headline and on-screen words need writing to the character limits"
+        },
+        {
+          "ref": "library:customer-quote-image-ad",
+          "type": "skill",
+          "use": "explore",
+          "when": "When reviews are strong, to try an image ad built on a customer's own words"
+        },
+        {
+          "ref": "library:ad-reading-flow-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before upload, to check the eye lands on the message and nothing sits under the app's buttons"
+        }
+      ]
+    },
+    {
+      "id": "creative-refresh",
+      "task": "Catch tired ads early and refresh the winners",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:ad-fatigue-watcher",
+          "type": "agent",
+          "use": "check",
+          "when": "Twice a week, to catch ads that are tiring before costs climb"
+        },
+        {
+          "ref": "library:fatigued-ad-reviver",
+          "type": "skill",
+          "use": "build",
+          "when": "When a winner is fading and you need the cause and ranked ways to revive it"
+        },
+        {
+          "ref": "library:tired-ad-hook-refresher",
+          "type": "prompt",
+          "use": "explore",
+          "when": "When the body still works and only the opening is worn out, to get ten new ones"
+        },
+        {
+          "ref": "library:winning-ad-variant-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When a winner should be rewritten for each top customer group in the same voice"
+        },
+        {
+          "ref": "library:weekly-video-ad-batch-maker",
+          "type": "agent",
+          "use": "build",
+          "when": "Each week, to turn last week's results into a checked batch of new scripts"
+        }
+      ]
+    },
+    {
+      "id": "scale-and-budget",
+      "task": "Move budget to what sells and scale safely",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:skills/snapchat-campaign-plan",
+          "use": "brief",
+          "when": "When a test has winners and the scale rules in the plan decide the next step"
+        },
+        {
+          "ref": "kit:prompts/change-request-for-approval",
+          "use": "build",
+          "when": "When a budget rise, a bid change or a new campaign needs the client's yes first"
+        },
+        {
+          "ref": "library:creative-test-reader",
+          "type": "skill",
+          "use": "check",
+          "when": "Before scaling, to check the winner is real and not a small-sample fluke"
+        },
+        {
+          "ref": "library:holdout-test-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When spend is large enough to ask whether Snapchat sales would have happened anyway"
+        },
+        {
+          "ref": "library:incrementality-test-planner",
+          "type": "skill",
+          "use": "explore",
+          "when": "When you want a second lift test design to compare with the holdout plan"
+        },
+        {
+          "ref": "library:nassim-taleb",
+          "type": "mind",
+          "use": "think",
+          "when": "When the plan doubles spend at once, to ask what a bad week would cost"
+        },
+        {
+          "ref": "library:buyer-can-act-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Before spend is raised, to confirm the winning product still has stock and the same price"
+        }
+      ]
+    },
+    {
+      "id": "ad-rules-check",
+      "task": "Check ads against Snap's policies, age floors and teen rules",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/ad-rules-and-age-check",
+          "use": "check",
+          "when": "Before any ad launches, to catch claim, age, teen, disclosure and safe-zone issues"
+        },
+        {
+          "ref": "library:ad-and-page-policy-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When the ad and its page both need a line-by-line policy check with safer rewrites"
+        },
+        {
+          "ref": "library:marketing-claims-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When a script has many claims, to sort each as fine, needs proof or cut"
+        }
+      ]
+    },
+    {
+      "id": "change-request",
+      "task": "Write a change request for the client to approve",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:prompts/change-request-for-approval",
+          "use": "build",
+          "when": "Whenever a change needs the client's yes or sits outside the agreed limits"
+        },
+        {
+          "ref": "library:ad-performance-diagnoser",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the request must show the bottleneck and its cause in the numbers"
+        },
+        {
+          "ref": "library:ad-dashboard-reader",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the client needs each metric explained before they can say yes"
+        }
+      ]
+    },
+    {
+      "id": "account-audit",
+      "task": "Audit an existing Snapchat ad account",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:skills/snap-pixel-capi-and-catalog-check",
+          "use": "build",
+          "when": "First, because every other finding depends on the purchase counts being right"
+        },
+        {
+          "ref": "library:six-pattern-ad-performance-diagnoser",
+          "type": "skill",
+          "use": "check",
+          "when": "When results changed, to test six possible causes against the account's own past"
+        },
+        {
+          "ref": "library:ad-performance-diagnoser",
+          "type": "skill",
+          "use": "build",
+          "when": "When one campaign underperforms and you need the main bottleneck named"
+        },
+        {
+          "ref": "kit:workflows/weekly-review-routine",
+          "use": "brief",
+          "when": "After the audit, to set the weekly routine that keeps the fixes in place"
+        }
+      ]
+    },
+    {
+      "id": "video-ad-edit",
+      "task": "Plan the edit, captions and on-screen text for video ads",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:video-ad-edit-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "When you have clips and a script and need a timed cut list and caption windows"
+        },
+        {
+          "ref": "library:video-ad-text-overlays",
+          "type": "skill",
+          "use": "build",
+          "when": "When on-screen words must be timed and kept clear of the app's buttons"
+        },
+        {
+          "ref": "library:cut-caption-and-check-a-video-ad-before-launch",
+          "type": "workflow",
+          "use": "check",
+          "when": "Before upload, to run the cut, the captions and a launch check in one pass"
+        },
+        {
+          "ref": "library:capcut",
+          "type": "tool",
+          "use": "build",
+          "when": "When the cut, captions and resize to 1080 x 1920 are done on a phone or in a browser"
+        }
+      ]
+    },
+    {
+      "id": "competitor-ad-research",
+      "task": "Study rival ads and what is working in the category",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "library:competitor-ad-teardown-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When you need a report on rivals' public ads and the pages they send people to"
+        },
+        {
+          "ref": "library:winning-ad-dna-mapper",
+          "type": "skill",
+          "use": "build",
+          "when": "When you have winning ads and want each split into its message and its look"
+        }
+      ]
+    },
+    {
+      "id": "landing-page-match",
+      "task": "Check the page each ad sends people to",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "library:ad-and-page-match-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When an ad gets swipes but few sales, to score how well the page matches it"
+        },
+        {
+          "ref": "library:ad-matched-landing-page-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the page does not carry on from the ad and needs new copy that does"
+        }
+      ]
+    },
+    {
+      "id": "client-report",
+      "task": "Write the monthly results report for the client",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:skills/snapchat-creative-test-and-weekly-review",
+          "use": "brief",
+          "when": "When the report should draw on the dated test log and the weekly calls"
+        },
+        {
+          "ref": "library:ad-results-report-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the client needs results, wins, misses and what changes next in one report"
+        },
+        {
+          "ref": "library:attribution-model-chooser",
+          "type": "skill",
+          "use": "check",
+          "when": "When the client compares Snapchat's 28-day window with other channels and needs a fair basis"
+        },
+        {
+          "ref": "library:platform-roas-reality-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Before a return figure goes in the report, to test it against real sales"
+        }
+      ]
+    }
+  ],
+  "always": [
+    {
+      "ref": "library:claim-fact-checker",
+      "type": "skill",
+      "use": "check",
+      "when": "When a script or report states a number or result you cannot trace to the client"
+    },
+    {
+      "ref": "library:doc-typo-and-term-checker",
+      "type": "prompt",
+      "use": "check",
+      "when": "Before a brief, script or report is sent, to catch typos and names spelt two ways"
+    }
+  ],
+  "helpers": [
+    {
+      "role": "ad-creative-strategist",
+      "when": "When the account needs a deeper bank of concepts and a creative plan for months"
+    },
+    {
+      "role": "video-editor",
+      "when": "When raw creator footage needs cutting into several finished 9:16 versions"
+    },
+    {
+      "role": "affiliate-influencer-manager",
+      "when": "When creator work needs contracts, rates and a tracked programme"
+    },
+    {
+      "role": "shopify-specialist",
+      "when": "When the Snapchat app, catalog sync or checkout events on Shopify need fixing"
+    },
+    {
+      "role": "cro-specialist",
+      "when": "When ads get swipes but the landing page or checkout loses the sale"
+    },
+    {
+      "role": "compliance-specialist",
+      "when": "When age-restricted products or privacy laws where you sell (GDPR, US state laws, India DPDP) need an expert read"
+    }
+  ],
+  "gaps": [
+    "No library item sets up the Snap Pixel and Conversions API step by step; the tracking items cover GA4, Meta and Google, so the kit skill carries it",
+    "No library item checks a Snap catalog against Dynamic Ads needs; the catalog items are written for Google Merchant Center and Shopify",
+    "No library item plans Story Ads, Collection Ads or Sponsored Snaps as formats; the creative items assume single videos or images",
+    "No library item plans or briefs AR Lens campaigns or Lens Web Builder work",
+    "No library item checks ads against Snap's own policies and age floors by country and state; only the kit prompt does",
+    "No library item explains Snapchat's 28-day swipe window and late conversions when reports are compared with other channels",
+    "No library item covers Snapchat creator Paid Partnership tagging and permission levels; only the kit does",
+    "No library item plans Snapchat app install or lead campaigns",
+    "No library item runs a new client intake for a Snapchat ad account; only the kit prompt does",
+    "No library item checks ASCI disclosure labels for Indian creator ads"
+  ]
+}

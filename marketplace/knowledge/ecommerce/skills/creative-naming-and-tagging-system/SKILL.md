@@ -59,7 +59,7 @@ For each field, 4 to 12 short codes in capitals with a one-line definition. Exam
 | Hook | Q (question), STAT (number), DEMO, CALL (call-out), STORY | the opening type |
 | Creator | CR01 to CR99 | number from the creator list |
 | Offer | NONE, BNDL3, GWP, FSHIP, LAUNCH | live offers only |
-| Language | EN, HI, TA, BN | India stores need this |
+| Language | EN, ES, FR, DE, PT, AR (two-letter ISO codes) | stores that sell in more than one language need this |
 
 No "OTHER" code. A new code needs the owner's yes and a definition.
 
@@ -135,4 +135,4 @@ Apply the rule to every new ad from the next batch. Rename old ads only if the c
 - MCR-0051: tag every ad on the same fields.
 - MCR-0078: near-duplicates are grouped.
 
-What makes this skill ours: the concept ID ties each ad to its brief and result; names are checked by a formula, not by memory; the ad name travels into Shopify orders through UTMs so tags can be read on store gross profit, not platform return; language and AI use are fields, which Indian stores and disclosure rules need; and a light version exists for small stores where full tagging would be noise.
+What makes this skill ours: the concept ID ties each ad to its brief and result; names are checked by a formula, not by memory; the ad name travels into Shopify orders through UTMs so tags can be read on store gross profit, not platform return; language and AI use are fields, which stores selling in more than one language and disclosure rules need; and a light version exists for small stores where full tagging would be noise.

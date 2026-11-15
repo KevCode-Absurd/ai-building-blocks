@@ -1,7 +1,7 @@
 import type { Persona, TeamSeatType } from "../../core/types.ts";
 import {qualityMethodMarkdown} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
-import { generalCoordinatorMarkdown, MAX_SEAT_BYTES, personaTeam, roleSeatMarkdown, seatBriefMarkdown, seatPlaybook, TEAM_SEAT_TYPES, teamMarkdown, type SeatRequest } from "../directory/team.ts";
+import { generalCoordinatorMarkdown, HANDOVER, MAX_SEAT_BYTES, personaTeam, roleSeatMarkdown, seatBriefMarkdown, seatPlaybook, TEAM_SEAT_TYPES, teamMarkdown, type SeatRequest } from "../directory/team.ts";
 
 const SLUG = /^[a-z0-9][a-z0-9_-]{0,127}$/;
 const plain = (value: unknown): value is Record<string, unknown> => !!value && typeof value === "object" && !Array.isArray(value);
@@ -70,7 +70,7 @@ export function parseTeam(value: unknown): TeamInput {
 }
 
 const encoder = new TextEncoder();
-export interface TrimmedSeatPack { seat_id?: string; persona_id: string | null; persona_status: "MAPPED" | "NEUTRAL_COORDINATOR_ROLE" | "UNMAPPED_ROLE_ONLY"; role_id?: string; name: string; title: string; seat_type: TeamSeatType; seat_types: TeamSeatType[]; lens?: string; families?: string[]; toolbox: PinnedMethod[]; files: Record<string, string>; other_files: { path: string; purpose: string }[]; facets?: Persona["team"]; model_calls: 0; bytes: number; trimmed: string[]; review_context: string }
+export interface TrimmedSeatPack { seat_id?: string; persona_id: string | null; persona_status: "MAPPED" | "NEUTRAL_COORDINATOR_ROLE" | "UNMAPPED_ROLE_ONLY"; role_id?: string; name: string; title: string; seat_type: TeamSeatType; seat_types: TeamSeatType[]; lens?: string; families?: string[]; toolbox: PinnedMethod[]; files: Record<string, string>; other_files: { path: string; purpose: string }[]; facets?: Persona["team"]; handover: typeof HANDOVER; model_calls: 0; bytes: number; trimmed: string[]; review_context: string }
 
 /** Trim at UTF-8 boundaries and report every omission. Access and seat rules are never truncated. */
 function clip(value: string, bytes: number): { text: string; cut: boolean } {
@@ -79,13 +79,41 @@ function clip(value: string, bytes: number): { text: string; cut: boolean } {
   return { text: `${new TextDecoder("utf-8", { fatal: false }).decode(encoded.slice(0, bytes - 100)).replace(/\uFFFD$/, "")}\n[Excerpt cut here. Load the full file with get_agent_file.]`, cut: true };
 }
 
-/** Every seat grounds the job first: the outline is used when the pack's own WORK-METHOD.md is not passed. */
-export const SEAT_WORK_METHOD = "# Work method (v3.1)\n\nRead the full method at https://agents.useaiblocks.com/tools/quality/QUALITY-ENGINE-v3.md. Its family profiles and clarity floor govern generic defaults; truth, access and delivery gates always apply.\n0. Frame: write context/spec.md: reader, requested native artifact, counts, constraints, acceptance tests, mode and depth. Preserve explicitly requested template fields rather than inventing actuals.\n1. Ground: capture only what the acceptance tests depend on, each fact with source and date. Check the buyer can act and the core decision has a useful comparison and time span.\n2. Taste and tools: use the assigned expert and equipped toolbox, never job-time library search. Match the brand and channel where relevant.\n3. Diverge: expert and plain drafts at every depth; a creative alternative only at full depth, specialist parts only for mixed work. A fresh reviewer picks the clearest usable base.\n4. Build: new framing of true facts, never new facts. Deliver the artifact itself. Avoid unrequested packages, terms or test variables. Keep necessary setup separate.\n5. Check: verify claims, math, requested counts and fields, Markdown table widths and actual renders. A fresh anonymous final choice vetoes clarity below plain. Without a fresh reader, use plain plus necessary verified repairs and label SAME-CONTEXT.\n6. Hand over the native work first, with context only when needed; nothing internal reaches the client. Keep working notes private and learn only scoped, reviewed lessons.\n";
+/** Every seat grounds the job first: the outline is used when the pack's own METHOD.md is not passed (a role-only seat). */
+export const SEAT_WORK_METHOD = "# Method (outline)\n\nThe full method is METHOD.md in the lead agent's pack (load_agent, then get_agent_file with path METHOD.md): the hard rules, the depths, the step table and steps 0 to 6. Its family profiles (tools/quality/profiles.json) and clarity floor govern generic defaults; truth, access and delivery gates always apply.\n0. Frame and ask: run the readiness check, then write context/spec.md: who must do what after seeing it, the exact deliverables and limits, a signal pass (the signals that change the decision, as many as the data holds, or none), the mode and depth, and the rubric. Keep the fields a brief asks for in a template rather than inventing actuals.\n1. Ground: capture only what the signals and the decision depend on, each fact with source and date. Check the buyer can act and the core decision has a fair comparison and time span.\n2. Taste and tools: use the assigned expert and the equipped toolbox; never go looking outside the pack for new skills. Match the brand and channel where relevant.\n3. Diverge: expert and plain drafts at every depth; a creative draft only at full depth, specialist parts only at team depth. A fresh reviewer picks the clearest usable base.\n4. Build: new framing of true facts, never new facts. Deliver the artifact itself, decided, never a menu. Avoid unasked packages, terms or test variables. Keep needed setup apart.\n5. Check: run the checks on the actual files: claims, math, counts and fields, table widths and actual renders. A fresh anonymous final choice vetoes clarity below plain. Without a fresh reader, use plain plus checked repairs and label it SAME-CONTEXT.\n6. Hand over the native work first, with context only when needed; nothing internal reaches the client. Keep working notes private, write what the next job needs to context/MEMORY.md, and learn only scoped, reviewed lessons.\n";
+
+/** The parts of the method a seat always gets when the whole of it does not fit: the rules, the depths, the step table. */
+const METHOD_CORE = /^(# |## (Hard rules|Depth|The step table)\b)/;
+/** The steps each seat duty works in, sent with METHOD_CORE when the whole method does not fit the seat. */
+const DUTY_STEPS: Record<TeamSeatType, string[]> = {
+  coordinator: ["0", "6"], strategist: ["0", "3"], maker: ["3", "4"], mind: ["3"],
+  critic: ["5"], red_team: ["5"], fact_checker: ["5"], judge: ["5"],
+};
+const jsonBytes = (value: unknown) => encoder.encode(JSON.stringify(value)).length;
+
+/**
+ * The method a seat carries, in the room the seat has left: the whole method when it fits; otherwise its opening, the
+ * hard rules, the depths, the step table and the steps the seat's duties work in, each whole, with a line naming the
+ * steps left out and where to read them. Never cut mid-rule. `cut` is true when anything was left out.
+ */
+export function seatMethod(method: string, seat_types: TeamSeatType[], room: number): { text: string; cut: boolean } {
+  if (jsonBytes(method) <= room) return { text: method, cut: false };
+  const parts = method.split(/\n(?=## )/);
+  const steps = new Set(seat_types.flatMap(t => DUTY_STEPS[t] ?? []));
+  const kept: string[] = [], left: string[] = [];
+  for (const part of parts) {
+    const step = /^## (\d)\./.exec(part)?.[1];
+    if (METHOD_CORE.test(part) || (step && steps.has(step))) kept.push(part.trimEnd());
+    else left.push(part.split("\n", 1)[0].replace(/^## /, ""));
+  }
+  const note = `\n\n[This seat carries the rules, the depths, the step table and the steps its duty works in. Left out here: ${left.map(s => `"${s}"`).join(", ")}. Read the whole method with get_agent_file, path METHOD.md.]\n`;
+  return { text: `${kept.join("\n\n")}${note}`, cut: true };
+}
 
 export function trimmedSeatPack(persona: Persona | null, seat: SeatAssignment, soul: string, access: string, other_files: { path: string; purpose: string }[], work_method = ""): TrimmedSeatPack {
   const trimmed: string[] = [];
-  const files: Record<string, string> = {'QUALITY-METHOD.md':qualityMethodMarkdown(),'OUTPUT-POLICY.md':outputPolicyMarkdown()};
-  { const wm = clip(work_method || SEAT_WORK_METHOD, 8_000); files["WORK-METHOD.md"] = wm.text; if (wm.cut) trimmed.push("WORK-METHOD.md"); }
+  // METHOD.md is filled last, in the room the rest leaves, but keeps its place near the top of the seat.
+  const files: Record<string, string> = {'QUALITY-METHOD.md':qualityMethodMarkdown(),'OUTPUT-POLICY.md':outputPolicyMarkdown(),'METHOD.md':''};
   const seat_types = seat.seat_types ?? [seat.seat_type];
   const neutralCoordinator = !persona && seat.seat_type === "coordinator" && seat.role_id === "general-coordinator";
   if (!persona) {
@@ -107,10 +135,23 @@ export function trimmedSeatPack(persona: Persona | null, seat: SeatAssignment, s
     persona_status: persona ? "MAPPED" : neutralCoordinator ? "NEUTRAL_COORDINATOR_ROLE" : "UNMAPPED_ROLE_ONLY",
     ...(seat.role_id ? { role_id: seat.role_id } : {}), name: persona?.name ?? (neutralCoordinator ? "General coordinator" : "Role-only seat"), title: persona?.title ?? (neutralCoordinator ? "General coordinator" : seat.role_id!),
     seat_type: seat.seat_type, seat_types, toolbox: seat.toolbox ?? [], ...(seat.lens ? { lens: seat.lens } : {}), ...(seat.families ? { families: seat.families } : {}),
-    files, other_files: other_files.slice(0, 80), ...(persona ? { facets: personaTeam(persona) } : {}), model_calls: 0, bytes: 0, trimmed,
-    review_context: seat.seat_type === "judge" ? "Fresh context: job card, rubric, artifacts and producer notes only. Exclude the council and prior rankings." : "Use an isolated seat context when the host supports it.",
+    files, other_files: other_files.slice(0, 80), ...(persona ? { facets: personaTeam(persona) } : {}), handover: HANDOVER, model_calls: 0, bytes: 0, trimmed,
+    // Never claim isolation the host does not have: a review in the same context is labelled as such.
+    review_context: seat.seat_type === "judge" ? "Fresh context: job card, rubric, artifacts and producer notes only. Exclude the council and prior rankings. If the host cannot give a fresh context, label the review SAME-CONTEXT." : "Use an isolated seat context when the host supports it. If it cannot, label any review SAME-CONTEXT.",
   };
   if (other_files.length > 80) trimmed.push("other_files");
+  // The method whole when it fits, else its rules, depths, step table and this seat's steps (seatMethod).
+  // The rules come before the list of other files: when the method's rules and this seat's steps do not fit, the list
+  // (also in the pack's files.json) gets shorter first. The method is cut mid-text only as a last resort.
+  const room = () => MAX_SEAT_BYTES - jsonBytes({ ...result, bytes: MAX_SEAT_BYTES }) - 64;
+  let method = seatMethod(work_method || SEAT_WORK_METHOD, seat_types, room());
+  if (method.cut) trimmed.push("METHOD.md");
+  while (jsonBytes(method.text) > room() && result.other_files.length) {
+    result.other_files = result.other_files.slice(0, Math.floor(result.other_files.length * 0.8));
+    if (!trimmed.includes("other_files")) trimmed.push("other_files");
+  }
+  if (jsonBytes(method.text) > room()) method = clip(method.text, Math.max(2_000, room()));
+  files["METHOD.md"] = method.text;
   // A stable upper bound includes the bytes field itself, so even large family names cannot exceed it.
   result.bytes = encoder.encode(JSON.stringify({ ...result, bytes: MAX_SEAT_BYTES })).length;
   if (result.bytes > MAX_SEAT_BYTES) fail("This seat exceeds 60 KB. Reduce assigned families or linked files, then load it again.");

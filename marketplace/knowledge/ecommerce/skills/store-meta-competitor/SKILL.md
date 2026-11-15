@@ -62,6 +62,18 @@ Optional:
    - Launched in the last 14 days: what the rival is testing now, not proof.
    Discount run length when the ad is a brand or retargeting ad, or a catalog ad, which run for months without being cold winners [MCR-0034]. Some fashion brands rotate fast, with a median live ad age of 5 days at Alo [MCR-0065], so for them read the newest batch for direction instead. Ad count is not budget: near-copies are grouped by Meta and add no reach [MCR-0078], so count distinct concepts, not ads.
 
+   One agency's stricter filter for studying winners is ads live for at least 60 days, with several versions of one angle as the sign of scaling; beware libraries where every ad is old because the brand rarely launches [MCR-6758]. Even a true long runner proves only that it works for that brand, at that spend, with the belief buyers already hold in it; copied into a smaller store's account it usually will not [MCR-6682].
+
+3b. **Count the shape of each rival's account.** Counts beat impressions, because they show where a rival is thin. For each rival, with the sample size beside every share:
+   - **Unique ideas, not ads.** Sort every ad into pillars and count ideas once variants are removed. One audit found 86 ads holding only 39 ideas in 7 pillars [MCR-6634].
+   - **Awareness by the hook.** Label each hook's stage and check the spread, to see which stages the rival over- or under-weights [MCR-6635].
+   - **Brand-dependent hooks.** Count the share of hooks that only work if you already know the brand. One famous brand ran 96%, while brands built on Meta ran 3% to 18%; a high share means its ads are harvesting demand made elsewhere and are a poor model [MCR-6751].
+   - **Problem framing.** Count how often ads frame a problem at all. Brands that win cold buyers frame problems often; near zero marks a rival that is not chasing cold buyers, which is an opening [MCR-6747].
+   - **Offers and pages.** The share of ads that mention price, a discount, a guarantee or a bundle, and the share sent to each page type.
+   - **Script beats.** For transcribed videos, which of hook, problem, mechanism, proof, objection, offer, risk reversal and call to action appear; try-on hauls, for example, often carry only the hook and a light mechanism [MCR-6822]. Missing beats are gaps the store can fill.
+   - **Proof numbers.** Flag numbers that disagree across the rival's ads (two customer counts launched the same week) [MCR-6609]; never copy them.
+   Under about 20 ads, counts swing; say so next to each share.
+
 4. **Tag each long runner as a concept.** Concept = buyer × angle × offer × format [MCR-0009]. Add awareness stage (problem, solution, product) and proof type (review, demo, founder, expert, comparison). A new colour or background is the same concept [MCR-0022].
 
 5. **Price every rival offer against the store's money.** For each recurring offer (percent off, free gift, bundle, free shipping threshold), compute what it would do to the store's GPP and break-even ROAS. A 30% discount can triple break-even ROAS [OFF-0065]. Mark each offer "affordable", "affordable on a bundle only" or "not affordable". A rival with higher order value or repeat value can outbid the store with weaker ads [ADC-0057]; if so, the answer is a different buyer or a better bundle, not a price war.
@@ -77,6 +89,8 @@ Optional:
 
 9. **Turn gaps into test ideas, then rank them.** Each idea states the concept, the evidence (at least two pieces: a rival long runner, buyer words, a review theme or the store's own data), the landing page, the offer and its effect on GPP, and the test cost at 3 × target cost per purchase [ADC-0039]. Rank by expected gross profit: chance of a win × likely gain × GPP × traffic, minus build cost [CRO-0013]. Keep the top 5.
 
+9b. **Write each gap from the counts.** A gap is stronger when a count shows it: "0 of 42 ads frame a problem" beats "they seem brand-led". Put the count in the evidence column of each test idea.
+
 10. **Apply the no-copy rules.** Take structure, never surface: no rival words, images, footage, music, product names, trademarks or before-and-after claims. Any claim in a new idea needs the store's own proof. A rival's comparison to the store goes to the owner, not into an ad.
 
 ## Checks before you hand it over
@@ -88,6 +102,8 @@ Optional:
 5. Every test idea has two pieces of evidence, a landing page, a GPP check and a test cost.
 6. No idea reuses a rival's words, images, names or claims.
 7. The summary says what the Library cannot show (spend, results, targeting).
+8. Every share in the account-shape counts shows its sample size, and unique ideas are counted apart from ads.
+9. Rivals with a high share of brand-dependent hooks are marked as poor models for cold ads.
 
 ## Output
 
@@ -111,7 +127,7 @@ Optional:
 
 ## Sources
 
-ADC-0039: read at 3 × CPA; ADC-0057: unit economics set the bid; AVT-0007: paste exact review words; AVT-0014: unserved buyer beats mechanism; AVT-0016: self-identifying phrases mark segments; CRO-0013: rank by expected gross profit; LPG-0004: advertorial for complex products; LPG-0070: route traffic by buyer; MCR-0002: test an unclaimed buyer; MCR-0009: concept matrix; MCR-0022: colour change is not a concept; MCR-0034: study bigger brands' longest ads; MCR-0043: one ad per objection; MCR-0055: swipe formats outside the niche; MCR-0062: copied formats fade; MCR-0064: giants harvest outside demand; MCR-0065: some brands rotate fast; MCR-0078: near-copies grouped; OFF-0065: discount can triple break-even.
+ADC-0039: read at 3 × CPA; ADC-0057: unit economics set the bid; AVT-0007: paste exact review words; AVT-0014: unserved buyer beats mechanism; AVT-0016: self-identifying phrases mark segments; CRO-0013: rank by expected gross profit; LPG-0004: advertorial for complex products; LPG-0070: route traffic by buyer; MCR-0002: test an unclaimed buyer; MCR-0009: concept matrix; MCR-0022: colour change is not a concept; MCR-0034: study bigger brands' longest ads; MCR-0043: one ad per objection; MCR-0055: swipe formats outside the niche; MCR-0062: copied formats fade; MCR-0064: giants harvest outside demand; MCR-0065: some brands rotate fast; MCR-0078: near-copies grouped; OFF-0065: discount can triple break-even; MCR-6758: study ads live 60 days or more; MCR-6682: a rival's long runner leans on belief the store has not built; MCR-6634: count unique ideas by pillar, not ads; MCR-6635: classify hooks by awareness and check the spread; MCR-6751: count hooks that only work if you know the brand; MCR-6747: count how often ads frame a problem; MCR-6822: audit scripts against the eight beats; MCR-6609: proof numbers that disagree across ads.
 
 Coverage checked against the open-source meta-ads skill set (MIT), https://github.com/AI-Marketing-Hub/meta-ads.
 

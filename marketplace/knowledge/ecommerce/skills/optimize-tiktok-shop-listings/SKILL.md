@@ -16,7 +16,7 @@ description: "Rewritten TikTok Shop listings ready to upload: a search-led title
 
 ## Not for
 
-- Titles for the store, Google Shopping, Amazon and Indian marketplaces: use `write-product-titles-for-store-and-marketplaces`.
+- Titles for the store, Google Shopping, Amazon and other marketplaces: use `write-product-titles-for-store-and-marketplaces`.
 - Setting commission and samples in depth: use `tiktok-shop-creator-affiliate-outreach`.
 - Opening the shop: use `launch-tiktok-shop`.
 - Full product photo shoots: use `art-direct-product-photoshoot`.
@@ -94,10 +94,11 @@ In the affiliate center, creators compare commission, samples, ratings and sales
 - 3 demo clips and hooks in the brief so creators know how to film it.
 - Sales per 1,000 views of your top videos, shared with creators as the selling point; it is the number that predicts their earnings, and it varies more than 100 times between videos [MCR-0046].
 
-### 9. India and US notes
+### 9. Market notes
 
-- **India:** TikTok is not available in India; apply steps 2 to 7 to Instagram Shopping, Meesho, Flipkart and Amazon.in with `write-product-titles-for-store-and-marketplaces`.
+- **Where TikTok Shop does not run:** apply steps 2 to 7 to Instagram Shopping and the main marketplaces for the country (Amazon, Walmart, Etsy, eBay, Zalando, bol, Mercado Libre, as fits) with `write-product-titles-for-store-and-marketplaces`.
 - **US:** show prices in dollars, list sizes in US units first, and keep any "Made in" or material claims backed by documents.
+- **UK and EU:** show prices in the local currency with VAT included, list sizes in the units buyers use (metric first in the EU), and write listings in the languages your buyers use.
 
 ## Checks before you hand it over
 
@@ -154,3 +155,7 @@ In the affiliate center, creators compare commission, samples, ratings and sales
 - MCR-0046: sales per 1,000 views varies more than 100 times.
 
 What makes this skill ours: every price is checked for profit after TikTok's fees, commission and spread sample cost; listing rules are read in Seller Center on the day rather than copied from guides; one change per listing per week so results can be read; and the listing is optimised for creators in the affiliate center as well as for shoppers.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. TikTok is not available in India; apply steps 2 to 7 to Instagram Shopping, Meesho, Flipkart and Amazon.in with `write-product-titles-for-store-and-marketplaces`.

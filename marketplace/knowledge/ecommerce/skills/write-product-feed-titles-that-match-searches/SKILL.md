@@ -16,7 +16,7 @@ description: "Rewrites a store's Google Merchant Center feed titles and descript
 
 ## Not for
 
-- Titles for the store's own pages, Amazon or Indian marketplaces: use `write-product-titles-for-store-and-marketplaces`.
+- Titles for the store's own pages, Amazon, Walmart, Etsy or other marketplaces: use `write-product-titles-for-store-and-marketplaces`.
 - Disapproved products: fix them first with `fix-merchant-center-disapprovals`.
 - Choosing which products to push: use `google-shopping-product-tiers`.
 - SEO keyword mapping for collection pages: use `keyword-research-for-collections-and-products`.
@@ -52,12 +52,12 @@ Start with products that have impressions but a low click-through rate against t
 ### 2. Pull the buyer words
 
 From the search terms, keep queries with clicks or conversions and group them by product type. For each group, list:
-- **Product type words** buyers use (for example "kurta" versus "tunic", "water bottle" versus "flask").
+- **Product type words** buyers use (for example "jumper" versus "sweater", "water bottle" versus "flask").
 - **Attribute words**: material, colour, size, fit, capacity, pack count.
 - **Use and buyer words**: "for men", "for office", "for gym", "for kids".
 - **Words that never convert** (to keep out).
 
-India: keep the words buyers type, including Hinglish and transliterated terms ("cotton kurta for men", "steel bottle 1 litre"). Use regional-language words only where buyers really search them and the page shows them. US: include sizing systems and spelling buyers use (colour versus color follows the market).
+Every market: keep the words buyers type, including mixed-language and borrowed terms ("linen shirt for men", "steel bottle 1 litre"). Use words in other languages only where buyers really search them and the page shows them. US and UK: include sizing systems and spelling buyers use (colour versus color follows the market).
 
 Search terms reports show the words of shoppers who saw an ad, not everyone; check top groups against Keyword Planner volume before building a pattern on them.
 
@@ -67,7 +67,7 @@ Default order for generic or unbranded goods: product type, then the key attribu
 
 | Product type | Pattern | Example shape |
 |---|---|---|
-| Apparel, own brand | Type, material, fit, colour, size, brand | Men's linen kurta, regular fit, white, size M, Storename |
+| Apparel, own brand | Type, material, fit, colour, size, brand | Men's linen shirt, regular fit, white, size M, Storename |
 | Home goods | Type, material, size, feature, brand | Brass bedside table lamp, dimmable, touch control, Storename |
 | Consumables | Type, key benefit word only if allowed, size or count, brand | Green tea, 100 bags, Storename |
 | Known brand or model | Brand, model, type, key spec | Brand Model X wireless earbuds, 30 hour battery |
@@ -129,4 +129,8 @@ Keep the same order across the whole product type, so the pattern stays consiste
 - GAD-0044: lead with proven search terms, roll changes out gradually.
 - GAD-6123: Google's title length and content rules.
 
-What makes this skill ours: patterns come from the store's own converting search terms, checked against volume; changes ship as a supplemental feed so store pages stay written for people; the rollout is split in halves and judged on gross profit per product; and India's Hinglish and transliterated search words are kept where buyers really use them.
+What makes this skill ours: patterns come from the store's own converting search terms, checked against volume; changes ship as a supplemental feed so store pages stay written for people; the rollout is split in halves and judged on gross profit per product; and mixed-language and local search words are kept where buyers really use them.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Keep the words buyers type, including Hinglish and transliterated terms ("cotton kurta for men", "steel bottle 1 litre"). Use regional-language words only where buyers really search them and the page shows them. Titles for Indian marketplaces go to `write-product-titles-for-store-and-marketplaces`.

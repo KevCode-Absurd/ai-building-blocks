@@ -1,0 +1,174 @@
+{
+  "id": "meta-launch",
+  "kind": "continuation",
+  "name": "Launch signed-off creative on Meta",
+  "goal": "Signed-off videos or images become live Facebook and Instagram ads with matching copy, tracked links and a spend cap you approved, then get checked after launch and handed to the results loop.",
+  "starts_from": "A signed-off job from the video ad or image ad process. It keeps the same folder, so the script, files and reviews travel with it.",
+  "folder": "creatives",
+  "then": "results-loop",
+  "metrics": [
+    "The launch matches the approved plan exactly: names, budgets, end date, links and status.",
+    "Every ad passed Meta's review, or a rejection was handled within a day."
+  ],
+  "stages": [
+    {
+      "id": "ad-copy",
+      "name": "Ad copy for each creative",
+      "agent": "kofi-ad-copy",
+      "access": "draft",
+      "gate": "none",
+      "say": "Writes the primary text, headline and description for each signed-off creative, built from its script, its visuals and what past copy taught us. Gives two or three versions per creative, each inside Meta's length limits, plus the tracked link (UTMs) for each ad.",
+      "needs": [
+        "final/ and review.md from the creative job",
+        "script.md or image-copy.md",
+        "context/org-context/ voice and claims",
+        "context/learnings.md"
+      ],
+      "makes": [
+        "ad-copy.md",
+        "utm.md"
+      ],
+      "checks": [
+        "copy-lint",
+        "copy-review",
+        "compliance-review"
+      ],
+      "done_when": "Each creative has its copy versions and one tracked link, and every claim is proven."
+    },
+    {
+      "id": "structure",
+      "name": "Campaign structure and budget",
+      "agent": "lindsey-meta-media-buyer",
+      "access": "read",
+      "gate": "none",
+      "say": "Decides where the new ads go: a new campaign or a test inside an existing one, the ad set setup, the daily budget, the end date and the spend cap, using the account's own history and the money limits you set. Checks tracking health first; if tracking is broken it stops and says so.",
+      "needs": [
+        "ad-copy.md",
+        "context/limits.json",
+        "warehouse view ads_daily and context/tracking.md (the tracking audit from store setup)",
+        "context/experiments.md"
+      ],
+      "makes": [
+        "structure.md"
+      ],
+      "checks": [
+        "structure-review"
+      ],
+      "done_when": "structure.md gives the campaign and ad set choice, the daily budget in whole units, the end date, the spend cap, and the reason for each, inside your limits."
+    },
+    {
+      "id": "ad-pack",
+      "name": "Ad pack for approval",
+      "agent": "lerato-creative-producer",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Puts the final files, the copy, the links and the structure into one ad pack: a page in the job folder, copied to your shared Drive folder if you connected one, with a short note in your Slack channel if you set one up. If you work with a client, this is the pack they approve.",
+      "needs": [
+        "final/",
+        "ad-copy.md",
+        "utm.md",
+        "structure.md"
+      ],
+      "makes": [
+        "ad-pack.md"
+      ],
+      "checks": [
+        "pack-complete"
+      ],
+      "signoff": "You (or your client, through you) check the pack. Reply yes with the code to send it to the build step. Your Slack thumbs-up alone does not count; the yes must come from you in Claude, or on the approval page when hosted.",
+      "done_when": "ad-pack.md shows each ad with its file, copy, link, budget and dates on one page."
+    },
+    {
+      "id": "build",
+      "name": "Build the ads as drafts",
+      "agent": "dustin-ad-deployment",
+      "access": "publish",
+      "gate": "none",
+      "say": "Shows you a build plan, then on your yes uploads the files and creates the creative, campaign, ad set and ads in your ad account as drafts or paused, so nothing spends yet. Every campaign, ad set and ad name ends with the creative's job tag (its folder name, for example [job-0007]), so the data pipeline joins results to the creative and a retry can search for the tag first instead of making a copy. Then pulls a preview link for each ad.",
+      "needs": [
+        "ad-pack.md (signed off)",
+        "Meta ads connector at level 2 or 3"
+      ],
+      "makes": [
+        "previews.md"
+      ],
+      "publish": "Through the Meta ads connector: media uploads, plus a creative, campaign, ad set and ads created as drafts or paused. No money is spent at this stage.",
+      "done_when": "Every step of the build plan ran once and was read back, and previews.md lists a preview link for each ad.",
+      "requires_signed": [
+        "final/*"
+      ]
+    },
+    {
+      "id": "go-live",
+      "name": "Go live",
+      "agent": "dustin-ad-deployment",
+      "access": "publish",
+      "gate": "none",
+      "say": "Shows you the go-live plan: the exact objects to switch on, the total new daily spend, the end date and the cap, with the preview links. On your yes it switches them on, and only those.",
+      "needs": [
+        "previews.md",
+        "Meta ads connector at level 3"
+      ],
+      "makes": [
+        "launch-record.md"
+      ],
+      "publish": "Through the Meta ads connector: one activate step with the exact object ids. Money starts to be spent from this step.",
+      "done_when": "The activate step ran once, the objects read back as active or in review, and launch-record.md lists their ids, budgets and dates.",
+      "requires_signed": [
+        "final/*"
+      ]
+    },
+    {
+      "id": "verify",
+      "name": "Check after launch",
+      "agent": "lindsey-meta-media-buyer",
+      "access": "read",
+      "gate": "none",
+      "say": "Within a day of launch, reads every ad back: Meta's review result, delivery, spend against the cap, and any errors. Records the link between each ad id and its creative in the creative register, so results flow back to the right script and design. It adds its ads to register.json and never replaces lines another channel wrote.",
+      "needs": [
+        "launch-record.md",
+        "Meta ads connector (read)"
+      ],
+      "makes": [
+        "verify.md",
+        "register.json"
+      ],
+      "checks": [
+        "launch-verify"
+      ],
+      "done_when": "Every ad is active or its rejection is explained with a fix, and register.json maps each ad id to its creative and job."
+    }
+  ],
+  "checks": {
+    "copy-lint": {
+      "kind": "script",
+      "run": "node tools/quality/copy-check.cjs <folder>/ad-copy.md --limit \"Headline=40\" --limit \"Primary text=125\"",
+      "passes_when": "the copy checker exits 0"
+    },
+    "copy-review": {
+      "kind": "reviewer",
+      "agent": "howard-copy-chief",
+      "passes_when": "the copy carries the creative's message, opens with the buyer's problem or desire, and stays in the brand voice"
+    },
+    "compliance-review": {
+      "kind": "reviewer",
+      "agent": "meenakshi-compliance",
+      "passes_when": "no policy problems, no unproven claims, and no restricted wording for the product category"
+    },
+    "structure-review": {
+      "kind": "reviewer",
+      "agent": "meta-plan-reviewer",
+      "passes_when": "budgets are inside limits, each ad set can plausibly reach about 50 results a week or the reason is stated, and tracking was checked first"
+    },
+    "pack-complete": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "every ad in the pack has a file, copy, link, budget and dates, and nothing is missing from the signed-off creative job"
+    },
+    "launch-verify": {
+      "kind": "reviewer",
+      "agent": "dustin-ad-deployment",
+      "passes_when": "what is live matches the approved plans exactly, and every rejection has a cause and a fix"
+    }
+  }
+}

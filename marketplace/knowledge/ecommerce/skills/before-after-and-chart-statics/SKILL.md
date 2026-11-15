@@ -83,7 +83,7 @@ Objects and surfaces are safer than bodies. A stain, a pan, a car seat or a bath
 - Compare like with like: same size, same price point, same use.
 - Each row is a fact either side can check, with the source and date for the competitor's value. Re-check on the day before launch.
 - Generic "other brands" is safer than a named brand. Naming a competitor needs the full legal process in `comparison-ads-that-stay-legal`.
-- In India the ASCI Code (Chapter IV) allows comparisons only if they are factual, accurate, provable and do not unfairly denigrate the other product; the US expects the same truth and proof.
+- Most markets allow comparisons only if they are factual, accurate, provable and do not unfairly denigrate the other product: the US expects truth and proof, the UK CAP Code and the EU comparative advertising rules say the same.
 - Use ticks and crosses only for yes or no facts. Never a cross for "not as good".
 
 ### 6. Write the specs
@@ -94,10 +94,11 @@ For each ad: layout, headline (6 to 10 words, one idea), every on-image word, da
 
 Run each spec through `prelaunch-ad-check` and `check-ad-copy-for-policy-and-claims`. For weight-loss and cosmetic products, set 18+ targeting [MCR-6044]. Submit the main and backup versions as drafts; the client approves both before review.
 
-### India and US notes
+### Market notes
 
-- **India:** ASCI special care applies to products for perceived physical problems (height, baldness, weight); claims cannot go beyond what the product can do. Drugs and Magic Remedies Act rules bar some disease claims entirely; skip any medical framing. Show Indian test conditions (water hardness, climate) where they matter.
+- **All markets:** products for perceived physical problems (height, hair loss, weight) get special care under most ad codes; claims cannot go beyond what the product can do. Skip any medical framing unless the product is a licensed medicine. Show local test conditions (water hardness, climate) where they matter.
 - **US:** typical-results disclosure for standout results [MCR-6025]; for health claims, competent scientific evidence is expected; a single in-house test is a demonstration, not a clinical claim.
+- **UK and EU:** the ASA and national regulators expect before and after images to be real and unretouched, and weight-loss claims must follow the approved health claims rules.
 
 ## Checks before you hand it over
 
@@ -143,3 +144,9 @@ Run each spec through `prelaunch-ad-check` and `check-ad-copy-for-policy-and-cla
 - MEA-0037: gross margin is the delivered cost to the door.
 
 What makes this skill ours: every number or photo on the ad is traced to an evidence file and rewritten down to what that file says; objects are preferred over bodies to show the change; charts carry their sample and source on the ad itself; and every risky layout ships with a policy-safe backup so one rejection does not stop the launch.
+
+## Selling in India
+
+- The ASCI Code (Chapter IV) allows comparisons only if factual, accurate, provable and not unfairly denigrating.
+- ASCI special care applies to products for perceived physical problems such as height, baldness and weight.
+- Drugs and Magic Remedies Act rules bar some disease claims entirely.

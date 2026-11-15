@@ -4,6 +4,7 @@
 // /e-commerce page uses. No model, no network beyond the static asset.
 import type { Env } from "../../env.ts";
 import { CardIndex, type Card, type CardAnswer, type CardQuery, type Source, type Vertical } from "./cards.ts";
+import { SHELF_KINDS, SHELF_SCHEMA, ShelfSearch, type ShelfFile, type ShelfItem, type ShelfKind } from "./shelf.ts";
 
 export const VERTICAL_ID = /^[a-z][a-z0-9-]{1,39}$/;
 export const JURISDICTIONS = ["IN", "US", "UK", "EU"] as const;
@@ -30,7 +31,38 @@ export function verticalIndex(env: Env, id: string): Promise<{ file: IndexFile; 
 }
 
 /** Tests only. */
-export function forgetVerticals(): void { cache.clear(); }
+export function forgetVerticals(): void { cache.clear(); shelves.clear(); }
+
+// ---------- Shelves: the prompts, skills, tools and minds (shelf.ts) ----------
+
+export interface LoadedShelf { file: ShelfFile; search: Record<ShelfKind, ShelfSearch> }
+const shelves = new Map<string, Promise<LoadedShelf | null>>();
+
+/** The vertical's shelves (/packs/knowledge/<vertical>/shelf.json), or null when they are not built. */
+export function verticalShelf(env: Env, id: string): Promise<LoadedShelf | null> {
+  if (!VERTICAL_ID.test(id)) return Promise.resolve(null);
+  const hit = shelves.get(id);
+  if (hit) return hit;
+  const load = (async () => {
+    if (!env.ASSETS) return null;
+    const res = await env.ASSETS.fetch(new Request(new URL(`/packs/knowledge/${id}/shelf.json`, env.APP_ORIGIN)));
+    if (!res.ok || !(res.headers.get("content-type") ?? "").includes("json")) return null;
+    const file = await res.json() as ShelfFile;
+    if (file?.schema !== SHELF_SCHEMA) return null;
+    const search = Object.fromEntries(SHELF_KINDS.map(k => [k, new ShelfSearch(k, (file[k] ?? []) as ShelfItem[])])) as Record<ShelfKind, ShelfSearch>;
+    return { file, search };
+  })();
+  load.then(v => { if (!v) shelves.delete(id); }, () => shelves.delete(id));
+  shelves.set(id, load);
+  return load;
+}
+
+/** One item's full text from its built file, or null. */
+export async function shelfText(env: Env, path: string): Promise<string | null> {
+  if (!env.ASSETS || !/^\/packs\/knowledge\/[a-z0-9-]+\/[a-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
+  const res = await env.ASSETS.fetch(new Request(new URL(path, env.APP_ORIGIN)));
+  return res.ok ? res.text() : null;
+}
 
 /** Reads the query options from loose input (URL parameters or tool arguments), dropping anything not allowed. */
 export function cardQuery(v: Vertical, raw: Record<string, unknown>): CardQuery {

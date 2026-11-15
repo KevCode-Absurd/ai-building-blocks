@@ -75,7 +75,7 @@ Image rules change; open each channel's current help page and record the date. T
 
 - **Store product pages:** one square ratio across the catalogue looks tidiest; upload about 2,000 px wide and compress under 500 KB, ideally 100 to 200 KB, because Shopify only lightly compresses uploads [SPD-0008].
 - **Google Merchant Center:** the main image must show the real product, with no promotional text, watermarks or borders. Price, title and main image drive most Shopping results [GAD-0019]; in one agency's tests, soft lifestyle backgrounds beat plain white on click rate in visually similar categories, so treat white versus lifestyle as a test, not a rule (practitioner default, test it).
-- **Amazon (US and India):** the main image on a pure white background (RGB 255, 255, 255), the product filling about 85% of the frame, no text, badges or props not included in the sale; 1,000 px or more on the longest side turns on zoom. Secondary images may show use and scale.
+- **Amazon (every country):** the main image on a pure white background (RGB 255, 255, 255), the product filling about 85% of the frame, no text, badges or props not included in the sale; 1,000 px or more on the longest side turns on zoom. Secondary images may show use and scale.
 - **Meta catalogue:** square images, product clear, no added text for catalogue ads (practitioner default, test it).
 - **AI shopping feeds on Shopify:** products need a title, an image and a non-zero price to be eligible [AEO-0003].
 
@@ -121,9 +121,9 @@ Name each file `sku_variant_shot_background_ratio_YYYYMMDD.jpg`, for example `TE
 
 List per channel what to upload or replace, in the order of step 1 of the gates. Staging and publishing wait for the owner's yes.
 
-### India and similar markets
+### Other marketplaces and markets
 
-Marketplaces such as Amazon.in and Flipkart expect white main images and readable back labels; packaged goods also need the legally required label details visible in a secondary image (check the marketplace's current rule). Phone shoots in hard midday light give blown-out whites; shoot near a window in the morning or late afternoon.
+Marketplaces such as Walmart, eBay, Etsy, Zalando, bol and Mercado Libre each set their own main image rules (often a white or light plain background) and expect readable back labels; packaged goods also need the legally required label details visible in a secondary image (check the marketplace's current rule). Phone shoots in hard midday light give blown-out whites; shoot near a window in the morning or late afternoon.
 
 ## Checks before you hand it over
 
@@ -166,3 +166,7 @@ Marketplaces such as Amazon.in and Flipkart expect white main images and readabl
 Platform documentation: Google Merchant Center image requirements; Amazon product image requirements; Shopify product media guidance.
 
 What makes this skill ours: it decides the base set per sales channel instead of one generic shoot; it fills gaps in order of gross profit per purchase; it never lets a tool redraw the product and logs a five-point fidelity check for every file; and it leaves a named, registered library that later jobs reuse.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Amazon.in and Flipkart expect white main images and readable back labels, with the Legal Metrology label details visible in a secondary image for packaged goods (check the marketplace's current rule).

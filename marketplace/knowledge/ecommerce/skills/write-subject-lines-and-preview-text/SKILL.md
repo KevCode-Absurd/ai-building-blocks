@@ -101,7 +101,7 @@ Inbox filters weigh sender reputation and reader engagement far more than single
 
 ### 7. Market notes
 
-- **India:** English subjects by default; if the list has a regional language segment, write that segment's pairs in that language with the same honesty checks, never machine-translated without a native read. Show rupee amounts exactly as on site.
+- **Other languages:** subjects in the store's main language by default; if the list has a segment in another language, write that segment's pairs in that language with the same honesty checks, never machine-translated without a native read. Show amounts in the store's currency exactly as on site.
 - **US:** subject lines must match content [EML-6341]; the email must also say it is an ad and carry the postal address, which the body skill checks.
 
 ## Checks before you hand it over

@@ -46,7 +46,7 @@ Changes to the site need draft access (level 2); outreach, forum posts, PR and a
 
 ### 1. Baseline: what assistants say today
 
-Write 20 to 40 real buying questions for the store's best-profit products: "best X for Y", "X vs Y", "is [store] good", "where to buy X in India". Run each in ChatGPT (search on), Perplexity, Gemini, Copilot and Google (AI Overview or AI Mode), in a clean session, twice. Record: store named (yes or no), position, products named, description accuracy, rivals named, and every cited URL. Discount answers given without a web search, which show no citations [AEO-0015]. Assistants cite different sources [AEO-0012], so keep platforms separate.
+Write 20 to 40 real buying questions for the store's best-profit products: "best X for Y", "X vs Y", "is [store] good", "where to buy X in [country]". Run each in ChatGPT (search on), Perplexity, Gemini, Copilot and Google (AI Overview or AI Mode), in a clean session, twice. Record: store named (yes or no), position, products named, description accuracy, rivals named, and every cited URL. Discount answers given without a web search, which show no citations [AEO-0015]. Assistants cite different sources [AEO-0012], so keep platforms separate.
 
 ### 2. Found: let assistants in
 
@@ -73,6 +73,15 @@ Assistants recommend what many cited sources agree on; the store wins by being m
 - Forums: staff may answer real questions in buyer communities, saying plainly who they work for, comparing fairly with named rivals [AEO-0027]. No fake accounts, no vote buying.
 - Each assistant leans on different sources (forums matter more for ChatGPT; Google's AI follows search ranking) [AEO-0024], so pick the sources per platform from the baseline.
 
+Build the source work queue as one ranked sheet:
+
+- **Rank domains** by how many baseline questions cite them, then by how many assistants cite them. Mark rows that also sit in Google's top 10 for the same question; they count twice. One "best X" roundup cited on many questions beats ten blogs cited once [AEO-0001].
+- **Tier each source.** Tier 1 editorial (roundups, review sites, comparison posts, creator reviews); tier 2 community (Reddit, forums, Q and A); tier 3 the store's own channels (video, marketplace listings, guides). For physical products, expect lifestyle, home, parenting and review publishers more than tech sites, but trust the baseline.
+- **Opportunity tick.** Mark yes only when the site takes outside submissions, has a named editor or contact, or already lists stores like this one, and the store has a real product or fact to offer. Everything else is marked no and left alone, so effort goes where inclusion is possible.
+- **Price it honestly.** Record costs as quoted, example or unknown; count free product at landed cost against gross profit; any paid or affiliate inclusion is disclosed by the publisher. Never ask a direct rival to list the store; go to independent roundups and reviewers.
+- **Coverage marker.** Record the share of the top 10 cited sources that mention the store today. Practitioners use about 20% coverage as a rough sign that answers start to move; treat it as a marker to test, not a target to promise.
+- **Recheck.** Mentions get edited out, so recheck live mentions monthly and rerun the full question set each quarter.
+
 ### 5. Correct wrong facts
 
 Publish an official brand facts page: what the store sells, prices or ranges, shipping, returns, origin, ownership, certifications, each dated. In one test, ChatGPT cited an official FAQ far more than planted fake sources [AEO-0011]. Then repeat the corrected fact on product pages, the About page, social profiles and third-party profiles; repetition across sources shifted what an assistant said over time [AEO-0017].
@@ -83,7 +92,7 @@ Score each change: products served x gross profit per order x number of baseline
 
 ### 7. Market notes
 
-- **India:** include questions in Hinglish and in the regional languages the store sells in; include "COD available" and delivery-time facts on the brand facts page; marketplace listings (Amazon.in, Flipkart, Nykaa) are often the cited source, so correct them first.
+- **All markets:** ask the questions in each language the store sells in, including mixed-language forms buyers really type; put delivery times, returns and payment facts (such as pay on delivery where offered) on the brand facts page; marketplace listings (Amazon, Walmart, Etsy, Zalando and others) are often the cited source, so correct them first.
 - **US:** review platforms and editorial "best of" lists dominate; FTC rules apply to any paid or gifted review.
 
 ### 8. Measure honestly
@@ -97,6 +106,8 @@ Plan a control: apply changes to half the baseline questions and leave half unto
 - Key product facts readable with JavaScript off.
 - Every change names its products and their gross profit per order.
 - Third-party work targets sources actually cited in the baseline.
+- Every source in the queue has a question count, an assistant count, a tier and an opportunity tick; costs are marked quoted, example or unknown.
+- Current coverage of the top 10 cited sources is recorded as the starting point.
 - No fake accounts, undisclosed paid mentions or hidden AI instructions anywhere in the plan.
 - Brand facts page: every fact sourced and dated.
 - Nothing sent, posted or published without the client's yes.
@@ -110,7 +121,7 @@ Plan a control: apply changes to half the baseline questions and leave half unto
 |---|---|---|---|---|---|---|---|---|---|
 
 3. **Change list:** Layer (found, matched, chosen), Change, Products served, Gross profit per order, Questions affected, Effort, Owner, Access needed, Approval needed, Status.
-4. **Source work queue:** Cited URL, Type, Assistants citing it, What it says, Fix or pitch, Contact route, Disclosure note.
+4. **Source work queue:** Cited URL, Type, Tier, Questions citing it, Assistants citing it, In Google top 10 (yes or no), Opportunity (yes or no), What it says, Fix or pitch, Contact route, Cost (quoted, example, unknown), Disclosure note. Plus one line: coverage of the top 10 cited sources today.
 5. **Brand facts page draft** with sources and dates.
 
 ## Common mistakes
@@ -118,12 +129,14 @@ Plan a control: apply changes to half the baseline questions and leave half unto
 - **Tactics before access.** Step 2 fixes crawlers and rendering first.
 - **Trusting one run.** Step 1 runs twice per platform and discounts no-search answers.
 - **Generic PR.** Step 4 targets the exact sources assistants cite.
+- **Chasing every cited site.** Step 4's opportunity tick drops sites that take no outside input.
 - **Grey tactics.** Gate 3 bans fake accounts, undisclosed payments and hidden prompts.
 - **One plan for all assistants.** Step 4 picks sources per platform.
 - **Counting only clicks.** Step 8 uses the survey and a control set.
 
 ## Sources
 
+- AEO-0001: map cited domains for core questions and target the most cited.
 - AEO-0002: JavaScript-loaded content is invisible to most AI crawlers.
 - AEO-0006: product, comparison and guide pages earn most citations.
 - AEO-0011: an official brand facts FAQ is cited over planted sources.
@@ -151,3 +164,9 @@ Plan a control: apply changes to half the baseline questions and leave half unto
 - SEO-6461: hidden text and cloaking are spam.
 
 What makes this skill ours: every change is tied to products with real gross profit and stock; third-party work comes only from sources the assistants actually cited for the store's questions; tactics that fake people, hide paid mentions or plant hidden AI instructions are ruled out; and results are judged against an untouched control set and the how-did-you-hear survey, not clicks.
+
+## Selling in India
+
+- Include questions in Hinglish and in the regional languages the store sells in, and "where to buy X in India".
+- Put "COD available" and delivery-time facts on the brand facts page.
+- Marketplace listings (Amazon.in, Flipkart, Nykaa) are often the cited source, so correct them first.

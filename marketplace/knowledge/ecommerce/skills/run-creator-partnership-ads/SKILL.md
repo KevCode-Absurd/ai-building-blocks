@@ -48,7 +48,7 @@ If 2 is missing, stop before any permission request: running ads from a person's
 
 - Pay a flat fee for ad usage, not a share of ad spend; one large brand pays flat fees and recruits by gifting product [ORG-0033].
 - Price from Meta's numbers: aim for the creator's cost per thousand views at about half the store's Meta CPM, set the flat fee from their last 10 videos' average views, and cut it by the share of their audience outside the target market [ORG-0041].
-- Worked example (illustrative): store CPM 300 rupees, target 150 per thousand views; creator averages 40,000 views, so about 6,000 rupees, less 25% off-target audience, about 4,500.
+- Worked example (illustrative): store CPM 12 in the store's currency, target 6 per thousand views; creator averages 40,000 views, so about 240, less 25% off-target audience, about 180.
 
 ### 2. Write the usage terms
 
@@ -103,9 +103,9 @@ The question: does the same creative do better through the creator's handle than
 - Rebook or not, per creator, from `track-creator-sales`.
 - On each usage end date: pause the ads, revoke permission, log it.
 
-### 8. India and US notes
+### 8. Market notes
 
-- **India:** ASCI's influencer guidelines require a clear disclosure label on paid content; keep the platform label on every ad, and use Hindi or regional disclosures where the content is in that language. Many Indian creators work through managers; get the creator's own written consent, not only the manager's.
+- **UK, EU, Canada and Australia:** ad rules (ASA and CMA in the UK, the EU consumer rules, the Competition Bureau in Canada, the ACCC in Australia) require a clear disclosure label on paid content; keep the platform label on every ad, and write the disclosure in the language the content uses. Many creators work through managers or agencies; get the creator's own written consent, not only the manager's.
 - **US:** the FTC's endorsement guides require clear disclosure of paid relationships and real opinions; never edit a creator's words into a claim they did not make.
 
 ## Checks before you hand it over
@@ -150,3 +150,7 @@ The question: does the same creative do better through the creator's handle than
 - ORG-0041: price creator deals off Meta CPM and views.
 
 What makes this skill ours: signed usage terms come before any platform permission; creator fees are priced from their views against the store's own Meta CPM; every permission has an end date and a revoke step; and the creator handle must beat the store's handle on store orders in a matched test before more money moves.
+
+## Selling in India
+
+Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. ASCI's influencer guidelines require a clear disclosure label on paid content; use Hindi or regional disclosures where the content is in that language. Many Indian creators work through managers; get the creator's own written consent.

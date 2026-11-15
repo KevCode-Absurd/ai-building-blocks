@@ -116,9 +116,22 @@ From change history: count significant changes per campaign per month. A decline
 
 Per finding: monthly gross profit at stake = affected spend or conversions x the gap x gross profit per order, with the method in one line. Rank by that, then by effort. Each fix states what changes, the expected effect as a range, the risk (for example "resets learning for 2 weeks") and the review date.
 
-### 12. India and similar markets
+### 12. Tax, currency and pay-on-delivery checks
 
-Check the feed price matches the page price including GST, in rupees, and that shipping and cash-on-delivery terms in Merchant Center match the store. Use gross profit per placed order after return-to-origin losses in step 9. For Hindi and mixed-language queries, see `google-search-term-mining`.
+Check the feed price matches the page price in the store's own currency: including VAT or goods and services tax where prices are shown with tax (UK, EU, Australia), and before sales tax in the US and Canada. Check that shipping and any pay-on-delivery terms in Merchant Center match the store. Where pay on delivery is common, use gross profit per placed order after failed-delivery losses in step 9. For mixed-language queries, see `google-search-term-mining`.
+
+### 13. Structure traps and the fewest-campaigns map
+
+Add these structure checks to the audit, each with money at stake:
+
+- **Minimum structure.** Under about 30 conversions a month across the account, keep the fewest campaigns: brand, one non-brand Shopping, perhaps one Search. Three campaigns with 50, 20 and 10 conversions each learn alone; merged into one with 90 they usually do better [GAD-6151]. At most two campaigns on 10,000 a month and three to five under 50,000 [GAD-6222].
+- **Every extra campaign needs a reason**: brand versus non-brand, country, different margin or efficiency goal, distinct category, clearance or new arrivals [GAD-6171]. Name the campaign each orphan merges into.
+- **Traps:** Standard Shopping at Low priority next to Performance Max; about 200 products in one campaign on a small budget; one Performance Max asset group for a varied catalogue; listing groups never customised.
+- **Asset groups:** one per product type with its own listing group, at least 15 products each and 3 to 20 groups in total [GAD-6149]. Asset rule of thumb: 15 or more images, 5 or more videos, refreshed every 4 to 6 weeks.
+- **Cold-campaign brand leakage:** for each non-brand Search, Shopping, Performance Max and Demand Gen campaign, the share of its spend and conversions coming from brand queries [GAD-6183].
+- **Portfolio bidding** where campaigns must stay apart but need shared learning or a CPC cap, for example where niche clicks run 10 to 30 [GAD-6164].
+- **Learning.** Smart bidding leaves learning after about 50 conversions or 3 buying cycles; do not call a young campaign broken [GAD-6193].
+- **Naming:** type, country, focus, bid strategy (for example Shopping-UK-Bestsellers-MaxValue).
 
 ## Checks before you hand it over
 
@@ -129,6 +142,7 @@ Check the feed price matches the page price including GST, in rupees, and that s
 - Recommendations respect the stated spend limit.
 - No step needed a developer token or a paid tool.
 - Nothing is shown as done; every change waits for a client yes.
+- Every campaign has a written split reason or a named merge target.
 
 ## Output
 
@@ -152,6 +166,7 @@ Check the feed price matches the page price including GST, in rupees, and that s
 - **Rebuilding the account to fix a dip.** Step 10 prefers targeted fixes [GAD-0036].
 - **Trusting Performance Max's ROAS without checking channel drift.** Step 6 checks it [GAD-0055].
 - **Brand mixed into prospecting.** Step 3 separates it [GAD-0003].
+- **Leaving Standard Shopping at Low priority beside Performance Max.** Performance Max then takes the cold traffic it should not.
 
 ## Sources
 
@@ -164,5 +179,18 @@ Check the feed price matches the page price including GST, in rupees, and that s
 - GAD-0040, GAD-0043, GAD-0054: structure.
 - GAD-0042: common leaks.
 - MEA-0016, MEA-0017: real values and one primary purchase action.
+- GAD-6149: asset group sizes.
+- GAD-6151: consolidation beats segmentation.
+- GAD-6164: portfolio bidding.
+- GAD-6171: split reasons.
+- GAD-6183: check cold search terms for brand.
+- GAD-6193: learning exit.
+- GAD-6222: campaign count by budget.
 
 What makes this skill ours: everything from standard exports with no developer token; an overall grade that can never beat the tracking grade; fixes ranked by monthly gross profit at stake from the store's own margins; and a product profit table that shows which items lose money at current spend.
+
+## Selling in India
+
+- Check the feed price matches the page price including GST, in rupees, and that COD terms in Merchant Center match the store.
+- Use gross profit per placed order after RTO losses in step 9.
+- For Hindi and mixed-language queries, see `google-search-term-mining`.

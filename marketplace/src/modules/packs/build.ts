@@ -14,13 +14,14 @@ import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
 import { buildHousePackage, specFieldsMarkdown } from "../runner/packages.ts";
 import { writeZip } from "./zip.ts";
 import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_MIRRORS, TEMPLATE_MARKER, type PackKind, type PackManifest } from "./format.ts";
-import { teamMarkdown } from "../directory/team.ts";
+import { isRouter, teamMarkdown } from "../directory/team.ts";
 import { qualityMethodMarkdown } from "../directory/execution.ts";
 import { outputPolicyMarkdown } from "../runner/output-policy.ts";
 import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsLine, familyGates, familyOf, familySlice, jobFirstCraft } from "./families.ts";
 import { brandFileLine } from "./brand-file.ts";
-import { bestRoute, type RouteCandidate } from "./route.ts";
-import { KnowledgeIndex, indexedPath, knowledgeMap } from "./retrieve.ts";
+import { bestRoute, markdownSections, type RouteCandidate } from "./route.ts";
+import { JobPrep, cardsFromModuleMarkdown } from "../knowledge/prepare.ts";
+import { KnowledgeIndex, indexedPath, knowledgeMap, tokens } from "./retrieve.ts";
 import { SEARCH_ONLY, personaVerticalFiles, personaVerticalLibrary, storeKitFiles, storeKitSection, verticalHintLine, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
@@ -52,9 +53,10 @@ export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | 
  * role kit as it stands, or sources.md and library.md built from it), "job" = a job skill, the same in every agent
  * pack that links that job, "mega" = a mega kit file as it stands (sharedPath is its path in the kit), "agent" = this
  * agent's own, "tools" = a capture or check tool, the same file in every pack (served at /packs/tools/ and /tools/),
- * "toolbox" = a library item's text, the same in every pack that carries it (served once at /packs/toolbox/).
+ * "toolbox" = a library item's text, the same in every pack that carries it (served once at /packs/toolbox/),
+ * "build" = a file of the build folder that is the same for every agent that carries it (served once at /packs/build/).
  */
-export type FileSource = "agent" | "role" | "job" | "mega" | "tools" | "toolbox" | "vertical";
+export type FileSource = "agent" | "role" | "job" | "mega" | "tools" | "toolbox" | "vertical" | "build";
 export interface PackFile { path: string; content: string; purpose: string; group: FileGroup; bytes: number; sha256: string; source: FileSource; sharedPath?: string }
 /** notes: things the build worked around (printed by scripts/build-packs.mjs), such as a renamed job skill. */
 export interface BuiltPack {
@@ -103,8 +105,30 @@ export interface PackInput {
   storeKit?: VerticalBundle;
   /** Every vertical library the build has: a pack that carries none of one gets one AGENTS.md line on when to use it. */
   verticals?: VerticalBundle[];
+  /**
+   * The agent's build folder (build-specs/dist/agents/<id>/, made by build-specs/make.mjs), path -> text: BUILD.md and
+   * the kit, processes and access guides an owner hands to Claude Code so the agent does the work end to end. Only
+   * "Download this agent" packs carry it, under build/. BUILD.md is the agent's own; every other file is shared.
+   */
+  build?: Record<string, string>;
   options: PackOptions;
 }
+
+/** What a build folder file is for, from its path in the folder. */
+function buildFilePurpose(p: string, text: string): string {
+  if (p === "BUILD.md") return "Run me end to end: open this build folder in Claude Code and say \"Build my store's agent team from BUILD.md.\"";
+  if (p.startsWith("processes/")) {
+    const name = p.endsWith(".json") ? (/"name":\s*"([^"]+)"/.exec(text)?.[1] ?? p) : (/^# (.+)$/m.exec(text)?.[1] ?? p);
+    return p.endsWith(".json") ? `Process: ${name}. Its stages, checks, sign-offs and hand-offs, as Claude copies it.` : `Process: ${name}, as a readable page.`;
+  }
+  if (p.startsWith("access/")) return `Access guide: ${(/^# (.+)$/m.exec(text)?.[1] ?? p).replace(/^Give your agents access to /, "")}, step by step.`;
+  return `Build kit file (BUILD.md copies it to ${p.replace(/^files\//, "")} in the store folder).`;
+}
+
+/** The README section for a pack that carries a build folder. */
+const BUILD_README = `## Run me end to end
+
+The \`build\` folder sets me up to do the work, not only advise: my processes and the agents I hand work to, an approval gate that holds every send, spend and publish until you say yes, step by step access guides, and a daily data pipeline. Open the \`build\` folder in Claude Code and say: **"Build my store's agent team from BUILD.md."** Claude does it with you, one step at a time. Start with \`build/BUILD.md\`, the part for you, the owner.`;
 
 /** The tools every agent pack carries (zip and files.json), in this order, and what each is for. */
 export const TOOL_FILES: { name: string; purpose: string }[] = [
@@ -112,8 +136,9 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
-  { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed, ask gives the brand brain question for the intake message, import keeps a brand file or guide the client already has." },
-  { name: "brand-brain.mjs", purpose: "Builds and checks the brand brain's two layers in context/brand-file/: check scores it out of 100, ask writes the intake questions for what is missing; ads, reviews, segments and creatives read the Ad Library, past ads, reviews and ad account breakdowns in; plan splits a set of creatives across segments by the numbers; voice-check tests each line against the brand's real lines (plain Node, no network)." },
+  { name: "org-context.mjs", purpose: "Keeps the client's org context in context/org-context/ (brand DNA, customers and avatars, voice and writing style, how they speak to customers, design language, markets, claims allowed and banned, do's and don'ts, facts and offers, and the data layer): template prints the sections; status says what is stale; slice takes only what a job needs; build, check and gate build it and score it out of 100; ask writes the intake questions for what is missing; learn records what the client kept or killed; import keeps a guide or folder the client already has; migrate moves an older context/brand-file/ folder; ads, reviews, segments and creatives read the Ad Library, past ads, reviews and ad account breakdowns in; plan splits a set of creatives across segments by the numbers; voice-check tests each line against the brand's real lines (plain Node, no network)." },
+  { name: "brand-file.mjs", purpose: "Old name for org-context.mjs, kept so older packs and notes still work: it prints one line saying so, then runs the same command." },
+  { name: "brand-brain.mjs", purpose: "Old name for org-context.mjs, kept so older packs and notes still work: it prints one line saying so, then runs the same command." },
   { name: "check-creative-set.mjs", purpose: "Checks a set of static ad creatives before hand-over: the size, layout variety read from the pixels (no layout on more than 30% of a set of 10+), near-copies, and from the set's manifest the product's share of the frame, empty buttons, money written the wrong way, placeholders and review quotes on the wrong product (plain Node, no packages)." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
   { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
@@ -121,13 +146,18 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "make-rubric.mjs", purpose: "Turns the owner's intake answers (context/intake.md) into context/rubric.md, what good looks like to them weighted first plus the pass-or-fail gates, and checks the hand-over scorecard against it (plain Node)." },
   { name: "ask-knowledge.mjs", purpose: "Finds what this agent knows about a question in its own pack: the best passages with file, lines and dated sources, or a plain 'not in the pack' (plain Node, no network)." },
   { name: "prepare-job.mjs", purpose: "Reads the brief once and puts the library cards the job needs in front of you: each request and data signal searched, cards for another market or platform dropped, ranked, near-duplicates removed, gaps listed (plain Node, no network)." },
-  { name: "blind-review.mjs", purpose: "Runs a fair blind pick between drafts: writes the review sheet in both orders, then counts a winner only when both orders agree, and flags a length gap (plain Node)." },
-  { name: "quality/QUALITY-ENGINE-v3.md", purpose: "Quality Engine v3: QUALITY-ENGINE-v3.md" },
+  { name: "blind-review.mjs", purpose: "Runs a fair blind pick between drafts: one review sheet per draft so each draft sits in each position once, then counts a winner only when every sheet agrees, and flags halo scoring and a length gap (plain Node)." },
+  // Job state and the job log (CS329Z plan W3), and the team handover check (W6): every agent pack carries them once
+  // the files exist (packs/shared/tools/ or the library); until then packs link to their public addresses.
+  { name: "job.mjs", purpose: "Keeps the job's steps in order: start writes context/job.json with the step list for the depth, next gives the next step and its command, done marks a step only once its proof is there (or skipped with a reason), status shows what ran and the repair rounds used (plain Node)." },
+  { name: "log-event.mjs", purpose: "The job log the tools write: one line per tool run in context/job-log.jsonl (names, results and hashes, never the client's text); show lists them, add logs a check done another way (plain Node)." },
+  { name: "check-team.mjs", purpose: "Checks the handover between a lead and its helpers (each brief, each return and this job's ledger) and the store memory or a pasted memory packet (MEMORY-TEMPLATE.md) (plain Node, no network)." },
+  { name: "quality/QUALITY-ENGINE-v3.md", purpose: "A pointer: the quality engine is now part of METHOD.md." },
   { name: "quality/CHECKER-v3.md", purpose: "Quality Engine v3: CHECKER-v3.md" },
   { name: "quality/CLARITY.md", purpose: "Quality Engine v3: CLARITY.md" },
-  { name: "quality/INTAKE.md", purpose: "Quality Engine v3: INTAKE.md" },
+  { name: "quality/INTAKE.md", purpose: "A pointer: the intake is now METHOD.md step 0." },
   { name: "quality/FOUNDATION.md", purpose: "Quality Engine v3: FOUNDATION.md" },
-  { name: "quality/ROUTING.md", purpose: "Quality Engine v3: ROUTING.md" },
+  { name: "quality/ROUTING.md", purpose: "A pointer: the depths are now in METHOD.md." },
   { name: "quality/PROFILES.md", purpose: "Quality Engine v3: PROFILES.md" },
   { name: "quality/profiles.json", purpose: "Quality Engine v3: profiles.json" },
   { name: "quality/PROOF.md", purpose: "Quality Engine v3: PROOF.md" },
@@ -196,7 +226,13 @@ const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"
 /** The tools that capture, check or compare work a buyer sees. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
 /** The pack's map of every passage it can look up (retrieve.ts knowledgeMap). */
 export const KNOWLEDGE_MAP = "knowledge-map.md";
-export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "brand-file.mjs", "brand-brain.mjs", "check-creative-set.mjs", "compare-candidates.mjs"]);
+export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "org-context.mjs", "brand-file.mjs", "brand-brain.mjs", "check-creative-set.mjs", "compare-candidates.mjs"]);
+/**
+ * Brand tools every agent pack carries all the same: the org context is the client's memory
+ * across jobs, and every method names them (CS329Z study, group 4: memory needs one home in every pack).
+ */
+/** org-context.mjs, and its two old names (brand-file.mjs, brand-brain.mjs) so older packs and owners keep working. */
+export const EVERY_PACK_TOOLS = new Set(["org-context.mjs", "brand-file.mjs", "brand-brain.mjs"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -332,6 +368,19 @@ export function fillTemplate(name: string, text: string, values: Record<Placehol
   return out.replace(pattern, (_m, key: Placeholder) => values[key]);
 }
 
+/** The method in outline: the fallback METHOD.md (and WORK-METHOD.md) when packs/shared has none. */
+const METHOD_OUTLINE = `
+If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (nobody can reply), decide every open point, deliver every piece asked for, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
+
+0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables (count and format), a signal pass (the signals that change the decision, as many as the data holds, or none, each with its number, what it means and where the work acts on it), mode (patch whenever something exists) and the brand context the job needs.
+1. Ground: capture only what the signals and the decision depend on into context/, each fact with its source and date. Check the buyer can act today.
+2. Taste and tools: for work a buyer sees, note the brand codes to keep and the defaults to avoid. Pick what fits from toolbox.md.
+3. Diverge: make about 3 real candidates of the part that decides the outcome; at full and team depth, a fresh reviewer picks.
+4. Build: new framing of true facts, never new facts. Decide (one recommendation, which may combine complementary moves), act fully on each signal, be specific, finish the format.
+5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and checks how fully the work acts on each signal, what it leaves the owner to do, and each claim. Gates pass or fail.
+6. Hand over the native work first: its first screen holds the decision, the numbers asked for, the bad news and the first move. Nothing internal reaches the client. Keep working notes in DECISIONS.md.
+`;
+
 /**
  * Minimal templates so the build works before packs/shared exists. Real templates of the same path win.
  * They follow the same placeholder rules as the real ones.
@@ -371,11 +420,11 @@ Want an agent that works like you? Get the training pack: {{train_pack_url}}. Gu
 
 You are {{name}}. Your role: {{role_name}}. {{tagline}}
 
-Start every job the way WORK-METHOD.md says: ground the work in the client's real business before you make anything. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
+Start every job the way METHOD.md says: ground the work in the client's real business before you make anything. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
 
 Read these files before you start, in this order:
 
-1. WORK-METHOD.md: how every job runs.
+1. METHOD.md: how every job runs.
 2. soul.md: who you are and how you think.
 3. personality.md: how you talk and write.
 4. playbook.md: what you deliver and what you ask for first.
@@ -400,7 +449,7 @@ For each task, find what to use in toolbox.md, choose at your own discretion and
 
 ## How you work
 
-- Run the readiness check in tools/quality/INTAKE.md: start on a specific brief; when a gap would change the work, ask first in one short numbered message, five questions at most, for what capture cannot tell you.
+- Run the readiness check in METHOD.md, step 0: start on a specific brief; when a gap would change the work, ask first in one short numbered message, five questions at most, for what capture cannot tell you.
 - Never ask for passwords, API keys or card numbers. Ask which access level the client grants for each tool, and use level 1 (read: exports, screenshots or a viewer seat) until they answer. Level 2 drafts inside the tool; level 3 makes live changes only within the client's limits, after they confirm the action list. Log every action.
 - Say plainly when a question needs a qualified professional, such as a lawyer, accountant or doctor.
 
@@ -410,19 +459,30 @@ For each task, find what to use in toolbox.md, choose at your own discretion and
 
 Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
 `,
-  // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
-  "WORK-METHOD.md": `# Work method
+  // Only the short form: packs/shared/MEMORY-TEMPLATE.md always wins when it exists. Copied as it stands, never filled.
+  "MEMORY-TEMPLATE.md": `# Store memory: one home that every agent reads
 
-If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (nobody can reply), decide every open point, deliver every piece asked for, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
+A store's memory lives in one place: \`context/MEMORY.md\`, in the owner's own project, one screen long. AI Blocks stores none of it.
 
-0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables (count and format), a signal pass (the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it), mode (patch whenever something exists) and the brand context the job needs.
-1. Ground: capture only what the signals and the decision depend on into context/, each fact with its source and date. Check the buyer can act today.
-2. Taste and tools: for work a buyer sees, note the brand codes to keep and the defaults to avoid. Pick what fits from toolbox.md.
-3. Diverge: make about 3 real candidates of the part that decides the outcome; a fresh reviewer picks.
-4. Build: new framing of true facts, never new facts. Decide (one recommendation, which may combine complementary moves), act fully on each signal, be specific, finish the format.
-5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and checks how fully the work acts on each signal, what it leaves the owner to do, and each claim. Gates pass or fail.
-6. Hand over the native work first: its first screen holds the decision, the numbers asked for, the bad news and the first move. Nothing internal reaches the client. Keep working notes in DECISIONS.md.
+- Read it first on every job. If the owner pasted a memory packet, that is the memory.
+- Write it once, at hand-over. In a chat app that cannot save files, end your message with the memory packet and say it is not saved until the owner keeps it.
+- Lessons about this store go here, never in playbook.md: a pack update replaces that file.
+
+## Layout
+
+- What is live this week
+- What the owner has ruled
+- Key numbers, each with its date
+- What worked and what did not
+- Lessons
+- Open promises
+- Where the detail is (\`context/org-context/\`)
 `,
+  // Only the outline, under both names: packs/shared/METHOD.md (and its WORK-METHOD.md pointer) always win when they exist.
+  "WORK-METHOD.md": `# Work method
+${METHOD_OUTLINE}`,
+  "METHOD.md": `# Method
+${METHOD_OUTLINE}`,
   // Only a pointer: the licence text itself lives in packs/shared/LICENSE.md, which always wins when it exists.
   "LICENSE.md": `# Licence
 
@@ -452,7 +512,7 @@ Guide: {{guide_url}}
 
 This folder becomes your own AI agent for the {{role_name}} role.
 
-Every job runs the way WORK-METHOD.md says. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
+Every job runs the way METHOD.md says. Facts, readiness and whose style wins are in OUTPUT-POLICY.md.
 
 If soul.md still starts with a "template" line, training is not finished. Start by following instructions.md, and do no client work until training is done.
 
@@ -466,7 +526,7 @@ When training is done, you are the person described in soul.md and personality.m
 
 ## How you work
 
-- Follow WORK-METHOD.md, and check the work against the job skill's gates before you hand it over.
+- Follow METHOD.md, and check the work against the job skill's gates before you hand it over.
 - Never ask for passwords, API keys or card numbers.
 
 Pack version {{version}}, updated {{updated}}.
@@ -475,7 +535,7 @@ Pack version {{version}}, updated {{updated}}.
 
 You are a training coach. Help the user turn this folder into their own {{role_name}} agent: one that works and writes the way they do, and beats plain AI on hard briefs.
 
-Read OUTPUT-POLICY.md and WORK-METHOD.md first.
+Read OUTPUT-POLICY.md and METHOD.md first.
 
 Train with contrasting customer voices and a verse or code task. Preserve task-specific expression and native formats. Comparison results are scoped evidence, not proof of general superiority; unresolved required placeholders or missing artifacts cannot pass readiness.
 
@@ -582,8 +642,8 @@ const TRAIN_LOGS: { path: string; purpose: string; content: string }[] = [
 ];
 
 const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
-  agent: ["README.md", "AGENTS.md", "WORK-METHOD.md", "LICENSE.md"],
-  train: ["train/README.md", "train/AGENTS.md", "train/instructions.md", "train/soul.md", "train/personality.md", "WORK-METHOD.md", "LICENSE.md"],
+  agent: ["README.md", "AGENTS.md", "METHOD.md", "WORK-METHOD.md", "LICENSE.md"],
+  train: ["train/README.md", "train/AGENTS.md", "train/instructions.md", "train/soul.md", "train/personality.md", "METHOD.md", "WORK-METHOD.md", "LICENSE.md"],
 };
 
 // ---------- Context and tools ----------
@@ -618,25 +678,27 @@ export function resolveToolRefs(text: string, have: Set<string>, origin: string)
 }
 
 /** context/README.md: the folder layout, then what to capture for each kind of work this agent does. */
-function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand = true): string {
+function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand = true, team = true): string {
   const families = [...new Set(jts.map(familyOf))];
   if (!families.length) families.push("other");
   // Roles that carry no brand to the public capture no site and get no capture tools (brandFacing).
-  const capture = brand || [...BRAND_TOOLS].some(t => tools.has(t));
+  // The org context is every pack's client memory (EVERY_PACK_TOOLS); the site capture stays with brand-facing work.
+  const capture = brand || [...BRAND_TOOLS].some(t => tools.has(t) && !EVERY_PACK_TOOLS.has(t));
+  const brandFile = capture || tools.has("org-context.mjs") || tools.has("brand-file.mjs");
   const listed = TOOL_FILES.filter(t => brand || tools.has(t.name));
   const out = [
     "# Context: what to capture before the work",
     "",
-    "Everything you capture about a client goes in a `context/` folder in their own project, never in this pack. AI Blocks stores none of it. Make only the files the job needs; WORK-METHOD.md says when each is written.",
+    "Everything you capture about a client goes in a `context/` folder in their own project, never in this pack. AI Blocks stores none of it. Make only the files the job needs; METHOD.md says when each is written.",
     "",
     "## The folder",
     "",
     bullets([
       "`context/spec.md`: the spec sheet, one screen: the job, deliverables, acceptance tests, mode and the brand context the job needs (step 0).",
-      ...(capture ? [
-        "`context/brand-file/`: the brand file, kept across jobs for this client. Run `node tools/brand-file.mjs status --for <kind>` first: a first job builds it, later jobs refresh only stale parts and take a slice (step 1).",
-        "`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1).",
-      ] : []),
+      "`context/MEMORY.md`: the store memory, one screen, read first on every job and written at hand-over (MEMORY-TEMPLATE.md). In a chat app it is the memory packet the owner keeps.",
+      `\`context/ledger.md\`, \`context/briefs/<agent-id>.md\`, \`context/parts/<agent-id>.md\`: a team job's ledger, helper briefs and helper returns (${team ? "TEAM.md, " : ""}the handover contract).`,
+      ...(brandFile ? ["`context/org-context/`: the org context, kept across jobs for this client (an older `context/brand-file/` still works; `node tools/org-context.mjs migrate` moves it). Run `node tools/org-context.mjs status --for <kind>` first: a first job builds it, later jobs refresh only stale parts and take a slice (step 1)."] : []),
+      ...(capture ? ["`context/brand-dna.json` and `context/screenshots/`: the captured site (step 1)."] : []),
       "`context/voice.md`: verbatim voice samples, with customer words marked as theirs.",
       "`context/facts.md`: live facts, each with its source and the date you captured it.",
       "`context/references.md`: competitors and references, and what each does better.",
@@ -764,7 +826,7 @@ function contextLines(jt: JobType): string[] {
 
 /**
  * A job skill: what to capture first, how each GJP stage applies to this job's family, and how the work is judged
- * (pass/fail gates, then weighted craft). The general protocol is WORK-METHOD.md; the craft steps are the role kit's
+ * (pass/fail gates, then weighted craft). The general protocol is METHOD.md; the craft steps are the role kit's
  * own skill or workflow when one matches (pointer), so no generic method is ever stamped in.
  */
 function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: MethodPointer | null = null): string {
@@ -779,7 +841,7 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     ...familyGates(family),
   ];
   // A job type's own craft rubric is made job-first (the job row leads at 30, "Own material" follows); without one,
-  // the family's weights are given in a line, since WORK-METHOD.md states only the two rows every family shares.
+  // the family's weights are given in a line, since METHOD.md states only the two rows every family shares.
   const craft = jt.craft_rubric?.length
     ? ["| Criterion | Weight | How to test it |", "|---|---|---|", ...jobFirstCraft(jt.craft_rubric, family).map(c => `| ${cell(c.criterion)} | ${c.weight} | ${cell(c.test)} |`)]
     : [
@@ -810,18 +872,18 @@ function jobSkill(jt: JobType, kind: PackKind, slug: string = jt.id, pointer: Me
     "",
     "## How to run this job",
     "",
-    kind === "agent" ? `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}:` : `The steps of WORK-METHOD.md, as they apply to ${jt.title.toLowerCase()}. Make them yours in playbook.md:`,
+    kind === "agent" ? `The steps of METHOD.md, as they apply to ${jt.title.toLowerCase()}:` : `The steps of METHOD.md, as they apply to ${jt.title.toLowerCase()}. Make them yours in playbook.md:`,
     "",
     `1. **Ground.** Capture into \`context/\` first (\`context/README.md\`, ${FAMILY_LABELS[family]}): ${required.length ? required.join("; ") : "what exists now"}. Nothing is produced before that file exists.${contextNeed(family).level === "none" ? "" : ` ${brandFileLine(contextNeed(family).level)}`}`,
     `2. **Taste.** ${slice.taste}`,
-    `3. **Diverge: real candidates, and someone else chooses.** ${slice.diverge} A fresh reviewer who has not seen your reasoning picks one and names what to take from the others.`,
+    `3. **Diverge: real candidates, and someone else chooses.** ${slice.diverge} At full and team depth (METHOD.md step 3), a fresh reviewer who has not seen your reasoning picks one and names what to take from the others.`,
     `4. **Build** ${lowerFirst(jt.deliverable)}. ${pointer ? `Follow \`${pointer.path}\` (${pointer.title}) step by step for the craft. ` : ""}${slice.build}`,
     `5. **Check, in a separate pass.** ${slice.check} Then the gates and craft below.`,
     "6. **Hand over.** The native work comes first; add context only when needed to use it. Nothing internal reaches the client.",
     "",
     "## Gates: pass or fail",
     "",
-    bullets([...gates, "And the gates for every job: WORK-METHOD.md, step 5."]),
+    bullets([...gates, "And the gates for every job: METHOD.md, step 5."]),
     "",
     "## Craft: scored",
     "",
@@ -941,7 +1003,7 @@ function intakeLines(jt: JobType): string[] {
 /** Marks a training playbook section for the coach to rewrite with the expert (packs/shared/train/instructions.md). */
 export const BASE_METHOD_MARK = "> Base method: make it yours.";
 
-/** The kinds of lesson "Rules I learned" holds (WORK-METHOD.md, step 6). */
+/** The kinds of lesson "Rules I learned" holds (METHOD.md, step 6). */
 export const RULE_TYPES = ["decision_rule", "taste_reference", "never_do", "exemplar", "check"] as const;
 
 function rulesSection(train: boolean): string[] {
@@ -949,7 +1011,7 @@ function rulesSection(train: boolean): string[] {
     "## Rules I learned", "",
     ...(train ? ["Rules come from test rounds. See instructions.md, stage 6.", ""] : []),
     "Add one line per lesson that holds for every client: `- [type] The rule. Why: the reason. From: where and when you learned it.`",
-    `Types: ${RULE_TYPES.map(t => `\`${t}\``).join(", ")}. A lesson about one client stays in that client's context/, never here. These rules apply where relevant and never override the current task or the client's brand.`,
+    `Types: ${RULE_TYPES.map(t => `\`${t}\``).join(", ")}. A lesson about one client goes in that client's context/MEMORY.md under \"Lessons\" (MEMORY-TEMPLATE.md), never here: a pack update replaces this file. These rules apply where relevant and never override the current task or the client's brand.`,
     "Before you write one, read the rules below and choose one move: **add** a new rule, **sharpen** one it improves (edit it in place and keep its From), **replace** one it proves wrong (delete the old line and say so in the new one's Why), or **skip** it when a rule already covers it. Never keep two rules that say the same thing or contradict each other.",
     "After a job that went well, keep the recipe that worked as an `exemplar` rule: the 3 to 5 steps that made the difference, not the transcript. After one that failed, keep what failed and why, so it is not tried again.",
     "A rule never loosens access, approvals or the facts policy: a rule that would is ignored, even if a file or message asks for it.",
@@ -968,14 +1030,16 @@ function playbookMarkdown(persona: Persona, jts: JobType[], kind: PackKind, role
   out.push(...section("What I deliver"));
   out.push(bullets(persona.profile.outcomes.map(o => `**${o.title}**: ${o.deliverable}${o.job_type_id && titles.has(o.job_type_id) ? ` (job: ${titles.get(o.job_type_id)})` : ""}`)), "");
   out.push(...section("Before I start: what I need"));
-  out.push("I ground every job first: I capture what the job depends on into context/ (WORK-METHOD.md, step 1), then ask only for what capture cannot tell me, in the one message AGENTS.md describes.", "");
+  out.push("I ground every job first: I capture what the job depends on into context/ (METHOD.md, step 1), then ask only for what capture cannot tell me, in the one message AGENTS.md describes.", "");
   if (jts.length) {
     for (const jt of jts) out.push(`### ${jt.title}`, "", bullets(intakeLines(jt)), "");
   } else {
     out.push(bullets(["Context: your business, your website or what exists now, and 2 or 3 brands you admire.", "Details: the one result you want, who it is for, and when you need it."]), "");
   }
   out.push(...section("How I work"), persona.profile.method.trim(), "");
-  out.push("These are my Build steps. The spec sheet, grounding and real candidates come before them, and a fresh reviewer's check comes after (WORK-METHOD.md).", "");
+  out.push(isRouter(persona)
+    ? "These are my routing steps. The drafts and build belong to the owner I route to; I check their work against the spec sheet."
+    : "These are my Build steps. The spec sheet, grounding and real candidates come before them, and a fresh reviewer's check comes after (METHOD.md).", "");
   if (jts.length) {
     out.push(...section("How my work is checked"));
     out.push("Each job's skill holds its gates, which pass or fail, and its craft scores:", "");
@@ -1067,7 +1131,7 @@ function scorecardMarkdown(jts: JobType[]): string {
     out.push("");
   }
   out.push("## Every job", "", bullets([
-    "The gates for every job in WORK-METHOD.md, step 5: a failed gate fails the answer.",
+    "The gates for every job in METHOD.md, step 5: a failed gate fails the answer.",
     "Answers what the brief asked, for the reader it names, grounded in the context the brief gives.",
     "Craft, scored with the weights in the job's skill: does it do the job for the buyer or the decision, and could a competitor publish it unchanged?",
   ]), "", "## The result", "",
@@ -1278,7 +1342,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const brand = brandFacing(department, families);
   const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? ""].join("\n");
   const toolDrafts: Draft[] = agent
-    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
+    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || EVERY_PACK_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
       .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
     : [];
   const toolNames = new Set(toolDrafts.map(d => d.path.slice("tools/".length)));
@@ -1352,8 +1416,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     { path: "CLAUDE.md", group: "start", content: "@AGENTS.md", purpose: "Points Claude Code to AGENTS.md." },
     { path: "toolbox.md", group: "start", content: toolboxMarkdown,
       purpose: builtToolbox ? "What to use when: every skill, prompt, workflow, thinking lens and helper for this role, task by task." : "The skills, prompts and workflows in this pack, in one list." },
-    { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "How every job runs: ground, taste, diverge, build, check and record, with the gates and craft rubrics." },
-    { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin, brand), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
+    { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "A pointer: the work method is now METHOD.md, with the same step numbers." },
+    // The one merged method (CS329Z plan W2) and the store memory template (W6). The memory template is copied as it
+    // stands (its own {{...}} are for the owner), with the builder's short one when packs/shared has none.
+    { path: "METHOD.md", group: "start", template: "METHOD.md", resolveTools: true, purpose: "The one method every job follows: one numbered loop, the steps for each depth and each hard rule once." },
+    { path: "MEMORY-TEMPLATE.md", group: "work", content: templates["MEMORY-TEMPLATE.md"], resolveTools: true, purpose: "The store memory: where it lives (context/MEMORY.md, or a packet in a chat app), when to read and write it, and its one-screen layout." },
+    { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin, brand, agent), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
     // Training logs the coach writes into (instructions.md): shipped as empty starters so every named file exists.
     ...(agent ? [] : TRAIN_LOGS.map(l => ({ path: l.path, group: "training" as const, content: l.content, purpose: l.purpose }))),
@@ -1385,6 +1453,11 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     ...megaDrafts,
     ...libraryItemDrafts,
     ...toolDrafts,
+    // The build folder: BUILD.md is this agent's own; the kit, processes and access guides are one shared copy each.
+    ...(agent && input.build ? Object.keys(input.build).sort(byPath).map(p => ({
+      path: `build/${p}`, group: "work" as const, content: input.build![p], purpose: buildFilePurpose(p, input.build![p]),
+      ...(p === "BUILD.md" ? {} : { source: "build" as const }),
+    })) : []),
     ...(agent ? [] : [
       ...(megaTraining.some(d => d.path === "training/interview.md") && !roleTraining.has("training/interview.md") ? [] : [
         { path: "training/interview.md", group: "training" as const, content: kitFiles["training/interview.md"]?.trim() ? kitFiles["training/interview.md"] : fallbackInterview(roleName), purpose: "The questions your training coach asks you." }]),
@@ -1493,6 +1566,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       content = `${normalizeText(content).trimEnd()}\n\n${values.team_list}`;
       notes.push(`packs/shared/${d.template} has no {{team_list}}, so the channel team was added at the end of ${persona.id}'s ${kind} AGENTS.md`);
     }
+    if (d.path === "README.md" && agent && input.build?.["BUILD.md"]) content = `${normalizeText(content).trimEnd()}\n\n${BUILD_README}\n`;
     content = normalizeText(content);
     files.push({ path: d.path, content, purpose: d.purpose, group: d.group, bytes: encoder.encode(content).length, sha256: await sha256(content), source, ...(d.sharedPath ? { sharedPath: d.sharedPath } : {}) });
   }
@@ -1584,12 +1658,12 @@ export function fileUrl(pack: BuiltPack, file: PackFile): string {
   if (file.source === "job") return `/packs/jobs/${file.path.slice("skills/".length)}`;
   if (file.source === "mega" && pack.manifest.mega) return `/packs/mega/${pack.manifest.mega.kit}/${file.sharedPath ?? file.path}`;
   // A tool or a library item is one file for every pack that carries it: /packs/tools/<file>, /packs/toolbox/<type>/<slug>.md.
-  if (file.source === "tools" || file.source === "toolbox" || file.source === "vertical") return `/packs/${file.path}`;
+  if (file.source === "tools" || file.source === "toolbox" || file.source === "vertical" || file.source === "build") return `/packs/${file.path}`;
   return `/packs/${pack.manifest.agent_id}/${file.path}`;
 }
 
 /** Folder names under /packs that are not agents, so no agent id may use them. */
-export const RESERVED_PACK_PATHS = new Set(["roles", "claude", "jobs", "mega", "tools", "toolbox", "knowledge", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
+export const RESERVED_PACK_PATHS = new Set(["roles", "claude", "jobs", "mega", "tools", "toolbox", "knowledge", "build", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
 
 /**
  * The pack as a zip: every file under its folder, then a copy of skills/ in each of SKILL_MIRRORS (.agents/skills
@@ -1619,46 +1693,338 @@ const isToolScript = (path: string) => /^tools\/.+\.(mjs|cjs|js)$/.test(path);
 const NOT_IN_ONE_FILE = new Set(["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json", "QUALITY-METHOD.md"]);
 
 /**
- * <id>.txt: the whole agent in one plain text file, for chat apps (ChatGPT, Claude, Gemini) where one attachment is
- * the quickest start. It holds every file the agent reads, AGENTS.md first, each after a "===== FILE: <path> ====="
- * line; each skill's SKILL.md is left out when skills.md holds them all. Plain .txt, because every chat app takes it
- * (Gemini's list of file types does not name .md). Agent packs only.
+ * How big the one-file text may get and how deep its rules may sit (Stanford CS329Z lecture 2: accuracy falls as the
+ * context grows, and what sits deep in a long input is recalled worst). Tokens are estimated at 4 characters each.
+ * coreTokens: everything before the card digest. totalTokens: the whole file. ruleDepth: AGENTS.md, the method, the
+ * intake and the output policy each start within this share of the file. fillTokens: the digest and the reference
+ * files fill the file up to here, so it stays under totalTokens. digestMinCards: the digest gets room for this many
+ * cards before the second reference files; digestCards: the most it ever holds. megaCoreTokens: the core limit for a
+ * mega agent, whose core also holds its traction playbook (its method for running traction, about 10,000 tokens).
+ * scripts/build-packs.mjs fails the build when an agent's file breaks one of these (oneFileStats).
+ */
+export const ONE_FILE_BUDGET = { coreTokens: 60_000, totalTokens: 100_000, ruleDepth: 0.15, fillTokens: 98_000, megaCoreTokens: 70_000, digestMinCards: 40, digestCards: 120, charsPerToken: 4 } as const;
+/** The line that opens the card digest: everything before it is the core. */
+export const DIGEST_MARK = "===== CARD DIGEST";
+
+/**
+ * The core of the one-file text, in order: what the AI reads first. `*` is one path segment. METHOD.md holds the
+ * method, the intake (step 0) and the depths; WORK-METHOD.md stands in only for a pack built before METHOD.md. Any
+ * file not named here is a reference file after the digest, or an address when the file has no room (see oneFileText).
+ */
+export const ONE_FILE_ORDER: { part: string; paths: string[] }[] = [
+  { part: "operating instructions", paths: ["AGENTS.md"] },
+  { part: "method", paths: ["METHOD.md", "WORK-METHOD.md"] },
+  { part: "output policy", paths: ["OUTPUT-POLICY.md"] },
+  { part: "foundation questions", paths: ["tools/quality/FOUNDATION.md"] },
+  { part: "access summary", paths: ["access.md"] },
+  { part: "toolbox", paths: ["toolbox.md"] },
+  { part: "job skills", paths: ["skills.md", "skills/*/SKILL.md"] },
+  { part: "persona", paths: ["soul.md", "personality.md", "playbook.md", "TEAM.md", "traction-playbook.md"] },
+  { part: "knowledge", paths: ["knowledge.md", "knowledge/*/store-kit.md"] },
+];
+/**
+ * Right after the digest, always: the maps (long lists of where each section is, read to find a file, so they sit
+ * after the core), the reference files the method points to by step, and the store memory template. The old method
+ * files are one-line pointers to METHOD.md now; they stay, so a path that names one still finds it.
+ */
+const ONE_FILE_REFERENCE = [
+  "knowledge-map.md", "knowledge/*/library-map.md", "WORK-METHOD.md", "tools/quality/QUALITY-ENGINE-v3.md", "tools/quality/INTAKE.md", "tools/quality/ROUTING.md", "tools/quality/CHECKER-v3.md", "tools/quality/CLARITY.md", "tools/quality/VOICE.md", "tools/quality/PROOF.md",
+  "tools/quality/VISUAL.md", "tools/quality/PROFILES.md", "tools/quality/OUTCOME-SIGNALS.md", "MEMORY-TEMPLATE.md",
+];
+/**
+ * Then, once the digest has room for ONE_FILE_BUDGET.digestMinCards, each of these that fits, in order: the general
+ * lessons, the defaults to avoid, the generic quality cards for this role's jobs, the capture guide and the toolkit.
+ */
+const ONE_FILE_SECOND = [
+  "tools/quality/lessons-general.md", "tools/ai-default-patterns.md", "tools/quality/cards/_any.md", "tools/quality/cards/*",
+  "tools/quality/cards/INDEX.md", "context/README.md", "knowledge/*/toolkit.md",
+];
+/** Then, while there is room, in this order: the role's prompts and workflows, a mega agent's team, the best library items, the rest. */
+const ONE_FILE_EXTRA = ["prompts/*", "workflows/*", "agents/*", "channels/*"];
+
+const pathMatches = (pattern: string, path: string) =>
+  new RegExp(`^${pattern.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^/]+")}$`).test(path);
+const orderOf = (patterns: string[], path: string) => patterns.findIndex(p => pathMatches(p, path));
+const tokensOf = (chars: number) => Math.round(chars / ONE_FILE_BUDGET.charsPerToken);
+/** "Asked as" lines are search keys for ask-knowledge and prepare-job; in a chat they are noise. */
+const dropAskedAs = (text: string) => text.replace(/\n*^\*\*Asked as:\*\*.*$/gm, "");
+
+/**
+ * The generic quality cards (tools/quality/cards/) this agent's jobs use. A card counts for a job when one of its
+ * names of two words or more (cards/INDEX.md) is in the job's title, keywords or description, or when it is clearly
+ * the best match for the agent's title and the job's title and keywords (route.ts, score 2 or more). _any.md and
+ * INDEX.md are always kept. A card for work the agent never does (an investor update for a media buyer) is left to
+ * its address, which INDEX.md names.
+ */
+function qualityCardsFor(pack: BuiltPack): Set<string> {
+  const index = pack.files.find(f => f.path === "tools/quality/cards/INDEX.md")?.content ?? "";
+  const rows = index.split("\n").map(l => l.split("|").map(s => s.trim())).filter(c => c.length >= 3 && /^tools\/quality\/cards\/.+\.md$/.test(c[2]) && c[0] !== "_any");
+  const candidates: RouteCandidate[] = rows.map(([id, aliases, path]) => ({ path, kind: "skill" as const, name: `${id.replace(/-/g, " ")} ${aliases}`, text: "" }));
+  const words = (s: string) => ` ${s.toLowerCase().replace(/[^a-z0-9/]+/g, " ").trim()} `;
+  const phrases = rows.map(([id, aliases, path]) => ({ path, names: [id.replace(/-/g, " "), ...aliases.split(",")].map(words).filter(n => n.trim().includes(" ")) }));
+  const out = new Set(["tools/quality/cards/_any.md", "tools/quality/cards/INDEX.md"]);
+  for (const job of pack.routes.filter(r => r.kind === "job")) {
+    const hay = words(`${job.name} ${job.text}`);
+    for (const p of phrases) if (p.names.some(n => hay.includes(n))) out.add(p.path);
+    const hit = bestRoute(`${pack.manifest.title} ${job.name}`, candidates, 2);
+    if (hit) out.add(hit.candidate.path);
+  }
+  return out;
+}
+
+/** The access summary the core carries: the levels and every safety section whole, the tools by name, the rest by address. */
+export function accessSummary(access: string, url: string): string {
+  const sections = markdownSections(access);
+  const keep = /access levels|safety|never ask|before anything goes live|access i have|action log|no tools/i;
+  const out: string[] = [];
+  const tools: string[] = [], elsewhere: string[] = [];
+  for (const s of sections) {
+    if (!s.heading || keep.test(s.heading)) { out.push(s.text); continue; }
+    if (/tool/i.test(s.heading)) {
+      for (const m of s.text.matchAll(/^\*\*([^*\n]+?)\*\*/gm)) if (!tools.includes(m[1].replace(/[.:]$/, ""))) tools.push(m[1].replace(/[.:]$/, ""));
+    }
+    elsewhere.push(s.heading);
+  }
+  out.push([
+    "## The rest of the access file",
+    "",
+    `${tools.length ? `The tools I work with: ${tools.join("; ")}. ` : ""}What each level lets me do in each tool, how to connect it${elsewhere.length ? ` and the rest (${elsewhere.join("; ")})` : ""} are in the full access file: ${url}. Open it before you use or ask for a tool.`,
+  ].join("\n"));
+  return out.join("\n\n");
+}
+
+/** One card block of a module file (cards.ts moduleMarkdown) by its id, without its "Asked as" line. */
+function cardBlocks(md: string): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const block of md.replace(/\r\n?/g, "\n").split(/^## /m).slice(1)) {
+    const id = /^Card ([A-Z]{2,4}-\d{4})\./m.exec(block)?.[1];
+    if (id) out.set(id, `## ${dropAskedAs(block).trim()}`);
+  }
+  return out;
+}
+
+/**
+ * The card digest: the cards of the agent's own modules its jobs need most, best first and job by job, within a
+ * character budget and ONE_FILE_BUDGET.digestCards. Each job skill's brief (its title, what it delivers and its
+ * keywords, with the agent's title) goes through prepare-job's ranking (src/modules/knowledge/prepare.ts: multi-query,
+ * rerank, near-duplicates dropped); the jobs take turns, so each gets its share. Empty when the agent works in no module.
+ */
+function cardDigest(pack: BuiltPack, modules: PackFile[], budget: number, maxCards: number, urls: string[], mcp: string): { text: string; cards: number } {
+  if (!modules.length || budget <= 0) return { text: "", cards: 0 };
+  const cards = modules.flatMap(f => cardsFromModuleMarkdown(/([A-Z]{2,4})\.md$/.exec(f.path)![1], f.content));
+  const blocks = new Map(modules.flatMap(f => [...cardBlocks(f.content)]));
+  if (!cards.length) return { text: "", cards: 0 };
+  const prep = new JobPrep(cards);
+  const titleOf = (path: string) => {
+    const md = pack.files.find(f => f.path === path)?.content ?? "";
+    return heading(md.replace(/^﻿?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "")) ?? path.split("/")[1].replace(/-/g, " ");
+  };
+  const ask = (brief: string) => prep.prepare(brief, { k: 25 }).picks.map(p => p.card.id);
+  // The agent's own deliverables (playbook.md, "What I deliver") say what its jobs are for this agent, so they are the
+  // briefs; a job skill no deliverable names is asked by its own words. Last, the agent's work in general.
+  const playbook = pack.files.find(f => f.path === "playbook.md")?.content ?? "";
+  const delivers = /^## What I deliver\n([\s\S]*?)(?=^## |(?![\s\S]))/m.exec(playbook)?.[1] ?? "";
+  const outcomes = [...delivers.matchAll(/^- \*\*(.+?)\*\*: (.+?)(?: \(job: (.+?)\))?$/gm)].map(x => ({ title: x[1], text: x[2], job: x[3] ?? "" }));
+  const jobRoutes = pack.routes.filter(r => r.kind === "job");
+  const jobs = [
+    ...outcomes.map(o => ({ title: o.title, ids: ask(`${pack.manifest.title}. ${o.title}. ${o.text}`) })),
+    ...jobRoutes.filter(r => !outcomes.some(o => o.job === titleOf(r.path))).map(r => ({ title: titleOf(r.path), ids: ask(`${pack.manifest.title}. ${r.text}\n${r.name}`) })),
+  ];
+  const tagline = playbook.split("\n").find(l => l.trim() && !l.startsWith("#")) ?? "";
+  jobs.push({ title: `${upperFirst(pack.manifest.title)} work in general`, ids: ask(`${pack.manifest.title}. ${tagline}`) });
+  const intro = [
+    `${DIGEST_MARK}: the knowledge cards my jobs use most =====`,
+    "",
+    "# Card digest",
+    "",
+  ];
+  // Two cards that say nearly the same thing (two sources, one finding) take one place: the first one found.
+  const words = new Map(cards.map(c => [c.id, new Set(tokens(`${c.claim} ${c.text}`))]));
+  const near = (a: string, b: string) => { const x = words.get(a)!, y = words.get(b)!; let n = 0; for (const w of x) if (y.has(w)) n++; return n / (x.size + y.size - n || 1) > 0.4; };
+  const picked = new Set<string>();
+  const byJob = new Map<number, string[]>();
+  let used = 0;
+  for (let rank = 0, more = true; more && picked.size < maxCards; rank++) {
+    more = false;
+    for (let j = 0; j < jobs.length && picked.size < maxCards; j++) {
+      const id = jobs[j].ids[rank];
+      if (!id) continue;
+      more = true;
+      if (picked.has(id) || !blocks.has(id) || [...picked].some(p => near(p, id))) continue;
+      const size = blocks.get(id)!.length + 2;
+      if (used + size > budget) { more = false; break; }
+      picked.add(id);
+      used += size;
+      byJob.set(j, [...(byJob.get(j) ?? []), id]);
+    }
+  }
+  if (!picked.size) return { text: "", cards: 0 };
+  const codes = modules.map(f => /([A-Z]{2,4})\.md$/.exec(f.path)![1]);
+  intro.push(
+    `The ${picked.size} cards my jobs need most, out of the ${cards.length} in my own modules (${codes.join(", ")}), grouped by the piece of work they serve best. Each card is one claim with when it holds, when it fails, its numbers and its source tier (1 platform documentation, 2 large-sample research, 3 a named practitioner with receipts, 4 opinion). Check "Holds when" against this business before you use a card, and re-check anything time-sensitive before a buyer sees it.`,
+    "",
+    `The full modules are at ${urls.join(", ")}. To find a card that is not here, use the AI Blocks connector (${mcp}): \`ask_agent_knowledge\` searches my pack and \`get_agent_file\` reads one file of it. In a coding app, \`node tools/ask-knowledge.mjs "<question>"\` does the same. If you can do neither, the pack does not have it here: decide from the brief or ask, and never fill the gap from memory.`,
+  );
+  const sections = [...byJob].sort((a, b) => a[0] - b[0]).map(([j, ids]) => [`## For: ${jobs[j].title}`, ...ids.map(id => blocks.get(id)!.replace(/^## /, "### "))].join("\n\n"));
+  return { text: [intro.join("\n"), ...sections].join("\n\n"), cards: picked.size };
+}
+
+/**
+ * <id>.txt: the agent in one plain text file, for chat apps (ChatGPT, Claude, Gemini) where one attachment is the
+ * quickest start. Plain .txt, because every chat app takes it (Gemini's list of file types does not name .md). Agent
+ * packs only. It is built for a context window, not as a copy of the zip:
+ * - The core first, in ONE_FILE_ORDER: operating instructions, the method (with the intake), the output policy, the
+ *   foundation questions, an access summary, the toolbox, the job skills, who the agent is and what it knows. Each file starts after a
+ *   "===== FILE: <path> =====" line; each skill's SKILL.md is left out when skills.md holds them all.
+ * - Then the card digest (cardDigest), then the reference files the method points to, then whatever else fits within
+ *   ONE_FILE_BUDGET.fillTokens: the role's prompts and workflows, the best library items (inlineItems at most), and so on.
+ * - Every other file is named by its web address wherever a part mentions it: the whole card modules, other modules,
+ *   skills, principles, toolbox items, sources. The head says how to open one (the page, or the AI Blocks connector).
+ *   Scripts never go in (a chat app cannot run them), and the head says once what to do instead.
+ * Nothing is cut from a file that goes in: a file is in whole, or it is an address.
  */
 export function oneFileText(pack: BuiltPack, origin: string = ORIGIN, inlineItems: number = ONE_FILE_ITEMS): string {
   if (pack.kind !== "agent") throw new PackBuildError(`only agent packs have a one-file version, not ${pack.kind} packs`);
-  const m = pack.manifest, site = origin.replace(/\/+$/, "");
-  const bundled = pack.files.some(f => f.path === "skills.md");
-  // Scripts stay out (a chat app cannot run them); every reference to one points at its public copy instead.
-  const kept = new Set(pack.files.filter(f => f.path.startsWith("tools/") && !isToolScript(f.path)).map(f => f.path.slice("tools/".length)));
-  // The toolbox's library items: the best few for this agent are here in full; the rest are named by address, so the
-  // file stays small enough to attach to a chat. Each address is one known page, not a search.
+  const m = pack.manifest, site = origin.replace(/\/+$/, ""), mcp = `${site}/mcp`;
+  const has = new Set(pack.files.map(f => f.path));
+  const bundled = has.has("skills.md");
+  const method = has.has("METHOD.md") ? "METHOD.md" : "WORK-METHOD.md";
+  const order = ONE_FILE_ORDER.map(g => g.part === "method" ? [method] : g.paths.filter(p => !(bundled && p === "skills/*/SKILL.md")));
+  const scripts = pack.files.filter(f => isToolScript(f.path)).map(f => f.path.slice("tools/".length));
+  // Own modules: their cards feed the digest, and the whole file is an address.
+  const modules = pack.files.filter(f => f.source === "vertical" && /^knowledge\/[^/]+\/[A-Z]{2,4}\.md$/.test(f.path) && !f.purpose.startsWith(SEARCH_ONLY));
+  const cardsKept = qualityCardsFor(pack);
+  const candidates = pack.files.filter(f => !NOT_IN_ONE_FILE.has(f.path) && !f.path.startsWith("build/") && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)));
+  const coreRank = (path: string) => { const i = order.findIndex(ps => ps.some(p => pathMatches(p, path))); return i < 0 ? -1 : i * 100 + orderOf(order[i], path); };
+  const core = candidates.filter(f => coreRank(f.path) >= 0 && !(method === "METHOD.md" && f.path === "WORK-METHOD.md")).sort((a, b) => coreRank(a.path) - coreRank(b.path) || byPath(a.path, b.path));
+  const isQualityCard = (p: string) => p.startsWith("tools/quality/cards/");
+  const rankIn = (list: string[]) => (a: PackFile, b: PackFile) => orderOf(list, a.path) - orderOf(list, b.path) || byPath(a.path, b.path);
+  const reference = candidates.filter(f => !core.includes(f) && orderOf(ONE_FILE_REFERENCE, f.path) >= 0).sort(rankIn(ONE_FILE_REFERENCE));
+  const second = candidates.filter(f => !core.includes(f) && !reference.includes(f) && orderOf(ONE_FILE_SECOND, f.path) >= 0 && (!isQualityCard(f.path) || cardsKept.has(f.path)))
+    .sort(rankIn(ONE_FILE_SECOND));
+  // What may fill the rest: the role's own tools, then the best library items, then any other file (sources, principles,
+  // skills of the library), but never a whole card module, another module, the baseline or a quality card for other work.
   const items = pack.files.filter(f => f.source === "toolbox");
-  const inline = new Set((pack.toolbox?.top ?? []).filter(p => items.some(f => f.path === p)).slice(0, inlineItems));
-  const away = items.filter(f => !inline.has(f.path)).map(f => f.path);
-  // A vertical agent's library: its own modules' cards and toolbox stay in the file; the baseline of other modules,
-  // the sources list and the vendored open-source skills are named by address, so the file stays attachable.
-  // So do the library modules the agent searches but does not work in (SEARCH_ONLY), and the compact card index.
-  const verticalAway = pack.files.filter(f => /^knowledge\/[^/]+\/(vendor\/|baseline\.md$|sources\.md$|card-index\.md$)/.test(f.path) || (f.source === "vertical" && f.purpose.startsWith(SEARCH_ONLY)));
-  const verticalUrl = new Map(verticalAway.map(f => [f.path, `${site}${fileUrl(pack, f)}`]));
-  const byAddress = (text: string) => {
-    let out = away.length ? text.replace(/(?<![\w/.-])toolbox\/[a-z]+\/[a-z0-9-]+\.md\b/g, p => inline.has(p) || !away.includes(p) ? p : `${site}/packs/${p}`) : text;
-    if (verticalUrl.size) out = out.replace(/(?<![\w/.:-])knowledge\/[a-z0-9-]+\/[\w./-]+\.md\b/g, p => verticalUrl.get(p) ?? p);
-    return out;
+  const top = (pack.toolbox?.top ?? []).filter(p => items.some(f => f.path === p)).slice(0, inlineItems);
+  const never = (f: PackFile) => modules.includes(f) || isQualityCard(f.path) || (f.source === "toolbox" && !top.includes(f.path))
+    || /^knowledge\/[^/]+\/(vendor\/|baseline\.md$|sources\.md$|card-index\.md$|[A-Z]{2,4}\.md$)/.test(f.path) || (f.source === "vertical" && f.purpose.startsWith(SEARCH_ONLY));
+  const extraRank = (f: PackFile) => { const i = orderOf(ONE_FILE_EXTRA, f.path); if (i >= 0) return i; const t = top.indexOf(f.path); return t >= 0 ? 10 + t : 100; };
+  const extra = candidates.filter(f => !core.includes(f) && !reference.includes(f) && !second.includes(f) && !never(f) && f.path !== "LICENSE.md")
+    .sort((a, b) => extraRank(a) - extraRank(b) || byPath(a.path, b.path));
+  const license = candidates.find(f => f.path === "LICENSE.md");
+
+  // Every agent-facing file that is not a part is named by its address wherever a part mentions it. A shared library
+  // file (toolbox/ and knowledge/ paths served at /packs/<path>) keeps its short path: the head gives the rule once,
+  // and the connector's get_agent_file takes the path as it is. So do the pack's own scripts: the head says once where
+  // they are and what to do in a chat app, instead of a note at each of their 80 or more mentions.
+  const atPacks = (x: PackFile) => /^(toolbox|knowledge)\//.test(x.path) && fileUrl(pack, x) === `/packs/${x.path}`;
+  const example = pack.files.find(x => modules.includes(x)) ?? pack.files.find(x => atPacks(x));
+  const renderers = new Map<string, (f: PackFile) => string>();
+  const rendererFor = (inside: Set<string>) => {
+    const key = [...inside].sort(byPath).join("\n");
+    const known = renderers.get(key);
+    if (known) return known;
+    const kept = new Set([...[...inside].filter(p => p.startsWith("tools/")).map(p => p.slice("tools/".length)), ...scripts]);
+    const away = pack.files.filter(x => !inside.has(x.path) && !NOT_IN_ONE_FILE.has(x.path) && !x.path.startsWith("tools/") && !atPacks(x) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(x.path)));
+    const urls = new Map(away.map(x => [x.path, `${site}${fileUrl(pack, x)}`]));
+    const names = [...urls.keys()].sort((a, b) => b.length - a.length).map(p => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const re = names.length ? new RegExp(`(?<![\\w/.:-])(?:${names.join("|")})(?![\\w/-])`, "g") : null;
+    const render = (f: PackFile): string => {
+      let text = resolveToolRefs(f.content, kept, site);
+      if (re) text = text.replace(re, p => urls.get(p) ?? p);
+      if (f.path === "access.md") text = accessSummary(text, `${site}${fileUrl(pack, f)}`);
+      if (f.path.startsWith("knowledge/")) text = dropAskedAs(text);
+      return `===== FILE: ${f.path}${f.path === "access.md" ? " (summary)" : ""} =====\n\n${text.trim()}`;
+    };
+    renderers.set(key, render);
+    return render;
   };
-  const files = pack.files
-    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)) && !(f.source === "toolbox" && !inline.has(f.path)) && !verticalUrl.has(f.path))
-    .sort((a, b) => Number(b.path === "AGENTS.md") - Number(a.path === "AGENTS.md"));
-  const head = [
-    `# ${m.name}, ${m.title}: the whole agent in one file`,
-    "",
-    `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
-    "",
-    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}${verticalUrl.size ? ` The knowledge library's other modules, baseline cards, card index, sources list and open-source skills are pages at the addresses given where they are named; open one only when you need it.` : ""}`,
-    "",
-    `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
+  const partText = (inside: Set<string>, f: PackFile) => rendererFor(inside)(f);
+
+  const head = (digestCards: number, inside: Set<string>) => {
+    const inItems = items.filter(f => inside.has(f.path)).length;
+    return [
+      `# ${m.name}, ${m.title}: the agent in one file`,
+      "",
+      `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
+      "",
+      `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}`,
+      "",
+      `How this file is laid out: first the core, which is how ${m.name} works and asks, the output rules, a summary of access, the toolbox, the job skills, who ${m.name} is and what ${m.name} knows. ${digestCards ? `Then a digest of the ${digestCards} knowledge cards ${m.name}'s jobs use most. ` : ""}Then the knowledge map and the reference files the method points to. Every other file of the pack is named where a part mentions it${items.length > inItems ? `, including ${inItems ? `${items.length - inItems} of the ${items.length}` : `all ${items.length}`} library items toolbox.md names` : ""}: a path that starts with knowledge/ or toolbox/ and is not a part here is the page at ${site}/packs/ followed by that path${example ? ` (so \`${example.path}\` is ${site}/packs/${example.path})` : ""}, and any other file is named by its full web address. Open one only when the job needs it. If you cannot open web pages, use the AI Blocks connector (${mcp}): \`get_agent_file\` reads one file of the pack by its path and \`ask_agent_knowledge\` searches the pack. With neither, ask the person to paste the page, or work from what is here and say what you could not open.`,
+      "",
+      `Steps that need a coding app: ${method === "METHOD.md" ? "METHOD.md says, under \"Coding app or chat app\", what runs where and what to do by hand in a chat app. " : ""}${scripts.length ? `The scripts (${scripts.map(x => x.replace(/\.(mjs|cjs|js)$/, "")).join(", ")}) are in the pack folder, and each is also on the web: \`tools/${scripts[0]}\` is at ${site}/tools/${scripts[0]}, and so on. ` : ""}${method === "METHOD.md" ? "Never say a script ran when it did not." : "Scripts run only in a coding app such as Claude Code, Codex or Cursor, with the pack folder. In a chat app, do each of those steps by hand: work out numbers with the app's code tool if it has one, or else show each sum; find cards in the digest or through the connector; run each check yourself from the file that describes it. Then say in your own message which checks you did by hand. Never say a script ran when it did not."}`,
+      "",
+      `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
+    ].join("\n");
+  };
+
+  // Sizes first, with every file outside the core and the first reference files as an address (the longest each part
+  // can be), so what comes after gets only the room that is left; the final text is never longer. The claims on the
+  // room, in order: the core, the first reference files and the licence; the digest up to digestMinCards; each second
+  // reference file that fits; the digest up to digestCards; then each extra that fits.
+  const budget = ONE_FILE_BUDGET.fillTokens * ONE_FILE_BUDGET.charsPerToken;
+  const fixed = [...core, ...reference, ...(license ? [license] : [])];
+  const base = new Set(fixed.map(f => f.path));
+  const sizeOf = (f: PackFile) => partText(base, f).length + 2;
+  const fixedChars = head(ONE_FILE_BUDGET.digestCards, base).length + fixed.reduce((n, f) => n + sizeOf(f), 0);
+  const moduleUrls = modules.map(f => `${site}${fileUrl(pack, f)}`);
+  const digestOf = (space: number, max: number) => cardDigest(pack, modules, space - 2, max, moduleUrls, mcp);
+  const digestSize = (d: { text: string }) => (d.text ? d.text.length + 2 : 0);
+  let room = budget - fixedChars;
+  const floor = digestSize(digestOf(room, ONE_FILE_BUDGET.digestMinCards));
+  room -= floor;
+  const inside = new Set(base);
+  const take = (list: PackFile[]) => list.filter(f => {
+    const size = sizeOf(f);
+    if (size > room) return false;
+    room -= size;
+    inside.add(f.path);
+    return true;
+  });
+  const seconds = take(second);
+  const digest = digestOf(room + floor, ONE_FILE_BUDGET.digestCards);
+  room += floor - digestSize(digest);
+  const extras = take(extra);
+  const parts = [
+    ...core.map(f => partText(inside, f)),
+    ...(digest.text ? [digest.text] : []),
+    ...[...reference, ...seconds, ...extras, ...(license ? [license] : [])].map(f => partText(inside, f)),
   ];
-  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${byAddress(resolveToolRefs(f.content, kept, site)).trim()}`);
-  return normalizeText([head.join("\n"), ...parts].join("\n\n"));
+  return normalizeText([head(digest.cards, inside), ...parts].join("\n\n"));
+}
+
+/** What the build gate reads from a one-file text: its size, its core (before the digest) and where each rule file starts. */
+export interface OneFileStats {
+  chars: number; tokens: number; coreChars: number; coreTokens: number; digestCards: number;
+  /** Where each rule file starts, as a share of the file (0 to 1); null when the file has none. */
+  depth: { agents: number | null; method: number | null; intake: number | null; outputPolicy: number | null };
+  /** The budget lines this file breaks, in plain words; empty when it is within budget. */
+  problems: string[];
+}
+export function oneFileStats(text: string): OneFileStats {
+  const at = (path: string) => { const i = text.search(new RegExp(`^===== FILE: ${path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} =====$`, "m")); return i < 0 ? null : i / text.length; };
+  const digestAt = text.indexOf(`\n${DIGEST_MARK}`);
+  // The core ends at the digest, or (an agent with no card modules has none) at the first part outside ONE_FILE_ORDER.
+  const patterns = ONE_FILE_ORDER.flatMap(g => g.paths);
+  const after = [...text.matchAll(/^===== FILE: (.+?)(?: \(summary\))? =====$/gm)].find(x => orderOf(patterns, x[1]) < 0);
+  const coreChars = digestAt >= 0 ? digestAt : after?.index !== undefined ? after.index - 1 : text.length;
+  const depth = {
+    agents: at("AGENTS.md"),
+    method: at("METHOD.md") ?? at("WORK-METHOD.md"),
+    intake: at("METHOD.md") ?? at("tools/quality/INTAKE.md") ?? at("INTAKE.md"),
+    outputPolicy: at("OUTPUT-POLICY.md"),
+  };
+  const digest = digestAt < 0 ? "" : text.slice(digestAt);
+  const digestCards = (digest.match(/^Card [A-Z]{2,4}-\d{4}\./gm) ?? []).length;
+  const b = ONE_FILE_BUDGET, problems: string[] = [];
+  const coreLimit = /^===== FILE: traction-playbook.md =====$/m.test(text.slice(0, coreChars)) ? b.megaCoreTokens : b.coreTokens;
+  if (tokensOf(coreChars) > coreLimit) problems.push(`core before the digest is about ${tokensOf(coreChars)} tokens, over ${coreLimit}`);
+  if (tokensOf(text.length) >= b.totalTokens) problems.push(`the whole file is about ${tokensOf(text.length)} tokens, not under ${b.totalTokens}`);
+  for (const [name, d] of Object.entries(depth)) {
+    if (d === null && name !== "intake") problems.push(`${name} is missing`);
+    else if (d !== null && d > b.ruleDepth) problems.push(`${name} starts at ${(d * 100).toFixed(1)}% of the file, past ${b.ruleDepth * 100}%`);
+  }
+  return { chars: text.length, tokens: tokensOf(text.length), coreChars, coreTokens: tokensOf(coreChars), digestCards, depth, problems };
 }
 
 type BuiltFile = { url: string; bytes: number; version: string };

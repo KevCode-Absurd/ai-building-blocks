@@ -36,12 +36,12 @@ test('copy provides a role-only setup prompt and task-based hiring explains acce
  await expect(page.getByTestId('role-goal')).not.toBeVisible();
 });
 
-test('the saved brand file is added to the copied message on this device only',async({page,context})=>{
+test('the saved org context is added to the copied message on this device only',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'No remote calls'}}));
  const posts:string[]=[];page.on('request',r=>{if(r.method()==='POST')posts.push(r.url());});
  await page.addInitScript(()=>localStorage.setItem('abb:business',JSON.stringify({name:'Sprout',sells:'Plant care kits',reach:'local',area:'north Leeds',goal:'More customers or bookings'})));
- await page.goto('/roles/design-specialist');await expect(page.getByTestId('base-specialist-brand')).toContainText('Your brand file is added when you copy');
+ await page.goto('/roles/design-specialist');await expect(page.getByTestId('base-specialist-brand')).toContainText('Your org context is added when you copy');
  await page.getByTestId('base-specialist-message').click();await expect(page.getByTestId('base-specialist-copied')).toBeVisible();
- const message=await page.evaluate(()=>navigator.clipboard.readText());expect(message).toContain('Sprout');expect(message).toContain('Local, around north Leeds');expect(message).toContain('including my brand file');
+ const message=await page.evaluate(()=>navigator.clipboard.readText());expect(message).toContain('Sprout');expect(message).toContain('Local, around north Leeds');expect(message).toContain('including my org context');
  expect(posts).toEqual([]);
 });

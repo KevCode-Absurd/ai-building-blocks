@@ -1090,7 +1090,7 @@
     "updated": "2026-11-15"
   },
   "darlene-support-lead": {
-    "hash": "530e896f0d19b25ad339040cb51a999ba967d7081e29517dd3c3ffee4a3c1bb3",
+    "hash": "f2348cfd314ff8ab444d4cc26ea50f27d3a3d75b096c7a7aa94540bf68a18cf5",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -1330,12 +1330,12 @@
     "updated": "2026-11-15"
   },
   "dustin-ad-deployment": {
-    "hash": "89c9ba9a077e3986924131821f0a6e97bcb89ec046f3c99fde24490e54ee5994",
+    "hash": "fc7455b25f786c5a212e32ca1b463b469473d29b8e68f1266b8f832d83ad1035",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
   "dustin-ad-deployment-train": {
-    "hash": "aa854a1ee4714c52c7a8d3f574eae40293c204823be65113747792b4deab1226",
+    "hash": "fa00de896f107a6f4fa5d2b942297753d6fdc3987a30fe3041d79fd335fcaa62",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -1680,7 +1680,7 @@
     "updated": "2026-11-15"
   },
   "funmilayo-customer-research": {
-    "hash": "c5cbe014187a7c9e71794df81ffeed80f9834e5a6369915f6790ebd5d7f5724f",
+    "hash": "4d164d01e9d142e7eb38f8cb28e249a66e8d88df898cea6a98caacbc7383ced1",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2040,7 +2040,7 @@
     "updated": "2026-11-15"
   },
   "hemant-store-finance": {
-    "hash": "60f03ac4765a6a40d0ecdd239d632c55e03463d2009ea40bf746b0fd22a1bc58",
+    "hash": "5235c3d53b65b601c6e77b571ff76d5bb5ac1f44c668f213e3efb8bd41675426",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2170,7 +2170,7 @@
     "updated": "2026-11-15"
   },
   "ilona-bot-security": {
-    "hash": "ba4bec1a2fed04bfef788ef5e44eaa45b95a52e767e1a72f2faa6a6afee2155c",
+    "hash": "c01b6c83c0e95787665a824c7d91df75949a2f8dc48a02d6dcbaf7473e74c7fb",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2320,12 +2320,12 @@
     "updated": "2026-11-15"
   },
   "jared-performance-marketing": {
-    "hash": "a6c782bd1176e3a02eae3a6824adbabb208d3f7f96acfbe20697f161277840b7",
+    "hash": "e43cf72b66e2eba7ead1d76dc4d0a0485bc684e45d5d574355112148c22e190f",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
   "jared-performance-marketing-train": {
-    "hash": "f0ed6a0270639170acc52268722e52b93975d7ea7743aa6b5971bf657071df94",
+    "hash": "5c52854284cf45d59e3983e92d933e692c581c7518fe701f45458ecd628eb63a",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2500,7 +2500,7 @@
     "updated": "2026-11-15"
   },
   "juliet-merchandising": {
-    "hash": "e6159385e2dc7d448e573aa37895941b00c2bf3e41bb151a29c156784eeb90b9",
+    "hash": "5af28d858c4533cf7db6aef6a62df46a468d0414ce4001720161370078edc9ca",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2740,12 +2740,12 @@
     "updated": "2026-11-15"
   },
   "kofi-ad-copy": {
-    "hash": "8f2989e96a62daaf7224f584cc289492f270cfea10a0a805ea352774975e9151",
+    "hash": "07b4c116cbb2da826601792478e2aeaa43ad3f34a84d5b18b3421a7fcdd9f357",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
   "kofi-ad-copy-train": {
-    "hash": "4b0c22004d71e24106f448d46bf5104bfed4c441a11940a6e7789c1e7d0a2e8e",
+    "hash": "513c7af2339693a6ea66021a027bf550284b06fd84887fabdd1cbc79b87bf023",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -2830,7 +2830,7 @@
     "updated": "2026-11-15"
   },
   "latoya-post-purchase": {
-    "hash": "cb6b107ccccd06d3fa99ca96c65db84271715054f620091e32ffe499f93351dc",
+    "hash": "fa2d41827ae6b716090089af1b5b5e4e560b98438e9cfd602ad0061b5aa020b1",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -3120,7 +3120,7 @@
     "updated": "2026-11-15"
   },
   "margaret-job-orchestrator": {
-    "hash": "ac651a2c7abef80094cd2f64ca10888ae06c536c0e813818e76c8da45de61bc7",
+    "hash": "f2a3f5e517b48904aaf43157c862ae39f1c32b27cce82465dce67eb6e5616a53",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -3710,7 +3710,7 @@
     "updated": "2026-11-15"
   },
   "omar-inventory-planning": {
-    "hash": "315a7954fd0fa22701850501a7744295e3ce93575fac395eb2c1c3c3b4089cf4",
+    "hash": "24f610b9d9a79d0cba6033acbe41e02110e36241af73602a8d3c8f66c7f207c3",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -4140,7 +4140,7 @@
     "updated": "2026-11-15"
   },
   "revathi-product-research": {
-    "hash": "0f6de4ffaa580a8dd3e980c2cb30c04b41691fe59efcdd9190d89c8166f09475",
+    "hash": "7a4276338193e7795fcebee500e00f806279c11de64c11836e6fe12ca5be1871",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -4260,7 +4260,7 @@
     "updated": "2026-11-15"
   },
   "rohan-chat-sales": {
-    "hash": "4e9c8eb957cc04c17413c85084087b1d16439ea38fe718dc06bc967e315b1b00",
+    "hash": "8eff6954e6d00eea0dfc9dec30e1927044615c7242054489588dbd5228986a67",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -4500,7 +4500,7 @@
     "updated": "2026-11-15"
   },
   "shannon-market-research": {
-    "hash": "06c423dfdf702e745d02028cf484db8ece035c3eb5c67cca60a1ee90c3606bd2",
+    "hash": "f362d6e86763ca3a0ea82c67d963477bc31f889f00c3210fa4f18e73cc4a123f",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -4590,7 +4590,7 @@
     "updated": "2026-11-15"
   },
   "sipho-product-hunter": {
-    "hash": "b255af2df8176958e01f4beba85b46d99b55f21826eeca165029345b2a95e8bb",
+    "hash": "b352f43a619886436b3e664e092e03018f74be1c55dd2b88db426d7052902cd5",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -4870,7 +4870,7 @@
     "updated": "2026-11-15"
   },
   "thanh-product-sourcing-lead": {
-    "hash": "41e4ff604d9c96ae94abb7beacc8ec0b581cc400c036b8290cdf22660750b8fb",
+    "hash": "fef457175457c918c9214cb21909a7b503d52c3f84f82b95181e9dec424be536",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -5440,12 +5440,12 @@
     "updated": "2026-11-15"
   },
   "zara-tiktok-ads": {
-    "hash": "2bb355400281f6d13995f38006e994cf17d1e70708c314d7e8a0fb8e2e93544c",
+    "hash": "9b9bc4466bfe3dcbf5c55331bce81b4b4e5deebba78e2fdc87d53ff2b9e18fa3",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
   "zara-tiktok-ads-train": {
-    "hash": "fa0b7709929a1c1be9965881a724464024f9675eb3437633aec6f8e94bafe97b",
+    "hash": "d31b80f13043a7e2d8c5ca1ccda3d9bec5458e2e4e996e02103a302b4201db39",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },
@@ -5460,7 +5460,7 @@
     "updated": "2026-11-15"
   },
   "zhenyu-sourcing": {
-    "hash": "74afc17b57911af9f9f6dfb2436bf4e2329715f6deedf4f5e8a00fd513921607",
+    "hash": "3ff7eac9666a195cacd8340b472c463b6784a2f87f05f6386cb5cf75da2c3a4a",
     "version": "2026.11.15",
     "updated": "2026-11-15"
   },

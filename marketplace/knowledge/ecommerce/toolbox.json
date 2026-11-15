@@ -5815,7 +5815,7 @@
         "ref": "skill:store-meta-attribution",
         "type": "skill",
         "use": "check",
-        "when": "When Facebook and Instagram (Meta) report far more or fewer sales than the store's orders, the owner asks how much of Meta's ROAS to believe, or before a Meta budget decision. Not for repairing the pixel or Conversions API.",
+        "when": "Before an ad account read, a budget change or a creative call that rests on Meta's reported sales: check which attribution setting each campaign uses and how much of the credit is view-through. Not for repairing the pixel or Conversions API.",
         "tune": "Give it the attribution setting on each campaign plus Meta's compare-attribution and incremental columns next to Shopify new-customer sales. Expect catalog and retargeting ads to shrink most on an incremental view, and expect the click-window gap to widen in November (ADC-0010, ADC-0046).",
         "cards": [
           "ADC-0027",

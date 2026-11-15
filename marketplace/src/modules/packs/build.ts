@@ -1278,11 +1278,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   // Capture and check tools: in agent packs only (zip and files.json; the one-file version links to them). A training
   // pack is uploaded back to the studio, which takes text files only, so it links to the public copies instead.
   // They capture and check a brand, so only brand-facing roles carry them (brandFacing); any other role carries just
-  // the ones its role kit or its own method names, so a pack never points at a tool it lacks.
+  // the ones its role kit, its own method or its vertical knowledge (the journey maps) names, so a pack never points
+  // at a tool it lacks.
   const department = role?.department ?? persona.area;
   const families = [...new Set(jts.map(familyOf))];
   const brand = brandFacing(department, families);
-  const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? ""].join("\n");
+  const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? "", ...personaVerticalFiles(persona, input.vertical).map(f => f.content)].join("\n");
   const toolDrafts: Draft[] = agent
     ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
       .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))

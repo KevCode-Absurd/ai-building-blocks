@@ -3,7 +3,7 @@
 // writes fake answers and fake verdicts (a "judge" that always prefers the code arm), then checks that the
 // fixtures, leak guard, sheets, scoring, round comparison and the image dry run behave.
 //
-//   node scripts/selftest.mjs [--keep] [--no-code-arm]
+//   node scripts/selftest.mjs [--keep] [--no-code-arm] [--packs <dist/packs folder>]
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync, readFileSync, readdirSync, writeFileSync, existsSync, cpSync } from "node:fs";
 import os from "node:os";
@@ -38,7 +38,7 @@ ok(extractPrompts("x\n```image-prompts\n[{\"id\":1,\"prompt\":\"a dog\"}]\n```\n
 // 3. a tiny round
 const pick = ["E04", "E16", "E32", "E33"];
 const arms = A["no-code-arm"] ? "plain,chat" : "plain,chat,code";
-node("make-sheets.mjs", "prompts", "--round", "T1", "--tasks", pick.join(","), "--arms", arms, "--runs", "3");
+node("make-sheets.mjs", "prompts", "--round", "T1", "--tasks", pick.join(","), "--arms", arms, "--runs", "3", ...(A.packs ? ["--packs", path.resolve(A.packs)] : []));
 const runsDir = path.join(tmp, "T1", "runs");
 const prompt = readFileSync(path.join(runsDir, "E04", "plain", "r1", "PROMPT.md"), "utf8");
 ok(!/women 65\+ buy|Year six Jack video|keys\//i.test(prompt), "plain prompt has no key material");
@@ -54,6 +54,13 @@ for (const t of pick) for (const arm of arms.split(",")) for (const k of [1, 2, 
     (t === "E16" ? "\n```image-prompts\n" + JSON.stringify([1, 2, 3, 4, 5].map(i => ({ id: i, prompt: `dog in harness ${i}`, on_image_text: "Walk on", aspect: "1:1", why: "won before" }))) + "\n```\n" : "");
   writeFileSync(path.join(runsDir, t, arm, `r${k}`, "answer.md"), body);
 }
+writeFileSync(path.join(runsDir, "E32", "chat", "r1", "answer.md"), "# Reorder\n\nOrder 6,000 units. Budget: $X a day.\n");
+writeFileSync(path.join(runsDir, "E32", "plain", "r1", "answer.md"), "# Reorder\n\nOrder now. Show \"you're $X away from free shipping\" in the cart. Hi [name], thanks.\n");
+const asOut = node("asserts.mjs", "--round", "T1");
+const asMeta = r => JSON.parse(readFileSync(path.join(runsDir, "E32", r, "r1", "meta.json"), "utf8")).asserts;
+ok(asMeta("chat").pass_all === false && asMeta("chat").checks.no_placeholders.pass === false, "code checks catch a placeholder");
+ok(asMeta("plain").checks.no_placeholders.pass === true, "code checks pass merge fields and live cart values");
+ok(/answers pass every hard check/.test(asOut), "code checks run over a whole round");
 // a run that read a file outside its folder is audited as contaminated and left out of judging
 const bad = path.join(runsDir, "E04", "plain", "r3");
 writeFileSync(path.join(bad, "run.jsonl"), [
@@ -77,8 +84,10 @@ execFileSync(process.execPath, ["-e", `require("fs").mkdirSync(${JSON.stringify(
 const g = n => ({ on_brand: n, principles: n, logic: n, backed: n, outcome: n, actionable: n, insight: n });
 for (const [id, s] of Object.entries(key)) {
   let v;
-  if (s.type === "single") v = { sheet: id, grades: g(4 + 2 * rank[s.arm] - (s.run === "r3" ? 1 : 0)), reasons: {}, unbacked_claims: [] };
-  if (s.type === "checker") v = { sheet: id, checks: [1, 2, 3].map(n => ({ n, result: s.arm === "code" || (s.arm === "chat" && s.run !== "r2") ? "pass" : "fail" })), signals: [{ n: 1, result: "acted" }], decoys: [], false_signals: [] };
+  if (s.type === "single") v = { sheet: id, rubric: "test", judge_model: "claude-test-1",
+    subchecks: { backed: { k1_numbers_trace: "yes", k2_nothing_invented: s.arm === "plain" && s.run === "r1" ? "no" : "yes", k3_sources_sound: "n/a" }, on_brand: { b4_no_cannot_say: "yes" } },
+    critique: { on_brand: "quote" }, grades: g(4 + 2 * rank[s.arm] - (s.run === "r3" ? 1 : 0)), unbacked_claims: [], would_act_on_it_today: s.arm === "plain" ? "no" : "yes" };
+  if (s.type === "checker") v = { sheet: id, checks: [1, 2, 3].map(n => ({ n, result: s.arm === "code" || (s.arm === "chat" && s.run !== "r2") ? "pass" : "fail" })), signals: [{ n: 1, result: "acted" }], decoys: [], false_signals: [], first_failure: s.arm === "code" ? "none" : "decide" };
   if (s.type === "pairwise") v = { sheet: id, A: g(7), B: g(6), winner: rank[s.A] > rank[s.B] ? "A" : "B", margin: "clear", reason: "test" };
   writeFileSync(path.join(vdir, `${id}.json`), JSON.stringify(v));
 }
@@ -92,6 +101,43 @@ if (!A["no-code-arm"]) ok(S.by_arm.all.chat.pass3 === 0, "chat pass^3 is 0% when
 ok(S.by_arm.all.plain.spread_mean > 0, "spread is reported");
 ok(S.knowledge_lift.some(l => l.arm === top && l.principles > 0), "knowledge lift is positive for the better arm");
 ok(existsSync(path.join(tmp, "T1", "tune-reasons.md")) && !/E33/.test(readFileSync(path.join(tmp, "T1", "tune-reasons.md"), "utf8")), "tune reasons written, no held-out task in it");
+ok(S.by_arm.all.plain.must_pass_rate < 1 && S.by_arm.all[top].must_pass_rate === 1, "must-pass gate fails a run where the judge found something invented");
+ok(S.by_arm.all[top].pass_line.on_brand === 1 && S.by_arm.all.plain.pass_line.on_brand === 0, "pass-line share per grade is reported");
+ok(S.by_arm.all.plain.sub_yes.k2_nothing_invented < 1, "sub-check yes rates are reported");
+ok(S.judge_models["claude-test-1"] > 0, "judge model ids are recorded");
+ok((S.first_failures.plain?.decide ?? 0) > 0 && !S.first_failures[top], "checker first failures are counted");
+ok(S.by_arm.all.chat.asserts_pass_rate < 1, "code-check pass rate is reported");
+ok(/Pass line, must-pass gate and code checks/.test(readFileSync(path.join(tmp, "T1", "SCORE.md"), "utf8")), "SCORE.md has the pass line section");
+
+// owner review sample and judge agreement
+const pk = node("review.mjs", "pick", "--round", "T1", "--n", "12");
+const queue = JSON.parse(readFileSync(path.join(tmp, "T1", "review", "queue.json"), "utf8")).items;
+ok(queue.length > 0 && queue.every(q => q.task !== "E33") && /queued for review/.test(pk), "review sample has tune answers only");
+ok(queue.every(q => ["train", "dev", "test"].includes(q.split)), "every review item has a fixed split");
+// the owner agrees with the judge exactly: catch rate and pass rate are both 100%
+const labelLines = queue.map(q => { const v = JSON.parse(readFileSync(path.join(vdir, q.single + ".json"), "utf8"));
+  return JSON.stringify({ id: q.id, task: q.task, arm: q.arm, run: q.run, single: q.single, checker: q.checker, split: q.split,
+    grades: Object.fromEntries(Object.entries(v.grades).map(([k, n]) => [k, n >= 7 ? "pass" : "fail"])), act: q.arm === "plain" ? "no" : "yes", note: "test" }); });
+writeFileSync(path.join(tmp, "T1", "review", "owner-labels.jsonl"), labelLines.join("\n") + "\n");
+node("agreement.mjs", "--round", "T1", "--split", "all", "--boot", "200");
+const AG = JSON.parse(readFileSync(path.join(tmp, "T1", "agreement.json"), "utf8")).measures;
+ok(AG.on_brand.n === queue.length && (AG.on_brand.catch === 1 || AG.on_brand.owner_fails === 0) && (AG.on_brand.pass === 1 || AG.on_brand.owner_passes === 0), "agreement is 100% when the owner and the judge agree");
+ok(AG.act_today.n === queue.length, "act-today agreement is measured");
+node("review.mjs", "notes", "--round", "T1");
+ok(existsSync(path.join(tmp, "T1", "review", "notes.md")) && existsSync(path.join(tmp, "T1", "review", "failure-taxonomy.md")), "owner notes are exported for grouping");
+// judge sheets carry the rubric version, and owner examples come only from the train split of tune tasks
+const trainLabel = JSON.stringify({ id: "x", task: "E04", split: "train", grades: { on_brand: "fail" }, act: "no", note: "Missed the gift buyers." });
+const heldLabel = JSON.stringify({ id: "y", task: "E33", split: "train", grades: { on_brand: "fail" }, act: "no", note: "HELDOUT NOTE" });
+writeFileSync(path.join(tmp, "ex.jsonl"), trainLabel + "\n" + heldLabel + "\n");
+node("make-sheets.mjs", "sheets", "--round", "T1", "--examples", path.join(tmp, "ex.jsonl"), "--pairs", "code:plain", "--pair-runs", "r1");
+const sdir = path.join(tmp, "T1", "sheets", "single");
+const sheetText = readFileSync(path.join(sdir, readdirSync(sdir)[0]), "utf8");
+ok(/Missed the gift buyers/.test(sheetText) && !/HELDOUT NOTE/.test(sheetText), "owner critiques from train tune labels reach judge sheets; held-out never does");
+ok(/"rubric": "2026-11-16"/.test(sheetText) && sheetText.indexOf('"subchecks"') < sheetText.indexOf('"grades"'), "single sheet asks for sub-checks before grades, with the rubric version");
+const pw = readdirSync(path.join(tmp, "T1", "sheets", "pairwise")).length;
+ok(pw === 4 * 2, `--pair-runs r1 keeps one run per pair (${pw} sheets)`);
+const judgeSh = readFileSync(path.join(tmp, "T1", "run-judges.sh"), "utf8");
+ok(/claude -p "Read sheets\//.test(judgeSh) && /save-verdict\.mjs/.test(judgeSh), "judge commands put the prompt right after -p and record the model");
 
 // 4. compare rounds: same scores = no gain; a held-out drop = do not promote; a tune gain with held-out held = promote
 cpSync(path.join(tmp, "T1"), path.join(tmp, "T2"), { recursive: true });
@@ -105,6 +151,14 @@ s2.by_arm.heldout[top] = { ...(s2.by_arm.heldout[top] ?? {}), owner_mean: (S.by_
 writeFileSync(path.join(tmp, "T2", "score.json"), JSON.stringify(s2));
 code = 0; try { node("compare-rounds.mjs", "--base", "T1", "--cand", "T2", "--arm", top); } catch (e) { code = e.status; }
 ok(code === 1, "a held-out drop blocks promotion");
+// a held-out must-pass drop alone blocks promotion
+const s3 = JSON.parse(readFileSync(path.join(tmp, "T1", "score.json"), "utf8"));
+cpSync(path.join(tmp, "T1"), path.join(tmp, "T3"), { recursive: true });
+s3.by_arm.tune[top].owner_mean += 0.5;
+if (s3.by_arm.heldout[top]) s3.by_arm.heldout[top].must_pass_rate = (S.by_arm.heldout[top]?.must_pass_rate ?? 1) - 0.2;
+writeFileSync(path.join(tmp, "T3", "score.json"), JSON.stringify(s3));
+code = 0; outp = ""; try { outp = node("compare-rounds.mjs", "--base", "T1", "--cand", "T3", "--arm", top); } catch (e) { code = e.status; outp = e.stdout; }
+ok(!S.by_arm.heldout[top] || (code === 1 && /must-pass rate fell/.test(outp)), "a held-out must-pass drop blocks promotion");
 
 // 5. image renderer dry run sends nothing
 const dry = node("render-images.mjs", "--round", "T1", "--tasks", "E16", "--arms", arms);

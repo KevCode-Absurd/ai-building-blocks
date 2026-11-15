@@ -10,6 +10,25 @@ export const ROUNDS = path.join(SUITE, "rounds");
 export const GRADES = ["on_brand", "principles", "logic", "backed", "outcome", "actionable", "insight"];
 export const WEIGHTS = { on_brand: 0.20, principles: 0.15, logic: 0.15, backed: 0.15, outcome: 0.15, actionable: 0.12, insight: 0.08 };
 export const IMAGE_GRADES = ["on_brand", "design", "persona", "product", "errors"];
+// Bump when the grades section of RUBRIC.md changes. Every sheet and verdict carries it, so rounds judged on
+// different rubrics are never compared until judge agreement has been checked again.
+export const RUBRIC_VERSION = "2026-11-16";
+// A grade at or above this counts as "the owner would accept this" when judges are checked against owner labels.
+export const PASS_LINE = 7;
+// The yes/no sub-checks the judge answers before it scores each grade (ids match RUBRIC.md).
+export const SUBCHECKS = {
+  on_brand: ["b1_voice", "b2_look", "b3_persona", "b4_no_cannot_say"],
+  principles: ["p1_method", "p2_core_applied", "p3_no_basic_break"],
+  logic: ["l1_follows", "l2_no_contradiction", "l3_tradeoff_named"],
+  backed: ["k1_numbers_trace", "k2_nothing_invented", "k3_sources_sound"],
+  outcome: ["o1_answers_ask", "o2_first_order", "o3_second_order"],
+  actionable: ["a1_first_screen", "a2_no_placeholders", "a3_plain_words", "a4_act_today"],
+  insight: ["i1_non_obvious", "i2_turned_into_move"],
+};
+// The must-pass gate: a run fails it if the judge says "no" to one of these, or the checker says a decoy was taken.
+export const MUST_PASS = ["k2_nothing_invented", "b4_no_cannot_say"];
+// Sub-check answers: "yes", "no" or "n/a". Anything else counts as not answered.
+export const yn = v => { const s = String(v ?? "").trim().toLowerCase(); return s === "yes" || s === "no" || s === "n/a" ? s : null; };
 export const AGENT_ARMS = ["chat", "code"];
 
 export function args(argv = process.argv.slice(2)) {
@@ -121,4 +140,15 @@ export function extractPrompts(answer) {
     try { const j = JSON.parse(b.trim()); if (Array.isArray(j)) return j.filter(x => x && typeof x.prompt === "string"); } catch { /* try next */ }
   }
   return [];
+}
+
+// ------------------------------------------------------------------ owner labels (review.mjs, agreement.mjs)
+// Each label falls in train (15%), dev (45%) or test (40%) by a fixed hash of its answer, so splits never move.
+export function splitOf(id) { const n = parseInt(sha256(`split:${id}`).slice(0, 8), 16) % 100; return n < 15 ? "train" : n < 60 ? "dev" : "test"; }
+
+export function latestLabels(file) {
+  const out = {};
+  if (!existsSync(file)) return out;
+  for (const l of readFileSync(file, "utf8").split(/\r?\n/)) { if (!l.trim()) continue; try { const j = JSON.parse(l); out[j.id] = j; } catch { /* skip a torn line */ } }
+  return out;
 }

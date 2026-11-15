@@ -7,9 +7,13 @@
 //
 // Writes rounds/<R>/score.json and rounds/<R>/SCORE.md, and rounds/<R>/tune-reasons.md (judge and checker
 // reasons for TUNE tasks only, for the improvement loop). Held-out tasks are reported as numbers only.
+// Also reported: the share of runs at or above the pass line per grade, how often each yes/no sub-check is "yes",
+// the must-pass gate (nothing invented, no claim the brand cannot make, no decoy taken), the free code checks from
+// asserts.mjs, the checker's first-failure counts, which judge models ran, and task flags (always passed: graduate
+// it; never passed: check its key).
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { ROUNDS, GRADES, IMAGE_GRADES, args, loadTasks, ownerScore, readJson, mean, r2, pct, rng, writeFile } from "./lib.mjs";
+import { ROUNDS, GRADES, IMAGE_GRADES, SUBCHECKS, MUST_PASS, PASS_LINE, args, loadTasks, ownerScore, readJson, mean, r2, pct, rng, writeFile, yn } from "./lib.mjs";
 
 const A = args();
 if (!A.round) { console.error("usage: score.mjs --round <name>"); process.exit(2); }
@@ -28,6 +32,8 @@ const missing = { single: 0, checker: 0, pairwise: 0 };
 const pairs = {};         // pair -> task -> list of outcomes ("x", "y", "tie")
 const lengthDuels = { decided: 0, longerWon: 0 };
 const reasons = [];
+const judgeModels = {};
+const firstFailures = {}; // arm -> kind -> count
 
 for (const [id, s] of Object.entries(KEY)) {
   const v = verdict(id);
@@ -35,7 +41,10 @@ for (const [id, s] of Object.entries(KEY)) {
     if (!v?.grades) { missing.single++; continue; }
     const r = R(s.task, s.arm, s.run); r.grades = v.grades; r.owner = ownerScore(v.grades); r.words = s.words;
     r.unbacked = (v.unbacked_claims ?? []).length;
-    if (tasks[s.task]?.split === "tune") reasons.push({ task: s.task, arm: s.arm, run: s.run, kind: "judge", reasons: v.reasons, unbacked: v.unbacked_claims });
+    r.sub = {}; for (const g of GRADES) for (const c of SUBCHECKS[g]) { const a = yn(v.subchecks?.[g]?.[c]); if (a) r.sub[c] = a; }
+    r.act = String(v.would_act_on_it_today ?? "").toLowerCase();
+    if (v.judge_model) judgeModels[v.judge_model] = (judgeModels[v.judge_model] ?? 0) + 1;
+    if (tasks[s.task]?.split === "tune") reasons.push({ task: s.task, arm: s.arm, run: s.run, kind: "judge", critique: v.critique ?? v.reasons, subchecks_no: Object.entries(r.sub).filter(([, a]) => a === "no").map(([c]) => c), unbacked: v.unbacked_claims });
   } else if (s.type === "checker") {
     if (!v?.checks) { missing.checker++; continue; }
     const r = R(s.task, s.arm, s.run);
@@ -46,6 +55,8 @@ for (const [id, s] of Object.entries(KEY)) {
     r.check = { pass: checks.length > 0 && checks.every(c => c === "pass") && decoysTaken === 0 && falseSig === 0,
       checkPassRate: checks.filter(c => c === "pass").length / Math.max(1, checks.length),
       signalsActed: sig.filter(x => x === "acted").length, signals: tasks[s.task]?.signal_count ?? sig.length, decoysTaken, falseSig };
+    const ff = String(v.first_failure ?? "").toLowerCase().trim();
+    if (ff && ff !== "none") { const m = (firstFailures[s.arm] ??= {}); m[ff] = (m[ff] ?? 0) + 1; }
     if (tasks[s.task]?.split === "tune") reasons.push({ task: s.task, arm: s.arm, run: s.run, kind: "checker", fails: v.checks.filter(c => String(c.result).toLowerCase() !== "pass"), decoys: v.decoys, false_signals: v.false_signals });
   } else if (s.type === "pairwise") {
     if (id > s.twin) continue; // handle each twin pair once
@@ -59,6 +70,18 @@ for (const [id, s] of Object.entries(KEY)) {
     if (out !== "tie") { lengthDuels.decided++; const wa = out === "x" ? x : y, la = out === "x" ? y : x; if (s.words[wa] > s.words[la]) lengthDuels.longerWon++; }
     if (tasks[s.task]?.split === "tune") reasons.push({ task: s.task, pair: s.pair, run: s.run, kind: "pairwise", outcome: out === "x" ? x : out === "y" ? y : "tie", reasons: [v.reason, v2.reason] });
   }
+}
+
+// ---------------------------------------------------------------- code checks (asserts.mjs) from run meta
+const runsDir = path.join(RD, "runs");
+for (const r of Object.values(runs)) {
+  const m = path.join(runsDir, r.task, r.arm, r.run, "meta.json");
+  if (existsSync(m)) { const a = JSON.parse(readFileSync(m, "utf8")).asserts; if (a) r.asserts = a; }
+}
+// must-pass gate per run: nothing invented, no claim the brand cannot make (judge), no decoy taken (checker)
+for (const r of Object.values(runs)) {
+  if (!r.grades && !r.check) continue;
+  r.mustPass = MUST_PASS.every(c => r.sub?.[c] !== "no") && !(r.check && r.check.decoysTaken > 0);
 }
 
 // ---------------------------------------------------------------- per task x arm
@@ -77,6 +100,11 @@ const taskArm = Object.entries(cells).map(([k, rs]) => {
     check_pass_rate: checked.length ? r2(mean(checked.map(r => r.check.checkPassRate))) : null,
     signal_recall: checked.length && t?.signal_count ? r2(mean(checked.map(r => r.check.signalsActed / t.signal_count))) : null,
     decoys_taken: checked.reduce((a, r) => a + r.check.decoysTaken, 0), false_signals: checked.reduce((a, r) => a + r.check.falseSig, 0),
+    must_pass_rate: r2(mean(rs.filter(r => r.mustPass !== undefined).map(r => (r.mustPass ? 1 : 0)))),
+    pass_line: Object.fromEntries(GRADES.map(x => { const v = rs.map(r => Number(r.grades?.[x])).filter(n => n > 0); return [x, v.length ? r2(v.filter(n => n >= PASS_LINE).length / v.length) : null]; })),
+    sub_yes: Object.fromEntries(Object.values(SUBCHECKS).flat().map(c => { const v = rs.map(r => r.sub?.[c]).filter(a => a === "yes" || a === "no"); return [c, v.length ? r2(v.filter(a => a === "yes").length / v.length) : null]; })),
+    asserts_pass_rate: r2(mean(rs.filter(r => r.asserts).map(r => (r.asserts.pass_all ? 1 : 0)))),
+    asserts_fails: rs.flatMap(r => Object.entries(r.asserts?.checks ?? {}).filter(([, c]) => !c.pass).map(([k]) => k)),
     words: r2(mean(rs.map(r => r.words).filter(Boolean))) };
 }).sort((a, b) => (a.task + a.arm).localeCompare(b.task + b.arm));
 
@@ -89,8 +117,20 @@ function rollup(filter) {
       spread_mean: r2(mean(rs.map(r => r.spread).filter(Number.isFinite))), pass3: p3.length ? r2(p3.filter(r => r.pass3).length / p3.length) : null, pass3_tasks: p3.length,
       pass_rate: r2(mean(rs.map(r => r.pass_rate).filter(Number.isFinite))), signal_recall: r2(mean(rs.map(r => r.signal_recall).filter(Number.isFinite))),
       decoys_taken: rs.reduce((a, r) => a + r.decoys_taken, 0), false_signals: rs.reduce((a, r) => a + r.false_signals, 0),
-      grades: Object.fromEntries(GRADES.map(g => [g, r2(mean(rs.map(r => r.grades[g]).filter(Number.isFinite)))])) }];
+      grades: Object.fromEntries(GRADES.map(g => [g, r2(mean(rs.map(r => r.grades[g]).filter(Number.isFinite)))])),
+      must_pass_rate: r2(mean(rs.map(r => r.must_pass_rate).filter(Number.isFinite))),
+      asserts_pass_rate: r2(mean(rs.map(r => r.asserts_pass_rate).filter(Number.isFinite))),
+      pass_line: Object.fromEntries(GRADES.map(g => [g, r2(mean(rs.map(r => r.pass_line[g]).filter(Number.isFinite)))])),
+      sub_yes: Object.fromEntries(Object.values(SUBCHECKS).flat().map(c => [c, r2(mean(rs.map(r => r.sub_yes[c]).filter(Number.isFinite)))])) }];
   }));
+}
+
+// ---------------------------------------------------------------- task flags: saturated or possibly broken
+const flags = [];
+for (const id of Object.keys(tasks)) {
+  const rs = Object.values(runs).filter(r => r.task === id && r.check);
+  if (rs.length >= 6 && rs.every(r => r.check.pass)) flags.push({ task: id, split: tasks[id].split, flag: "always passed", note: "every arm passed every run: graduate it to the regression set and add a harder task" });
+  if (rs.length >= 6 && rs.every(r => !r.check.pass)) flags.push({ task: id, split: tasks[id].split, flag: "never passed", note: "no arm passed any run: check the key, the checks and the fixtures before blaming the arms" });
 }
 
 // ---------------------------------------------------------------- win rates, job-level bootstrap
@@ -150,7 +190,7 @@ if (existsSync(ikeyFile)) {
 
 const score = { round: A.round, scored: new Date().toISOString(), missing, by_arm: { all: rollup(() => true), tune: rollup(r => r.split === "tune"), heldout: rollup(r => r.split === "heldout") },
   by_area: Object.fromEntries([...new Set(taskArm.map(r => r.area))].map(a => [a, rollup(r => r.area === a)])),
-  wins, knowledge_lift: lift, length: { ...lengthDuels, longer_won_share: lengthDuels.decided ? r2(lengthDuels.longerWon / lengthDuels.decided) : null }, cost, images, by_task: taskArm };
+  wins, knowledge_lift: lift, flags, judge_models: judgeModels, first_failures: firstFailures, pass_line: PASS_LINE, length: { ...lengthDuels, longer_won_share: lengthDuels.decided ? r2(lengthDuels.longerWon / lengthDuels.decided) : null }, cost, images, by_task: taskArm };
 writeFile(path.join(RD, "score.json"), JSON.stringify(score, null, 1));
 
 // ---------------------------------------------------------------- report
@@ -162,6 +202,18 @@ for (const split of ["all", "tune", "heldout"]) {
   for (const [arm, s] of Object.entries(score.by_arm[split])) L.push(`| ${arm} | ${GRADES.map(g => s.grades[g] ?? "n/a").join(" | ")} |`);
   L.push("");
 }
+L.push("## Pass line, must-pass gate and code checks", "", `Share of runs with each grade at ${PASS_LINE} or more (the owner would accept it), the must-pass gate (nothing invented, no claim the brand cannot make, no decoy taken) and the free code checks.`, "");
+for (const split of ["all", "tune", "heldout"]) {
+  L.push(`### ${split}`, "", "| Arm | Must-pass | Code checks | " + GRADES.join(" | ") + " |", "|---|---|---|" + GRADES.map(() => "---").join("|") + "|");
+  for (const [arm, s] of Object.entries(score.by_arm[split])) L.push(`| ${arm} | ${s.must_pass_rate == null ? "n/a" : pct(s.must_pass_rate)} | ${s.asserts_pass_rate == null ? "n/a" : pct(s.asserts_pass_rate)} | ${GRADES.map(g => (s.pass_line[g] == null ? "n/a" : pct(s.pass_line[g]))).join(" | ")} |`);
+  L.push("");
+}
+L.push("### Sub-checks answered yes (all tasks)", "", "| Sub-check | " + Object.keys(score.by_arm.all).join(" | ") + " |", "|---|" + Object.keys(score.by_arm.all).map(() => "---").join("|") + "|");
+for (const c of Object.values(SUBCHECKS).flat()) L.push(`| ${c} | ${Object.values(score.by_arm.all).map(s => (s.sub_yes[c] == null ? "n/a" : pct(s.sub_yes[c]))).join(" | ")} |`);
+L.push("", "### Where failed runs first went wrong (checker)", "", "| Arm | " + ["read", "diagnose", "decide", "number", "decoy", "deliver"].join(" | ") + " |", "|---|---|---|---|---|---|---|");
+for (const [arm, m] of Object.entries(firstFailures)) L.push(`| ${arm} | ${["read", "diagnose", "decide", "number", "decoy", "deliver"].map(k => m[k] ?? 0).join(" | ")} |`);
+L.push("", `Judge models seen: ${Object.keys(judgeModels).length ? Object.entries(judgeModels).map(([m, n]) => `${m} (${n})`).join(", ") : "not recorded"}.`, "");
+if (flags.length) { L.push("### Task flags", "", "| Task | Split | Flag | What to do |", "|---|---|---|---|"); for (const f of flags) L.push(`| ${f.task} | ${f.split} | ${f.flag} | ${f.note} |`); L.push(""); }
 L.push("## Win rate (both orders must agree; ties excluded from the share)", "", "| Pair (first arm's share) | Split | Tasks | Wins | Losses | Ties | Share | 95% interval (tasks resampled) |", "|---|---|---|---|---|---|---|---|");
 for (const [pair, w] of Object.entries(wins)) for (const split of ["all", "tune", "heldout"]) { const s = w[split]; L.push(`| ${pair} | ${split} | ${s.tasks} | ${s.wins} | ${s.losses} | ${s.ties} | ${s.share === null ? "n/a" : pct(s.share)} | ${s.ci95 ? `${pct(s.ci95[0])} to ${pct(s.ci95[1])}` : "n/a"} |`); }
 L.push("", "## By area (owner score, pass^3)", "", "| Area | Arm | Tasks | Owner score | Worst of 3 | pass^3 |", "|---|---|---|---|---|---|");

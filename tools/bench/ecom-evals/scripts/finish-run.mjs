@@ -7,14 +7,21 @@
 //   node scripts/finish-run.mjs <run folder>
 import { existsSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import path from "node:path";
+import { assertRun } from "./asserts.mjs";
+import { loadTasks } from "./lib.mjs";
 
 const dir = path.resolve(process.argv[2] ?? ".");
 const log = path.join(dir, "run.jsonl");
 if (!existsSync(log)) { console.error(`no ${log}`); process.exit(2); }
 const events = readFileSync(log, "utf8").split(/\r?\n/).filter(Boolean).map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
 const result = [...events].reverse().find(e => e.type === "result") ?? {};
+const init = events.find(e => e.type === "system" && e.subtype === "init") ?? {};
 const outside = [], web = [], tools = {};
-const inside = p => { const r = path.relative(dir, path.resolve(dir, p)); return r === "" || (!r.startsWith("..") && !path.isAbsolute(r)); };
+const native = p => p.replace(/^\/([a-zA-Z])\//, (_, d) => `${d.toUpperCase()}:/`);
+const slug = dir.replace(/[:\\/]/g, '-').toLowerCase();
+const ownHarness = p => { const n = native(p).replace(/\\/g, '/').toLowerCase(); return n.includes(`/${slug}/`) && (n.includes('/.claude/projects/') || n.includes('/appdata/local/temp/claude/')); };
+const upIntoRun = p => { const m = /^\.\.[\\/]([^\\/]+)/.exec(p); return !!m && existsSync(path.join(dir, m[1])); };
+const inside = p => { if (ownHarness(p) || upIntoRun(p)) return true; const r = path.relative(dir, path.resolve(dir, native(p))); return r === "" || (!r.startsWith("..") && !path.isAbsolute(r)); };
 for (const e of events) {
   const content = e.type === "assistant" ? e.message?.content ?? [] : [];
   for (const c of content) {
@@ -34,7 +41,9 @@ const answer = path.join(dir, "answer.md");
 if (!existsSync(answer) || !statSync(answer).size) writeFileSync(answer, result.result ?? "");
 const metaPath = path.join(dir, "meta.json");
 const meta = existsSync(metaPath) ? JSON.parse(readFileSync(metaPath, "utf8")) : {};
-Object.assign(meta, { finished: new Date().toISOString(), usage: result.usage ?? null, cost_usd: result.total_cost_usd ?? null, num_turns: result.num_turns ?? null,
+Object.assign(meta, { finished: new Date().toISOString(), model_resolved: init.model ?? null, usage: result.usage ?? null, cost_usd: result.total_cost_usd ?? null, num_turns: result.num_turns ?? null,
   is_error: result.is_error ?? null, tool_calls: tools, audit: { outside_reads: outside, web, contaminated: outside.length > 0 || web.length > 0 } });
 writeFileSync(metaPath, JSON.stringify(meta, null, 1));
-console.log(`${path.basename(path.dirname(path.dirname(dir)))}/${path.basename(path.dirname(dir))}/${path.basename(dir)}: ${meta.audit.contaminated ? "CONTAMINATED " + JSON.stringify(meta.audit) : "clean"}`);
+// Free code checks on the answer (they measure; they never keep a run out of judging).
+const asserted = assertRun(dir, loadTasks().find(t => t.id === meta.task));
+console.log(`${path.basename(path.dirname(path.dirname(dir)))}/${path.basename(path.dirname(dir))}/${path.basename(dir)}: ${meta.audit.contaminated ? "CONTAMINATED " + JSON.stringify(meta.audit) : "clean"}${asserted && !asserted.pass_all ? " (code checks: " + Object.entries(asserted.checks).filter(([, c]) => !c.pass).map(([k]) => k).join(", ") + ")" : ""}`);

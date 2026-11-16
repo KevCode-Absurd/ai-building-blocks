@@ -90,13 +90,13 @@ Put the product and any approved person first, then light or style, then any lay
 ### 3. Write the prompt in a fixed order
 
 1. **Format:** "Photograph, 4:5 vertical, 1080 x 1350" (or the canvas from the layout).
-2. **Product:** "Use the attached product photo. Keep the label, colour, shape and proportions exactly as shown." Name the variant.
+2. **Product:** "Use the attached product photo. Keep the label, colour, shape and proportions exactly as shown." Name the variant. With no photo to attach (a text-only tool), the words are all the model has, so describe the product from the product facts as a camera would see it: the material and its surface (heavy cotton canvas with a dry, matte weave; brushed steel; glazed stoneware), the colour by name and hex, the cut or shape, every closure and piece of hardware, and the size against something familiar. Then name 2 or 3 things it does not have that a model is likely to add (no collar lining, no zip, no shine). Look at each output for these first: a model drifts to the most common version of the category.
 3. **Scene and setting:** one or two plain sentences of what a camera would see.
 4. **Composition:** where the product sits and which areas stay empty, from the layout ("top fifth plain and uncluttered for a headline").
 5. **Lighting, angle, depth:** one phrase each.
 6. **Palette:** hex codes with plain names ("#1F3A2E deep forest green").
 7. **Mood and style:** two words for mood, one phrase for style.
-8. **Text:** "No text, letters, logos or watermarks anywhere." If a few words must appear, put them in quotes, five words or fewer (practitioner default, test it), and plan a real-type fallback.
+8. **Text:** "No text, letters, logos or watermarks anywhere." If a few words must appear, put them in quotes, five words or fewer (practitioner default, test it), and plan a real-type fallback. When a form, a tool or a hand-over file has its own field for the words on the image, that field holds only the words, exactly as they should read. No role labels ("Headline:", "CTA:"), no separators and no layout notes: a model prints whatever is in that field. Layout, type and colour go in the composition and palette lines, and the words a designer sets afterwards go in a separate note.
 
 **Settings beat words.** Where the tool has settings for shape, size or quality, set them there; writing "4K" or "8K" in a prompt sets nothing, and some tools ignore a ratio written in words. Keep the format line for tools with no settings, or as a plain statement of what the image is and where it runs ("A photoreal product ad for an online store's Instagram feed").
 

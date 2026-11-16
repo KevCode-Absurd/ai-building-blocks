@@ -97,6 +97,26 @@ test("GET /api/knowledge/ecommerce/shelf, a shelf page and one item", async () =
   assert.equal((await t.api("GET", "/api/knowledge/saas/shelf")).status, 404);
 });
 
+test("a shelf item page boots with its item and text, so it paints without waiting for the API", async () => {
+  forgetVerticals();
+  const { files } = buildShelf(input());
+  files["/packs/knowledge/ecommerce/skills/build-klaviyo-segments/SKILL.md"] = "# Klaviyo segments\n\nBuild the segments.\n";
+  const shell = `<!doctype html><html><head><meta name="viewport" content="width=device-width" /><title>x</title></head><body><div id="app"></div></body></html>`;
+  const assets = { async fetch(req: Request) {
+    const p = new URL(req.url).pathname;
+    if (p === "/" || p === "/index.html") return new Response(shell, { headers: { "content-type": "text/html" } });
+    return p in files ? new Response(files[p], { headers: { "content-type": p.endsWith(".json") ? "application/json" : "text/markdown" } }) : new Response("Not found", { status: 404 });
+  } };
+  const t = await testEnv({ ASSETS: assets as unknown as Fetcher });
+  const res = await t.api("GET", "/e-commerce/skills/build-klaviyo-segments");
+  assert.equal(res.status, 200);
+  const boot = JSON.parse(String(res.body).match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)?.[1] ?? "{}");
+  const item = boot["/api/knowledge/ecommerce/shelf/skills/build-klaviyo-segments"];
+  assert.equal(item?.item?.slug, "build-klaviyo-segments", "the item's API answer is in the page");
+  assert.match(item.text, /# Klaviyo segments/);
+  assert.ok(boot["/api/agents?vertical=ecommerce"], "the team list is in the page too");
+});
+
 // The real library, once merged: every item names only team agents and real stages, and prompts follow the house rules.
 const LIB = new URL("../knowledge/ecommerce/library/", import.meta.url);
 test("the e-commerce library files follow the shelf rules", { skip: !existsSync(new URL("prompts.json", LIB)) }, () => {

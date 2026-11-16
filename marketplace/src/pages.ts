@@ -13,7 +13,7 @@ import { agentPayload, featuredPayload, HOME_FEATURED, verticalPayload } from ".
 import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
 import { groupByNature, lowerFirst, workLine, workLineText } from "./modules/directory/work.ts";
 import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, ECOMMERCE_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
-import { verticalIndex, verticalShelf } from "./modules/knowledge/service.ts";
+import { shelfText, verticalIndex, verticalShelf } from "./modules/knowledge/service.ts";
 import { isShelfKind, SHELF_KINDS, SHELF_LABELS, type ShelfItem, type ShelfKind } from "./modules/knowledge/shelf.ts";
 import type { Persona } from "./core/types.ts";
 import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
@@ -358,6 +358,12 @@ async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<P
   const people = await listPersonas(env);
   const byId = new Map(people.map(p => [p.id, p]));
   const users = item.agents.map(id => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p);
+  // Boot the page with the same answers its API calls would return, so it paints the item at once instead of a
+  // spinner while two requests run (the shape matches GET /api/knowledge/ecommerce/shelf/:kind/:slug).
+  const text = await shelfText(env, item.path).catch(() => null);
+  const prompt = kind === "prompts" ? await shelfText(env, item.path.replace(/\.md$/, ".txt")).catch(() => null) : null;
+  const boot: Record<string, unknown> = { [`/api/agents?vertical=${ECOMMERCE}`]: verticalPayload(people, ECOMMERCE) };
+  if (text !== null) boot[`/api/knowledge/${ECOMMERCE}/shelf/${kind}/${encodeURIComponent(slug)}`] = { vertical: shelf.file.vertical, kind, item, text, ...(prompt ? { prompt } : {}) };
   const extra = kind === "prompts" ? `<h2>What you fill in</h2><ul>${(item as { fill: string[] }).fill.map(f => `<li>${esc(f)}</li>`).join("")}</ul>`
     : kind === "tools" ? `<h2>What a store uses it for</h2><ul>${(item as { jobs: string[] }).jobs.map(j => `<li>${esc(j)}</li>`).join("")}</ul>`
     : kind === "minds" ? `<h2>Questions to ask about your store</h2><ul>${(item as { questions: string[] }).questions.map(q => `<li>${esc(q)}</li>`).join("")}</ul>`
@@ -376,6 +382,7 @@ async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<P
       ] },
     ],
     body: `<p><a href="${ECOMMERCE_PATH}">E-commerce</a></p><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p>${extra}${users.length ? `<p>Used by ${users.map(p => `<a href="/agents/${p.id}">${esc(p.name)}, ${esc(p.title)}</a>`).join(", ")}.</p>` : ""}`,
+    boot,
   };
 }
 

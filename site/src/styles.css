@@ -483,6 +483,7 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 
 /* Library: formats stay visible; domain and optional work filters stay compact. */
 .library-formats { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin: 18px 0 14px; }
+.library-format-tabs { display: contents; }
 .library-formats button, .library-formats .library-format-link { display: flex; flex-direction: column; gap: 5px; min-height: 82px; padding: 14px; text-align: left; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; }
 .library-formats button > span { font: 600 17px/1.2 var(--display); }
 .library-formats small { font: 400 12px/1.4 var(--sans); color: var(--muted); }

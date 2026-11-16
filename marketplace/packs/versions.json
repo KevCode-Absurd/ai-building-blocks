@@ -80,14 +80,14 @@
     "updated": "2026-11-15"
   },
   "akosua-cost-forecast": {
-    "hash": "5e079caefb8a49588e81b3e49771e6caf133fe0186ea84e91faedd33d84edf28",
+    "hash": "6078665963979ace53dceaf65d15779da18063be7007932cdaa62b1c9bfb6369",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "akosua-cost-forecast-train": {
-    "hash": "55c1adc229130d8b1b453159bcd57bc04581bde0595555aefd63e0eda36e0002",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "e26d01db786c71433298a78ca6ae280aae6116a75714d237fbdf105d7a4a9ce8",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "alejandra-journeys": {
     "hash": "fd999b1122072959b980e2208695bb217d1ec7f7e26e73c74b750e9eee562076",
@@ -110,14 +110,14 @@
     "updated": "2026-11-15"
   },
   "alistair-packaging": {
-    "hash": "aa9efa196c82feee1802a56b0916e29fb6137f5435b772e8ad3f1fec1ee50df2",
+    "hash": "341748c5bd24458954d20b07a3c84ba32c7f7696afaccb50d17fba0b98d1b490",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "alistair-packaging-train": {
-    "hash": "9b698208f0a4c6646d5ec3bc49afa347517fad16d3575099ce96c85c0c3bed59",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "dd8f80d02700a60a5edacfe0db512f34ff8ecdb5e7132450468b2c80977a6c6f",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "alyssa-testimonials": {
     "hash": "e9963e093c61d64c870e48badd68c6f75fb4ff56bacf7f84750a83b36f947be0",
@@ -220,14 +220,14 @@
     "updated": "2026-11-15"
   },
   "annabel-landing-pages": {
-    "hash": "61fa589067900403de1c7ba6cda58d05b5f1ac011099eb4d4ac2e601ed41362b",
+    "hash": "7c3b1105b3d2ed30a9b6372833969dea32728b489835b20916eeddc6bdeb36d7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "annabel-landing-pages-train": {
-    "hash": "ae2a46485f64f232888cb16781991a430d36c537fbef2adeb499bc38b580026c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "2e068490a28e64c5127c4b80e504dc35d396f1a4a3cb09ca5c104d828e12fb5e",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "anneliese-ld-plan": {
     "hash": "6033483468858fb16db9bf5aaf0cb6714f4269682d4fa371c64a354253b4eb8c",
@@ -290,14 +290,14 @@
     "updated": "2026-11-15"
   },
   "arjun-page-speed": {
-    "hash": "cfec9e79961cf7bdab9a2cbcc4880f41fbd066253bc0a649c3c04dc298789580",
+    "hash": "75ecc3c027c4483d3b2c53feaba3f3b862f56ef1f70e1632809f53ba2b9d9037",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "arjun-page-speed-train": {
-    "hash": "5bbef6b8abbe47d6aad009df8ed1a1edd89aadb4ba509bef8f09b0885d9bdcf8",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "50905443ada322c977320ec4e7e09e5dc943dd91f169ff76ec23fff8e27a111a",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "armando-contracts": {
     "hash": "fd190d04fea15056a8d3586a30b51c97b58d16bd1560222dc4226b951d6ba565",
@@ -380,22 +380,22 @@
     "updated": "2026-11-15"
   },
   "aurelio-product-photos": {
-    "hash": "35b7dd2bbbbec7e695445b6fa23811e4bfccfcea01a7a3fc742fdf454d04eb87",
+    "hash": "77573cbf807dcfb82c6acd8145b2031d6eea447c046fd2bbbb13d1ff10ed48e0",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "aurelio-product-photos-train": {
-    "hash": "f789f076f23e87793b9b66be6d6b3da085765ecd78a2fbd9c6db607cf6be4704",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "c18bd3e007b5839a4069da6f34fb7a2babc575b78a648c889e3bc754f5698cc5",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ayaka-ad-design": {
-    "hash": "2478023d422773bc0b200f72554021da074d23690d653f6763d0103b844164d6",
+    "hash": "8acc522d9e14db881f89496a312f12e32c9edf82de496a03a81b6588949752d7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "ayaka-ad-design-train": {
-    "hash": "4c049a5c1cdf4f720ad8214bb5faaed19123115d74c91d64c613e6e866ab6b6d",
+    "hash": "b8c03a3550a92a75a8dbe6f646ffbaadeed11f3adbd26f26f0ed3a7faad929f6",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
@@ -440,14 +440,14 @@
     "updated": "2026-11-15"
   },
   "barnaby-wild-bets": {
-    "hash": "842a55a2e207505c8b7a3793fbff70fbb74c3683c1d5e36bed9c17e618447162",
+    "hash": "52ae5df90741d31bb9e96193d895507125810de6a907ccb76c142f98660fb949",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "barnaby-wild-bets-train": {
-    "hash": "c4d83c81f26a31caba1efffb61fa57a40e211992b6621960adca57c2e47ba07a",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "a2389336883e5bf1d47b89988d8139b06d32e483a3b5683dc780edd1195219f2",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "bart-legacy-refactor": {
     "hash": "4a3de5d57581a0753f44d2088e364338a61ba3b7ab4ceef2f0b33de8e515852e",
@@ -660,14 +660,14 @@
     "updated": "2026-11-15"
   },
   "brendan-offers": {
-    "hash": "5363a0ae4e09f81e8179c096982470b203260c868ed34a220a63072a1e6d1676",
+    "hash": "f039a746a49f909158942997a20a5aafe497a9ef5c78005b286f7e02fb6f3161",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "brendan-offers-train": {
-    "hash": "c8792e9320d465ce3bddb533b115a293a766078a259a164a292dec06739b6198",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "dfc7cdccda1c40389be8cdb9f691824df8bbfebf6f4beaab093ee886e72be575",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "brett-meta-store-ads": {
     "hash": "01e268dcce4e5234b2a946311eb1aa83d4f36bd926d518c021fee20b4d5537f7",
@@ -760,14 +760,14 @@
     "updated": "2026-11-15"
   },
   "callum-reporting": {
-    "hash": "f6112e03318f77fb4e000962a1c4282838922cf89a4f95b99ac6987e4c8e7ec7",
+    "hash": "1088ac2f5d4d31f1052e1bd76be96a38fbfc41df034885c72cab752439ca8fb7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "callum-reporting-train": {
-    "hash": "14c8a8be7014be740e124f56d1a364eacf4653a5a18aa2a71761e74956d5bf80",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "fa604e2df94ff883d311055452d9d2f109aa07314f3d8c6bde366c2beef36f93",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "camille-traction-ecommerce": {
     "hash": "251adf77a9ea46e524c3c6d8f8d262e03470f580105c2dcf6d205bcc37239df3",
@@ -960,14 +960,14 @@
     "updated": "2026-11-15"
   },
   "clayton-new-business": {
-    "hash": "3ffd95eb9f4bd725821e72c181446ff398fb9f8c72057132c9de5ee2dce6d45f",
+    "hash": "71066c8f4e3d79bfc6ba3e5cf9dfa52f8e5b191ddc22702b51cf46787c931a12",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "clayton-new-business-train": {
-    "hash": "f0736668830c97c078f992123a1e213e720e51dd1e233eee0d249100feb11be8",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "3f8bd165dffdc913db32c2bdc453e4f9a3d7bfce322f2c85d3d8ff5ffe22a86b",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "clifford-business-systems": {
     "hash": "d9b492b366816175d6eddd84a6e920120d169cc2cc843856e5e98eeac31acaf4",
@@ -990,14 +990,14 @@
     "updated": "2026-11-15"
   },
   "cody-video-editor": {
-    "hash": "26b608a1e1f001a01cfe7fdcdb43c61b4a1725f78a4117046ff68ab207f26076",
+    "hash": "bd79a7301759de9f45b3f6dd198eb55ee876b7a046631f05116b9978378cc225",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "cody-video-editor-train": {
-    "hash": "df84e413afc1398ef715f7b56a1c80258dd419f8dfb9c1c3fea4b3869313b455",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "37f2bfe9e41168b390532808ae07daa71d725c63e3010866384cfd21920dd566",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "colin-workspace-planner": {
     "hash": "d77183c49550ad0e08d51b3ce43d7a230eb74f7ee49383cf60e1b1f1ee588d28",
@@ -1030,14 +1030,14 @@
     "updated": "2026-11-15"
   },
   "corinne-reviews": {
-    "hash": "d4ccec4cb49e07426330ac54b201187a445f44fe77d37c68263c7adde33a6e0d",
+    "hash": "645955e942441f011d5d1e3eb2003ddeac91de85ebb585eb44e246e025e397ea",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "corinne-reviews-train": {
-    "hash": "f13b3cc9cc78aac87dfa374791247e523c00973b048abb230b0ee565b43199a4",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "7d2a61ce30711ab8322c27b9d5e43ce08e662843f040c8b28ebb136c48decae4",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "cormac-linkedin": {
     "hash": "3df971e72eae6fabfd61872595a2bbc39a01c2a2918d4d6278f3f881521f1cbb",
@@ -1150,14 +1150,14 @@
     "updated": "2026-11-15"
   },
   "darlene-support-lead": {
-    "hash": "70797e5870be1ccddddb68c8065880b56ef75cc8ff4a9550c9854a5a61a13a70",
+    "hash": "fad3d6fbb3f2faee64adc2dbc2cda0e396b9f040381f2b0877fa61b5bb476885",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "darlene-support-lead-train": {
-    "hash": "67997570dea24c77d7dae1bdd922d1d4e287cd27bd92f46b6598aab20271c570",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "ef4466b5a129e0da0dbc894278ae0173add70048654d8ca3f3d447a9bad87b6c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "darnell-sales-training": {
     "hash": "f8574696ddb1796a6dcb941688f13d76db688127721d54ec601ef03a589e050c",
@@ -1300,14 +1300,14 @@
     "updated": "2026-11-15"
   },
   "devon-video-ugc": {
-    "hash": "6c426431409310d541a0f7c0c64dd2c81809d18f3b2fe4baf9b4c0364162ae04",
+    "hash": "796dcf439ca5daf8e05263144171b42109471ea004d4363478fcc53d6a2fb20a",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "devon-video-ugc-train": {
-    "hash": "872c821152fb8850cb0ea4e67041eb4a00af2badedc3317212690e3f01eed467",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "df0effde9ecc2204b260b26c5b2a2c13c01c15cdd2e4744c200243542bf34f83",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "diego-integrations": {
     "hash": "c94fd93398cc2e2da27c48fa77f911e67d24808e30aebbeb71cbf3aa4d244d1b",
@@ -1380,14 +1380,14 @@
     "updated": "2026-11-15"
   },
   "douglas-should-cost": {
-    "hash": "cfdbbf0c9269fbcb05d96906abe04093f28efacd3dcb101239653cd2911aea7f",
+    "hash": "511fb5f17933ad006cd71444d015913ce103215605dc602a5fb9743539601a2d",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "douglas-should-cost-train": {
-    "hash": "28d69c4afd9037ac4f570615096f1bef828da44552ee792b7d37e50462967b69",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "85e4c1c59ef7c3292c4b2ce8842c06e55be32e3ebba4abff7087f1afa87d07b2",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "duane-construction-wip": {
     "hash": "ee131da2efd54b2420e731e18bf74e675dd5a0614121be97b169cab33e0ddc95",
@@ -1400,24 +1400,24 @@
     "updated": "2026-11-15"
   },
   "duncan-category-trends": {
-    "hash": "1ac47671e810a2f0c23881321aadc952a36a1a83f5c75ed3407e7d042e6397b5",
+    "hash": "90fca0f112cbe152a2edf8a84e00cf6e056be57f39067ac4e05d6f05406d0f5d",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "duncan-category-trends-train": {
-    "hash": "30ca77416c3485cf298dffb899b76fd80b4826651afa3e9d173145129cede9b8",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "594c88d52686ca9faec30515981ab53c192991f8c3fc80a1e74e6556d835e5f5",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "dustin-ad-deployment": {
-    "hash": "12bf8cff6302e4d27ff3d31ad507e6987692b39f20763f992da88f8ca8c492a6",
+    "hash": "7bfaa72481f062d77974725918b9d64a1b7e7888c41e617089819a10c169b1f6",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "dustin-ad-deployment-train": {
-    "hash": "f61dbd3ae970049ed7978a8097877167a80e2607409bdc104e7549cdb21a55e6",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "17f7b8f1036f6aab4ce2ea7af4a605e9c6f505fbf72194582fad02fc5b6d9de5",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "earl-debugger": {
     "hash": "4a815ba7068a56dabce7f20d24c8c1707c28e958d92475b0eea33144fcf16f1f",
@@ -1520,14 +1520,14 @@
     "updated": "2026-11-15"
   },
   "emre-tracking": {
-    "hash": "2f4e422d15c81b0f003d91b36b7f4fc3530e6324936ae44e3dfff26fabf52a4b",
+    "hash": "ae1bc1cc807948756bb8d04db68077b64367d79c7528c7861230b0427a815133",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "emre-tracking-train": {
-    "hash": "4410a7aa83d55e46376ccb9deb690529ab028f7eea5096cf2d8f02ab053d8437",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "e2e2e2003a7f6ecb1be999a240f131739440f3f3529f169158c6a7c65ef07539",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ernesto-page-speed": {
     "hash": "2f0ed4f48211b8a16af84f7a695b07d5f2901ec7a3c9d7873d3b2319daaac8bd",
@@ -1620,14 +1620,14 @@
     "updated": "2026-11-15"
   },
   "facundo-store-setup": {
-    "hash": "eb1b0f54d78614c8331253bd18c4ffba8ee8ae4dde1b0865bf4f16c676354850",
+    "hash": "129ffb3c546d41e138ddf0cd61a8e0e3ff9a9c218da0901b90ac2602b90b9385",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "facundo-store-setup-train": {
-    "hash": "8dd46ee86c0f02050c046e2f05f7c5941cd6ddb638269980ccd1c023737fbd35",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "cee6eddf22a3863242bfe4dd57de6d1754eb90614cd3c233603a76f278a56bdf",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "faisal-sops": {
     "hash": "91e6e4eb8aa10f15d845877c8439f01c0d45e1517761ab6e91d57e7f61651575",
@@ -1740,14 +1740,14 @@
     "updated": "2026-11-15"
   },
   "fiona-account-manager": {
-    "hash": "51a5070091e9de275212f427d23a8019d224333fa5306bc03d3fc24461ae9326",
+    "hash": "5c8686c0b6a58bce80341fd9ab46e9dcaa60516f293339374d08141143a0d7d8",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "fiona-account-manager-train": {
-    "hash": "cbf986871f23f33ff432d7453fd807d3288ee63288af2c1976eeb8b364b6cb56",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "4377cf39747de2a844d0bc47c1362a05058c0a8d930164679ef31002079618ab",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "folake-dataquality": {
     "hash": "b7d1dfc3846fb02bd3fc358536d1438f9067e09e0bb133de37d4dd7f062e6c28",
@@ -1780,14 +1780,14 @@
     "updated": "2026-11-15"
   },
   "funmilayo-customer-research": {
-    "hash": "c5d294406880890af5d4d9f20528e34f2a92f376a2cbeda0d126ab03c6471090",
+    "hash": "2e4f508c47acfb1344ead567042e4e59ff922e72f715e533e44c48171adc8447",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "funmilayo-customer-research-train": {
-    "hash": "b510e320cddd295580de5a51735fa087143988962ede4b7327530941da212d65",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "7bfd60b8b06d90b279adecd64d23c6cd896b6c34b895d7f77720f8fc25bc5066",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "gareth-account-research": {
     "hash": "8132b3e6f602c283154ad9fc5adb0b02870069ff09a540820e48477e2e7fdd57",
@@ -1800,14 +1800,14 @@
     "updated": "2026-11-15"
   },
   "garrett-amazon": {
-    "hash": "80712c1603cb7c4e0a581586ce81076c417588b97f657a1619fa211573a0ab7e",
+    "hash": "4cf7bf9142a8d60d145f3a9a499c37b1460d9f3716634ee84fcfde18a4f3cd66",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "garrett-amazon-train": {
-    "hash": "77c7e3763ce9e64b4a1563b69f7e348316ff72cafcefa683497b5e78238fda90",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "64e14289aed528b2c12c6feb7b4f30bd3b45b67f1e40569edceb6d4f1910e279",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "gaurav-accounting-firm": {
     "hash": "81a1f68cb1fb330dd3ea91f4c474319f6dbc5e70a8a22ecf5346ccdc6c58ca83",
@@ -1840,14 +1840,14 @@
     "updated": "2026-11-15"
   },
   "georgia-product-copy": {
-    "hash": "0df502f8eee462eced3f390bf49db95cb8810147d743effde009dae6ac07c092",
+    "hash": "10c43c69638fcde53cd25a69ac0af66f69d8746d75057b2e5c4cc69919364e31",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "georgia-product-copy-train": {
-    "hash": "e48d3da23ce0f6392b7521cd1e4e28c7f581063dc0a4139bea2b476e16b6b9f9",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "91e80292f4ed9ac7df0c30c196dc6570ad000022c871e5fe51834e3fe21c3f81",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "gethin-aftercare-packs": {
     "hash": "92277fe12c0ebf06e1ebe69144eaaa4f862c227d20dd3dced41bb7101f47672f",
@@ -1980,24 +1980,24 @@
     "updated": "2026-11-15"
   },
   "gretchen-store-testing": {
-    "hash": "e406a79b420dafe35a67bcf69c8894a60b452d47e961d5ccb0e6443d523faa72",
+    "hash": "9adb728fbd16e24d95b67f5037e08697e9963074486e8fc0bd5bba628bb62a57",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "gretchen-store-testing-train": {
-    "hash": "2f84c71cb3a65fb73c822f1382d181fb2079b7953236d70426ff6dffbdaedc55",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "492ad49ff4cd9fd1973552cf3e045f420bea5c3c98e903f52a82ab195ee91295",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "gurdeep-shipping-returns": {
-    "hash": "be52ea558e8163035fce009f2879e40ffe56973a76e36b55b970f82c308d7172",
+    "hash": "45cd0d48a416e6363a19bc865040d7ebb28aa7c1adc9461b955170e797104f28",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "gurdeep-shipping-returns-train": {
-    "hash": "8becb046a6fea2b4246d56650b728506b6741c8d0e29248298e5f10aa1053821",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "1aaa1d5fde644aa017aa09ac458fe662e0e59b91778ed5fb698d11bed8e8cffd",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "gustavo-dashboards": {
     "hash": "e5fc4c8376f3af7813b4b87d310745bdcea1d1a144951688bef161272831ccf1",
@@ -2150,14 +2150,14 @@
     "updated": "2026-11-15"
   },
   "hemant-store-finance": {
-    "hash": "3845dd4c51d76bdc9c50b211f6e2947f2798dc5c2d8a8260ded74cf1d02e3ed5",
+    "hash": "8d599d0d5bf9046a999a5545b32d80c1127d8e9dd2b19e0a9618cc8f73e09702",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "hemant-store-finance-train": {
-    "hash": "501c408ddea28e7fc4e1360268a32483a8957c81028ff95e8638f04030c5012c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "2ad492a6c91d965f66f9feb040559f62df9dc30fc33d815a8c5ce904743c016a",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "henrik-spec-sheets": {
     "hash": "43427fadfc827b655542a9d0049076538a43f75427fc448daa3fa9ea00fa1cb1",
@@ -2220,14 +2220,14 @@
     "updated": "2026-11-15"
   },
   "howard-copy-chief": {
-    "hash": "0d9aad2d05ebf0c75eea7af6cf87ea7da58bc1dd869f5b4a56dec8f3932f970b",
+    "hash": "f25a98417aa1dc02f92a6044d723db90857e63d8fb6e50e6da98272150563820",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "howard-copy-chief-train": {
-    "hash": "31fb32bb3b8bc6e4a96904d418f169b1fecbda0d3434ec78f29209eb0c9f25e0",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "2d2826adeb69e18bb7f77f1fd475f6598f03a7bf1d6dbfae09a0281b96b29e31",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "hugo-pipeline": {
     "hash": "d4fb7abc1679a03d61b58ade384c872439ab46408d22b82ae3a6a099fb84b725",
@@ -2290,14 +2290,14 @@
     "updated": "2026-11-15"
   },
   "ilona-bot-security": {
-    "hash": "394926dd11e492cc49d5155a6d5d04ac9c1b164424ec30ef8343ffca9b6f7455",
+    "hash": "c5969c87a6141a748514b6b5e6fa396a4f6fc9046f52f53c3af8e7cd6f01f612",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "ilona-bot-security-train": {
-    "hash": "7481d9c5aab1e24fb3acdbd971d31ccc789df52fe86988ca8ad7a56a1a379671",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "6ca5ef4bf7ebc5d539bc2e5331fa368f1a250794ec1266558d1375a584dc6f8c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ilse-kpitree": {
     "hash": "37a57009ccd0754de74252f00868e18a5acef063a5fae3c7576bda80f4987aa8",
@@ -2340,14 +2340,14 @@
     "updated": "2026-11-15"
   },
   "imogen-retention": {
-    "hash": "724b97fcbd143e928a7f54da8588cd884409b43dae1a49142f7a835226f999ed",
+    "hash": "b7990b408710eaaf774db867434ab18e97b7548c7bb33ac6cb98654f583adc47",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "imogen-retention-train": {
-    "hash": "c009565a97feefffa8d78252e3bb90e3d3c37438abbea1d906bd15ec679064f4",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "5aa156db683d922e57a74472e7b845dfdd59ac943a025029c5732fb5e3734385",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "imran-conversion": {
     "hash": "2d9dcce38659e37f96c2d2edb9a54a2dc42b5cfa184420146e17d2dea584bbd0",
@@ -2410,14 +2410,14 @@
     "updated": "2026-11-15"
   },
   "ishita-india-commerce": {
-    "hash": "7e2ba77e65f1afd67b211429e7aac594bbe0d297941a766f00c4af49f1d53997",
+    "hash": "8a5efee603ee326a20176e22e9475bcf492ba845de6eb26c955f2b97de7f688d",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "ishita-india-commerce-train": {
-    "hash": "8a4b3366cfea7798542e73b38ad0e3dedf1fa0c2d32eac14be199164dccf02b2",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "172fd2e8d4fc7fd86fe5ba6017cbcfa42c27363700128aeee6f794117f937c7a",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "itzel-redesign": {
     "hash": "cc680df987641f31d89353c4d8f4c0f3735ea119a6e2fe7921d8ec6ad92e1718",
@@ -2450,14 +2450,14 @@
     "updated": "2026-11-15"
   },
   "jared-performance-marketing": {
-    "hash": "ecbde6d24f8b2bc9b1341be60a387222219df8dc84c7ce4490f2aba80b43b76c",
+    "hash": "0de9327b9b230b5313015411362af451fbc1e8f0b18c11316bf61741f89838cb",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "jared-performance-marketing-train": {
-    "hash": "4ff02cb126770a409a669dd355e1a8d5365050306399ca1eab655b665f06907f",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "5eaef576ba526ed556c885524c68535dbf48076a524dd1b6b028bb2ad3aa00fc",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "javier-store-launch": {
     "hash": "6821d353341cb5cafea4c67280e1fbd95dd80fbfd7459f5f9135817f88b28dea",
@@ -2630,14 +2630,14 @@
     "updated": "2026-11-15"
   },
   "juliet-merchandising": {
-    "hash": "fd12865c4cb45d357623a0c68e51cf10b4bda6ff54efd559eb70dcfedbf95b2c",
+    "hash": "78b7b1549ab0763b94deaa395d3a875d834081f861f62db56f1457d554225263",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "juliet-merchandising-train": {
-    "hash": "364cddc4a2d734565d062bf9ebf9dae5b9bb30724fbf35896c9d75196a3f160c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "28def7dc8662e0f574467c0f6e2a4a0ad100bd12bba6799818e217e0b75e0d86",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "jun-ai-skills": {
     "hash": "6a698b39664a0cdc0c71bf706e609dcabadb3c4b594d7a234d6ed1fcc80afa45",
@@ -2650,14 +2650,14 @@
     "updated": "2026-11-15"
   },
   "junaid-amazon-ads": {
-    "hash": "5e9fa099760f8c0103e5a99f013dc68b9a185b491c614e24ada44f939f74f25c",
+    "hash": "d0ae9e1ee69505fc970d2c3cd5c4e2757257b83747624b8b65102b26097df969",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "junaid-amazon-ads-train": {
-    "hash": "9120a50fd24e2db4f53b5cf982e4f22c200c92421669984213ba71b52bffe85d",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "41aafa2399c5008e04aab67479dc9ed5d09f550a555a37ca669f713b4682291c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "kagiso-python": {
     "hash": "859699f063c74bc3db4618640231a0c47a7a00580422b23acc226aeeae0b25ea",
@@ -2770,22 +2770,22 @@
     "updated": "2026-11-15"
   },
   "kelsey-snapchat-ads": {
-    "hash": "b74b9de3db5484e92dc5ecfe8f7e46b9c3bd7810ec20f84d3ee1a63e1d23b9e1",
+    "hash": "4d1093883c0734f0ee16c8c26ac7aa2597cd5c1229319a9be7a581128b2afa4e",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "kelsey-snapchat-ads-train": {
-    "hash": "755494357089a0a8ecb54dcd5e8c64314649fce768af844ff71ec2727eea392c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "24ddfdba51661197644a148c9dc91653ff559ed69ba1de7ef7d84452cab8bbc0",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "kemal-creative-director": {
-    "hash": "0e5a99c2cf64ec33f735c810591c283f91d643795b5ebcd7c8c4822e3dcdc18b",
+    "hash": "7a79259cb3530f6c3cc9e1a03b1ad504a6113af2b0a45a398701241a9c5c3db7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "kemal-creative-director-train": {
-    "hash": "51c279121d7af3692c6f6e1cad914a4ade023fa54e7b05ffaf155c14d0b98762",
+    "hash": "fa2f837f5186f1948e1770238cf1919dcf9406fa45169a98bb7d2f46a63c3031",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
@@ -2890,14 +2890,14 @@
     "updated": "2026-11-15"
   },
   "kofi-ad-copy": {
-    "hash": "66568423731d0a3d279c70a0ffe863eefb4b2a2cbd9eb10ec41e618c15cfc817",
+    "hash": "e84c0fb01dff449acdc497269fe62589d529236e8ad0b189e571054290229d1f",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "kofi-ad-copy-train": {
-    "hash": "b6fdb0e40e14cb7b2e8cc420f905bf5ea5276d860049a74016df9f610489aef9",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "2122dad55da0d1182862f66dc6b2435600b20ad64c80ec0d19b24ae02cad8b45",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "kojo-competitor-analysis": {
     "hash": "d1deef61bfff8bee5407381f0bdfe79a4865afa5799bf70c7f17db0fe871baa3",
@@ -2970,14 +2970,14 @@
     "updated": "2026-11-15"
   },
   "larissa-store-ux": {
-    "hash": "1a5a4af6ed6ca7db8fec52c93260755f6b0d8ef350479ba388be14d08ef186c9",
+    "hash": "9fcb90f5e214ecc9642b201827f50ef672801fdc915138fbda4e2f565bdab45e",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "larissa-store-ux-train": {
-    "hash": "c3225821680f42fa6a293087883b91739a7571868f596b2138427b628ee22acf",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "e5b8334d62d9bd73404d893d689b16c092eabd95422a8a328092eb97e3f84502",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "lars-export-markets": {
     "hash": "13e6e5c67eb33523cced973749061880db09c609d9ef574fa9d38b17ce54a54c",
@@ -2990,14 +2990,14 @@
     "updated": "2026-11-15"
   },
   "latoya-post-purchase": {
-    "hash": "95f10b800fb75ed53211c29f905d26e9cf477d22b7b0517f04fe3296de04025a",
+    "hash": "003f74003d48c25a501dbacfd2102db5e62905754ee1c2ab857f7a60d69925e8",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "latoya-post-purchase-train": {
-    "hash": "76ce4e6b2b6a0b7fab765073badafc6ff652db1a00cc10898626dc2b31b11749",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "b8ba255ec416547aada4b6f24cff440d87b3a78bacfa0685392bbf373314bfd1",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "lauren-workbooks": {
     "hash": "175f1952cb73c730771c22670c7e9fe55296c6ab8a2158f313693e5a3d826878",
@@ -3060,14 +3060,14 @@
     "updated": "2026-11-15"
   },
   "lerato-creative-producer": {
-    "hash": "7df1ae92a6d4dd56c04f1c5e7f70f4330afabb77818214cdd7906c635eeb577b",
+    "hash": "9af80f3b755352965799c7ef58427ebac8fb8a2a20e0159d568cc1f0ca1e36c6",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "lerato-creative-producer-train": {
-    "hash": "867a06f6e7ab38c9c6af8dc6f7e016aa429a3df247e8bd7c917cd4b90eca69ef",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "d7b0bd6cfa245081ad6ea785d3b2ebb43a8b520c68181b8fe49cf144095ba92a",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "lesley-regsummary": {
     "hash": "4936aca8f59babae21146c9781304a091c9d50b7580b78fcb3fee8fec1f5372f",
@@ -3130,14 +3130,14 @@
     "updated": "2026-11-15"
   },
   "lindsey-meta-media-buyer": {
-    "hash": "d3ac0c3eb4f9926b2bd0cfb676ff6d4272e9f193d01480a2b9eed24580708a27",
+    "hash": "e256502d628f5209f292f0d127a8ad109ab8f02040a9a54eda6c45cf7b498942",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "lindsey-meta-media-buyer-train": {
-    "hash": "6607458327fbbc5195889b9e2ccc6e83b0b1b80ef68b31fd2839d292d9b96954",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "3ad0453c915c863dd4f98067d1a9006c332fd12e00ef678e9b856da04f1ecbb9",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "linh-infographics": {
     "hash": "5c8c8ab4597deea138dff3894f5bb8d30233d701981c3b4e286bb20e9de3126f",
@@ -3230,14 +3230,14 @@
     "updated": "2026-11-15"
   },
   "lucia-email-copy": {
-    "hash": "6de7cee667acc9f7302bb8390cf2ff717edc42edb93b60733e3559646e4d6ab9",
+    "hash": "f1b9b3141e1b09e9a4c2d392ba88bfa88a0eab3e5ddf04b44694279429bd2b50",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "lucia-email-copy-train": {
-    "hash": "fdead7e966b1da0d7c10d41725b672d5293eb25386608613bf9fe8b798412220",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "226a75fc3a5f1c1ac1035e613aafd66e47c5540d47fb5a28a10d7acb30ada50c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "lucinda-branching-scenarios": {
     "hash": "c3414c81fdab4a1c2a7eb34df1f63f964decd1834bf090c32b3777a4a5da0b43",
@@ -3280,12 +3280,12 @@
     "updated": "2026-11-15"
   },
   "malcolm-ecommerce-growth": {
-    "hash": "f130afee7339d356903cf21b2d923e779d430504748466fe2b9e799dcbcc0158",
+    "hash": "c59b2911b90aae3ffc2d62caad4b100781f15a1c5e90a5a9aeaa00f86b0fff8e",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "malcolm-ecommerce-growth-train": {
-    "hash": "9bd4d132a867ef58376187df28c49a6032db2ff2576c7cfa3eeab742b20563f2",
+    "hash": "04ef3c68c495181bb713a8113ec50cc0363f7f34959576955da2a9c9965dd432",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
@@ -3300,24 +3300,24 @@
     "updated": "2026-11-15"
   },
   "margaret-job-orchestrator": {
-    "hash": "ce6582e99e54e8e56387b5eab4584550ec21b5bead2ff98eb5d8cb102a2d8a4e",
+    "hash": "1c6b636f00eb2bebbacacab58e5f6be24feb0fa579596e6c5a5da891049f85c7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "margaret-job-orchestrator-train": {
-    "hash": "1fa34ff900e928649578d1773af7c7f57c73f8f427b61bf1cf2969ccd4a3dd6c",
+    "hash": "8cf93d38bca345b628c610215a61713b90cc35acc1069a667811e65f8308ecd4",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "margot-pr": {
-    "hash": "ebf293bf04c2e109aae39dbf7d1ff55fb91c36fdbfb3497487587b6d5b3757f9",
+    "hash": "3f8caab7860997080192be8e53bf28adf78eb6e5a2a195ca2fc69d57092b9164",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "margot-pr-train": {
-    "hash": "0ea14a3e15c877041a3e5f6514ebcd6200879b3db6949007db1643a48d9db6b8",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "41596920d3b3ab4d87b007f5e9e7e35580bd90cd146d616638d076631c075995",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "mariam-impact-reports": {
     "hash": "7bc5256a4accdc56da54fe58eab279674bc26b4bdb3f41172f742067d4f07138",
@@ -3340,14 +3340,14 @@
     "updated": "2026-11-15"
   },
   "marivic-fulfilment": {
-    "hash": "b39f4cc7d08e9e3d9fec3c655129d8965ed282697f166f3cf775c7d5c677c4cc",
+    "hash": "20ed61db2211ae053a51d7202e0f12c6b1548d79e422913588e86f635c986592",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "marivic-fulfilment-train": {
-    "hash": "768f17e4126197460de94bbb1e98c00a46e010d114f56baddb696fde6991fb17",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "7eff27837397bbb24884454b7cfe168d3f41f3228c776c2ccf1320dcb1b5182c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "marjorie-data-entry": {
     "hash": "26f9f938bf69c790309a127e575e06a7f244701d5be8d50311c86aabb89e6939",
@@ -3370,14 +3370,14 @@
     "updated": "2026-11-15"
   },
   "marnie-pinterest-ads": {
-    "hash": "2f2cc70780a6eb865507a387924eb1f2b2e39dab33555b4e4232152aeeb85dfd",
+    "hash": "892323bf05f42fd6b600ceb4fff09139230fa959c81175e710aa2cb124374166",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "marnie-pinterest-ads-train": {
-    "hash": "a786cb74e5751584eddc513945f6425e083f1b07f91974ec9b97492b6670c6e9",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "f8ac41e7db20f9c3d7c4a726f273980eac3f253f63532b219fbd2abf4d5f97f8",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "marsha-jingles": {
     "hash": "f45d0b8a8f8bc36ce0241ba708caea0f8a5239bf98a28fd779b31a562f690517",
@@ -3460,14 +3460,14 @@
     "updated": "2026-11-15"
   },
   "maxine-tech-packs": {
-    "hash": "3abbadb95449c565f309ebd8b934e83786bc658fbc065479d3160d2bdccfcdb8",
+    "hash": "0b3c6e19a544532bdbab6ff3df8a30340901ce266b2dcbae985bfd183d5c4c1b",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "maxine-tech-packs-train": {
-    "hash": "d41bac1fe9dc708f7624afbb1d6d16ab31b6dde6216437fad07faf91cd73e126",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "1a9581e7298225f0f0da3808aa3ec18c4063550c75baef9e26e44dcc6ac4f5a9",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "mazen-warranty": {
     "hash": "fd969230f903ec077ebcb7c17372902ba19f6f09d2af0c3babb68e3092c38c54",
@@ -3480,14 +3480,14 @@
     "updated": "2026-11-15"
   },
   "meenakshi-compliance": {
-    "hash": "0c2d377a3f001f0e699cb4f624f91bf7d89e02f68de3865d3f93c5bb4db25a2c",
+    "hash": "eaeb674cd305aef55a251fa1eea3ba40bbecda76cc47c28b13e9d33b9f14325a",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "meenakshi-compliance-train": {
-    "hash": "de757e01b341101909a1b4f3b4b1db232667492f5716d0fe69567a290a615b86",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "f0286ad9f209d999bf6b96a71ec7d303858c251c9bee60c464214c35e13e91d0",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "megan-survey-design": {
     "hash": "fbf6837f4cf51d72dca50ac617f1c619bbfad7913ad2a3629e6a7c1896e31fd9",
@@ -3520,14 +3520,14 @@
     "updated": "2026-11-15"
   },
   "mei-wholesale-sales": {
-    "hash": "889344b144cc6e607998b3e7fa770ffc5caa95d9cdef183a83d8609d774fb3ae",
+    "hash": "bb9f9e70205f3c4b1da3414b4470e98d9de8bd0e7e037885c059c621aac7cb3a",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "mei-wholesale-sales-train": {
-    "hash": "35e0744a888f908a4aeeb0b8249d8f568b1755dcb3c6c6c8f2c66b365e27824e",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "a8f9da7bf4aaa8db0f06a1b58dde6778c225fa98c2e11081b30a938b666f7709",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "melanie-accessibility-audit": {
     "hash": "af3fcb4c26dc0f86d3628796f94c424fa23a41e183fdeb2b62e1b2479c555e13",
@@ -3630,14 +3630,14 @@
     "updated": "2026-11-15"
   },
   "morag-email-sms": {
-    "hash": "75ebd6d89322238738ef539c24eedd9e5d0b201db435c63993849538928d5e12",
+    "hash": "1fbc8002fef8422d99e3afac6e4876628619c3651e81dd1a2f9cecbe2c4e2d14",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "morag-email-sms-train": {
-    "hash": "a9df9aa66bc505a11c35a93d7b251fc73715ea8e172fabade3bb1c7563578eb0",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "69d6fc6c4fe31759ffd3b021d097aec6a86dee289a29a151366b001bc1ae7c5e",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "muriel-donor-data": {
     "hash": "ac09d8684ce771805e603b8313113b70a3360ad9817cea8c496ad326ea041ff6",
@@ -3930,14 +3930,14 @@
     "updated": "2026-11-15"
   },
   "omar-inventory-planning": {
-    "hash": "00cf6f9a8759af3befc556993d1b507b5b2b753426f73de6c5907b1c2f6bd64b",
+    "hash": "5082ada568b8a5253cfbbf4310a93ecf64ccd8a8c4907059361a5672c86d7524",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "omar-inventory-planning-train": {
-    "hash": "aa75d71ae97ed9fd284405494a209cb1154bd50a7935019f6ef79c75e9495385",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "a014242f18084b7b1980d39d8ee5d8a0b997df38b94d929bd8920768e6770fb5",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ondrej-illustration-briefs": {
     "hash": "e144503ed2adf084e6082534d1c0e2e34265146ff4c1f8f6f16baea44d0842fb",
@@ -4100,14 +4100,14 @@
     "updated": "2026-11-15"
   },
   "philippa-brand": {
-    "hash": "51c80fd784225f987304502c6770103a82173f73c5ac744c814715f600e768ab",
+    "hash": "d8537db8da141842083ca222c5df678d2c3685fadad7891e65e7745467a3dfb6",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "philippa-brand-train": {
-    "hash": "4b464192d55fd3807656c4d2f1646c0a74351f51e2dafb54f9f3cdb45bd65926",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "1c8d22f8a46889d242cc115d836312643dc81a8baf4679cf8293fb5f4bc72b83",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "phoebe-captions": {
     "hash": "9ac9de0acc2bc7e462a5d58efd14da79ca229f46029f6de235143c246a162207",
@@ -4120,24 +4120,24 @@
     "updated": "2026-11-15"
   },
   "phuong-quality-control": {
-    "hash": "a1f46816d17c506f39c41194771eab936b6a6becaef17a19a958e52122447e07",
+    "hash": "12638b941c022e6c0827a0242e185a07ac7ca789f31b6c4d20769782021997cf",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "phuong-quality-control-train": {
-    "hash": "9ac7dff85ecc24f17124063408091df41baaefbca564388fbf43aaba0d446624",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "8894eaa5767bce1a208d0eec08eb799aa4a57408d4c0eaca50dd0a1083543d47",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "pilar-creators": {
-    "hash": "2847b13489304c13c7681189fa17ec8fe0322b2d29f922963903436877179277",
+    "hash": "30aa6561306abb68814127d31d29e436e1107c7a5f44ec71b1c757852ce0836c",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "pilar-creators-train": {
-    "hash": "4a5cfccf5fe2affad1808d2752c18c35a0ef07f695462e477ce5930f18687f84",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "26528297c10d0bfadbe6122b391c953f266f508922f5dc60de87238eb706ef32",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "piotr-order-desk": {
     "hash": "a78b50c19e7c4aa8fb8b12e322bb14f0615dbd90d344dfb7788bca8f9f40f45b",
@@ -4150,14 +4150,14 @@
     "updated": "2026-11-15"
   },
   "ploy-tiktok-shop": {
-    "hash": "4b55a1cbf5d973a6eb12f005c8fc6b916e53a74293ac755b8ec3f2b477bed750",
+    "hash": "a734faf059859db4d3e95a5e7eef527e40f40668f028d1e4d8171dafa8fea06d",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "ploy-tiktok-shop-train": {
-    "hash": "a27ec2ec7b24522963b560feb0524e8423152bb933dde2cb43594eba6b90b383",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "ce344ccdb7775630b46b5c31752ca0d5ee55b7369641b77e9430172010459ca2",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "pooja-lead-funnels": {
     "hash": "dfce9ee71774e7c58f076ed440180a27bb60b1aae6d906a588490ef97714f303",
@@ -4220,14 +4220,14 @@
     "updated": "2026-11-15"
   },
   "radek-unit-economics": {
-    "hash": "2d4ee03632aa6cdb9a7dac2bdf93d1b6f8c97e724e300265a3c4f49482e5e441",
+    "hash": "5579f6973f9f4ab53a46a40b0b1fae1baae497e06c9dd068c10f0f12685da571",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "radek-unit-economics-train": {
-    "hash": "1b1808906a97e687ca65689357197a1e38fc67b27c75e9a4e98b6c043c968d7b",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "c6f366a7ebe3009588f9052f87c610469f286f1b22e1e80e8cd0c53eb77e48d1",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "radhika-services-profit": {
     "hash": "044b86d18d36bc0c5dcf05a0d34b6cfd12c4c575d30dbc9355109ddf452732f6",
@@ -4310,14 +4310,14 @@
     "updated": "2026-11-15"
   },
   "raymond-google-ads": {
-    "hash": "a71b0ae0e6b6bc9ee62a6567a23ee0e7657a494684667263c3fa5461ac95ff01",
+    "hash": "dd727b52b5eeb480ecce2a92e6c6246e8bd643e60fbf1147d80ea8bbdb011023",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "raymond-google-ads-train": {
-    "hash": "cc42233628ac539fbf5f56d81ffefcf437456ec19127cd4dc4ffeb58b01daec9",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "f97ab73da48a70a1667248eba894a25eccf4ad9eb06070f7947cd0704e43c594",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "rebecca-internal-comms": {
     "hash": "03796b2f69f8761d2bdc09f3d62c5035763bb0896b8b178aa0167e319e6decdf",
@@ -4370,14 +4370,14 @@
     "updated": "2026-11-15"
   },
   "revathi-product-research": {
-    "hash": "c912bbdccc7ab47ff211304241b54ec8421a2dc3396662bbc5dd50aa5db69f66",
+    "hash": "4364a187941c21462a684a76ee34fe70ab9006d255066c87264e8f0fe223eaa8",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "revathi-product-research-train": {
-    "hash": "d48f6c65e12f7074fdf9094ea73fe212e12389ca54ce3540b9401387fbb3e771",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "6a7a748384bcbbe8fb0b79945b7f5a45d4448c04902def01317278b245d41682",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "reza-peopleops": {
     "hash": "ac2bf36bf7d5b54e8dee64e7e6c59cb0daa22372e3c28f3c259d1d668b9e59ce",
@@ -4440,14 +4440,14 @@
     "updated": "2026-11-15"
   },
   "ritika-influencer-outreach": {
-    "hash": "e6548c23d0bc5bb38123d39514160683339d2480d622c2afa6e993ff0705ba82",
+    "hash": "b4bb857759b1c03f70f3c204acf571a5a431606e6e7fc2c5dcefe57ed43a954e",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "ritika-influencer-outreach-train": {
-    "hash": "0995770a8dcdd625abdf6f669254f1ebe7eb75ff1fdb69cbdded4a0d50ab3f75",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "da53891f1d6ce42770c10bcc2adb0b65dc844d1b10904c5bda88d0961b4c81b9",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "roberta-direct-mail": {
     "hash": "63f8e0463fa01f756caa404f366fdcd87041877ac339bada17d01eed6bfdab55",
@@ -4500,14 +4500,14 @@
     "updated": "2026-11-15"
   },
   "rohan-chat-sales": {
-    "hash": "9c3267019ba85ee7324958e2fef11822776b22cc5c1b603155b058d2e6a2a92b",
+    "hash": "05a4303c3830e0db9ec1cdbc1ab5c9a3ec38ef1cbcef4cf7528fa1243627b638",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "rohan-chat-sales-train": {
-    "hash": "f6dc58d8281c2a120e33fcf071209127e28e756951075f68d2f3b4bf463bd6f4",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "03c5c1843117cce7ec34596904ad31a2c379bf90ced418f7d717ceb0dc18bc14",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "rory-slide-design": {
     "hash": "eceabe0964d581d8d168c19917a76f868794e6521cb187847449fa48c47ee69a",
@@ -4580,14 +4580,14 @@
     "updated": "2026-11-15"
   },
   "rustam-ai-answers": {
-    "hash": "a68645caec62e5790ab015f3aa61263fc8ab53021ecc86f96bb9e302c84807f5",
+    "hash": "56c67525de6ea25f9c25262b281242cc43dcf486b99710b0238f2f2015eac3a3",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "rustam-ai-answers-train": {
-    "hash": "6954ce99ab11ffcc4069aaa8572176531b878860beec806b4638b97ac07fd720",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "aa3feee35ad8f7701437922262fea8e2fe32be30c14eb81cda67e3ae36a6840c",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ruth-offers": {
     "hash": "662f2af396d5d03511ba656d7b79bcec84b14e6ea8745fd74eb89504348f2817",
@@ -4620,14 +4620,14 @@
     "updated": "2026-11-15"
   },
   "sabelo-product-portfolio": {
-    "hash": "39dffd80fbb20c2b2b05c503ffce653c89195db472030981bcc70f814267bd27",
+    "hash": "c24ab21cfcf924a8b911c0a9d1c466730c6ec50abf590cd9c57bb4fcb67348d5",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "sabelo-product-portfolio-train": {
-    "hash": "19380a9b77a0340d621492ca2179efc5b0358d485d6085b70bdbb919f980a5ed",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "fc11fd12555bbe1d7dfbfaa85da9da5310fedfcc284c7bf6586c63764da037d9",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "sabrina-childcare": {
     "hash": "12c7f441f1d118323e170b2444c0d7a115ee139ec6ce9a275f78c04b64f7aceb",
@@ -4750,14 +4750,14 @@
     "updated": "2026-11-15"
   },
   "shannon-market-research": {
-    "hash": "7b514ce518d50fbdedb6c28d88f59d894443ab8dcce2d7171463345b6b0cc1d4",
+    "hash": "438a57196228cba3baa78e28487e0d4843c95fbddfac1d962034c91555265b42",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "shannon-market-research-train": {
-    "hash": "2db38ab8848f7763ec2263aefe3f1c58268f87e6e454b5b80a5041449ec2f60e",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "fa768d4415728484c9107816c684b8c14c93246d6479e53e9fb9440ae6807daa",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "sharon-lesson-plans": {
     "hash": "2bd62ed6f1fd78179c8ad5af597937def1370ed7d17028644ab958815430f545",
@@ -4790,14 +4790,14 @@
     "updated": "2026-11-15"
   },
   "sheila-inbound-freight": {
-    "hash": "d995456d5ab08d1cea62a0a6495d21b7c1a07455a3b0d5678aee777d3b007db5",
+    "hash": "c8be10e2fb407a5fb3a717db2a284d990fc15dea9b49e699fa033f860def187b",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "sheila-inbound-freight-train": {
-    "hash": "150e75aa7dbb6fabce0490c97093c3c202ac511d7a09a7c1717c55e8b963a5cc",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "0c6303bd6797ba3d5179c9d6e50aad70c3a6747ea12c50a55c21130bd6789816",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "sian-apprentices": {
     "hash": "87a55c6a4f734c49713124cadaa12a117fd5ef2f332871af457197c59dae7cef",
@@ -4850,14 +4850,14 @@
     "updated": "2026-11-15"
   },
   "sipho-product-hunter": {
-    "hash": "2a4458a17dfe04aa93e39e665572f9c3c839692d886dc7372eecdc04e50b663b",
+    "hash": "8ffc35a7ef043f20c5ce449b7fbea9cacc22f33d3df954355fd30f8ac9a6b305",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "sipho-product-hunter-train": {
-    "hash": "05dec9213623f21d7e45f0a79d1e013b2f22262a7d303f145858b9ee642481af",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "9cc38c9b008ddc08f554a73390c763f03fb525e85cb97b974ac355a17d5a55b7",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "skye-tiktok-ads": {
     "hash": "4cb096c6f211fa50e151507d4d7256b784bf30ec19fe360165bf478e11f4c2cc",
@@ -4910,24 +4910,24 @@
     "updated": "2026-11-15"
   },
   "stuart-store-seo": {
-    "hash": "f9d07a80939b57ef4b12a3842be02638e9692abb8916734abca5796f8116e776",
+    "hash": "ea1c463137600401e3dbb818b7ef365dd65b49bd3106d8101824d8a8b902ee30",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "stuart-store-seo-train": {
-    "hash": "248410bef37c1148774782c3873d06d2b04b211fcf116cf6867d6f44c15bdd86",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "433ea0953424e51f892942d758f75a5331fd7454f6b676393c30c7f90a657081",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "sudhir-marketplaces": {
-    "hash": "cde16557beaa5c240d338ccde59bf8ec0e0021914b5b2894bc2d601df5be0e6b",
+    "hash": "4572006a948bf95ad8982c63cffa2ddb88861050a241c71221efbd258e997f08",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "sudhir-marketplaces-train": {
-    "hash": "abbcc47fbd3ff4e84eb85309581c83531f69204f2301b5f6a842b7d0b4facfc6",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "870aa738f8152825722daa1174716edc799eb51ec39e310a7efa41205d911279",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "sujan-farm": {
     "hash": "ef1f7bd18d7c936aa17a686a10f249523995577ae6b56af4eb95b4c6fca38475",
@@ -5050,14 +5050,14 @@
     "updated": "2026-11-15"
   },
   "tanvi-listing-images": {
-    "hash": "42fddeef8d2b246eb35fd37011c1036ba4fc75725460325178cd2925888eb394",
+    "hash": "527c483c8f29d2c84523ac1dda4bc8ba45c0275adf4bdad535f58b5dbf03b740",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "tanvi-listing-images-train": {
-    "hash": "4567dc53e1ef08a65489b8e852c2ef6730f028be9710ac4f7e52a73ba6cfd52b",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "d04b057659f948e5a77f0df64dc98ccd2e44deebf32652319ce0f09bac363b36",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "tara-venues": {
     "hash": "e4b7ab9175b663ebe31d1cb40f9b184380bed971f223dad9f1a08846e6aa0200",
@@ -5070,12 +5070,12 @@
     "updated": "2026-11-15"
   },
   "tendai-ad-creative": {
-    "hash": "dc44701e5f27d47de91c8e1b1ad013a4ea3abc3f2af36e5e837a12b11db69e9d",
+    "hash": "9aa13881e06fccc6d4b5d6cfcce35b1f675d1f83bbc90add9d2ae34ac49ce2dd",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "tendai-ad-creative-train": {
-    "hash": "4626b1813548ade31cc8b1e50c08d9731b13ec878450080c899fce63bf824b45",
+    "hash": "015ba4c68a6117ac667e84b9cb7a2770c872a235aa28130ef7e11249c130c824",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
@@ -5150,14 +5150,14 @@
     "updated": "2026-11-15"
   },
   "thanh-product-sourcing-lead": {
-    "hash": "9fd35c85f54ee6723946a9ca58f626ae5d3b5e4c8f0c6bb7e87e8e8aae87d2bf",
+    "hash": "767eb6d578d154fa4e26580e2d41c269a94aff580538cb9fed79f98f9ea0d938",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "thanh-product-sourcing-lead-train": {
-    "hash": "fdea2a0851db2a1ba7849df1fb68cb950d5d557fe86f6de8e198b7a9f3c795d2",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "da7aaf7f2a8212d05bfb68ec64d3fc5226119796eff1087b8b9f5e5964e1972d",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "thiago-customer-academy": {
     "hash": "f2844e9627f0763c7bcf633f18553cf75b5f445e41c6150267dbfd13a9bfbbcf",
@@ -5230,14 +5230,14 @@
     "updated": "2026-11-15"
   },
   "tomas-social-community": {
-    "hash": "1d94df3d6ba56baaa2684b266fa7286db8f2836a750dfff960cc307d043faa36",
+    "hash": "7cde50b745686500c5a38e704ae570313ff12237c3a7f3c76a8613936b925bcd",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "tomas-social-community-train": {
-    "hash": "5d0318ffee72fa402f58bd2ef4ffcfa64794f7c03b5bd6baa094776d9069bd69",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "b7ec820d7f033ebd44acdc5ff2702b377292e64166d1f13ace7265ea2244f9bb",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "tomasz-assessments": {
     "hash": "3188521ac4ae08eccc15258913601e07c594f1687a786269c94b7a2d05bca3ec",
@@ -5300,14 +5300,14 @@
     "updated": "2026-11-15"
   },
   "tunde-supplier-search": {
-    "hash": "ef394bce7c5e0f61f1540a53547fd8cc78f9d560de18818cba52657633fdb493",
+    "hash": "9621aa6bc584444ec5f191558a2a0df74d38051f7998dc30e714cad417aa272d",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "tunde-supplier-search-train": {
-    "hash": "2ecc27bbd902efca579df0caa29b21c99bcb2d8f011c9924477c526202841982",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "7b63df546aa605b821512bdb035cdc44f73ecae1d51bd094bb7a5ec27224720b",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "tyler-inbound-leads": {
     "hash": "43ff720dbd6028a002d6747d0cf695818195c2920ded5728795fa3f33e35963a",
@@ -5540,14 +5540,14 @@
     "updated": "2026-11-15"
   },
   "wenhao-procurement": {
-    "hash": "f47261087810782bc94753215a5b62a43b18751e19acaeb9ce6cec0ce89e21a1",
+    "hash": "e928fdee30194884e173fecb57d678f424e282e9749bd6e90371ba567024d480",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "wenhao-procurement-train": {
-    "hash": "91657c382c4cbe4791dde7f59dc92ee9230ea4dd6e0cb5f115f96de6fa27b63c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "36d98c27bdde0d197cc62204e232d5cec6d9b4572882a80579e8ae31c22acea7",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "wenjing-behaviour-research": {
     "hash": "f6e1016bed196577d6649ef267baa69235ffd41f0a56e119782adee1c73e77fe",
@@ -5660,14 +5660,14 @@
     "updated": "2026-11-15"
   },
   "yaroslav-shopify-dev": {
-    "hash": "649a0e335ce7d0a26df35150f3dfb04a420af55dafe08ee06110b4834a48c27b",
+    "hash": "0b711e60096627fa245be1c15a7b0b5d6fc64e31909ef033075d44a1aed48a09",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "yaroslav-shopify-dev-train": {
-    "hash": "d82308282d11585607a969f8fa472ca951326aacfcc288018d7356aa5535517c",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "9c9094f1c5783c8717236489bfed98a5b43a754a181b4a437946f7b4d0d8bcb6",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "yasmin-foodmaker": {
     "hash": "c37aa05e32ee8862a70f39b53cd7409863e8fcea8d73a7dc84d1d5418f54c852",
@@ -5750,14 +5750,14 @@
     "updated": "2026-11-15"
   },
   "zara-tiktok-ads": {
-    "hash": "bf94dd106a218ba21655438dc20e3b77dcf183b17add83684306965cf7644825",
+    "hash": "b96e40edaf7bf89573fd5a864696c9f4e1193f7c96a1c23f76df3b70976a3887",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "zara-tiktok-ads-train": {
-    "hash": "51c2e081cdd087b371b1a89cc2ccd4691ebaeb594015252e285dbdcdff9c3400",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "c9715bf43bb2fd3ec437d23b2e105e55f9260ee906ee226f30c5a5968634ae20",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "zeynep-focus-groups": {
     "hash": "bbe6438a64d9193f0606b89e95d74dacdedcd5ba57d996f1b8ad1e7e8e9f29e4",
@@ -5770,14 +5770,14 @@
     "updated": "2026-11-15"
   },
   "zhenyu-sourcing": {
-    "hash": "8a7cbc4a2572d91d7923ce5ef8befd9898c37bee86e494f6297e5fe6750ba35c",
+    "hash": "91bd8b829788fa4d3a3863aee489aa32c587961bc264d88155cb46e375d819a7",
     "version": "2026.11.16",
     "updated": "2026-11-16"
   },
   "zhenyu-sourcing-train": {
-    "hash": "6e7353d6f93635e2542fd7ba6ab6a1e5f0303517e70d1fc095f4d2c0f9f2fe91",
-    "version": "2026.11.15",
-    "updated": "2026-11-15"
+    "hash": "1eb3acaa46569cff22810dbf2d9cc1c28b063e3cddf9e76636b58dac673a9eed",
+    "version": "2026.11.16",
+    "updated": "2026-11-16"
   },
   "ziad-menucosting": {
     "hash": "3aae27fb0fb2a6d818b1f531347b49cde314add017ae7aecd23c882dbcebd470",

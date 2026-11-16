@@ -61,7 +61,7 @@
           {"label": "A limit you set", "pro": "simple", "con": "may be too deep for thin-margin products"}
         ],
         "default": "Help before money; then the smallest offer that passes the gross profit check, only late in the flow and with a real expiry",
-        "settle_with_data": "Run the discount ceiling per product from delivered cost; check the share of orders with a code and how many buyers only buy with one."
+        "settle_with_data": "Run the discount ceiling per product from delivered cost; check the share of orders with a code and how many buyers only buy with one. List the offers the site gives everyone today: a win-back offer must be one a lapsed buyer cannot already get there."
       },
       {
         "id": "platform",
@@ -72,8 +72,8 @@
           {"label": "Shopify Email", "pro": "free tier, simple", "con": "fewer flow splits and filters"},
           {"label": "Another tool", "pro": "keep what you have", "con": "I hand over plain HTML and a build spec"}
         ],
-        "default": "Klaviyo-ready HTML and build spec; plain HTML and text work in any tool",
-        "settle_with_data": "Check the connector, the store's installed apps and the site's scripts for the email platform in use."
+        "default": "Ask this unless the connector or org context names the sending tool; until answered, Klaviyo-ready HTML and build spec, since plain HTML and text work in any tool",
+        "settle_with_data": "Check the connector and the org context first. A script on the site shows a tool is installed, not where the owner sends email (it may run push or app messages): name what you found and still confirm it in the ask; the owner's answer wins."
       }
     ]
   },
@@ -237,7 +237,12 @@
       "Bad-experience buyers (return, complaint, low rating, failed delivery) get a fix-first note, not a promotion.",
       "SMS under 160 characters with no emoji; WhatsApp header 60, body 1,024, buttons 25 characters, in the right template category; quiet hours and opt-out wording in every marketing text.",
       "Win-back, replenishment and VIP flows keep a 10% holdout; attributed revenue is always labelled attributed.",
-      "Voice, proof and offers come from the org context and the store's own reviews, in the brand's language and register, including its mix of languages where it uses one."
+      "Voice, proof and offers come from the org context and the store's own reviews, in the brand's language and register, including its mix of languages where it uses one.",
+      "The offer is something a lapsed buyer cannot get on the site today. If the owner's preferred offer is already public, give it a new shape (a gift at a threshold, a better tier for repeat buyers, early access) or say why the same offer still wins them back.",
+      "Each email is about what this person bought: the product's name and image through template tags with fallbacks, and the lead product swaps by segment. No 'Hi there' over a default product image.",
+      "The series covers every step a lapsed buyer needs: a reminder tied to their product running out, help or an honest 'did it work?' note built on the store's own review counts and ratings, proof in customers' words, the offer, and a last plain note, with a richer tier for repeat buyers. Do not drop a step to keep the series short; review quotes carry no result claims the owner bans.",
+      "The series uses its send window: the season's skin, home or wardrobe need, the next sale or buying moment, and the story the brand's ads tell now, and it plans sends around sale weeks.",
+      "The run-out clock has a start day for every product and size, worked out from pack size and the amount one day's use takes, with no blank rows. A broad split (say 90 and 150 days) is a default only where size or use is unknown, and is marked as one."
     ]
   },
 
@@ -249,7 +254,8 @@
       "node tools/quality/qe-check.cjs <final> --audience consumer",
       "Each HTML email renders at 375 and 600 px wide, in dark mode and with images off; every link, button and tag fallback works.",
       "No person can get two marketing messages from different flows on the same day; every flow has its exit and its smart-sending setting written down.",
-      "Each offer's depth is at or under that product's discount ceiling, and the excluded groups are named."
+      "Each offer's depth is at or under that product's discount ceiling, and the excluded groups are named.",
+      "No offer in the series is one the site already gives everyone; the product clock has no blank rows; every email names and shows the buyer's product, with a fallback; the emails were built for the sending tool the owner confirmed."
     ],
     "senior_review": [
       "Is this the flow with the biggest gross profit gap by this store's numbers, and did I show why?",

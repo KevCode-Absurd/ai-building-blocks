@@ -18,7 +18,7 @@
   ],
   "outcome": "The owner has a finished Meta plan for the next 1 to 3 months they can run from Monday: every campaign including the warm lane (retargeting and past buyers), what each spends week by week, who it reaches and excludes, a dated calendar of the ads each campaign runs built on the owner's own offers and buying moments, the rules that promote, raise or stop, and a weekly check against store orders. It comes as one branded page plus a plan file that passes the preflight check; the only ask is one yes to build it as paused drafts.",
   "first_principles": [
-    "Every number starts from gross profit per purchase: the order value after discount minus landed cost, shipping, pick-pack, payment fees, returns and (for cash on delivery) failed deliveries. Break-even ROAS is order value divided by that profit, and the target cost per purchase is at or under it, unless 90-day repeat profit from the order export pays for more. A budget judged on revenue or a ROAS with no break-even beside it is a guess.",
+    "Every number starts from gross profit per purchase: the order value after discount minus landed cost, shipping, pick-pack, payment fees, returns and (for cash on delivery) failed deliveries. Break-even ROAS is order value divided by that profit, and the target cost per purchase is at or under it, unless 90-day repeat profit from the order export pays for more. A budget judged on revenue or a ROAS with no break-even beside it is a guess. When the owner already tracks a store number they trust, usually new-customer ROAS and a break-even that counts their repeat buyers, that is the bar: every target, stop line and loss limit is set against it, and a cost stack worked out from estimates is only a cross-check shown beside it.",
     "Optimise for the thing you want to buy. A purchase goal gets a Sales objective optimised for the Purchase event with value; a clicks, traffic, reach or engagement campaign buys the cheapest clickers and teaches delivery the wrong person. There is no 'warm-up' traffic campaign in a store plan.",
     "Structure is a volume sum, not a taste. An ad set needs about 50 purchases in 7 days to leave learning, so the number of ad sets the account can feed is the weekly purchases the budget buys at target cost divided by 50. Split campaigns only for business reasons (country, margin group, sub-brand, a category with its own target), never for audiences, launch dates or 'a test someone ran'.",
     "Under broad and Advantage+ targeting, creative is the targeting. Age, gender and interests are suggestions; location, exclusions and the event are hard controls. What decides who buys is a set of genuinely different concepts (buyer, angle, offer, format), so the plan must carry a testing lane that feeds the main campaign and a rule for promoting winners by post ID.",
@@ -28,32 +28,31 @@
   "goal": {
     "questions": [
       {
-        "id": "profit_per_order",
-        "ask": "What does one typical order leave you after product, shipping, fees and returns?",
-        "why": "It sets break-even ROAS, the target cost per purchase and so every budget and ad set count in the plan.",
+        "id": "trusted_number",
+        "ask": "What return on ad spend from new customers do you trust from your store's own numbers, and where do you break even?",
+        "why": "It is the deciding number: every target, budget step and stop rule is set against it. Meta's own ROAS over-counts, and a break-even worked out from estimated costs can set a bar the account has never hit and cut spend that already pays. A break-even that counts repeat buyers also settles whether the aim is first-order profit or more new customers at break-even.",
         "options": [
           {
-            "label": "I'll give the number",
-            "pro": "fastest and exact",
-            "con": "often forgets shipping, fees or returns"
+            "label": "Store new-customer ROAS and break-even",
+            "pro": "the plan runs on the number you already judge the business by",
+            "con": "needs your figures"
           },
           {
-            "label": "Work it out from my costs",
-            "pro": "uses delivered cost per product",
-            "con": "needs cost per item filled in the store"
+            "label": "Profit per order",
+            "pro": "I work out break-even from it",
+            "con": "leaves out what repeat buyers are worth unless you add your repeat rate"
           },
           {
-            "label": "Estimate it for now",
-            "pro": "plan starts today",
-            "con": "every budget is marked provisional until confirmed"
+            "label": "Not tracked: work it out",
+            "pro": "nothing to prepare",
+            "con": "built on estimates; every target stays provisional until you confirm"
           }
         ],
-        "default": "Work it out from product costs and the order export with store-meta-math, and mark the plan provisional until the owner confirms the number",
+        "default": "Ask this in the first message. If the owner does not track it, work out break-even from their margin and order value with store-meta-math, target first-order profit, and mark every target and stop line provisional",
         "skip_if": [
-          "brief or org context gives gross profit per purchase",
-          "a cost sheet with landed cost is attached"
+          "brief or org context gives the store's new-customer ROAS and break-even"
         ],
-        "settle_with_data": "Store products export with cost per item plus the 90-day order export (discounts, shipping, refunds, payment method): compute gross profit per purchase by product and margin group. If 90-day repeat gross profit per new customer is known, show the first-order and 90-day targets side by side."
+        "settle_with_data": "Store products export with cost per item plus the 90-day order export (discounts, shipping, refunds, payment method): compute gross profit per purchase by product and margin group. If 90-day repeat gross profit per new customer is known, show the first-order and 90-day targets side by side. Even with exports, ask: the owner's own figure wins, and the computed one is shown beside it once with the reason they differ."
       },
       {
         "id": "budget",
@@ -83,32 +82,30 @@
         "settle_with_data": "Last 30 and 90 days of spend from the export give the current run rate; stock cover and the next stock payment date give the ceiling. Offer the profit-target budget only when tracking passes."
       },
       {
-        "id": "aim",
-        "ask": "For these months, is the aim new customers at a profit on the first order, or more new customers at break-even to win repeat buyers?",
-        "why": "It moves the target cost per purchase and how hard the plan pushes prospecting versus existing customers.",
+        "id": "offer_limit",
+        "ask": "What is the most money off ads may offer outside your big sale events?",
+        "why": "Every offer in the calendar is checked against it, including offers the site already runs, so no ad promises a deal you would not sign off.",
         "options": [
           {
-            "label": "Profit on the first order",
-            "pro": "safe on cash",
-            "con": "smaller volume"
+            "label": "A percentage limit",
+            "pro": "simple to check every offer against",
+            "con": "bundles and buy-one-get-one need working out as a percentage"
           },
           {
-            "label": "Break-even first order",
-            "pro": "more customers, more learning signal",
-            "con": "only works if repeat profit is real and cash can wait"
+            "label": "Gifts and bundles only",
+            "pro": "protects price; a gift often costs less than the same discount",
+            "con": "needs a gift buyers want"
           },
           {
-            "label": "Clear specific stock",
-            "pro": "turns stock into cash",
-            "con": "needs its own campaign so it does not drag the main one"
+            "label": "Only offers on the site now",
+            "pro": "nothing new to approve",
+            "con": "some site offers may be deeper than you want in ads"
           }
         ],
-        "default": "Profit on the first order, unless the order export shows 90-day repeat profit that pays for a higher target",
+        "default": "Use only offers the site runs today and work each out as an effective discount. While the owner's limit is unknown, a deep one (a buy-one-get-one, a free item worth a third of the basket, or over about 20% off) is not put in any ad: it goes in the plan as an option that needs their yes",
         "skip_if": [
-          "brief states the aim",
-          "store has fewer than 3 months of orders (use first-order profit)"
-        ],
-        "settle_with_data": "Order export: share of new customers who buy again within 90 days and their gross profit. If 90-day profit per new customer is well above first-order profit, show the break-even option with its cash cost."
+          "brief or org context gives a discount limit or the offers ads may use"
+        ]
       },
       {
         "id": "access",
@@ -284,7 +281,9 @@
       "Segments whose revenue share is well above spend share with 15+ purchases (fund them through creative made for them), and segments far below break-even (cut through creative and exclusions, not narrow targeting).",
       "Concept depth: distinct buyer-angle-offer-format concepts live, not files; a colour or pose change is the same ad to Meta.",
       "Store versus Meta gap: if Meta 7-day click purchases are above store orders, events are doubled; if far below, events are lost. Either one comes before any structure.",
-      "Stock cover on the hero products against the plan length and reorder lead time, and any sale or launch in the next 21 days (do not restructure into a peak)."
+      "Stock cover on the hero products against the plan length and reorder lead time, and any sale or launch in the next 21 days (do not restructure into a peak).",
+      "Hero products: the few products that bring most new customers (from the order export, or else the site's bestseller collection and the ads that have run longest). Most of the budget and most test packs belong on them.",
+      "Every place the store sells (site, app, marketplaces): an app with its own buyers needs its own lane or a stated reason it is left out."
     ],
     "hypothesis_patterns": [
       {
@@ -401,6 +400,10 @@
         "when": "existing account with orders to compare"
       },
       {
+        "piece": "Daily read factor: the ratio between Meta's 7-day click ROAS and the store's new-customer ROAS, so daily raise and stop calls in Ads Manager are made against the owner's bar",
+        "when": "always when Meta and the store disagree"
+      },
+      {
         "piece": "Advantage+ Sales campaign with an existing-customer cap",
         "skill": "set-up-advantage-plus-sales-campaign",
         "when": "decision picks Advantage+ Sales"
@@ -502,9 +505,14 @@
       "Every campaign split names its business reason; every ad set count fits the purchases the budget buys.",
       "Every budget line is a formula from target cost per purchase, and the total sits inside the cash and loss limit.",
       "Every ad names the hypothesis it serves, and every URL has the UTM rule.",
-      "The plan names the warm lane and its weekly budget, has a row for every week, and gives every campaign at least 3 dated ads that use the owner's own offers and the moments in the window."
+      "The plan names the warm lane and its weekly budget, has a row for every week, and gives every campaign at least 3 dated ads that use the owner's own offers and the moments in the window.",
+      "Every target, stop line and loss limit is set against the owner's trusted store number when they gave one, and names its basis (store new-customer or Meta 7-day click) with the factor between them; no rule mixes the two.",
+      "Most of the budget and most test packs go to the hero products; any other product in the calendar has a written reason.",
+      "Every offer in the calendar has its effective discount worked out (buy one get one free is 50% off) and sits within the owner's limit, even if the site runs it today; one past the limit, or a deep one while the limit is unknown, is left out of the ads and offered as an option that needs their yes. Every claim passes the never-say list, including claims copied from the site.",
+      "Every place the store sells that the brief, site or org context shows (site, app, marketplaces) is in the plan with its own lane, or the plan says why it is left out; never drop one on an assumption the owner was not asked about."
     ],
     "senior_review": [
+      "Did I ask for the number the owner trusts, and is every target and stop rule set against it rather than against my own cost model?",
       "Which live campaign or ad is at or near target today, and does the plan keep it running until something beats it head to head?",
       "What did the tracking check find (click ID coverage, match quality, deduplication, catalogue), and is its fix in week 1?",
       "Does every campaign optimise for Purchase on a Sales objective? If one does not, what is its written job, cap and measure?",

@@ -44,6 +44,12 @@ const sh = s => `'${String(s).replace(/'/g, `'\\''`)}'`;
 function inlineFiles(files) {
   return files.map(f => `\n\n----- FILE: ${path.basename(f)} -----\n\n${readFileSync(f, "utf8").trim()}`).join("");
 }
+// The owner's files by name. A file search of a big pack shows only its first 100 files, so the prompt names the
+// inputs (round 2 lost 16 of 30 code runs to that before this list existed).
+function fileList(files) {
+  return `## The owner's files\n\n${files.map(f => `- \`inputs/${path.basename(f)}\``).join("\n")}\n`;
+}
+
 function taskHeader(t) {
   return `## The owner's message\n\n> ${t.question}\n\n## What the owner expects\n\n${t.deliverable}\n`;
 }
@@ -70,7 +76,7 @@ if (cmd === "prompts") {
       const meta = { round, task: t.id, arm, run: k, model, agent: t.agent, created: new Date().toISOString(), inputs: files.map(f => path.basename(f)) };
       let prompt, tools;
       if (arm === "plain") {
-        prompt = `# Task\n\nYou are a senior ${title.toLowerCase()}. A store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n## How to work\n\nRead every file in \`inputs/\` first. Then do the job.\n\n${rules}\n`;
+        prompt = `# Task\n\nYou are a senior ${title.toLowerCase()}. A store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${fileList(files)}\n## How to work\n\nRead every file in \`inputs/\` first. Then do the job.\n\n${rules}\n`;
         tools = "Read,Glob,Grep"; meta.disallowed = "Bash,Write,Edit,NotebookEdit,WebFetch,WebSearch,Task,Skill";
       } else if (arm === "chat") {
         const txt = path.join(packs, `${t.agent}.txt`);
@@ -96,7 +102,7 @@ if (cmd === "prompts") {
         const inner = readdirSync(tmp).length === 1 && statSync(path.join(tmp, readdirSync(tmp)[0])).isDirectory() ? path.join(tmp, readdirSync(tmp)[0]) : tmp;
         renameSync(inner, path.join(dir, "pack"));
         rmSync(tmp, { recursive: true, force: true });
-        prompt = `# Task\n\nYou are taking part in a blind quality test as an AI Blocks agent. Your pack is \`pack/\`. Start with \`pack/CLAUDE.md\` and use the pack as your operating instructions: its method, its skills for this job, its knowledge and its node tools. You may read any file in \`pack/\` and \`inputs/\` and run the pack's node tools. Do not read anything outside this folder.\n\nA store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${rules}\n\nWrite the finished deliverable to \`answer.md\` in this folder, then reply with the same text.\n`;
+        prompt = `# Task\n\nYou are taking part in a blind quality test as an AI Blocks agent. Your pack is \`pack/\`. Start with \`pack/CLAUDE.md\` and use the pack as your operating instructions: its method, its skills for this job, its knowledge and its node tools. You may read any file in \`pack/\` and \`inputs/\` and run the pack's node tools. Do not read anything outside this folder.\n\nA store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${fileList(files)}\nRead every one of these files before you start: they are the owner's own data, and a file search of this folder will not list them all.\n\n${rules}\n\nWrite the finished deliverable to \`answer.md\` in this folder, then reply with the same text.\n`;
         tools = "Read,Glob,Grep,Write,Edit,Bash(node:*)"; meta.disallowed = "WebFetch,WebSearch,Task,Skill";
       } else throw new Error(`unknown arm ${arm}`);
       assertNoKey(prompt, KEYLINES, `${t.id}/${arm}/r${k} prompt`);

@@ -69,6 +69,17 @@ writeFileSync(path.join(bad, "run.jsonl"), [
 ].join("\n"));
 execFileSync(process.execPath, [path.join(SUITE, "scripts", "finish-run.mjs"), bad], { encoding: "utf8" });
 ok(JSON.parse(readFileSync(path.join(bad, "meta.json"), "utf8")).audit.contaminated === true, "finish-run flags a read outside the run folder");
+// a code run that never opens the owner's data files is flagged (a big pack hides them from a file search)
+const blind = path.join(runsDir, "E04", "code", "r2");
+const blindMeta = JSON.parse(readFileSync(path.join(blind, "meta.json"), "utf8"));
+const ownerFile = blindMeta.inputs.find(n => n !== "ORG-CONTEXT.md");
+ok(readFileSync(path.join(blind, "PROMPT.md"), "utf8").includes(`inputs/${ownerFile}`), "the code prompt lists the owner's files by name");
+writeFileSync(path.join(blind, "run.jsonl"), [
+  JSON.stringify({ type: "assistant", message: { content: [{ type: "tool_use", name: "Read", input: { file_path: path.join(blind, "pack", "CLAUDE.md") } }] } }),
+  JSON.stringify({ type: "result", result: "answer text", usage: { input_tokens: 10, output_tokens: 5 }, total_cost_usd: 0.01, num_turns: 2 }),
+].join("\n"));
+const blindOut = execFileSync(process.execPath, [path.join(SUITE, "scripts", "finish-run.mjs"), blind], { encoding: "utf8" });
+ok(JSON.parse(readFileSync(path.join(blind, "meta.json"), "utf8")).audit.inputs_unread.includes(ownerFile) && /MISSED \d+ OF \d+ OWNER FILES/.test(blindOut), "finish-run flags a run that never opened the owner's files");
 const sheetsOut = node("make-sheets.mjs", "sheets", "--round", "T1");
 ok(/left out \(contaminated\): E04\/plain\/r3/.test(sheetsOut), "contaminated run is left out of the sheets");
 const key =JSON.parse(readFileSync(path.join(tmp, "T1", "_key", "blind-key.json"), "utf8")).sheets;

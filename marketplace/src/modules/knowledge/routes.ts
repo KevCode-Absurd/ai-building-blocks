@@ -9,7 +9,7 @@
 //                                            store's order of work with no q)
 //   GET /api/knowledge/:vertical/shelf/:kind/:slug  one item and its full text
 import { fail, json, type Route } from "../../core/http.ts";
-import { answerJson, cardQuery, shelfText, verticalIndex, verticalShelf } from "./service.ts";
+import { answerJson, cardQuery, shelfAnswer, verticalIndex, verticalShelf } from "./service.ts";
 import { isShelfKind, SHELF_KINDS, type ShelfItem } from "./shelf.ts";
 
 const PUBLIC_CACHE = { "cache-control": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400" };
@@ -81,11 +81,9 @@ export const routes: Route[] = [
       if (!isShelfKind(kind)) return fail(404, "unknown_kind", `Pick one of ${SHELF_KINDS.join(", ")}.`);
       const item = (shelf.file[kind] as ShelfItem[]).find(i => i.slug === ctx.params.slug);
       if (!item) return fail(404, "unknown_item", "We could not find that item. It may have a new name.");
-      const text = await shelfText(ctx.env, item.path);
-      if (text === null) return fail(503, "item_text_missing", "This item's text is not ready yet. Try again in a minute.");
-      // A prompt's text alone, for the copy button.
-      const prompt = kind === "prompts" ? await shelfText(ctx.env, item.path.replace(/\.md$/, ".txt")) : null;
-      return json({ vertical: shelf.file.vertical, kind, item, text, ...(prompt ? { prompt } : {}) }, 200, PUBLIC_CACHE);
+      const answer = await shelfAnswer(ctx.env, shelf, kind, item);
+      if (!answer) return fail(503, "item_text_missing", "This item's text is not ready yet. Try again in a minute.");
+      return json(answer, 200, PUBLIC_CACHE);
     },
   },
 ];

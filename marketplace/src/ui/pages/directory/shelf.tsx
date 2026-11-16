@@ -6,6 +6,7 @@ import { useEffect, useState } from "preact/hooks";
 import { Badge, Button, Notice, Page, Spinner, useLoad } from "../../components.tsx";
 import { api, ApiError } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
+import { shelfTitle } from "../../../modules/directory/titles.ts";
 import { SafeMarkdown } from "./pack-parts.tsx";
 
 export const SHELF_VERTICAL = "ecommerce";
@@ -172,7 +173,7 @@ export function ShelfItemPage(props: { params: Record<string, string> }) {
   const team = useLoad<{ agents: TeamName[] }>(() => api(`/api/agents?vertical=${SHELF_VERTICAL}`), []);
   const names = new Map((team.data?.agents ?? []).map(a => [a.id, a]));
   const data = state.data;
-  useEffect(() => { if (data) document.title = `${data.item.title} | E-commerce ${SHELF_WORDS[data.kind].one} | AI Blocks`; }, [data]);
+  useEffect(() => { if (data) document.title = shelfTitle(data.item.title, SHELF_WORDS[data.kind].one); }, [data]);
 
   if (state.error) return (
     <Page title="We could not load this just now" intro="Check your connection, then try again.">

@@ -57,9 +57,19 @@ export function verticalShelf(env: Env, id: string): Promise<LoadedShelf | null>
   return load;
 }
 
+/** What /api/knowledge/<vertical>/shelf/<kind>/<slug> returns: the item, its full text and, for a prompt, the prompt alone
+ *  (for the copy button). The item's page (src/pages.ts) sends the same answer inside the HTML. Null when the text is missing. */
+export async function shelfAnswer(env: Env, shelf: LoadedShelf, kind: ShelfKind, item: ShelfItem) {
+  const text = await shelfText(env, item.path);
+  if (text === null) return null;
+  const prompt = kind === "prompts" ? await shelfText(env, item.path.replace(/\.md$/, ".txt")) : null;
+  return { vertical: shelf.file.vertical, kind, item, text, ...(prompt ? { prompt } : {}) };
+}
+
 /** One item's full text from its built file, or null. */
 export async function shelfText(env: Env, path: string): Promise<string | null> {
-  if (!env.ASSETS || !/^\/packs\/knowledge\/[a-z0-9-]+\/[a-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
+  // Skill files are SKILL.md, so the file part allows capitals. No ".." anywhere: the path stays inside the library.
+  if (!env.ASSETS || path.includes("..") || !/^\/packs\/knowledge\/[a-z0-9-]+\/[A-Za-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
   const res = await env.ASSETS.fetch(new Request(new URL(path, env.APP_ORIGIN)));
   return res.ok ? res.text() : null;
 }

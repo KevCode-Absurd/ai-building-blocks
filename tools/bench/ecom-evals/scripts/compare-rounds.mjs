@@ -8,7 +8,10 @@
 // Promotion rule for the candidate (all must hold on HELD-OUT, for --arm):
 //   1. owner score does not fall;  2. worst-of-3 does not fall;  3. pass^3 does not fall;
 //   4. win share vs plain (--pair) does not fall;  5. no single grade falls by more than --grade-drop;
-//   6. the held-out task set is identical in both rounds (frozen), and no held-out task was dropped.
+//   6. the held-out task set is identical in both rounds (frozen), and no held-out task was dropped;
+//   7. the must-pass rate (nothing invented, no claim the brand cannot make, no decoy taken) does not fall.
+// It warns, without blocking, when the two rounds were judged on different rubric versions or judge models:
+// re-check judge agreement with the owner before trusting the comparison.
 // Tune must also improve on owner score or win share, or the change is "no gain" (not promoted).
 // Exit code 0 = PROMOTE, 1 = DO NOT PROMOTE, 2 = usage error.
 import { existsSync, readFileSync } from "node:fs";
@@ -46,6 +49,9 @@ for (const split of ["tune", "heldout"]) {
       if (Number.isFinite(x) && !Number.isFinite(y)) fails.push(`held-out ${label} missing in candidate`);
     }
     for (const g of GRADES) { const [x, y] = line.grades[g]; if (Number.isFinite(x) && Number.isFinite(y) && x - y > drop) fails.push(`held-out grade ${g} fell by ${r2(x - y)} (limit ${drop})`); }
+    const [mx, my] = [b.arm?.must_pass_rate, c.arm?.must_pass_rate];
+    if (Number.isFinite(mx) && Number.isFinite(my) && my < mx) fails.push(`held-out must-pass rate fell: ${pct(mx)} to ${pct(my)}`);
+    line.must = [mx, my];
   }
 }
 const mb = roundMeta(base), mc = roundMeta(cand);
@@ -54,6 +60,12 @@ const hoTasks = s => new Set(s.by_task.filter(r => r.split === "heldout" && r.ar
 const hb = hoTasks(B), hc = hoTasks(C);
 for (const t of hb) if (!hc.has(t)) fails.push(`held-out task ${t} missing from candidate`);
 if (mb.model && mc.model && mb.model !== mc.model) fails.push(`model changed (${mb.model} to ${mc.model}): compare like for like`);
+const warns = [];
+const keyOf = r => { const p = path.join(dir, r, "_key", "blind-key.json"); return existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {}; };
+const [rb, rc] = [keyOf(base).rubric ?? "before 2026-11-16", keyOf(cand).rubric ?? "before 2026-11-16"];
+if (rb !== rc) warns.push(`rubric version differs (${rb} vs ${rc}): re-check judge agreement with the owner before trusting this comparison`);
+const models = s => Object.keys(s.judge_models ?? {}).sort().join(", ");
+if (models(B) && models(C) && models(B) !== models(C)) warns.push(`judge models differ (${models(B)} vs ${models(C)})`);
 const tune = rows.find(r => r.split === "tune");
 const tuneGain = (Number.isFinite(tune.owner[0]) && tune.owner[1] > tune.owner[0]) || (Number.isFinite(tune.win[0]) && tune.win[1] > tune.win[0]);
 
@@ -64,6 +76,9 @@ console.log("\n| Grade | Tune | Held-out |\n|---|---|---|");
 for (const g of GRADES) console.log(`| ${g} | ${d(...rows[0].grades[g]) ?? "n/a"} | ${d(...rows[1].grades[g]) ?? "n/a"} |`);
 const overlap = rows[1].ci[0] && rows[1].ci[1] && !(rows[1].ci[1][0] > rows[1].ci[0][1]);
 console.log(`\nHeld-out win intervals ${overlap ? "overlap: any held-out change is within noise." : "do not overlap."}`);
+const hm = rows[1].must ?? [];
+console.log(`Held-out must-pass rate: ${hm[0] == null ? "n/a" : pct(hm[0])} to ${hm[1] == null ? "n/a" : pct(hm[1])}.`);
+if (warns.length) console.log(`\nWARNING:\n${warns.map(w => `- ${w}`).join("\n")}`);
 if (fails.length) { console.log(`\nDO NOT PROMOTE:\n${fails.map(f => `- ${f}`).join("\n")}`); process.exit(1); }
 if (!tuneGain) { console.log("\nDO NOT PROMOTE: no gain on tune (held-out held, but the change did not help)."); process.exit(1); }
 console.log("\nPROMOTE: tune improved and held-out did not fall.");

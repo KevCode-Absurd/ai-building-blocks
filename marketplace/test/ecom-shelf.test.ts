@@ -5,7 +5,8 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { testEnv } from "./helpers.ts";
 import { buildShelf, ShelfSearch, type ShelfInput, type ShelfItem } from "../src/modules/knowledge/shelf.ts";
-import { forgetVerticals } from "../src/modules/knowledge/service.ts";
+import { forgetVerticals, shelfText } from "../src/modules/knowledge/service.ts";
+import type { Env } from "../src/env.ts";
 import { ECOMMERCE_MODULE_STAGES, ECOMMERCE_STAGES } from "../src/modules/directory/team-stages.ts";
 
 const prompt = (slug: string, title: string, extra: Record<string, unknown> = {}) => ({
@@ -65,6 +66,10 @@ after(() => forgetVerticals());
 test("GET /api/knowledge/ecommerce/shelf, a shelf page and one item", async () => {
   forgetVerticals();
   const { files } = buildShelf(input());
+  // The skill's own file, as the pack build ships it (capital SKILL.md).
+  const skill = JSON.parse(files[Object.keys(files).find(p => p.endsWith("/shelf.json")) ?? ""] ?? "{}").skills?.[0]?.path
+    ?? "/packs/knowledge/ecommerce/skills/build-klaviyo-segments/SKILL.md";
+  files[skill] = "---\nname: build-klaviyo-segments\n---\n# Klaviyo segments\n";
   const assets = { async fetch(req: Request) {
     const p = new URL(req.url).pathname;
     if (!(p in files)) return new Response("Not found", { status: 404 });
@@ -83,9 +88,40 @@ test("GET /api/knowledge/ecommerce/shelf, a shelf page and one item", async () =
   assert.equal(one.status, 200);
   assert.match(one.body.text, /# Ten ad hooks/);
   assert.match(one.body.prompt, /^You are a direct-response strategist/);
+  const sk = await t.api("GET", "/api/knowledge/ecommerce/shelf/skills/build-klaviyo-segments");
+  assert.equal(sk.status, 200, "a skill's SKILL.md (capital letters in the file name) loads");
+  assert.match(sk.body.text, /# Klaviyo segments/);
+  assert.equal(await shelfText({ ASSETS: assets as unknown as Fetcher, APP_ORIGIN: "https://x.test" } as unknown as Env, "/packs/knowledge/ecommerce/../../secret.md"), null, "no path outside the library");
   assert.equal((await t.api("GET", "/api/knowledge/ecommerce/shelf/widgets")).status, 404);
   assert.equal((await t.api("GET", "/api/knowledge/ecommerce/shelf/prompts/nope")).status, 404);
   assert.equal((await t.api("GET", "/api/knowledge/saas/shelf")).status, 404);
+});
+
+test("an item's page: a title and description that fit search results, its full text for crawlers, and the API answer inside", async () => {
+  forgetVerticals();
+  const long = "Supplier RFQ message in English and Mandarin for a factory you have never ordered from before";
+  const { files } = buildShelf(input({ prompts: [prompt("supplier-rfq-message", long, { stage: "source", module: "COG", agents: ["wenhao-procurement"],
+    summary: "Paste what you want made and the quantities. Get a request for quotation in English and Mandarin that a factory can price the same day, with the questions that flush out hidden costs, minimums and lead times before you pay a deposit." })] }));
+  files["/packs/knowledge/ecommerce/skills/build-klaviyo-segments/SKILL.md"] = "---\nname: build-klaviyo-segments\n---\n# Klaviyo segments\n\nSplit buyers by **recency**.\n\n- Lapsed 90 days\n- VIP: 3+ orders\n\n| Segment | Rule |\n|---|---|\n| VIP | 3+ orders |\n";
+  files["/"] = `<html><head><meta name="viewport" content="width=device-width"><title>x</title></head><body><div id="app"></div></body></html>`;
+  const assets = { async fetch(req: Request) {
+    const p = new URL(req.url).pathname;
+    if (!(p in files)) return new Response("Not found", { status: 404 });
+    return new Response(files[p], { headers: { "content-type": p === "/" ? "text/html" : p.endsWith(".json") ? "application/json" : "text/markdown" } });
+  } };
+  const t = await testEnv({ ASSETS: assets as unknown as Fetcher, APP_ENV: "production" });
+  const html = String((await t.api("GET", "/e-commerce/prompts/supplier-rfq-message")).body);
+  const title = html.match(/<title>([^<]*)<\/title>/)![1];
+  assert.ok(title.length <= 65 && title.endsWith(" | AI Blocks") && title.startsWith("Supplier RFQ message"), title);
+  const description = html.match(/<meta name="description" content="([^"]*)"/)![1];
+  assert.ok(description.length <= 155 && description.endsWith("…"), description);
+  assert.match(html, /<h2>The full prompt<\/h2><p>You are a direct-response strategist\./, "the prompt itself is in the plain HTML");
+  const boot = JSON.parse(html.match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)![1]);
+  assert.deepEqual(boot["/api/knowledge/ecommerce/shelf/prompts/supplier-rfq-message"], (await t.api("GET", "/api/knowledge/ecommerce/shelf/prompts/supplier-rfq-message")).body, "the page carries the API's answer");
+  assert.deepEqual(boot["/api/agents?vertical=ecommerce"], (await t.api("GET", "/api/agents?vertical=ecommerce")).body, "and the team list the page also asks for");
+  const skill = String((await t.api("GET", "/e-commerce/skills/build-klaviyo-segments")).body);
+  assert.match(skill, /<h2>The full skill<\/h2><h2>Klaviyo segments<\/h2><p>Split buyers by recency\.<\/p><ul><li>Lapsed 90 days<\/li><li>VIP: 3\+ orders<\/li><\/ul><p>Segment · Rule<\/p><p>VIP · 3\+ orders<\/p>/);
+  assert.equal((skill.match(/<h1[ >]/g) ?? []).length, 1, "the page keeps one h1");
 });
 
 // The real library, once merged: every item names only team agents and real stages, and prompts follow the house rules.

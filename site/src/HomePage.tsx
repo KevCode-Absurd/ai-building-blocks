@@ -145,7 +145,9 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
   return (
     <section className="section wrap" id="library" aria-label="Library">
       <h2 className="visually-hidden">Find a task</h2>
-      <div className="library-formats" role="tablist" aria-label="Format" onKeyDown={(e) => {
+      {/* The tabs sit in their own tab list (display: contents keeps them in the row's grid); the Specialists link sits beside it, since a tab list may only hold tabs. */}
+      <div className="library-formats" data-testid="library-formats">
+      <div className="library-format-tabs" role="tablist" aria-label="Format" onKeyDown={(e) => {
         if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
         e.preventDefault();
         const index = formats.findIndex((k) => k.id === f.kind);
@@ -156,6 +158,7 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
         {formats.map((k) => <button key={k.id} id={`format-${k.id}`} type="button" role="tab" aria-selected={f.kind === k.id} aria-controls="library-results" tabIndex={f.kind === k.id ? 0 : -1} onClick={() => set({ kind: k.id })} data-testid={`tab-${k.id}`}>
           <span>{k.name}</span><small>{k.line}</small>
         </button>)}
+      </div>
         <Link to="/roles" className="library-format-link" data-testid="tab-specialists"><span>Specialists</span><small>{kindLine("specialist")}</small></Link>
       </div>
       <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onFocus={() => { if (!complete) onNeedFull?.(); }} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>

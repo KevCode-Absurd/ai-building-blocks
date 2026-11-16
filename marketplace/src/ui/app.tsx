@@ -172,6 +172,8 @@ function SiteFooter() {
 /** Pages that need an account or a role say where the visitor is, why they cannot see it yet, and what to do next. */
 function Gate(props: { access: Access; children: JSX.Element }) {
   const auth = useAuth();
+  // Public pages never wait for the account check: they paint at once, so the first paint is the page, not a spinner.
+  if (props.access === "public") return props.children;
   if (!auth.loaded) return <main class="page"><Spinner label="Opening your account…" /></main>;
   const verdict = allowed(props.access, auth.signedIn, auth.me);
   if (verdict === "ok") return props.children;

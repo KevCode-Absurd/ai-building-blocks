@@ -4,7 +4,8 @@
 //
 //   node scripts/make-sheets.mjs prompts --round R1 [--tasks E01,E04] [--arms plain,chat,code] [--runs 3]
 //        [--model opus] [--chat-max-chars 600000] [--packs <dir>] [--force] [--rounds-dir <dir>]
-//   node scripts/make-sheets.mjs sheets  --round R1 [--seed 1] [--pairs code:plain,chat:plain,code:chat] [--allow-contaminated]
+//   node scripts/make-sheets.mjs sheets  --round R1 [--seed 1] [--pairs code:plain,chat:plain,code:chat] [--pair-runs r1]
+//        [--examples <owner-labels.jsonl>] [--allow-contaminated]
 //   node scripts/make-sheets.mjs image-sheets --round R1 [--seed 1]
 //
 // prompts      writes rounds/<R>/runs/<task>/<arm>/r<k>/{PROMPT.md, inputs/, meta.json [, pack/ | pack.txt]},
@@ -14,12 +15,15 @@
 //              single/S-*.md (one answer), pairwise/P-*.md (A vs B, both orders, each a separate sheet) and
 //              checker/C-*.md (one answer plus its key). The unblinding key goes to rounds/<R>/_key/blind-key.json.
 //              It also writes run-judges.sh and JUDGES.md. Verdicts go to rounds/<R>/verdicts/<sheet id>.json.
+//              --pair-runs limits pairwise sheets to the listed runs (a cheap tune round: --pairs code:plain --pair-runs r1).
+//              --examples adds up to 4 of the owner's train-split critiques from tune tasks to every single-answer
+//              sheet, as worked examples of how the owner judges. Held-out labels are never used.
 // image-sheets after render-images.mjs, copies the images under neutral ids and writes one sheet per task.
 import { existsSync, readFileSync, readdirSync, mkdirSync, copyFileSync, rmSync, statSync, renameSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { SUITE, REPO, ROUNDS, args, list, loadTasks, loadPersonas, taskInputs, copyInto, scrub, grades, rng, shuffle, newId,
-  words, sha256File, sha256, keyLines, assertNoKey, writeFile, AGENT_ARMS } from "./lib.mjs";
+  words, sha256File, sha256, keyLines, assertNoKey, writeFile, AGENT_ARMS, RUBRIC_VERSION, GRADES } from "./lib.mjs";
 
 const A = args();
 const cmd = A._[0];
@@ -40,6 +44,12 @@ const sh = s => `'${String(s).replace(/'/g, `'\\''`)}'`;
 function inlineFiles(files) {
   return files.map(f => `\n\n----- FILE: ${path.basename(f)} -----\n\n${readFileSync(f, "utf8").trim()}`).join("");
 }
+// The owner's files by name. A file search of a big pack shows only its first 100 files, so the prompt names the
+// inputs (round 2 lost 16 of 30 code runs to that before this list existed).
+function fileList(files) {
+  return `## The owner's files\n\n${files.map(f => `- \`inputs/${path.basename(f)}\``).join("\n")}\n`;
+}
+
 function taskHeader(t) {
   return `## The owner's message\n\n> ${t.question}\n\n## What the owner expects\n\n${t.deliverable}\n`;
 }
@@ -66,7 +76,7 @@ if (cmd === "prompts") {
       const meta = { round, task: t.id, arm, run: k, model, agent: t.agent, created: new Date().toISOString(), inputs: files.map(f => path.basename(f)) };
       let prompt, tools;
       if (arm === "plain") {
-        prompt = `# Task\n\nYou are a senior ${title.toLowerCase()}. A store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n## How to work\n\nRead every file in \`inputs/\` first. Then do the job.\n\n${rules}\n`;
+        prompt = `# Task\n\nYou are a senior ${title.toLowerCase()}. A store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${fileList(files)}\n## How to work\n\nRead every file in \`inputs/\` first. Then do the job.\n\n${rules}\n`;
         tools = "Read,Glob,Grep"; meta.disallowed = "Bash,Write,Edit,NotebookEdit,WebFetch,WebSearch,Task,Skill";
       } else if (arm === "chat") {
         const txt = path.join(packs, `${t.agent}.txt`);
@@ -92,7 +102,7 @@ if (cmd === "prompts") {
         const inner = readdirSync(tmp).length === 1 && statSync(path.join(tmp, readdirSync(tmp)[0])).isDirectory() ? path.join(tmp, readdirSync(tmp)[0]) : tmp;
         renameSync(inner, path.join(dir, "pack"));
         rmSync(tmp, { recursive: true, force: true });
-        prompt = `# Task\n\nYou are taking part in a blind quality test as an AI Blocks agent. Your pack is \`pack/\`. Start with \`pack/CLAUDE.md\` and use the pack as your operating instructions: its method, its skills for this job, its knowledge and its node tools. You may read any file in \`pack/\` and \`inputs/\` and run the pack's node tools. Do not read anything outside this folder.\n\nA store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${rules}\n\nWrite the finished deliverable to \`answer.md\` in this folder, then reply with the same text.\n`;
+        prompt = `# Task\n\nYou are taking part in a blind quality test as an AI Blocks agent. Your pack is \`pack/\`. Start with \`pack/CLAUDE.md\` and use the pack as your operating instructions: its method, its skills for this job, its knowledge and its node tools. You may read any file in \`pack/\` and \`inputs/\` and run the pack's node tools. Do not read anything outside this folder.\n\nA store owner sent you the message below and the files in \`inputs/\`.\n\n${taskHeader(t)}\n${fileList(files)}\nRead every one of these files before you start: they are the owner's own data, and a file search of this folder will not list them all.\n\n${rules}\n\nWrite the finished deliverable to \`answer.md\` in this folder, then reply with the same text.\n`;
         tools = "Read,Glob,Grep,Write,Edit,Bash(node:*)"; meta.disallowed = "WebFetch,WebSearch,Task,Skill";
       } else throw new Error(`unknown arm ${arm}`);
       assertNoKey(prompt, KEYLINES, `${t.id}/${arm}/r${k} prompt`);
@@ -134,12 +144,23 @@ if (cmd === "sheets") {
     }
   }
   rmSync(path.join(RD, "sheets"), { recursive: true, force: true });
-  const key = { round, created: new Date().toISOString(), sheets: {} };
+  const key = { round, created: new Date().toISOString(), rubric: RUBRIC_VERSION, sheets: {} };
   const G = grades();
   const single = readFileSync(path.join(SUITE, "judge", "SINGLE.md"), "utf8");
   const pairwise = readFileSync(path.join(SUITE, "judge", "PAIRWISE.md"), "utf8");
   const checker = readFileSync(path.join(SUITE, "judge", "CHECKER.md"), "utf8");
   const jobs = [];
+  let examples = "";
+  if (A.examples) {
+    const tasksById = Object.fromEntries(allTasks.map(t => [t.id, t]));
+    const labels = readFileSync(path.resolve(A.examples), "utf8").split(/\r?\n/).filter(Boolean).map(l => JSON.parse(l))
+      .filter(l => l.split === "train" && tasksById[l.task]?.split === "tune" && String(l.note ?? "").trim());
+    // Prefer a mix: at least one answer the owner would not act on, then the rest in file order.
+    const pickEx = [...labels.filter(l => l.act === "no").slice(0, 2), ...labels.filter(l => l.act !== "no")].slice(0, 4);
+    if (pickEx.length) examples = "\n## How this owner judges (worked examples from the owner's own reviews)\n\n" + pickEx.map((l, i) =>
+      `${i + 1}. Task: "${tasksById[l.task].question}"\n   Owner's calls: ${GRADES.map(g => `${g} ${l.grades?.[g] ?? "skip"}`).join(", ")}; would act today: ${l.act ?? "n/a"}.\n   Owner's note: ${String(l.note).trim()}`).join("\n") + "\n";
+    console.log(`judge examples: ${pickEx.length} owner critiques from the train split`);
+  }
   const context = t => {
     const files = taskInputs(t);
     return `${taskHeader(t)}\n## What a good result does for this store (the outcome)\n\n${t.outcome}\n\n## Principle sets that apply\n\n${t.principles.join(", ")}. Judge by sound practice in these disciplines.\n\n## The inputs the specialist had${inlineFiles(files)}\n`;
@@ -151,10 +172,10 @@ if (cmd === "sheets") {
     for (const arm of Object.keys(byArm)) for (const rk of Object.keys(byArm[arm])) {
       const a = byArm[arm][rk];
       const sid = newId("S", r, used);
-      const s = `${single.replace(/{{GRADES}}/g, G).replace(/{{SHEET_ID}}/g, sid)}\n\n---\n\n# Task ${sid}\n\n${ctx}\n\n## The answer\n\n${a.text}\n`;
+      const s = `${single.replace(/{{GRADES}}/g, G).replace(/{{SHEET_ID}}/g, sid).replace(/{{RUBRIC_VERSION}}/g, RUBRIC_VERSION).replace(/{{EXAMPLES}}/g, examples)}\n\n---\n\n# Task ${sid}\n\n${ctx}\n\n## The answer\n\n${a.text}\n`;
       assertNoKey(s, KEYLINES, `single ${sid}`);
       writeFile(path.join(RD, "sheets", "single", `${sid}.md`), s);
-      key.sheets[sid] = { type: "single", task: t.id, split: t.split, area: t.area, arm, run: rk, words: a.words };
+      key.sheets[sid] = { type: "single", task: t.id, split: t.split, area: t.area, arm, run: rk, words: a.words, rubric: RUBRIC_VERSION };
       jobs.push({ sid, dir: "single" });
       const cid = newId("C", r, used);
       const keyText = readFileSync(path.join(SUITE, "keys", `${t.id}.md`), "utf8");
@@ -168,6 +189,7 @@ if (cmd === "sheets") {
       if (!byArm[x] || !byArm[y]) continue;
       for (const rk of Object.keys(byArm[x])) {
         if (!byArm[y][rk]) continue;
+        if (list(A["pair-runs"]).length && !list(A["pair-runs"]).includes(rk)) continue;
         const orders = shuffle([[x, y], [y, x]], r);
         const ids = [];
         for (const [first, second] of orders) {
@@ -185,11 +207,11 @@ if (cmd === "sheets") {
   }
   writeFile(path.join(RD, "_key", "blind-key.json"), JSON.stringify(key, null, 1));
   const order = shuffle(jobs, r);
-  const jl = ["#!/usr/bin/env bash", "# One fresh claude -p per sheet, on the Claude plan. Judges may read only their sheet.", "set -u", `cd "$(dirname "$0")"`, "unset ANTHROPIC_API_KEY", "mkdir -p verdicts", ""];
+  const jl = ["#!/usr/bin/env bash", "# One fresh claude -p per sheet, on the Claude plan. Judges may read only their sheet.", "# The prompt goes right after -p: --allowedTools and --disallowedTools take several values and would swallow it.", "set -u", `cd "$(dirname "$0")"`, "unset ANTHROPIC_API_KEY", `SUITE=${sh(SUITE.split(path.sep).join("/"))}`, "mkdir -p verdicts", ""];
   const md = [`# Judge jobs for round ${round}`, "", "Give each sheet to a fresh Claude subagent: \"Read <sheet> and follow it exactly. Write your JSON to <verdict>. Do not open any other file.\" Never show a judge the _key folder, the runs folder, TASKS.json or keys/.", ""];
   for (const j of order) {
     const sheet = `sheets/${j.dir}/${j.sid}.md`, out = `verdicts/${j.sid}.json`;
-    jl.push(`if [ ! -s ${out} ]; then echo ${j.sid}; claude -p --model ${sh(A.model ?? "opus")} --strict-mcp-config --allowedTools 'Read' --disallowedTools 'Bash,Write,Edit,WebFetch,WebSearch,Task,Skill' "Read ${sheet} and follow it exactly. Reply with only the JSON it asks for." > ${out}.raw && node -e 'const fs=require("fs");const t=fs.readFileSync(process.argv[1],"utf8");const m=t.match(/\\{[\\s\\S]*\\}/);if(m)fs.writeFileSync(process.argv[2],m[0]);' ${out}.raw ${out}; fi`);
+    jl.push(`if [ ! -s ${out} ]; then echo ${j.sid}; claude -p "Read ${sheet} and follow it exactly. Reply with only the JSON it asks for." --model ${sh(A.model ?? "opus")} --strict-mcp-config --output-format json --allowedTools 'Read' --disallowedTools 'Bash,Write,Edit,WebFetch,WebSearch,Task,Skill' > ${out}.raw && node "$SUITE/scripts/save-verdict.mjs" ${out}.raw ${out}; fi`);
     md.push(`- ${sheet} -> ${out}`);
   }
   writeFile(path.join(RD, "run-judges.sh"), jl.join("\n") + "\n");

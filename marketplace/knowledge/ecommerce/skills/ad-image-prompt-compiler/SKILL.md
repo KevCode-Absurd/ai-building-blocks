@@ -90,19 +90,19 @@ Put the product and any approved person first, then light or style, then any lay
 ### 3. Write the prompt in a fixed order
 
 1. **Format:** "Photograph, 4:5 vertical, 1080 x 1350" (or the canvas from the layout).
-2. **Product:** "Use the attached product photo. Keep the label, colour, shape and proportions exactly as shown." Name the variant.
+2. **Product:** "Use the attached product photo. Keep the label, colour, shape and proportions exactly as shown." Name the variant. With no photo to attach (a text-only tool), the words are all the model has, so describe the product from the product facts as a camera would see it: the material and its surface (heavy cotton canvas with a dry, matte weave; brushed steel; glazed stoneware), the colour by name and hex, the cut or shape, every closure and piece of hardware, and the size against something familiar. Then name 2 or 3 things it does not have that a model is likely to add (no collar lining, no zip, no shine). Look at each output for these first: a model drifts to the most common version of the category.
 3. **Scene and setting:** one or two plain sentences of what a camera would see.
 4. **Composition:** where the product sits and which areas stay empty, from the layout ("top fifth plain and uncluttered for a headline").
 5. **Lighting, angle, depth:** one phrase each.
 6. **Palette:** hex codes with plain names ("#1F3A2E deep forest green").
 7. **Mood and style:** two words for mood, one phrase for style.
-8. **Text:** "No text, letters, logos or watermarks anywhere." If a few words must appear, put them in quotes, five words or fewer (practitioner default, test it), and plan a real-type fallback.
+8. **Text:** "No text, letters, logos or watermarks anywhere." If a few words must appear, put them in quotes, five words or fewer (practitioner default, test it), and plan a real-type fallback. When a form, a tool or a hand-over file has its own field for the words on the image, that field holds only the words, exactly as they should read. No role labels ("Headline:", "CTA:"), no separators and no layout notes: a model prints whatever is in that field. Layout, type and colour go in the composition and palette lines, and the words a designer sets afterwards go in a separate note.
 
 **Settings beat words.** Where the tool has settings for shape, size or quality, set them there; writing "4K" or "8K" in a prompt sets nothing, and some tools ignore a ratio written in words. Keep the format line for tools with no settings, or as a plain statement of what the image is and where it runs ("A photoreal product ad for an online store's Instagram feed").
 
 **Camera and physics.** Give the camera as a real position ("counter height, about 40 cm away, slightly above"), with framing, height, angle and distance as separate choices, not a mood. Make the scene physically possible: every object rests on, hangs from or is held by something, with a shadow that matches the light; the product opens, pours or is used only as the facts say, and is shown closed or at rest when no step is on file. Any hand gets its own line: how many, which hand, what it holds.
 
-**Exact words, when the tool can spell.** Current text-capable models can render a headline and a short support line, but test the tool first. When you do put words in, list each line once, in reading order, in quotes, with its role (headline, support, button), its place, its colour as hex plus a plain name, and the type look (weight, width, case, spacing). Never describe a word twice. Check every letter in the output; any miss means real type is set afterwards.
+**Exact words, when the tool can spell.** Current text-capable models can render a headline and a short support line, but test the tool first. What the tool can spell is not a reason to add words: the brand's own limit on ad text wins (when the org context caps a headline at a few words, every image fits that cap), and sizes, size charts, specs and offer terms go in the caption or primary text, not on the image. When you do put words in, list each line once, in reading order, in quotes, with its role (headline, support, button), its place, its colour as hex plus a plain name, and the type look (weight, width, case, spacing). Never describe a word twice. Check every letter in the output; any miss means real type is set afterwards.
 
 Aim for the shortest prompt that carries every locked setting, usually one short paragraph per section. Long prompts that repeat themselves tend to drift (practitioner default, test it).
 

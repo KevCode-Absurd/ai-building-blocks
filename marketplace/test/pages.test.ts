@@ -104,6 +104,20 @@ test("a role page has its own title and canonical address", async () => {
   assert.equal(res.status, 200);
   assert.match(String(res.body), new RegExp(`<link rel="canonical" href="https://agents\\.test/agents\\?role=${agent.role}" />`));
   assert.match(String(res.body), new RegExp(`/agents/${agent.id}`));
+  // Structured data: the role's agents as a list, and the way back to all agents.
+  const ld = [...String(res.body).matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
+  const list = ld.find(d => d["@type"] === "CollectionPage")?.mainEntity;
+  assert.equal(list?.["@type"], "ItemList");
+  assert.ok(list.itemListElement.some((i: { url: string }) => i.url === `https://agents.test/agents/${agent.id}`));
+  assert.ok(ld.some(d => d["@type"] === "BreadcrumbList"));
+  assert.match(String(res.body), new RegExp(`<h2><a href="/agents/${agent.id}">`), "each agent gets its own section with what it makes");
+});
+
+test("the home page's plain HTML lists the agents to start with and how it works", async () => {
+  const t = await testEnv(PROD);
+  const html = String((await t.api("GET", "/")).body);
+  assert.match(html, /<h2>Agents to start with<\/h2><ul><li><a href="\/agents\/[a-z0-9-]+">/);
+  assert.match(html, /<h2>How it works<\/h2><ol>/);
 });
 
 test("production robots.txt points to the sitemap, which lists pages, roles and every live agent", async () => {

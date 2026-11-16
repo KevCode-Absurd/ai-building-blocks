@@ -1,7 +1,13 @@
 // The browser app skips downloading Clerk on public pages unless the visitor may be signed in (src/ui/lib/auth.tsx).
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { maybeSignedIn } from "../src/ui/lib/session-hint.ts";
+import { maybeSignedIn, PUBLIC_PAGE } from "../src/ui/lib/session-hint.ts";
+
+test("public pages, the e-commerce team and its shelves included, skip Clerk; account pages load it", () => {
+  for (const p of ["/", "/agents", "/agents/danielle-seo", "/e-commerce", "/e-commerce/skills/cut-subscription-churn", "/guides/use-an-agent-pack", "/connect"])
+    assert.ok(PUBLIC_PAGE.test(p), p);
+  for (const p of ["/studio", "/ops", "/sign-in", "/experts/apply", "/e-commercex"]) assert.ok(!PUBLIC_PAGE.test(p), p);
+});
 
 test("Clerk's __client_uat cookie says whether someone may be signed in", () => {
   assert.equal(maybeSignedIn(""), false);

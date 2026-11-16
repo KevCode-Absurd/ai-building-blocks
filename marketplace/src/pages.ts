@@ -12,8 +12,8 @@ import { listPersonas, searchPersonas } from "./modules/directory/service.ts";
 import { agentPayload, featuredPayload, HOME_FEATURED, verticalPayload } from "./modules/directory/routes.ts";
 import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
 import { groupByNature, lowerFirst, workLine, workLineText } from "./modules/directory/work.ts";
-import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, ECOMMERCE_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
-import { shelfText, verticalIndex, verticalShelf } from "./modules/knowledge/service.ts";
+import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, ECOMMERCE_TITLE, GUIDES_TITLE, roleTitle, shelfTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
+import { shelfAnswer, verticalIndex, verticalShelf } from "./modules/knowledge/service.ts";
 import { isShelfKind, SHELF_KINDS, SHELF_LABELS, type ShelfItem, type ShelfKind } from "./modules/knowledge/shelf.ts";
 import type { Persona } from "./core/types.ts";
 import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
@@ -85,6 +85,37 @@ interface PageView {
 
 // ---------- Plain page content ----------
 
+/** A library file's Markdown as plain, escaped HTML for crawlers: headings, lists, paragraphs and code, with links and
+ *  emphasis reduced to their words. Front matter is dropped; the page's own h1 stays the only h1. */
+export function textHtml(md: string, maxWords = 2500): string {
+  const lines = md.replace(/\r\n/g, "\n").replace(/^---\n[\s\S]*?\n---\n/, "").split("\n");
+  const inline = (s: string) => esc(s.replace(/!\[[^\]]*\]\([^)]*\)/g, "").replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/(\*\*|__|`)/g, "").replace(/(^|\s)[*_]([^*_]+)[*_](?=\s|[.,;:!?]|$)/g, "$1$2"));
+  const out: string[] = [];
+  let para: string[] = [], list: { tag: "ul" | "ol"; items: string[] } | null = null, code: string[] | null = null, words = 0;
+  const flush = () => {
+    if (para.length) { out.push(`<p>${inline(para.join(" "))}</p>`); para = []; }
+    if (list) { out.push(`<${list.tag}>${list.items.map(i => `<li>${inline(i)}</li>`).join("")}</${list.tag}>`); list = null; }
+  };
+  for (const raw of lines) {
+    if (words > maxWords) break;
+    const line = raw.trimEnd();
+    if (code) { if (/^\s*```/.test(line)) { out.push(`<pre>${esc(code.join("\n"))}</pre>`); code = null; } else code.push(raw); continue; }
+    if (/^\s*```/.test(line)) { flush(); code = []; continue; }
+    words += line.split(/\s+/).filter(Boolean).length;
+    const h = line.match(/^(#{1,6})\s+(.*)$/);
+    if (h) { flush(); const level = Math.min(4, Math.max(2, h[1].length)); out.push(`<h${level}>${inline(h[2])}</h${level}>`); continue; }
+    const li = line.match(/^\s*(?:([-*+])|(\d+)[.)])\s+(.*)$/);
+    if (li) { const tag = li[1] ? "ul" : "ol"; if (para.length || (list && list.tag !== tag)) flush(); list ??= { tag, items: [] }; list.items.push(li[3]); continue; }
+    if (!line.trim() || /^\s*(\||-{3,}|>)\s*/.test(line) && !line.replace(/[|\-:\s>]/g, "")) { flush(); continue; }
+    if (list) flush();
+    // A table row reads as one line of its cells.
+    para.push((/^\s*\|/.test(line) ? line.trim().replace(/^\||\|$/g, "").replace(/\s*\|\s*/g, " · ") : line.replace(/^\s*>\s?/, "")).trim());
+  }
+  if (code) out.push(`<pre>${esc(code.join("\n"))}</pre>`);
+  flush();
+  return out.join("");
+}
+
 function frame(inner: string): string {
   return `<div class="seo-page"><header><a href="/">AI Blocks agents</a> <nav><a href="/agents">Agents</a> <a href="/connect">Connect your AI</a> <a href="/guides">Guides</a> <a href="${LIBRARY}">AI Blocks library</a></nav></header><main class="page">${inner}</main></div>`;
 }
@@ -137,14 +168,17 @@ async function homePage(env: Env): Promise<PageView> {
   const everyone = await listPersonas(env);
   const count = everyone.length;
   const origin = originOf(env);
+  const featured = featuredPayload(everyone, HOME_FEATURED);
+  const byId = new Map(everyone.map(p => [p.id, p]));
+  const featuredList = featured.agents.map(a => byId.get(a.id)).filter((p): p is Persona => !!p);
   return {
     status: 200, index: true, path: "/", title: HOME_TITLE, description: HOME_DESCRIPTION,
     jsonLd: [
       { "@context": "https://schema.org", "@type": "WebSite", name: "AI Blocks agents", url: `${origin}/`, publisher: { "@type": "Organization", name: SITE, url: LIBRARY, logo: `${origin}/icon-512.png` },
         potentialAction: { "@type": "SearchAction", target: `${origin}/agents?q={search_term_string}`, "query-input": "required name=search_term_string" } },
     ],
-    body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p>${SEARCH_FORM}<p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>`,
-    boot: { [`/api/agents?featured=${HOME_FEATURED}`]: featuredPayload(everyone, HOME_FEATURED) },
+    body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p>${SEARCH_FORM}<p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>${featuredList.length ? `<h2>Agents to start with</h2><ul>${featuredList.map(agentLine).join("")}</ul>` : ""}<h2>How it works</h2><ol><li>Pick an agent for the job, such as an SEO strategist or a bookkeeper.</li><li>Download its free pack, or connect your AI and load the agent there.</li><li>Tell it about your business. It asks what it needs, then does the work in your own AI.</li></ol><p><a href="${ECOMMERCE_PATH}">Run an online store? Meet the e-commerce team</a></p>`,
+    boot: { [`/api/agents?featured=${HOME_FEATURED}`]: featured },
   };
 }
 
@@ -164,16 +198,32 @@ async function agentsPage(env: Env, url: URL): Promise<PageView> {
       body: `<h1>AI agents for "${esc(q)}"</h1>${SEARCH_FORM}<p>${found.length} agent${found.length === 1 ? "" : "s"}, best match first. Each line says whether the agent makes the thing, plans it or reviews it.</p><ul>${found.slice(0, 40).map(agentLine).join("")}</ul><p><a href="/agents">See every agent</a></p>`,
     };
   }
+  const origin = originOf(env);
   if (role) {
     const inRole = everyone.filter(p => p.role === role.id);
+    const path = `/agents?role=${encodeURIComponent(role.id)}`;
+    // Each agent with what it makes, so a role with one or two agents still says what hiring one gets you.
+    const agentBlock = (p: Persona) => {
+      const outcomes = (p.profile?.outcomes ?? []).map(o => o?.title).filter((t): t is string => typeof t === "string" && !!t.trim());
+      return `<h2><a href="/agents/${esc(p.id)}">${esc(p.name)}, ${esc(p.title)}</a></h2><p>${esc(p.tagline)}</p>${outcomes.length ? `<p>What ${esc(p.name)} makes:</p><ul>${outcomes.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`;
+    };
     return {
-      status: 200, index: inRole.length > 0 && !filtered, path: `/agents?role=${encodeURIComponent(role.id)}`,
+      status: 200, index: inRole.length > 0 && !filtered, path,
       title: roleTitle(role.name),
       description: clip(`${role.summary} Each agent is free to download or load into your own AI.`, 160),
-      body: `<h1>${esc(role.name)} agents</h1><p>${esc(role.summary)}</p><ul>${inRole.map(agentLine).join("")}</ul><p><a href="/agents">See every agent</a></p>`,
+      jsonLd: [
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: `${role.name} agents`, description: role.summary, url: `${origin}${path}`,
+          isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY },
+          mainEntity: { "@type": "ItemList", numberOfItems: inRole.length,
+            itemListElement: inRole.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: `${p.name}, ${p.title}`, url: `${origin}/agents/${p.id}` })) } },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "AI agents", item: `${origin}/agents` },
+          { "@type": "ListItem", position: 2, name: role.name, item: `${origin}${path}` },
+        ] },
+      ],
+      body: `<h1>${esc(role.name)} agents</h1><p>${esc(role.summary)}</p><p>${inRole.length} named agent${inRole.length === 1 ? "" : "s"} for this role. Each one is free: download the pack, or connect your AI and load it there, and it works on your own AI plan.</p>${inRole.map(agentBlock).join("")}<p><a href="/agents">See every agent</a> · <a href="/connect">Connect your AI</a></p>`,
     };
   }
-  const origin = originOf(env);
   return {
     status: 200, index: !filtered, path: "/agents",
     title: AGENTS_TITLE,
@@ -358,20 +408,21 @@ async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<P
   const people = await listPersonas(env);
   const byId = new Map(people.map(p => [p.id, p]));
   const users = item.agents.map(id => byId.get(id)).filter((p): p is NonNullable<typeof p> => !!p);
-  // Boot the page with the same answers its API calls would return, so it paints the item at once instead of a
-  // spinner while two requests run (the shape matches GET /api/knowledge/ecommerce/shelf/:kind/:slug).
-  const text = await shelfText(env, item.path).catch(() => null);
-  const prompt = kind === "prompts" ? await shelfText(env, item.path.replace(/\.md$/, ".txt")).catch(() => null) : null;
-  const boot: Record<string, unknown> = { [`/api/agents?vertical=${ECOMMERCE}`]: verticalPayload(people, ECOMMERCE) };
-  if (text !== null) boot[`/api/knowledge/${ECOMMERCE}/shelf/${kind}/${encodeURIComponent(slug)}`] = { vertical: shelf.file.vertical, kind, item, text, ...(prompt ? { prompt } : {}) };
   const extra = kind === "prompts" ? `<h2>What you fill in</h2><ul>${(item as { fill: string[] }).fill.map(f => `<li>${esc(f)}</li>`).join("")}</ul>`
     : kind === "tools" ? `<h2>What a store uses it for</h2><ul>${(item as { jobs: string[] }).jobs.map(j => `<li>${esc(j)}</li>`).join("")}</ul>`
     : kind === "minds" ? `<h2>Questions to ask about your store</h2><ul>${(item as { questions: string[] }).questions.map(q => `<li>${esc(q)}</li>`).join("")}</ul>`
     : `<p>${esc((item as { when: string }).when)}</p>`;
+  // The same answer the item's API gives, inside the page: the app paints from it with no second request, and crawlers
+  // read the item's full text, not just its summary.
+  const answer = await shelfAnswer(env, shelf, kind, item).catch(() => null);
+  const full = answer ? `<h2>The full ${esc(label)}</h2>${textHtml(answer.prompt ?? answer.text)}` : "";
   return {
     status: 200, index: true, path,
-    title: `${item.title} | E-commerce ${label}${SITE_SUFFIX}`,
-    description: item.summary.slice(0, 300),
+    title: shelfTitle(item.title, label),
+    description: clip(item.summary, 155),
+    // The team list the page also asks for rides along, so neither call waits on the network.
+    boot: { [`/api/agents?vertical=${ECOMMERCE}`]: verticalPayload(people, ECOMMERCE),
+      ...(answer ? { [`/api/knowledge/${ECOMMERCE}/shelf/${kind}/${encodeURIComponent(slug)}`]: answer } : {}) },
     jsonLd: [
       { "@context": "https://schema.org", "@type": kind === "tools" ? "SoftwareApplication" : "CreativeWork", name: item.title, description: item.summary, url: `${origin}${path}`,
         isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY } },
@@ -381,8 +432,7 @@ async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<P
         { "@type": "ListItem", position: 3, name: item.title, item: `${origin}${path}` },
       ] },
     ],
-    body: `<p><a href="${ECOMMERCE_PATH}">E-commerce</a></p><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p>${extra}${users.length ? `<p>Used by ${users.map(p => `<a href="/agents/${p.id}">${esc(p.name)}, ${esc(p.title)}</a>`).join(", ")}.</p>` : ""}`,
-    boot,
+    body: `<p><a href="${ECOMMERCE_PATH}">E-commerce</a></p><h1>${esc(item.title)}</h1><p>${esc(item.summary)}</p>${extra}${full}${users.length ? `<p>Used by ${users.map(p => `<a href="/agents/${p.id}">${esc(p.name)}, ${esc(p.title)}</a>`).join(", ")}.</p>` : ""}`,
   };
 }
 

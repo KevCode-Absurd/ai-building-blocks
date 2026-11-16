@@ -105,7 +105,7 @@ test('@mobile goal search, context and compact filters fit without page overflow
  const b=await box.boundingBox();expect(b!.y+b!.height).toBeLessThan(750);
  const formats=page.getByRole('tablist',{name:'Format'});
  await expect(formats.getByRole('tab')).toHaveCount(6);
- const grid=await formats.boundingBox();expect(grid!.height).toBeLessThan(190);
+ const grid=await page.getByTestId('library-formats').boundingBox();expect(grid!.height).toBeLessThan(190);
  for(const kind of ['agent','mind'])await expect(page.getByTestId(`tab-${kind}`)).toBeInViewport();
  await expect(page.getByTestId('filter-level')).toHaveCount(0);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();

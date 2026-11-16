@@ -122,3 +122,61 @@ test("consistency-check warns when a buyer file says a banned claim in other wor
   const r = run("quality/consistency-check.mjs", [h, "--buyer", ads]);
   assert.match(r.stdout, /WARN .*"natural" may say the banned claim "all natural"/);
 });
+
+// 16 Nov 2026, Minimalist rerun 3: written rules did not hold. A plan put Buy 2 Get 3rd Free (33% off) in an ad while
+// the owner's limit was unknown, and an email series was built for a tool guessed from a script on the site.
+test("check-offers works out effective discounts and fails deep offers past the limit or while it is unknown", () => {
+  const d = tmp(), ads = path.join(d, "ad-copy.csv");
+  writeFileSync(ads, "id,text\nW02,\"Buy 2, Get 3rd Free. Pick three for your routine.\"\nM01,Flat 10% off your first order\nG1,Free serum worth ₹249 on orders over ₹799\n");
+  const unknown = run("check-offers.mjs", ["--limit", "unknown", ads]);
+  assert.equal(unknown.status, 1);
+  assert.match(unknown.stdout, /"Buy 2, Get 3rd Free" is 33% off in effect: a deep offer while the owner's limit is unknown/);
+  assert.match(unknown.stdout, /"Free serum worth ₹249 on orders over ₹799" is 31% off/);
+  assert.doesNotMatch(unknown.stdout, /Flat 10% off.*FAIL|FAIL.*Flat 10% off/);
+  const limit = run("check-offers.mjs", ["--limit", "35", ads]);
+  assert.equal(limit.status, 0, limit.stdout);
+  writeFileSync(ads, "id,text\nB1,Buy 1 Get 1 Free on lip balm\n");
+  assert.match(run("check-offers.mjs", ["--limit", "15", ads]).stdout, /50% off in effect, past the owner's 15% limit/);
+});
+
+test("preflight-meta fails a deep offer in an ad while offer_limit is unknown, and one past the limit", () => {
+  const d = tmp(), f = path.join(d, "plan.json");
+  const tpl = JSON.parse(run("preflight-meta.mjs", ["template"]).stdout);
+  Object.assign(tpl.campaigns[0].adsets[0].ads[0], { primary_text: "Buy 2, Get 3rd Free on your routine.", headline: "Buy 2, Get 3rd Free" });
+  tpl.offer_limit = null;
+  writeFileSync(f, JSON.stringify(tpl));
+  const r = run("preflight-meta.mjs", [f]);
+  assert.equal(r.status, 1);
+  assert.equal((r.stdout.match(/a deep offer while the owner's limit is unknown/g) || []).length, 1, "one finding per offer per ad");
+  assert.match(r.stdout, /WARN offers: .*no offer_limit/);
+  tpl.offer_limit = 15; writeFileSync(f, JSON.stringify(tpl));
+  assert.match(run("preflight-meta.mjs", [f]).stdout, /past the owner's 15% limit/);
+  tpl.offer_limit = 40; writeFileSync(f, JSON.stringify(tpl));
+  assert.equal(run("preflight-meta.mjs", [f]).status, 0);
+});
+
+test("check-sending-tool fails emails built for a tool the owner never named, and passes owner-sourced or tool-neutral work", () => {
+  const d = tmp(), out = path.join(d, "deliverables"), facts = path.join(d, "facts.md");
+  mkdirSync(out);
+  writeFileSync(path.join(out, "e1.html"), "<p>Load this into CleverTap. Hi {{ Profile.name | default: 'there' }}</p>");
+  writeFileSync(facts, "- Sending tool: CleverTap (installed on site; assumed in turn 1, owner did not object).\n");
+  const r = run("check-sending-tool.mjs", [out, "--facts", facts]);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /built for CleverTap .*no fact shows the owner/);
+  assert.equal(run("check-sending-tool.mjs", [out]).status, 1, "no facts file fails too");
+  writeFileSync(facts, "- Sending tool: CleverTap. Source: owner, turn 2, 16 Nov 2026.\n");
+  assert.equal(run("check-sending-tool.mjs", [out, "--facts", facts]).status, 0);
+  writeFileSync(path.join(out, "e1.html"), "<p>Merge tags: Klaviyo {{ first_name }}, Mailchimp *|FNAME|*, CleverTap {{Profile.name}}</p>");
+  writeFileSync(facts, "");
+  assert.equal(run("check-sending-tool.mjs", [out, "--facts", facts]).status, 0, "a merge-tag map for three tools is tool-neutral");
+});
+
+test("ask-check fails an \"I'll assume\" line that takes the sending tool for granted", () => {
+  const d = tmp(), f = path.join(d, "ask.md");
+  writeFileSync(f, "I've read your store.\n\n1. **Can you share an order export?** a) Yes b) No (my default)\n\nI'll assume email first and CleverTap, which is on your site.\n");
+  const r = run("quality/ask-check.mjs", [f]);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /takes CleverTap as the tool they send from/);
+  writeFileSync(f, "I've read your store.\n\n1. **Do you send email from CleverTap? It's on your site.** a) Yes (my default) b) Another tool\n\nI'll assume email first.\n");
+  assert.equal(run("quality/ask-check.mjs", [f]).status, 0);
+});

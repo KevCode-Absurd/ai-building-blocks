@@ -2,10 +2,16 @@
 // preflight-meta.mjs: check a Meta campaign plan the way a senior media buyer would, before anything goes live.
 // Usage: node tools/preflight-meta.mjs <plan.json>      (template: node tools/preflight-meta.mjs template)
 // Exit code 1 when any FAIL. Never calls Meta: it checks the plan file only.
+// Offers: every ad's copy is read for offers (check-offers.mjs). offer_limit is the most money off, in percent, the
+// owner allows in ads; leave it null until they give it. An offer past the limit fails, and while it is null any
+// deep offer (over 20% effective, such as buy 2 get 1 free) fails: it goes in the plan as an option needing their yes.
 import fs from "node:fs";
+// check-offers.mjs ships beside this file; a pack without it skips the offer check and says so.
+let findOffers = null, judgeOffers = null;
+try { ({ findOffers, judgeOffers } = await import("./check-offers.mjs")); } catch { /* not shipped in this pack */ }
 
 const TEMPLATE = {
-  goal: "sales", currency: "INR", target_cpa: 9000, aov: 30000, margin: 0.35, monthly_budget: 1000000,
+  goal: "sales", currency: "INR", target_cpa: 9000, aov: 30000, margin: 0.35, monthly_budget: 1000000, offer_limit: 15,
   pixel: { id: "123", events: ["ViewContent", "AddToCart", "InitiateCheckout", "Purchase"], capi: true },
   campaigns: [{
     name: "PROS | Sales | Broad | IN", objective: "OUTCOME_SALES", budget_level: "campaign", daily_budget: 25000,
@@ -50,6 +56,8 @@ const attrs = new Set(camps.map(c => c.attribution).filter(Boolean));
 if (attrs.size > 1) warn("attribution", `Campaigns use different attribution settings (${[...attrs].join(", ")}): results can't be compared.`, "Use one setting across the account.");
 let total = 0;
 const names = new Set();
+const offerLimit = Number.isFinite(Number(plan.offer_limit)) && plan.offer_limit !== null && plan.offer_limit !== "" ? Number(plan.offer_limit) : null;
+let offersSeen = 0;
 for (const c of camps) {
   const w = `campaign "${c.name}"`;
   if (c.status && !/PAUSED/i.test(c.status)) fail(w, `Status ${c.status}: a plan must be built paused and go live only on the owner's yes.`, "Set status PAUSED.");
@@ -113,6 +121,11 @@ for (const c of camps) {
         if (a.primary_text && a.primary_text.length > 125) warn(aw, `Primary text ${a.primary_text.length} characters; only about 125 show before "more".`, "Put the hook in the first 125 characters.");
         if (a.headline && a.headline.length > 40) warn(aw, `Headline ${a.headline.length} characters; over 40 gets cut on mobile.`, "Shorten to 40 or fewer.");
         if (/\[[^\]]+\]|\{\{(?!\s*(campaign|adset|ad)\.)/.test(`${a.primary_text || ""} ${a.headline || ""}`)) fail(aw, "Placeholder or template tag in the copy.", "Write the real words.");
+        const cardText = Array.isArray(a.cards) ? a.cards.map(c => (typeof c === "string" ? c : `${c.headline || ""} ${c.text || ""} ${c.description || ""}`)).join(" ") : "";
+        const offers = !findOffers ? [] : [...new Map(findOffers([a.primary_text, a.headline, a.description, a.offer, cardText].filter(Boolean).join(" | "))
+          .map(o => [o.text.toLowerCase().replace(/\W+/g, " ").trim(), o])).values()];
+        offersSeen += offers.length;
+        if (offers.length) for (const r of judgeOffers(offers, offerLimit)) if (r.level === "FAIL") fail(aw, r.msg, r.fix); else if (r.level === "WARN") warn(aw, r.msg, r.fix);
       }
     }
   }
@@ -122,6 +135,8 @@ if (plan.monthly_budget && total) {
   if (Math.abs(m - plan.monthly_budget) / plan.monthly_budget > 0.15) warn("budget", `Daily budgets add to about ${Math.round(m)} a month, vs the ${plan.monthly_budget} budget.`, "Make the daily budgets add up to the monthly budget.");
   else ok("budget", "Daily budgets match the monthly budget.");
 }
+if (!findOffers) warn("offers", "check-offers.mjs is not in this pack, so ad offers were not checked.", "Check every offer against the owner's limit by hand.");
+if (offersSeen && offerLimit == null) warn("offers", `${offersSeen} offer(s) in the ads but no offer_limit in the plan.`, "Ask the owner the most money off ads may offer, then set offer_limit (percent).");
 const nF = out.filter(x => x.level === "FAIL").length, nW = out.filter(x => x.level === "WARN").length;
 for (const x of out) console.log(`${x.level.padEnd(4)} ${x.where}: ${x.msg}${x.fix ? ` Fix: ${x.fix}` : ""}`);
 console.log(`\n${nF ? "FAIL" : "PASS"}: ${nF} fail, ${nW} warn.`);

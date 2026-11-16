@@ -72,8 +72,8 @@
           {"label": "Shopify Email", "pro": "free tier, simple", "con": "fewer flow splits and filters"},
           {"label": "Another tool", "pro": "keep what you have", "con": "I hand over plain HTML and a build spec"}
         ],
-        "default": "Ask this unless the connector or org context names the sending tool; until answered, Klaviyo-ready HTML and build spec, since plain HTML and text work in any tool",
-        "settle_with_data": "Check the connector and the org context first. A script on the site shows a tool is installed, not where the owner sends email (it may run push or app messages): name what you found and still confirm it in the ask; the owner's answer wins."
+        "default": "Ask this in the first message unless the connector or org context names the sending tool, with what you found as the default; never put the tool in the \"I'll assume\" line (ask-check fails it). Until answered, build tool-neutral HTML and text with a merge-tag map for the common tools",
+        "settle_with_data": "Check the connector and the org context first. A script on the site shows a tool is installed, not where the owner sends email (it may run push or app messages): name what you found and still confirm it in the ask; the owner's answer wins. Write the answer in context/facts.md with its source (\"Source: owner, turn 2\"); check-sending-tool.mjs fails work built for a tool with no such line."
       }
     ]
   },
@@ -121,7 +121,7 @@
           {"label": "Plain HTML plus text", "pro": "loads anywhere", "con": "dynamic product blocks set by hand"},
           {"label": "Plain text", "pro": "founder-style, best inbox placement", "con": "no product images"}
         ],
-        "default": "Klaviyo-ready HTML in the brand's saved template style, plus a plain-text version of every email"
+        "default": "HTML ready for the tool the owner named, in the brand's saved template style, plus a plain-text version of every email; tool-neutral HTML with a merge-tag map while the tool is unconfirmed"
       },
       {
         "need": "SMS or WhatsApp sender",
@@ -251,6 +251,8 @@
       "node tools/quality/copy-check.cjs <emails.md> --limit \"Subject=50\" --limit \"Preview=90\" --limit \"SMS=160\"",
       "node tools/quality/consistency-check.mjs context/hypotheses.json <flow-plan.md> <emails.md>",
       "node tools/check-handover.mjs <email.html>",
+      "node tools/check-sending-tool.mjs deliverables --facts context/facts.md (work built for one tool needs the owner, a connector or the org context to have named it)",
+      "node tools/check-offers.mjs --limit <owner's limit, or unknown> <emails folder> (an offer past the limit, or a deep one while it is unknown, fails)",
       "node tools/quality/qe-check.cjs <final> --audience consumer",
       "Each HTML email renders at 375 and 600 px wide, in dark mode and with images off; every link, button and tag fallback works.",
       "No person can get two marketing messages from different flows on the same day; every flow has its exit and its smart-sending setting written down.",

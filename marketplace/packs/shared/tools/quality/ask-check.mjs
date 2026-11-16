@@ -6,7 +6,12 @@
 // WARN (exit 0): over 200 words; more than 3 finding lines before the questions; a question line over 40 words;
 //   a question with no default.
 // Safe defaults are not questions: say them in one "I'll assume" line instead.
+// FAIL also: an "I'll assume" line names the tool they send email or texts from (Klaviyo, CleverTap ...). A script on
+//   their site shows a tool is installed, not where they send from: that is a question, with what you found as the default.
 import fs from "node:fs";
+// The tool list lives in check-sending-tool.mjs; a pack without it still runs every other rule.
+let toolsIn = () => [];
+try { ({ toolsIn } = await import("../check-sending-tool.mjs")); } catch { /* not shipped in this pack */ }
 
 const f = process.argv[2];
 if (!f) { console.log("Usage: node ask-check.mjs <message.md>"); process.exit(2); }
@@ -35,6 +40,10 @@ for (const [i, b] of blocks.entries()) {
   if (/(^|[.?!]\s+|\n\s*)(\*\*)?(also|and|plus)[,:]?\s/i.test(b.body.join("\n"))) fail(`Question ${n} adds a second ask ("Also ...").`, "Cut it, or make it a stated default.");
   if (words(b.head) > 40) warn(`Question ${n} runs ${words(b.head)} words.`, "Say it in one short sentence; the why can be a few words.");
   if (!/default|my pick|recommend|you decide/i.test([b.head, ...b.body].join(" "))) warn(`Question ${n} has no default.`, "Mark the option you'll take if they don't answer.");
+}
+for (const l of lines.filter(l => /\b(i'll|i will|i'm going to|i am going to)\s+assume\b|\bassuming\b|^\s*(\*\*)?assum/i.test(l))) {
+  const named = toolsIn(l);
+  if (named.length) fail(`The "assume" line takes ${named.join(" and ")} as the tool they send from.`, "Ask it as a numbered question with what you found as the default (\"Do you send email from CleverTap? It's on your site.\"); a site script is not proof they send from it.");
 }
 // Questions outside the numbered list count too.
 const loose = before.concat(lines.slice(lines.length)).join(" ").match(/\?/g) || [];

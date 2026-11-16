@@ -102,7 +102,7 @@
             "con": "some site offers may be deeper than you want in ads"
           }
         ],
-        "default": "Use only offers the site runs today and work each out as an effective discount. While the owner's limit is unknown, a deep one (a buy-one-get-one, a free item worth a third of the basket, or over about 20% off) is not put in any ad: it goes in the plan as an option that needs their yes",
+        "default": "Use only offers the site runs today and work each out as an effective discount. While the owner's limit is unknown, a deep one (a buy-one-get-one, a free item worth a third of the basket, or over about 20% off) is not put in any ad: it goes in the plan as an option that needs their yes. Set offer_limit in context/meta-plan.json to the owner's limit (percent), or null while unknown: preflight-meta.mjs then fails any ad offer past it, or any deep one while it is null",
         "skip_if": [
           "brief or org context gives a discount limit or the offers ads may use"
         ]
@@ -498,7 +498,8 @@
   },
   "check": {
     "preflight": [
-      "node tools/preflight-meta.mjs context/meta-plan.json (must PASS with zero FAIL; explain every WARN in the plan, for example a test pack under 50 purchases a week). The check reads purchase volume per ad set, so a small existing-customer ad set in its own campaign fails it: put the capped existing-customer ad set inside the Advantage+ Sales campaign, and size test packs at about 1.5x target cost a day (1x gives under 10 purchases a week and fails)"
+      "node tools/preflight-meta.mjs context/meta-plan.json (must PASS with zero FAIL; explain every WARN in the plan, for example a test pack under 50 purchases a week). The check reads purchase volume per ad set, so a small existing-customer ad set in its own campaign fails it: put the capped existing-customer ad set inside the Advantage+ Sales campaign, and size test packs at about 1.5x target cost a day (1x gives under 10 purchases a week and fails)",
+      "node tools/check-offers.mjs --limit <owner's limit, or unknown> deliverables/<ad copy files> (every offer in the copy, worked out as an effective discount; one past the limit, or a deep one while it is unknown, fails)"
     ],
     "checks": [
       "node tools/quality/consistency-check.mjs context/hypotheses.json META-STRUCTURE.html",

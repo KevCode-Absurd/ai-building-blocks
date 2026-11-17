@@ -1,0 +1,11 @@
+rule,popular_repos_pass,popular_repos_skills,popular_repos_pass_pct,small_repos_pass,small_repos_skills,small_repos_pass_pct
+Front matter that reads as YAML,37944,38482,98.6,12780,12951,98.68
+Has a name,37890,38482,98.46,12531,12951,96.76
+"Name uses only a-z, 0-9 and hyphens",31144,38482,80.93,12198,12951,94.19
+Name matches its folder,35655,38482,92.65,11004,12951,84.97
+Has a description,37675,38482,97.9,12755,12951,98.49
+"Description is 1,024 characters or less",37583,38482,97.66,12726,12951,98.26
+Passes every required rule,29723,38482,77.24,10956,12951,84.6
+Uses only the fields the spec defines,15004,38482,38.99,7814,12951,60.34
+Would pass the official checker (our estimate),12637,38482,32.84,6303,12951,48.67
+"Under 500 lines, as the spec advises",37011,38482,96.18,11700,12951,90.34

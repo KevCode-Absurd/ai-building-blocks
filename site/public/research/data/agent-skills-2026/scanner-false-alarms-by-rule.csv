@@ -1,0 +1,29 @@
+rule,plain_name,sampled,false_alarms,risky_but_disclosed,real_risk,false_alarm_pct,ci95_low_pct,ci95_high_pct
+credential-theft,Reads saved passwords or keys,30,25,5,0,83.3,66.4,92.7
+destructive-command,Wipes files or code history,30,29,1,0,96.7,83.3,99.4
+remote-shell,Downloads code and runs it at once,30,15,15,0,50,33.2,66.9
+approval-bypass,Skips the user's approval,30,23,7,0,76.7,59.1,88.2
+unknown-binary,A file nobody can read,30,29,1,0,96.7,83.3,99.4
+encoded-blob,A long scrambled block of text,30,28,2,0,93.3,78.7,98.2
+persistence,Sets itself to start again later,30,12,18,0,40,24.6,57.7
+instruction-override,Tells the AI to ignore its rules,30,24,6,0,80,62.7,90.5
+concealed-action,Tells the AI to hide what it does,30,30,0,0,100,88.6,100
+exfil-host,Links to drop boxes or tunnels,30,13,17,0,43.3,27.4,60.8
+hidden-text-instruction,Hidden comment with orders for the AI,30,29,1,0,96.7,83.3,99.4
+symlink,A shortcut (symlink) to another file,30,29,0,0,96.7,83.3,99.4
+reverse-shell,Opens a back door,30,6,24,0,20,9.5,37.3
+credential-in-file,A secret key saved in a file,30,30,0,0,100,88.6,100
+encoded-execution,,15,11,4,0,73.3,48.1,89.1
+hex-blob,,15,2,0,0,13.3,3.7,37.9
+unicode-tag-chars,,15,14,1,0,93.3,70.2,98.8
+bidirectional-control,,15,15,0,0,100,79.6,100
+role-hijack,,15,15,0,0,100,79.6,100
+binary-executable,,15,8,7,0,53.3,30.1,75.2
+crypto-miner,,15,15,0,0,100,79.6,100
+pickle-file,,15,2,13,0,13.3,3.7,37.9
+download-and-run,,13,1,12,0,7.7,1.4,33.3
+data-exfil-instruction,,7,4,3,0,57.1,25.1,84.2
+zero-width-run,,9,8,1,0,88.9,56.5,98
+compiled-code,,7,1,6,0,14.3,2.6,51.3
+remote-instructions,,2,0,2,0,0,0,65.8
+active-svg,,1,1,0,0,100,20.7,100

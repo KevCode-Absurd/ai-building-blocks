@@ -1,0 +1,9 @@
+capability,all_skills_pct,popular_repos_pct,small_repos_pct
+Writes files,24.6,22.3,31.2
+Uses API keys or tokens,21,20.6,22.1
+Installs packages,12.1,11.9,12.7
+Connects to the internet,11.5,12.1,9.8
+"Reads outside text (web pages, emails)",9.2,9.8,7.7
+Runs shell commands,4.8,4.2,6.5
+Drives a web browser,3.1,2.6,4.3
+Sends email or messages,0.9,0.8,1.2

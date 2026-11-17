@@ -26,7 +26,7 @@ Most "sales crashes" are part data, part real. The job is to separate the two fa
 
 1. **State the claim precisely.** Which number, which period, against what? "Net sales down 30% week on week" differs from "GA4 revenue down 30%".
 2. **Rule out data problems, in this order:**
-   1. *Store versus analytics.* If store orders held and analytics purchases fell, it's a tracking problem. Find the first day the gap changed.
+   1. *Store versus analytics.* If store orders held and analytics purchases fell, flag a measurement discrepancy, not a confirmed tracking fault. Find the first day the gap changed; reconcile transaction IDs, time zones, consent, channel mix, modelling and event receipts before naming the cause.
    2. *Double counting.* Repeated transaction IDs or analytics purchases above store orders point to a tag firing twice.
    3. *Time zone and cut-off.* Daily differences that vanish in weekly totals are time zone effects.
    4. *Known breaks.* Shopify changed session measurement from 21 to 23 September 2026, and referring channel values from 18 October 2026. A cookie banner added or changed in the EEA or UK lowers sessions in those markets.

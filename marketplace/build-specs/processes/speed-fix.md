@@ -67,12 +67,12 @@ Shows you a build plan, then on your yes makes the approved fixes on an unpublis
 
 ### 6. Before and after, for your sign-off
 
-Runs the same lab test, same pages, same settings, same run count, on the theme copy's preview and on the live theme, and puts the medians side by side. Renders each changed page at phone and desktop sizes from saved copies, so a fix that broke the look is caught. Then writes the release plan it will show you: which files go live and how, and how to undo.
+Runs the same lab test, same pages, same settings, same run count, on the theme copy's preview and on the live theme, and puts the medians side by side. Renders each changed page at phone and desktop sizes from saved copies, so a fix that broke the look is caught. If delivering a patch, run node tools/verify-patch.mjs <patch> <before-directory> <after-directory>: apply the exact diff to an isolated baseline and verify the resulting file bytes match the delivered fixed files. A missing Git executable means this check did not run. Then writes the release plan it will show you: which files go live and how, and how to undo.
 
 - **Needs:** build-record.md; baseline/lab.md; preview link of the theme copy
 - **Makes:** before-after.md, preview/page.html, release-plan.md
 - **Checks:** before-after-numbers (every before and after median and difference recomputes from the saved runs); render (each changed page renders at phone and desktop sizes with no HORIZONTAL OVERFLOW); visual-review (the changed pages look the same as the live pages except for planned changes, and nothing shifts as the page loads)
-- **Done when:** before-after.md shows the median of the same number of runs for each page before and after, every fix is shown to help or is dropped, and the renders show no visual change except the planned ones.
+- **Done when:** before-after.md shows the median of the same number of runs for each page before and after, every fix is shown to help or is dropped, and the renders show no visual change except the planned ones. Any delivered patch has a successful applicability and exact-result check; browser measurements alone cannot establish that a diff applies.
 - **You sign off:** You see the before and after table, the page pictures and the release plan. Reply yes with the code to send it to publish, or say what to change.
 
 ### 7. Publish the fixes

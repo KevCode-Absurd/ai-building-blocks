@@ -106,7 +106,7 @@ if (invoked) process.exitCode = await main(process.argv.slice(2));
 `;
 
 export function generate() {
-  const parts = SOURCES.map(f => stripTypeScriptTypes(readFileSync(f, "utf8"), { mode: "strip" })
+  const parts = SOURCES.map(f => stripTypeScriptTypes(readFileSync(f, "utf8").replace(/\r\n?/g, "\n"), { mode: "strip" })
     .replace(/^import [^;]+ from "\.\.\/packs\/retrieve\.ts";\n/m, "")
     .replace(/[ \t]+$/gm, "").replace(/\n{3,}/g, "\n\n").trimEnd());
   return `${HEADER}\n${parts.join("\n\n")}\n${CLI}`;

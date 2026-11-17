@@ -91,7 +91,7 @@ Run time = (visitors per variant x variants) / weekly visitors in scope, from th
 - Randomise by visitor within scope, 50/50; the same visitor always sees the same version. Browser tools flash the original and can inflate the lift [CRO-0008], so prefer a server or template split, or for ad-led pages two template URLs split by the ad platform's own test (`store-meta-test`).
 - **No peeking:** stopping at the first p under 0.05 raises false winners from 5% to 26.1% [CRO-0017]. Stop early only for harm (a broken variant or a guardrail breach set in advance).
 - **Split check** at the end with a chi-square test; a mismatch voids the result [CRO-0007].
-- **Ship rule:** the primary wins at 95%, gross profit per visitor is up, no guardrail breach. A fully powered flat test means the effect is below the MDE: ship the cheaper version [CRO-0015].
+- **Ship rule:** the primary wins at 95%, gross profit per visitor is up, no guardrail breach. An inconclusive result at the planned sample does not prove the effect is below the MDE. Compare the interval with zero and the prespecified practical threshold; keep the stopping rule. Choosing the cheaper version is an operational decision, not an equivalence finding.
 
 ### 7b. Pick the route the store's plan allows
 
@@ -180,7 +180,7 @@ Add the row to the store's test log for `read-store-ab-test-result`.
 - CRO-0012: realistic lifts.
 - CRO-0013: rank by expected gross profit.
 - CRO-0014: primary at the step the change moves.
-- CRO-0015: whole weeks; flat means below the MDE.
+- CRO-0015: whole-week stopping discipline. Interpret uncertainty from the interval; a non-significant result does not establish a below-MDE effect.
 - CRO-0016: checkout limits.
 - CRO-0017: peeking.
 - CRO-0018: the near-miss reason belongs in page copy.
@@ -195,3 +195,7 @@ What makes this skill ours: every big objection gets a test or a fix, each test 
 
 - Track COD share and RTO as guardrails on every test.
 - If a change could shift COD share, the primary is delivered or prepaid-plus-confirmed orders, read 2 to 3 weeks after the test ends.
+
+## Reproducible calculation
+
+Save the planned sample, absolute MDE, stopping rule and outcome definitions before the test starts. At readout, follow `read-store-ab-test-result` and its `experimentReadout` calculation; do not reinterpret an inconclusive interval as a below-MDE result or extend the test until it becomes significant.

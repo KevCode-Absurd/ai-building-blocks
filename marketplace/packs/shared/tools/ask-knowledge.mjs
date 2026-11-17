@@ -70,6 +70,21 @@ export function tokens(text        )           {
   return out;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** Target and ceiling for a passage, in words. Lecture 3: 100 to 500 tokens; a word is about 1.3 tokens. */
 export const CHUNK_TARGET_WORDS = 180;
 export const CHUNK_MAX_WORDS = 260;
@@ -196,29 +211,42 @@ export function glossaryOf(md        )                        {
 }
 
 class Bm25 {
-          docs           ;
-          df = new Map                ();
+          lengths           = [];
+          ids = new Map                ();
+  /** Alternating document id / term frequency; one posting list per interned term. */
+          postings             = [];
           avg        ;
           k1 = 1.2;
           b = 0.75;
-  constructor(texts            ) {
-    this.docs = texts.map(t => { const tf = new Map                (); for (const w of t) tf.set(w, (tf.get(w) ?? 0) + 1); return { len: t.length, tf }; });
-    for (const d of this.docs) for (const w of d.tf.keys()) this.df.set(w, (this.df.get(w) ?? 0) + 1);
-    this.avg = this.docs.reduce((a, d) => a + d.len, 0) / Math.max(1, this.docs.length) || 1;
-  }
-  idf(w        )         { const n = this.docs.length, df = this.df.get(w) ?? 0; return Math.log(1 + (n - df + 0.5) / (df + 0.5)); }
-  has(w        )          { return this.df.has(w); }
-  scores(query          , weights                      )           {
-    const q = [...new Set(query)];
-    return this.docs.map(d => {
-      let s = 0;
-      for (const w of q) {
-        const f = d.tf.get(w);
-        if (!f) continue;
-        s += (weights?.get(w) ?? 1) * this.idf(w) * (f * (this.k1 + 1)) / (f + this.k1 * (1 - this.b + this.b * d.len / this.avg));
+  /** Consume rows incrementally and retain sparse numeric postings instead of one string-keyed Map per row. */
+  constructor(texts                    ) {
+    for (const t of texts) {
+      const tf = new Map                ();
+      for (const w of t) {
+        let id = this.ids.get(w);
+        if (id === undefined) { id = this.ids.size; this.ids.set(w, id); this.postings.push([]); }
+        tf.set(id, (tf.get(id) ?? 0) + 1);
       }
-      return s;
-    });
+      const doc = this.lengths.length;
+      for (const [id, frequency] of tf) this.postings[id].push(doc, frequency);
+      this.lengths.push(t.length);
+    }
+    this.avg = this.lengths.reduce((a, len) => a + len, 0) / Math.max(1, this.lengths.length) || 1;
+  }
+  idf(w        )         { const id = this.ids.get(w), df = id === undefined ? 0 : this.postings[id].length / 2; return Math.log(1 + (this.lengths.length - df + 0.5) / (df + 0.5)); }
+  has(w        )          { return this.ids.has(w); }
+  scores(query          , weights                      )           {
+    const scores = new Array        (this.lengths.length).fill(0);
+    for (const w of new Set(query)) {
+      const id = this.ids.get(w);
+      if (id === undefined) continue;
+      const postings = this.postings[id], weight = (weights?.get(w) ?? 1) * this.idf(w);
+      for (let i = 0; i < postings.length; i += 2) {
+        const doc = postings[i], f = postings[i + 1];
+        scores[doc] += weight * (f * (this.k1 + 1)) / (f + this.k1 * (1 - this.b + this.b * this.lengths[doc] / this.avg));
+      }
+    }
+    return scores;
   }
 }
 
@@ -231,6 +259,7 @@ class Bm25 {
  * Hit@5 0.69 to 0.79, MRR 0.56 to 0.64 (held-out half Hit@5 0.65 to 0.73).
  */
 export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true, aliases: true, aliasWeight: 0.7, lines: true, lineWeight: 1.5, lineContext: "context", numBoost: 1.4, ruleBoost: 1.4 };
+
 
 /**
  * What a question asks for, read from its words: a quantity ("how long", "what share", "how many", "roughly") or a
@@ -316,6 +345,7 @@ export function aliasesOf(q          , groups             = ALIAS_GROUPS)       
  * vertical with no file searches exactly as before.
  */
 
+
 function synonymIndex(s                  )                      {
   if (!s || (!s.groups?.length && !s.phrases?.length)) return null;
   const phrase = (p        ) => tokens(p).join(" ");
@@ -353,10 +383,24 @@ export const PER_SECTION = 2;
 /** Below this share of the question's informative words in the best passage, the pack is said not to know. */
 export const MIN_COVERAGE = 0.34;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export class KnowledgeIndex {
            chunks         ;
           body      ;
-          heads      ;
+          heads              = null;
           units      ;
           unitOf          ;
           unitKind            ;
@@ -373,22 +417,23 @@ export class KnowledgeIndex {
   constructor(files                                  , opts                                                                                                                                           = {}) {
     this.chunks = files.flatMap(f => chunkMarkdown(f.path, f.text));
     this.citeFiles = new Set(opts.citeFiles ?? ["knowledge.md"]);
-    // The situating context counts once in the body ranker and alone in the heading ranker.
-    this.body = new Bm25(this.chunks.map(c => tokens(`${c.context}\n${c.text}`)));
-    this.heads = new Bm25(this.chunks.map(c => tokens(c.context)));
-    // The line ranker: every unit of every passage (a list item, a table row, a paragraph), scored on its own.
-    const units             = [];
+    this.lines = opts.lines ?? TUNING.lines;
+    // Construct rankers incrementally: do not materialize all body/line tokens while also retaining their maps.
+    const chunks = this.chunks;
+    this.body = new Bm25((function* () { for (const c of chunks) yield tokens(`${c.context}\n${c.text}`); })());
     this.unitOf = [];
     this.unitKind = [];
-    this.chunks.forEach((c, i) => {
-      for (const u of passageUnits(c.text)) {
+    const unitOf = this.unitOf, unitKinds = this.unitKind;
+    const lines = this.lines;
+    this.units = new Bm25((function* () {
+      if (!lines) return;
+      for (const [i, c] of chunks.entries()) for (const u of passageUnits(c.text)) {
         const t = tokens(u);
         if (t.length < 3) continue;
         t.push(...tokens(TUNING.lineContext === "context" ? c.context : TUNING.lineContext === "heading" ? c.heading : ""));
-        units.push(t); this.unitOf.push(i); this.unitKind.push(unitKind(u));
+        unitOf.push(i); unitKinds.push(unitKind(u)); yield t;
       }
-    });
-    this.units = new Bm25(units);
+    })());
     const gloss = opts.glossaryFrom ?? files.find(f => f.path === "knowledge.md")?.text ?? "";
     this.glossary = glossaryOf(gloss);
     this.sources = new Map((opts.sources ?? []).filter(s => s && Number.isFinite(s.n)).map(s => [s.n, s]));
@@ -451,7 +496,7 @@ export class KnowledgeIndex {
    * or drop it (null) before the top k are picked. `max` raises the ceiling on k (MAX_PASSAGES) for a caller that
    * reranks a deeper pool itself, such as job preparation.
    */
-  ask(questions                   , opts                                                                                                                                              = {})         {
+  ask(questions                   , opts                                                                                                                                                                    = {})         {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
     const k = Math.max(1, Math.min(opts.max ?? MAX_PASSAGES, opts.k ?? 6));
     // A module filter narrows the search to those modules' files (and any paths given); none found: the whole pack.
@@ -467,7 +512,7 @@ export class KnowledgeIndex {
       const expQuery = [...qt, ...exp.keys()];
       const weights = new Map                ([...exp, ...qt.map(w => [w, 1]                    )]);
       const first = this.body.scores(qt);
-      const rankers                              = [[first, 1], [TUNING.heads ? this.heads.scores(qt) : null, 1], [TUNING.glossary && exp.size ? this.body.scores(expQuery, weights) : null, 1]];
+      const rankers                              = [[first, 1], [TUNING.heads ? (this.heads ??= new Bm25(this.chunks.map(c => tokens(c.context)))).scores(qt) : null, 1], [TUNING.glossary && exp.size ? this.body.scores(expQuery, weights) : null, 1]];
       if (TUNING.prf > 0) rankers.push([this.feedback(first, qt, weights), 1]);
       if (this.lines) rankers.push([this.lineScores(expQuery, weights, questionKind(q)), TUNING.lineWeight]);
       for (const [scores, w] of rankers) {
@@ -479,13 +524,16 @@ export class KnowledgeIndex {
     const adjusted = opts.adjust ? [...fused].flatMap(([i, s]) => { const v = opts.adjust (this.chunks[i], s); return v === null ? [] : [[i, v]                    ]; }) : [...fused];
     const ranked = adjusted.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
     const perSection = new Map                ();
+    const pickedPaths = new Set        ();
     const picked                     = [];
     for (const [i, s] of ranked) {
       const c = this.chunks[i];
+      if (opts.uniquePath && pickedPaths.has(c.path)) continue;
       const key = `${c.path}#${c.context}`;
       if ((perSection.get(key) ?? 0) >= PER_SECTION) continue;
       perSection.set(key, (perSection.get(key) ?? 0) + 1);
       picked.push([i, s]);
+      pickedPaths.add(c.path);
       if (picked.length >= k) break;
     }
     const informative = qWords.filter(w => this.body.idf(w) > 0.2);
@@ -567,7 +615,7 @@ export function answerText(a        , agentName        )         {
  * the tool. The AI reads the map, then jumps to the sections it needs instead of reading every file in full (the
  * static form of a hierarchical index).
  */
-export function knowledgeMap(index                , agentName        , withTool = true, budgetWords = 1_800)         {
+export function knowledgeMap(index                                , agentName        , withTool = true, budgetWords = 1_800)         {
   const byFile = new Map                 ();
   for (const c of index.chunks) { if (!byFile.has(c.path)) byFile.set(c.path, []); byFile.get(c.path) .push(c); }
   const lines = [

@@ -38,7 +38,7 @@ If there are fewer than 12 months of history, say so in the first line and use t
 ## Before you start: the gates
 
 1. **Gross profit per unit known.** Pass when `build-sku-profit-sheet` exists or costs are given. Fail: forecast anyway, but stop before ranking which products get stock or ad support; units without profit cannot set priorities.
-2. **Clean history.** Pass when stockout days are known. Fail: flag zero-sales weeks on steady sellers as suspected stockouts and exclude them. A month half out of stock halves the apparent demand [OPS-0014].
+2. **Clean history.** Pass when stockout days are known. Fail: retain zero-sales weeks in observed sales, flag suspected stockouts separately, and show a demand sensitivity range until dated inventory evidence distinguishes censoring from true zero demand. Never delete a zero-sales week solely because demand was expected. A month half out of stock halves the apparent demand [OPS-0014].
 3. **Capacity.** Pass when the high line can be packed and shipped with the current team or 3PL. Fail: note the week where the high line breaks capacity and send it to `choose-3pl-or-self-fulfil`.
 4. **Plan is fixed.** Pass when promotion dates are agreed. Fail: forecast without promotions and add them as a separate scenario.
 
@@ -87,11 +87,11 @@ If there is no past promotion for a product, use the category's lift and mark it
 
 If planned ad spend changes by more than 20% from the last 8 weeks, adjust new-customer units in proportion to the change in new orders the last time spend moved, not in proportion to spend. Extra spend usually buys customers at a higher cost each.
 
-For repeat-purchase products, add returning-buyer demand from cohorts: each past cohort's size x its repeat rate at its current age x units per repeat order [MEA-0022]. This often makes the consumable forecast steadier than ad-led products.
+For repeat-purchase products, optionally decompose demand into disjoint new-customer and returning-customer populations. Rebuild the historical baseline from new-customer units only, then add returning-buyer demand from cohorts: each eligible past cohort's size x its repeat rate at its current age x units per repeat order [MEA-0022]. Otherwise keep the all-customer baseline and do not add a second returning-customer total. State which branch is used and reconcile its components to historical total units.
 
 ### 7. Set low, base and high
 
-Base = baseline x seasonal index x trend + promotion lift + returning demand.
+Without cohort decomposition: base units = all-customer baseline units x seasonal index x trend multiplier x promotion multiplier. With cohort decomposition: base units = (new-customer baseline units x seasonal index x trend multiplier + separately forecast returning-customer units) x the applicable promotion multiplier. Promotion lift from step 5 is a ratio, not units; apply it only to the populations and weeks it was measured for. Any pull-forward deduction is stated separately in units. With all multipliers at one and unchanged demand, the forecast must equal the baseline.
 
 Range: use the store's own past error. If the store has no tracker yet, start with plus or minus 20% for A products with long history, 35% for others and 50% for new or borrowed-season lines; this is a practitioner default, test it. Fast-growing stores miss far more than mature retailers [OPS-0014].
 
@@ -169,3 +169,7 @@ What makes this skill ours: weekly series cleaned of stockout and one-off weeks;
 - Diwali, Navratri, Durga Puja, Raksha Bandhan, Eid, Onam and Pongal move with the lunar calendar; align them to this year's dates, not last year's week number.
 - Wedding seasons (roughly November to February and April to June, varying by region) drive jewellery, ethnic wear and gifting.
 - Marketplace sale weeks pull traffic from DTC for some categories; check last year's pattern for this store.
+
+## Reproducible calculation
+
+Use the shared `tools/commerce-math.mjs` operation `forecastUnits` for the supported calculation. Run `node tools/commerce-math.mjs <input.json>` with `{ "operation": "<one operation>", "inputs": { ... } }`; inspect the exported function for exact field names and units. Save inputs and result with the deliverable. Unsupported assumptions or missing inputs remain explicit gaps; never substitute a guessed figure. This tool is arithmetic support, not authority to act.

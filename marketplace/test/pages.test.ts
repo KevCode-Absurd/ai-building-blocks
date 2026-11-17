@@ -360,6 +360,6 @@ test("an agent's raw files are downloads, not pages: soul.md says noindex", asyn
   const soul = await t.api("GET", `/agents/${agent.id}/soul.md`);
   assert.equal(soul.status, 200);
   assert.equal(soul.res.headers.get("x-robots-tag"), "noindex");
-  const headers = readFileSync(new URL("../public/_headers", import.meta.url), "utf8");
+  const headers = readFileSync(new URL("../public/_headers", import.meta.url), "utf8").replace(/\r\n/g, "\n");
   assert.match(headers, /^\/packs\/\*\n {2}X-Robots-Tag: noindex$/m, "the packs the assets serve say noindex too");
 });

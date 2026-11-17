@@ -13,7 +13,7 @@ import {
 import type { CraftCriterion, DeliverableFamily, JobType } from "../src/core/types.ts";
 import { FIXTURE_JOB_TYPES, LANDING_PAGE, NOVA } from "./fixtures.ts";
 
-const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8");
+const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8").replace(/\r\n/g, "\n");
 const METHOD = shared("METHOD.md");
 const FAMILIES = Object.keys(WORD_BUDGETS) as DeliverableFamily[];
 const DATA = new URL("../src/modules/catalogue/data/", import.meta.url);
@@ -32,7 +32,8 @@ test("METHOD.md stays under its bloat guard and still covers every part of the m
   // words in all) merged into METHOD.md, each rule once, plus the step table, the chat path and the stuck rule.
   // The org context (15 Nov) named its sections in step 1, and rule 6 now says where facts come from (sound sources
   // first, then the e-commerce library) and what to do without web search: about 200 words.
-  assert.ok(words < 5400, `METHOD.md has ${words} words`);
+  // The owner-requested automation-debt review adds one conditional reference, not a new universal workflow.
+  assert.ok(words < 5500, `METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
     ["spec sheet", /## 0\. Frame and ask[\s\S]*\*\*The spec sheet\.\*\*[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
     ["signal pass", /\*\*Signal pass:\*\* the signals in the owner's data that change the decision: as many as the data holds, or none\.[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
@@ -50,7 +51,7 @@ test("METHOD.md stays under its bloat guard and still covers every part of the m
     // The Quality Engine v2.1 rules (11 Nov 2026 benchmark: 88% of 128 blind verdicts against a plain model).
     ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*The expert draft is the expert's standard playbook done excellently; clever ones must beat it\./],
     ["plain yardstick and final pick", /The plain draft is a one-pass answer from the brief alone: the yardstick[\s\S]*the anonymous final and plain drafts in shuffled order/],
-    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source and a date[\s\S]*labelled as projections; never in what a buyer reads\. Proposals are stated plainly and decided\.[\s\S]*Keep the fields a brief asks for in a template or per-customer macro; otherwise no blanks, placeholders/],
+    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source and a date[\s\S]*Label projections and show ranges outside buyer copy\. Proposals are stated plainly and decided\.[\s\S]*Keep the fields a brief asks for in a template or per-customer macro; otherwise no blanks, placeholders/],
     ["length against the owner's limit", /\*\*Length follows use\.\*\* Stay within the owner's limit, counted the way the owner counts[\s\S]*the family profile[\s\S]*A ceiling is never a target\. No sections about method, assumptions or how the work was made\./],
     // The owner rules (13 Nov 2026 owner bench): finish one-shot work, combine complementary levers, act fully, project.
     ["owner override", /^# Method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],

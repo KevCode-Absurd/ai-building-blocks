@@ -1,0 +1,92 @@
+{
+  "schema": "ai-blocks-agent-contract/1",
+  "reference": {
+    "specification": "https://standardagentspec.org/0.2.0/specification/agents",
+    "version": "0.2.0",
+    "conformance": "not-claimed"
+  },
+  "execution": {
+    "mode": "portable-host",
+    "enforcement": "host-responsibility",
+    "deployedRuntime": "NOT_IMPLEMENTED"
+  },
+  "inventory": {
+    "filesIndex": "pack.json",
+    "coverage": "minimum-portable-profile",
+    "operationalTools": "pack-files-not-lifecycle-tools",
+    "perRoleCapabilitiesTested": false
+  },
+  "entry": "downloaded-agent",
+  "agents": [
+    {
+      "name": "downloaded-agent",
+      "sideA": {
+        "prompt": "work",
+        "stopOnResponse": true,
+        "maxSteps": 40,
+        "sessionStop": {
+          "name": "finish",
+          "messageProperty": "result"
+        },
+        "sessionFail": {
+          "name": "fail",
+          "messageProperty": "error"
+        }
+      },
+      "sideB": {
+        "human": true
+      },
+      "maxSessionTurns": 20
+    }
+  ],
+  "prompts": [
+    {
+      "name": "work",
+      "files": [
+        "AGENTS.md",
+        "METHOD.md"
+      ],
+      "model": "host",
+      "tools": [
+        "finish",
+        "fail"
+      ]
+    }
+  ],
+  "handlers": [],
+  "tools": [
+    {
+      "name": "finish",
+      "kind": "receipt-only"
+    },
+    {
+      "name": "fail",
+      "kind": "receipt-only"
+    }
+  ],
+  "models": [
+    {
+      "name": "host",
+      "selection": "host-bound",
+      "requires": {
+        "supportsToolCalls": true
+      },
+      "fallbacks": []
+    }
+  ],
+  "requires": {
+    "fileRead": true,
+    "localExecution": true
+  },
+  "scope": {
+    "tenant": "same-owner-and-workspace",
+    "context": "task-allowlist",
+    "memory": "explicit-read-allowlist",
+    "contentAuthority": "data-only",
+    "liveActions": "host-authorization-required"
+  },
+  "limits": {
+    "maxSteps": 40,
+    "maxSessionTurns": 20
+  }
+}

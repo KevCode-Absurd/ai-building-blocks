@@ -3,9 +3,9 @@
 // agent's files.json are read; nothing here runs a model. The layout is in ARCHITECTURE.md ("Agent packs").
 import type { Env } from "../../env.ts";
 import { bestRoute, type RouteCandidate, type RouteMatch } from "../packs/route.ts";
-import { KnowledgeIndex, indexedPath, knowledgeExcerpt, parseSourcesMd, type Answer } from "../packs/retrieve.ts";
+import { KnowledgeIndex, indexedPath, knowledgeExcerpt, parseSourcesMd, type Answer, type Synonyms } from "../packs/retrieve.ts";
 
-export interface PackIndexFile { path: string; url: string; bytes: number; purpose: string; kind: string }
+export interface PackIndexFile { path: string; url: string; bytes: number; purpose: string; kind: string; sha256?: string }
 export interface PackIndex {
   agent_id: string;
   version: string;
@@ -144,13 +144,48 @@ export async function readPackIndex(env: Env, agentId: string): Promise<PackInde
   } catch { return null; }
 }
 
+/** Do not let a manifest URL escape the pack asset namespace after URL normalization. */
+function safePackPath(value: string, absolute: boolean): boolean {
+  if (typeof value !== "string" || /[?#\\\x00-\x1f]/.test(value)) return false;
+  if (absolute ? !value.startsWith("/packs/") : value.startsWith("/")) return false;
+  let decoded: string;
+  try { decoded = decodeURIComponent(value); } catch { return false; }
+  if (/[?#\\\x00-\x1f%]/.test(decoded)) return false;
+  const parts = decoded.split("/");
+  return parts.every((part, i) => (absolute && i === 0) || !!part && part !== "." && part !== "..");
+}
+
 /** One listed file's text, trimmed to MAX_FILE_CHARS. Throws PackUnavailable when it cannot be read. */
-export async function readPackFile(env: Env, file: PackIndexFile, max = MAX_FILE_CHARS): Promise<{ text: string; trimmed: boolean }> {
-  if (!file.url.startsWith("/packs/")) throw new PackUnavailable(`${file.path} is not a pack file.`);
+export async function readPackFile(env: Env, file: PackIndexFile, max = MAX_FILE_CHARS, offset = 0): Promise<{ text: string; trimmed: boolean; offset: number; next_offset: number | null; total_chars: number }> {
+  if (!Number.isSafeInteger(offset) || offset < 0 || !Number.isSafeInteger(max) || max < 1) throw new PackUnavailable("File offset and length must be valid whole numbers.");
+  if (!safePackPath(file.path, false) || !safePackPath(file.url, true)) throw new PackUnavailable(`${file.path} is not a safe pack file.`);
   const res = await fetchAsset(env, file.url);
   if (!res) throw new PackUnavailable(`${file.path} could not be read right now.`);
-  const text = await res.text();
-  return text.length > max ? { text: text.slice(0, max), trimmed: true } : { text, trimmed: false };
+  // Bound the response as it streams: checking after res.text() permits an arbitrarily large allocation.
+  const maxBytes = 32_000_000;
+  const declared = Number(res.headers.get("content-length"));
+  if (declared > maxBytes) { await res.body?.cancel(); throw new PackUnavailable(`${file.path} exceeds the source read limit.`); }
+  const reader = res.body?.getReader();
+  let text = "", bytes = 0;
+  const decoder = new TextDecoder();
+  if (reader) {
+    while (true) {
+      const next = await reader.read();
+      if (next.done) break;
+      bytes += next.value.byteLength;
+      if (bytes > maxBytes) { await reader.cancel(); throw new PackUnavailable(`${file.path} exceeds the source read limit.`); }
+      text += decoder.decode(next.value, { stream: true });
+    }
+    text += decoder.decode();
+  }
+  if (file.sha256) {
+    const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    const actual = [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, "0")).join("");
+    if (actual !== file.sha256.toLowerCase()) throw new PackUnavailable(`${file.path} source hash mismatch. Reload the pack manifest before retrying.`);
+  }
+  if (offset > text.length) throw new PackUnavailable(`${file.path}: offset is beyond the ${text.length}-character file.`);
+  const end = Math.min(text.length, offset + max);
+  return { text: text.slice(offset, end), trimmed: offset > 0 || end < text.length, offset, next_offset: end < text.length ? end : null, total_chars: text.length };
 }
 
 /** Routing candidates of a pack: its own list, or (older packs) every SKILL.md and workflow by path and purpose. */
@@ -204,7 +239,8 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
   for (const [order, path] of first.paths.entries()) {
     const f = fileAt(path);
     if (!f) continue;
-    const { text, trimmed } = await readPackFile(env, f);
+    const { text, trimmed } = await readPackFile(env, f, WHOLE_FILES.has(f.path) ? MAX_INDEX_FILE_CHARS : MAX_FILE_CHARS);
+    if (WHOLE_FILES.has(f.path) && trimmed) throw new PackUnavailable(`${f.path} cannot be delivered whole; split it before release.`);
     read.push({ path: f.path, text, trimmed, order });
   }
   // A named skill (the job-specific one-file text) wins over routing.
@@ -231,7 +267,7 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
   const sections: string[] = [];
   const knowledge = request || named ? index.files.find(x => x.path === "knowledge.md") : undefined;
   if (knowledge && left() > 2_000) {
-    const { text } = await readPackFile(env, knowledge);
+    const text = await indexText(env, knowledge);
     // Passages, not whole sections (retrieve.ts): the parts of knowledge.md this request needs, each under its
     // heading trail, plus one passage of each section every job leans on.
     const { passages, headings } = knowledgeExcerpt(text, `${request ?? ""} ${route?.candidate.name ?? ""} ${route?.candidate.text ?? ""}`, Math.min(MAX_KNOWLEDGE_CHARS, left() - 500));
@@ -243,37 +279,122 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
   return { parts, route, sections, chars, held, curated };
 }
 
-/** Most pack files one knowledge lookup reads, and how many at a time. */
-export const MAX_INDEXED_FILES = 160;
+/** Ingestion limits are independent of tool response limits. A limit fails the whole index, never silently drops evidence. */
+export const MAX_INDEX_FILE_CHARS = 8_000_000;
+export const MAX_INDEX_TOTAL_CHARS = 24_000_000;
 const READ_AT_ONCE = 8;
-/** Built indexes kept per Worker, by agent and pack version, so a run of questions reads the files once. */
-const indexCache = new Map<string, Promise<KnowledgeIndex>>();
-const INDEX_CACHE_SIZE = 16;
+/** Keep a small number of complete indexes; each vertical pack can contain several million characters. */
+const indexCache = new Map<string, Promise<PackKnowledgeIndex>>();
+const inFlightIndexes = new Map<string, Promise<PackKnowledgeIndex>>();
+const INDEX_CACHE_SIZE = 1;
+export const MAX_PENDING_INDEX_BUILDS = 8;
+let coldIndexQueue: Promise<void> = Promise.resolve();
+let cacheGeneration = 0;
+export interface IndexCoverage {
+  complete: true; expected_files: number; indexed_files: number; indexed_chars: number;
+  attached_files: number; version: string; agent_id: string;
+}
+interface ParentCard { card_id: string; text: string; lines: [number, number] }
+export interface PackKnowledgeIndex extends KnowledgeIndex { coverage: IndexCoverage; parentCards: Map<string, ParentCard> }
 
-/** The agent's own knowledge index: every on-demand file of its pack (retrieve.ts indexedPath), with its sources. */
-export function packKnowledgeIndex(env: Env, index: PackIndex): Promise<KnowledgeIndex> {
-  const key = `${index.agent_id}@${index.version}`;
-  const hit = indexCache.get(key);
+/** Read complete evidence. A bounded response's trimmed flag must never be discarded by an indexer. */
+async function indexText(env: Env, file: PackIndexFile): Promise<string> {
+  const result = await readPackFile(env, file, MAX_INDEX_FILE_CHARS);
+  if (result.trimmed) throw new PackUnavailable(`Index incomplete: ${file.path} exceeds ${MAX_INDEX_FILE_CHARS} characters. Split the source at build time.`);
+  return result.text;
+}
+
+/** The complete eligible pack corpus, including owner-language synonyms, or an explicit failure. */
+export function packKnowledgeIndex(env: Env, index: PackIndex): Promise<PackKnowledgeIndex> {
+  // A same-day rebuild can keep its display version. Include the manifest, not just that display version.
+  const generation = cacheGeneration;
+  const key = JSON.stringify([generation, env.APP_ORIGIN, index.agent_id, index.version, index.updated, index.files]);
+  const hit = indexCache.get(key) ?? inFlightIndexes.get(key);
   if (hit) return hit;
-  const build = (async () => {
-    const files = index.files.filter(f => indexedPath(f.path)).slice(0, MAX_INDEXED_FILES);
+  if (inFlightIndexes.size >= MAX_PENDING_INDEX_BUILDS) return Promise.reject(new PackUnavailable("Knowledge indexing is busy. Retry this complete lookup shortly; no partial index was returned."));
+  // A Worker isolate must not construct several multi-megabyte rankers concurrently. Retain only the most recent
+  // completed corpus; separate in-flight deduplication survives cache eviction while a different pack is queued.
+  const build = coldIndexQueue.then(async () => {
+    indexCache.clear();
+    const paths = new Set<string>();
+    for (const f of index.files) {
+      if (!safePackPath(f.path, false) || !safePackPath(f.url, true) || paths.has(f.path)) throw new PackUnavailable(`Index incomplete: unsafe or duplicate manifest path ${f.path}.`);
+      paths.add(f.path);
+    }
+    const files = index.files.filter(f => indexedPath(f.path));
     const texts: { path: string; text: string }[] = [];
+    let chars = 0;
     for (let i = 0; i < files.length; i += READ_AT_ONCE) {
-      const got = await Promise.all(files.slice(i, i + READ_AT_ONCE).map(async f => ({ path: f.path, text: (await readPackFile(env, f)).text })));
+      const batch = await Promise.allSettled(files.slice(i, i + READ_AT_ONCE).map(async f => ({ path: f.path, text: await indexText(env, f) })));
+      const failed = batch.find((r): r is PromiseRejectedResult => r.status === "rejected");
+      if (failed) throw failed.reason;
+      const got = batch.map(r => (r as PromiseFulfilledResult<{ path: string; text: string }>).value);
+      chars += got.reduce((sum, f) => sum + f.text.length, 0);
+      if (chars > MAX_INDEX_TOTAL_CHARS) throw new PackUnavailable(`Index incomplete: corpus exceeds ${MAX_INDEX_TOTAL_CHARS} characters. Use build-time shards.`);
       texts.push(...got);
     }
     const src = index.files.find(f => f.path === "sources.md");
-    const sources = src ? parseSourcesMd((await readPackFile(env, src)).text) : [];
+    const sources = src ? parseSourcesMd(await indexText(env, src)) : [];
+    const synonyms: Synonyms = { groups: [], phrases: [] };
+    for (const f of index.files.filter(f => /^knowledge\/[^/]+\/synonyms\.json$/.test(f.path))) {
+      let value: Synonyms;
+      try { value = JSON.parse(await indexText(env, f)); }
+      catch { throw new PackUnavailable(`Index incomplete: cannot read synonyms in ${f.path}.`); }
+      synonyms.groups!.push(...(value.groups ?? []));
+      synonyms.phrases!.push(...(value.phrases ?? []));
+    }
     const k = index.knowledge as { review_every_days?: number } | string | null;
-    return new KnowledgeIndex(texts, { sources, reviewDays: typeof k === "object" && k ? k.review_every_days ?? 0 : 0 });
-  })();
-  build.catch(() => indexCache.delete(key));
-  indexCache.set(key, build);
-  while (indexCache.size > INDEX_CACHE_SIZE) indexCache.delete(indexCache.keys().next().value!);
+    const result = new KnowledgeIndex(texts, { sources, synonyms, reviewDays: typeof k === "object" && k ? k.review_every_days ?? 0 : 0 }) as PackKnowledgeIndex;
+    // Keep each curated card together with its conditions and source, even when the ranker selected its second passage.
+    result.parentCards = new Map();
+    for (const file of texts.filter(f => /^knowledge\/[^/]+\/(?:[A-Z]{2,4}|baseline)\.md$/.test(f.path))) {
+      const lines = file.text.split(/\r?\n/);
+      const starts = lines.flatMap((line, i) => /^## /.test(line) ? [i] : []);
+      const parents = starts.flatMap((start, n) => {
+        const end = starts[n + 1] ?? lines.length;
+        const text = lines.slice(start, end).join("\n").trim();
+        const id = /\bCard ([A-Z]{3}-\d{4})\./.exec(text)?.[1];
+        return id ? [{ card_id: id, text, lines: [start + 1, end] as [number, number] }] : [];
+      });
+      for (const chunk of result.chunks.filter(c => c.path === file.path)) {
+        const parent = parents.find(p => chunk.lines[0] >= p.lines[0] && chunk.lines[0] <= p.lines[1]);
+        if (parent) result.parentCards.set(chunk.id, parent);
+      }
+    }
+    result.coverage = { complete: true, expected_files: files.length, indexed_files: texts.length, indexed_chars: chars, attached_files: index.files.length, version: index.version, agent_id: index.agent_id };
+    return result;
+  });
+  inFlightIndexes.set(key, build);
+  void build.then(result => {
+    if (inFlightIndexes.get(key) === build) inFlightIndexes.delete(key);
+    if (generation !== cacheGeneration) return;
+    indexCache.set(key, Promise.resolve(result));
+    while (indexCache.size > INDEX_CACHE_SIZE) indexCache.delete(indexCache.keys().next().value!);
+  }, () => { if (inFlightIndexes.get(key) === build) inFlightIndexes.delete(key); });
+  // A rejected source must release the queue. This tail resolves void so it does not retain the preceding index.
+  coldIndexQueue = build.then(() => undefined, () => undefined);
   return build;
 }
 
-/** ask_agent_knowledge: the passages of an agent's pack that answer a question (one or more phrasings). */
-export async function askPack(env: Env, index: PackIndex, questions: string[], opts: { k?: number; today?: string; paths?: string[] } = {}): Promise<Answer> {
-  return (await packKnowledgeIndex(env, index)).ask(questions, opts);
+/** Tests and asset revision changes can discard cached corpus state explicitly. */
+export function forgetPackIndexes(): void {
+  cacheGeneration++;
+  indexCache.clear();
+  // Do not reset the construction queue: an already-running read must finish before another cold build begins.
+}
+
+/** ask_agent_knowledge: relevance is not business-data readiness; completeness describes indexed files only. */
+export async function askPack(env: Env, index: PackIndex, questions: string[], opts: { k?: number; today?: string; paths?: string[] } = {}): Promise<Answer & { index_coverage: IndexCoverage; evidence_scope: "reference_knowledge"; business_data_ready: false }> {
+  const knowledge = await packKnowledgeIndex(env, index);
+  const k = Math.max(1, Math.min(10, opts.k ?? 6));
+  const answer = knowledge.ask(questions, { ...opts, k: k * 3, max: 30 });
+  const seen = new Set<string>();
+  const passages = answer.passages.flatMap(p => {
+    const parent = knowledge.parentCards.get(p.id);
+    const key = parent?.card_id ?? p.id;
+    if (seen.has(key)) return [];
+    seen.add(key);
+    return [{ ...p, ...(parent ?? {}) }];
+  }).slice(0, k);
+  return { ...answer, passages, index_coverage: knowledge.coverage, evidence_scope: "reference_knowledge", business_data_ready: false };
 }

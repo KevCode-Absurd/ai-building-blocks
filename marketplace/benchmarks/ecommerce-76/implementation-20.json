@@ -1,0 +1,207 @@
+{
+  "schema": "ecommerce-improvements/1",
+  "scope": "20 local product improvements; production deployment and universal superiority are not claimed",
+  "items": [
+    {
+      "id": 1,
+      "title": "Complete access to pack sources",
+      "change": "Removed silent file and character caps. Every eligible published pack file is loaded or the operation explicitly fails.",
+      "implementation": "src/modules/mcp/pack-files.ts",
+      "validation": "test/retrieval-completeness.test.ts",
+      "evidence_and_limit": "Public card-marker reach increased from 543 to 2,091 cards; the complete public-module index contains 4,280 chunks. More content does not guarantee every relevant result is retrieved.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 2,
+      "title": "Source version integrity",
+      "change": "Verify source hashes and the file-index hash; invalidate same-version cached content when bytes change. Reject mixed releases.",
+      "implementation": "src/modules/mcp/pack-files.ts",
+      "validation": "test/retrieval-completeness.test.ts",
+      "evidence_and_limit": "Prevents an apparently current pack from answering with stale or mixed files.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 3,
+      "title": "Complete evidence cards",
+      "change": "Keep parent-card conditions and source references attached to retrieved knowledge; diversify cards before selecting top results.",
+      "implementation": "src/modules/knowledge/cards.ts",
+      "validation": "test/retrieval-completeness.test.ts",
+      "evidence_and_limit": "A matching sentence is less likely to lose the qualification that changes its meaning.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 4,
+      "title": "Consistent local and hosted retrieval",
+      "change": "Align glossary expansion, synonyms and ranking across downloadable tools and the hosted path.",
+      "implementation": "src/modules/packs/retrieve.ts",
+      "validation": "test/packs-retrieve.test.ts",
+      "evidence_and_limit": "Observed role Hit@5 was unchanged; vertical Hit@5 increased .700 to .729 while MRR fell .554 to .541. Retrieval quality is mixed, not solved.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 5,
+      "title": "Supplied-source inventory",
+      "change": "Inventory files, hashes and JSON fields before declaring needed evidence absent; distinguish unread, absent, stale and insufficient data.",
+      "implementation": "packs/shared/tools/source-inventory.mjs",
+      "validation": "test/source-inventory.test.ts",
+      "evidence_and_limit": "Jared originally missed supplied repeat cohorts; its fresh rerun now finds them and correctly limits payback conclusions.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 6,
+      "title": "Bounded retrieval resource use",
+      "change": "Build sparse postings incrementally; deduplicate concurrent loads, serialize cold builds and bound the waiting queue.",
+      "implementation": "src/modules/mcp/tools.ts",
+      "validation": "test/retrieval-completeness.test.ts",
+      "evidence_and_limit": "Local full-pack concurrency ran successfully. Hosted memory-limit and production load proof remain outstanding.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 7,
+      "title": "Complete brand foundation",
+      "change": "Preserve the required design, voice, brand rules and claim restrictions in task context; expose overflow instead of silently dropping rules. Preserve full source facts and voice examples, including trailing qualifications.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs",
+      "validation": "test/brand-context-integrity.test.ts",
+      "evidence_and_limit": "Standing restrictions remain present even when a task requests no general brand context.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 8,
+      "title": "Evidence freshness",
+      "change": "Require explicit evidence dates. Undated, future-dated, stale and thin material cannot silently pass a release gate. Require explicit fact kinds; volatile price/offer/stock/shipping keys cannot inherit a general-fact freshness window.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs",
+      "validation": "test/brand-context-integrity.test.ts",
+      "evidence_and_limit": "Useful restricted local drafts can continue while dependent claims remain blocked.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 9,
+      "title": "Conflict-preserving memory",
+      "change": "Retain different sources for the same fact key, including multiple pages within a capture. Surface contradictions instead of overwriting them.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs",
+      "validation": "test/org-context-reconciliation.test.ts",
+      "evidence_and_limit": "Conflicts are grouped by explicit fact key; arbitrary semantic contradictions are not automatically detected.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 10,
+      "title": "Durable corrections and scoped memory",
+      "change": "Bind owner/workspace scope, append explicit corrections and revocations, require explicit supersession, and withhold mismatched context.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs",
+      "validation": "test/org-context-reconciliation.test.ts",
+      "evidence_and_limit": "Caller scope must be authenticated by the host. Local binding is isolation validation, not an authentication system or concurrent database.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 11,
+      "title": "Claim provenance",
+      "change": "Require reviewed claim-ledger entries with exact copy, source hashes and supporting quotes for absolute claims; stop treating ad longevity as proven performance. Treat approved voice examples as tone evidence, recheck implied SKU/size-range/offer facts, and preserve policy conditions.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/check-creative-set.mjs",
+      "validation": "test/check-creative-set.test.ts",
+      "evidence_and_limit": "Source linkage does not itself establish semantic truth, certification or causal performance. Repeated voice-example errors survived instruction-only fixes. The copy-check entry point now checks size-selection wording against declared product sizes; colour variants and duplicate/mixed representations cannot establish a size range. Nine targeted regressions cover its limited scope; this is not a general semantic claim verifier. The combined quality command now invokes this diagnostic automatically for buyer-facing jobs; exposing a standalone tool was insufficient.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 12,
+      "title": "Honest copy and visual checks",
+      "change": "Check short headlines and table copy; return NOT_RUN for empty copy or missing visual evidence. Corrupt or unsupported image checks cannot pass silently.",
+      "implementation": "../catalogue-items/general/brand-dna-capture/scripts/check-creative-set.mjs",
+      "validation": "test/check-creative-set.test.ts",
+      "evidence_and_limit": "Palette and copy checks do not establish originality, art direction or superiority to a designer.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 13,
+      "title": "Financial source lineage",
+      "change": "Pin calculations to source hashes and JSON pointers with units, currency, period, timezone, attribution and account scope. Reject summing ratios, rates, averages and unknown metric units; derive aggregates from additive base totals.",
+      "implementation": "packs/shared/tools/quality/financial-ledger.cjs",
+      "validation": "test/commerce-calculations.test.ts",
+      "evidence_and_limit": "Typed verification covers declared supported calculations; it does not certify every number in an arbitrary narrative.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 14,
+      "title": "Complete contribution economics",
+      "change": "Separate sales periods from order cohorts, reconcile returns and costs, reject incomplete break-even claims and unweighted ratio aggregation.",
+      "implementation": "packs/shared/tools/commerce-math.mjs",
+      "validation": "test/commerce-calculations.test.ts",
+      "evidence_and_limit": "Incomplete costs produce a clearly labeled subtotal rather than a purported allowable CAC or verified profit.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 15,
+      "title": "Correct operational mathematics",
+      "change": "Correct inventory availability, lead-time variance, inbound cash timing, BOM loss, partial cost pass-through, replenishment timing and offer precision. Derive reserve breach, negative balance and minimum cash from forecast rows. Compute worst-case clearance from both product and aperture tolerances.",
+      "implementation": "packs/shared/tools/commerce-math.mjs",
+      "validation": "test/commerce-calculations.test.ts",
+      "evidence_and_limit": "Regression examples include 100 x 25% x +/-20% giving 95/100/105, and 7 + .75 x 30 giving 29.5 days. Cash-forecast and tolerance-fit regression tests preserve week-5 base breach and reject a 72\u00b11 mm opening being called 2\u20134 mm clearance around a 70 mm part. Manufacturing tolerances still require supplier evidence.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 16,
+      "title": "Sound experiment decisions",
+      "change": "Separate inconclusive results from equivalence and from failing a practical threshold; preserve planned stopping and mature outcome follow-up.",
+      "implementation": "knowledge/ecommerce/skills/read-store-ab-test-result/SKILL.md",
+      "validation": "test/commerce-calculations.test.ts",
+      "evidence_and_limit": "Gretchen correctly retained the control when the interval included both zero and the planned MDE.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 17,
+      "title": "Capacity-aware orchestration",
+      "change": "Validate assignments against supplied owner/period availability; require existing commitments to be accounted for or explicitly reprioritized.",
+      "implementation": "packs/shared/tools/commerce-math.mjs",
+      "validation": "test/capacity-plan.test.ts",
+      "evidence_and_limit": "Malcolm originally over-allocated developer time. Its fresh rerun uses 24 developer and 32 marketer hours over two weeks.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 18,
+      "title": "Verifiable execution and handoffs",
+      "change": "Ship a portable execution-contract validator with scoped context, lifecycle states and caps; verify code patches by applying them and comparing exact result bytes. The main quality checker automatically applies sibling patch artifacts and compares them against the expected edited files. Generate patches deterministically from exact before/after files, including missing final newlines and added binary assets, and verify them before writing.",
+      "implementation": "packs/shared/tools/agent-contract.mjs",
+      "validation": "test/agent-execution-contract.test.ts",
+      "evidence_and_limit": "The contract is a declaration/receipt validator, not a deployed runtime. Patch checks do not prove runtime behavior. See tools/verify-patch.mjs and test/patch-handoff.test.ts. Build-kit smoke testing also executes the packaged numbers checker, including its relative financial-ledger dependency.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 19,
+      "title": "Quality gates that measure the right thing",
+      "change": "Make noncomparable draft-length and query-count heuristics advisory while retaining substantive failures. Keep numeric self-scores in diagnostics. Declared evidence files can support exact ISO dates without treating them as invented deadlines.",
+      "implementation": "packs/shared/tools/check-handover.mjs",
+      "validation": "test/handover-scope.test.ts",
+      "evidence_and_limit": "A large report should not fail merely because its plain baseline was only a short synopsis; a low query count is not proof of missing evidence. Evidence-date checks retain absent/wrong-year failures and reject unreadable sources; occurrence is not semantic validation.",
+      "status": "IMPLEMENTED_LOCAL"
+    },
+    {
+      "id": 20,
+      "title": "Observed-output evaluation loop",
+      "change": "Freeze inputs, run real specialist tasks, export observable host traces, preserve first failures, rerun repairs, and provide a human review/calibration interface.",
+      "implementation": "benchmarks/ecommerce-76/README.md",
+      "validation": "benchmarks/ecommerce-76/test_calibration.py",
+      "evidence_and_limit": "No human labels yet. First-pass and targeted development reruns remain separate. Prepared cases and unit tests are never counted as completed output evaluations. Later catalogue trials use shared batch contexts and are labeled accordingly; they are not independent fresh-context replications.",
+      "status": "IMPLEMENTED_LOCAL"
+    }
+  ],
+  "principles": [
+    {
+      "source": "https://cs329z.stanford.edu/",
+      "application": "Structured retrieval, tool contracts, bounded execution, memory and trace-based evaluation; 14 public slide decks retained in the prior audit."
+    },
+    {
+      "source": "https://standardagentspec.org/",
+      "application": "Explicit agent sides, dependencies, scoped child/context transfer and terminal session semantics inform a bounded portable profile. No specification conformance claim."
+    },
+    {
+      "source": "https://hamel.dev/blog/posts/evals-faq/",
+      "application": "Inspect actual outputs and traces, classify first failures, prefer objective checks where possible, and calibrate subjective judgments with human labels before trusting an automated judge."
+    }
+  ],
+  "remaining": [
+    "Replicate the seven completed matched host-only trials on held-out tasks with blinded expert labels; no Claude Code comparison has run.",
+    "Obtain domain-expert labels; human judge calibration currently NOT_PERFORMED.",
+    "Reconcile the historical private source inventory with distilled cards and add rights-aware revision sync; complete published-pack access does not mean every Drive original is available to agents.",
+    "Implement and test an authenticated deployed multi-user runtime, durable queue and actual connector adapters separately.",
+    "Validate real product photography, live account execution and business outcomes with authorized production evidence."
+  ]
+}

@@ -2,6 +2,7 @@
 // by scripts/build-packs.mjs from knowledge/<vertical>/) is read once per Worker and version, and searched with
 // CardIndex. Used by the MCP tool ask_vertical_knowledge and by GET /api/knowledge/<vertical>/ask, which the
 // /e-commerce page uses. No model, no network beyond the static asset.
+import type { Synonyms } from "../packs/retrieve.ts";
 import type { Env } from "../../env.ts";
 import { CardIndex, type Card, type CardAnswer, type CardQuery, type Source, type Vertical } from "./cards.ts";
 import { SHELF_KINDS, SHELF_SCHEMA, ShelfSearch, type ShelfFile, type ShelfItem, type ShelfKind } from "./shelf.ts";
@@ -9,7 +10,7 @@ import { SHELF_KINDS, SHELF_SCHEMA, ShelfSearch, type ShelfFile, type ShelfItem,
 export const VERTICAL_ID = /^[a-z][a-z0-9-]{1,39}$/;
 export const JURISDICTIONS = ["IN", "US", "UK", "EU"] as const;
 
-interface IndexFile { schema: string; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[] }
+interface IndexFile { schema: string; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[]; synonyms?: Synonyms | null }
 const cache = new Map<string, Promise<{ file: IndexFile; index: CardIndex } | null>>();
 
 /** The vertical's index, or null when it is not built (or not a vertical). Failures are not cached. */
@@ -23,7 +24,7 @@ export function verticalIndex(env: Env, id: string): Promise<{ file: IndexFile; 
     if (!res.ok || !(res.headers.get("content-type") ?? "").includes("json")) return null;
     const file = await res.json() as IndexFile;
     if (file?.schema !== "ai-blocks-vertical-index/1" || !Array.isArray(file.cards)) return null;
-    return { file, index: new CardIndex(file.vertical, file.cards, file.sources) };
+    return { file, index: new CardIndex(file.vertical, file.cards, file.sources, file.synonyms) };
   })();
   load.then(v => { if (!v) cache.delete(id); }, () => cache.delete(id));
   cache.set(id, load);
@@ -94,7 +95,7 @@ export function cardQuery(v: Vertical, raw: Record<string, unknown>): CardQuery 
 /** A card answer for JSON: the cards with their sources, nothing private. */
 export function answerJson(a: CardAnswer) {
   return {
-    question: a.question, enough: a.enough, coverage: a.coverage, missing: a.missing,
+    question: a.question, enough: a.enough, coverage: a.coverage, missing: a.missing, evidence_scope: a.evidence_scope, business_data_ready: a.business_data_ready,
     cards: a.hits.map(h => ({
       id: h.card.id, modules: h.card.modules, claim: h.card.claim, body: h.card.body, conditions: h.card.conditions, fails_when: h.card.fails_when,
       scope: h.card.scope, tier: h.card.tier, numbers: h.card.numbers, jurisdiction: h.card.jurisdiction, marketplace: h.card.marketplace, mode: h.card.mode,

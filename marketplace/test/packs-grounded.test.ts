@@ -167,7 +167,7 @@ test("approval rules govern live actions, never the content of a plan; the metho
   assert.match(engine, /differs on at least two of angle, format, persona and hook source/);
   assert.match(engine, /first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week/);
   assert.match(engine, /Stay within the owner's limit, counted the way the owner counts/);
-  assert.match(engine, /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections; never in what a buyer reads\./);
+  assert.match(engine, /Compute projections and decision summaries from source rows; verify narrative amounts, thresholds and dates against those results\. Label projections and show ranges outside buyer copy\./);
   assert.match(engine, /\| 3 Diverge \|[^\n]*\| Expert \(with the bolder move in a plan\) and plain \|/);
   assert.match(engine, /At most three assumption lines, one line each/);
   // "To confirm" survives only where a rule forbids it.
@@ -175,7 +175,7 @@ test("approval rules govern live actions, never the content of a plan; the metho
     for (const line of text.split("\n").filter(l => /To confirm/i.test(l))) assert.match(line, /(never|no) (holds a |add a |end with a )?(a )?"?To confirm/i, `${name}: ${line.slice(0, 80)}`);
 });
 
-test("a one-shot job's required reading stays under 7,000 words in a pricing-strategist pack", async () => {
+test("a one-shot job's required reading stays under 7,100 words in a pricing-strategist pack", async () => {
   // AGENTS.md, the METHOD.md parts the fast path names (the hard rules, the step table, step 0's spec sheet and rubric,
   // steps 3 to 6), one card and one job skill. About 13,560 words before 13 Nov 2026; 5,637 before the merge (15 Nov).
   const agents = file(await build(), "AGENTS.md")!;
@@ -189,5 +189,6 @@ test("a one-shot job's required reading stays under 7,000 words in a pricing-str
   const total = visibleWords(agents) + visibleWords(engine) + visibleWords(quality("cards/pricing.md")) + Math.max(...skills.map(visibleWords));
   // 15 Nov: the fast path now also reads the whole check step (the mechanical checks it used to skip), the rubric and
   // the chat path, about 900 words. A bloat guard, never a reason to cut a useful line.
-  assert.ok(total < 7000, `one-shot reading is ${total} words`);
+  // The owner-requested conditional automation review and explicit authorization reuse add under 100 words.
+  assert.ok(total < 7100, `one-shot reading is ${total} words`);
 });

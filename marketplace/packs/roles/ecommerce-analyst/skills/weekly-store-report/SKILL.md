@@ -31,8 +31,8 @@ If last year's data is missing, report against last week and the 4-week average,
    - Orders: store orders placed in the period, excluding test orders.
    - Net sales: gross sales minus discounts minus returns (Shopify's definition), excluding shipping and tax.
    - Sessions: from the named source (Shopify or GA4); never mix them across weeks.
-   - Conversion rate: orders ÷ sessions, from the same source as sessions.
-   - AOV: net sales ÷ orders.
+   - Checkout-session conversion: sessions with a completed checkout ÷ sessions, from one source. Orders ÷ sessions is a separate custom order rate; multiple orders can occur in a session.
+   - Purchase AOV: merchandise sales less discounts for the purchase cohort ÷ orders, excluding later adjustments. Period net sales ÷ orders is a separate custom KPI; show later refunds separately.
    - New and returning buyers: by each customer's first ever order date, not by GA4 "new users".
 3. **Run the data check before anything else.**
    - Store orders against analytics purchases for each day. Note the usual gap, and flag any day where it changes sharply.
@@ -40,7 +40,7 @@ If last year's data is missing, report against last week and the 4-week average,
    - Look for repeated transaction IDs in analytics (double-firing tags).
    - Mark known breaks: Shopify's session measurement change (21 to 23 September 2026), Shopify's referring-channel value change (18 October 2026), cookie banner or tag changes.
    - Note refunds booked this week for older orders: Shopify records returns on the refund date, which can drag a week's net sales down.
-4. **Build the KPI table:** this week, last week, same week last year, change versus each. Show percentage change for rates as percentage points.
+4. **Build the KPI table:** this week, last week, same week last year, change versus each. Show absolute changes in rates as percentage points; label relative percentage changes separately.
 5. **Build the channel table** from one source, with the same groups each week (for example: organic search, paid search, paid social, email, direct, referral, marketplaces, other). Say which attribution model it uses. Don't add up ad platform figures.
 6. **Find what moved.** For the biggest change, split revenue into sessions × conversion rate × AOV and say which part moved. If something moved a lot, use the sales-change-diagnosis skill.
 7. **Write three to five findings,** each with its number, comparison and one action. Plain words, one metric per sentence.

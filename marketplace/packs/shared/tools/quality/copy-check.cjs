@@ -17,19 +17,24 @@
 //    belong in your notes, not in front of a customer: the brief, the owner, persona, segment, signal, ledger, ROAS.
 // 4. Never say. Every word or phrase the owner banned fails anywhere in the copy: from context/never-say.txt (one per
 //    line, read from the folder you run in) and from each --never "phrase".
+// 5. Size-choice wording is checked against --product-source, else context/product.json or evidence/product.json.
+//    Supported size fields: sizes[], options[{name:"Size",values:[]}], variants[].size/capacity_ml, size/capacity_ml.
+//    Missing source is NOT_RUN; unsupported single-product choice fails. No full semantic/availability certification.
 // Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error.
-const fs = require("fs");
+const fs = require("fs"), path = require("path");
 
-const usage = 'Usage: node copy-check.cjs <file> [--limit "Label=N"]... [--never "phrase"]...';
+const usage = 'Usage: node copy-check.cjs <file> [--limit "Label=N"]... [--never "phrase"]... [--product-source product.json] [--product-only]';
 const args = process.argv.slice(2);
 const limits = [], never = [];
-let file = null;
+let file = null, productSource = null, productOnly = false;
 for (let i = 0; i < args.length; i++) {
   if (args[i] === "--limit") {
     const m = /^(.+?)=(\d+)$/.exec(args[++i] ?? "");
     if (!m) { console.error(`--limit needs "Label=N"\n${usage}`); process.exit(2); }
     limits.push({ label: m[1].trim().toLowerCase(), max: Number(m[2]) });
   } else if (args[i] === "--never") never.push(args[++i] ?? "");
+  else if (args[i] === "--product-source") { productSource = args[++i]; if (!productSource || productSource.startsWith('--')) { console.error(usage); process.exit(2); } }
+  else if (args[i] === "--product-only") productOnly = true;
   else if (!file) file = args[i];
   else { console.error(usage); process.exit(2); }
 }
@@ -41,6 +46,47 @@ const plain = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*([^*]+
   .replace(/`([^`]+)`/g, "$1").trim().replace(/^["“](.*)["”]$/s, "$1").trim();
 const len = s => Array.from(plain(s)).length;
 const fails = [], warns = [];
+// Bounded product-scope diagnostic, not a general semantic claim verifier. A tone
+// example is never evidence that the current product offers multiple sizes.
+// Conventional files are optional; explicit --product-source takes precedence.
+productSource ||= ['context/product.json', 'evidence/product.json'].find(p => fs.existsSync(p));
+const sizeChoice = /\b(?:choose|pick|select|find)\s+(?:the|a|your)\s+(?:(?:right|best|perfect)\s+)?size\b|\b(?:comes?|offered|available)\s+in\s+(?:multiple|several|different)\s+sizes\b/i;
+const assertedSizeChoice = text.split(/\r?\n/).some(line => {
+  const matches = line.matchAll(new RegExp(sizeChoice.source, 'gi'));
+  for (const match of matches) {
+    const prefix = line.slice(0, match.index).trimEnd();
+    if (!/\b(?:(?:do not|don't|never)(?:\s+(?:write|say|use))?|avoid|reject)\s*[:"'“]*\s*$/i.test(prefix)) return true;
+  }
+  return false;
+});
+if (assertedSizeChoice) {
+  if (!productSource) warns.push('product-choice NOT_RUN: size-choice wording needs a scoped --product-source; voice approval is not product evidence');
+  else {
+    try {
+      const stat = fs.lstatSync(productSource);
+      if (!stat.isFile() || stat.isSymbolicLink() || stat.size > 4 * 1024 * 1024) throw new Error('expected a regular product JSON file under 4 MB');
+      const product = JSON.parse(fs.readFileSync(productSource, 'utf8'));
+      if (!product || typeof product !== 'object' || Array.isArray(product)) throw new Error('expected one scoped product object');
+      const namedSizes = new Set(), capacities = new Set();
+      const add = (v, kind='size') => { if ((typeof v === 'string' && v.trim()) || (typeof v === 'number' && Number.isFinite(v) && v > 0)) (kind === 'capacity_ml' ? capacities : namedSizes).add(String(v).trim().toLowerCase().replace(/\s+/g, ''));  };
+      // Never count colour, price, inventory quantity or two identical size labels as size choice.
+      if (Array.isArray(product.sizes)) product.sizes.forEach(v => add(v));
+      if (Array.isArray(product.options)) for (const o of product.options) if (o && /^size$/i.test(o.name) && Array.isArray(o.values)) o.values.forEach(v => add(v));
+      if (Array.isArray(product.variants)) for (const v of product.variants) { if (v && typeof v === 'object') { add(v.size); add(v.capacity_ml, 'capacity_ml'); } }
+      // A capacity alone describes one product, not a selectable range. Do not
+      // combine a top-level size with variant sizes in incompatible units.
+      if (!namedSizes.size && !capacities.size) { add(product.size); add(product.capacity_ml, 'capacity_ml'); }
+      const sizes = namedSizes.size ? namedSizes : capacities;
+      if (sizes.size < 2) fails.push(`product-choice: size selection is unsupported by ${path.basename(productSource)} (${sizes.size} explicit size values). Check dimensions instead, or supply the actual scoped size options; approved voice examples do not prove range claims.`);
+      else warns.push(`product-choice: ${sizes.size} declared size values found; independently review units, current availability, scope and the full claim. This is not semantic certification.`);
+    } catch (e) { console.error('Cannot verify product choice: ' + e.message); process.exit(2); }
+  }
+}
+if (productOnly) {
+  const status = fails.length ? 'FAIL' : assertedSizeChoice && !productSource ? 'NOT_RUN' : warns.length ? 'WARN' : 'PASS';
+  console.log(JSON.stringify({status,detail:[...fails,...warns].join('\n') || 'No targeted size-choice wording detected. Other factual claims require review.'}));
+  process.exit(fails.length ? 1 : 0);
+}
 const PLACEHOLDER = /\[(?:x|xx|link|url|name|first name|product|date|tbd|block [a-z0-9]+|insert[^\]]*)\]|\bTBD\b/i;
 // WhatsApp template variables ({{1}}) are filled by the template itself, so they pass.
 const BARE_TAG = /\{\{(?!\s*\d+\s*\}\})(?![^}]*(?:default|\|))[^}]*\}\}|\{%[^%]*%\}/;

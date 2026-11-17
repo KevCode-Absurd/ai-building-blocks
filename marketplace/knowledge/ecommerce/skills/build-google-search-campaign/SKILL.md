@@ -49,7 +49,7 @@ Access: read access to research; draft access (level 2) to load the paused campa
 
 ### 1. Work out the money lines
 
-- Break-even cost per purchase (CPA) = gross profit per purchase. Break-even ROAS = 1 / gross margin [GAD-0023].
+- Contribution break-even cost per purchase (CPA) = expected contribution before ads per purchase. Break-even ROAS = purchase value / expected contribution before ads [GAD-0023].
 - Target CPA = break-even CPA minus the profit the client wants per order.
 - Starting max CPC = target CPA x expected conversion rate. Use the store's own Google conversion rate if it exists; if not, use the store's sitewide rate halved (practitioner default, test it). CPA = CPC / conversion rate, so a high CPC is fine only if the rate rises with it [GAD-0038].
 - Tax: if the store cannot reclaim the VAT or other tax shown on the Google Ads invoice, add it to ad cost before comparing with profit. If the store offers pay on delivery, count those orders only after delivery when working out conversion rate from Shopify.
@@ -186,3 +186,5 @@ What makes this skill ours: max CPC and every budget are worked back from the st
 - Add the GST on the Google Ads invoice to ad cost, and count cash-on-delivery orders only after delivery.
 - Add Hinglish and transliterated forms buyers type ("kurta for men cotton", "bottle ka price").
 - Say "Cash on delivery available" only if true on the site.
+
+Before setting bids, validate the matched purchase value and complete variable-cost contribution using `tools/quality/FINANCIAL.md`. Keep the campaign paused when currency, order population or cost coverage is unresolved; a product gross-margin target cannot establish profit break-even.

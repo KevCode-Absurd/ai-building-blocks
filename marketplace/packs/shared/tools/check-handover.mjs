@@ -11,6 +11,9 @@
 //    aim; over 1.6 times fails unless the brief asked for more. --one-page fails over about 450 words.
 // --profile <family> uses the shipped v3 family aim and ceiling. Legacy calls retain their old limits.
 // --requested-more records that the brief explicitly requests more; it waives only the ratio ceiling.
+// A non-buyer-facing profile treats this unvalidated baseline ratio as a review note,
+// not a gate. Explicit owner word/page limits still bind; a short incomplete baseline
+// must not force facts or requested analysis out of the delivered work.
 // 3. Homework: finished work hands nothing back to the owner. It fails on a "To confirm" or "Open questions" box, an ask
 //    for the owner's yes or sign-off, an approval gate inside the plan, editor notes about the copy, and alternates
 //    (a "Runner-up:" line, "(test: ...)" inside a subject or headline). --options-requested lets alternates pass when
@@ -29,9 +32,22 @@ const args = process.argv.slice(2);
 const onePage = args.includes("--one-page");
 const profileAt = args.indexOf("--profile");
 const profileName = profileAt >= 0 ? args[profileAt + 1] : null;
-const valueAt = new Set(["--profile", "--brief", "--numbers"].map(f => args.indexOf(f)).filter(i => i >= 0).map(i => i + 1));
+const valueAt = new Set(args.flatMap((a, i) => ["--profile", "--brief", "--numbers", "--date-source"].includes(a) ? [i + 1] : []));
 const valueOf = flag => { const i = args.indexOf(flag); if (i < 0) return null; const v = args[i + 1]; if (!v || v.startsWith("--")) { console.error(`${flag} needs a value.`); process.exit(2); } return v; };
 const briefFile = valueOf("--brief"), numbersFile = valueOf("--numbers");
+const dateSources = args.flatMap((a, i) => a === '--date-source' ? [args[i + 1]] : []);
+if (dateSources.some(f => !f || f.startsWith('--'))) { console.error('--date-source needs a file'); process.exit(2); }
+// Exact source dates are evidence, not invented deadlines. This occurrence check
+// does not authenticate the source or prove the date's meaning in the deliverable.
+const sourceDates = new Set();
+for (const source of dateSources) {
+  try {
+    const stat = fs.statSync(source);
+    if (!stat.isFile() || stat.size > 4_000_000) throw Error('date source must be a file of at most 4 MB');
+    for (const m of fs.readFileSync(source, 'utf8').matchAll(/\b20\d{2}-\d{2}-\d{2}\b/g)) sourceDates.add(m[0]);
+  } catch (e) { console.error(`Cannot read date source ${source}: ${e.message}`); process.exit(2); }
+}
+
 for (const [f, what] of [[briefFile, "the brief"], [numbersFile, "the numbers ledger"]]) if (f && !fs.existsSync(f)) { console.error(`Cannot read ${what} ${f}`); process.exit(2); }
 let limits = { aim: 1.3, ceiling: 1.6 };
 if (profileAt >= 0) {
@@ -145,7 +161,7 @@ const briefChecks = ({ lines, brief, ledger, copy }) => {
     const where = `line ${i + 1}`, show = line.trim().slice(0, 100);
     // A bracketed value such as "[Tue 18 Nov]" is a merge field the system fills, not a date the plan sets.
     const unbracketed = line.replace(/\[[^\]]*\](?!\()/g, ' ');
-    const invented = [...new Set(datesIn(unbracketed).filter(d => !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
+    const invented = [...new Set(datesIn(unbracketed).filter(d => !sourceDates.has(d.text.trim()) && !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
     if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": use days relative to the start (Day 1, Week 2) unless the brief gives the date. In: ${show}`);
     for (const m of line.matchAll(WEEKDAY)) {
       const before = line.slice(0, m.index), after = line.slice(m.index + m[0].length);
@@ -277,7 +293,9 @@ if (plain) {
   const p = words(visibleText(plain, readFileSync(plain, "utf8")));
   const ratio = p ? n / p : 0;
   lengthNote += `, ${ratio.toFixed(2)} times the plain answer (${p} words)`;
-  if (ratio > limits.ceiling && !requestedMore) problems.push(`length: ${ratio.toFixed(2)} times the plain answer; family ceiling ${limits.ceiling}. Cut toward ${limits.aim} unless the brief asked for more`);
+  if (!p) notes.push('plain baseline is empty: length comparison NOT_RUN');
+  if (ratio > limits.ceiling && !requestedMore && limits.buyer_facing === false) notes.push(`length review: ${ratio.toFixed(2)} times the plain answer; check usefulness and repetition, preserving requested analysis and evidence. This baseline has not been independently checked for completeness.`);
+  else if (ratio > limits.ceiling && !requestedMore) problems.push(`length: ${ratio.toFixed(2)} times the plain answer; family ceiling ${limits.ceiling}. Cut toward ${limits.aim} unless the brief asked for more`);
   else if (ratio > limits.aim) lengthNote += `; over the ${limits.aim} aim, so check every part is one the reader will use`;
 }
 if (onePage && n > 450) problems.push(`length: ${n} words is more than one page (about 450)`);

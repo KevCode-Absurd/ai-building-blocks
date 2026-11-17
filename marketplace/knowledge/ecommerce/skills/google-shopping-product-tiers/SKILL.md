@@ -119,7 +119,7 @@ Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 
 ### 8. Targets per margin tier, zombies and the weekly impression share read
 
-**When margins spread widely** (for example 30% to 70%), give each margin tier its own target from break-even ROAS = 1 / gross margin, with the sum shown. A 70% margin collection and a 35% one cannot share one 300% target [GAD-0040] [GAD-0043]. High-margin tiers get a lower target to buy volume; low-margin tiers a higher one to protect profit. Each tier needs about 30 conversions a month or it merges with its neighbour.
+**When margins spread widely** (for example 30% to 70%), give each margin tier its own target from break-even ROAS = purchase value / expected contribution before ads, with the sum shown. A 70% margin collection and a 35% one cannot share one 300% target [GAD-0040] [GAD-0043]. High-margin tiers get a lower target to buy volume; low-margin tiers a higher one to protect profit. Each tier needs about 30 conversions a month or it merges with its neighbour.
 
 - **Zombie tier.** Products with zero or near-zero spend get their own campaign and small budget for a set window, so the algorithm is forced to show them; those that sell move to their real tier, the rest go to the pause list.
 - **Performance Max as catch-all test.** Manual Shopping tiers at their targets, Performance Max beside them at a much higher target so manual wins most auctions and Performance Max takes leftovers. Run 4 to 6 weeks, judge on total store revenue and new-customer ROAS, and stop if new-customer ROAS falls two weeks in a row. A very high target narrows Performance Max to warm shoppers [GAD-0037].
@@ -177,3 +177,5 @@ Feed fixes, bid or label changes, pauses, each sorted by cost to date.
 - GAD-0037: a raised target narrows PMax to warm buyers.
 
 What makes this skill ours: tiers come from gross profit per click built from Shopify costs with a data rule that scales with price; each losing product is diagnosed as a listing or a page problem before money moves; stock cover can override a hero call; slow stock gets a clearance tier; and everything ships as ready files.
+
+Calculation scope: expected contribution before ads deducts all variable costs, including fulfilment, fees and expected returns, from the matched purchase value. Product gross margin alone is insufficient for profit break-even. Use identical currency, order population and purchase-value definitions; missing cost coverage blocks a supported scale recommendation.

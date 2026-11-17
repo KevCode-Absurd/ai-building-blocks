@@ -100,7 +100,7 @@ Plot the daily lift. If week one carries the whole effect and later weeks are fl
 |---|---|---|
 | **Win** | Primary range above zero, GP per visitor up, no guardrail breach | Ship the variant |
 | **Lose** | Primary range below zero, or a guardrail breach | Keep control; log why |
-| **Unclear** | Planned sample reached, range crosses zero | The effect is smaller than the MDE [CRO-0015]: keep whichever is cheaper to run, do not extend |
+| **Unclear** | Planned sample reached, range crosses zero | Report the estimate and interval against the practical threshold; a meaningful benefit may remain plausible. Keep the planned stopping rule. A cheaper option may be operationally preferable, but this does not prove equivalence |
 | **Invalid** | Stopped early, split mismatch, counts off, contaminated | No decision; fix and rerun only if still worth it |
 
 Expect most tests to lose or be unclear; a 30 to 35% win rate is very good [CRO-0020]. A lift above 50% should be retested or held back with a small holdout before it is banked [CRO-0012].
@@ -163,7 +163,7 @@ Expect most tests to lose or be unclear; a 30 to 35% win rate is very good [CRO-
 - **One-number lifts.** Step 2 always gives the range; Step 4 plans on its low end.
 - **Revenue winners that lose profit.** Step 4 converts to gross profit per visitor; Step 3 blocks guardrail breaches.
 - **Finding a winning segment after a flat test.** Step 5 reads only planned segments.
-- **Extending an unclear test to "get significance".** Step 7 treats a fully powered flat result as an answer.
+- **Extending an unclear test to "get significance".** Step 7 preserves the stopping rule and reports uncertainty rather than extending until significance.
 - **Leaving the winner running inside the test tool.** Step 8 builds it natively.
 - **Picking the good week after an offer changed mid-test.** Step 1b maps every change and reads only clean periods, with excluded totals shown.
 - **Reading the MDE as the forecast, or an add-to-cart lift as an order lift.** Steps 2 and 4 keep each number in its place.
@@ -174,7 +174,7 @@ Expect most tests to lose or be unclear; a 30 to 35% win rate is very good [CRO-
 - CRO-0010: extra metrics and segments raise false winners.
 - CRO-0012: realistic lifts; retest claims above 50%.
 - CRO-0014: revenue per visitor needs about six times the traffic.
-- CRO-0015: a fully powered flat test means the effect is below the MDE.
+- CRO-0015: historical stopping guidance; use the interval to assess plausible effects. Equivalence requires a prespecified margin and suitable analysis.
 - CRO-0017: stopping at first significance inflates false winners.
 - CRO-0020: a 30 to 35% win rate is very good.
 - MEA-0009: about 10% swings from order value and conversion are usually noise.
@@ -186,3 +186,7 @@ What makes this skill ours: the verdict has four outcomes, including "invalid", 
 ## Selling in India
 
 Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Wait at least 2 to 3 weeks after test end for COD outcomes. When COD share is meaningful, read the primary on delivered or prepaid-plus-confirmed orders; a variant that lifts COD orders but also lifts RTO can lose money, so recompute GP per visitor after RTO.
+
+## Reproducible calculation
+
+Use the shared `tools/commerce-math.mjs` operation `experimentReadout` for the supported calculation. Run `node tools/commerce-math.mjs <input.json>` with `{ "operation": "<one operation>", "inputs": { ... } }`; inspect the exported function for exact field names and units. Save inputs and result with the deliverable. Unsupported assumptions or missing inputs remain explicit gaps; never substitute a guessed figure. This tool is arithmetic support, not authority to act.

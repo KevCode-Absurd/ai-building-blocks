@@ -16,6 +16,8 @@ A panel map is the plan a designer or printer builds from. It says what goes on 
 
 Not for: drawing the dieline itself, structural engineering, or legal sign-off on labels.
 
+If the requested prototype brief includes dimensions and tolerances, check that they agree before supplier handoff. Worst-case total clearance is opening minimum minus product maximum through opening maximum minus product minimum; radial clearance is half that for concentric round parts. Use `tools/commerce-math.mjs` operation `toleranceFit` with explicit product/opening/required minimum and maximum values and a common unit. Include product variation, wall/caliper variation and folds where relevant; do not silently assume missing tolerances are zero. A 72 ±1 mm opening around an exact 70 mm product yields 1–3 mm diametral clearance, not 2–4 mm. Arithmetic consistency does not qualify fit, cushioning or protection; keep untested structural choices as prototype targets.
+
 ## What you need
 
 - **The printer's dieline** with its version or date, flat size, folds, glue flaps, seals and gussets. If missing, ask for it and stop at a rough plan.

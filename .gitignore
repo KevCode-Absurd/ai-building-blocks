@@ -42,6 +42,8 @@ site/.copyable-build/
 !/docs/PAGE-FORMAT.md
 !/docs/QUALITY-BAR.md
 !/docs/APPS-PRD.md
+!/docs/AGENT-DESIGN-PRINCIPLES.md
+!/docs/PRD-AUTOMATION-DEBT.md
 !/docs/IMPORTING-SKILLS.md
 !/docs/SITE-SPEND-MONITOR.md
 !/docs/BUSINESS-BOARDS.md

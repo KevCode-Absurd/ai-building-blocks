@@ -72,6 +72,8 @@ Thirteen columns, one per week starting Monday. Rows: opening cash, receipts by 
 
 Flag every week where closing cash is under the buffer, and the single lowest week. The lowest point matters more than the ending balance.
 
+Compute summary dates from the same rows: first reserve breach, first negative balance, lowest week, peak funding gap and ending cash. Use `tools/commerce-math.mjs` with operation `cashForecast`, openingCash, reserve and chronologically ordered periods `{period, receipts, payments}`. Payments include each outflow once. Reconcile every date and amount in the narrative against its result. A week exactly at the reserve is not a breach; zero cash is not negative. Report any opening shortfall separately. This checks period-end arithmetic, not intraperiod liquidity or completeness of cash records.
+
 ### 5. Run the downside case
 
 Practitioner default, test it: sales 20% below base, cost per new customer 20% higher, one payout delayed a week, the largest inbound shipment two weeks late (so its sales slip, but its balance payment does not), and the failed-delivery rate 5 points higher for stores with pay on delivery. Show the downside closing cash under the base.

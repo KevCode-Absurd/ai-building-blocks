@@ -140,3 +140,17 @@ test("the e-commerce library files follow the shelf rules", { skip: !existsSync(
     }
   }
 });
+
+// 17 Nov: switching Tools -> Minds kept showing tools. For one render the Minds card got a tool item, read
+// questions[0] of undefined, and the throw left the grid half-updated for good. Guard every layer.
+test("a shelf tab never draws another tab's items", () => {
+  const page = readFileSync(new URL("../src/ui/pages/directory/ecommerce.tsx", import.meta.url), "utf8");
+  const shelf = readFileSync(new URL("../src/ui/pages/directory/shelf.tsx", import.meta.url), "utf8");
+  assert.match(page, /<ShelfTab key=\{tab\} kind=\{tab\}/, "each tab mounts a fresh shelf");
+  assert.match(shelf, /loaded\.filter\(p => p\.kind === kind\)/, "only this shelf's pages are drawn");
+  assert.match(shelf, /if \(!last \|\| more \|\| first\.loading\) return;/, "Show more waits for a new search or stage to load");
+  assert.match(shelf, /if \(now\.current === asked\) setPages\(p => p\[0\] === base/, "Show more keeps its page only if the list has not changed");
+  assert.match(shelf, /if \(first\.error\) \{/, "a failed load says so instead of showing the last search");
+  assert.doesNotMatch(shelf, /\(item as MindItem\)\.questions\[0\]|\(item as PromptItem\)\.fill\.length/, "a card reads optional fields safely");
+  assert.doesNotMatch(shelf, /new URL\(s\)/, "a bad tool source link cannot break the tool page");
+});

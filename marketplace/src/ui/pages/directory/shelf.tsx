@@ -2,7 +2,7 @@
 // /e-commerce), and the page for one item (/e-commerce/:kind/:slug). Data: GET /api/knowledge/ecommerce/shelf[/:kind
 // [/:slug]] (src/modules/knowledge/routes.ts), built from knowledge/ecommerce/library/ by scripts/build-packs.mjs.
 // Nothing here runs a model: a prompt is copied into the visitor's own AI, a skill or mind is downloaded or loaded there.
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { Badge, Button, Notice, Page, Spinner, useLoad } from "../../components.tsx";
 import { api, ApiError } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
@@ -47,7 +47,9 @@ const TOOL_KINDS: Record<string, string> = {
   sourcing: "Sourcing", shipping: "Shipping", "data-and-research": "Data and research", finance: "Finance",
 };
 const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
-export const itemHref = (kind: ShelfKind, slug: string) => `/e-commerce/${kind}/${encodeURIComponent(slug)}`;
+/** "shopify.com" for a source link, or the link as written if it is not a full address. */
+const siteName = (url: string) => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; } };
+export const itemHref =(kind: ShelfKind, slug: string) => `/e-commerce/${kind}/${encodeURIComponent(slug)}`;
 
 /** "Used by Kofi and Tendai" with links, or nothing. */
 function UsedBy(props: { ids: string[]; team: Map<string, TeamName>; max?: number }) {
@@ -62,13 +64,16 @@ function ShelfCard(props: { kind: ShelfKind; item: ShelfItem; team: Map<string, 
   const { kind, item } = props;
   const href = itemHref(kind, item.slug);
   const tag = kind === "tools" ? TOOL_KINDS[(item as ToolItem).kind] ?? "Tool" : kind === "minds" ? (item as MindItem).identity : props.stageLabel;
+  // A card never trusts its fields: one that throws stops the whole grid redrawing (17 Nov: Minds kept showing tools).
+  const fill = (kind === "prompts" && (item as PromptItem).fill) || [];
+  const ask = kind === "minds" ? (item as MindItem).questions?.[0] : undefined;
   return (
     <article class={`dir-shelf-card dir-shelf-${kind}`}>
       {tag && <p class="dir-shelf-tag">{tag}</p>}
       <h3 class="dir-shelf-title"><Link href={href}>{item.title}</Link></h3>
       <p class="dir-shelf-summary">{item.summary}</p>
-      {kind === "prompts" && (item as PromptItem).fill.length > 0 && <p class="dir-shelf-fill">You fill in: {(item as PromptItem).fill.slice(0, 3).join("; ")}{(item as PromptItem).fill.length > 3 ? "; and more" : ""}</p>}
-      {kind === "minds" && (item as MindItem).questions[0] && <p class="dir-shelf-fill">Ask: "{(item as MindItem).questions[0]}"</p>}
+      {kind === "prompts" && fill.length > 0 && <p class="dir-shelf-fill">You fill in: {fill.slice(0, 3).join("; ")}{fill.length > 3 ? "; and more" : ""}</p>}
+      {kind === "minds" && ask && <p class="dir-shelf-fill">Ask: "{ask}"</p>}
       <div class="dir-shelf-foot">
         <UsedBy ids={item.agents} team={props.team} max={2} />
         <Link href={href} class="dir-card-more">{SHELF_WORDS[kind].open}</Link>
@@ -77,25 +82,38 @@ function ShelfCard(props: { kind: ShelfKind; item: ShelfItem; team: Map<string, 
   );
 }
 
-/** One shelf: stage chips, a grid of items (best match first when searching), and "Show more". */
+/** One shelf: stage chips, a grid of items (best match first when searching), and "Show more".
+ *  The page mounts it with key={kind}, so a new tab starts empty instead of drawing the last tab's items. */
 export function ShelfTab(props: { kind: ShelfKind; q: string; team: Map<string, TeamName>; onClear: () => void }) {
   const { kind, q } = props;
   const [stage, setStage] = useState("");
-  const [pages, setPages] = useState<ShelfPage[]>([]);
+  const [loaded, setPages] = useState<ShelfPage[]>([]);
   useEffect(() => { setStage(""); }, [kind, q]);
   const params = (offset: number) => new URLSearchParams({ ...(q ? { q } : {}), ...(stage ? { stage } : {}), offset: String(offset), limit: "24" });
   const first = useLoad<ShelfPage>(() => api<ShelfPage>(`${SHELF_BASE}/${kind}?${params(0)}`), [kind, q, stage]);
   useEffect(() => { setPages(first.data ? [first.data] : []); }, [first.data]);
+  // Only this shelf's pages are drawn: a card laid out for one kind cannot show another kind's item.
+  const pages = loaded.filter(p => p.kind === kind);
+  // What the list is showing now. "Show more" adds its page only if the list still shows the same thing.
+  const showing = `${kind}|${q}|${stage}`;
+  const now = useRef(showing);
+  now.current = showing;
   const [more, setMore] = useState(false);
   const loadMore = async () => {
     const last = pages[pages.length - 1];
-    if (!last) return;
+    // While a new search or stage loads, the list on screen is the old one: wait for the new first page.
+    if (!last || more || first.loading) return;
+    const asked = showing, base = pages[0];
     setMore(true);
-    try { const next = await api<ShelfPage>(`${SHELF_BASE}/${kind}?${params(last.offset + last.limit)}`); setPages(p => [...p, next]); }
+    try {
+      const next = await api<ShelfPage>(`${SHELF_BASE}/${kind}?${params(last.offset + last.limit)}`);
+      if (now.current === asked) setPages(p => p[0] === base ? [...p, next] : p);
+    }
     finally { setMore(false); }
   };
   const words = SHELF_WORDS[kind];
-  if (first.error && !first.data) {
+  // A failed load says so, even with an earlier list in hand: that list answers a different search.
+  if (first.error) {
     const missing = /not have shelves/i.test(first.error);
     return (
       <div class="dir-ecom-note" role="status">
@@ -258,7 +276,7 @@ function ToolBody(props: { item: ToolItem; text: string }) {
         <section aria-labelledby="jobs-title"><h2 id="jobs-title">What a store uses it for</h2><ul>{t.jobs.map(j => <li>{j}</li>)}</ul></section>
         <section aria-labelledby="connect-title"><h2 id="connect-title">How an agent works with it</h2><p>{t.connect}</p><p class="dir-shelf-hint">Agents start with read access and ask before anything is sent, spent or published.</p></section>
       </div>
-      <p class="dir-shelf-credit">By {t.maker}. Checked {t.checked} on {t.sources.map((s, i) => <>{i > 0 && ", "}<a href={s} target="_blank" rel="noopener">{new URL(s).hostname.replace(/^www\./, "")}</a></>)}.</p>
+      <p class="dir-shelf-credit">By {t.maker}. Checked {t.checked} on {t.sources.map((s, i) => <>{i > 0 && ", "}<a href={s} target="_blank" rel="noopener">{siteName(s)}</a></>)}.</p>
       {t.guide && <details class="dir-shelf-more"><summary>Read the full tool guide</summary><SafeMarkdown text={props.text.split("\n---\n").slice(1).join("\n---\n")} class="dir-shelf-doc" /></details>}
     </>
   );

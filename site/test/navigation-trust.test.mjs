@@ -53,7 +53,7 @@ test('old addresses keep working: server redirects and in-app redirects', () => 
   for (const route of ['/from-a-source', '/tools/growth-channel-planner', '/minds', '/people']) assert.ok(app.includes(`"${route}"`) || app.includes(`path === "${route}"`), `${route} still has a route`);
 });
 
-test('imported blocks stay in the sitemap and their pages stay indexable', () => {
+test('imported blocks stay in the sitemap list the build reads, and their indexing follows the same keep rule as own items', () => {
   const thin = catalogue.blocks.filter((b) => b.origin === 'imported' && b.headline !== '');
   assert.ok(thin.length > 0);
   const sitemaps = fs.readdirSync(new URL('../public/', import.meta.url)).filter((f) => /^sitemap-.*\.xml$/.test(f)).map((f) => read(`../public/${f}`)).join('');
@@ -63,6 +63,9 @@ test('imported blocks stay in the sitemap and their pages stay indexable', () =>
   for (const b of thin) { const own = `/${kindPath(b)}/${b.slug}`, listed = sameJob.get(own) ?? own; assert.ok(sitemaps.includes(`<loc>https://useaiblocks.com${listed}</loc>`), `${b.slug} is missing from the sitemap`); if (sameJob.has(own)) assert.ok(!sitemaps.includes(`<loc>https://useaiblocks.com${own}</loc>`), `${own} is listed although its canonical is ${listed}`); }
   assert.ok(!sitemaps.includes('/apps/starter-pack<'));
   const prerender = read('../scripts/prerender.mjs');
-  assert.match(prerender, /const html = render\(url, p\);/);
+  // Whether an item page is indexed is the search keep rule's call (scripts/lib/search-keep.mjs, 17 Nov 2026), the same
+  // for imported and own items: never decided by isThin.
+  assert.match(prerender, /const html = render\(url, p, keepInSearch\(url\) \? \{\} : \{ noindex: "follow" \}\);/);
+  assert.doesNotMatch(prerender, /isThin\([^)]*\)[^;\n]*noindex/);
   assert.doesNotMatch(read('../scripts/build-index.mjs'), /isThin/);
 });

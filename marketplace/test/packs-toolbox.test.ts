@@ -62,7 +62,7 @@ const CATALOGUE = path.join(ROOT, "..", "catalogue-items");
 const read = (...p: string[]) => readFileSync(path.join(...p), "utf8");
 const shared = (p: string) => read(ROOT, "packs", "shared", p);
 const TEMPLATES = Object.fromEntries(["AGENTS.md", "WORK-METHOD.md", "README.md", "LICENSE.md", "train/AGENTS.md", "train/README.md", "train/instructions.md", "train/soul.md", "train/personality.md"].map(p => [p, shared(p)]));
-const TOOLS = { "capture-brand-dna.mjs": "// capture\nexport {};\n", "brand-dna-snippet.js": "// snippet\n", "check-brand-fidelity.mjs": "// check\nexport {};\n", "ai-default-patterns.md": "# AI default patterns\n\n- **web-template-stack**: the average landing page.\n", "compare-candidates.mjs": "// compare\nexport {};\n" };
+const TOOLS = { "media-delivery.mjs": shared("tools/media-delivery.mjs"), "capture-brand-dna.mjs": "// capture\nexport {};\n", "brand-dna-snippet.js": "// snippet\n", "check-brand-fidelity.mjs": "// check\nexport {};\n", "ai-default-patterns.md": "# AI default patterns\n\n- **web-template-stack**: the average landing page.\n", "compare-candidates.mjs": "// compare\nexport {};\n" };
 
 const fixture = (role: string): ToolboxJson => JSON.parse(read(ROOT, "test", "fixtures", "toolbox", `${role}.toolbox.json`));
 
@@ -299,7 +299,7 @@ test("files.json carries what a profile needs: tasks, item counts and names by t
   assert.equal(t.tasks.length, 8);
   assert.deepEqual(t.tasks[0], { id: "social-carousel", task: "Make a carousel or a set of social posts", kind: "ad_creative", mine: true, items: 7 });
   assert.ok(t.tasks.some(x => !x.mine));
-  assert.deepEqual(t.counts, { kit: 11, skill: 15, workflow: 1, prompt: 1, agent: 1, mind: 3, tool: 3, total: 35 });
+  assert.deepEqual(t.counts, { kit: 12, skill: 15, workflow: 1, prompt: 1, agent: 1, mind: 3, tool: 3, total: 36 });
   assert.deepEqual(t.items.mind.map(m => m.name), ["David Carson", "Massimo Vignelli", "Paula Scher"]);
   assert.deepEqual(t.items.tool[0], { slug: "adobe-firefly", name: "Adobe Firefly", path: "toolbox/tool/adobe-firefly.md", url: "https://useaiblocks.com/ai-tools/adobe-firefly" });
   assert.ok(t.items.kit.some(k => k.name === "Social graphics spec" && k.path === "skills/social-graphics-spec/SKILL.md" && k.kind === "skill"));
@@ -452,10 +452,10 @@ test("intake fits the role: only brand-facing work is asked about brands, and on
   assert.doesNotMatch(agents, /brands they admire|the website/);
   // The brand-capture tools: in the designer's pack, not in the bookkeeper's. The list of AI defaults to avoid
   // covers copy, audits and plans too, so every pack keeps it.
-  assert.deepEqual(riley.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/capture-brand-dna.mjs", "tools/brand-dna-snippet.js", "tools/check-brand-fidelity.mjs", "tools/ai-default-patterns.md", "tools/compare-candidates.mjs"]);
-  assert.deepEqual(russell.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/ai-default-patterns.md"]);
+  assert.deepEqual(riley.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/media-delivery.mjs", "tools/capture-brand-dna.mjs", "tools/brand-dna-snippet.js", "tools/check-brand-fidelity.mjs", "tools/ai-default-patterns.md", "tools/compare-candidates.mjs"]);
+  assert.deepEqual(russell.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/media-delivery.mjs", "tools/ai-default-patterns.md"]);
   assert.doesNotMatch(file(russell, "context/README.md")!, /brand-dna|capture-brand|check-brand-fidelity/);
-  assert.match(file(russell, "context/README.md")!, /## Tools\n\n- `tools\/ai-default-patterns\.md`/);
+  assert.match(file(russell, "context/README.md")!, /## Tools\n[\s\S]*- `tools\/ai-default-patterns\.md`/);
   assert.match(file(riley, "context/README.md")!, /## Tools\n[\s\S]*- `tools\/capture-brand-dna\.mjs`/);
   assert.deepEqual(lintPack(russell), []);
   // A job skill is one shared file for every pack that links the job. Where a pack lacks a brand tool the skill

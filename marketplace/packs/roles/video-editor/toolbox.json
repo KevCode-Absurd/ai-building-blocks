@@ -158,6 +158,7 @@
       "task": "Cut and caption a video ad",
       "kind": "ad_creative",
       "items": [
+        { "ref": "kit:workflows/verified-media-delivery", "use": "check", "when": "When exporting finished media, inspect the actual files and package reproducible editable sources" },
         { "ref": "library:video-ad-edit-planner", "type": "skill", "use": "build", "when": "When you have the clips and script and need a timed cut list, caption windows and exports" },
         { "ref": "library:cut-caption-and-check-a-video-ad-before-launch", "type": "workflow", "use": "build", "when": "When the ad needs the cut, brand-font captions and a launch check in one run" },
         { "ref": "library:spoken-video-ad-opening-writer", "type": "skill", "use": "explore", "when": "When the opening is weak, to get three spoken openings with a storyboard to compare" },

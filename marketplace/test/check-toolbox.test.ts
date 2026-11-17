@@ -162,5 +162,5 @@ test("every toolbox.json in the repo passes against the real kits and library", 
   const result = checker.checkAll();
   assert.equal(result.errors, 0, result.lines.filter((line: string) => /FAIL|error:/.test(line)).join("\n"));
   assert.ok(result.checked >= 1, "the graphic-designer toolbox is checked in");
-  assert.match(result.lines.join("\n"), /^(ok {2}|warn) graphic-designer: \d+ tasks, \d+ library items \(\d minds\), 11\/11 kit items used/m);
+  assert.match(result.lines.join("\n"), /^(ok {2}|warn) graphic-designer: \d+ tasks, \d+ library items \(\d minds\), 12\/12 kit items used/m);
 });

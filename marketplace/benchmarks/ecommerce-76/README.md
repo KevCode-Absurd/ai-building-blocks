@@ -52,6 +52,21 @@ This is one actual task per agent plus documented reruns. It is **not** the earl
 proposed three-arm/three-repeat study, a blinded human panel, a designer comparison,
 a production integration test, or evidence of increased sales. Report those limits.
 
+Before a release, freeze `release-candidate.json` with the source revision, source
+snapshot SHA-256, suite SHA-256, and exact per-agent pack and manifest SHA-256 maps.
+Record actual dispatches and completions, then run `record_results.py` before
+reviewing outputs. Each independent review must bind its generator task, reviewer
+task, observation time and `release_gate.digest(output_files)` to the artifacts
+actually inspected. Run `python release_gate.py --root <run-directory>` after all
+76 reviews. A missing completion, changed input/output, mismatched candidate,
+missing independent review or non-PASS verdict blocks this gate. The gate checks
+integrity and completeness; it does not judge quality or authorize deployment.
+
+Keep real merchant sources and supplemental integration trials outside the public
+repository. A trial with newly supplied photos or account data is a separate trial,
+not a retroactive pass of a fixture that lacked those inputs. Never mix synthetic
+performance figures into the real merchant's brand context or reports.
+
 The optional `run_subscription.py` requires a compatible Codex CLI and verifies a
 ChatGPT login with forced ChatGPT authentication and removed API-key environment
 variables. On this Windows host the login smoke test passed but local tool launch

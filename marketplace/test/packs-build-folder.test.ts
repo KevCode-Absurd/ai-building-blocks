@@ -43,6 +43,10 @@ test("an agent pack carries its build folder under build/, with BUILD.md its own
   assert.match(numericOutput, /clean/);
   assert.ok(build["files/tools/verify-patch.mjs"]);
   assert.ok(build["files/tools/automation-review.mjs"]);
+  for (const name of ["performance-review.mjs", "integration-readback.mjs", "integration-readback-guide.md", "media-delivery.mjs"]) {
+    const source = readFileSync(path.join(ROOT, "packs/shared/tools", name), "utf8").replace(/\r\n/g, "\n");
+    assert.equal(build[`files/tools/${name}`], source, `${name} build copy matches actual tool source`);
+  }
   assert.ok(build["files/AUTOMATION-PRINCIPLES.md"]);
   const pack = await buildPack({ persona, role: null, kit: null, jobTypes: FIXTURE_JOB_TYPES, templates: {}, build, options: { ...OPTIONS, kind: "agent" } });
   const carried = pack.files.filter(f => f.path.startsWith("build/"));

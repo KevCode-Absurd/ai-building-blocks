@@ -1,0 +1,41 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import crypto from 'node:crypto';
+// @ts-expect-error Portable tool is exercised directly at runtime.
+import {checkMediaDelivery,inspectMedia} from '../packs/shared/tools/media-delivery.mjs';
+const hash=(b:string|Buffer)=>crypto.createHash('sha256').update(b).digest('hex');
+function fixture(t:any){
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'media-delivery-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const file=(name:string,bytes:string)=>{fs.writeFileSync(path.join(root,name),bytes);return {path:name,sha256:hash(bytes)};};
+  const source={...file('source.png','source fixture'),id:'photo',kind:'photograph',provenance:'Synthetic unit-test fixture, not real photography',rightsReference:'Unit test author'};
+  const output={...file('final.png','output fixture'),kind:'image',placement:'test square',sourceIds:['photo'],width:100,height:100,review:{sha256:hash('output fixture'),reviewer:'Test declaration, not real review',notes:'Unit-test only',phoneSize:'reviewed',productFidelity:'reviewed',textAndCrop:'reviewed'}};
+  const m:any={schema:'media-delivery/1',requiredSourceKinds:['photograph'],sources:[source],outputs:[output],editableFiles:[file('render.mjs','// fixture')]};
+  const run=(probe:any=()=>({status:'PASS',mediaKind:'image',width:100,height:100,audio:false,durationSeconds:null}),sourceProbe:any=()=>({status:'PASS',mediaKind:'image',width:100,height:100,audio:false,durationSeconds:null}))=>{fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(m));return checkMediaDelivery(path.join(root,'manifest.json'),{probe:(full:string)=>path.basename(full)==='source.png'?sourceProbe(full):probe(full)});};
+  return {m,root,run};
+}
+test('integrity success explicitly does not verify declared visual review or grant publishing authority',t=>{const {run}=fixture(t);const r=run();assert.equal(r.status,'INTEGRITY_PASS');assert.equal(r.authorityGranted,false);assert.match(r.limitations,/Does not authenticate provenance or rights, verify visual quality/);});
+test('schematic artwork cannot satisfy a required photograph',t=>{const {m,run}=fixture(t);m.sources[0].kind='illustration';assert.ok(run().findings.some((x:any)=>x.code==='MISSING_REQUIRED_SOURCE'));});
+test('source hash mismatch cannot be bypassed with an available flag',t=>{const {m,run}=fixture(t);m.sources[0].sha256='0'.repeat(64);m.sources[0].available=true;const r=run();assert.equal(r.status,'BLOCKED');assert.ok(r.findings.some((x:any)=>x.code==='MISSING_REQUIRED_SOURCE'));});
+test('missing physical source stays blocked',t=>{const {m,run}=fixture(t);m.sources[0].path='missing.png';assert.equal(run().status,'BLOCKED');});
+test('output hash mutation is detected',t=>{const {root,run}=fixture(t);fs.writeFileSync(path.join(root,'final.png'),'changed');assert.ok(run().findings.some((x:any)=>x.code==='HASH_MISMATCH'));});
+test('current review must bind actual export bytes',t=>{const {m,run}=fixture(t);m.outputs[0].review.sha256='0'.repeat(64);assert.equal(run().status,'REVIEW_REQUIRED');});
+test('phone-size review cannot be omitted',t=>{const {m,run}=fixture(t);delete m.outputs[0].review.phoneSize;assert.equal(run().status,'REVIEW_REQUIRED');});
+test('measured dimensions override declarations',t=>{const {run}=fixture(t);assert.ok(run(()=>({status:'PASS',mediaKind:'image',width:101,height:100})).findings.some((x:any)=>x.code==='DIMENSIONS_MISMATCH'));});
+test('absent inspector is explicit, not successful media verification',t=>{const {run}=fixture(t);assert.equal(run(()=>({status:'NOT_RUN',reason:'unavailable'})).status,'REVIEW_REQUIRED');});
+test('decode failure blocks delivery',t=>{const {run}=fixture(t);assert.equal(run(()=>({status:'FAIL',reason:'invalid'})).status,'BLOCKED');});
+test('renderer outside handoff directory is not accepted',t=>{const {m,run}=fixture(t);m.editableFiles[0].path='../outside.mjs';assert.equal(run().status,'BLOCKED');});
+test('empty editable project is detected',t=>{const {m,run}=fixture(t);m.editableFiles=[];assert.ok(run().findings.some((x:any)=>x.code==='MISSING_EDITABLE_SOURCE'));});
+test('output cannot cite nonexistent source identifiers',t=>{const {m,run}=fixture(t);m.outputs[0].sourceIds=['unknown'];assert.throws(()=>run(),/sourceIds/);});
+test('duplicate sources fail schema validation',t=>{const {m,run}=fixture(t);m.sources.push({...m.sources[0]});assert.throws(()=>run(),/unique id/);});
+test('video inspection checks duration and audio independently of review assertions',t=>{const {m,run}=fixture(t);Object.assign(m.outputs[0],{kind:'video',durationSeconds:12,audioExpected:true});Object.assign(m.outputs[0].review,{captions:'reviewed',fullPlayback:'reviewed',sound:'reviewed'});const r=run(()=>({status:'PASS',mediaKind:'video',width:100,height:100,durationSeconds:10,audio:false}));assert.ok(r.findings.some((x:any)=>x.code==='DURATION_MISMATCH'));assert.ok(r.findings.some((x:any)=>x.code==='AUDIO_STREAM_MISMATCH'));});
+test('video contact sheet is not a full-playback review',t=>{const {m,run}=fixture(t);Object.assign(m.outputs[0],{kind:'video',durationSeconds:12,audioExpected:false});Object.assign(m.outputs[0].review,{captions:'reviewed',sound:'reviewed'});assert.equal(run(()=>({status:'PASS',mediaKind:'video',width:100,height:100,durationSeconds:12,audio:false})).status,'REVIEW_REQUIRED');});
+test('empty outputs never pass',t=>{const {m,run}=fixture(t);m.outputs=[];assert.throws(()=>run(),/Invalid/);});
+test('real inspector rejects invalid media bytes or honestly reports unavailable dependency',t=>{const {root}=fixture(t);const r=inspectMedia(path.join(root,'final.png'));assert.ok(['FAIL','NOT_RUN'].includes(r.status));});
+test('source bytes must be inspected, not just labelled as photography',t=>{const {run}=fixture(t);const r=run(undefined,()=>({status:'FAIL',reason:'Not media'}));assert.equal(r.status,'BLOCKED');assert.ok(r.findings.some((x:any)=>x.code==='MISSING_REQUIRED_SOURCE'));});
+test('still image bytes cannot satisfy a footage requirement',t=>{const {m,run}=fixture(t);m.sources[0].kind='footage';m.requiredSourceKinds=['footage'];const r=run();assert.ok(r.findings.some((x:any)=>x.code==='SOURCE_KIND_MISMATCH'));assert.equal(r.status,'BLOCKED');});
+test('a timed video cannot masquerade as a final still image',t=>{const {run}=fixture(t);const r=run(()=>({status:'PASS',mediaKind:'video',width:100,height:100,audio:false,durationSeconds:1}));assert.ok(r.findings.some((x:any)=>x.code==='OUTPUT_KIND_MISMATCH'));assert.equal(r.status,'BLOCKED');});
+test('actual PNG format is recognized without pretending to authenticate photography',t=>{const {root}=fixture(t);const file=path.join(root,'pixel.png');fs.writeFileSync(file,Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP4//8/AAX+Av4N70a4AAAAAElFTkSuQmCC','base64'));const r=inspectMedia(file);if(r.status==='NOT_RUN'){t.skip('ffprobe unavailable');return;}assert.equal(r.status,'PASS');assert.equal(r.mediaKind,'image');assert.equal(r.width,1);assert.equal(r.height,1);});
+test('playlist containers are rejected rather than following embedded file paths',t=>{const {root}=fixture(t);const file=path.join(root,'playlist.m3u8');fs.writeFileSync(file,'#EXTM3U\n#EXT-X-TARGETDURATION:1\n#EXTINF:1,\nsource.png\n#EXT-X-ENDLIST\n');const r=inspectMedia(file);assert.ok(['FAIL','NOT_RUN'].includes(r.status));});

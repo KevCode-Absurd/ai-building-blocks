@@ -40,6 +40,14 @@ Access levels for this skill: finding and ranking fixes needs only level 1 (read
 8. **Build and release.** Level 2: build approved fixes on an unpublished duplicate and send a preview link. Level 3: after the owner's yes to the action list, publish with a backup of the live theme kept, and remove approved apps one at a time, checking the store after each. Log every action; stop on any error or warning.
 9. **Plan the check-back.** After release, compare field data over the following weeks, allowing for the dashboard's delay and day-to-day noise.
 
+## Comparing a candidate with its baseline
+
+Use this when claiming a measured speed improvement, not for a quick read-only triage. Identify the actual storefront stack first: a headless frontend may need application-source changes even when commerce uses Shopify. Do not invent theme files or apply Liquid recommendations to a Next.js page. First reconcile the report with the actual URL, asset bytes and source revision. A 2.4 MB hero in a report is not the same test target as a 527-byte local illustration. Identify the observed LCP element; image readiness is only a secondary metric.
+
+Declare the primary metric, minimum useful gain and secondary regression limits before running. Measure at least five complete pairs with identical browser/version, viewport, CPU, network, cache and interaction settings. Alternate order. Preserve raw runs and failures; do not select the fastest run or drop outliers to obtain a pass. Record source revisions and check that visible content, variants, cart and tracking still work.
+
+`node tools/performance-review.mjs template` supplies an observation schema. Fill it from actual raw measurements, then run `node tools/performance-review.mjs observations.json`. It checks comparability, paired medians, consistency, guardrails and recorded functional checks. It does not collect or authenticate measurements. IMPROVED_LAB remains a descriptive lab result, never production approval or statistical significance. REGRESSION means revise the candidate or retain the baseline. INCONCLUSIVE means report the uncertainty and the next discriminating check. Keep source-scope limitations in the main answer; never promise a live gain from a fixture.
+
 ## Checks
 
 - Every fix is tied to evidence (a metric on a page type, a script, a file).

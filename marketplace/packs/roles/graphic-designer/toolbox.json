@@ -280,6 +280,7 @@
       "task": "Hand off build notes so someone else can make the file",
       "kind": "ops_doc",
       "items": [
+        { "ref": "kit:workflows/verified-media-delivery", "use": "check", "when": "When exporting finished media, inspect the actual files and package reproducible editable sources" },
         { "ref": "kit:prompts/handoff-build-notes", "use": "build", "when": "When the spec is approved and the owner or another designer will build the final file" },
         { "ref": "library:canva", "type": "tool", "use": "brief", "when": "When you must check what the client's design tool can and cannot do before writing steps" }
       ]

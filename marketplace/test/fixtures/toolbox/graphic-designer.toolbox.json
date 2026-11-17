@@ -91,6 +91,7 @@
       "task": "Make or edit images with an AI tool",
       "kind": "ad_creative",
       "items": [
+        { "ref": "kit:workflows/verified-media-delivery", "use": "check", "when": "When exporting finished media, inspect the actual files and package reproducible editable sources" },
         { "ref": "library:canva", "type": "tool", "use": "build", "when": "When the client works in Canva and needs editable layouts" },
         { "ref": "library:adobe-firefly", "type": "tool", "use": "build", "when": "When a photo the client owns must be extended or fixed" },
         { "ref": "library:midjourney", "type": "tool", "use": "explore", "when": "When you want several visual worlds to choose between" },

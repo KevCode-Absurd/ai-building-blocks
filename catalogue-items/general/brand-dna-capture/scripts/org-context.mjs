@@ -986,7 +986,8 @@ function recordsFromCapture(dna) {
     for (const [group, kind] of [['offers', 'offer'], ['shipping', 'shipping'], ['prices', 'price'], ['guarantees', 'guarantee'], ['reviews', 'review']]) {
       for (const v of f[group] || []) { const text = typeof v === 'string' ? v : v?.text; if (text && !byLine.has(text)) byLine.set(text, kind); }
     }
-    for (const [text, kind] of byLine) push(record(kind, `${kind}:${page}:${slug(text)}`, text, p.url, at));
+    for (const [text, kind] of byLine) push(record(kind, `${kind}:${page}:${slug(text)}`, text, p.url, at,
+      f.capture?.truncated ? { status: 'unconfirmed', note: 'Source capture reached its limit; full policy/offer context must be reviewed before use.', capture_truncated: true } : {}));
   }
   return { offers, facts };
 }

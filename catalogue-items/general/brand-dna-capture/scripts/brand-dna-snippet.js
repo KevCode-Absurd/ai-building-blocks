@@ -476,17 +476,24 @@
 
   // ---------- live facts ----------
   var capturedAt = new Date().toISOString();
-  var lines = uniq(String(body.innerText || '').split(/\n+/).map(function (s) { return clean(s, 200); }).filter(function (s) { return s.length >= 3; }));
+  // Keep qualifications in full. A display excerpt must never become a policy fact.
+  var lines = uniq(String(body.innerText || '').split(/\n+/).map(function (s) { return clean(s); }).filter(function (s) { return s.length >= 3; }));
   var FACTS = {
     prices: new RegExp(priceRe.source),
     offers: /\b\d{1,2}\s?% off\b|\bsale\b|\bdiscount|\bcoupon\b|\buse code\b|\bcode\s+[A-Z0-9]{4,}\b|\bbuy \d+ get\b|\bfree gift\b|\bflat \d+|\bextra \d+%|\bbogo\b|\boffer\b|\bdeal\b/i,
     shipping: /free (?:shipping|delivery)|\bships?\b|\bshipping\b|\bdelivery\b|\bdispatch|\bdelivered\b|\bcourier\b|\bpickup\b/i,
-    guarantees: /guarantee|warrant|\breturns?\b|\bexchange\b|\brefund|money[- ]back|lifetime|hallmark|certified|\bsecure (?:checkout|payment)/i,
+    guarantees: /guarantee|warrant|\breturns?\b|\bexchang(?:e[sd]?|ing)\b|\brefund|money[- ]back|lifetime|hallmark|certified|\bsecure (?:checkout|payment)|\bexception|\bexclud|\bsubject to|\bapplicab|\beligib/i,
     reviews: /\b\d[\d,.]*\+?\s*(?:k\s*)?(?:[A-Za-z]+\s+)?(?:reviews?|ratings?|customers|orders|happy|sold)\b|\b\d\.\d\s*(?:\/\s*5|stars?|out of 5|★)|★{3,}|\brated\b/i
   };
-  var facts = { captured_at: capturedAt, url: location.href, prices: [], offers: [], shipping: [], guarantees: [], reviews: [], structured: [] };
+  var facts = { captured_at: capturedAt, url: location.href, prices: [], offers: [], shipping: [], guarantees: [], reviews: [], structured: [], capture: { truncated: false, omitted: 0, max_line_chars: 16384, max_per_category: 128, max_total_chars: 262144 } };
+  var factChars = 0;
   var quoted = /^["“'‘]/; // customer quotes are voice, not the business's own offer or policy
-  lines.forEach(function (l) { Object.keys(FACTS).forEach(function (k) { if (facts[k].length < 16 && FACTS[k].test(l) && l.length <= 200 && !(quoted.test(l) && k !== 'prices')) facts[k].push(l); }); });
+  lines.forEach(function (l) { Object.keys(FACTS).forEach(function (k) {
+    if (!FACTS[k].test(l) || (quoted.test(l) && k !== 'prices')) return;
+    if (l.length > facts.capture.max_line_chars || facts[k].length >= facts.capture.max_per_category || factChars + l.length > facts.capture.max_total_chars) { facts.capture.truncated = true; facts.capture.omitted++; return; }
+    facts[k].push(l); factChars += l.length;
+  }); });
+  if (facts.capture.truncated) notes.push('Fact capture limit reached: ' + facts.capture.omitted + ' matching records omitted, never clipped. Read the complete source before using these policy/offer observations.');
   Array.prototype.forEach.call(doc.querySelectorAll('del,s,strike,[class*="compare" i],[class*="was-price" i]'), function (el) { var t = clean(el.innerText, 40); if (priceRe.test(t) && facts.prices.length < 20) facts.prices.push('was ' + t); });
   Array.prototype.forEach.call(doc.querySelectorAll('script[type="application/ld+json"]'), function (s) {
     try {

@@ -228,6 +228,7 @@
       "task": "Prepare final files: names, alt text, size and speed",
       "kind": "ops_doc",
       "items": [
+        { "ref": "kit:workflows/verified-media-delivery", "use": "check", "when": "When exporting finished media, inspect the actual files and package reproducible editable sources" },
         { "ref": "kit:skills/channel-image-spec-and-ai-check", "use": "brief", "when": "When you need the file names and alt text pattern each channel expects" },
         { "ref": "library:product-image-alt-text-writer", "type": "skill", "use": "build", "when": "When a Shopify store's images have no alt text and it should be set on each" },
         { "ref": "library:image-compressor", "type": "skill", "use": "build", "when": "When files are too heavy and must load faster without looking worse" },

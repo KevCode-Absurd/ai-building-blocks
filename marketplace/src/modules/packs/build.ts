@@ -133,6 +133,10 @@ The \`build\` folder sets me up to do the work, not only advise: my processes an
 
 /** The tools every agent pack carries (zip and files.json), in this order, and what each is for. */
 export const TOOL_FILES: { name: string; purpose: string }[] = [
+  { name: "performance-review.mjs", purpose: "Checks comparable measured performance runs and guardrail regressions. Local lab evidence does not establish field performance or business lift." },
+  { name: "integration-readback.mjs", purpose: "Compares expected external settings with captured provider readback and explicit execution evidence. Diagnostic only; never grants permission or makes external changes." },
+  { name: "integration-readback-guide.md", purpose: "How to capture and compare exact scoped provider settings without treating local mocks as live verification." },
+  { name: "media-delivery.mjs", purpose: "Checks contained media files, hashes, measured dimensions and editable-source packaging. Requires ffprobe for metadata; review declarations do not certify visual quality, rights or permission to publish." },
   { name: "automation-review.mjs", purpose: "Reviews a declared automation plan for lost outcome visibility, missing context, exact action authority, critical-skill practice and human relationships. Offline planning diagnostic; never grants access or performs actions." },
   { name: "agent-contract.mjs", purpose: "Validates the portable agent declaration, host model/capabilities, scoped references and host-reported run receipts. It does not execute agents or grant access (plain Node, no network)." },
   { name: "agent-contract-guide.md", purpose: "How to bind AGENT-CONTRACT.json to the current host and record scoped success or failure; hosted execution remains unimplemented." },

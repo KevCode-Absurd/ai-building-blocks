@@ -54,6 +54,36 @@ function build(over: Partial<PackInput> & { kind?: "agent" | "train" } = {}) {
   return buildPack({ persona: PERSONA, role: null, kit: null, jobTypes: FIXTURE_JOB_TYPES, templates: {}, options: { ...OPTIONS, kind }, ...rest });
 }
 
+test("LF and CRLF role skills produce identical nested bundles and deduplication without changing fenced examples", async () => {
+  const method = "Check the merchant's source, account, reporting window and currency before comparing results. Preserve conflicting evidence and qualifications instead of treating missing observations as verified facts.";
+  const fenced = "```markdown\n# Literal example heading\n\n" + method + "\n\n## Another literal heading\n```";
+  const skill = (name: string) => `---\nname: ${name}\ndescription: |\n  A reproducible merchant audit fixture.\n  Keep the source and its qualifications.\n---\n\n# ${name} method\n\n## Evidence check\n\n${method}\n\n${fenced}\n\n## Next action\n\nUse the checked evidence.\n`;
+  const kit: RoleKit = { ...KIT, files: {
+    "knowledge.md": KIT.files["knowledge.md"], "sources.json": KIT.files["sources.json"],
+    "skills/alpha-audit/SKILL.md": skill("alpha-audit"),
+    "skills/beta-audit/SKILL.md": skill("beta-audit"),
+  } };
+  const crlf: RoleKit = { ...kit, files: Object.fromEntries(Object.entries(kit.files).map(([p, text]) => [p, text.replace(/\n/g, "\r\n")])) };
+  for (const kind of ["agent", "train"] as const) {
+    const lfPack = await build({ kit, jobTypes: [], kind }), crlfPack = await build({ kit: crlf, jobTypes: [], kind });
+    const lfBundle = lfPack.files.find(f => f.path === "skills.md")!, crlfBundle = crlfPack.files.find(f => f.path === "skills.md")!;
+    assert.equal(crlfBundle.content, lfBundle.content, `${kind}: normalized contents`);
+    assert.equal(crlfBundle.sha256, lfBundle.sha256, `${kind}: exact emitted bundle hash`);
+    assert.deepEqual(crlfPack.files.map(f => [f.path, f.sha256]), lfPack.files.map(f => [f.path, f.sha256]), `${kind}: same emitted file hashes`);
+    const bundle = lfBundle.content;
+    assert.match(bundle, /^## alpha-audit\n/m);
+    assert.match(bundle, /^### alpha-audit method\n/m);
+    assert.match(bundle, /^#### Evidence check\n/m);
+    assert.match(bundle, /^#### Next action\n/m);
+    assert.doesNotMatch(bundle, /^## Evidence check\n/m);
+    assert.match(bundle, /\(The same as in alpha-audit, above\.\)/);
+    assert.equal(bundle.split(method).length - 1, 3, "one shared prose paragraph plus both literal fenced examples");
+    assert.equal(bundle.split(fenced).length - 1, 2, "code headings and repeated code content remain literal");
+    assert.doesNotMatch(bundle, /\r/);
+    if (kind === "agent") assert.equal(oneFileText(crlfPack), oneFileText(lfPack), "the chat export is identical too");
+  }
+});
+
 async function sha(text: string) {
   const d = await crypto.subtle.digest("SHA-256", enc.encode(text));
   return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2, "0")).join("");

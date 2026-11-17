@@ -155,6 +155,12 @@ Review of [NotFair](https://github.com/nowork-studio/notfair-plugin), pinned at 
 
 The new roles do not replace the original 76-agent historical evaluation denominator. The next paired evaluation includes all current roles, with the same GPT Sol generator model, common merchant inputs and host capabilities in both the specialist and plain-Sol arms. Sol and Terra independently judge actual artifacts. New-role cases, Gehna-backed work and synthetic/public work are reported separately. Passing implementation tests is a prerequisite for those trials, not an output-quality result.
 
+### Optional ontology experiment
+
+Review of [Omnigraph](https://github.com/ModernRelay/omnigraph), source commit `6fc2f823621ee37784066a6fae51b2f8e8ad131e`, adds query-first identity and relationship rules to the shared memory contract. Product/variant/media identity, scoped provider keys, sourced assertions, owner decisions and time-qualified policies remain distinct. Session reflection proposes a small evidence-backed change with golden queries and negative controls; it cannot automatically rewrite the schema or promote a lesson. An agent-authored valid schema is not evidence of 80% semantic correctness.
+
+The implementation does not install Omnigraph or replace canonical memory. A private synthetic, no-provider graph experiment is separate from the fixed agent-output comparison. Any future adapter must derive from pinned source and owner-resolution state, pass cross-scope and revocation tests, and demonstrate better required-evidence retrieval on matched tasks. Omnigraph's native data branches and main-only schema application are different review paths; a Git PR and tested migration would be our schema deployment process. Hosted tenant isolation, graph lifecycle cost and retrieval advantage remain to be verified before adoption.
+
 The cached Stanford course manifest covers all 14 slide PDFs linked on the course page at the audit date, 1,284 pages. The implementation applies selected principles; it does not reproduce or claim validation by the course.
 
 - [CS329Z lecture 3](https://web.stanford.edu/class/cs329z/slides/lecture03.pdf), pages 11-13, 24, 32 and 50: just-in-time evidence, chunk boundaries, multi-level retrieval and reranking. Our local implementation uses lexical retrieval and bounded source expansion, not an unimplemented dense-vector service.

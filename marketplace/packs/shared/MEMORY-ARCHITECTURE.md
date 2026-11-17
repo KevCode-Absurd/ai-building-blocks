@@ -48,6 +48,20 @@ A hash confirms an unchanged local file, not a genuine platform response. `revie
 
 Design reference: [NotFair intervention memory and safe executor](https://github.com/nowork-studio/notfair-plugin/tree/deed0436d0c68cbc20a78523fffc67edd12aa25c/google-ads/manage/references), MIT, Copyright (c) 2026 Toprank Contributors. The adapted tool includes the full license notice. No NotFair service or credentials are required.
 
+## Optional typed evidence links for commerce
+
+Use explicit relationships when a job needs a cross-source join, such as finding which approved claim and policy apply to the variant shown in an ad. Start with the merchant's actual questions and a small identity dictionary; do not turn every source chunk into an entity or require a graph for ordinary retrieval.
+
+- Distinguish Product, purchasable Variant, MediaAsset, sourced Assertion and OwnerDecision. A photo without a verified SKU remains an unresolved asset; neither its filename nor visual similarity establishes product identity, material or approval.
+- Use stable, scoped provider IDs: workspace/store/product or variant; workspace/platform/account/campaign. Preserve source IDs and reviewed aliases. Names and embedding similarity are candidate matches, not authority to merge. Repeated extraction must not create extra evidence for the same source span.
+- Keep each relationship's source snapshot/hash, exact locator, scope, qualification and relevant validity period. An offer or returns policy is versioned and market-specific. A platform purchase event is not a store order, refund or incremental sale. Keep money units, attribution and observation windows attached to the evidence.
+- Any graph or relation index is a derived projection of canonical source files, owner resolutions and job receipts. Source corrections and revocations invalidate it. Structural type checks do not prove that a relationship is true or authorized; check cross-client links and source authority at the application boundary before admitting data.
+- An agent may propose a vocabulary or relationship change from a past session only with the failed question, ambiguous example, original evidence and current versions. Test the smallest change against labeled entity/relationship examples, required-source queries, false merges, revoked facts and cross-scope negatives. Preserve rejected proposals. Schema validity and agreement between two agents are not semantic accuracy.
+
+Review schema changes with a migration plan, affected queries and an actual disposable migration test. Keep data-change review distinct from schema deployment, preserve active job branches and do not promote a successful self-summary into a new operating rule. A graph rollback does not reverse an external merchant action.
+
+Design reference: [Omnigraph ontology design](https://github.com/ModernRelay/omnigraph/blob/6fc2f823621ee37784066a6fae51b2f8e8ad131e/skills/omnigraph/references/schema-design.md). These are portable evidence rules; no graph service, embedding provider or automatic ontology generation is installed by this pack.
+
 ## Freshness and conflict handling
 
 Observation time is not effective time. A transcript downloaded today can describe an old platform feature. An old ad can show tone without proving that its offer is still valid. Record source identity/version, capture date, effective/expiry dates when known, market, account, units and approval status.

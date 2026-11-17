@@ -991,9 +991,12 @@ function skillsBundle(skills: { path: string; content: string }[]): string {
   // replaced by a pointer to it, so a chat app never reads the same text twice. Each SKILL.md keeps it in full.
   const seen = new Map<string, string>();
   for (const s of skills) {
-    const fm = frontmatter(s.content);
+    // Normalize before line-sensitive heading/fence and paragraph processing;
+    // normalizing only the finished pack is too late for CRLF role-kit inputs.
+    const content = normalizeText(s.content);
+    const fm = frontmatter(content);
     const name = fm?.name || s.path.split("/")[1];
-    const body = s.content.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "").trim();
+    const body = content.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "").trim();
     out.push("", `## ${name}`, "");
     if (fm?.description) out.push(quote(fm.description), "");
     let fence = false;

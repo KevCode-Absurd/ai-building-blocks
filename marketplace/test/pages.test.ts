@@ -354,3 +354,12 @@ test("shelf pages that repeat a library page are not indexed: every mind, and to
   assert.equal(indexedShelfItem("prompts", base as never), true);
   assert.equal(indexedShelfItem("skills", base as never), true);
 });
+
+test("an agent's raw files are downloads, not pages: soul.md says noindex", async () => {
+  const t = await testEnv(PROD);
+  const soul = await t.api("GET", `/agents/${agent.id}/soul.md`);
+  assert.equal(soul.status, 200);
+  assert.equal(soul.res.headers.get("x-robots-tag"), "noindex");
+  const headers = readFileSync(new URL("../public/_headers", import.meta.url), "utf8");
+  assert.match(headers, /^\/packs\/\*\n {2}X-Robots-Tag: noindex$/m, "the packs the assets serve say noindex too");
+});

@@ -19,7 +19,15 @@ export async function handleFetch(req: Request, env: Env, exec: ExecutionContext
   const url = new URL(req.url);
   if (API_PREFIXES.some(p => url.pathname === p.replace(/\/$/, "") || url.pathname.startsWith(p)) || WORKER_FILES.test(url.pathname)) {
     const res = await dispatch(compiled, req, env, exec);
-    return res ?? errorResponse(404, "not_found", "There is nothing at this address.");
+    if (!res) return errorResponse(404, "not_found", "There is nothing at this address.");
+    // A pack's raw files (soul.md, a skill's .txt, the capture tools) are downloads for an AI, not pages: the agent's
+    // own page is what search engines should show. /packs/* gets the same header from public/_headers.
+    if (WORKER_FILES.test(url.pathname) && !res.headers.has("x-robots-tag")) {
+      const out = new Response(res.body, res);
+      out.headers.set("x-robots-tag", "noindex");
+      return out;
+    }
+    return res;
   }
   if (req.method === "GET" || req.method === "HEAD") {
     if (url.pathname === "/robots.txt") return robotsTxt(env);

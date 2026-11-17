@@ -161,7 +161,7 @@ export function EcommercePage() {
         <div id="ecom-panel" role="tabpanel" aria-labelledby={`ecom-tab-${tab}`}>
           {tab === "agents"
             ? <TeamSection state={team} search={search} found={agentHits} onClear={() => setQ("")} />
-            : <ShelfTab kind={tab} q={search} team={names} onClear={() => setQ("")} />}
+            : <ShelfTab key={tab} kind={tab} q={search} team={names} onClear={() => setQ("")} />}
         </div>
       </section>
 

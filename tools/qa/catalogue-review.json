@@ -787,8 +787,8 @@
     },
     "catalogue-items/general/brand-dna-capture/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude)",
-      "reviewed_on": "2026-11-15",
-      "method_sha256": "d529512e603e542e19fe1a2f2cd70cddc42dd4238656a529b5ecc5f6fecc6a0f",
+      "reviewed_on": "2026-11-17",
+      "method_sha256": "2366b445fafe524529d309f8c43071965db94524a9c1a7b86af911277b0c9f37",
       "inputs": [
         {
           "type": "web_page",
@@ -799,7 +799,7 @@
         {
           "type": "web_page",
           "quote": "The site's address, plus 1 to 3 more paths that matter for the job",
-          "rationale": "The capture starts from the live site's address and a few key pages (or a local HTML file for an unpublished page) and measures those pages into the org context files."
+          "rationale": "The capture starts from the live site's address and a few key pages (or a local HTML file for an unpublished page) and measures those pages into the org context files. Re-reviewed 17 Nov 2026 after the scoped-facts and claims-ledger sections were added: both are optional later steps (owner and workspace ids, a reviewed claims file for absolute creative claims), so the one required input is still the web page."
         }
       ]
     },

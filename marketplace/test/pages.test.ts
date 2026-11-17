@@ -4,7 +4,7 @@ import { test, beforeEach } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { testEnv } from "./helpers.ts";
-import { clearShellCache, clip, ECOMMERCE_DESCRIPTION, ECOMMERCE_PATH, esc, GUIDES } from "../src/pages.ts";
+import { clearShellCache, clip, ECOMMERCE_DESCRIPTION, ECOMMERCE_PATH, esc, GUIDES, indexedShelfItem } from "../src/pages.ts";
 import { housePersonas } from "../src/modules/directory/index.ts";
 import { verticalBundle } from "../src/modules/knowledge/bundle.ts";
 import { forgetVerticals } from "../src/modules/knowledge/service.ts";
@@ -135,10 +135,11 @@ test("a made-up address with a file extension is a 404, not a copy of the home p
   assert.equal(icon.body, "icon");
 });
 
-test("a role page has its own title and canonical address", async () => {
+test("a role page has its own title and canonical address, and is served but not indexed", async () => {
   const t = await testEnv(PROD);
   const res = await t.api("GET", `/agents?role=${agent.role}`);
   assert.equal(res.status, 200);
+  assert.match(String(res.body), /<meta name="robots" content="noindex, follow" \/>/, "a filter of /agents, not its own page for search (17 Nov 2026)");
   assert.match(String(res.body), new RegExp(`<link rel="canonical" href="https://agents\\.test/agents\\?role=${agent.role}" />`));
   assert.match(String(res.body), new RegExp(`/agents/${agent.id}`));
   // Structured data: the role's agents as a list, and the way back to all agents.
@@ -157,7 +158,7 @@ test("the home page's plain HTML lists the agents to start with and how it works
   assert.match(html, /<h2>How it works<\/h2><ol>/);
 });
 
-test("production robots.txt points to the sitemap, which lists pages, roles and every live agent", async () => {
+test("production robots.txt points to the sitemap, which lists pages and every live agent, not role filters", async () => {
   const t = await testEnv(PROD);
   const robots = await t.api("GET", "/robots.txt");
   assert.match(robots.body, /Disallow: \/api\//);
@@ -171,7 +172,7 @@ test("production robots.txt points to the sitemap, which lists pages, roles and 
   const locs = [...String(map.body).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
   assert.ok(locs.includes("https://agents.test/"));
   assert.ok(locs.includes(`https://agents.test/agents/${agent.id}`));
-  assert.ok(locs.includes(`https://agents.test/agents?role=${agent.role}`));
+  assert.ok(!locs.some(l => l.includes("?role=")), "role filters are not indexed, so not listed");
   assert.equal(locs.filter(l => /\/agents\/[a-z0-9-]+$/.test(l)).length, live.length);
 });
 
@@ -343,4 +344,13 @@ test("/e-commerce carries the library's totals once it is built: the same answer
     assert.ok(!page.includes("Landing pages:"), "modules with no cards are left out");
     assert.match(page, /trust level from 1 to 4/);
   } finally { forgetVerticals(); clearShellCache(); }
+});
+
+test("shelf pages that repeat a library page are not indexed: every mind, and tools with a library guide", () => {
+  const base = { slug: "x", title: "X", summary: "", stage: "", agents: [], path: "" };
+  assert.equal(indexedShelfItem("minds", { ...base, identity: "", area: "", questions: [], library: "https://useaiblocks.com/minds/x" } as never), false);
+  assert.equal(indexedShelfItem("tools", { ...base, guide: "canva" } as never), false, "the library's /ai-tools/canva is the page");
+  assert.equal(indexedShelfItem("tools", { ...base, guide: null } as never), true, "a store-only tool is its own page");
+  assert.equal(indexedShelfItem("prompts", base as never), true);
+  assert.equal(indexedShelfItem("skills", base as never), true);
 });

@@ -7,7 +7,7 @@
 // its robots.txt disallows everything. Paths are listed in ARCHITECTURE.md; wrangler.jsonc sends them to the Worker.
 import type { Env } from "./env.ts";
 import { AREAS } from "./core/types.ts";
-import { getRole, listRoles } from "./modules/directory/roles.ts";
+import { getRole } from "./modules/directory/roles.ts";
 import { listPersonas, searchPersonas } from "./modules/directory/service.ts";
 import { agentPayload, featuredPayload, HOME_FEATURED, verticalPayload } from "./modules/directory/routes.ts";
 import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
@@ -208,7 +208,9 @@ async function agentsPage(env: Env, url: URL): Promise<PageView> {
       return `<h2><a href="/agents/${esc(p.id)}">${esc(p.name)}, ${esc(p.title)}</a></h2><p>${esc(p.tagline)}</p>${outcomes.length ? `<p>What ${esc(p.name)} makes:</p><ul>${outcomes.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`;
     };
     return {
-      status: 200, index: inRole.length > 0 && !filtered, path,
+      // A role's list is a filter of /agents, thin next to the agents' own pages: served and followed, not indexed
+      // (search recovery plan, 17 Nov 2026). A role earns a page of its own when it gets real hub content.
+      status: 200, index: false, path,
       title: roleTitle(role.name),
       description: clip(`${role.summary} Each agent is free to download or load into your own AI.`, 160),
       jsonLd: [
@@ -397,6 +399,15 @@ async function ecommercePage(env: Env): Promise<PageView> {
   };
 }
 
+/** Whether a shelf item is its own page for search engines. A mind is the same person as the library's
+ *  /minds/<slug> page, and a tool with a library guide repeats /ai-tools/<slug>: one page per subject, so these are
+ *  served and followed but not indexed, and left out of the sitemap. */
+export function indexedShelfItem(kind: ShelfKind, item: ShelfItem): boolean {
+  if (kind === "minds") return false;
+  if (kind === "tools") return !(item as { guide?: string | null }).guide;
+  return true;
+}
+
 /** /e-commerce/:kind/:slug: one prompt, skill, tool or mind from the e-commerce shelves. */
 async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<PageView> {
   const shelf = await verticalShelf(env, ECOMMERCE).catch(() => null);
@@ -417,7 +428,7 @@ async function shelfItemPage(env: Env, kind: ShelfKind, slug: string): Promise<P
   const answer = await shelfAnswer(env, shelf, kind, item).catch(() => null);
   const full = answer ? `<h2>The full ${esc(label)}</h2>${textHtml(answer.prompt ?? answer.text)}` : "";
   return {
-    status: 200, index: true, path,
+    status: 200, index: indexedShelfItem(kind, item), path,
     title: shelfTitle(item.title, label),
     description: clip(item.summary, 155),
     // The team list the page also asks for rides along, so neither call waits on the network.
@@ -573,15 +584,13 @@ export function robotsTxt(env: Env): Response {
 export async function sitemapXml(env: Env): Promise<Response> {
   const origin = originOf(env);
   const everyone = await listPersonas(env);
-  const roles = listRoles().filter(r => everyone.some(p => p.role === r.id));
   const paths = [
     "/", "/agents", ECOMMERCE_PATH, "/connect", "/guides", ...GUIDES.map(g => `/guides/${g.slug}`),
-    ...roles.map(r => `/agents?role=${encodeURIComponent(r.id)}`),
     ...everyone.filter(p => p.kind === "house").map(p => `/agents/${p.id}`),
     ...(await publicProfileSlugs(env)).map(slug => `/experts/${slug}`),
     ...await (async () => {
       const shelf = await verticalShelf(env, ECOMMERCE).catch(() => null);
-      return shelf ? SHELF_KINDS.flatMap(k => (shelf.file[k] as ShelfItem[]).map(i => `${ECOMMERCE_PATH}/${k}/${i.slug}`)) : [];
+      return shelf ? SHELF_KINDS.flatMap(k => (shelf.file[k] as ShelfItem[]).filter(i => indexedShelfItem(k, i)).map(i => `${ECOMMERCE_PATH}/${k}/${i.slug}`)) : [];
     })(),
   ];
   const urls = paths.map(p => `  <url><loc>${esc(`${origin}${p}`)}</loc></url>`).join("\n");

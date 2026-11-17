@@ -140,7 +140,7 @@ export const METHOD = Object.freeze({
     },
     handover: {
       title: "Hand over",
-      do: "The native work first. In your own message, never inside the work: the scorecard, any SAME-CONTEXT label, and every skipped step with its reason. Save a lesson only with an outside signal (the owner's answer, a check that failed then passed, a blind-review loss).",
+      do: "The native work first. For a multi-file handoff, check each delivered entry with tools/check-handover.mjs <entry> --bundle-root <delivered folder>, then open a relocated copy. Include the small reproduce/verification files promised to the receiver; do not link to absent working context or pack tools. Document private external inputs by contract/source/hash without copying sensitive working data; creator-only checks remain historical verification. The static check does not replace browser or dynamic-dependency checks. In your own message, never inside the work: the scorecard, any SAME-CONTEXT label, and every skipped step with its reason. Save a lesson only with an outside signal (the owner's answer, a check that failed then passed, a blind-review loss).",
       run: "node tools/job.mjs status",
       proof: null,
     },

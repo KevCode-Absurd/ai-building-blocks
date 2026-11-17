@@ -15,9 +15,13 @@
     "ab test analysis",
     "checkout optimisation"
   ],
-  "updated": "2026-11-09",
+  "updated": "2026-11-18",
   "review_every_days": 30,
   "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Checkout reviews select relevant buyer states and uncertain-outcome recovery checks within authorized test scope. Functional diagnosis continues without margins; profit estimates and commercial ranking still require reconciled unit economics."
+    },
     {
       "date": "2026-11-06",
       "note": "First release: conversion research, prioritising fixes, test design and sample size credited to Miller, Kohavi and Microsoft ExP, sample ratio checks, readouts with NIST methods, SEO-safe testing, Baymard and Core Web Vitals figures, and consent for analytics and session recording (EDPB, CNIL, UK DUAA, CCPA, GA4 consent mode, Clarity), with four skills, five prompts, two workflows and 29 checked sources."

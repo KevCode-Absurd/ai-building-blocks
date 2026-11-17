@@ -1,6 +1,6 @@
 ---
 name: conversion-research-audit
-description: Finds where and why visitors leave a landing page, store or booking flow - funnel by device and source, behaviour from heatmaps and recordings (only where consent rules are met), checkout and form friction, speed against Core Web Vitals, and customer words - then ranks fixes by payoff, confidence and effort, and sorts each into fix now, test, or drop. Use when traffic is steady but sales, bookings or sign-ups are not, before planning any A/B test, or when someone asks "why isn't my page converting?".
+description: Finds where and why visitors leave a landing page, store or booking flow - funnel by device and source, behaviour from heatmaps and recordings (only where consent rules are met), checkout and form friction, speed against Core Web Vitals, and customer words - then ranks fixes by payoff, confidence and effort, and sorts each into fix now, test, or drop. Use for a buyer-flow or checkout recovery review, before planning an A/B test, or when someone asks "why isn't my page converting?".
 ---
 
 # Conversion research audit
@@ -16,7 +16,7 @@ Most failed tests were never going to win, because the idea came from taste rath
 
 ## What you need
 
-**Access:** level 1 for every step. Level 2 to write fixes into a draft or duplicate page. Level 3 to publish clear bug fixes the client approved in the action list.
+**Access:** level 1 for read-only inspection. Use existing authorization for bounded simulated transactions or fault injection in a local/staging test environment; this is not permission to place live orders or disrupt production. Level 2 to write fixes into a draft or duplicate page. Level 3 to publish clear bug fixes the client approved in the action list.
 
 - The goal action and its value (order, booking, qualified lead).
 - Analytics for recent whole weeks: visits and conversions by step, device and source. A GA4 exploration export or Viewer seat is enough.
@@ -25,13 +25,15 @@ Most failed tests were never going to win, because the idea came from taste rath
 - Customer words: reviews, survey answers, support questions (the conversion copywriter kit's voice-of-customer method).
 - Speed data if available (PageSpeed Insights or the site's Core Web Vitals report).
 
+Use the evidence available for the requested decision. Missing margins do not block functional diagnosis, accessibility, source reconciliation or a useful test plan. Rank confirmed defects by severity and observed exposure, with commercial impact unmeasured. Require reconciled unit economics before monetary payoff estimates, profit ranking or a profit-winner claim; do not substitute invented margins. Missing traffic or outcome data still prevents a supported sample size or conclusive experiment readout.
+
 ## Steps
 
 1. **Define the funnel.** List each step from landing to the goal action. For each, get visitors who reached it, by device and source. Show counts and step-to-step rates.
-2. **Find the biggest leak.** Rank steps by visitors lost (absolute), not only by rate. A small drop on a busy step can matter more than a big drop on a quiet one.
+2. **Locate observed drop-offs.** Show absolute counts and rates for comparable populations and periods, with missing steps explicit. Use exposure and supporting evidence to prioritize investigation. The largest numerical drop is not automatically a defect, its cause, or the largest recoverable sales opportunity.
 3. **Split it.** Compare mobile and desktop, new and returning, and the top traffic sources at the leaking step. A segment difference generates a bug or message-mismatch hypothesis; inspect traffic mix, tracking, sample size and buyer intent before assigning a cause.
 4. **Watch behaviour.** In heatmaps and recordings, look at the leaking step: rage clicks, dead clicks, scrolling past the button, form fields re-typed, error messages, long pauses. Note the pattern and how many recordings show it. Only use recordings that meet the client's consent rules, with masking on.
-5. **Check checkout and forms.** Against Baymard's public findings: are there surprise extra costs, forced account creation, slow delivery shown late, unclear trust signals, too many fields, or errors? Count the fields.
+5. **Check checkout and forms.** Against Baymard's public findings: are there surprise extra costs, forced account creation, slow delivery shown late, unclear trust signals, too many fields, or errors? Count the fields. When execution is authorized, select the relevant buyer-state checks below rather than stopping at a successful payment or ordinary decline.
 6. **Check speed.** Compare the page with Core Web Vitals "good" thresholds at the 75th percentile: LCP 2.5 s or less, INP 200 ms or less, CLS 0.1 or less.
 7. **Check motivation, ability and prompt.** Using Fogg's model: is the visitor motivated here (relevant promise, proof, price clear), able (fast, simple, few steps), and prompted (a visible next step)? Name the missing element.
 8. **Read customer words.** Which doubts, questions or complaints match the leak? Quote them briefly.
@@ -50,6 +52,21 @@ Join funnel, behavior, customer-language and page evidence by the same journey, 
 Trace query/ad promise → landing hero/offer → selected product/variant → cart → checkout or lead outcome. Mark promise mismatches with evidence and coordinate an ad-only, page-only or paired-chain experiment. Paired changes measure the bundle, not the separate effects. Preserve current experiments and record other releases, promotions, stockouts and tracking changes before interpreting outcomes.
 
 For executable fixes, produce a journey receipt: URL/build, test time, viewport, inputs/variant, expected action, observed action, screenshot or test artifact, and pass/fail/blocked status. Exercise empty/error states and keyboard navigation as relevant. Use a local/test checkout for non-production trials; never mark a simulated payment or a blocked production checkout as a verified purchase. A successful smoke test proves behavior, not sales uplift. Recheck the original defect after the fix, and record its intervention ID, owner, primary outcome, guardrail, review trigger and rollback. Reuse existing authorization; only genuinely new live scope needs a decision.
+
+### Buyer-state checks for an executable checkout review
+
+Choose cases by the requested journey, observed risk, available test environment and task budget. This is a selection aid, not a mandatory exhaustive matrix. Keep screenshot-only findings useful: name visible friction and propose missing execution checks without claiming to have run them. Record each selected state as tested, untested or blocked, with the observed result and evidence.
+
+| Relevant state | What to check |
+|---|---|
+| Product/variant or stock changes | The chosen identity, price and quantity survive into cart/order; unavailable stock cannot silently switch the buyer to another variant. |
+| Cart to reservation | Totals and inventory agree with independent state; the buyer-facing hold/expiry message matches when the hold actually starts. |
+| Explicit decline | No paid order is created, stock is released as specified, and a genuinely new attempt can succeed. |
+| Unknown outcome after submission | In an authorized test environment that supports it, prioritize one lost/delayed response case after the server accepts the operation. A timeout is not a decline. Compare the buyer's screen with the persisted order/payment and stock state before deciding what happened. |
+| Repeated submit, refresh or re-entry | Reuse the same operation identity and exact request while its outcome is uncertain. Check that replay/reload recovers the existing receipt rather than starting a new purchase or hiding a paid order. A confirmed decline may start a new attempt; an unknown transport result may not. |
+| Persisted receipt | Independently read the resulting order/receipt, check the expected quantity and stock change, and verify the buyer can reach it after recovery. Do not claim duplicate charging merely because the UI failed. |
+
+Preserve the reproducible steps and readbacks for any failure. If fault injection is unavailable or outside authorization, deliver the feasible review, identify that untested state and the missing capability, and do not simulate a successful result in prose. Share only the small, authorized reproduction inputs needed by the receiver; keep private working context out of the deliverable.
 
 ## Checks
 

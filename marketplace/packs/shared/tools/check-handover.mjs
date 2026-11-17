@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Hand-over check (METHOD.md, step 5): run it on the finished deliverable before you hand it over.
 //
-//   node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]
+//   node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page] [--bundle-root <delivered folder>]
 //
 // 1. Leaks: anything internal or unfinished a reader would see, such as working file names, notes to self,
 //    placeholders ([X], [link], TBD, UNKNOWN). For HTML it reads the text a visitor sees and flags elements that look
@@ -29,12 +29,31 @@ import fs, { readFileSync } from "node:fs";
 import path from "node:path";
 
 const args = process.argv.slice(2);
+if (args.includes("--bundle-help")) {
+  console.log([
+    "Portable handoff: node tools/check-handover.mjs <delivered entry> --bundle-root <delivered folder>",
+    "",
+    "Run each separate entry point, then copy/extract the bundle elsewhere and open that relocated copy.",
+    "Include the small reproduce/ or verification/ subset promised to the receiver, with its dependencies.",
+    "Do not link to working ../context files or pack tools absent from the delivery. Creator-only checks are historical verification.",
+    "Private external inputs may stay external: document their input contract, source locator/hash and required access.",
+    "Never copy all working context, credentials, customer exports or hidden reasoning just to make links pass.",
+    "",
+    "The optional check follows reachable static Markdown/HTML/SVG/CSS references. Missing files, absolute local paths,",
+    "out-of-folder paths and linked files/directories fail. It does not run delivered code or fetch remote resources.",
+    "Root-relative /assets paths fail the portable-file boundary; use relative paths or test a separately declared hosted artifact.",
+    "Remote destinations, including //host/path, are counted without fetching; verify them in the intended hosting environment.",
+    "This is not a full Markdown/HTML/CSS parser. JavaScript/module imports, dynamic routes, archive contents, anchor IDs,",
+    "remote availability and browser behavior need their relevant independent checks."
+  ].join("\n"));
+  process.exit(0);
+}
 const onePage = args.includes("--one-page");
 const profileAt = args.indexOf("--profile");
 const profileName = profileAt >= 0 ? args[profileAt + 1] : null;
-const valueAt = new Set(args.flatMap((a, i) => ["--profile", "--brief", "--numbers", "--date-source"].includes(a) ? [i + 1] : []));
+const valueAt = new Set(args.flatMap((a, i) => ["--profile", "--brief", "--numbers", "--date-source", "--bundle-root"].includes(a) ? [i + 1] : []));
 const valueOf = flag => { const i = args.indexOf(flag); if (i < 0) return null; const v = args[i + 1]; if (!v || v.startsWith("--")) { console.error(`${flag} needs a value.`); process.exit(2); } return v; };
-const briefFile = valueOf("--brief"), numbersFile = valueOf("--numbers");
+const briefFile = valueOf("--brief"), numbersFile = valueOf("--numbers"), bundleRoot = valueOf("--bundle-root");
 const dateSources = args.flatMap((a, i) => a === '--date-source' ? [args[i + 1]] : []);
 if (dateSources.some(f => !f || f.startsWith('--'))) { console.error('--date-source needs a file'); process.exit(2); }
 // Exact source dates are evidence, not invented deadlines. This occurrence check
@@ -63,7 +82,7 @@ const optionsRequested = args.includes("--options-requested");
 let acceptedTemplateFields = 0, acceptedOptions = 0;
 const [file, plain] = args.filter((a, i) => !a.startsWith("--") && !valueAt.has(i));
 if (!file) {
-  console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page] [--profile <family>] [--requested-more] [--requested-template] [--options-requested] [--brief <brief> [--numbers <numbers.json>]]");
+  console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page] [--profile <family>] [--requested-more] [--requested-template] [--options-requested] [--bundle-root <delivered folder>] [--brief <brief> [--numbers <numbers.json>]]");
   process.exit(2);
 }
 
@@ -74,9 +93,123 @@ const visibleText = (f, raw) => isHtml(f)
   : raw;
 const words = text => (text.replace(/[|#*_>`~-]+/g, " ").match(/[\p{L}\p{N}$%€£₹][^\s]*/gu) ?? []).length;
 
+// Optional static dependency check; never fetch a URL or run delivered code.
+// Not a browser, JS/module/package resolver, anchor validator or archive inspector.
+function checkBundle(rootName, entryName) {
+  const root = path.resolve(rootName), entry = path.resolve(entryName);
+  const problems = [], pending = [], visited = new Set(), checked = new Set();
+  let references = 0, remote = 0, readable = false;
+  const inside = target => { const rel = path.relative(root, target); return rel === '' || (!path.isAbsolute(rel) && rel !== '..' && !rel.startsWith('..' + path.sep)); };
+  const show = target => path.relative(root, target).split(path.sep).join('/') || '.';
+  const issue = message => { if (problems.length < 50) problems.push('bundle: ' + message); };
+  const checkFile = (target, from) => {
+    if (!inside(target)) { issue(from + ': local dependency leaves the delivered folder'); return false; }
+    try {
+      let current = root;
+      for (const part of ['', ...path.relative(root, target).split(path.sep).filter(Boolean)]) {
+        if (part) current = path.join(current, part);
+        if (fs.lstatSync(current).isSymbolicLink()) { issue(from + ': linked file or directory is not a portable dependency (' + show(current) + ')'); return false; }
+      }
+      const rel = path.relative(fs.realpathSync(root), fs.realpathSync(target));
+      if (path.isAbsolute(rel) || rel === '..' || rel.startsWith('..' + path.sep)) { issue(from + ': resolved dependency leaves the delivered folder'); return false; }
+      if (!fs.statSync(target).isFile()) { issue(from + ': dependency must name an explicit file (' + show(target) + ')'); return false; }
+      checked.add(target);
+      return true;
+    } catch { issue(from + ': missing or unreadable local dependency (' + show(target) + ')'); return false; }
+  };
+  try {
+    if (!fs.lstatSync(root).isDirectory() || fs.lstatSync(root).isSymbolicLink()) throw Error();
+  } catch { issue('root must be an existing, unlinked directory'); return { problems, readable, references, remote, files: 0 }; }
+  if (!checkFile(entry, 'entry point')) return { problems, readable, references, remote, files: checked.size };
+  readable = true; pending.push(entry);
+  const decodeHtml = value => value.replace(/&(?:#(x[0-9a-f]+|\d+)|(amp|quot|apos|lt|gt));/gi, (all, numeric, named) => {
+    if (!numeric) return ({ amp:'&', quot:'"', apos:"'", lt:'<', gt:'>' })[named.toLowerCase()];
+    const point = numeric[0].toLowerCase() === 'x' ? parseInt(numeric.slice(1), 16) : Number(numeric);
+    return point > 0 && point <= 0x10ffff && !(point >= 0xd800 && point <= 0xdfff) ? String.fromCodePoint(point) : all;
+  });
+  const follow = (value, source, kind) => {
+    references++;
+    if (references > 20_000) { if (references === 20_001) issue('reference limit reached; split the handoff into smaller checked entry points'); return; }
+    let ref = decodeHtml(value).trim();
+    if (!ref || ref.startsWith('#') || ref.startsWith('?')) return;
+    const from = show(source) + ' ' + kind;
+    if (/^(?:https?:|mailto:|tel:|data:|\/\/)/i.test(ref)) { remote++; return; }
+    if (/^(?:file:|[a-z]:[\\/]|[\\/])/i.test(ref)) { issue(from + ': absolute local path is not portable'); return; }
+    if (/^[a-z][a-z\d+.-]*:/i.test(ref)) { issue(from + ': unsupported URI scheme; use an explicit local file or a documented remote destination'); return; }
+    ref = ref.split(/[?#]/, 1)[0];
+    try { ref = decodeURIComponent(ref).replace(/\\([ ()])/g, '$1'); }
+    catch { issue(from + ': invalid URL encoding'); return; }
+    if (!ref) return;
+    if (/[\0\r\n]/.test(ref) || path.isAbsolute(ref) || path.win32.isAbsolute(ref)) { issue(from + ': absolute or invalid local path is not portable'); return; }
+    const target = path.resolve(path.dirname(source), ref.replace(/\\/g, path.sep));
+    if (checkFile(target, from) && /\.(?:md|markdown|html?|css|svg)$/i.test(target) && !visited.has(target)) pending.push(target);
+  };
+  const css = (content, source) => {
+    content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+    for (const m of content.matchAll(/url\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*?))\s*\)/gi)) follow(m[1] ?? m[2] ?? m[3], source, 'CSS url');
+    for (const m of content.matchAll(/@import\s+["']([^"']+)["']/gi)) follow(m[1], source, 'CSS import');
+  };
+  const html = (content, source) => {
+    content = content.replace(/<!--[\s\S]*?-->/g, '');
+    for (const m of content.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)) css(m[1], source);
+    content = content.replace(/(<script\b[^>]*>)[\s\S]*?<\/script>/gi, '$1</script>').replace(/(<style\b[^>]*>)[\s\S]*?<\/style>/gi, '$1</style>');
+    for (const tag of content.matchAll(/<[a-z][\w:-]*\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi)) {
+      const name = tag[0].match(/^<([\w:-]+)/)[1].toLowerCase();
+      for (const attr of tag[0].matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>\x60]+))/g)) {
+        const key = attr[1].toLowerCase(), value = attr[2] ?? attr[3] ?? attr[4];
+        if (name === 'base' && key === 'href') { issue(show(source) + ': base href changes resolution; use portable explicit relative links'); continue; }
+        if (['href','xlink:href','src','poster'].includes(key) || (name === 'object' && key === 'data')) follow(value, source, name + '[' + key + ']');
+        if (key === 'style') css(decodeHtml(value), source);
+        if (key === 'srcset') for (const item of value.matchAll(/(?:^|,)\s*(data:[^\s]+|[^,\s]+)(?:\s+[^,]*)?/gi)) follow(item[1], source, name + '[srcset]');
+      }
+    }
+  };
+  const markdown = (content, source) => {
+    content = content.replace(/^\s{0,3}(\x60{3,}|~{3,})[^\n]*\n[\s\S]*?^\s{0,3}\1[ \t]*$/gm, '').replace(/(\x60+)[^\n]*?\1/g, '');
+    const destination = value => {
+      const v = value.trim();
+      if (v.startsWith('<')) return v.slice(1, v.indexOf('>') < 0 ? undefined : v.indexOf('>'));
+      return v.match(/^(?:\\.|[^\s])*/)?.[0] ?? '';
+    };
+    for (const opening of content.matchAll(/\]\(/g)) {
+      const start = opening.index + opening[0].length;
+      let end = start, depth = 1, angle = false;
+      for (; end < content.length; end++) {
+        const c = content[end];
+        if (c === '\\') { end++; continue; }
+        if (c === '<') angle = true;
+        else if (c === '>') angle = false;
+        else if (!angle && c === '(') depth++;
+        else if (!angle && c === ')' && --depth === 0) break;
+      }
+      if (depth === 0) follow(destination(content.slice(start, end)), source, 'Markdown link');
+    }
+    for (const m of content.matchAll(/^\s{0,3}\[(?!\^)[^\]\n]+\]:\s*(<[^>]*>|[^\n]+)/gm)) follow(destination(m[1]), source, 'Markdown reference');
+    html(content, source);
+  };
+  while (pending.length) {
+    const source = pending.shift();
+    if (visited.has(source)) continue;
+    visited.add(source);
+    if (visited.size > 2_000) { issue('document limit reached; split the handoff into smaller checked entry points'); break; }
+    if (!/\.(?:md|markdown|html?|css|svg)$/i.test(source)) continue;
+    if (fs.statSync(source).size > 64_000_000) { issue(show(source) + ': static document exceeds 64 MB; split or inspect separately'); continue; }
+    const content = fs.readFileSync(source, 'utf8');
+    if (/\.css$/i.test(source)) css(content, source);
+    else if (/\.(?:md|markdown)$/i.test(source)) markdown(content, source);
+    else html(content, source);
+  }
+  return { problems, readable, references, remote, files: checked.size };
+}
+const bundle = bundleRoot ? checkBundle(bundleRoot, file) : null;
+if (bundle && !bundle.readable) {
+  console.log(bundle.problems.join('\n'));
+  process.exit(1);
+}
+
 const raw = readFileSync(file, "utf8");
 const text = visibleText(file, raw);
-const problems = [];
+const problems = [...(bundle?.problems ?? [])];
 
 if (isHtml(file)) {
   const noteTag = /<([a-z0-9]+)\b[^>]*\b(?:class|id)\s*=\s*["'][^"']*\b(note|notes|internal|debug|todo|annotation|reviewer|editor|fact-?check)\b[^"']*["'][^>]*>/gi;
@@ -301,6 +434,7 @@ if (plain) {
 if (onePage && n > 450) problems.push(`length: ${n} words is more than one page (about 450)`);
 
 console.log(`Hand-over check: ${lengthNote}.`);
+if (bundle) console.log(`Bundle static check: ${bundle.files} local files, ${bundle.references} references; ${bundle.remote} remote/embedded destinations not fetched. Checks only reachable Markdown/HTML/SVG/CSS references; not JavaScript imports, dynamic routes, archive contents, anchor IDs, remote availability or browser behavior. Run each separate entry point and open the relocated deliverable.`);
 if (briefNote) console.log(briefNote);
 if (requestedTemplate) console.log(`Requested-template mode: ${acceptedTemplateFields} intentional field matches accepted; field completion is not claimed.`);
 if (optionsRequested) console.log(`Options-requested mode: ${acceptedOptions} alternate matches accepted.`);

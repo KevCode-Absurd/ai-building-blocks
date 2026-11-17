@@ -155,6 +155,22 @@ Review of [NotFair](https://github.com/nowork-studio/notfair-plugin), pinned at 
 
 The new roles do not replace the original 76-agent historical evaluation denominator. The next paired evaluation includes all current roles, with the same GPT Sol generator model, common merchant inputs and host capabilities in both the specialist and plain-Sol arms. Sol and Terra independently judge actual artifacts. New-role cases, Gehna-backed work and synthetic/public work are reported separately. Passing implementation tests is a prerequisite for those trials, not an output-quality result.
 
+### First matched output pilot and targeted repairs
+
+The private five-pair development pilot at `461945556552d0bde1e125a020006c8dfc6f994c` completed ten fresh GPT Sol executions and ten independent Sol/Terra reviews. Both judges passed all five specialist deliverables and four of five ordinary-Sol deliverables. Both preferred the specialist for landing pages and creative strategy, ordinary Sol for buyer-flow review and finished ad design, and disagreed on the Meta audit. These are five reused real-business development jobs, not a full-roster result, human calibration or evidence of general superiority, cost savings or commercial lift. Original outputs and disagreements are preserved.
+
+Full immutable-input checks ran before the generation batch, before judge staging and after judging. The pilot did not repeat the full scan before each individual dispatch as its protocol specified; that process deviation is retained with the private results. The next protocol adds a tested selected-run check before each dispatch and keeps full phase-boundary checks. Byte checks at those boundaries do not establish continuous enforcement.
+
+The observed gaps drive a bounded next increment:
+
+- Checkout-review routing selects uncertain-outcome and persisted-recovery checks where authorized execution is available. Functional defect diagnosis proceeds without margins; profit forecasts and commercial rankings still require the appropriate evidence.
+- The local simulated storefront preserves pending transaction identity across uncertain responses and re-entry, with fault-injection regression tests. This is not a verified live checkout integration.
+- An optional delivered-folder check detects missing or out-of-folder static dependencies. Promised reproducers travel with the artifact; sensitive raw inputs remain explicitly documented external dependencies.
+- Static-ad task routing includes the finished-media workflow. Art direction must make the buyer arguments visible through purposeful compositions and placement adaptations, while preserving the real product.
+- Meta creative diagnosis joins inspected creative evidence to stable ad identifiers, examines product and basket mix, and names competing mechanisms and disconfirming tests.
+
+Implementation and regression checks for this increment are separate from fresh model output trials. The pilot's scores do not certify these subsequent edits; the full original 76 plus two new specialists still require their new-revision comparison and release checks.
+
 ### Optional ontology experiment
 
 Review of [Omnigraph](https://github.com/ModernRelay/omnigraph), source commit `6fc2f823621ee37784066a6fae51b2f8e8ad131e`, adds query-first identity and relationship rules to the shared memory contract. Product/variant/media identity, scoped provider keys, sourced assertions, owner decisions and time-qualified policies remain distinct. Session reflection proposes a small evidence-backed change with golden queries and negative controls; it cannot automatically rewrite the schema or promote a lesson. An agent-authored valid schema is not evidence of 80% semantic correctness.

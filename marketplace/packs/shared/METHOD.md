@@ -2,7 +2,7 @@
 
 **The owner comes first:** if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line.
 
-The goal: finished work the owner would choose over one plain attempt. Follow the rules and step table. Job skills add deliverables, intake, gates and craft; on how many drafts or reviews to run, the step table wins. Open references when named.
+Deliver finished work preferred over one plain attempt. Job skills add deliverables, intake, gates and craft; on how many drafts or reviews to run, the step table wins. Open named references.
 
 **Coding app or chat app.** In a coding app, `node tools/job.mjs` keeps resumable state in `context/job.json`: `start --depth <light|standard|full|team|one-shot> --kind <family>`, then `next`, `done <step> [--evidence <file>]`, `skip <step> "<reason>"`, and `status`. Run the `node tools/...` checks. In a chat app, follow the table manually, check against each list, calculate in its code tool or show working, and name manual checks in your message. A hand check named as such counts as run. Never claim an unrun tool ran.
 
@@ -148,6 +148,8 @@ The step table sets the drafts. At light and standard depth there is no third dr
 - **Finish the format.** Ads: every platform field, character counts checked with `node tools/quality/copy-check.cjs`, safe areas, landing URL. Emails: subject, preview, one ask, links, exit rule. Plans: totals that add up, steps with owners and relative days. Pages: one action, proof, mobile, load. Support macros: the order system's merge fields instead of asking the customer to repeat known details, only the missing essentials asked for, never a photo of an absent item, and correct policy wording, allowed actions and exception routes.
 
 ## 5. Check: tools first, then one fresh pass
+
+**Bundles:** `node tools/check-handover.mjs <entry> --bundle-root <folder>`; open relocated copies. Rules: `--bundle-help`.
 
 **Mechanical checks on the actual files.** One command runs them all and prints one short report: `node tools/quality/qe-check.cjs <final> --plain <plain> --profile <family> --brief <owner brief> --audience <consumer|business|specialist> --sources <facts files> --max-words <n>` (or `--contract <output-contract.json>`). Its parts (`wordcount.cjs`, `readability.cjs`, `proof.cjs` with `tools/quality/PROOF.md`, `check-format.cjs`, `leakcheck.cjs`) also run alone. Build the output contract from the brief, not the draft (`tools/quality/CHECKER-v3.md` gate 4): exact strings only where the brief names them, other needs in a manual checklist, and never your own design choices as acceptance rules. Use `--requested-template` only for input fields the request asks for (never internal notes, TODO, UNKNOWN or invented actuals), and never claim a template's future values were checked. Check delivered text, including CSVs: `node tools/quality/check-format.cjs --encoding-only <explicit paths>`. Encoding ≠ format approval. Fix every truth, format and leak failure. Readability targets are diagnostics: never delete needed operating detail to meet them. Offline proof does not check live links. With `--plain`, qe-check also runs the hand-over check; fix every hit. A check your family requires (buyer-facing work: leakcheck, proof, numbers and format) fails when it did not run: write `context/numbers.json` (`[]` when the work quotes no figures) and give `--contract` or `--max-words`. Buyer-facing work passes `node tools/org-context.mjs gate --for <kind>`; a set of static ads passes `node tools/check-creative-set.mjs`.
 

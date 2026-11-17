@@ -88,6 +88,7 @@
       "task": "Audit the cart and checkout",
       "kind": "audit",
       "items": [
+        { "ref": "kit:skills/conversion-research-audit", "use": "check", "when": "For an authorized buyer-flow review, to test relevant states, uncertain outcomes and persisted receipt recovery" },
         { "ref": "library:checkout-page-auditor", "type": "skill", "use": "check", "when": "When shoppers leave at checkout, to rank fixes for guest checkout, fields and surprise costs" },
         { "ref": "library:payments-and-checkout-settings-checker", "type": "skill", "use": "check", "when": "When the leak may be in settings: payment methods, wallets, taxes or shipping rules" },
         { "ref": "library:abandoned-checkout-reader", "type": "skill", "use": "build", "when": "When you need abandoned checkouts counted by cart value and hour before you judge" },

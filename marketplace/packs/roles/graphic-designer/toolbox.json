@@ -170,6 +170,7 @@
       "task": "Design a set of static image ads",
       "kind": "ad_creative",
       "items": [
+        { "ref": "kit:workflows/verified-media-delivery", "use": "build", "when": "When delivering finished ads, build distinct visual ideas and inspect every exported format" },
         { "ref": "library:eight-lever-ad-visual-planner", "type": "skill", "use": "brief", "when": "Before making images, to set the visual choices and lock the ones that must stay" },
         { "ref": "library:theme-based-ad-layout-blueprint-maker", "type": "skill", "use": "explore", "when": "When you need three or four layouts with text zones and product placement to compare" },
         { "ref": "library:image-ad-copy-writer", "type": "skill", "use": "build", "when": "When the ad needs every word on and around the picture, in two or three versions" },

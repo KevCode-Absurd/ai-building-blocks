@@ -1,18 +1,101 @@
 const $ = selector => document.querySelector(selector);
 const esc = text => String(text ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let session = JSON.parse(localStorage.getItem('private-store-session') || 'null');
-let catalog, cart, customer, selectedCategory = 'All', noticeTimer;
+let catalog, cart, customer, selectedCategory = 'All', noticeTimer, checkoutFlight, checkoutStarting = false;
 const save = () => localStorage.setItem('private-store-session', JSON.stringify(session));
 const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:catalog?.currency || 'INR',maximumFractionDigits:0}).format(n/100);
 const key = () => crypto.randomUUID();
 async function request(path, method='GET', data, idem) {
   const response = await fetch(path,{method,headers:method==='GET'?{}:{'Content-Type':'application/json',...(idem?{'Idempotency-Key':idem}:{})},body:method==='GET'?undefined:JSON.stringify(data || {})});
-  const result = await response.json(); if (!response.ok) throw new Error(result.error); return result;
+  const result = await response.json();
+  if (!response.ok) { const error = new Error(result.error); error.status = response.status; throw error; }
+  return result;
 }
 const api = (path, method='GET', data, idem) => request(`/api/datasets/${session.dataset}${path}`, method, data, idem);
 const notify = message => { $('#notice').textContent=message; $('#notice').style.display='block'; clearTimeout(noticeTimer); noticeTimer=setTimeout(()=>$('#notice').style.display='none',5000); };
 const image = (product, css='') => product.images?.length ? `<img class="${css}" src="${esc(product.images[0])}" alt="${esc(product.title)}">` : '<div class="placeholder" aria-label="Synthetic product illustration">◇</div>';
 const findProduct = variantId => catalog.products.find(p=>p.variants.some(v=>v.id===variantId));
+// A timeout is not a decline. Keep the exact operation across retry/reload,
+// scoped to the original dataset, customer and cart, until its outcome is read back.
+function pendingCheckout() {
+  const pending = session.pendingCheckout;
+  if (!pending) return null;
+  if (pending.dataset !== session.dataset || pending.customerId !== session.customer || pending.cartId !== session.cart)
+    throw new Error('Pending checkout does not match this test dataset, customer and cart. Restore the original test session before recovering it.');
+  return pending;
+}
+function commitCheckoutSession(next) {
+  const encoded = JSON.stringify(next);
+  localStorage.setItem('private-store-session', encoded);
+  if (localStorage.getItem('private-store-session') !== encoded)
+    throw new Error('Checkout recovery state could not be saved. Restore local storage before continuing.');
+  session = next; // Publish changes in memory only after the saved snapshot is confirmed.
+}
+function savePending(pending, changes) {
+  if (pendingCheckout() !== pending) throw new Error('Test checkout session changed during recovery.');
+  const updated = {...pending, ...changes};
+  commitCheckoutSession({...session, pendingCheckout:updated});
+  return updated;
+}
+function clearPending(pending) {
+  if (pendingCheckout() !== pending) throw new Error('Test checkout session changed during recovery.');
+  const next = {...session}; delete next.pendingCheckout;
+  commitCheckoutSession(next);
+}
+async function resumeCheckout(pending) {
+  const scoped = (path, method='GET', data, idem) => {
+    if (pendingCheckout() !== pending) throw new Error('Test checkout session changed during recovery.');
+    // Recheck persistence before every effect, including retries and reload recovery.
+    // A previous failed write must never leave an in-memory-only operation dispatchable.
+    if (method !== 'GET') commitCheckoutSession({...session, pendingCheckout:pending});
+    return request(`/api/datasets/${pending.dataset}${path}`, method, data, idem);
+  };
+  if (!pending.payment) {
+    let reservation;
+    try { reservation = await scoped('/reservations', 'POST', pending.reserve.body, pending.reserve.key); }
+    catch (error) {
+      // This server atomically rejects these reservation requests before payment.
+      if ([400,404,409].includes(error.status)) clearPending(pending);
+      throw error;
+    }
+    pending = savePending(pending, {payment:{key:`pay-${reservation.id}`, body:{reservationId:reservation.id, outcome:pending.outcome}}});
+  }
+  if (!pending.orderId) {
+    let result;
+    try { result = await scoped('/payments', 'POST', pending.payment.body, pending.payment.key); }
+    catch (error) {
+      if (error.status === 409) {
+        const reservation = await scoped(`/reservations/${pending.payment.body.reservationId}`);
+        const orders = Object.values(await scoped('/orders')).filter(order => order.reservationId === reservation.id && order.customerId === pending.customerId);
+        if (orders.length === 1) pending = savePending(pending, {orderId:orders[0].id});
+        else if (!orders.length && ['expired','released'].includes(reservation.status)) {
+          clearPending(pending);
+          return {message:`The earlier test hold ${reservation.status}. No order exists for that attempt. You can start a new attempt.`};
+        } else throw error;
+      } else throw error;
+    }
+    if (result) {
+      if (result.payment?.outcome === 'declined' && result.order === null) {
+        clearPending(pending);
+        return {message:'Simulated payment declined. No order was placed; test stock was released. You can try again.'};
+      }
+      if (!result.order?.id) throw new Error('Test payment outcome is not confirmed. Recover this same attempt before starting another.');
+      pending = savePending(pending, {orderId:result.order.id});
+    }
+  }
+  const receipt = await scoped(`/orders/${pending.orderId}/receipt`);
+  if (receipt.id !== pending.orderId || receipt.customerId !== pending.customerId || receipt.reservationId !== pending.payment.body.reservationId || !receipt.receiptId)
+    throw new Error('Test receipt does not match the pending checkout.');
+  clearPending(pending);
+  return {orderId:receipt.id};
+}
+function recoverCheckout(pending) {
+  if (!checkoutFlight) checkoutFlight = resumeCheckout(pending).finally(() => { checkoutFlight = null; });
+  return checkoutFlight;
+}
+function recoveryPage(message) {
+  return `<div class="page"><h1>Recover your test checkout</h1><p>An earlier submission may have reached the local server. Recover the same attempt before changing the bag or submitting a new one.</p><p role="alert" class="error" id="checkout-error">${esc(message)}</p><button id="recover-checkout">RECOVER SAME ATTEMPT</button><p class="small">Only the local simulated store is contacted. No real money moves.</p></div>`;
+}
 async function freshDataset() {
   const dataset = await request('/api/datasets','POST'); session={dataset:dataset.id}; save();
   customer=await api('/customers','POST',{email:`visitor-${key().slice(0,8)}@example.test`,sms:'+15550100001',consent:{email:false,sms:false}});
@@ -33,7 +116,7 @@ function productPage(productId) {
 function cartPage(checkout=false) {
   if(!cart.items.length) return '<div class="page"><h1>Your test bag is waiting</h1><p>Choose a piece to explore the simulated checkout.</p><a class="link-button" href="#collection">Browse the collection →</a></div>';
   const total=cart.items.reduce((n,i)=>n+i.price*i.quantity,0);
-  return `<div class="page"><p class="eyebrow">${checkout?'Simulated checkout':'Your collection'}</p><h1>${checkout?'A little closer to yours':'Your test bag'}</h1><div class="checkout-layout"><div>${checkout?`<div class="panel"><h3>Test customer</h3><p class="muted">Only synthetic contact details are accepted.</p><label for="email">Test email</label><input id="email" type="email" value="${esc(customer.email)}" readonly><label for="sms">Test phone</label><input id="sms" type="tel" value="${esc(customer.sms)}" readonly><label><input id="consent-email" type="checkbox" ${customer.consent.email?'checked':''}> I consent to test email messages in the local outbox</label><label><input id="consent-sms" type="checkbox" ${customer.consent.sms?'checked':''}> I consent to test SMS messages in the local outbox</label><p class="small">No real contact, address, card or bank information is collected.</p></div><div class="panel"><h3>Payment simulation</h3><label for="payment-outcome">Choose the test response</label><select id="payment-outcome"><option value="approved">Approved — simulate a successful payment</option><option value="declined">Declined — simulate a payment decline</option></select><p class="small muted">No payment provider is contacted. No money moves.</p><button class="wide" id="pay">PLACE SIMULATED ORDER</button><p role="alert" id="checkout-error" class="error"></p></div>`:cart.items.map(i=>`<div class="cart-row">${image(findProduct(i.variantId))}<div><a href="#product/${esc(i.productId)}">${esc(i.title)}</a><p class="small muted">${esc(i.label)}</p><button data-remove="${esc(i.variantId)}">Remove</button></div><div><label class="small" for="qty-${esc(i.variantId)}">Quantity</label><input id="qty-${esc(i.variantId)}" data-qty="${esc(i.variantId)}" type="number" min="1" max="20" value="${i.quantity}"><p>${money(i.price*i.quantity)}</p></div></div>`).join('')}</div><aside><div class="panel summary"><h3>Your test order</h3>${cart.items.map(i=>`<p class="small">${esc(i.title)} × ${i.quantity}<br>${money(i.price*i.quantity)}</p>`).join('')}<div class="total"><span>Total</span><strong>${money(total)}</strong></div><p class="muted">Synthetic amount · Shipping and tax are not modeled.</p>${checkout?'':`<a class="link-button wide" href="#checkout">CONTINUE TO TEST CHECKOUT →</a>`}<p class="small">Inventory is held for 15 minutes when checkout starts. Declines and expired holds release test stock.</p></div></aside></div></div>`;
+  return `<div class="page"><p class="eyebrow">${checkout?'Simulated checkout':'Your collection'}</p><h1>${checkout?'A little closer to yours':'Your test bag'}</h1><div class="checkout-layout"><div>${checkout?`<div class="panel"><h3>Test customer</h3><p class="muted">Only synthetic contact details are accepted.</p><label for="email">Test email</label><input id="email" type="email" value="${esc(customer.email)}" readonly><label for="sms">Test phone</label><input id="sms" type="tel" value="${esc(customer.sms)}" readonly><label><input id="consent-email" type="checkbox" ${customer.consent.email?'checked':''}> I consent to test email messages in the local outbox</label><label><input id="consent-sms" type="checkbox" ${customer.consent.sms?'checked':''}> I consent to test SMS messages in the local outbox</label><p class="small">No real contact, address, card or bank information is collected.</p></div><div class="panel"><h3>Payment simulation</h3><label for="payment-outcome">Choose the test response</label><select id="payment-outcome"><option value="approved">Approved — simulate a successful payment</option><option value="declined">Declined — simulate a payment decline</option></select><p class="small muted">No payment provider is contacted. No money moves.</p><button class="wide" id="pay">PLACE SIMULATED ORDER</button><p role="alert" id="checkout-error" class="error"></p></div>`:cart.items.map(i=>`<div class="cart-row">${image(findProduct(i.variantId))}<div><a href="#product/${esc(i.productId)}">${esc(i.title)}</a><p class="small muted">${esc(i.label)}</p><button data-remove="${esc(i.variantId)}">Remove</button></div><div><label class="small" for="qty-${esc(i.variantId)}">Quantity</label><input id="qty-${esc(i.variantId)}" data-qty="${esc(i.variantId)}" type="number" min="1" max="20" value="${i.quantity}"><p>${money(i.price*i.quantity)}</p></div></div>`).join('')}</div><aside><div class="panel summary"><h3>Your test order</h3>${cart.items.map(i=>`<p class="small">${esc(i.title)} × ${i.quantity}<br>${money(i.price*i.quantity)}</p>`).join('')}<div class="total"><span>Total</span><strong>${money(total)}</strong></div><p class="muted">Synthetic amount · Shipping and tax are not modeled.</p>${checkout?'':`<a class="link-button wide" href="#checkout">CONTINUE TO TEST CHECKOUT →</a>`}<p class="small">Inventory is held for 15 minutes when you submit the simulated order. Declines and expired holds release test stock.</p></div></aside></div></div>`;
 }
 async function ordersPage(orderId) {
   const orders=await api('/orders'); const list=Object.values(orders).filter(o=>o.customerId===customer.id&&(!orderId||o.id===orderId)).reverse();
@@ -45,14 +128,34 @@ async function labPage() {
 }
 async function newCart() { cart=await api('/carts','POST',{customerId:customer.id});session.cart=cart.id;save(); }
 async function render() {
-  await refresh(); const route=location.hash.slice(1)||'home';
+  await refresh(); let route=location.hash.slice(1)||'home', message='';
+  try {
+    const pending = pendingCheckout();
+    if (pending) {
+      $('#app').innerHTML='<div class="page"><h1>Recovering your test checkout</h1><p>Checking the original attempt with the local server…</p></div>';
+      const result = await recoverCheckout(pending);
+      route = result.orderId ? `order/${result.orderId}` : 'checkout';
+      history.replaceState(null, '', `#${route}`);
+      message = result.message || '';
+      await refresh();
+    }
+  } catch (error) {
+    if (session.pendingCheckout) { $('#app').innerHTML=recoveryPage(error.message); bind(); return; }
+    route='checkout'; message=error.message;
+  }
   if(['cart','checkout'].includes(route)&&cart.status==='converted') await newCart();
   let html;
   if(route==='home') html=home(); else if(route==='collection') html=collection(); else if(route.startsWith('product/')) html=productPage(route.slice(8)); else if(route==='cart'||route==='checkout') html=cartPage(route==='checkout'); else if(route==='orders'||route.startsWith('order/')) html=await ordersPage(route.startsWith('order/')?route.slice(6):null); else if(route==='lab') html=await labPage(); else html='<div class="page"><h1>Page not found</h1><a href="#home">Return home</a></div>';
   $('#app').innerHTML=html; bind();
+  if(message && $('#checkout-error')) $('#checkout-error').textContent=message;
 }
 const action = fn => async event => { try { await fn(event); } catch(error) { notify(error.message); } };
 function bind() {
+  if($('#recover-checkout')) $('#recover-checkout').onclick=action(async()=>{
+    const button=$('#recover-checkout'); button.disabled=true;
+    try { await render(); }
+    finally { if($('#recover-checkout')===button) button.disabled=false; }
+  });
   document.querySelectorAll('[data-filter]').forEach(el=>el.onclick=action(async()=>{selectedCategory=el.dataset.filter;await render()}));
   document.querySelectorAll('[data-image]').forEach(el=>el.onclick=()=>$('.main-image').src=el.dataset.image);
   if($('#variant')) $('#variant').onchange=()=>{const v=catalog.products.flatMap(p=>p.variants).find(v=>v.id===$('#variant').value);$('#variant-price').textContent=money(v.price);$('#availability').textContent=`${v.stock} available in this test dataset`;$('#add-cart').disabled=!v.stock;};
@@ -60,15 +163,19 @@ function bind() {
   document.querySelectorAll('[data-remove]').forEach(el=>el.onclick=action(async()=>{await api(`/carts/${cart.id}`,'PATCH',{items:cart.items.filter(i=>i.variantId!==el.dataset.remove).map(({variantId,quantity})=>({variantId,quantity}))});await render()}));
   document.querySelectorAll('[data-qty]').forEach(el=>el.onchange=action(async()=>{await api(`/carts/${cart.id}`,'PATCH',{items:cart.items.map(i=>({variantId:i.variantId,quantity:i.variantId===el.dataset.qty?Number(el.value):i.quantity}))});await render()}));
   if($('#pay')) $('#pay').onclick=action(async()=>{
+    if(checkoutStarting) return;
+    checkoutStarting=true;
     const button=$('#pay');button.disabled=true;$('#checkout-error').textContent='';
     try {
-      await api(`/customers/${customer.id}`,'PATCH',{consent:{email:$('#consent-email').checked,sms:$('#consent-sms').checked}});
       const outcome=$('#payment-outcome').value;
-      const reservation=await api('/reservations','POST',{cartId:cart.id},`reserve-${key()}`);
-      const result=await api('/payments','POST',{reservationId:reservation.id,outcome},`pay-${reservation.id}`);
-      if(!result.order) { $('#checkout-error').textContent='Simulated payment declined. No order was placed; test stock was released. You can try again.'; button.disabled=false;return; }
-      location.hash=`order/${result.order.id}`;
-    } catch(error) { $('#checkout-error').textContent=error.message;button.disabled=false; }
+      await api(`/customers/${customer.id}`,'PATCH',{consent:{email:$('#consent-email').checked,sms:$('#consent-sms').checked}});
+      if (!pendingCheckout()) {
+        const pending={dataset:session.dataset,customerId:session.customer,cartId:session.cart,outcome,reserve:{key:`reserve-${key()}`,body:{cartId:session.cart}}};
+        commitCheckoutSession({...session,pendingCheckout:pending});
+      }
+      await render();
+    } catch(error) { if($('#checkout-error')) $('#checkout-error').textContent=error.message;button.disabled=false; }
+    finally { checkoutStarting=false; }
   });
   for(const verb of ['refund','cancel'])document.querySelectorAll(`[data-${verb}]`).forEach(el=>el.onclick=action(async()=>{await api(`/orders/${el.dataset[verb]}/${verb}`,'POST',{},`${verb}-${el.dataset[verb]}`);await render();notify(`Test order ${verb==='refund'?'refunded':'cancelled'}; stock restored`)}));
   if($('#save-preferences')) $('#save-preferences').onclick=action(async()=>{await api(`/customers/${customer.id}`,'PATCH',{consent:{email:$('#lab-email').checked,sms:$('#lab-sms').checked},unsubscribed:{email:$('#lab-unsub-email').checked,sms:$('#lab-unsub-sms').checked},openSupport:$('#lab-support').checked});await render();notify('Test preferences saved')});
@@ -79,5 +186,16 @@ function bind() {
   if($('#new-dataset')) $('#new-dataset').onclick=action(async()=>{await freshDataset();await render();notify('Fresh isolated dataset created')});
 }
 window.addEventListener('hashchange',action(async()=>{await render();window.scrollTo(0,0)}));
-try { if(!session) await freshDataset(); else { try { await api('/catalog'); } catch { await freshDataset(); } } await render(); }
+try {
+  if(!session) await freshDataset();
+  else {
+    try { await api('/catalog'); }
+    catch(error) {
+      // A temporary read failure must not replace a session with an unresolved order.
+      if(error.status===404 && !session.pendingCheckout) await freshDataset();
+      else throw error;
+    }
+  }
+  await render();
+}
 catch(error){$('#app').innerHTML=`<div class="page"><h1>Store unavailable</h1><p>${esc(error.message)}</p></div>`;}

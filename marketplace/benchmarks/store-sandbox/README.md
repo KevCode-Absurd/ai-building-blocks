@@ -22,6 +22,10 @@ Open `http://127.0.0.1:4318/`. Use the exact IP origin, not `localhost`. Routes:
 
 The browser creates its own dataset and synthetic customer/cart, retaining their IDs in `localStorage['private-store-session']`. New browser contexts create fresh datasets. The test console's **Create a fresh isolated dataset** preserves the previous dataset for audit. Do not delete or reset another benchmark's state. API agents should create a new dataset for every independent trial and save its ID in their private evidence.
 
+When an order is submitted, the browser saves a dataset/customer/cart-scoped pending operation before reserving stock or simulating payment. An uncertain response keeps the same request body and idempotency key. Reload or **Recover same attempt** resumes it and independently reads the persisted receipt before clearing the pending state. A confirmed decline or an expired/released hold without an order permits a new attempt. A temporary catalog failure does not replace a pending session with a fresh dataset. Keep the browser's local storage until recovery is complete; this is local sandbox recovery, not a real payment-provider integration or a cross-device session service.
+
+Pending-state changes are published in memory only after a successful storage write/readback. Each reservation/payment dispatch checks persistence again, including recovery after reload. Failed writes when recording payment identity, an accepted order or final cleanup retain the prior recovery state; repeated clicks cannot bypass the write requirement.
+
 Stop with Ctrl+C. The state directory has a single-writer `server.lock`. A second process cannot use it. After an unclean process termination, confirm its recorded PID is no longer running before removing that one stale lock file. Do not remove live locks. Restart the server against the same directory for order/inventory readback. Dataset files are individually persisted by synchronous atomic replacement before successful responses.
 
 ## HTTP contract
@@ -75,8 +79,13 @@ This is a trusted-local-process benchmark tool, not an internet-facing authentic
 ```powershell
 node --test marketplace/benchmarks/store-sandbox/store.test.mjs
 node marketplace/benchmarks/store-sandbox/ui-test.mjs --playwright ../benchmark-runtime/node_modules/playwright --output ../implementation-evidence/store-demo/ui-evidence
+node marketplace/benchmarks/store-sandbox/recovery-ui-test.mjs --playwright ../benchmark-runtime/node_modules/playwright --output ../implementation-evidence/store-demo/recovery-evidence
 ```
 
 For a private brand UI test, append `--seed <private-seed.json> --assets <private-assets-directory>`. Output/state/screenshots stay at the explicit output path. Each UI test starts its own ephemeral loopback server/dataset and closes its Chrome/server afterward. It preserves its state directory for inspection; it does not modify a shared benchmark server. Chrome runs with `chromiumSandbox:true`, a temporary profile, and no `--no-sandbox`. Environments that deny local networking/browser startup need an approved specific script invocation, not relaxed Chrome security.
 
 Backend tests cover concurrency/oversell, atomic rollback, idempotency conflicts, declines, expiration, refunds/cancellation and restart persistence, consent/channel suppression, duplicate events, flow delays, recent buyers, cart changes, returned orders, dataset isolation, synthetic-contact validation, single-writer locks, exact Host, cross-origin rejection, asset isolation and independent receipts. Browser tests cover actual desktop/mobile rendering, image loads, unavailable variants, add-to-cart, declined/approved checkout, receipt readback, refund/restock and local outbox. No live-provider success should be inferred from passing these tests.
+
+The focused recovery browser test uses the synthetic fixture and a new output directory (it refuses to overwrite previous evidence). It drops responses after the local server accepts reservations, approvals and declines; tests reload and failed receipt/catalog reads; checks explicit decline/new attempts, expired holds and repeated submission; and rejects pending operations for the wrong dataset, cart or customer. It reads back order count, stock, receipt and request identities. Passing these cases does not establish arbitrary browser-storage corruption, simultaneous multi-tab behavior or live-provider recovery.
+
+The same suite injects `localStorage.setItem` failures before the first reservation, while saving payment/order identity, during final cleanup, and on reload. It verifies that repeated actions produce no additional reservation/payment requests while writes fail and that restoring storage permits recovery of one order with one stock mutation.

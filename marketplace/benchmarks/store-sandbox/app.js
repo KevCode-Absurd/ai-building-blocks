@@ -20,7 +20,7 @@ async function freshDataset() {
 }
 async function refresh() {
   [catalog,cart,customer]=await Promise.all([api('/catalog'),api(`/carts/${session.cart}`),api(`/customers/${session.customer}`)]);
-  $('#bag-count').textContent=cart.items.reduce((n,i)=>n+i.quantity,0); $('#brand').textContent=catalog.brand; $('#footer-brand').textContent=catalog.brand;
+  $('#bag-count').textContent=cart.status==='converted'?0:cart.items.reduce((n,i)=>n+i.quantity,0); $('#brand').textContent=catalog.brand; $('#footer-brand').textContent=catalog.brand;
   document.title=`${catalog.brand} · Private test store`;
 }
 function cards() { return catalog.products.filter(p=>selectedCategory==='All'||p.category===selectedCategory).map(p=>`<a class="product-card" href="#product/${esc(p.id)}">${image(p)}<h3>${esc(p.title)}</h3><p class="price">${money(p.variants[0].price)}</p><p class="muted">Synthetic test price · ${p.variants.some(v=>v.stock>0)?'Test stock available':'Out of test stock'}</p></a>`).join(''); }

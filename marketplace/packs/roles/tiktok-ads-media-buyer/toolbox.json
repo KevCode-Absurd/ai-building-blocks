@@ -8,6 +8,7 @@
       "task": "Run the weekly account review and call each ad",
       "kind": "analysis",
       "items": [
+        { "ref": "kit:workflows/tiktok-media-buying", "use": "build", "when": "Before account decisions: establish scope, evidence, execution access and verification" },
         { "ref": "kit:workflows/weekly-review-routine", "use": "brief", "when": "Once a week on the same day, plus a quick mid-week look at spend and rejections" },
         { "ref": "kit:skills/tiktok-hook-test-and-weekly-review", "use": "build", "when": "When the weekly export is in and each ad needs a pause, keep or scale call" },
         { "ref": "library:tiktok-ads-weekly-account-keeper", "type": "agent", "use": "build", "when": "Each week, to turn the exports into keep, fix or kill calls with reasons" },
@@ -236,6 +237,7 @@
     }
   ],
   "always": [
+    {"ref": "kit:workflows/tiktok-media-buying", "use": "check", "when": "For every TikTok task: verify account scope, tools, attribution and delivery before diagnosis or changes"},
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "When a script or report states a number or result you cannot trace to the client" },
     { "ref": "library:doc-typo-and-term-checker", "type": "prompt", "use": "check", "when": "Before a brief, script or report is sent, to catch typos and names spelt two ways" }
   ],

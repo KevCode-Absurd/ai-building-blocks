@@ -1389,7 +1389,6 @@
             "efrain-meta-lead-ads",
             "dustin-ad-deployment",
             "lindsey-meta-media-buyer",
-            "kelsey-snapchat-ads",
             "bianca-meta-ads"
           ],
           "seat_suitability": [
@@ -7711,7 +7710,7 @@
     {
       "id": "dustin-ad-deployment",
       "name": "Dustin",
-      "title": "E-commerce ad copy and deployment specialist",
+      "title": "Meta ad copy and launch execution specialist",
       "roles": [
         "ad-fatigue-watcher",
         "ad-test-sprint-runner",
@@ -12438,7 +12437,6 @@
         "ad-fatigue-watcher",
         "ecommerce-analyst",
         "marketing-analyst",
-        "meta-media-buyer",
         "monthly-catalogue-clean-up-keeper",
         "monthly-tracking-health-keeper",
         "snapchat-ads-media-buyer"
@@ -17875,7 +17873,7 @@
     {
       "id": "raymond-google-ads",
       "name": "Raymond",
-      "title": "Google Ads and Shopping specialist for stores",
+      "title": "Google ads media buyer",
       "roles": [
         "brand-and-non-brand-splitter",
         "google-ads-media-buyer",

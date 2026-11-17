@@ -11,28 +11,44 @@ export const VERTICAL_ID = /^[a-z][a-z0-9-]{1,39}$/;
 export const JURISDICTIONS = ["IN", "US", "UK", "EU"] as const;
 
 interface IndexFile { schema: string; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[]; synonyms?: Synonyms | null }
-const cache = new Map<string, Promise<{ file: IndexFile; index: CardIndex } | null>>();
+const files = new Map<string, Promise<IndexFile | null>>();
+interface LoadedIndex { file: IndexFile; index: CardIndex; candidate_count: number; total_cards: number; indexed_modules: string[] }
+const cache = new Map<string, Promise<LoadedIndex | null>>();
 
 /** The vertical's index, or null when it is not built (or not a vertical). Failures are not cached. */
-export function verticalIndex(env: Env, id: string): Promise<{ file: IndexFile; index: CardIndex } | null> {
+export function verticalIndex(env: Env, id: string, modules: string[] = []): Promise<LoadedIndex | null> {
   if (!VERTICAL_ID.test(id)) return Promise.resolve(null);
-  const hit = cache.get(id);
+  const selected = [...new Set(modules)].sort();
+  const key = `${id}:${selected.join(',')}`;
+  const hit = cache.get(key);
   if (hit) return hit;
-  const load = (async () => {
+  let fileLoad = files.get(id);
+  if (!fileLoad) {
+    fileLoad = (async () => {
     if (!env.ASSETS) return null;
     const res = await env.ASSETS.fetch(new Request(new URL(`/packs/knowledge/${id}/index.json`, env.APP_ORIGIN)));
     if (!res.ok || !(res.headers.get("content-type") ?? "").includes("json")) return null;
     const file = await res.json() as IndexFile;
     if (file?.schema !== "ai-blocks-vertical-index/1" || !Array.isArray(file.cards)) return null;
-    return { file, index: new CardIndex(file.vertical, file.cards, file.sources, file.synonyms) };
-  })();
-  load.then(v => { if (!v) cache.delete(id); }, () => cache.delete(id));
-  cache.set(id, load);
+    return file;
+    })();
+    files.set(id, fileLoad);
+    fileLoad.then(v => { if (!v) files.delete(id); }, () => files.delete(id));
+  }
+  const load = fileLoad.then(file => {
+    if (!file) return null;
+    const cards = selected.length ? file.cards.filter(card => card.modules.some(code => selected.includes(code))) : file.cards;
+    return { file, index: new CardIndex(file.vertical, cards, file.sources, file.synonyms), candidate_count: cards.length, total_cards: file.cards.length, indexed_modules: selected };
+  });
+  load.then(v => { if (!v) cache.delete(key); }, () => cache.delete(key));
+  // Bound caller-selected module combinations. Eviction does not expand the search scope.
+  if (cache.size >= 64) cache.delete(cache.keys().next().value!);
+  cache.set(key, load);
   return load;
 }
 
 /** Tests only. */
-export function forgetVerticals(): void { cache.clear(); shelves.clear(); }
+export function forgetVerticals(): void { cache.clear(); files.clear(); shelves.clear(); }
 
 // ---------- Shelves: the prompts, skills, tools and minds (shelf.ts) ----------
 
@@ -73,6 +89,18 @@ export async function shelfText(env: Env, path: string): Promise<string | null> 
   if (!env.ASSETS || path.includes("..") || !/^\/packs\/knowledge\/[a-z0-9-]+\/[A-Za-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
   const res = await env.ASSETS.fetch(new Request(new URL(path, env.APP_ORIGIN)));
   return res.ok ? res.text() : null;
+}
+
+/** Reject malformed explicit constraints at request boundaries; never turn a typo into a wider search. */
+export function cardConstraintProblem(raw: Record<string, unknown>): string | null {
+  const constraints: Record<string, readonly string[]> = { jurisdiction: JURISDICTIONS, marketplace: JURISDICTIONS, mode: ["dtc_first", "amazon_first", "new_product", "expansion"], platform: ["shopify", "woocommerce"], scope: ["baseline", "growth"] };
+  for (const [key, allowed] of Object.entries(constraints)) {
+    if (raw[key] === undefined) continue;
+    const value = typeof raw[key] === "string" ? (raw[key] as string).trim() : null;
+    const normalized = value !== null && ["jurisdiction", "marketplace"].includes(key) ? value.toUpperCase() : value;
+    if (normalized === null || !allowed.includes(normalized)) return `${key} must be one of: ${allowed.join(", ")}. Invalid constraints are never dropped to widen the search.`;
+  }
+  return null;
 }
 
 /** Reads the query options from loose input (URL parameters or tool arguments), dropping anything not allowed. */

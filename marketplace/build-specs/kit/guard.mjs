@@ -116,7 +116,7 @@ export function checkPlan(plan, tools, limits, now = Date.now()) {
 export const PROTECTED_FILES = ["context/limits.json", "context/goals.json", "context/approvers.json", "agent/tools.json", "agent/agents.json",
   ".claude/settings.json", ".claude/settings.local.json",
   "agent/guard.mjs", "agent/actions.mjs", "agent/hooks.mjs", "agent/board.mjs", "agent/spend.mjs", "agent/process.mjs",
-  "agent/trace.mjs", "agent/trace-checks.mjs", "agent/transitions.mjs"];
+  "agent/trace.mjs", "agent/trace-checks.mjs", "agent/transitions.mjs", "agent/bootstrap.mjs"];
 const PROTECTED_PATTERNS = [/(^|\/)processes\/[^/\s"']+\.json$/, /(^|\/)\.claude\/agents\/[^/\s"']+\.md$/];
 export const isProtectedFile = file => {
   const f = String(file).replace(/\\/g, "/");

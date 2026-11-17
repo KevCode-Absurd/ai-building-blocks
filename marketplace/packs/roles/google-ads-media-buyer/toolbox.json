@@ -8,6 +8,7 @@
       "task": "Run the weekly check and write the results note",
       "kind": "analysis",
       "items": [
+        { "ref": "kit:workflows/google-media-buying", "use": "build", "when": "Before account decisions: establish scope, evidence, execution access and verification" },
         { "ref": "kit:workflows/weekly-optimisation-routine", "use": "build", "when": "Once a week, same day, to work through the account in a fixed order" },
         { "ref": "kit:prompts/weekly-results-read", "use": "build", "when": "When you have fresh exports and need a short note the owner can act on" },
         { "ref": "library:google-ads-weekly-account-keeper", "type": "agent", "use": "check", "when": "When you want waste cut, a scale-or-hold call and a change list to approve each week" },
@@ -262,6 +263,7 @@
     }
   ],
   "always": [
+    {"ref": "kit:workflows/google-media-buying", "use": "check", "when": "For every Google task: verify account scope, tools, attribution and delivery before diagnosis or changes"},
     { "ref": "library:metric-mismatch-tracer", "type": "skill", "use": "check", "when": "Before you quote a number, when Google Ads and the store or analytics disagree" },
     { "ref": "library:plain-english-editor", "type": "skill", "use": "check", "when": "Before a note or report goes to the owner, to put account terms into plain words" }
   ],
@@ -269,7 +271,7 @@
     { "role": "cro-specialist", "when": "When the ads are sound and the landing page is what loses the lead or sale" },
     { "role": "shopify-specialist", "when": "When feed, tags or checkout tracking must be changed inside the store" },
     { "role": "marketing-analyst", "when": "When the question is credit across channels, not inside Google Ads" },
-    { "role": "meta-media-buyer", "when": "When budget is shared with Meta and both accounts need one plan" },
+    { "role": "growth-marketer", "when": "When cross-channel allocation needs Jared; keep Google execution and account authority with the Google buyer" },
     { "role": "local-marketing-specialist", "when": "When a local firm needs its listing, reviews and local pages fixed first" },
     { "role": "ad-creative-strategist", "when": "When Performance Max, Demand Gen or YouTube need images and video made" }
   ],

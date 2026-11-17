@@ -1,6 +1,6 @@
 # Build your store's agent team
 
-Unzip this build folder, open it in Claude Code, and say: **"Build my store's agent team from BUILD.md."** Everything Claude needs is in this folder: this file, the kit in `files/`, the processes in `processes/` and the access guides in `access/`. Claude will set everything up with you, one step at a time. You sign in to your own tools and say yes at the points that matter. Claude does the rest.
+Unzip this build folder. To install the framework into a new client folder without API calls, run `node files/agent/bootstrap.mjs install --to ../my-store-agents --client my-store`. Then open the installed folder in your coding assistant and say: **"Build my store's agent team from SETUP.md."** The installer copies the framework and process files; it does not connect accounts, download all specialist packs or start a hosted service. It keeps enforcement hooks inactive until setup is checked. The source bundle contains this file, the kit in `files/`, the processes in `processes/` and the access guides in `access/`. Complete the remaining steps in the installed `SETUP.md`.
 
 ## For you, the owner (read this part)
 
@@ -12,9 +12,9 @@ Unzip this build folder, open it in Claude Code, and say: **"Build my store's ag
 
 | Way | What it is | Good for |
 |---|---|---|
-| 1. On your computer | Claude Code runs the team in a folder on your computer. | Trying it, one-person stores |
-| 2. On a schedule | The same folder, also run by Claude scheduled tasks in the cloud every morning, so data, readouts and drafts are ready while your laptop is closed. Uses your Claude plan. | Most owners |
-| 3. Hosted | Your own small server (we suggest Railway) with a live dashboard, an approval page, and Slack approvals for your team. Uses your own Anthropic API key. | Teams, agencies, many stores |
+| 1. In your AI session | Use a specialist pack in your AI host. A coding host can use the installed local framework; file execution, tools and persistence depend on that host. The supplied hook adapter is for Claude Code only. | A first workflow or one-person store |
+| 2. On a schedule | Use a scheduler supported and tested in your chosen host, with durable storage and read/draft access. Verify whether it runs while your computer is off and how it is billed. No scheduler is installed by this kit. | Repeated reports and drafts |
+| 3. Shared team service | Deploy a separately implemented authenticated runtime with a durable queue, isolated client storage, provider adapters and verified connector access. This kit supplies workflow contracts and local code, not that finished service. | Teams and agencies after integration tests |
 
 **What never happens without you.** Spending, sending, publishing, changing budgets above your step limit, changing your money limits or goals, deleting anything, payments, deposits, contracts, purchase orders and billing. Scheduled runs only read and draft.
 
@@ -38,15 +38,15 @@ Unzip this build folder, open it in Claude Code, and say: **"Build my store's ag
 - When the owner's screen does not match a step (menus change), ask what they see and work it out together. Never guess a menu path, a scope or a tool name: look in your own tool list or the official docs.
 - Test every part before you call it done. If something fails, say so plainly with the output.
 
-### 1. Ask first (one message)
+### 1. Reuse known context, then ask for missing inputs
 
-Ask these together and wait for the answers:
+Read the existing org context, task brief and valid prior authorization first. Do not ask again for information already supplied. Bundle only material missing inputs from this list; continue independent draft work while waiting:
 
 1. Store name and website. Do you already have an Org context folder (from the AI Blocks Org context builder)?
 2. What do you sell, to whom, in which countries and currency?
 3. Which jobs do you want the team to do first? Offer the processes in step 7 as a short menu.
 4. Your main number for judging results (for example return on ad spend over 7 days, or profit per order), any second numbers you care about (for example video hook rate), and the guardrails (for example cost per purchase must stay under a set amount).
-5. Money limits: the most new ad spend a day, the biggest budget rise in one step (we suggest 20%), a monthly cap, and the generation budget per creative job you are happy with.
+5. Money limits: the most new ad spend a day, the biggest budget change allowed in one step, based on the account economics, a monthly cap, and the generation budget per creative job you are happy with.
 6. Which way to run (1, 2 or 3). Recommend 1, then 2 once it works.
 7. Do you work alone, with a team, or for clients?
 8. Where should notices go: only in Claude, or also a Slack channel or email?
@@ -81,7 +81,7 @@ Add a `.gitignore` with `.env`, `warehouse/store.duckdb` and `node_modules/`.
 
 ### 3. Install the kit and test it
 
-Copy everything in this build folder's `files/` into the store folder, keeping each path (Appendix A lists every file and where it goes), except `files/.claude/settings.json`, which waits for step 9 so the owner-held files can still be written in step 5. Then run `node --test agent/kit.test.mjs agent/gate.test.mjs agent/trace.test.mjs warehouse/warehouse.test.mjs`. All tests must pass before you go on. Show the owner the one-line result.
+If the bootstrap installer was used, run `node agent/bootstrap.mjs doctor` to verify installed file hashes; inspect every reported change. Otherwise copy `files/` using Appendix A, holding `.claude/settings.json` until step 9. A local file check does not verify connectors or hosted tenancy. Then run `node --test agent/kit.test.mjs agent/gate.test.mjs agent/trace.test.mjs warehouse/warehouse.test.mjs`. All tests must pass before you go on. Show the owner the one-line result.
 
 What the kit does, in plain words:
 
@@ -94,6 +94,8 @@ What the kit does, in plain words:
 - `trace.mjs` writes one line to `agent-state/trace.jsonl` for every stage, check, sign-off, change request, plan, approval, tool call, read back and stop, in order. `trace-checks.mjs` checks a trace against the rules (only approved writes, no retries, read back before saying done), and `transitions.mjs` makes the failure table the monthly review starts from.
 
 ### 4. Org context
+
+Read `files/BRAND-CONTEXT-CONTRACT.md` and `files/MEMORY-ARCHITECTURE.md`. Reuse one canonical brand brain with task-specific slices: guide/design, voice, customer evidence, approved copy/claims, product/media rights, offers/policies and metric definitions. Use the existing org-context ledger for facts and corrections; keep episodes and working state separate. Compile scoped evidence packets for multi-source tasks; source matches do not certify an answer.
 
 If the owner has an Org context folder, copy it into `context/org-context/`. If not, build it now with the AI Blocks Org context builder skill (https://useaiblocks.com/skills/website-brand-brain-builder) from the website, reviews and any brand guide the owner has, and show the owner the summary page to correct. Every intake stage reads this folder. Nothing goes out that contradicts it.
 
@@ -108,7 +110,7 @@ Write `context/goals.json` and `context/limits.json` from the owner's answers, s
 For each agent the owner's chosen processes use:
 
 1. Download the agent's pack from its page on https://agents.useaiblocks.com and unzip it into `agents/<agent-id>/`. If a pack is not there yet, write the agent's file from its stages in the processes and say so to the owner.
-2. Write `.claude/agents/<agent-id>.md` with: a description saying which process stages it does; a `tools:` line listing only the tools that agent needs (a scriptwriter never gets the Meta connector; a launch agent never gets email); a pinned `model:` (makers `claude-sonnet-5-5`, reviewers and money decisions `claude-opus-5-5`, data summaries `claude-haiku-5-5`); and a body that points to its pack, `context/org-context/`, `context/learnings.md` and its stages in `processes/`.
+2. Write `.claude/agents/<agent-id>.md` with: a description saying which process stages it does; a `tools:` line listing only the tools that agent needs (a scriptwriter never gets the Meta connector; a launch agent never gets email); a pinned model identifier actually supported by the selected host (choose from observed capabilities and measured quality, cost and latency; do not invent version names); and a body that points to its pack, `context/org-context/`, `context/learnings.md` and its stages in `processes/`.
 3. Reviewers are separate subagents with read-only tools, so the maker never marks its own work.
 
 Use the exact tool names from your own tool list when you fill in `tools:` lines. If a connector is not connected yet, leave a note and come back after step 8.
@@ -147,7 +149,7 @@ Check the warehouse: yesterday's spend in `ads_daily` matches Ads Manager, and y
 
 ### 11. Schedules (way 2)
 
-Create Claude scheduled tasks with `/schedule`, on the owner's GitHub repository, with only the connectors each task needs:
+Only if recurring work was requested, inspect the selected host's current scheduler and capabilities, then configure supported tasks with only the connectors each needs. Do not assume a particular slash command, cloud runtime or subscription entitlement. Candidate recurring jobs:
 
 | Task | When | What it does |
 |---|---|---|
@@ -155,7 +157,7 @@ Create Claude scheduled tasks with `/schedule`, on the owner's GitHub repository
 | Weekly review | Mondays | the results loop's lessons, the growth plan's weekly check, creative refresh briefs |
 | Monthly numbers | first working day | the monthly numbers process |
 
-In the task's cloud environment set `AGENT_RUN_MODE=scheduled` (so the gate blocks every write) and the read-only pipeline token. Never put a publish token there: environment variables are visible to anyone who uses the environment. Remove every connector a task does not need. Each run ends by committing its reports and data files.
+When the selected host actually runs the supplied gate, set `AGENT_RUN_MODE=scheduled` and use scoped read-only credentials through its secret store. Verify a blocked-write trial; setting an environment variable alone does not enforce a rule in another host. Remove unused connectors. Keep reports and source extracts in authorized private storage; do not automatically commit merchant or customer data.
 
 ### 12. Dashboard
 
@@ -176,21 +178,25 @@ Show the owner these, and put them in `CLAUDE.md`:
 - After each step of a plan, read the object back with the connector, then run `node agent/actions.mjs verify <plan> <step> "<what you saw>"`. It compares the read with the plan in code (status, budget and ids) and refuses if they differ. Never tell the owner a change is done or live before this passes.
 - Image and video generation runs only inside a signed-off budget: `node agent/spend.mjs use <job folder>` first, and `node agent/spend.mjs add` after each generation.
 
-### 14. Hosted (way 3)
+### 14. Shared hosted execution (way 3)
 
-Only when the owner chooses it. Build it with them, test it in read-only mode for a week, then turn on publishing.
+This is an implementation contract, not a claim that the hosted service is included. Do not equate a chat subscription with an unattended model API entitlement. Use only a provider and billing mode the owner has chosen; integration tests can use local fixtures without model charges.
 
-- **One service on Railway** running a small Node app, with a volume holding a working copy of the store repository, plus a Postgres database for the warehouse. A scheduler inside the app runs the morning and weekly tasks; add Redis with BullMQ only if jobs need to run on several workers at once.
-- **The agents** run with the Claude Agent SDK (`@anthropic-ai/claude-agent-sdk`) using the owner's own Anthropic API key, stored as a Railway variable. Use `settingSources: ["project"]` so the same `.claude/settings.json` hooks and subagents apply, pin `model` per job with a `fallbackModel`, and set `maxTurns` and `maxBudgetUsd` on every run. Scheduled runs set `AGENT_RUN_MODE=scheduled`.
-- **Publishing** uses the publish token (Meta access guide, Way 2, step 6) only inside the hosted app. The model calls the same connector tools; the gate checks each call.
-- **Approvals** happen on a sign-in page (Google sign-in, with the owner's and approvers' emails in an owner-held `context/approvers.json`): the page shows the dry run and a box where the approver types `yes <code>`; the server calls `recordApproval` or `signOff` with the approver's email. Slack approvals work the same way through a Slack app: verify Slack's request signature, check the user id is in `approvers.json`, and record the exact words.
-- **Secrets** live only in Railway variables. Never in the repository, a file on the volume, a log line or a chat.
+- Authenticate the person and resolve organization, client and project on the server. Every source read, memory read/write, job, artifact, secret and approval uses that scope. A folder name or a prompt is not tenant authorization. For an agency pilot, isolate each client's storage and credentials before sharing any workers.
+- Persist a run record with the workflow version, agent pack hashes, source snapshot, budget, deadline and step dependencies. One specialist owns each step. Parallelize independent channel analyses; serialize writes that share an account or product. A coordinator sets the goal and merges evidence, not every intermediary conversation.
+- Use a durable queue with leases, cancellation and recovery. Persist stage outputs and their hashes before advancing. Retry read-only/transient work within bounds. For an uncertain external write, inspect provider state by recorded IDs and idempotency key before deciding whether to retry; never blindly repeat a publish, send or payment.
+- Bind delegated context to a task evidence packet: required questions, relevant source passages and conditions, current reconciled brand memory, missing inputs and exact acceptance checks. Each child returns an artifact, evidence, decisions and unresolved gaps. The parent validates those checks before joining branches.
+- A model proposes actions; a server-side executor checks actual account scope, approved operation and budget before a connector call. Valid standing authority may be reused within its scope. Keep secrets out of model context. Save provider receipts and fresh readback; active configuration is not delivery or business impact.
+- Keep approval and status interfaces small: what will change, why, money/time limits, expected effect and evidence. The server authenticates approvers and binds approval to the exact operation/version. A copied approval string is not authenticated authority.
+- Production acceptance requires two-client isolation tests, restart/resume and duplicate-delivery tests, revoked-source and stale-memory tests, provider sandbox checks and a complete workflow with independently reviewed artifacts. A week of read-only operation alone is not enough to enable writes.
+
+The marketplace already has durable job-run infrastructure in `src/modules/runner/workflow.ts`. Reuse suitable existing infrastructure rather than adding a second untracked job system. Its current model-run behavior is not proof that arbitrary external ecommerce tools or shared client isolation are implemented.
 
 ### 15. Teams, clients and sharing
 
 - **Team:** list approvers in `context/approvers.json` with what each may approve (creative sign-off, spend up to an amount, sends). Every approval records who said it.
-- **Clients (agencies):** each client gets their own store folder and repository. The client is the approver for creative and spend, through the approval page or the owner relaying their exact words.
-- **Sharing the setup:** the store folder without `context/`, `agent-state/`, `board/`, `creatives/`, `warehouse/data/` and any `.env` is a template. Someone else copies it, runs this file, and connects their own tools and keys. Never share tokens, approvals or customer data.
+- **Clients (agencies):** each client gets their own store folder and repository. The client or an explicitly delegated approver authorizes creative and spend. A hosted service must authenticate that delegation; relayed text alone is not proof of identity or scope.
+- **Sharing the setup:** share the original clean build bundle and install a new workspace for each client. If a custom template is needed, explicitly allowlist reviewed framework code, process definitions and empty example configuration. Do not copy a populated client workspace: `context/`, `jobs/`, `reports/`, `agent-state/`, `board/`, `creatives/`, warehouse databases/data, credentials and approvals are private. A `.gitignore` does not sanitize a copied folder or remove files already committed.
 
 ### 16. Getting better over time
 
@@ -206,9 +212,9 @@ Before you tell the owner the build is finished, show each of these:
 - [ ] `node agent/process.mjs check processes/*.json` passes.
 - [ ] A write was blocked before the yes and ran after it, and `status` shows it checked.
 - [ ] A direct edit to `context/limits.json` was blocked, and a file plan changed it after the yes.
-- [ ] The warehouse matches Ads Manager and the shop for yesterday.
+- [ ] Warehouse extracts reconcile to their own source definitions. Ads attribution, store orders and refunds retain their different scopes; totals are not forced to match.
 - [ ] One job moved through at least two stages on the board, with one owner sign-off.
-- [ ] Scheduled tasks exist with `AGENT_RUN_MODE=scheduled` and only the connectors they need.
+- [ ] If requested, scheduled tasks have passed a real execution and access test on the selected host; unsupported schedules are reported, not invented.
 - [ ] The owner knows how to ask "what's waiting for me?", approve with a code, and pause everything.
 
 ---

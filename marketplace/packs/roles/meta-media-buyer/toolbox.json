@@ -8,6 +8,7 @@
       "task": "Take in a new client before touching the account",
       "kind": "plan",
       "items": [
+        { "ref": "kit:workflows/meta-media-buying", "use": "build", "when": "Before account decisions: establish scope, evidence, execution access and verification" },
         { "ref": "kit:prompts/account-intake", "use": "build", "when": "In the first talk with a new client, to collect the facts every later choice depends on" },
         { "ref": "library:break-even-roas-and-cpa-calculator", "type": "skill", "use": "build", "when": "When price and margin are known, to set the return and cost per sale the ads must beat" }
       ]
@@ -255,6 +256,7 @@
     }
   ],
   "always": [
+    {"ref": "kit:workflows/meta-media-buying", "use": "check", "when": "For every Meta task: verify account scope, tools, attribution and delivery before diagnosis or changes"},
     { "ref": "library:claim-fact-checker", "type": "skill", "use": "check", "when": "Before any ad or report states a number, a result or a customer claim, to check it traces" }
   ],
   "helpers": [

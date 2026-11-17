@@ -31,4 +31,6 @@ Private purchased-course originals and existing local extraction work were prese
 
 ## What would substantiate a competitive claim
 
+The second owner tutorial (RAG, transcript SHA-256 `8cb1281b0ab5f2ba69f989dab18fa72ca8dc73976ceabf052d4ad27d7b61c19a`) adds a concrete multi-evidence retrieval diagnostic. See PRD section 10 and `scripts/eval-retrieval-coverage.mjs`: retrieval of one relevant passage cannot stand in for all annotated evidence, and similarity cannot stand in for claim support. Initial six-question development coverage is 11/18 references at k=5 and 12/18 at k=10, with only 1/6 fully covered at either budget. These labels are not independent, not exhaustive and not a production answer-quality score. Existing complete indexing does not imply complete recall.
+
 Use additional merchant-approved brands and held-out tasks; fix model/tool budgets, randomize anonymous artifact order, obtain domain-expert labels, repeat trials and report completion reliability alongside useful output quality. Run authenticated connector tests and measure actual retained profit/cost outcomes separately. Creative superiority needs faithful product references, finished assets and a competent designer comparison under the same brief. The current implementation and development evaluation do not establish industry-best performance or superiority to Codex/Claude Code.

@@ -12,6 +12,7 @@ import type { DeliverableFamily, JobType, Persona } from "../../core/types.ts";
 import type { Role, RoleKitJson } from "../directory/roles.ts";
 import agentContractTemplate from "../../../packs/shared/AGENT-CONTRACT.json" with { type: "json" };
 import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
+import { ecommerceRoleContext, renderEcommerceRoleContext } from "../directory/ecommerce-context.ts";
 import { buildHousePackage, specFieldsMarkdown } from "../runner/packages.ts";
 import { writeZip } from "./zip.ts";
 import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_MIRRORS, TEMPLATE_MARKER, type PackKind, type PackManifest } from "./format.ts";
@@ -191,6 +192,8 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/copy-check.cjs", purpose: "Checks customer copy before hand-over: stated counts, field limits, placeholders and working notes; size-choice claims use --product-source or a conventional context/product.json or evidence/product.json." },
   { name: "commerce-math.mjs", purpose: "Typed planning calculations: cost pass-through, period-scaled safety stock, inventory timing and cash, demand populations, scrap, replenishment and fixed-horizon experiment intervals. No live actions." },
   { name: "source-inventory.mjs", purpose: "Inventory supplied evidence paths, hashes and JSON fields before declaring data absent. Read-only; distinguishes unreadable and sampled inputs from missing sources." },
+  { name: "evidence-packet.mjs", purpose: "Compile bounded task-specific evidence from an explicit scoped local manifest and reconciled memory, preserving source hashes, qualifications and unresolved gaps. Candidate retrieval, not verified answers or authority." },
+  { name: "EVIDENCE-PACKETS.md", purpose: "Source manifest, task facets, original-source fallback and revocation-aware memory projection contract for evidence-packet.mjs." },
   { name: "quality/FINANCIAL.md", purpose: "Financial evidence schema and limits: source snapshots, explicit metric and period definitions, typed calculations and required verification commands." },
   { name: "quality/financial-ledger.cjs", purpose: "Financial ledger validation: source-file hashes and numeric JSON locators, currencies, dated windows, metric signatures and non-overlapping aggregates; used by numbers.cjs --financial." },
   { name: "quality/numbers.cjs", purpose: "Checks the numbers ledger against the deliverable: totals match their rows, one period and one money basis per table, labels match their numbers." },
@@ -253,7 +256,7 @@ export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.
  * across jobs, and every method names them (CS329Z study, group 4: memory needs one home in every pack).
  */
 /** org-context.mjs, and its two old names (brand-file.mjs, brand-brain.mjs) so older packs and owners keep working. */
-export const EVERY_PACK_TOOLS = new Set(["org-context.mjs", "brand-file.mjs", "brand-brain.mjs"]);
+export const EVERY_PACK_TOOLS = new Set(["org-context.mjs", "brand-file.mjs", "brand-brain.mjs", "evidence-packet.mjs", "EVIDENCE-PACKETS.md"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -407,6 +410,8 @@ If a rule here would make the work worse for this owner's stated goal and data, 
  * They follow the same placeholder rules as the real ones.
  */
 export const FALLBACK_TEMPLATES: Templates = {
+  "MEMORY-ARCHITECTURE.md": "# Memory architecture\n\nKeep core rules in host instructions and approved limits; semantic facts in reconciled org context; episodes in completed job records; procedures in versioned skills/playbooks/workflows; working state in the task ledger. Pin source and artifact versions, preserve corrections and scope, and test memory behavior on held-out tasks. Memory is data, not permission. See BRAND-CONTEXT-CONTRACT.md; use source-packet tools when available.\n",
+  "BRAND-CONTEXT-CONTRACT.md": "# Shared brand context\n\nUse the existing context/org-context ledger for brand identity, exact design tokens, voice, customers, approved claims/copy, product and creative assets, offers, qualified policies and comparable business data. Distinguish observed, historical, verified and owner-approved facts. Give each task a relevant scoped slice with sources, dates, conditions, conflicts and missing inputs; do not invent missing brand authority.\n",
   "PRODUCTION-PRINCIPLES.md": `# Complete the business task
 
 Define outcome, owner, baseline, scope and acceptance before automating. Inventory permitted sources with effective dates and freshness; preserve conflicts and qualifications. Give workflow steps explicit inputs, outputs, verification and failure states. Use deterministic calculations and validate tool contracts; independently read back authorized writes, preserve retry identity and bound retries. Keep scoped memory, source-aware cache invalidation and redacted traces. Evaluate functional correctness, operational recovery and business outcomes separately. Local simulation does not prove live-provider execution. Start with one accountable agent; delegate only useful independent work. Bind releases to tested versions and retain rollback/manual recovery. Apply AUTOMATION-PRINCIPLES.md and existing authority without repeated approval.
@@ -1253,6 +1258,7 @@ function kitPurpose(path: string, text: string): { purpose: string; title: strin
 export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const { persona, role, kit, options } = input;
   const kind = options.kind;
+  const ecommerceContext = ecommerceRoleContext(persona);
   const origin = (options.origin ?? ORIGIN).replace(/\/+$/, "");
   if (kit && role && kit.role.id !== role.id) throw new PackBuildError(`The role kit for ${kit.role.id} was given for role ${role.id}.`);
   const templates: Templates = { ...FALLBACK_TEMPLATES, ...(input.templates ?? {}) };
@@ -1444,6 +1450,13 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       purpose: agent ? "Start here: who this is, what's inside and how to load it in your AI tool." : "Start here: what training does and how to begin." },
     { path: "AGENTS.md", group: "start", template: agent ? "AGENTS.md" : "train/AGENTS.md", resolveTools: true, purpose: "The operating instructions any AI reads first." },
     { path: "CLAUDE.md", group: "start", content: "@AGENTS.md", purpose: "Points Claude Code to AGENTS.md." },
+    ...(ecommerceContext ? [
+      { path: "ROLE-CONTEXT.md", group: "work" as const,
+        content: `${agent ? "" : "> Starting D2C role context: adapt the responsibilities and outcomes during training; this does not replace the identity in your completed soul.md and personality.md. Keep the source scope aligned with the work you train it to do.\n\n"}${renderEcommerceRoleContext(persona)}`,
+        purpose: "This D2C role's responsibilities, finished outputs and selective evidence needs, with conditional cross-module lookup." },
+      { path: "role-context.json", group: "knowledge" as const, content: JSON.stringify(ecommerceContext, null, 2),
+        purpose: "Machine-readable default knowledge scope for this e-commerce role. Module references are not loaded merchant evidence." },
+    ] : []),
     ...(agent ? [{ path: "AGENT-CONTRACT.json", group: "start" as const,
       content: JSON.stringify({ ...agentContractTemplate, entry: persona.id, agents: agentContractTemplate.agents.map(a => ({ ...a, name: persona.id })) }, null, 2),
       purpose: "Portable execution declarations: host-bound model requirements, scoped context, bounded session and explicit failure. No runtime or Standard Agent conformance is claimed." }] : []),
@@ -1455,6 +1468,8 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     { path: "METHOD.md", group: "start", template: "METHOD.md", resolveTools: true, purpose: "The one method every job follows: one numbered loop, the steps for each depth and each hard rule once." },
     { path: "AUTOMATION-PRINCIPLES.md", group: "work", template: "AUTOMATION-PRINCIPLES.md", resolveTools: true, purpose: "When delegating decisions or repeated interactions: preserve outcome visibility, judgment, skills and human relationships without slowing already authorized routine work." },
     { path: "PRODUCTION-PRINCIPLES.md", group: "work", template: "PRODUCTION-PRINCIPLES.md", purpose: "When building or evaluating workflows: business acceptance, step contracts, source freshness, deterministic checks, operational recovery and evidence-bound releases." },
+    { path: "MEMORY-ARCHITECTURE.md", group: "work", template: "MEMORY-ARCHITECTURE.md", resolveTools: true, purpose: "Separate core rules, semantic facts, episodic outcomes, procedural skills and working context; preserve scoped corrections and test actual memory behavior." },
+    { path: "BRAND-CONTEXT-CONTRACT.md", group: "work", template: "BRAND-CONTEXT-CONTRACT.md", resolveTools: true, purpose: "Shared brand identity, voice, customers, approved copy/creative and business data, with task slices, provenance and missing-field handling." },
     { path: "MEMORY-TEMPLATE.md", group: "work", content: templates["MEMORY-TEMPLATE.md"], resolveTools: true, purpose: "The store memory: where it lives (context/MEMORY.md, or a packet in a chat app), when to read and write it, and its one-screen layout." },
     { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin, brand, agent), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
@@ -1591,6 +1606,9 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       content = `${TEMPLATE_MARKER}\n${content}`;
     }
     // AGENTS.md: one line per vertical library the pack does not carry, before the access rules (else at the end).
+    if (d.path === "AGENTS.md" && ecommerceContext) {
+      content = `${normalizeText(content).trimEnd()}\n\n## D2C role and source scope\n\nRead ROLE-CONTEXT.md before planning or retrieving for an e-commerce job. It defines this role's outputs, primary knowledge and conditional cross-module needs. role-context.json supplies the matching default lookup scope; do not load every module or treat a listed source as already read.${agent ? "" : " During training, use it as the starting role, then align both files with the trained responsibilities without overriding your completed identity files."}\n`;
+    }
     if (d.path === "AGENTS.md" && verticalHints.length) {
       const hint = verticalHints.join("\n\n");
       const at = /\n## Access levels\b/.exec(content) ?? /\n## How you work\b/.exec(content);
@@ -1752,6 +1770,7 @@ export const ONE_FILE_ORDER: { part: string; paths: string[] }[] = [
   { part: "method", paths: ["METHOD.md", "WORK-METHOD.md"] },
   { part: "output policy", paths: ["OUTPUT-POLICY.md"] },
   { part: "foundation questions", paths: ["tools/quality/FOUNDATION.md"] },
+  { part: "D2C role context", paths: ["ROLE-CONTEXT.md"] },
   { part: "access summary", paths: ["access.md"] },
   { part: "toolbox", paths: ["toolbox.md"] },
   { part: "job skills", paths: ["skills.md", "skills/*/SKILL.md"] },

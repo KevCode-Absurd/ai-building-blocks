@@ -24,3 +24,15 @@ test('sampled heterogeneous rows cannot imply complete field coverage',async()=>
   writeFileSync(path.join(dir,'rows.json'),JSON.stringify([...Array(100).fill({a:1}),{late_only:2}]));
   assert.equal(inventorySources(dir).files[0].coverage,'sampled_fields');
 });
+
+
+test('inventory rejects invalid byte/text budgets and never echoes malformed source values',async()=>{
+  const {inventorySources}=await load(),dir=mkdtempSync(path.join(tmpdir(),'sources-'));
+  writeFileSync(path.join(dir,'broken.json'),'invalid-sensitive-value-never-echo');
+  writeFileSync(path.join(dir,'invalid.md'),Buffer.from([0xff,0xfe]));
+  const r=inventorySources(dir);assert.equal(r.complete,false);
+  assert.ok(!JSON.stringify(r).includes('invalid-sensitive-value-never-echo'));
+  assert.ok(r.files.every((f:any)=>f.status==='unreadable'));
+  assert.throws(()=>inventorySources(dir,{maxBytes:0}),/positive/);
+  assert.throws(()=>inventorySources(dir,{maxFiles:-1}),/positive/);
+});

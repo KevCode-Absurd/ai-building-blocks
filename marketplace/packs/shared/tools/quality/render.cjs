@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Render a local HTML file to phone and desktop full-page screenshots.
-// Usage: node render.cjs <file.html> <out-prefix>
+// Usage: node render.cjs <file.html> <out-prefix> [style-contract.json]
 // Writes <out-prefix>-phone.png (390x844) and <out-prefix>-desktop.png (1280x800).
 // Also writes readable slices: <out-prefix>-phone-1.png, -2.png ... (two screens each)
 // and the same for desktop, because a very tall full-page image shrinks past legibility.
@@ -17,21 +17,30 @@ try { PW = require.resolve('playwright', { paths: [process.cwd(), path.join(proc
 catch { console.error('Rendering not run: install Playwright and its Chromium browser in the host project.'); process.exit(2); }
 
 async function main() {
-  const [file, prefix] = process.argv.slice(2);
+  const [file, prefix, contractPath] = process.argv.slice(2);
   if (!file || !prefix) {
-    console.error('Usage: node render.cjs <file.html> <out-prefix>');
+    console.error('Usage: node render.cjs <file.html> <out-prefix> [style-contract.json]');
     process.exit(2);
   }
   const abs = path.resolve(file);
   if (!fs.existsSync(abs)) { console.error('File not found: ' + abs); process.exit(2); }
   const outPrefix = path.resolve(prefix);
   fs.mkdirSync(path.dirname(outPrefix), { recursive: true });
+  const contract = contractPath ? JSON.parse(fs.readFileSync(path.resolve(contractPath), 'utf8')) : null;
+  if (contractPath && (!contract || !Array.isArray(contract.computed_styles) || !contract.computed_styles.length ||
+    contract.computed_styles.some(c => !c || typeof c.selector !== 'string' || !c.selector.trim() ||
+      typeof c.property !== 'string' || !/^[a-z][a-z-]*$/.test(c.property) ||
+      typeof c.equals !== 'string' || !c.equals.trim() ||
+      (c.view !== undefined && !['phone', 'desktop'].includes(c.view))))) {
+    throw Error('Style contract requires nonempty computed_styles: selector, property, equals, optional view phone/desktop');
+  }
 
   const { chromium } = require(PW);
   // Use an installed browser when the host sets PW_CHANNEL (for example chrome).
-  const browser = await chromium.launch(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {});
+  const browser = await chromium.launch({ chromiumSandbox: true, ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}) });
   const blocked = new Set();
   const failed = [];
+  const observations = [];
   try {
     const views = [
       { name: 'phone', width: 390, height: 844, mobile: true, scale: 1 },
@@ -64,6 +73,25 @@ async function main() {
       const overflowX = await page.evaluate(
         () => document.documentElement.scrollWidth > window.innerWidth + 1
       );
+      const styles = await page.evaluate((checks) => {
+        const sample = selector => {
+          const element = document.querySelector(selector);
+          if (!element) return { selector, missing: true };
+          const s = getComputedStyle(element);
+          return { selector, fontFamily: s.fontFamily, fontSize: s.fontSize, color: s.color,
+            backgroundColor: s.backgroundColor, margin: s.margin, padding: s.padding, maxWidth: s.maxWidth };
+        };
+        return {
+          samples: ['body', 'main', 'h1'].map(sample),
+          checks: checks.map(c => {
+            const elements = [...document.querySelectorAll(c.selector)];
+            const actual = elements.map(e => getComputedStyle(e).getPropertyValue(c.property).trim());
+            return { ...c, actual, pass: actual.length > 0 && actual.every(v => v === c.equals.trim()) };
+          }),
+          brokenImages: [...document.images].filter(i => !i.complete || i.naturalWidth === 0).map(i => i.getAttribute('src')),
+        };
+      }, (contract?.computed_styles ?? []).filter(c => !c.view || c.view === v.name));
+      observations.push({ view: v.name, width: v.width, height, overflowX, ...styles });
       const out = `${outPrefix}-${v.name}.png`;
       await page.screenshot({ path: out, fullPage: true });
       const sliceH = v.height * 2;
@@ -92,6 +120,15 @@ async function main() {
     console.log(`missing local file(s):`);
     for (const u of new Set(failed)) console.log('  ' + u);
   }
+  const hasFailure = failed.length > 0 || observations.some(v => v.overflowX || v.brokenImages.length || v.checks.some(c => !c.pass));
+  const receipt = {
+    status: hasFailure ? 'FAIL' : contract ? 'CHECKS_PASS' : 'REVIEW_REQUIRED',
+    source: abs, views: observations, blockedRequests: [...blocked], failedLocalRequests: [...new Set(failed)],
+    assurance: 'Observed browser layout and optional exact computed-style assertions. Does not judge visual quality, brand fit, content accuracy or functional completion. Inspect the screenshots.',
+  };
+  fs.writeFileSync(`${outPrefix}-layout.json`, JSON.stringify(receipt, null, 2) + '\n');
+  console.log(`layout: ${outPrefix}-layout.json (${receipt.status})`);
+  if (hasFailure) process.exitCode = 1;
 }
 
 main().catch((err) => {

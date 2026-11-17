@@ -8,6 +8,7 @@
       "task": "Run the weekly account review and call each ad",
       "kind": "analysis",
       "items": [
+        { "ref": "kit:workflows/snapchat-media-buying", "use": "build", "when": "Before account decisions: establish scope, evidence, execution access and verification" },
         {
           "ref": "kit:workflows/weekly-review-routine",
           "use": "brief",
@@ -627,6 +628,7 @@
     }
   ],
   "always": [
+    {"ref": "kit:workflows/snapchat-media-buying", "use": "check", "when": "For every Snapchat task: verify account scope, tools, attribution and delivery before diagnosis or changes"},
     {
       "ref": "library:claim-fact-checker",
       "type": "skill",

@@ -232,7 +232,9 @@ test("the memory template works with and without a folder, and never claims a sa
   assert.match(t, /Say it "is saved" only when you wrote the file and read it back/);
   assert.match(t, /under 600 words/);
   assert.match(t, /never in the pack's `playbook\.md`/);
-  assert.match(t, /never a yes to send, spend or publish today/);
+  assert.match(t, /The summary itself grants no authority/);
+  assert.match(t, /account, operation, budget and expiry/);
+  assert.match(t, /reuse valid existing authorization within its scope/);
   assert.doesNotMatch(t, /[–—]/, "no em or en dashes");
   assert.doesNotMatch(t, /\bbeta\b|\$\d/i);
 });

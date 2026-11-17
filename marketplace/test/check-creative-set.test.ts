@@ -7,6 +7,8 @@ import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import zlib from "node:zlib";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { TOOL_FILES, BRAND_TOOLS } from "../src/modules/packs/build.ts";
 
 const load = (rel: string): Promise<any> => import(rel);
@@ -55,6 +57,154 @@ function makeSet(spec: string[]): string {
   spec.forEach((t, i) => writeFileSync(path.join(dir, `${String(i + 1).padStart(2, "0")}-${t}.png`), png(S, S, T[t](i))));
   return dir;
 }
+
+// Ratio exports preserve the synthetic concept's picture; they are deliberately near-copies.
+function variantSet(spec = ["arch", "band", "circle"]) {
+  const dir = mkdtempSync(path.join(tmpdir(), "cset-variants-"));
+  const sizes = ["120x120", "120x150"];
+  const entries = spec.flatMap((layout, i) => sizes.map((size) => {
+    const [w, h] = size.split("x").map(Number), file = `${i}-${size}.png`;
+    writeFileSync(path.join(dir, file), png(w, h, (x, y) => T[layout](i)(x, Math.floor(y * S / h))));
+    return { file, concept_id: `concept-${i}`, layout, product: `Piece ${i}`, angle: `buyer question ${i}`, format: "product", segment: "Gift buyers", funnel: "prospecting", product_box: [0.2, 0.2, 0.6, 0.6], headline: "Gold for every day.", cta: "Shop now" };
+  }));
+  const plan = { brief: "approved-brief.md#deliverables", concepts: spec.map((_, i) => ({ id: `concept-${i}`, sizes })) };
+  const save = () => writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(entries));
+  save();
+  return { dir, entries, plan, save };
+}
+
+test("explicit concept mode accepts requested square/portrait adaptations and counts buyer concepts", async () => {
+  const m = await load(tool), f = variantSet();
+  const r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false, type: false });
+  assert.equal(r.ok, true, m.reportText(r));
+  assert.equal(r.files, 6);
+  assert.equal(r.concepts, 3);
+  assert.deepEqual(r.coverage, { found: 6, pixels_read: 6 });
+  assert.ok(r.notes.some((s: string) => /do not prove distinct buyer concepts/.test(s)));
+  assert.ok(!r.fails.some((s: string) => /one segment|prospecting|share both angle|near-copies/.test(s)));
+  // Three concepts do not acquire ten-concept variety requirements by adding sizes.
+  const more = ["120x160", "150x120"];
+  for (const c of f.plan.concepts) c.sizes = [...c.sizes, ...more];
+  for (let i = 0; i < 3; i++) for (const size of more) {
+    const [w, h] = size.split("x").map(Number), file = `${i}-${size}.png`;
+    writeFileSync(path.join(f.dir, file), png(w, h, (x, y) => T[["arch", "band", "circle"][i]](i)(Math.floor(x * S / w), Math.floor(y * S / h))));
+    f.entries.push({ ...f.entries[i * 2], file });
+  }
+  f.save();
+  const expanded = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false, type: false });
+  assert.equal(expanded.ok, true, m.reportText(expanded));
+  assert.equal(expanded.files, 12);
+  assert.equal(expanded.concepts, 3);
+});
+
+test("multiple allowed sizes alone do not enable concept exemptions, and legacy defaults remain square", async () => {
+  const m = await load(tool), f = variantSet();
+  let r = m.checkSet(f.dir, { allowedSizes: ["120x120", "120x150"], buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /near-copies/.test(s)));
+  assert.ok(r.fails.some((s: string) => /share both angle/.test(s)));
+  assert.ok(r.fails.some((s: string) => /all 6 creatives are prospecting/.test(s)));
+  assert.ok(r.per.every((p: any) => !p.fails.some((s: string) => /is \d+x\d+, not/.test(s))));
+  assert.equal(r.concepts, undefined);
+  r = m.checkSet(f.dir, { buttons: false, type: false });
+  assert.ok(r.per.every((p: any) => p.fails.some((s: string) => /not 1080x1080/.test(s))));
+});
+
+test("concept labels cannot hide cross-concept near-copies or repeated angle/format", async () => {
+  const m = await load(tool), f = variantSet();
+  for (const size of f.plan.concepts[1].sizes) {
+    const [w, h] = size.split("x").map(Number);
+    writeFileSync(path.join(f.dir, `1-${size}.png`), png(w, h, (x, y) => T.arch(0)(x, Math.floor(y * S / h))));
+  }
+  let r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /0-120x120.png and 1-120x120.png are near-copies/.test(s)), m.reportText(r));
+  f.entries.filter(e => e.concept_id === "concept-1").forEach(e => { e.angle = "buyer question 0"; });
+  f.save();
+  r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /share both angle/.test(s)), m.reportText(r));
+});
+
+test("missing requested variants, duplicate aspects, and inconsistent groups fail closed", async () => {
+  const m = await load(tool), opts = { buttons: false, type: false };
+  const missing = variantSet();
+  missing.plan.concepts[0].sizes = ["120x120", "120x150", "120x160"];
+  let r = m.checkSet(missing.dir, { ...opts, conceptPlan: missing.plan });
+  assert.ok(r.fails.some((s: string) => /concept concept-0 is missing requested size 120x160/.test(s)));
+  assert.equal(r.concepts, null, "invalid groups never earn duplicate exemptions");
+  assert.ok(r.fails.some((s: string) => /near-copies/.test(s)));
+  const duplicate = variantSet();
+  writeFileSync(path.join(duplicate.dir, "duplicate.png"), png(120, 120, T.arch(0)));
+  duplicate.entries.push({ ...duplicate.entries[0], file: "duplicate.png" }); duplicate.save();
+  r = m.checkSet(duplicate.dir, { ...opts, conceptPlan: duplicate.plan });
+  assert.ok(r.fails.some((s: string) => /duplicate aspect in concept concept-0/.test(s)));
+  assert.ok(r.fails.some((s: string) => /near-copies/.test(s)));
+  const invalid = variantSet();
+  invalid.entries[1].angle = "a different buyer question";
+  invalid.entries[3].concept_id = "unrequested";
+  invalid.entries.push({ ...invalid.entries[0] }); invalid.save();
+  r = m.checkSet(invalid.dir, { ...opts, conceptPlan: invalid.plan });
+  assert.ok(r.fails.some((s: string) => /inconsistent angle/.test(s)));
+  assert.ok(r.fails.some((s: string) => /unrequested concept_id/.test(s)));
+  assert.ok(r.fails.some((s: string) => /duplicate manifest entry/.test(s)));
+  assert.throws(() => m.checkSet(invalid.dir, { conceptPlan: { ...invalid.plan, brief: "" } }), /brief reference/);
+  assert.throws(() => m.checkSet(invalid.dir, { conceptPlan: { brief: "brief.md", concepts: [{ id: "one", sizes: ["120x120", "240x240"] }] } }), /duplicate aspect ratios/);
+  assert.throws(() => m.checkSet(invalid.dir, { conceptPlan: invalid.plan, allowedSizes: ["120x120"] }), /outside allowed sizes/);
+});
+
+test("concept mode keeps concept mix/funnel/variety gates and checks every export", async () => {
+  const m = await load(tool), f = variantSet();
+  f.entries.filter(e => e.concept_id !== "concept-2").forEach(e => { e.format = "notes list"; }); f.save();
+  let r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /2 of 3 creatives are text cards/.test(s)));
+  const five = variantSet(["arch", "band", "circle", "grid", "band"]);
+  r = m.checkSet(five.dir, { conceptPlan: five.plan, buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /all 5 creatives are prospecting/.test(s)));
+  assert.ok(r.fails.some((s: string) => /all 5 creatives speak to one segment/.test(s)));
+  assert.ok(!r.fails.some((s: string) => /make at least 4|native formats/.test(s)));
+  const ten = variantSet(Array(10).fill("arch"));
+  r = m.checkSet(ten.dir, { conceptPlan: ten.plan, buttons: false, type: false });
+  assert.ok(r.fails.some((s: string) => /10 of 10 creatives share one layout/.test(s)), m.reportText(r));
+  assert.ok(r.fails.some((s: string) => /only 0 native formats/.test(s)));
+  f.entries[1].product_box = [0.1, 0.1, 0.1, 0.1]; f.save();
+  r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false });
+  assert.ok(r.per.find((p: any) => p.file === f.entries[1].file).fails.some((s: string) => /product fills 1%/.test(s)));
+  assert.ok(r.fails.some((s: string) => /type was checked on 0 of 6 creatives/.test(s)));
+  // A square's type probe must not silently cover a portrait sharing its numeric concept prefix.
+  writeFileSync(path.join(f.dir, "type-report.json"), JSON.stringify(Object.fromEntries(f.entries.filter(e => e.file.endsWith("120x120.png")).map(e => [e.file, { canvas: 120, texts: [], fonts: [], kern: [], images: [] }]))));
+  r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false });
+  assert.ok(r.fails.some((s: string) => /type was checked on 3 of 6 creatives/.test(s)), m.reportText(r));
+});
+
+test("concept mode requires exact per-export type reports, not shared HTML or inline declarations", async () => {
+  const m = await load(tool), f = variantSet(["arch"]);
+  const probe = { canvas: 120, texts: [], fonts: [], kern: [], images: [] };
+  writeFileSync(path.join(f.dir, "manifest.json"), JSON.stringify(f.entries.map(e => ({ ...e, html: "01-concept.html", type: probe }))));
+  writeFileSync(path.join(f.dir, "type-report.json"), JSON.stringify({ "01-concept.html": probe, "0-120x120.html": probe, "0-120x150.html": probe }));
+  let r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false });
+  assert.equal(r.ok, false);
+  assert.ok(r.fails.some((s: string) => /type was checked on 0 of 2 creatives/.test(s)), m.reportText(r));
+  writeFileSync(path.join(f.dir, "type-report.json"), JSON.stringify({ [f.entries[0].file]: probe }));
+  r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false });
+  assert.ok(r.fails.some((s: string) => /type was checked on 1 of 2 creatives/.test(s)), m.reportText(r));
+  writeFileSync(path.join(f.dir, "type-report.json"), JSON.stringify(Object.fromEntries(f.entries.map(e => [e.file, probe]))));
+  r = m.checkSet(f.dir, { conceptPlan: f.plan, buttons: false });
+  assert.equal(r.ok, true, m.reportText(r));
+});
+
+test("CLI requires an explicit concept plan; manifest metadata cannot opt itself in", () => {
+  const f = variantSet(), planFile = path.join(f.dir, "brief-plan.json");
+  writeFileSync(planFile, JSON.stringify(f.plan));
+  writeFileSync(path.join(f.dir, "manifest.json"), JSON.stringify({ creatives: f.entries, conceptPlan: f.plan }));
+  const cli = (...args: string[]) => spawnSync(process.execPath, [fileURLToPath(new URL(tool, import.meta.url)), f.dir, "--no-buttons", "--no-type", "--json", ...args], { encoding: "utf8" });
+  const legacy = cli("--sizes", "120x120,120x150");
+  assert.equal(legacy.status, 1, legacy.stdout + legacy.stderr);
+  assert.ok(JSON.parse(legacy.stdout).fails.some((s: string) => /near-copies/.test(s)));
+  const opted = cli("--concept-plan", planFile);
+  assert.equal(opted.status, 0, opted.stdout + opted.stderr);
+  assert.equal(JSON.parse(opted.stdout).concepts, 3);
+  const malformed = cli("--concept-plan");
+  assert.equal(malformed.status, 2);
+  assert.match(malformed.stdout, /needs a brief-derived plan file/);
+});
 
 test("the pixels catch a set that repeats one template, whatever photo sits inside it", async () => {
   const m = await load(tool);

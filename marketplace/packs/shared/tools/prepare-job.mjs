@@ -23,7 +23,7 @@
 
 // Per-agent knowledge retrieval (RAG) over an agent's own pack: no model, no network, no library search. Every
 // agent pack carries what it knows (knowledge.md, sources, skills, prompts, workflows, toolbox items); this finds the
-// few passages a question needs, so an agent reads a few hundred words with their sources instead of whole files.
+// passages a question needs, with bounded complete methods when prerequisites and exceptions belong together.
 //
 // Design, from Stanford CS329Z lecture 3 (RAG) and lecture 4 (tool use):
 // - Chunks follow the file's own headings (structure beats fixed cuts), about 60 to 260 words each, with a
@@ -41,12 +41,14 @@
 // - Line ranker (MaxP): each list item, table row and paragraph is also scored alone and the passage keeps its best
 //   unit, so the one rule or number a question needs counts in full inside a long list of unrelated ones.
 // - Routing: a query may name the library modules to search (--module MCR,ADC); the whole pack is the fallback.
-// - Diversity and position: at most two passages per section and ten in all (accuracy saturates after 10 to 20
-//   documents, and what sits in the middle gets lost), best first.
+// - Diversity: keep the strongest whole-question hit, reserve room for explicit clauses, then fill by rank. At
+//   most two excerpts per section, ten results by default. These are context controls, not universal optimal k.
+// - Parent context: small skills, prompts and workflows can expand to complete methods within a 32,000-character
+//   source-text budget, after other selected evidence is reserved. Long or unaffordable parents stay labeled excerpts.
 // - Citations: each passage carries the [n] source numbers it cites, resolved to title, URL and checked date, with a
 //   stale mark once the source is past its review window.
-// - A stopping rule: when the best passage matches too little of the question, the result says the pack does not
-//   know, so the agent asks or researches instead of padding an answer.
+// - A stopping rule: weak lexical coverage of any explicit need is visible. Lexical matches are not semantic
+//   support or proof of complete evidence; the agent still verifies claims, qualifications and missing sources.
 //
 // The same algorithm ships to every agent as tools/ask-knowledge.mjs (plain Node, no dependencies), so a coding app
 // runs it locally; test/packs-retrieve.test.ts checks the two give the same answers.
@@ -367,8 +369,30 @@ export const RRF_K = 60;
 export const MAX_PASSAGES = 10;
 /** Most passages from one section, so one long section cannot crowd out the rest. */
 export const PER_SECTION = 2;
+/** Parent methods are bounded separately from ranked passage count; large documents remain explicit excerpts. */
+export const MAX_METHOD_CHARS = 12_000;
+export const MAX_CONTEXT_CHARS = 32_000;
 /** Below this share of the question's informative words in the best passage, the pack is said not to know. */
 export const MIN_COVERAGE = 0.34;
+
+/** Explicit clauses are separate evidence needs, not model-generated facts or guessed intent.
+ * Keep the original question for ranking; bounded clauses only reserve room for otherwise crowded-out needs.
+ * Short noun pairs ("price and availability") stay whole. Never cut decimals, URLs or negation words.
+ */
+export function questionFacets(question        )           {
+  const sentenceParts = question.split(/(?:[;?!](?=\s|$)\s*|\.(?=\s+[A-Z])|\n+)/).map(s => s.trim()).filter(Boolean);
+  const clauses = sentenceParts.flatMap(s => {
+    const parts = s.split(/\s+(?:and)\s+|,\s+(?=(?:what|which|how|should|can|do|is|are|verify|check|assess|prioriti[sz]e|plan|build|change|judge)\b)/i).map(p => p.trim()).filter(Boolean);
+    return parts.length > 1 && parts.every(p => tokens(p).length >= 3) ? parts : [s];
+  });
+  const seen = new Set        ();
+  const result = clauses.filter(p => {
+    const key = tokens(p).join(" ");
+    if (tokens(p).length < 2 || seen.has(key)) return false;
+    seen.add(key); return true;
+  }).slice(0, 8);
+  return result.length > 1 ? result : [];
+}
 
 export class KnowledgeIndex {
            chunks         ;
@@ -383,12 +407,23 @@ export class KnowledgeIndex {
           citeFiles             ;
           synonyms                     ;
           lines         ;
+          methods = new Map                                                                        ();
+          methodChunks = new Map                  ();
   /**
    * `sources` resolve the [n] numbers of the files in `citeFiles` (default knowledge.md, whose numbers point to
    * sources.json); other files number their own sources, so their [n] stay as they are.
    */
   constructor(files                                  , opts                                                                                                                                           = {}) {
     this.chunks = files.flatMap(f => chunkMarkdown(f.path, f.text));
+    // A short operational method is a coherent parent: its prerequisites, procedure and exceptions travel together.
+    for (const f of files) if (/^(?:skills|workflows|prompts)\/.*\.md$/.test(f.path)) {
+      const text = f.text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n");
+      this.methods.set(f.path, { ...(text.length <= MAX_METHOD_CHARS ? { text } : {}), characters: text.length, lines: [1, text.split("\n").length] });
+    }
+    for (const [i, chunk] of this.chunks.entries()) if (this.methods.has(chunk.path)) {
+      if (!this.methodChunks.has(chunk.path)) this.methodChunks.set(chunk.path, []);
+      this.methodChunks.get(chunk.path) .push(i);
+    }
     this.citeFiles = new Set(opts.citeFiles ?? ["knowledge.md"]);
     this.lines = opts.lines ?? TUNING.lines;
     // Construct rankers incrementally: do not materialize all body/line tokens while also retaining their maps.
@@ -467,18 +502,28 @@ export class KnowledgeIndex {
    * agent's own rewrites); their rankings fuse like the rankers do. `today` (YYYY-MM-DD) marks stale sources.
    * `adjust` lets a caller with metadata (knowledge cards: tier, freshness, market) rescale a passage's fused score
    * or drop it (null) before the top k are picked. `max` raises the ceiling on k (MAX_PASSAGES) for a caller that
-   * reranks a deeper pool itself, such as job preparation.
+   * reranks a deeper pool itself, such as job preparation (no automatic parent expansion or final-context cap).
+   * `contextChars` explicitly bounds returned source text, independent of k; serialized metadata is extra.
+   * `decompose` and `expandMethods` may be disabled for measured legacy comparisons.
    */
-  ask(questions                   , opts                                                                                                                                                                    = {})         {
+  ask(questions                   , opts                                                                                                                                                                                                                                         = {})         {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
     const k = Math.max(1, Math.min(opts.max ?? MAX_PASSAGES, opts.k ?? 6));
+    if (opts.contextChars !== undefined && (!Number.isInteger(opts.contextChars) || opts.contextChars < 1 || opts.contextChars > MAX_CONTEXT_CHARS)) throw new Error(`contextChars must be an integer from 1 to ${MAX_CONTEXT_CHARS}`);
+    // A caller requesting a deeper reranking pool owns its final budget; do not inflate or truncate that pool.
+    const candidatePool = (opts.max ?? MAX_PASSAGES) > MAX_PASSAGES;
+    const contextLimit = opts.contextChars ?? (candidatePool ? Infinity : MAX_CONTEXT_CHARS);
+    const expandMethods = opts.expandMethods ?? !candidatePool;
     // A module filter narrows the search to those modules' files (and any paths given); none found: the whole pack.
     const routed = opts.modules?.length ? modulePaths([...new Set(this.chunks.map(c => c.path))], opts.modules) : [];
     const scope = [...(opts.paths ?? []), ...routed];
     const allowed = scope.length ? new Set(scope) : null;
     const fused = new Map                ();
+    const facetQuestions = opts.decompose === false ? [] : [...new Set(qs.flatMap(questionFacets))].slice(0, 8);
+    const facetRanks                       = [];
     const qWords = [...new Set(qs.flatMap(tokens))];
-    for (const q of qs) {
+    for (const [queryIndex, q] of [...qs, ...facetQuestions].entries()) {
+      const queryScores = queryIndex < qs.length ? fused : new Map                ();
       const qt = tokens(q);
       if (!qt.length) continue;
       const exp = this.expand(qt);
@@ -491,7 +536,11 @@ export class KnowledgeIndex {
       for (const [scores, w] of rankers) {
         if (!scores) continue;
         const order = scores.map((s, i) => [s, i]         ).filter(([s, i]) => s > 0 && (!allowed || allowed.has(this.chunks[i].path))).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
-        order.forEach(([, i], rank) => fused.set(i, (fused.get(i) ?? 0) + w / (RRF_K + rank + 1)));
+        order.forEach(([, i], rank) => queryScores.set(i, (queryScores.get(i) ?? 0) + w / (RRF_K + rank + 1)));
+      }
+      if (queryIndex >= qs.length) {
+        const adjustedFacet = opts.adjust ? [...queryScores].flatMap(([i, s]) => { const v = opts.adjust (this.chunks[i], s); return v === null ? [] : [[i, v]                    ]; }) : [...queryScores];
+        facetRanks.push(adjustedFacet.sort((a, b) => b[1] - a[1] || a[0] - b[0]));
       }
     }
     const adjusted = opts.adjust ? [...fused].flatMap(([i, s]) => { const v = opts.adjust (this.chunks[i], s); return v === null ? [] : [[i, v]                    ]; }) : [...fused];
@@ -499,30 +548,81 @@ export class KnowledgeIndex {
     const perSection = new Map                ();
     const pickedPaths = new Set        ();
     const picked                     = [];
-    for (const [i, s] of ranked) {
+    const expanded = new Set        ();
+    const excludedParents = new Set        ();
+    let contextCharacters = 0;
+    let contextExhausted = false;
+    const pick = ([i, s]                  )          => {
+      if (picked.length >= k || picked.some(([previous]) => previous === i)) return false;
       const c = this.chunks[i];
-      if (opts.uniquePath && pickedPaths.has(c.path)) continue;
+      if ((opts.uniquePath || expanded.has(c.path)) && pickedPaths.has(c.path)) return false;
       const key = `${c.path}#${c.context}`;
-      if ((perSection.get(key) ?? 0) >= PER_SECTION) continue;
+      if ((perSection.get(key) ?? 0) >= PER_SECTION) return false;
+      if (contextCharacters + c.text.length > contextLimit) { contextExhausted = true; return false; }
+      contextCharacters += c.text.length;
       perSection.set(key, (perSection.get(key) ?? 0) + 1);
-      picked.push([i, s]);
-      pickedPaths.add(c.path);
-      if (picked.length >= k) break;
+      picked.push([i, s]); pickedPaths.add(c.path); return true;
+    };
+    // Keep the strongest whole-question match first, then give each explicit need one turn before filling.
+    if (ranked.length) pick(ranked[0]);
+    for (const ranking of facetRanks) {
+      if (ranking[0] && picked.some(([previous]) => previous === ranking[0][0])) continue;
+      for (const candidate of ranking) if (pick(candidate)) break;
+    }
+    for (const candidate of ranked) { if (picked.length >= k) break; pick(candidate); }
+    // Reserve all selected evidence first. Expanding one method must not evict another question's evidence.
+    for (let round = 0; expandMethods && round < k; round++) {
+      let changed = false;
+      for (const path of [...pickedPaths]) {
+        if (expanded.has(path)) continue;
+        const parent = this.methods.get(path);
+        if (!parent?.text) continue;
+        // Metadata filters can exclude individual sections, not only whole files. Never reintroduce those
+        // sections by expanding a matching sibling. Unranked children are checked at score zero as well.
+        if (opts.adjust && this.methodChunks.get(path) .some(i => opts.adjust (this.chunks[i], fused.get(i) ?? 0) === null)) {
+          excludedParents.add(path); continue;
+        }
+        const fromPath = picked.filter(([i]) => this.chunks[i].path === path);
+        const delta = parent.characters - fromPath.reduce((n, [i]) => n + this.chunks[i].text.length, 0);
+        if (contextCharacters + delta > contextLimit) continue;
+        expanded.add(path); contextCharacters += delta; changed = true;
+        const keep = fromPath[0][0];
+        for (let n = picked.length - 1; n >= 0; n--) if (this.chunks[picked[n][0]].path === path && picked[n][0] !== keep) picked.splice(n, 1);
+      }
+      if (!changed) break;
+      // A complete method may replace several excerpts; spare space can retrieve additional distinct evidence.
+      for (const candidate of ranked) { if (picked.length >= k) break; pick(candidate); }
     }
     const informative = qWords.filter(w => this.body.idf(w) > 0.2);
-    const has = (i        ) => new Set(tokens(`${this.chunks[i].context}\n${this.chunks[i].text}`));
+    const has = (i        ) => new Set(tokens(`${this.chunks[i].context}\n${expanded.has(this.chunks[i].path) ? this.methods.get(this.chunks[i].path) .text : this.chunks[i].text}`));
     const bestWords = picked.length ? has(picked[0][0]) : new Set        ();
     const coverage = informative.length ? informative.filter(w => this.knows(w, x => bestWords.has(x))).length / informative.length : 0;
     const anywhere = new Set(picked.flatMap(([i]) => [...has(i)]));
     const passages            = picked.map(([i, score]) => {
       const c = this.chunks[i];
       const words = has(i);
-      return { ...c, score: Math.round(score * 10000) / 10000, matched: qWords.filter(w => words.has(w)), cites: this.citeFiles.has(c.path) ? c.cites.map(n => this.cite(n, opts.today)).filter((x)                 => !!x) : [] };
+      const parent = expandMethods ? this.methods.get(c.path) : undefined;
+      const context = parent ? expanded.has(c.path)
+        ? { text: parent.text , lines: parent.lines, context_expansion: { mode: "full_method"          } }
+        : { context_expansion: { mode: "excerpt"         , reason: excludedParents.has(c.path) ? "method_contains_excluded_evidence" : parent.characters > MAX_METHOD_CHARS ? "method_exceeds_source_budget" : "method_context_budget_exhausted" } }
+        : {};
+      return { ...c, ...context, score: Math.round(score * 10000) / 10000, matched: qWords.filter(w => words.has(w)), cites: this.citeFiles.has(c.path) ? (expanded.has(c.path) ? citesOf(parent .text ) : c.cites).map(n => this.cite(n, opts.today)).filter((x)                 => !!x) : [] };
     });
     // A name the question depends on (an acronym, a law, a brand, a tool) that appears nowhere in the pack means the
     // pack does not know, however many other words match: "GST on shipping" must not be answered from an Amazon card.
     const unknown = [...new Set(qs.flatMap(namesIn))].filter(w => !this.knows(w, x => this.body.has(x)));
-    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100, enough: coverage >= MIN_COVERAGE && !unknown.length, missing: [...new Set([...unknown, ...informative.filter(w => !this.knows(w, x => anywhere.has(x)))])] };
+    const facets = facetQuestions.map(question => {
+      const words = [...new Set(tokens(question))].filter(w => this.body.idf(w) > 0.2);
+      const matches = picked.map(([i]) => ({ id: this.chunks[i].id, coverage: words.length ? words.filter(w => this.knows(w, x => has(i).has(x))).length / words.length : 0 }));
+      return { question, coverage: Math.round(Math.max(0, ...matches.map(m => m.coverage)) * 100) / 100,
+        matched_passages: matches.filter(m => m.coverage >= MIN_COVERAGE).map(m => m.id),
+        missing: words.filter(w => !this.knows(w, x => anywhere.has(x))) };
+    });
+    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100,
+      enough: coverage >= MIN_COVERAGE && !unknown.length && facets.every(f => f.coverage >= MIN_COVERAGE),
+      missing: [...new Set([...unknown, ...informative.filter(w => !this.knows(w, x => anywhere.has(x)))])],
+      ...(facets.length ? { facets } : {}), ...(Number.isFinite(contextLimit) ? { context_budget: { limit: contextLimit, used: contextCharacters, exhausted: contextExhausted } } : {}) };
+
   }
 
           cite(n        , today         )                   {
@@ -578,9 +678,12 @@ export function answerText(a        , agentName        )         {
     : `Weak match: the best passage covers ${Math.round(a.coverage * 100)}% of the question${a.missing.length ? ` (nothing on: ${a.missing.slice(0, 8).join(", ")})` : ""}. Treat this as not in the pack: ask the client or research it, and say which.`;
   const body = a.passages.map((p, i) => {
     const src = p.cites.length ? `\nSources: ${p.cites.map(c => `[${c.n}] ${c.title}, checked ${c.checked}${c.stale ? " (STALE: recheck before use)" : ""} ${c.url}`).join("; ")}` : "";
-    return `--- ${i + 1}. ${p.path}:${p.lines[0]}-${p.lines[1]} | ${p.context} ---\n${p.text}${src}`;
+    return `--- ${i + 1}. ${p.path}:${p.lines[0]}-${p.lines[1]} | ${p.context} ---\n${p.context_expansion?.mode === "full_method" ? "[Complete bounded method: prerequisites, steps and exceptions retained]\n" : p.context_expansion?.mode === "excerpt" ? p.context_expansion.reason === "method_contains_excluded_evidence" ? "[Excerpt only; excluded source sections remain unavailable]\n" : "[Excerpt only; read the full method for omitted steps and exceptions]\n" : ""}${p.text}${src}`;
   }).join("\n\n");
-  return `${head}\n\n${body}`;
+  const diagnostics = a.facets?.length
+    ? `\nEvidence needs: ${a.facets.map(f => `${f.question}: ${f.matched_passages.length ? "lexical match found" : "no sufficient lexical match"}`).join("; ")}. Lexical coverage is not proof that every needed fact or qualification is supported.` : "";
+  const limits = a.context_budget?.exhausted ? "\nContext budget exhausted: refine the unresolved need or read the cited full source before answering it." : "";
+  return `${head}${diagnostics}${limits}\n\n${body}`;
 }
 
 /**

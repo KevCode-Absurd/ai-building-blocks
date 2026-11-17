@@ -169,4 +169,9 @@ test("GET /api/knowledge/ecommerce and /ask serve the built index, and an unknow
   assert.equal(ask.body.cards[0].source.title, "Source S0001");
   assert.equal((await t.api("GET", "/api/knowledge/ecommerce/ask?q=hi")).status, 400);
   assert.equal((await t.api("GET", "/api/knowledge/saas")).status, 404);
+  for (const filter of ["jurisdiction=INN", "marketplace=unknown", "mode=amazon", "platform=magento", "scope=private"]) {
+    const invalid = await t.api("GET", `/api/knowledge/ecommerce/ask?q=creative%20testing&${filter}`);
+    assert.equal(invalid.status, 400);
+    assert.equal(invalid.body.error.code, "invalid_knowledge_constraint");
+  }
 });

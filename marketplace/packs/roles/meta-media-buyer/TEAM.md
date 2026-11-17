@@ -28,7 +28,6 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Efrain (efrain-meta-lead-ads)
 - Dustin (dustin-ad-deployment)
 - Lindsey (lindsey-meta-media-buyer)
-- Kelsey (kelsey-snapchat-ads)
 - Bianca (bianca-meta-ads)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

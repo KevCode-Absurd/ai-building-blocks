@@ -9,7 +9,7 @@
 //                                            store's order of work with no q)
 //   GET /api/knowledge/:vertical/shelf/:kind/:slug  one item and its full text
 import { fail, json, type Route } from "../../core/http.ts";
-import { answerJson, cardQuery, shelfAnswer, verticalIndex, verticalShelf } from "./service.ts";
+import { answerJson, cardConstraintProblem, cardQuery, shelfAnswer, verticalIndex, verticalShelf } from "./service.ts";
 import { isShelfKind, SHELF_KINDS, type ShelfItem } from "./shelf.ts";
 
 const PUBLIC_CACHE = { "cache-control": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400" };
@@ -39,6 +39,8 @@ export const routes: Route[] = [
       if (q.length < 3) return fail(400, "question_too_short", "Ask a question of a few words, like \"how many hooks should I test per week\".");
       if (q.length > MAX_Q) return fail(400, "question_too_long", `Keep the question under ${MAX_Q} characters.`);
       const raw = Object.fromEntries(ctx.url.searchParams);
+      const invalidConstraint = cardConstraintProblem(raw);
+      if (invalidConstraint) return fail(400, "invalid_knowledge_constraint", invalidConstraint);
       const answer = v.index.ask(q, { ...cardQuery(v.file.vertical, raw), today: new Date().toISOString().slice(0, 10) });
       return json({ library: v.file.vertical.id, ...answerJson(answer) }, 200, PUBLIC_CACHE);
     },

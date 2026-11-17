@@ -138,7 +138,7 @@ test("the gate reads the core, the total and how deep each rule file starts", ()
 
 test("every agent pack carries the org context tool and its old names, and the job, log and team tools once they exist", async () => {
   for (const name of ["org-context.mjs", "brand-file.mjs", "brand-brain.mjs", "job.mjs", "log-event.mjs", "check-team.mjs"]) assert.ok(TOOL_FILES.some(t => t.name === name), name);
-  assert.deepEqual([...EVERY_PACK_TOOLS].sort(), ["brand-brain.mjs", "brand-file.mjs", "org-context.mjs"]);
+  assert.deepEqual([...EVERY_PACK_TOOLS].sort(), ["EVIDENCE-PACKETS.md", "brand-brain.mjs", "brand-file.mjs", "evidence-packet.mjs", "org-context.mjs"]);
   const tools = { "org-context.mjs": "// org context\n", "brand-file.mjs": "// brand file\n", "brand-brain.mjs": "// brand brain\n", "capture-brand-dna.mjs": "// capture\n", "job.mjs": "// job\n", "log-event.mjs": "// log\n", "check-team.mjs": "// team\n" };
   // A bookkeeper's work carries no brand to the public: it still gets the store memory tools, never the site capture.
   const books: Persona = { ...NOVA, id: "books-test", area: "finance", outcomes: undefined } as unknown as Persona;

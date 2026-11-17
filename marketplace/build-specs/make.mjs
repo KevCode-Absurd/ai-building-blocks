@@ -16,6 +16,7 @@ const CHECK = process.argv.includes("--check");
 
 // Source, path in the store folder, what it is.
 const KIT = [
+  ["kit/bootstrap.mjs", "agent/bootstrap.mjs", "installs a new client workspace without API calls and checks installed file hashes"],
   ["kit/guard.mjs", "agent/guard.mjs", "decides whether each tool call may run"],
   ["kit/actions.mjs", "agent/actions.mjs", "plans, dry runs, owner-held file changes, run records, schedule"],
   ["kit/board.mjs", "agent/board.mjs", "the job board: stages, checks, sign-offs, hand-offs"],
@@ -33,6 +34,10 @@ const KIT = [
     [`../packs/shared/tools/quality/${f}`, `tools/quality/${f}`, "a quality check the processes run (plain Node, no packages)"]),
   ["../packs/shared/tools/quality/FINANCIAL.md", "tools/quality/FINANCIAL.md", "source-pinned financial ledger contract and limits"],
   ["../packs/shared/tools/commerce-math.mjs", "tools/commerce-math.mjs", "deterministic commerce and capacity calculations"],
+  ["../packs/shared/tools/source-inventory.mjs", "tools/source-inventory.mjs", "inventory local supplied evidence without treating unread sources as missing"],
+  ["../../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs", "tools/org-context.mjs", "maintains the scoped brand fact ledger and exports reconciled memory for evidence packets"],
+  ["../packs/shared/tools/evidence-packet.mjs", "tools/evidence-packet.mjs", "scoped, hash-bound task evidence with original-source fallback and reconciled memory"],
+  ["../packs/shared/tools/EVIDENCE-PACKETS.md", "tools/EVIDENCE-PACKETS.md", "how to prepare source manifests, decision facets and memory projections"],
   ["../packs/shared/tools/verify-patch.mjs", "tools/verify-patch.mjs", "checks an exact patch against an isolated baseline copy"],
   ["../packs/shared/tools/automation-review.mjs", "tools/automation-review.mjs", "reviews outcome visibility and decision boundaries; no live actions"],
   ["../packs/shared/tools/performance-review.mjs", "tools/performance-review.mjs", "checks comparable performance runs and guardrail regressions"],
@@ -41,6 +46,8 @@ const KIT = [
   ["../packs/shared/tools/media-delivery.mjs", "tools/media-delivery.mjs", "checks local media bytes, metadata and self-contained edit sources"],
   ["../packs/shared/AUTOMATION-PRINCIPLES.md", "AUTOMATION-PRINCIPLES.md", "preserves customer signals, judgment, critical skills and relationships"],
   ["../packs/shared/PRODUCTION-PRINCIPLES.md", "PRODUCTION-PRINCIPLES.md", "business acceptance, source freshness, step contracts, recovery and versioned release evidence"],
+  ["../packs/shared/MEMORY-ARCHITECTURE.md", "MEMORY-ARCHITECTURE.md", "working, semantic, episodic and procedural memory with core-rule boundaries and lifecycle evals"],
+  ["../packs/shared/BRAND-CONTEXT-CONTRACT.md", "BRAND-CONTEXT-CONTRACT.md", "shared brand guide, voice, customers, copy, creative and business-data context"],
   ["kit/settings.json", ".claude/settings.json", "turns the hooks on (copy it in step 9, not before)"],
   ["kit/limits.example.json", "context/limits.example.json", "example money limits; fill context/limits.json from the owner's answers"],
   ["kit/goals.example.json", "context/goals.example.json", "example goals; fill context/goals.json from the owner's answers"],

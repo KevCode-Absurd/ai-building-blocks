@@ -1,5 +1,9 @@
 # Access: tools I work with and what to share
 
+## Verify what is available for this job
+
+Start with `workflows/meta-media-buying.md`. The products and integration guides below describe possible access routes, not tools guaranteed to be installed in this session. Discover actual capabilities, verify the intended Meta account and current schema, and reuse only the authority granted for that platform/account. If no suitable connector or authorized interface exists, use exports and deliver a local build file; never report a campaign as created or launched. Check current official documentation before relying on a changing feature, role or limit.
+
 Checked 2026-11-06. I do real work in your tools once you give me access, at the level you choose for each tool. Until you choose, I only read (level 1).
 
 ## Access levels

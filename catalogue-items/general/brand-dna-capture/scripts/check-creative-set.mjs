@@ -4,6 +4,14 @@
 // Checks a set of static ad creatives before hand-over, from the pixels and from the set's manifest.
 //   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--fonts "Lato,Nanum Myeongjo"]
 //     [--claims <reviewed-claims.json>] [--type <type-report.json>] [--domain gehnaindia.com] [--no-buttons] [--no-type] [--json]
+//     [--sizes 1080x1080,1080x1350] [--concept-plan <brief-derived-plan.json>]
+//   Concept mode is opt-in: plan = { "brief": "brief.md#deliverables", "concepts": [
+//     { "id": "gift", "sizes": ["1080x1080", "1080x1350"] } ] }; each manifest entry needs concept_id.
+//   The plan's sizes are required per concept; --sizes optionally constrains the allowed sizes further.
+//   Distinct aspect variants count once for mix/diversity, not as independent buyer concepts. IDs do not
+//   prove semantic variety: independently review the buyer question, visible proof and every final export.
+//   Concept mode requires type-report.json keys to match each export filename exactly; HTML aliases,
+//   numeric prefixes and inline manifest type declarations cannot substitute for per-export probes.
 //   node check-creative-set.mjs probe <folder of creative .html files> --out <creatives>/type-report.json [--size 1080x1080]
 //   node check-creative-set.mjs match <folder of creatives>   (opens each ad's landing page, rendering it in a browser when
 //     the store draws it with script; writes match-report.json)
@@ -516,7 +524,8 @@ export function adIssues(entry, { domain = null, rules = RULES } = {}) {
   return { fails, notes };
 }
 /** Finds the type report for one creative file: the manifest's "type", or type-report.json by file, html or number. */
-function typeFor(file, entry, report) {
+function typeFor(file, entry, report, exactExport = false) {
+  if (exactExport) return report && report[file] || null;
   if (entry && entry.type) return entry.type;
   if (!report) return null;
   const stem = file.replace(/\.[^.]+$/, ''), num = (file.match(/^\d+/) || [])[0];
@@ -594,7 +603,54 @@ export function isRetargetOrOffer(entry) {
 }
 
 // ---------- the whole set ----------
-export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true, type = true, fonts = null, typeReport = null, domain = null, today = new Date(), claimsFile = null } = {}) {
+const validSize = (s) => typeof s === 'string' && /^[1-9]\d*x[1-9]\d*$/.test(s) && s.split('x').every((v) => Number.isSafeInteger(Number(v)));
+const sameAspect = (a, b) => a.width * b.height === b.width * a.height;
+function planSizes(plan) {
+  if (!plan || typeof plan.brief !== 'string' || !plan.brief.trim() || !Array.isArray(plan.concepts) || !plan.concepts.length) throw new Error('concept plan requires a brief reference and a nonempty concepts array');
+  const ids = new Set();
+  for (const c of plan.concepts) {
+    if (!c || typeof c.id !== 'string' || !c.id.trim() || c.id !== c.id.trim() || ids.has(c.id)) throw new Error('concept plan has a missing or duplicate concept id');
+    ids.add(c.id);
+    if (!Array.isArray(c.sizes) || !c.sizes.length || c.sizes.some((s) => !validSize(s)) || new Set(c.sizes).size !== c.sizes.length) throw new Error(`concept ${c.id} requires unique valid sizes`);
+    const aspects = c.sizes.map((s) => { const [width, height] = s.split('x').map(Number); return { width, height }; });
+    if (aspects.some((a, i) => aspects.slice(i + 1).some((b) => sameAspect(a, b)))) throw new Error(`concept ${c.id} requests duplicate aspect ratios; concept mode allows one export per aspect`);
+  }
+  return [...new Set(plan.concepts.flatMap((c) => c.sizes))];
+}
+// Fail closed: only complete, consistent groups can exempt ratio adaptations from near-copy checks.
+function conceptGroups(plan, entries, files, decoded, fails) {
+  const start = fails.length, byId = new Map(plan.concepts.map((c) => [c.id, []])), seen = new Set();
+  for (const e of entries || []) {
+    if (!e || typeof e.file !== 'string') { fails.push('concept manifest entry needs a file'); continue; }
+    if (seen.has(e.file)) fails.push(`duplicate manifest entry for ${e.file}`);
+    seen.add(e.file);
+    if (!files.includes(e.file)) fails.push(`manifest names ${e.file}, which is not in the folder`);
+    if (!byId.has(e.concept_id)) fails.push(`${e.file} has a missing or unrequested concept_id`);
+    else byId.get(e.concept_id).push(e);
+    for (const field of ['product', 'angle', 'format']) if (typeof e[field] !== 'string' || !e[field].trim()) fails.push(`${e.file}: concept variant needs ${field}`);
+  }
+  for (const f of files) if (!seen.has(f)) fails.push(`${f} is not in the concept manifest`);
+  const groups = [];
+  for (const c of plan.concepts) {
+    const members = byId.get(c.id), sizes = new Set();
+    for (let i = 0; i < members.length; i++) {
+      const e = members[i], img = decoded.get(e.file);
+      if (!img) { fails.push(`${e.file}: concept variant pixels unavailable`); continue; }
+      const actual = `${img.width}x${img.height}`;
+      if (!c.sizes.includes(actual)) fails.push(`${e.file}: size ${actual} not requested for concept ${c.id}`);
+      sizes.add(actual);
+      for (const prior of members.slice(0, i)) if (decoded.has(prior.file) && sameAspect(img, decoded.get(prior.file))) fails.push(`${prior.file} and ${e.file}: duplicate aspect in concept ${c.id}`);
+      for (const field of ['product', 'angle', 'format', 'segment', 'funnel']) {
+        if (norm(e[field] || '') !== norm(members[0][field] || '')) fails.push(`concept ${c.id} has inconsistent ${field} across variants`);
+      }
+    }
+    for (const s of c.sizes) if (!sizes.has(s)) fails.push(`concept ${c.id} is missing requested size ${s}`);
+    // Choose the first requested size, not a filename or an arbitrary export, for diversity checks.
+    groups.push([...members].sort((a, b) => c.sizes.indexOf(`${decoded.get(a.file)?.width}x${decoded.get(a.file)?.height}`) - c.sizes.indexOf(`${decoded.get(b.file)?.width}x${decoded.get(b.file)?.height}`)));
+  }
+  return fails.length === start ? groups : null;
+}
+export function checkSet(dir, { manifest = null, size = '1080x1080', allowedSizes = null, conceptPlan = null, rules = RULES, buttons = true, type = true, fonts = null, typeReport = null, domain = null, today = new Date(), claimsFile = null } = {}) {
   const evidence = loadClaimEvidence(claimsFile, { today });
   const files = fs.readdirSync(dir).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
   const mPath = manifest || path.join(dir, 'manifest.json');
@@ -602,31 +658,43 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
   if (fs.existsSync(mPath)) { const doc = JSON.parse(fs.readFileSync(mPath, 'utf8')); entries = Array.isArray(doc) ? doc : doc.creatives || []; }
   const tPath = typeReport || path.join(dir, 'type-report.json');
   const report = fs.existsSync(tPath) ? JSON.parse(fs.readFileSync(tPath, 'utf8')) : null;
-  const [sw, sh] = size.split('x').map(Number);
+  const requestedSizes = conceptPlan === null ? null : planSizes(conceptPlan);
+  if (conceptPlan !== null && entries !== null && (!Array.isArray(entries) || entries.some((e) => !e || typeof e !== 'object'))) throw new Error('concept manifest requires an array of creative entries');
+  const sizes = allowedSizes ?? requestedSizes ?? [size];
+  if (!Array.isArray(sizes) || !sizes.length || sizes.some((s) => !validSize(s)) || new Set(sizes).size !== sizes.length) throw new Error('allowed sizes must be a nonempty array of unique WIDTHxHEIGHT strings');
+  if (requestedSizes?.some((s) => !sizes.includes(s))) throw new Error('concept plan requests a size outside allowed sizes');
   const fails = evidence.errors.map((e) => `claim evidence: ${e}`), notes = [], per = [];
   const maps = [], decoded = new Map();
   for (const f of files) {
     const row = { file: f, fails: [], notes: [] };
     if (/\.png$/i.test(f)) {
-      try { const img = decodePng(fs.readFileSync(path.join(dir, f))); decoded.set(f, img); maps.push({ f, map: layoutMap(img), shape: shapeOf(img) }); if (img.width !== sw || img.height !== sh) row.fails.push(`is ${img.width}x${img.height}, not ${size}`); }
+      try { const img = decodePng(fs.readFileSync(path.join(dir, f))); decoded.set(f, img); maps.push({ f, map: layoutMap(img), shape: shapeOf(img) }); if (!sizes.includes(`${img.width}x${img.height}`)) row.fails.push(`is ${img.width}x${img.height}, not ${sizes.join(' or ')}`); }
       catch (err) { row.fails.push(`pixels not read: ${err.message}`); }
     } else row.fails.push('pixel checks unavailable for this format: supply a PNG export; no visual pass is established');
     per.push(row);
   }
-  // Layout variety, from the pixels.
-  const groups = groupShapes(maps.map((m) => m.shape)).map((g) => g.map((i) => maps[i].f)).sort((a, b) => b.length - a.length);
-  const n = files.length;
+  const concepts = conceptPlan === null ? null : conceptGroups(conceptPlan, entries, files, decoded, fails);
+  const setEntries = concepts ? concepts.map((g) => g[0]) : entries;
+  const conceptByFile = new Map(concepts ? concepts.flatMap((g, i) => g.map((e) => [e.file, i])) : []);
+  const setMaps = concepts ? setEntries.map((e) => maps.find((m) => m.f === e.file)) : maps;
+  if (conceptPlan !== null) notes.push('Concept IDs and layout counts do not prove distinct buyer concepts. Independently review each buyer question and visible proof, and inspect every ratio export at full and phone size.');
+  // Layout variety uses one requested-size representative per validated concept.
+  const groups = groupShapes(setMaps.map((m) => m.shape)).map((g) => g.map((i) => setMaps[i].f)).sort((a, b) => b.length - a.length);
+  const n = concepts ? concepts.length : files.length;
   if (!n) fails.push('no supported raster creatives found: visual checks were NOT_RUN; SVG or HTML artifacts need rendering and inspection');
   if (n >= rules.minSetForVariety) {
     if (groups.length < rules.minLayouts) fails.push(`only ${groups.length} layout${groups.length === 1 ? '' : 's'} across ${n} creatives (the pixels group them); make at least ${rules.minLayouts}`);
     if (groups[0] && groups[0].length / n > rules.maxLayoutShare) fails.push(`${groups[0].length} of ${n} creatives share one layout (${groups[0].slice(0, 4).join(', ')}${groups[0].length > 4 ? ', ...' : ''}); no layout on more than ${Math.round(rules.maxLayoutShare * 100)}% of the set`);
   }
-  for (let i = 0; i < maps.length; i++) for (let j = i + 1; j < maps.length; j++) if (meanDiff(maps[i].map, maps[j].map) < 0.02) fails.push(`${maps[i].f} and ${maps[j].f} are near-copies`);
+  for (let i = 0; i < maps.length; i++) for (let j = i + 1; j < maps.length; j++) {
+    const adaptation = concepts && conceptByFile.get(maps[i].f) === conceptByFile.get(maps[j].f) && !sameAspect(decoded.get(maps[i].f), decoded.get(maps[j].f));
+    if (!adaptation && meanDiff(maps[i].map, maps[j].map) < 0.02) fails.push(`${maps[i].f} and ${maps[j].f} are near-copies`);
+  }
   // The manifest: what the maker says each creative is.
   if (!entries) {
     if (n >= 5) fails.push(`no manifest: write ${path.basename(mPath)} with one entry per creative (layout, product, product_box, headline, body, cta, price, review) so the text and product checks can run`);
   } else {
-    const declared = new Set(entries.map((e) => e.layout).filter(Boolean));
+    const declared = new Set(setEntries.map((e) => e.layout).filter(Boolean));
     if (n >= rules.minSetForVariety && declared.size < rules.minLayouts) fails.push(`the manifest names only ${declared.size} layouts`);
     let withButton = 0, textCards = 0, funnelHits = 0; const natives = new Set(), fills = [];
     for (const e of entries) {
@@ -635,9 +703,9 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
       const c = claimIssues(e, evidence); row.fails.push(...c.fails); row.notes.push(...c.notes);
       const o = offerIssues(e, { today, rules }); row.fails.push(...o.fails); row.notes.push(...o.notes);
       const ad = adIssues(e, { domain, rules }); row.fails.push(...ad.fails); row.notes.push(...ad.notes);
-      const nf = nativeFormat(e.format); if (nf) { natives.add(nf); textCards++; }
+      const nf = nativeFormat(e.format); if (nf && setEntries.includes(e)) { natives.add(nf); textCards++; }
       const fc = faceIssues(e, { rules }); row.fails.push(...fc.fails); row.notes.push(...fc.notes);
-      if (isRetargetOrOffer(e)) funnelHits++;
+      if (setEntries.includes(e) && isRetargetOrOffer(e)) funnelHits++;
       if (Array.isArray(e.cta_box) && e.cta_box.length === 4) {
         const img = decoded.get(e.file);
         if (!img) withButton++;
@@ -656,12 +724,12 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
     if (n >= rules.minSetForMix && textCards / n > rules.maxTextCardShare) fails.push(`${textCards} of ${n} creatives are text cards (notes, chat, table, explainer, review, receipt): keep at least half image-led, with the product or a person wearing it as the hero`);
     if (n >= rules.minSetForFunnel && !funnelHits) fails.push(`all ${n} creatives are prospecting with no offer: make at least one for people who already know the store (funnel "retargeting": cart and site visitors, past buyers) or one that carries a real offer from the store (a payment plan, a gift, free shipping), with its terms`);
     if (n >= rules.minSetForSegments) {
-      const segs = new Set(entries.map((e) => norm(e.segment || '')).filter(Boolean));
-      if (entries.some((e) => !String(e.segment || '').trim())) fails.push('some creatives name no segment: tie each one to a buyer group the data names');
+      const segs = new Set(setEntries.map((e) => norm(e.segment || '')).filter(Boolean));
+      if (setEntries.some((e) => !String(e.segment || '').trim())) fails.push('some creatives name no segment: tie each one to a buyer group the data names');
       else if (segs.size < rules.minSegments) fails.push(`all ${n} creatives speak to one segment; speak to at least ${rules.minSegments} that the data names`);
     }
     const seenAF = new Map();
-    for (const e of entries) {
+    for (const e of setEntries) {
       if (!e.angle || !e.format) continue;
       const key = `${norm(e.angle)}|${nativeFormat(e.format) || norm(e.format)}`;
       if (seenAF.has(key)) fails.push(`${seenAF.get(key)} and ${e.file} share both angle ("${e.angle}") and format: change one`); else seenAF.set(key, e.file);
@@ -673,7 +741,7 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
       for (const row of per) { const m = mr[row.file]; if (m && !m.ok) row.fails.push(...m.issues.map((x) => `landing page ${m.url}: ${x}`)); }
     } else if (entries.some((e) => (e.ad && e.ad.url) || e.url)) notes.push('landing pages not checked: run node check-creative-set.mjs match <folder> to see each page names the product and shows the price');
     if (n >= rules.minSetForVariety) {
-      if (buttons && withButton / n < rules.minButtonShare) fails.push(`only ${withButton} of ${n} creatives show a button on the image (cta_box in the manifest, checked in the pixels); put one on at least ${Math.round(rules.minButtonShare * 100)}%, in the brand's own button style from its real ads. Use --no-buttons only when the brief says no buttons`);
+      if (buttons && withButton / files.length < rules.minButtonShare) fails.push(`only ${withButton} of ${files.length} creatives show a button on the image (cta_box in the manifest, checked in the pixels); put one on at least ${Math.round(rules.minButtonShare * 100)}%, in the brand's own button style from its real ads. Use --no-buttons only when the brief says no buttons`);
       if (!entries.some((e) => e.format)) fails.push('the manifest has no format for each creative (product, offer, notes list, chat, comparison table, explainer, review card...)');
       else if (natives.size < rules.minNativeFormats) fails.push(`only ${natives.size} native format${natives.size === 1 ? '' : 's'} (${[...natives].join(', ') || 'none'}); use at least ${rules.minNativeFormats}, such as a notes list, a chat, a comparison table or an explainer, each tied to a segment`);
       if (!entries.some((e) => String(e.moment || '').trim())) notes.push("no creative names a local or seasonal moment (the moment field); the data's top regions and dates usually give one");
@@ -685,7 +753,8 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
   if (type) {
     let probed = 0;
     for (const row of per) {
-      const t = typeFor(row.file, entries && entries.find((e) => e.file === row.file), report);
+      // Shared HTML aliases and numeric prefixes do not identify separately rendered ratio exports.
+      const t = typeFor(row.file, entries && entries.find((e) => e.file === row.file), report, conceptPlan !== null);
       if (!t) continue; probed++;
       const ti = typeIssues(t, { fonts, rules }); row.fails.push(...ti.fails); row.notes.push(...ti.notes);
       const entry = entries && entries.find((e) => e.file === row.file);
@@ -694,13 +763,13 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
         if (words > rules.maxTextCardWords) row.fails.push(`a text card (${entry.format}) with ${words} words on the image: keep it to ${rules.maxTextCardWords} or fewer (round 7: the 44-word checklist and review card read slowest)`);
       }
     }
-    if (n >= rules.minSetForVariety && probed < n) fails.push(`the type was checked on ${probed} of ${n} creatives: run the type probe on the page that draws each one (node check-creative-set.mjs probe <html folder> --out ${path.join(path.basename(dir), 'type-report.json')}), then look at every headline at full size. Use --no-type only when no creative has text drawn from HTML`);
+    if ((conceptPlan !== null || n >= rules.minSetForVariety) && probed < files.length) fails.push(`the type was checked on ${probed} of ${files.length} creatives: run the type probe on the page that draws each one (node check-creative-set.mjs probe <html folder> --out ${path.join(path.basename(dir), 'type-report.json')}), then look at every headline at full size. Use --no-type only when no creative has text drawn from HTML`);
   }
   const failCount = fails.length + per.reduce((k, r) => k + r.fails.length, 0);
-  return { ok: failCount === 0 && n > 0, status: n === 0 ? 'NOT_RUN' : failCount ? 'FAIL' : 'PASS', coverage: { found: n, pixels_read: decoded.size }, files: n, layouts: groups, fails, notes, per, failCount };
+  return { ok: failCount === 0 && files.length > 0, status: files.length === 0 ? 'NOT_RUN' : failCount ? 'FAIL' : 'PASS', coverage: { found: files.length, pixels_read: decoded.size }, files: files.length, ...(conceptPlan !== null ? { concepts: concepts ? concepts.length : null } : {}), layouts: groups, fails, notes, per, failCount };
 }
 export function reportText(r) {
-  const out = [`CREATIVE SET: ${r.files} creatives | ${r.layouts.length} layouts by the pixels | ${r.status === 'NOT_RUN' ? 'NOT_RUN' : r.ok ? 'PASS' : `FAIL (${r.failCount})`}`, ''];
+  const out = [`CREATIVE SET: ${r.files} creatives${r.concepts != null ? ` / ${r.concepts} concepts` : ''} | ${r.layouts.length} layouts by the pixels | ${r.status === 'NOT_RUN' ? 'NOT_RUN' : r.ok ? 'PASS' : `FAIL (${r.failCount})`}`, ''];
   out.push('LAYOUTS (grouped from the pixels, biggest first):', ...r.layouts.map((g, i) => `  ${i + 1}. ${g.length} x  ${g.join(', ')}`), '');
   if (r.fails.length || (r.notes || []).length) out.push('SET:', ...r.fails.map((f) => `  FAIL ${f}`), ...(r.notes || []).map((x) => `  note ${x}`), '');
   const rows = r.per.filter((p) => p.fails.length || p.notes.length);
@@ -732,6 +801,8 @@ async function main(argv = process.argv.slice(2), print = console.log) {
   if (!a._[0]) { const src = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n'); print(src.slice(1, src.findIndex((l) => l.startsWith('import '))).map((l) => l.replace(/^\/\/ ?/, '')).join('\n')); return 2; }
   const size = typeof a.size === 'string' ? a.size : '1080x1080';
   try {
+    if (a['concept-plan'] && typeof a['concept-plan'] !== 'string') throw new Error('--concept-plan needs a brief-derived plan file');
+    if (a.sizes && typeof a.sizes !== 'string') throw new Error('--sizes needs comma-separated WIDTHxHEIGHT values');
     if (a._[0] === 'match') {
       if (!a._[1]) throw new Error('match needs the folder of creatives with its manifest.json');
       const dir = path.resolve(a._[1]), doc = JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json'), 'utf8'));
@@ -754,6 +825,8 @@ async function main(argv = process.argv.slice(2), print = console.log) {
       if (!a.out) print(JSON.stringify(r, null, 1)); return 0;
     }
     const r = checkSet(path.resolve(a._[0]), { manifest: typeof a.manifest === 'string' ? path.resolve(a.manifest) : null, size, buttons: !a['no-buttons'], type: !a['no-type'],
+      allowedSizes: typeof a.sizes === 'string' ? a.sizes.split(',').map((s) => s.trim()) : null,
+      conceptPlan: typeof a['concept-plan'] === 'string' ? JSON.parse(fs.readFileSync(path.resolve(a['concept-plan']), 'utf8')) : null,
       fonts: typeof a.fonts === 'string' ? a.fonts.split(',').map((x) => x.trim()).filter(Boolean) : null, typeReport: typeof a.type === 'string' ? path.resolve(a.type) : null,
       domain: typeof a.domain === 'string' ? a.domain : null, claimsFile: typeof a.claims === 'string' ? path.resolve(a.claims) : null });
     print(a.json ? JSON.stringify(r, null, 2) : reportText(r)); return r.ok ? 0 : 1;

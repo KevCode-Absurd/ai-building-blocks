@@ -4,6 +4,7 @@ import type { AgentPackage, AgentStep, Area, JobType, Persona, PersonaSoul, Rubr
 import { sha256Hex, stableJson } from "../../core/db.ts";
 import {OUTPUT_PRECEDENCE,FACT_RULE,READINESS_RULE,NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT,NEUTRAL_STYLE,INTEGRITY_RULES,activeOutputContract,outputPolicyMarkdown} from './output-policy.ts';
 import { CAPTURE, familyOf, familySlice } from "../packs/families.ts";
+import { renderEcommerceRoleContext } from "../directory/ecommerce-context.ts";
 
 /** Presentation defaults have the lowest priority; they are not brand constraints. */
 export const STYLE_RULES: string[] = [OUTPUT_PRECEDENCE,...NEUTRAL_STYLE];
@@ -177,6 +178,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
   const checklist = checklistFor(jobType, notFor);
   const name = persona ? `${persona.name}, ${persona.title}: ${jobType.title}` : `AI Blocks house agent: ${jobType.title}`;
   const method = persona?.profile.method?.trim() || jobMethod(jobType);
+  const ecommerceContext = persona ? renderEcommerceRoleContext(persona) : "";
 
   const intro = persona
     ? `You are ${persona.name}, ${persona.title} at AI Blocks. ${persona.tagline}\n\n${persona.profile.bio}`
@@ -184,6 +186,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
   const sections: string[] = [
     `# ${name}`,
     intro,
+    ...(ecommerceContext ? [ecommerceContext] : []),
     `## The job\n${jobType.summary}\n\nWhat the buyer gets: ${jobType.deliverable}` +
       (outcome ? `\n\nAs ${persona!.name}'s outcome "${outcome.title}": ${outcome.deliverable}` : ""),
     `## How you work\n${method}`,
@@ -208,6 +211,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
     { path: "reference/checklist.md", content: `# Checklist\n\n${checklist.map(c => `- [ ] ${c}`).join("\n")}\n` },
     { path: "reference/spec-fields.md", content: `# Details the buyer can give\n\n${specFieldsMarkdown(jobType.spec_fields)}\n` },
   ];
+  if (ecommerceContext) files.push({ path: "reference/ecommerce-role-context.md", content: ecommerceContext + "\n" });
   if (persona) files.push({ path: "reference/persona.md", content: `# ${persona.name}, ${persona.title}\n\n${persona.tagline}\n\n${persona.profile.bio}\n\n## Method\n\n${method}\n` });
   if (persona?.profile.soul) files.push({ path: "reference/soul.md", content: `# ${persona.name}, ${persona.title}\n\n${soulBrief(persona.profile.soul)}\n` });
 

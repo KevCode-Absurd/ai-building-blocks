@@ -63,6 +63,26 @@ test('format flags corrupted rendered text and invalid UTF-8 without rejecting o
   writeFileSync(bytes,Buffer.concat([Buffer.from('# Collection\n'),Buffer.from([0xc3,0x28])]));
   assert.equal(run('quality/check-format.cjs',bytes,'--contract',contract).status,1);
 });
+test('encoding-only checks every delivered text file without granting a format pass',()=>{
+  const answer=put('delivery-answer.md','₹500 · São Tomé · 70 × 220 mm');
+  const csv=put('delivery.csv','item,price\nCafé,500\n');
+  const pass=run('quality/check-format.cjs','--encoding-only',answer,csv);
+  assert.equal(pass.status,0,pass.stderr);
+  const receipt=JSON.parse(pass.stdout);
+  assert.equal(receipt.status,'ENCODING_PASS'); assert.equal(receipt.formatChecked,false);
+  assert.equal(receipt.files.length,2);
+  assert.ok(receipt.files.every((f:any)=>f.validUtf8 && /^[a-f0-9]{64}$/.test(f.sha256)));
+  writeFileSync(csv,Buffer.concat([Buffer.from('item,note\nBottle,'),Buffer.from([0x97])]));
+  const fail=run('quality/check-format.cjs','--encoding-only',answer,csv);
+  assert.equal(fail.status,1); assert.equal(JSON.parse(fail.stdout).failures[0].path,csv);
+  assert.equal(JSON.parse(fail.stdout).files[1].validUtf8,false);
+  const missing=run('quality/check-format.cjs','--encoding-only',path.join(dir,'missing.csv'));
+  assert.equal(missing.status,1); assert.equal(JSON.parse(missing.stdout).files[0].validUtf8,null);
+  assert.equal(run('quality/check-format.cjs','--encoding-only').status,2);
+  assert.equal(run('quality/check-format.cjs','--encoding-only','--contract',csv).status,2);
+  assert.equal(run('quality/check-format.cjs',answer).status,2);
+});
+
 test('native field names retain underscores and visible link labels use their own length',()=>{
   const file=put('field-names.md','| field_name | Body |\n|---|---|\n| **order_id** | [Go](https://example.com/long-path) |\n');
   const contract=put('field-names.json',JSON.stringify({tables:[{headers:['field_name','Body'],rows:1,max_chars:{field_name:8,Body:2}}]}));

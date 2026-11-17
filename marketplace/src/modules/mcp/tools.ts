@@ -25,7 +25,8 @@ import type { SeatRequest } from "../directory/team.ts";
 import { askPack, leftOutNote, loadPayload, METHOD_POINTERS, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
 import { answerText } from "../packs/retrieve.ts";
 import { cardAnswerText } from "../knowledge/cards.ts";
-import { cardQuery, verticalIndex } from "../knowledge/service.ts";
+import { cardConstraintProblem, cardQuery, verticalIndex } from "../knowledge/service.ts";
+import { resolveEcommerceRole } from "../directory/ecommerce-context.ts";
 import {executionPlan,checkExecutionDelivery} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 import { leadAgentOfRole } from "../packs/toolbox.ts";
@@ -537,30 +538,45 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "ask_vertical_knowledge", title: "Ask a business knowledge library", scope: "marketplace:read", costly: false,
-    description: "Look up expert knowledge cards for one kind of business (vertical \"ecommerce\": online stores, mostly Shopify, India and US first, Amazon as a second surface). Each card is one claim in plain words with when it holds, when it fails, its numbers and its source with a tier (1 platform docs, 2 research, 3 practitioner with receipts, 4 opinion). Any agent can use it while working for a store. Give one to four phrasings of the question; filter by modules (PRD AVT OFF BRD SET MEA LPG SPD CRO MCR ADC GAD ORG EML SEO AEO CXP COG WLD FIN OPS AMZ SEC), jurisdiction (IN, US, UK, EU), marketplace, mode (dtc_first or amazon_first), platform (shopify or woocommerce) or scope (baseline or growth). Cards for another market never come back. When enough is false, the library does not know: say so and ask or research.",
+    description: "Look up expert knowledge cards for one kind of business (vertical \"ecommerce\": online stores, mostly Shopify, India and US first, Amazon as a second surface). Each card is one claim in plain words with when it holds, when it fails, its numbers and its source with a tier (1 platform docs, 2 research, 3 practitioner with receipts, 4 opinion). Any agent can use it while working for a store. Give one to four phrasings of the question; filter by modules (PRD AVT OFF BRD SET MEA LPG SPD CRO MCR ADC GAD ORG EML SEO AEO CXP COG WLD FIN OPS AMZ SEC), jurisdiction (IN, US, UK, EU), marketplace, mode (dtc_first or amazon_first), platform (shopify or woocommerce) or scope (baseline or growth). Cards for another market never come back. Optionally pass an ecommerce agent_id to search its role modules first. Explicit modules override the role; modules: [] searches the whole public library. Role-aware default top 5; otherwise top 6. A weak narrowed result is not absence from the library: expand modules or research missing evidence. This is public method knowledge, not private brand context or authority.",
     inputSchema: schema({
       vertical: { type: "string", enum: ["ecommerce"], description: "The library: ecommerce." },
+      agent_id: { type: "string", maxLength: 128, description: "Exact ecommerce house-agent ID. Applies role modules before ranking unless modules is explicitly supplied; does not identify a brand or grant access." },
       questions: { type: "array", minItems: 1, maxItems: 4, items: { type: "string", minLength: 3, maxLength: 300 }, description: "One to four phrasings of one question, such as [\"how many new ad creatives should we test each week\", \"creative testing volume by spend\"]." },
-      modules: { type: "array", maxItems: 23, items: { type: "string", enum: ["PRD", "AVT", "OFF", "BRD", "SET", "MEA", "LPG", "SPD", "CRO", "MCR", "ADC", "GAD", "ORG", "EML", "SEO", "AEO", "CXP", "COG", "WLD", "FIN", "OPS", "AMZ", "SEC"] }, description: "Only cards whose modules include one of these codes." },
+      modules: { type: "array", maxItems: 23, items: { type: "string", enum: ["PRD", "AVT", "OFF", "BRD", "SET", "MEA", "LPG", "SPD", "CRO", "MCR", "ADC", "GAD", "ORG", "EML", "SEO", "AEO", "CXP", "COG", "WLD", "FIN", "OPS", "AMZ", "SEC"] }, description: "Only cards whose modules include one of these codes. Explicit values override the role scope; [] deliberately expands to all public modules." },
       jurisdiction: { type: "string", enum: ["IN", "US", "UK", "EU"], description: "The brand's market, for tax, finance and law cards." },
       marketplace: { type: "string", enum: ["IN", "US", "UK", "EU"], description: "The Amazon marketplace, for Amazon cards." },
       mode: { type: "string", enum: ["dtc_first", "amazon_first", "new_product", "expansion"], description: "dtc_first or amazon_first for Amazon cards; new_product or expansion for product research." },
       platform: { type: "string", enum: ["shopify", "woocommerce"], description: "The store platform, for setup and speed cards." },
       scope: { type: "string", enum: ["baseline", "growth"], description: "baseline: holds for almost every brand. growth: holds under stated conditions." },
-      k: { type: "integer", minimum: 1, maximum: 10, description: "How many cards, 1 to 10 (default 6)." },
+      k: { type: "integer", minimum: 1, maximum: 10, description: "How many cards, 1 to 10 (default 5 with agent_id, otherwise 6)." },
     }, ["vertical", "questions"]),
     annotations: read("Ask a business knowledge library"),
     async run(c, args) {
       const a = args as Record<string, unknown>;
       const id = typeof a.vertical === "string" ? a.vertical : "";
-      const v = await verticalIndex(c.env, id);
+      if (id !== "ecommerce") return no("Use vertical ecommerce.");
+      const role = a.agent_id === undefined ? null : typeof a.agent_id === "string" ? resolveEcommerceRole(a.agent_id) : null;
+      if (a.agent_id !== undefined && !role) return no("agent_id must be an exact public ecommerce house-agent ID; it is a role selector, not a brand or access grant.");
+      const allowed = ["PRD", "AVT", "OFF", "BRD", "SET", "MEA", "LPG", "SPD", "CRO", "MCR", "ADC", "GAD", "ORG", "EML", "SEO", "AEO", "CXP", "COG", "WLD", "FIN", "OPS", "AMZ", "SEC"];
+      const explicit = a.modules !== undefined;
+      if (explicit && (!Array.isArray(a.modules) || a.modules.length > 23 || a.modules.some(m => typeof m !== "string" || !allowed.includes(m)))) return no("modules must be an array of valid module codes; [] searches all public modules.");
+      const invalidConstraint = cardConstraintProblem(a);
+      if (invalidConstraint) return no(invalidConstraint);
+      const selected = explicit ? [...new Set(a.modules as string[])] : role?.modules ?? [];
+      const v = await verticalIndex(c.env, id, selected);
       if (!v) return no("That knowledge library is not available. Use vertical ecommerce.");
       const questions = Array.isArray(a.questions) ? a.questions.filter((q): q is string => typeof q === "string" && q.trim().length >= 3).map(q => q.trim().slice(0, 300)).slice(0, 4) : [];
       if (!questions.length) return no("Give questions: one to four phrasings of what you need, each at least 3 characters.");
-      const answer = v.index.ask(questions, { ...cardQuery(v.file.vertical, a), today: nowIso().slice(0, 10) });
+      const answer = v.index.ask(questions, { ...cardQuery(v.file.vertical, { ...a, modules: selected, k: a.k ?? (role ? 5 : 6) }), today: nowIso().slice(0, 10) });
+      const narrowed = selected.length > 0;
+      const expansion = narrowed ? "Search scope is narrowed, not full-library coverage. For cross-role dependencies, explicitly add the needed modules or use modules: []; retain market, jurisdiction, mode and platform filters. Brand facts must come from authorized org context, not this public library." : "All public modules searched; matches do not establish complete answer coverage or private brand evidence.";
+      let rendered = cardAnswerText(answer, v.file.vertical.name);
+      if (narrowed && !answer.hits.length) rendered = "No matching card in the selected modules. Other public modules have not been searched.";
+      else if (narrowed && !answer.enough) rendered = rendered.replace("Treat it as not in the library: ask the client or research it, and say which.", "The selected modules have insufficient matching evidence; expand the relevant modules before concluding the public library lacks it.");
       return {
-        text: cardAnswerText(answer, v.file.vertical.name),
-        data: { library: v.file.vertical.id, enough: answer.enough, coverage: answer.coverage, missing: answer.missing, evidence_scope: answer.evidence_scope, business_data_ready: answer.business_data_ready, cards: answer.hits.map(h => ({ id: h.card.id, modules: h.card.modules, claim: h.card.claim, scope: h.card.scope, tier: h.card.tier, stale: h.stale, source: h.source ? { id: h.source.id, title: h.source.title, url: /^https?:/.test(h.source.url) ? h.source.url : null, date: h.source.date } : null })) },
+        text: `${rendered}\n\n${expansion}` ,
+        data: { library: v.file.vertical.id, search_scope: { agent_id: role?.agent_id ?? null, selection: explicit ? "explicit_modules" : role ? "role_modules" : "all_public_modules", modules: selected, narrowed, indexed_cards: v.candidate_count, library_cards: v.total_cards, asset_download: "full_public_index_json", completeness: "not_evaluated", expansion_guidance: expansion, private_brand_context: false, grants_authority: false }, enough: answer.enough, coverage: answer.coverage, missing: answer.missing, evidence_scope: answer.evidence_scope, business_data_ready: answer.business_data_ready, cards: answer.hits.map(h => ({ id: h.card.id, modules: h.card.modules, claim: h.card.claim, scope: h.card.scope, tier: h.card.tier, stale: h.stale, source: h.source ? { id: h.source.id, title: h.source.title, url: /^https?:/.test(h.source.url) ? h.source.url : null, date: h.source.date } : null })) },
       };
     },
   },

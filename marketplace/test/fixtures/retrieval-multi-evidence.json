@@ -1,0 +1,120 @@
+{
+  "schema": "ai-blocks-multi-evidence-development/1",
+  "scope": "Six compound development queries authored with source and retrieval code visible; references reused from the older golden set. Not independent or held-out. Reference presence is not factual endorsement.",
+  "questions": [
+    {
+      "id": "compound-1",
+      "role": "seo-specialist",
+      "q": "Our 3000-page store still has old robots-blocked URLs in Google. What should we fix first and is crawl budget the problem?",
+      "references": [
+        {
+          "file": "knowledge.md",
+          "quote": "If the site has fewer than about 10,000 pages, ignore crawl budget"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "They can stay indexed as bare URLs."
+        },
+        {
+          "file": "skills/technical-seo-audit/SKILL.md",
+          "quote": "Score each issue on four things, 1 to 3 each"
+        }
+      ]
+    },
+    {
+      "id": "compound-2",
+      "role": "email-marketing-specialist",
+      "q": "Build a welcome flow and tell me how to assess it when opens rise but clicks stay flat; what sender authentication alignment should I check?",
+      "references": [
+        {
+          "file": "knowledge.md",
+          "quote": "If opens jump but clicks do not, assume privacy features, not interest"
+        },
+        {
+          "file": "skills/lifecycle-flow-builder/SKILL.md",
+          "quote": "Welcome (4 to 5 emails over about 10 to 14 days)"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "the SPF or DKIM domain matches the domain in the visible From address"
+        }
+      ]
+    },
+    {
+      "id": "compound-3",
+      "role": "meta-media-buyer",
+      "q": "Retargeting ROAS looks great but pausing it did not change sales. Should I double budgets, change audiences and judge a new creative after two days?",
+      "references": [
+        {
+          "file": "knowledge.md",
+          "quote": "make moderate steps and batch other edits together"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "Warm ad sets show high ROAS but total sales do not move when they pause"
+        },
+        {
+          "file": "skills/meta-creative-test-plan/SKILL.md",
+          "quote": "Minimum length: 7 days, to cover weekday patterns"
+        }
+      ]
+    },
+    {
+      "id": "compound-4",
+      "role": "customer-support-specialist",
+      "q": "Orders are shipping late and data requests sit in the ticket queue. Which standard replies should we avoid and what must we handle first?",
+      "references": [
+        {
+          "file": "knowledge.md",
+          "quote": "tell the customer before they ask and offer the choice to cancel"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "Data requests left in the general queue"
+        },
+        {
+          "file": "skills/reply-template-library/SKILL.md",
+          "quote": "do not use if the order is more than 10 days late"
+        }
+      ]
+    },
+    {
+      "id": "compound-5",
+      "role": "backend-developer",
+      "q": "Audit checkout payment handling: we mark paid on the success page and retry both invalid requests and timed-out charges. What is unsafe?",
+      "references": [
+        {
+          "file": "knowledge.md",
+          "quote": "do not retry it, because it will fail the same way; fix the request"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "the order is marked paid on the success page, not by the webhook"
+        },
+        {
+          "file": "prompts/what-happens-twice-review.md",
+          "quote": "The outside call times out but actually succeeded"
+        }
+      ]
+    },
+    {
+      "id": "compound-6",
+      "role": "shopify-specialist",
+      "q": "Our team edits the live homepage daily and overlapping apps slow it down. Plan theme-copy work and prioritize speed fixes by business value.",
+      "references": [
+        {
+          "file": "workflows/safe-theme-change.md",
+          "quote": "agree a time to copy any content changes made on the live theme"
+        },
+        {
+          "file": "knowledge.md",
+          "quote": "several apps doing overlapping jobs (two review widgets, three pop-ups)"
+        },
+        {
+          "file": "skills/speed-fix-list/SKILL.md",
+          "quote": "Payback is sales at risk divided by effort"
+        }
+      ]
+    }
+  ]
+}

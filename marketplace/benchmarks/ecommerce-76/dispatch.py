@@ -10,6 +10,8 @@ for pair in a.start:
     by[aid]={'agent_id':aid,'collaboration_task':task,'dispatch_observed_utc':now,'context':a.context,'completion':None}
 for aid in a.complete:
     if aid not in by:raise SystemExit(f'Not dispatched: {aid}')
+    if by[aid].get('completion'):
+        continue  # Re-observation must not overwrite the first completion timestamp/note.
     by[aid]['completion']=a.completion_note
     by[aid]['completion_observed_utc']=now
 path.write_text(json.dumps(list(by.values()),indent=2)+'\n',encoding='utf-8')

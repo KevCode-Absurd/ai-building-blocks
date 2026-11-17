@@ -7,6 +7,7 @@ import crypto from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 
 export function inventorySources(folder,{maxBytes=4_000_000,maxFiles=2000}={}) {
+  if (!Number.isSafeInteger(maxBytes) || maxBytes < 1 || !Number.isSafeInteger(maxFiles) || maxFiles < 1) throw new Error('Source read budgets must be positive safe integers.');
   const root=fs.realpathSync(folder), files=[], errors=[];
   const within=p=>{const r=path.relative(root,p);return r!== '..'&&!r.startsWith('..'+path.sep)&&!path.isAbsolute(r);};
   function fields(value,prefix='',depth=0,out=new Set()) {
@@ -39,12 +40,12 @@ export function inventorySources(folder,{maxBytes=4_000_000,maxFiles=2000}={}) {
       try {
         const bytes=fs.readFileSync(file);row.sha256=crypto.createHash('sha256').update(bytes).digest('hex');
         if(/\.json$/i.test(file)) {
-          const {out,truncated}=fields(JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,'')));
+          const {out,truncated}=fields(JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,'')));
           row.fields=[...out].sort();row.coverage=truncated?'sampled_fields':'all_fields';
         } else if(/\.(md|txt)$/i.test(file)) {
-          row.headings=bytes.toString('utf8').split(/\r?\n/).flatMap((line,i)=>/^#{1,6}\s+/.test(line)?[{line:i+1,title:line.replace(/^#+\s+/,'')}]:[]);
+          row.headings=new TextDecoder('utf-8',{fatal:true}).decode(bytes).split(/\r?\n/).flatMap((line,i)=>/^#{1,6}\s+/.test(line)?[{line:i+1,title:line.replace(/^#+\s+/,'')}]:[]);
         }
-      } catch(error) {row.status='unreadable';errors.push(`${rel}: ${error.message}`);}
+      } catch(error) {row.status='unreadable';errors.push(`${rel}: read or parse failed; inspect separately`);}
     }
   }
   visit(root);

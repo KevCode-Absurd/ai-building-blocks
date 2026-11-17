@@ -4,6 +4,24 @@
 // tables:[{headers:[],rows,min_rows,max_rows,max_chars:{column:limit},length_unit:'code_points'|'utf16'}].
 const fs = require('fs'), crypto = require('crypto');
 const args = process.argv.slice(2), at = args.indexOf('--contract');
+if (args[0] === '--encoding-only') {
+  const paths = args.slice(1);
+  if (!paths.length || paths.some(p => p.startsWith('--'))) {
+    console.error('Usage: node check-format.cjs --encoding-only <text-file> [text-file ...]'); process.exit(2);
+  }
+  const files = [], failures = [];
+  for (const path of paths) {
+    try {
+      const bytes = fs.readFileSync(path), sha256 = crypto.createHash('sha256').update(bytes).digest('hex');
+      let validUtf8 = true;
+      try { new TextDecoder('utf-8', { fatal: true }).decode(bytes); } catch { validUtf8 = false; }
+      files.push({path, sha256, validUtf8});
+      if (!validUtf8) failures.push({path, error:'Invalid UTF-8 bytes'});
+    } catch (error) { files.push({path, validUtf8:null}); failures.push({path, error:error.message}); }
+  }
+  console.log(JSON.stringify({schema:'ai-blocks-encoding-check/1', status:failures.length?'FAIL':'ENCODING_PASS', formatChecked:false, files, failures, assurance:'Encoding of these bytes only; layout, content and format require separate checks.'}, null, 2));
+  process.exit(failures.length ? 1 : 0);
+}
 const file = args[0], contractFile = at >= 0 ? args[at + 1] : null;
 if (!file || !contractFile) { console.error('Usage: node check-format.cjs <file> --contract <contract.json>'); process.exit(2); }
 try {

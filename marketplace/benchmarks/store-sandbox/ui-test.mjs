@@ -32,11 +32,13 @@ try {
   let snapshot=await state();assert.equal(Object.keys(snapshot.orders).length,0);assert.equal(snapshot.products.flatMap(p=>p.variants).find(v=>v.id===variantId).stock,initial);
   await page.screenshot({path:path.join(output,'declined-checkout.png'),fullPage:true});
   await page.locator('#payment-outcome').selectOption('approved');await page.locator('#pay').click();await page.getByRole('heading',{name:'Your simulated receipt'}).waitFor();
+  assert.equal(await page.locator('#bag-count').textContent(),'0','Converted cart must not remain in the bag badge');
   snapshot=await state();const order=Object.values(snapshot.orders)[0];assert.equal(order.status,'paid');assert.equal(snapshot.products.flatMap(p=>p.variants).find(v=>v.id===variantId).stock,initial-1);
   const receipt=await fetch(base+'/orders/'+order.id+'/receipt').then(r=>r.json());assert.equal(receipt.paid,true);
   await page.screenshot({path:path.join(output,'receipt-desktop.png'),fullPage:true});
   await page.getByRole('button',{name:'Simulate refund'}).click();await page.getByText('Stock restored to this dataset.').waitFor();
   snapshot=await state();assert.equal(snapshot.orders[order.id].status,'refunded');assert.equal(snapshot.products.flatMap(p=>p.variants).find(v=>v.id===variantId).stock,initial);
+  await page.locator('.bag').click();await page.getByRole('heading',{name:'Your test bag is waiting'}).waitFor();assert.equal(await page.locator('#bag-count').textContent(),'0');
   await page.getByRole('link',{name:'Test console'}).click();await page.getByRole('button',{name:'Advance 1 day'}).click();await page.getByRole('button',{name:'Process due messages'}).click();
   await page.waitForFunction(()=>document.querySelector('#outbox').textContent.includes('order_not_paid'));
   await page.screenshot({path:path.join(output,'outbox-desktop.png'),fullPage:true});

@@ -8,6 +8,8 @@ Use this for anything people look at: pages, emails with layout, decks, ads with
 2. Read every slice, phone first. Judge as a senior designer seeing it cold.
 3. Fix the file, render again, and look again. Stop when the checklist passes on both sizes.
 
+The renderer also saves `-layout.json` with actual browser fonts, colors, margins and padding. Compare them with the intended design; invalid CSS can silently fall back to browser defaults while producing no overflow. For objective brand/layout requirements, pass an optional third argument pointing to a JSON contract, for example `{"computed_styles":[{"selector":"body","property":"font-family","equals":"Arial"}]}`. Values are exact browser-computed strings; `view` may restrict a check to `phone` or `desktop`. Every matched element must satisfy the check. `CHECKS_PASS` covers only these declared checks, never the whole design.
+
 Note: a fixed or sticky bar appears once mid-image in a full-page shot. Check it does not cover the main button or headline on the first phone screen.
 
 ## Checklist
@@ -21,6 +23,7 @@ Note: a fixed or sticky bar appears once mid-image in a full-page shot. Check it
 - No lorem, empty boxes, "image here" or fake placeholders.
 - Images and icons load; no hotlinks to files that are not there.
 - Style matches the brand's own look: colors, type, tone.
+- Keep prose cleanup out of HTML/CSS/JavaScript syntax. A global spacing substitution can corrupt `16px`, `#F5F0E8`, `h1`, identifiers or URLs. After any transformation, check the actual computed styles and final render again; a successfully saved screenshot is not proof that styling applied.
 - Buttons look tappable: solid fill, at least 44px tall, clear verb label.
 
 ## Three common AI page failures

@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { TOOL_FILES } from "../src/modules/packs/build.ts";
 
-const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8");
+const shared = (p: string) => readFileSync(new URL(`../packs/shared/${p}`, import.meta.url), "utf8").replace(/\r\n/g, "\n");
 const METHOD = shared("METHOD.md");
 const AGENTS = shared("AGENTS.md");
 const TRAIN = shared("train/AGENTS.md");
@@ -24,7 +24,8 @@ test("METHOD.md is one loop of steps 0 to 6, with the step numbers other files p
   assert.match(METHOD, /^# Method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./);
   assert.deepEqual([...METHOD.matchAll(/^(\d)\. \*\*([^*]+)\*\*/gm)].slice(0, 8).map(m => m[1]), ["1", "2", "3", "4", "5", "6", "7", "8"], "eight numbered hard rules");
   // A bloat guard, not a target (owner, 14 Nov: never cut a useful line to fit). The four files it replaces held 4,895 words.
-  assert.ok(words(METHOD) < 5400, `METHOD.md has ${words(METHOD)} words`);
+  // One conditional reference adds the owner-requested automation-debt principles.
+  assert.ok(words(METHOD) < 5500, `METHOD.md has ${words(METHOD)} words`);
 });
 
 test("the old method files are short pointers to METHOD.md", () => {
@@ -74,7 +75,7 @@ test("every rule that won a blind test is still in METHOD.md, stated once", () =
   const once: [string, RegExp][] = [
     // Quality Engine v2.1 (11 Nov, 88% of 128 blind verdicts) and v3.3 to v3.4 (12 to 13 Nov).
     ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*/],
-    ["projections labelled", /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections; never in what a buyer reads\./],
+    ["projections labelled", /Compute projections and decision summaries from source rows; verify narrative amounts, thresholds and dates against those results\. Label projections and show ranges outside buyer copy\./],
     ["new framing of true facts", /New framing of true facts, never new facts\./],
     ["requested artifact", /\*\*Deliver the requested artifact\.\*\* An email is the email/],
     ["length follows use", /\*\*Length follows use\.\*\* Stay within the owner's limit, counted the way the owner counts/],

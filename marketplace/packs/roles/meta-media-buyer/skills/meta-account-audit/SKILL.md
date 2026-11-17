@@ -32,7 +32,7 @@ Better: partner access with **View performance** on the ad account and **Use eve
 Work in this order. Each layer depends on the one before it.
 
 ### 1. Business frame (10 minutes)
-Write down the break-even cost per acquisition (margin per sale) and break-even ROAS (1 divided by gross margin percentage). Example: 40% margin means break-even ROAS of 2.5. Every later judgement uses these numbers.
+Write down expected contribution before ads per acquired order after landed COGS, fulfilment, payment fees, returns/refunds and other variable costs. That is the contribution break-even CPA. Break-even ROAS is the same purchase-value definition reported by the ad platform divided by that contribution; use 1 / contribution rate only when its revenue denominator matches exactly. A 40% product gross margin alone gives a product-cost-only threshold of 2.5, not profit break-even. Missing costs block a scaling verdict. Keep first-order economics separate from mature-cohort value and cash.
 
 ### 2. Tracking truth
 - Compare platform purchases (or leads) to shop or CRM for the same dates. A gap is normal; the question is whether it is stable and explainable. Platform higher than the shop usually means double counting or view-through credit. Platform far lower usually means missing events.

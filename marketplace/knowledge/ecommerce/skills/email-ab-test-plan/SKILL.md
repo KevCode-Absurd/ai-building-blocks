@@ -82,10 +82,10 @@ Revenue per recipient needs even more: in web tests it took about six times the 
 ### 4. Read the result
 
 1. **Check the split.** If one arm got noticeably more recipients than planned, the split is broken; a chi-square check on recipient counts flags it, and a mismatched test should not be trusted [CRO-0007].
-2. **Read the one metric.** Win, lose, or no difference at the planned sample.
+2. **Read the one metric.** Win, lose, or inconclusive at the planned sample; report the estimate and interval.
 3. **Put it in money:** gross profit per recipient = placed order rate x gross profit per order after any discount, minus message cost per recipient (SMS and WhatsApp). An offer that wins on orders can lose on gross profit.
 4. **Expect most tests to lose or tie.** Only about 10 to 20% of well-run tests produce a clear winner, and claims of huge lifts should be re-tested [CRO-0012].
-5. **No difference at full sample** means the effect is smaller than the test could see; stop and move on [CRO-0015].
+5. **Inconclusive at full sample** does not establish no difference or an effect below the MDE. Report the confidence interval against the practical threshold, keep the planned stopping rule, and do not extend until significance.
 
 ### 5. SMS and WhatsApp tests
 

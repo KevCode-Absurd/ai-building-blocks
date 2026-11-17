@@ -2,6 +2,7 @@
 // every baseline card, a sources list and the JSON index the Worker searches. Only public cards from public sources
 // are ever published; licensed and study-only material stays in the repo. Pure: no file access.
 import { cardMarkdown, moduleMarkdown, type Card, type Source, type Vertical } from "./cards.ts";
+import type { Synonyms } from "../packs/retrieve.ts";
 import type { Persona } from "../../core/types.ts";
 import { ORIGIN } from "../packs/format.ts";
 import { journeyIndexMarkdown, journeyMarkdown, type Journey } from "./journeys.ts";
@@ -43,7 +44,7 @@ export interface VerticalBundle {
   names: ToolNames;
   /** Served once each at /packs/knowledge/<vertical>/<name>, and carried by the vertical's agents at the same path. */
   files: Record<string, { content: string; purpose: string }>;
-  index: { schema: "ai-blocks-vertical-index/1"; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[] };
+  index: { schema: "ai-blocks-vertical-index/1"; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[]; synonyms?: Synonyms | null };
   /** The guide's journey maps (knowledge/<vertical>/journeys/*.json), one per job family. */
   journeys?: Journey[];
 }
@@ -128,7 +129,7 @@ export function moduleToolboxMarkdown(vertical: Vertical, code: string, items: V
   ].join("\n");
 }
 
-export function verticalBundle(vertical: Vertical, allCards: Card[], allSources: Source[], extra: { toolbox?: VerticalToolbox | null; vendor?: Record<string, string>; names?: ToolNames; principles?: { index: VerticalPrinciples; texts: Record<string, string> } | null; journeys?: Journey[]; formats?: FormatsData | null; moments?: MomentsData | null; synonyms?: unknown } = {}): VerticalBundle {
+export function verticalBundle(vertical: Vertical, allCards: Card[], allSources: Source[], extra: { toolbox?: VerticalToolbox | null; vendor?: Record<string, string>; names?: ToolNames; principles?: { index: VerticalPrinciples; texts: Record<string, string> } | null; journeys?: Journey[]; formats?: FormatsData | null; moments?: MomentsData | null; synonyms?: Synonyms | null } = {}): VerticalBundle {
   const sources = allSources.filter(s => s.public);
   const open = new Set(sources.map(s => s.id));
   const cards = allCards.filter(c => c.public && open.has(c.source)).sort((a, b) => a.id < b.id ? -1 : 1);
@@ -185,7 +186,7 @@ export function verticalBundle(vertical: Vertical, allCards: Card[], allSources:
   const moments = extra.moments ? (Array.isArray(extra.moments) ? extra.moments : extra.moments.moments ?? []) : [];
   if (extra.synonyms) files[`${dir}/synonyms.json`] = { content: JSON.stringify(extra.synonyms, null, 2) + "\n", purpose: "Owner words to expert terms, used by ask-knowledge and prepare-job." };
   if (moments.length) files[`${dir}/moments.md`] = { purpose: `${moments.length} buying moments by market and region, with lead times.`, content: momentsMarkdown(moments) };
-  return { vertical, cards, sources, toolbox, principles, vendor, names, files, journeys, index: { schema: "ai-blocks-vertical-index/1", vertical, counts, sources, cards } };
+  return { vertical, cards, sources, toolbox, principles, vendor, names, files, journeys, index: { schema: "ai-blocks-vertical-index/1", vertical, counts, sources, cards, synonyms: extra.synonyms ?? null } };
 }
 
 /** The disciplines one agent practises: the ones naming it, then the ones for everyone, each with its file. */
@@ -393,7 +394,7 @@ export function libraryMapMarkdown(persona: Persona, bundle: VerticalBundle, min
   const firstLine = (s: string) => s.trim().replace(/\s+/g, " ").replace(/[.]$/, "");
   return [
     `# ${v.name} library map`, "",
-    `The whole ${v.name.toLowerCase()} library is in this pack: ${bundle.cards.length} cards in ${rows.length} modules. Read this map, never the library. To prepare a job, run \`node tools/prepare-job.mjs <brief>\` first: it reads the brief's requests and data signals and lists the cards they need. To find one more card, run \`node tools/ask-knowledge.mjs "<question>" "<another phrasing>" --k 6\`, and add \`--module ${rows.slice(0, 2).map(m => m.code).join(",")}\` to search only those modules. One query per data signal and per major decision; when the answer says "Weak match", the library does not know.`, "",
+    `The whole ${v.name.toLowerCase()} library is in this pack: ${bundle.cards.length} cards in ${rows.length} modules. Read this map, never the library. To prepare a job, run \`node tools/prepare-job.mjs <brief>\` first: it reads the brief's requests and data signals and lists the cards they need. To find one more card, run \`node tools/ask-knowledge.mjs "<question>" "<another phrasing>" --k 6\`, and add \`--module ${rows.slice(0, 2).map(m => m.code).join(",")}\` to search only those modules. Cover each data signal and major decision with relevant evidence. Reuse a lookup when it answers several questions, and cite supplied business records directly. Query count is not evidence coverage. When the answer says "Weak match", the library does not know.`, "",
     "## Modules", "",
     "| Code | Module | Cards | What it covers |", "|---|---|---|---|",
     ...rows.map(m => `| ${m.code}${mine.includes(m.code) ? " (mine)" : ""} | ${m.name} | ${count(m.code)} | ${moduleScope(bundle.cards, m.code).replace(/\|/g, "/")} |`), "",

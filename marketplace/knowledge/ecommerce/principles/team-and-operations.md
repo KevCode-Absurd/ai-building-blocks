@@ -1,5 +1,7 @@
 # Running the team and the work: craft principles
 
+Before scheduling, inventory the supplied sources and read actual team availability. An assumed allowance never overrides a supplied capacity limit. Allocate hours by owner and period, include existing commitments, then run `tools/commerce-math.mjs` with operation `capacityPlan`: `availability` rows have `owner`, `period`, `hours`, `source`; `assignments` rows have `owner`, `period`, `task`, `hours`. A plan with a negative remaining balance is infeasible until work is removed, deferred or explicitly reassigned. Proposed effort is an estimate; available capacity is an owner constraint, not another estimate to invent.
+
 This book is for the people who run the work behind a store: whoever turns a request into a job, picks the next play, looks after agency clients, runs the creative production line or knows how much the team can take. Read it before you scope, staff, schedule or report on any job; write the spec, plan or update to it; and run the review checklist on the draft before it reaches the owner or the client.
 
 ## What great looks like

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.4.0
+// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.5.0
 //
 // Checks a set of static ad creatives before hand-over, from the pixels and from the set's manifest.
 //   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--fonts "Lato,Nanum Myeongjo"]
-//     [--type <type-report.json>] [--domain gehnaindia.com] [--no-buttons] [--no-type] [--json]
+//     [--claims <reviewed-claims.json>] [--type <type-report.json>] [--domain gehnaindia.com] [--no-buttons] [--no-type] [--json]
 //   node check-creative-set.mjs probe <folder of creative .html files> --out <creatives>/type-report.json [--size 1080x1080]
 //   node check-creative-set.mjs match <folder of creatives>   (opens each ad's landing page, rendering it in a browser when
 //     the store draws it with script; writes match-report.json)
@@ -35,7 +35,7 @@
 //     list, a chat, a comparison table, an explainer, a review card, a before-and-after...). Pixel layouts can
 //     differ while the set still reads as one template of photo plus panel
 //   - absolute claims ("every stone we set", "all our pieces", "100%", "guaranteed", "the only") need a
-//     claim_source that was checked against the whole range, or softer words. "always" and "never" are notes
+//     claim_id resolved through --claims <ledger.json> with exact approved text, scope and source bytes, or softer words. "always" and "never" are notes
 //   - a set of 10 or more with no local or seasonal moment (the moment field) gets a note
 //   - the mix: in any set of 3 or more, at least half the creatives are image-led (product or lifestyle); text cards
 //     (notes, chats, tables, receipts) are the rest, each with 40 words or fewer on the image. 5 or more name at least
@@ -68,10 +68,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import { createHash } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 
-export const VERSION = '1.4.0';
+export const VERSION = '1.5.0';
 export const RULES = Object.freeze({ minLayouts: 4, maxLayoutShare: 0.3, minSetForVariety: 10, minProductShare: 1 / 3, minProductContrast: 22, minButtonShare: 0.7, minNativeFormats: 3, minTextPx: 18, readTextPx: 24, minKernPx: 40, maxKernGap: -0.008, minCommaTail: 0.15, maxUpscale: 1.3,
   minStrokeContrast: 0.2, strokeMinPx: 30, minContrast: 4.5, minContrastLarge: 3, largeTextPx: 48, maxImageWords: 50, noteImageWords: 30, minSetForMix: 3, maxTextCardShare: 0.5,
   minSegments: 2, minSetForSegments: 5, maxHeadlineWords: 14, noteHeadlineWords: 10, maxPriceAgeDays: 7, maxPrimaryHook: 125, maxAdHeadline: 40, maxAdDescription: 30,
@@ -202,12 +203,48 @@ const NATIVE = [['notes', /\b(notes?|checklist|to-?do|list)\b/], ['chat', /\b(ch
 export function nativeFormat(format) { const f = String(format || '').toLowerCase(); const hit = NATIVE.find(([, re]) => re.test(f)); return hit ? hit[0] : null; }
 const ABSOLUTE = /\b(?:every|all)\s+(?:of\s+)?(?:[\p{L}'’]+\s+){0,2}?(?:stones?|pieces?|gems?|gemstones?|diamonds?|products?|items?|orders?|designs?|rings?|customers?|ingredients?|batch(?:es)?|plans?|users?|clients?|materials?)\b|\b(?:100\s?%|guaranteed|the only|no one else|purest)\b/iu;
 const SOFT_ABSOLUTE = /\b(?:always|never)\b/i;
-export function claimIssues(entry) {
+// A claim manifest cannot approve itself. Resolve IDs against a separately reviewed local ledger.
+// This verifies source integrity, exact approved copy and scope, not whether the evidence proves the claim.
+const loadedClaims = new WeakSet();
+export function loadClaimEvidence(file, { today = new Date() } = {}) {
+  if (!file) return { claims: [], errors: [] };
+  const claims = [], errors = [];
+  const root = fs.realpathSync(path.dirname(path.resolve(file)));
+  const doc = JSON.parse(fs.readFileSync(file, 'utf8'));
+  if (!Array.isArray(doc.claims)) throw new Error('claim evidence must contain a claims array');
+  const ids = new Set();
+  for (const c of doc.claims) {
+    try {
+      if (!c || typeof c.id !== 'string' || !c.id.trim() || ids.has(c.id)) throw new Error('missing or duplicate claim id');
+      ids.add(c.id);
+      if (c.status !== 'approved' || typeof c.approved_by !== 'string' || !c.approved_by.trim()) throw new Error('requires a recorded approval and reviewer');
+      if (!Array.isArray(c.approved_text) || !c.approved_text.length || c.approved_text.some((t) => typeof t !== 'string' || !t.trim())) throw new Error('requires exact approved_text strings');
+      if (!Array.isArray(c.products) || !c.products.length || c.products.some((t) => typeof t !== 'string' || !t.trim())) throw new Error('requires product scope (use ["*"] only for an explicitly reviewed whole-range claim)');
+      const age = (today.getTime() - Date.parse(c.checked_at || '')) / 864e5;
+      if (!Number.isFinite(age) || age < 0 || age > 90) throw new Error('evidence review is undated, future-dated or stale');
+      if (typeof c.source_file !== 'string' || path.isAbsolute(c.source_file) || c.source_file.split(/[\\/]/).includes('..')) throw new Error('source_file must stay inside the ledger folder');
+      const source = fs.realpathSync(path.resolve(root, c.source_file));
+      const rel = path.relative(root, source);
+      if (!rel || rel.startsWith('..') || path.isAbsolute(rel)) throw new Error('source_file escapes the ledger folder');
+      const bytes = fs.readFileSync(source);
+      if (createHash('sha256').update(bytes).digest('hex') !== c.source_sha256) throw new Error('source SHA-256 does not match');
+      if (typeof c.source_quote !== 'string' || !c.source_quote.trim() || !bytes.toString('utf8').includes(c.source_quote)) throw new Error('source quote is missing from the recorded source bytes');
+      const checked = Object.freeze({ ...c }); loadedClaims.add(checked); claims.push(checked);
+    } catch (err) { errors.push(`${c?.id || 'claim'}: ${err.message}`); }
+  }
+  return { claims, errors };
+}
+export function claimIssues(entry, { claims = [] } = {}) {
   const fails = [], notes = [];
-  for (const k of ['headline', 'body']) {
+  const ids = Array.isArray(entry.claim_ids) ? entry.claim_ids : entry.claim_id ? [entry.claim_id] : [];
+  const approved = claims.filter((c) => loadedClaims.has(c) && ids.includes(c.id));
+  for (const k of ['headline', 'body', 'cta']) {
     const t = String(entry[k] ?? ''), m = t.match(ABSOLUTE);
-    if (m && !String(entry.claim_source || '').trim()) fails.push(`${k} makes an absolute claim ("${m[0]}") with no claim_source: check it against the whole range (a lab-grown or budget line counts) and name the source, or soften it`);
-    else if (SOFT_ABSOLUTE.test(t) && !entry.claim_source) notes.push(`${k} says "${t.match(SOFT_ABSOLUTE)[0]}": if it is a promise, check it`);
+    if (m) {
+      const match = approved.find((c) => c.approved_text.includes(t) && (c.products.includes('*') || c.products.includes(entry.product)) && (!c.market || c.market === entry.market) && (!c.channel || c.channel === entry.channel));
+      if (!match) fails.push(`${k} makes an absolute claim ("${m[0]}") without matching reviewed claim evidence: supply claim_id, exact approved copy and product/market/channel scope via --claims, or soften it; claim_source prose is not verification`);
+      else notes.push(`${k} links reviewed claim ${match.id} to intact source bytes. Human review must still establish that the source supports the claim.`);
+    } else if (SOFT_ABSOLUTE.test(t)) notes.push(`${k} says "${t.match(SOFT_ABSOLUTE)[0]}": if it is a promise, check it`);
   }
   return { fails, notes };
 }
@@ -557,7 +594,8 @@ export function isRetargetOrOffer(entry) {
 }
 
 // ---------- the whole set ----------
-export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true, type = true, fonts = null, typeReport = null, domain = null, today = new Date() } = {}) {
+export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true, type = true, fonts = null, typeReport = null, domain = null, today = new Date(), claimsFile = null } = {}) {
+  const evidence = loadClaimEvidence(claimsFile, { today });
   const files = fs.readdirSync(dir).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
   const mPath = manifest || path.join(dir, 'manifest.json');
   let entries = null;
@@ -565,19 +603,20 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
   const tPath = typeReport || path.join(dir, 'type-report.json');
   const report = fs.existsSync(tPath) ? JSON.parse(fs.readFileSync(tPath, 'utf8')) : null;
   const [sw, sh] = size.split('x').map(Number);
-  const fails = [], notes = [], per = [];
+  const fails = evidence.errors.map((e) => `claim evidence: ${e}`), notes = [], per = [];
   const maps = [], decoded = new Map();
   for (const f of files) {
     const row = { file: f, fails: [], notes: [] };
     if (/\.png$/i.test(f)) {
       try { const img = decodePng(fs.readFileSync(path.join(dir, f))); decoded.set(f, img); maps.push({ f, map: layoutMap(img), shape: shapeOf(img) }); if (img.width !== sw || img.height !== sh) row.fails.push(`is ${img.width}x${img.height}, not ${size}`); }
-      catch (err) { row.notes.push(`pixels not read: ${err.message}`); }
-    } else row.notes.push('not a PNG: pixel checks skipped (save PNG)');
+      catch (err) { row.fails.push(`pixels not read: ${err.message}`); }
+    } else row.fails.push('pixel checks unavailable for this format: supply a PNG export; no visual pass is established');
     per.push(row);
   }
   // Layout variety, from the pixels.
   const groups = groupShapes(maps.map((m) => m.shape)).map((g) => g.map((i) => maps[i].f)).sort((a, b) => b.length - a.length);
   const n = files.length;
+  if (!n) fails.push('no supported raster creatives found: visual checks were NOT_RUN; SVG or HTML artifacts need rendering and inspection');
   if (n >= rules.minSetForVariety) {
     if (groups.length < rules.minLayouts) fails.push(`only ${groups.length} layout${groups.length === 1 ? '' : 's'} across ${n} creatives (the pixels group them); make at least ${rules.minLayouts}`);
     if (groups[0] && groups[0].length / n > rules.maxLayoutShare) fails.push(`${groups[0].length} of ${n} creatives share one layout (${groups[0].slice(0, 4).join(', ')}${groups[0].length > 4 ? ', ...' : ''}); no layout on more than ${Math.round(rules.maxLayoutShare * 100)}% of the set`);
@@ -593,7 +632,7 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
     for (const e of entries) {
       const row = per.find((r) => r.file === e.file); if (!row) { fails.push(`manifest names ${e.file}, which is not in the folder`); continue; }
       row.fails.push(...textIssues(e));
-      const c = claimIssues(e); row.fails.push(...c.fails); row.notes.push(...c.notes);
+      const c = claimIssues(e, evidence); row.fails.push(...c.fails); row.notes.push(...c.notes);
       const o = offerIssues(e, { today, rules }); row.fails.push(...o.fails); row.notes.push(...o.notes);
       const ad = adIssues(e, { domain, rules }); row.fails.push(...ad.fails); row.notes.push(...ad.notes);
       const nf = nativeFormat(e.format); if (nf) { natives.add(nf); textCards++; }
@@ -658,10 +697,10 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
     if (n >= rules.minSetForVariety && probed < n) fails.push(`the type was checked on ${probed} of ${n} creatives: run the type probe on the page that draws each one (node check-creative-set.mjs probe <html folder> --out ${path.join(path.basename(dir), 'type-report.json')}), then look at every headline at full size. Use --no-type only when no creative has text drawn from HTML`);
   }
   const failCount = fails.length + per.reduce((k, r) => k + r.fails.length, 0);
-  return { ok: failCount === 0, files: n, layouts: groups, fails, notes, per, failCount };
+  return { ok: failCount === 0 && n > 0, status: n === 0 ? 'NOT_RUN' : failCount ? 'FAIL' : 'PASS', coverage: { found: n, pixels_read: decoded.size }, files: n, layouts: groups, fails, notes, per, failCount };
 }
 export function reportText(r) {
-  const out = [`CREATIVE SET: ${r.files} creatives | ${r.layouts.length} layouts by the pixels | ${r.ok ? 'PASS' : `FAIL (${r.failCount})`}`, ''];
+  const out = [`CREATIVE SET: ${r.files} creatives | ${r.layouts.length} layouts by the pixels | ${r.status === 'NOT_RUN' ? 'NOT_RUN' : r.ok ? 'PASS' : `FAIL (${r.failCount})`}`, ''];
   out.push('LAYOUTS (grouped from the pixels, biggest first):', ...r.layouts.map((g, i) => `  ${i + 1}. ${g.length} x  ${g.join(', ')}`), '');
   if (r.fails.length || (r.notes || []).length) out.push('SET:', ...r.fails.map((f) => `  FAIL ${f}`), ...(r.notes || []).map((x) => `  note ${x}`), '');
   const rows = r.per.filter((p) => p.fails.length || p.notes.length);
@@ -716,7 +755,7 @@ async function main(argv = process.argv.slice(2), print = console.log) {
     }
     const r = checkSet(path.resolve(a._[0]), { manifest: typeof a.manifest === 'string' ? path.resolve(a.manifest) : null, size, buttons: !a['no-buttons'], type: !a['no-type'],
       fonts: typeof a.fonts === 'string' ? a.fonts.split(',').map((x) => x.trim()).filter(Boolean) : null, typeReport: typeof a.type === 'string' ? path.resolve(a.type) : null,
-      domain: typeof a.domain === 'string' ? a.domain : null });
+      domain: typeof a.domain === 'string' ? a.domain : null, claimsFile: typeof a.claims === 'string' ? path.resolve(a.claims) : null });
     print(a.json ? JSON.stringify(r, null, 2) : reportText(r)); return r.ok ? 0 : 1;
   } catch (err) { print(`check-creative-set: ${err.message}`); return 2; }
 }

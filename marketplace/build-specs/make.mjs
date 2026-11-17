@@ -29,8 +29,13 @@ const KIT = [
   ["kit/transitions.mjs", "agent/transitions.mjs", "the failure table: per process, the last step that went well against the first thing that went wrong"],
   ["kit/trace.test.mjs", "agent/trace.test.mjs", "tests for the trace, its checks and the failure table"],
   ["agents.json", "agent/agents.json", "the agents' ids and names, so process pages show names"],
-  ...["copy-check.cjs", "check-logo-contrast.cjs", "numbers.cjs", "readability.cjs", "proof.cjs", "leakcheck.cjs", "render.cjs"].map(f =>
+  ...["copy-check.cjs", "check-logo-contrast.cjs", "numbers.cjs", "financial-ledger.cjs", "readability.cjs", "proof.cjs", "leakcheck.cjs", "render.cjs"].map(f =>
     [`../packs/shared/tools/quality/${f}`, `tools/quality/${f}`, "a quality check the processes run (plain Node, no packages)"]),
+  ["../packs/shared/tools/quality/FINANCIAL.md", "tools/quality/FINANCIAL.md", "source-pinned financial ledger contract and limits"],
+  ["../packs/shared/tools/commerce-math.mjs", "tools/commerce-math.mjs", "deterministic commerce and capacity calculations"],
+  ["../packs/shared/tools/verify-patch.mjs", "tools/verify-patch.mjs", "checks an exact patch against an isolated baseline copy"],
+  ["../packs/shared/tools/automation-review.mjs", "tools/automation-review.mjs", "reviews outcome visibility and decision boundaries; no live actions"],
+  ["../packs/shared/AUTOMATION-PRINCIPLES.md", "AUTOMATION-PRINCIPLES.md", "preserves customer signals, judgment, critical skills and relationships"],
   ["kit/settings.json", ".claude/settings.json", "turns the hooks on (copy it in step 9, not before)"],
   ["kit/limits.example.json", "context/limits.example.json", "example money limits; fill context/limits.json from the owner's answers"],
   ["kit/goals.example.json", "context/goals.example.json", "example goals; fill context/goals.json from the owner's answers"],

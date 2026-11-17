@@ -6,7 +6,7 @@
 // Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist]
 //          [--sources <file|dir> ...] [--contract <contract.json> | --max-words <n>] [--limit <n> [--fail-above <pct>]]
 //          [--brief <brief>] [--profile <family>] [--context <dir>] [--require <check,check>] [--json]
-//          [--online] [--requested-template] [--options-requested] [--customer-copy] [--requested-more] [--one-page]
+//          [--online] [--requested-template] [--options-requested] [--customer-copy] [--requested-more] [--one-page] [--financial]
 // Proof runs offline unless --online is given. --max-words writes a one-rule contract for check-format.
 // --limit is the owner's word limit, counted raw the way the owner counts (every word, tables included). Only going
 // over it fails (--fail-above 95 tightens the fail line when the owner asked for that). There is no target share.
@@ -19,7 +19,13 @@
 // proof, numbers and format). The family comes from --profile, else from the job under way (<context>/job.json).
 // --require adds more by name. A required check that did not run FAILS: skipping the ledger or the contract is
 // never an easier pass than writing one. Names: wordcount, readability, limit, leakcheck, numbers, trace, proof,
-// format, handover.
+// format, handover, patches, product_choice. Buyer-facing jobs check size-choice evidence
+// using --product-source, a supplied product.json, or context/product.json or evidence/product.json.
+// Sibling .patch/.diff files automatically require actual application and byte comparison.
+// --patch-before <dir> and --patch-after <dir> override sibling before/ and after/ baseline directories.
+// --automation-plan <json> or context/automation-plan.json runs the offline automation review.
+// --automation-authorizations <json> forwards only explicitly named trusted host authority records.
+// Unresolved decisions WARN for drafts; --require automation requires READY. Neither grants permission.
 // --json prints the report as one JSON object (same exit codes). Each run adds one line to <context>/job-log.jsonl
 // when that folder exists (tools/log-event.mjs: names, statuses and hashes only, never the text).
 // Exit 0 = no check failed, 1 = at least one failed, 2 = usage error. Readability stays advisory unless --strict
@@ -30,7 +36,7 @@ const { spawnSync } = require('child_process');
 const { pathToFileURL } = require('url');
 
 const VERSION = '1.1.0';
-const CHECKS = ['wordcount', 'readability', 'limit', 'leakcheck', 'numbers', 'trace', 'proof', 'format', 'handover'];
+const CHECKS = ['wordcount', 'readability', 'limit', 'leakcheck', 'numbers', 'trace', 'proof', 'format', 'handover', 'patches', 'product_choice', 'automation'];
 // What to do when a required check could not run.
 const HOW = {
   limit: 'give --limit <n>, the owner\'s word limit',
@@ -42,10 +48,10 @@ const HOW = {
 const argv = process.argv.slice(2);
 const opt = { sources: [], audience: 'business', context: 'context', online: false, template: false, options: false, customerCopy: false, strict: false, require: [], json: false, requestedMore: false, onePage: false };
 const AUDIENCES = ['consumer', 'business', 'specialist'];
-const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--limit <n> [--fail-above <pct>]] [--brief <brief>] [--profile <family>] [--context <dir>] [--require <check,check>] [--json] [--online] [--requested-template] [--options-requested] [--customer-copy] [--requested-more] [--one-page] [--strict]';
+const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--limit <n> [--fail-above <pct>]] [--brief <brief>] [--profile <family>] [--context <dir>] [--require <check,check>] [--json] [--online] [--requested-template] [--options-requested] [--customer-copy] [--requested-more] [--one-page] [--financial] [--strict] [--patch-before <dir>] [--patch-after <dir>] [--product-source <product.json>]';
 const bad = message => { console.error(message + '\n' + usage); process.exit(2); };
 let file = null;
-const FLAGS = ['--online', '--requested-template', '--options-requested', '--customer-copy', '--strict', '--json', '--requested-more', '--one-page'];
+const FLAGS = ['--online', '--requested-template', '--options-requested', '--customer-copy', '--strict', '--json', '--requested-more', '--one-page', '--financial'];
 for (let i = 0; i < argv.length; i++) {
   // Both "--audience consumer" and "--audience=consumer".
   let a = argv[i], inline;
@@ -67,6 +73,11 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '--brief') opt.brief = value();
   else if (a === '--profile') opt.profile = value();
   else if (a === '--context') opt.context = value();
+  else if (a === '--patch-before') opt.patchBefore = value();
+  else if (a === '--patch-after') opt.patchAfter = value();
+  else if (a === '--product-source') opt.productSource = value();
+  else if (a === '--automation-plan') opt.automationPlan = value();
+  else if (a === '--automation-authorizations') opt.automationAuthorizations = value();
   else if (a === '--require') opt.require.push(...value().split(',').map(s => s.trim()).filter(Boolean));
   else if (inline !== undefined && FLAGS.includes(a)) bad(a + ' takes no value');
   else if (a === '--online') opt.online = true;
@@ -77,6 +88,7 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '--json') opt.json = true;
   else if (a === '--requested-more') opt.requestedMore = true;
   else if (a === '--one-page') opt.onePage = true;
+  else if (a === '--financial') opt.financial = true;
   else if (!a.startsWith('--') && !file) file = a;
   else bad('Unknown option ' + a);
 }
@@ -91,6 +103,7 @@ if (opt.limit !== undefined && !(Number.isInteger(opt.limit) && opt.limit > 0)) 
 if (opt.failAbove !== undefined && !(opt.failAbove > 0)) bad('--fail-above needs a positive number');
 if (opt.failAbove !== undefined && opt.limit === undefined) bad('--fail-above needs --limit');
 if (opt.brief && !fs.existsSync(opt.brief)) bad('Cannot read the brief ' + opt.brief);
+if (opt.automationAuthorizations && !opt.automationPlan && !fs.existsSync(path.join(opt.context, 'automation-plan.json'))) bad('--automation-authorizations requires an automation plan');
 for (const name of opt.require) if (!CHECKS.includes(name)) bad('--require names an unknown check "' + name + '". Checks: ' + CHECKS.join(', '));
 let profiles = null;
 try { profiles = JSON.parse(fs.readFileSync(path.join(__dirname, 'profiles.json'), 'utf8')); } catch { /* no profiles beside this script: the name is passed on as given */ }
@@ -105,7 +118,7 @@ if (!family) {
   } catch { /* no job under way */ }
 }
 const familyRequired = family && profiles && Array.isArray(profiles[family]?.required) ? profiles[family].required.filter(n => CHECKS.includes(n)) : [];
-const required = [...new Set([...familyRequired, ...opt.require])];
+const required = [...new Set([...familyRequired, ...opt.require, ...(opt.financial ? ['numbers'] : [])])];
 
 const here = __dirname, rows = [];
 // soft: a check another tool owns (numbers, trace-check, check-handover). If its script is missing or refuses its
@@ -130,24 +143,71 @@ run('readability', 'readability.cjs', [file, '--audience', opt.audience], { advi
 if (opt.limit) run('limit', 'wordcount.cjs', [file, '--raw', '--limit', String(opt.limit), ...(opt.failAbove ? ['--fail-above', String(opt.failAbove)] : [])]);
 else if (required.includes('limit')) rows.push({ name: 'limit', status: 'NOT_RUN', detail: 'no --limit' });
 const ledger = path.join(opt.context, 'numbers.json'), trace = path.join(opt.context, 'trace.md'), spec = path.join(opt.context, 'spec.md');
-run('leakcheck', 'leakcheck.cjs', [file, ...(opt.template ? ['--requested-template'] : []), ...(opt.options ? ['--options-requested'] : []), ...(opt.customerCopy ? ['--customer-copy'] : []),
+const dateSourceArgs = opt.sources.filter(source => fs.statSync(source).isFile()).flatMap(source => ['--date-source', source]);
+run('leakcheck', 'leakcheck.cjs', [file, ...dateSourceArgs, ...(opt.template ? ['--requested-template'] : []), ...(opt.options ? ['--options-requested'] : []), ...(opt.customerCopy ? ['--customer-copy'] : []),
   ...(opt.brief ? ['--brief', opt.brief] : []), ...(opt.brief && fs.existsSync(ledger) ? ['--numbers', ledger] : []), ...(opt.profile ? ['--profile', opt.profile] : [])]);
-if (fs.existsSync(ledger)) run('numbers', 'numbers.cjs', [ledger, '--final', file, ...(opt.brief ? ['--brief', opt.brief] : [])], { soft: true });
+if (fs.existsSync(ledger)) run('numbers', 'numbers.cjs', [ledger, '--final', file, ...(opt.brief ? ['--brief', opt.brief] : []), ...(opt.financial ? ['--financial'] : [])], { soft: true });
 else rows.push({ name: 'numbers', status: 'NOT_RUN', detail: `no ${ledger}` });
 const packRoot = path.resolve(here, '..', '..');
 if (fs.existsSync(trace)) run('trace', 'trace-check.cjs', [trace, ...(fs.existsSync(spec) ? ['--spec', spec] : []), ...(fs.existsSync(path.join(packRoot, 'pack.json')) ? ['--pack', packRoot] : []), '--final', file], { soft: true });
 else rows.push({ name: 'trace', status: 'NOT_RUN', detail: `no ${trace}` });
 run('proof', 'proof.cjs', [file, ...(opt.sources.length ? ['--sources', ...opt.sources] : []), ...(opt.online ? [] : ['--offline'])]);
+// Buyer-facing work cannot bypass the product-scope diagnostic by running only
+// the combined quality entry point. Missing evidence is explicit, never a pass.
+if (opt.customerCopy || profiles?.[family]?.buyer_facing || required.includes('product_choice')) {
+  required.push('product_choice');
+  const target = path.join(here, 'copy-check.cjs');
+  const source = opt.productSource || opt.sources.find(p => path.basename(p) === 'product.json' && fs.statSync(p).isFile()) || [path.join(opt.context, 'product.json'), path.join(path.dirname(opt.context), 'evidence', 'product.json')].find(p => fs.existsSync(p));
+  if (!fs.existsSync(target)) rows.push({name:'product_choice',status:'NOT_RUN',detail:'copy-check.cjs is missing'});
+  else {
+    const check = spawnSync(process.execPath, [target, file, '--product-only', ...(source ? ['--product-source',source] : [])], {encoding:'utf8',timeout:10000,maxBuffer:65536});
+    try {
+      const result = JSON.parse(check.stdout);
+      if (!['PASS','WARN','FAIL','NOT_RUN'].includes(result.status) || ![0,1].includes(check.status)) throw new Error('invalid product-choice receipt');
+      rows.push({name:'product_choice',status:result.status,detail:result.detail});
+    } catch { rows.push({name:'product_choice',status:'ERROR',detail:(check.stderr || check.error?.message || 'Product-choice checker failed without a valid receipt').slice(0,1000)}); }
+  }
+}
 let contract = opt.contract, temp = null;
 if (!contract && opt.maxWords) { temp = path.join(os.tmpdir(), `qe-contract-${process.pid}.json`); fs.writeFileSync(temp, JSON.stringify({ max_words: opt.maxWords })); contract = temp; }
 if (contract) run('format', 'check-format.cjs', [file, '--contract', contract]);
 else rows.push({ name: 'format', status: 'NOT_RUN', detail: 'no --contract or --max-words from the brief' });
 if (temp) fs.rmSync(temp, { force: true });
 // The hand-over check (one entry point for every text gate): it needs the plain answer for its length test.
-if (opt.plain) run('handover', path.join('..', 'check-handover.mjs'), [file, opt.plain, ...(opt.profile ? ['--profile', opt.profile] : []),
+if (opt.plain) run('handover', path.join('..', 'check-handover.mjs'), [file, opt.plain, ...dateSourceArgs, ...(opt.profile ? ['--profile', opt.profile] : []),
   ...(opt.brief ? ['--brief', opt.brief, ...(fs.existsSync(ledger) ? ['--numbers', ledger] : [])] : []),
   ...(opt.template ? ['--requested-template'] : []), ...(opt.options ? ['--options-requested'] : []), ...(opt.requestedMore ? ['--requested-more'] : []), ...(opt.onePage ? ['--one-page'] : [])], { soft: true });
 else if (required.includes('handover')) rows.push({ name: 'handover', status: 'NOT_RUN', detail: 'no --plain answer' });
+
+// A prose report cannot certify an invalid patch beside it. Inspect immediate
+// sibling .patch/.diff artifacts, not arbitrary files outside the deliverable.
+// Apply in temporary copies and compare exact expected bytes. Override baseline
+// directories with --patch-before/--patch-after; default to before/ and after/.
+const artifactDir = path.dirname(path.resolve(file));
+const patchFiles = fs.readdirSync(artifactDir, {withFileTypes:true}).filter(e => /\.(patch|diff)$/i.test(e.name));
+if (patchFiles.length) {
+  required.push('patches');
+  if (patchFiles.length > 20 || patchFiles.some(e => !e.isFile())) rows.push({name:'patches',status:'FAIL',detail:'Patch artifacts must be regular files; maximum 20 per deliverable directory.'});
+  else for (const entry of patchFiles) run('patches', path.join('..','verify-patch.mjs'), [path.join(artifactDir,entry.name), opt.patchBefore || path.join(artifactDir,'before'), opt.patchAfter || path.join(artifactDir,'after')], {soft:true});
+} else if (required.includes('patches')) rows.push({name:'patches',status:'NOT_RUN',detail:'No immediate sibling .patch/.diff artifact; provide the actual patch beside the deliverable.'});
+
+// An automation review is a planning diagnostic, not an authenticated action gate.
+// Existing plans are checked automatically. Valid plans needing human decisions remain
+// usable drafts (WARN); explicitly requiring readiness makes those decisions a failure.
+// Never infer authorization from a conventional file: only forward explicitly named
+// host-supplied grants. The host remains responsible for authenticating their origin.
+const automationPlan = opt.automationPlan || path.join(opt.context, 'automation-plan.json');
+if (opt.automationPlan || fs.existsSync(automationPlan)) {
+  const checker = path.join(__dirname, '..', 'automation-review.mjs');
+  const run = spawnSync(process.execPath, [checker, 'check', automationPlan, ...(opt.automationAuthorizations ? [opt.automationAuthorizations] : [])], {encoding:'utf8', timeout:15000, maxBuffer:2_000_000, windowsHide:true});
+  try {
+    const review = JSON.parse(run.stdout || '');
+    const expectedExit = review.status === 'READY' ? 0 : review.status === 'INVALID' ? 2 : 1;
+    if (run.error || run.status !== expectedExit || review.schema !== 'ai-blocks-automation-review-result/1' || !['READY','REVIEW_REQUIRED','BLOCKED','INVALID'].includes(review.status) || !Array.isArray(review.actions) || !Array.isArray(review.findings) || review.authorityGranted !== false || review.externalActionsExecuted !== 0) throw Error('Missing or invalid automation review receipt');
+    const ready = review.status === 'READY';
+    rows.push({name:'automation', status:review.status === 'INVALID' ? 'FAIL' : ready ? 'PASS' : required.includes('automation') ? 'FAIL' : 'WARN', detail:`${review.status}. Review the automation receipt before external action; this check does not authorize execution.`, review});
+  } catch { rows.push({name:'automation',status:'FAIL',detail:'Automation review could not produce a valid bounded receipt. Check the plan and packaged checker.'}); }
+} else if (required.includes('automation')) rows.push({name:'automation',status:'NOT_RUN',detail:'Provide --automation-plan or context/automation-plan.json.'});
 
 // A required check that did not run is a failure, never a quiet pass.
 const why = familyRequired.length ? `required for ${family}${familyFrom === '--profile' ? '' : ` (the job in ${familyFrom})`}` : 'required';

@@ -18,14 +18,15 @@ export function loadVertical(id, { publicOnly = false } = {}) {
   const sources = existsSync(path.join(dir, "sources.json")) ? JSON.parse(readFileSync(path.join(dir, "sources.json"), "utf8")) : [];
   let cards = existsSync(path.join(dir, "cards")) ? readdirSync(path.join(dir, "cards")).filter(f => f.endsWith(".json")).flatMap(f => JSON.parse(readFileSync(path.join(dir, "cards", f), "utf8"))) : [];
   if (publicOnly) cards = cards.filter(c => c.public);
-  return { vertical, sources, cards };
+  const synonyms = existsSync(path.join(dir, "synonyms.json")) ? JSON.parse(readFileSync(path.join(dir, "synonyms.json"), "utf8")) : null;
+  return { vertical, sources, cards, synonyms };
 }
 
 const norm = f => String(f).replace(/\\/g, "/").replace(/\.(txt|docx)$/i, "").toLowerCase();
 
 export function evaluateVertical(id, golden, opts = {}) {
-  const { vertical, sources, cards } = loadVertical(id, opts);
-  const index = new CardIndex(vertical, cards, sources);
+  const { vertical, sources, cards, synonyms } = loadVertical(id, opts);
+  const index = new CardIndex(vertical, cards, sources, synonyms);
   const fileOf = new Map(sources.map(s => [s.id, norm(s.file ?? "")]));
   const rows = golden.questions.map(q => {
     const a = index.ask(q.q, { k: 10 });

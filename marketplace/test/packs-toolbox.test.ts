@@ -233,7 +233,7 @@ test("toolbox.json: a broken file stops the build with plain errors; size and qu
 test("a curated pack: toolbox.md says what to use when, carries every listed item in full, and ends with who to bring in", async () => {
   const pack = await build("riley-carousels");
   const toolbox = file(pack, "toolbox.md")!;
-  assert.deepEqual(pack.files.slice(0, 4).map(f => f.path), ["README.md", "AGENTS.md", "CLAUDE.md", "toolbox.md"]);
+  assert.deepEqual(pack.files.slice(0, 5).map(f => f.path), ["README.md", "AGENTS.md", "CLAUDE.md", "AGENT-CONTRACT.json", "toolbox.md"]);
   assert.match(toolbox, /^# Riley's toolbox\n\nEverything a graphic designer is hired for, and what to use for each task\. Every file named here is already in this pack: choose what fits the task at your own discretion, open only what you chose, and never search for more\./);
   // Each line: the "when", the item's plain name, what it is for, and its path in the pack.
   assert.match(toolbox, /- When you need exact sizes, type and safe areas for each post: \*\*Social graphics spec\*\* \(build, skill\) `skills\/social-graphics-spec\/SKILL\.md`/);
@@ -456,7 +456,7 @@ test("intake fits the role: only brand-facing work is asked about brands, and on
   assert.deepEqual(russell.files.filter(f => f.path.startsWith("tools/")).map(f => f.path), ["tools/ai-default-patterns.md"]);
   assert.doesNotMatch(file(russell, "context/README.md")!, /brand-dna|capture-brand|check-brand-fidelity/);
   assert.match(file(russell, "context/README.md")!, /## Tools\n\n- `tools\/ai-default-patterns\.md`/);
-  assert.match(file(riley, "context/README.md")!, /## Tools\n\n- `tools\/capture-brand-dna\.mjs`/);
+  assert.match(file(riley, "context/README.md")!, /## Tools\n[\s\S]*- `tools\/capture-brand-dna\.mjs`/);
   assert.deepEqual(lintPack(russell), []);
   // A job skill is one shared file for every pack that links the job. Where a pack lacks a brand tool the skill
   // names, its text differs (it points at the public copy), so that pack keeps its own copy.

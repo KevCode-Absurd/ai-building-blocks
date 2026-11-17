@@ -99,6 +99,8 @@ Duplicate the live theme, apply the top fixes one at a time, and record lab numb
 
 ### 6. Hand over, release, and re-read
 
+If handing over a code patch, apply it to a clean copy of the supplied baseline and compare the resulting files byte for byte with the delivered fixed files. Record that check separately from browser measurements; a plausible-looking diff is not evidence that it applies. Preserve missing-final-newline markers and test the exact patch being delivered.
+
 Give the client the fix list with before and after lab numbers. After they approve and publish, record the release date and re-read field data 28 days later [SPD-0005]. Read conversion before and after by device for the same pages; published case studies tie faster LCP to higher sales [SPD-0004], but the store's own read decides, and no revenue forecast is promised.
 
 ### 7. Market and device notes

@@ -32,7 +32,7 @@ test("an empty org context asks for it, the client's material and access to the 
   assert.equal(c.ready, false);
 });
 
-test("ads go into the voice bank word for word, long runs are marked proven, and patterns are counted", async () => {
+test("ads go into the voice bank word for word, long runs are observations with unknown performance, and patterns are counted", async () => {
   const bb = await load(bbPath);
   const { dir, ctx } = tmp();
   const f = path.join(dir, "ads.json");
@@ -42,10 +42,11 @@ test("ads go into the voice bank word for word, long runs are marked proven, and
   ] }));
   const r = bb.ingestAds(ctx, bb.readRows(f), { source: "library", now });
   assert.equal(r.ads, 2);
-  assert.equal(r.patterns.proven, 1);
+  assert.equal(r.patterns.proven, 0);
+  assert.equal(r.patterns.long_running, 1);
   assert.equal(r.patterns.question_hooks, 0.5);
   const bank = readFileSync(path.join(ctx, "org-context", "foundation", "voice-bank.md"), "utf8");
-  assert.match(bank, /- "Light gold for every day\. \/ Shop now" \| ad \(Ad Library\) 1, 2026-08-01, 107 days, still running, PROVEN/);
+  assert.match(bank, /- "Light gold for every day\. \/ Shop now" \| ad \(Ad Library\) 1, 2026-08-01, 107 days, still running, LONG-RUNNING; performance unknown/);
   assert.match(bank, /## Patterns: library/);
   bb.ingestAds(ctx, bb.readRows(f), { source: "library", now });
   assert.equal((readFileSync(path.join(ctx, "org-context", "foundation", "voice-bank.md"), "utf8").match(/Light gold for every day/g) || []).length, 1, "a line read twice is kept once");
@@ -188,12 +189,13 @@ test("build fills every part a tool can from one folder, starts the parts a pers
   assert.ok(existsSync(path.join(ctx, "org-context", "foundation", "customers.md")));
   const g = bb.gateBrain(ctx, { now, kind: "ads" });
   assert.equal(g.ok, false, "started files are empty until written");
-  assert.match(g.text, /Missing: foundation\/claims\.md, foundation\/customers\.md, foundation\/design\.md/);
+  assert.match(g.text, /Not ready:/);
+  assert.match(g.text, /foundation\/claims\.md \(missing\)/);
   writeFileSync(path.join(ctx, "org-context", "foundation", "claims.md"), "# Claims allowed and banned\n- Made by hand in our workshop (site)\n");
   writeFileSync(path.join(ctx, "org-context", "foundation", "customers.md"), "# Customers and avatars\n## Gift buyer: buys for a wife or mother\n- 35-44 pays most (segments)\n");
   writeFileSync(path.join(ctx, "org-context", "foundation", "design.md"), "# Design\n- Gold #f6b74d on buttons only\n");
-  assert.equal(bb.gateBrain(ctx, { now, kind: "ads" }).ok, true);
-  assert.equal(bb.checkBrain(ctx, { now: new Date(), kind: "ads" }).parts.find((p: any) => p.id === "claims").state, "thin", "a hand-written file with no stamp is dated by its saved date: thin (1 of 5 lines), never stale");
+  assert.equal(bb.gateBrain(ctx, { now, kind: "ads" }).ok, false, "thin and undated foundation cannot clear the gate");
+  assert.equal(bb.checkBrain(ctx, { now: new Date(), kind: "ads" }).parts.find((p: any) => p.id === "claims").state, "stale", "saving a file is not evidence freshness; an explicit review date is required");
   assert.equal(bb.gateBrain(ctx, { now, kind: "dashboard" }).ok, true, "an analysis never waits on the org context");
 });
 
@@ -216,7 +218,7 @@ test("the org context has the eight sections, a template, and points worth 100 i
   for (const cmd of ["template", "status", "slice", "build", "check", "gate", "ask", "learn", "migrate", "import", "source", "ads", "reviews", "segments", "creatives", "plan", "voice-check"]) assert.ok(oc.COMMANDS.includes(cmd), cmd);
 });
 
-test("the new sections count and show as gaps, but never hold the gate: an org context built before them still passes", async () => {
+test("missing task foundation blocks readiness without deleting the older context", async () => {
   const oc = await load(bbPath);
   const { ctx } = tmp();
   const f = (p: string, t: string) => { const x = path.join(ctx, "org-context", p); mkdirSync(path.dirname(x), { recursive: true }); writeFileSync(x, t); };
@@ -225,7 +227,7 @@ test("the new sections count and show as gaps, but never hold the gate: an org c
   f("foundation/claims.md", "# Claims\n- a\n- b\n- c\n- d\n- e\nUpdated 2026-11-14 by x.\n");
   f("foundation/customers.md", "# Customers\n## One\n## Two\nUpdated 2026-11-14 by x.\n");
   f("foundation/design.md", "# Design\n- a\n- b\n- c\n- d\n- e\nUpdated 2026-11-14 by x.\n");
-  assert.equal(oc.gateBrain(ctx, { now, kind: "ads" }).ok, true);
+  assert.equal(oc.gateBrain(ctx, { now, kind: "ads" }).ok, false);
   const c = oc.checkBrain(ctx, { now, kind: "ads" });
   assert.ok(c.gaps.some((g: any) => g.id === "brand-dna") && c.gaps.some((g: any) => g.id === "markets") && c.gaps.some((g: any) => g.id === "customer-talk"));
   assert.equal(c.parts.find((p: any) => p.id === "markets").needed, true);

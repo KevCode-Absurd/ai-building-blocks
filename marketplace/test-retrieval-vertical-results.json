@@ -1,0 +1,451 @@
+{
+  "cards": 2091,
+  "questions": 80,
+  "answerable": 70,
+  "covered": 63,
+  "hit1": 0.429,
+  "hit3": 0.629,
+  "hit5": 0.729,
+  "mrr": 0.541,
+  "covered_hit5": 0.81,
+  "covered_mrr": 0.601,
+  "absent": 10,
+  "refused": 1,
+  "answered_when_found": 51,
+  "misses": [
+    {
+      "id": "q10",
+      "module": "OFF",
+      "q": "For my welcome pop-up, should the offer be a flat amount off or a percentage off?",
+      "source": "03-OFF-offers/I Studied Every Ecommerce Offer So You Don’t Have To.txt",
+      "quote": "If AOV is >$100, use Dollar Off (e.g., $25 off).",
+      "answer_points": [
+        "If AOV is above $100, use a dollar amount off (e.g. $25 off)",
+        "If AOV is below $100, use a percentage off (e.g. 20% off)"
+      ],
+      "type": "condition",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "OFF-0031 Stack the evergreen site discount with the welcome code and advertise the combined dollar value ('up to $50 off') in the pop-up and welcome flow."
+    },
+    {
+      "id": "q11",
+      "module": "OFF",
+      "q": "Is there a way to lift pop-up sign-ups without making my welcome discount bigger?",
+      "source": "03-OFF-offers/I Studied Every Ecommerce Offer So You Don’t Have To.txt",
+      "quote": "Just by offering the exact same thing, but hiding the offer and saying it's a mystery",
+      "answer_points": [
+        "Show the same discount (e.g. 10%) as a hidden \"mystery offer\" in a full-width pop-up",
+        "Reported around 15% opt-in, roughly doubling sign-up conversion"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "EML-0027 Ask for the phone number on the pop-up's second step with copy like 'finish signing up with text to activate your discount'; optimized pop-ups hit 9 to 16%."
+    },
+    {
+      "id": "q22",
+      "module": "MCR",
+      "q": "A handful of my Meta ads are eating nearly all the budget. Is that normal or a problem?",
+      "source": "10-MCR-paid-social-creative/The Creative Strategy Behind $100M_yr of Meta Spend.txt",
+      "quote": "So 4% of ads will hold about 64% of total spend and total revenue generation",
+      "answer_points": [
+        "Normal: Pareto compounds so about 4% of ads take about 64% of spend and revenue",
+        "CBO leans into this, but watch over-reliance on a single hero ad"
+      ],
+      "type": "number",
+      "rank": 8,
+      "covered": true,
+      "enough": true,
+      "top": "ADC-0017 Track creative hit rate: ads that spent over 5% of campaign budget at target CPA, divided by ads launched; about 5% is a normal rate."
+    },
+    {
+      "id": "q25",
+      "module": "MCR",
+      "q": "How do I measure whether our creative team is actually producing winners and not just volume?",
+      "source": "10-MCR-paid-social-creative/The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads.txt",
+      "quote": "If the creative hit my target and spent more than 5% of the total campaign budget, it is a winner.",
+      "answer_points": [
+        "Creative hit rate = winning ads / total ads launched",
+        "A winner spent more than 5% of the campaign budget and hit target CPA",
+        "About 5 winners per 100 launched (5%) is a normal hit rate"
+      ],
+      "type": "structure",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "MCR-6841 Above a 7 out of 10 quality bar nobody can pick winners, so maximise volume above it; two accounts launching 2,000 ads a month on $250,000 spend stayed unprofitable because their ads fell below it."
+    },
+    {
+      "id": "q26",
+      "module": "ADC",
+      "q": "Should my product page copy try to appeal to every visitor who lands on it?",
+      "source": "11-ADC-ad-copy-deployment/COPY HACKERS.txt",
+      "quote": "Write Copy for 20 to 35% of Your Visitors – Not 100% of Them",
+      "answer_points": [
+        "Write for a specific qualified segment of about 20-35% of visitors, not 100%",
+        "Copy neutralised to suit everyone loses its pull"
+      ],
+      "type": "rule",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "CRO-0023 Treat rage clicks under 1-2% of sessions as normal; investigate dead clicks on price or navigation elements and quick backs from product pages, which signal missing information."
+    },
+    {
+      "id": "q28",
+      "module": "ADC",
+      "q": "What reading level should my ad copy be written at?",
+      "source": "11-ADC-ad-copy-deployment/8 Hour Copywriting Course For Beginners.txt",
+      "quote": "you don't want to write copy that's any more complicated than a third grade",
+      "answer_points": [
+        "No more complicated than a third-grade reading level",
+        "The simplest copy is the best copy"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "ORG-0024 Write newsletter and marketing copy at a grade 5 to 8 reading level; Buffett letters fell from 17 to 13 words per sentence and grade 10 to 4."
+    },
+    {
+      "id": "q29",
+      "module": "ADC",
+      "q": "Is there a quick test I can run on each line of my ad copy to see if it is any good?",
+      "source": "11-ADC-ad-copy-deployment/Learn Copywriting in 76 Minutes – Harry Dry.txt",
+      "quote": "Can I visualize it? Can I falsify it? Can nobody else say this?",
+      "answer_points": [
+        "Three tests per line: can I visualise it, can I falsify it, could nobody else say it",
+        "Three nos means rubbish; three yeses means you are on to something"
+      ],
+      "type": "structure",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "LPG-6621 Run every product page line through a 'so what?' test and lead with the outcome, then the feature (firmer skin in four weeks using a triple peptide complex); headlines are worth split testing."
+    },
+    {
+      "id": "q30",
+      "module": "EML",
+      "q": "When should my win-back flow start for customers who have gone quiet?",
+      "source": "14-EML-email-lifecycle/Ecommerce Email Marketing 2025.txt",
+      "quote": "Winback (3 emails deployed at 2x the average order interval)",
+      "answer_points": [
+        "Trigger at twice the average time between orders",
+        "Three emails in the flow"
+      ],
+      "type": "number",
+      "rank": 10,
+      "covered": true,
+      "enough": true,
+      "top": "EML-0050 Win-back emails 30 to 45 days after last purchase convert about 2.3x better than at 90+ days; audit first if over 20% of lapsed buyers complained or returned."
+    },
+    {
+      "id": "q34",
+      "module": "EML",
+      "q": "How soon after sign-up does my welcome flow need to do most of its work?",
+      "source": "14-EML-email-lifecycle/2026 Klaviyo Email Marketing Full Course (3+ Hours).txt",
+      "quote": "The critical purchase window for welcome flows: the first 72 hours (with day zero driving the highest conversion volume)",
+      "answer_points": [
+        "The first 72 hours are the critical purchase window",
+        "Day zero converts the most, so front-load the flow (two emails on day zero)"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "EML-0060 Front-load the welcome flow into 72 hours: discount email at sign-up, a plain-text follow-up 8 hours later, email 2 at 24 hours, then daily to email 6."
+    },
+    {
+      "id": "q35",
+      "module": "PRD",
+      "q": "When I filter TikTok Shop products in Kalodata, what monthly revenue range finds winners that aren't already saturated?",
+      "source": "01-PRD-product-research/This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING).txt",
+      "quote": "Revenue Range = $33k to $97k (to avoid hyper-competitive $300k+ products)",
+      "answer_points": [
+        "Last 30 days, revenue $33k-$97k (avoid $300k+ products)",
+        "Count video revenue only (exclude live) and sort lowest to highest to catch early breakouts"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": false,
+      "enough": false,
+      "top": "AVT-0014 When your product is functionally identical to a scaled competitor's, win with an unserved avatar, not a new mechanism; a mechanism claim needs a real product difference to be believed."
+    },
+    {
+      "id": "q36",
+      "module": "PRD",
+      "q": "In an ad spy tool, which filters show that a product is actually profitable before I copy it?",
+      "source": "01-PRD-product-research/Transcript of the product research method that made me $670k.txt",
+      "quote": "Runtime, we're going to do minimum 14 days. And for the channels, we're going to do Facebook",
+      "answer_points": [
+        "Ads running at least 14 days",
+        "Brand has more than 50 active ads",
+        "Facebook channel (older, easier-to-sell audience)"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "PRD-6481 Merchant Center's free Popular products tab ranks products and brands on Google by how often people search for or buy them, by category and country (India and the US included), with brand rank change and price range, refreshed weekly."
+    },
+    {
+      "id": "q37",
+      "module": "AVT",
+      "q": "How do I quickly tell whether a product idea is a real market or just something I'm passionate about?",
+      "source": "02-AVT-avatars/EXACTLY how I do market research for new products.txt",
+      "quote": "we call it the labor of love you may love it but it's not a profitable business",
+      "answer_points": [
+        "Place the idea on a price vs number-of-customers matrix",
+        "Low price and few customers is a \"labor of love\" quadrant: discard it"
+      ],
+      "type": "structure",
+      "rank": 0,
+      "covered": true,
+      "enough": false,
+      "top": "MCR-0052 With limited production, first apply new formats, conceits, styles and facets to ideas that already won; teams abandon winning ideas long before the market tires of them."
+    },
+    {
+      "id": "q38",
+      "module": "AVT",
+      "q": "How much time should I put into manual customer research before writing ads, and where should it go?",
+      "source": "02-AVT-avatars/How I Find Avatars That Scale Facebook Ads to $10k_day.txt",
+      "quote": "Then we're going to spend one hour doing research and we're going to divide that into two phases.",
+      "answer_points": [
+        "One hour in total, split into two 30-minute phases",
+        "First forums such as Reddit (search problem statements as the avatar), then Amazon reviews; paste verbatim language"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "AVT-0032 Expand personas with an LLM only after writing 30 to 40 good ones by hand: give full context, take its 20 ideas, keep the best 4 or 5, then feed those back for 10 to 20 more."
+    },
+    {
+      "id": "q40",
+      "module": "BRD",
+      "q": "Is a made-up word that means nothing a good name for my new product?",
+      "source": "04-BRD-brand/Positioning_ The Battle for Your Mind_ The Battle for Your Mind (1).txt",
+      "quote": "Only when you are first in the mind with an absolutely new product",
+      "answer_points": [
+        "Only if you are first in the mind with an absolutely new product that millions will want",
+        "Otherwise a coined, meaningless name is dangerous; pick a name that says something"
+      ],
+      "type": "condition",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "COG-6370 Every import must show the English name of its origin country, legibly and as permanently as the item allows; if a US place name appears, 'Made in' plus the country must sit near it in similar size."
+    },
+    {
+      "id": "q47",
+      "module": "ORG",
+      "q": "When should we start putting calls to action like \"grab our free guide\" in our brand's short-form videos?",
+      "source": "13-ORG-organic-and-content/How to start brand social media from scratch in 2026.txt",
+      "quote": "Get traction first. All your videos are getting 5,000",
+      "answer_points": [
+        "No CTAs until videos consistently reach about 5,000+ views",
+        "Then use soft CTAs that trade free value (PDF, report) for emails"
+      ],
+      "type": "number",
+      "rank": 8,
+      "covered": true,
+      "enough": true,
+      "top": "ORG-6402 URLs typed in YouTube Shorts descriptions and comments are not clickable; a Short can carry a clickable related video link, and the channel page can show up to 14 profile links."
+    },
+    {
+      "id": "q48",
+      "module": "ORG",
+      "q": "Is it fine to schedule our Reels and TikToks ahead of time with a scheduling app?",
+      "source": "13-ORG-organic-and-content/How to start brand social media from scratch in 2026.txt",
+      "quote": "every single scheduling app, including the ones native to the platforms, hurts the performance",
+      "answer_points": [
+        "No: tests across hundreds of videos showed every scheduler, including native ones, hurts reach",
+        "Upload and post manually"
+      ],
+      "type": "mistake",
+      "rank": 0,
+      "covered": true,
+      "enough": true,
+      "top": "ADC-7009 TikTok has been blocked in India since 29 June 2020 under Section 69A of the IT Act, so Indian brands cannot advertise to or sell to Indian buyers on TikTok."
+    },
+    {
+      "id": "q54",
+      "module": "CXP",
+      "q": "How do I set a CAC target from the gross profit a customer brings in?",
+      "source": "17-CXP-post-purchase/The Complete E-Commerce Retention Masterclass.txt",
+      "quote": "CAC target: target LTGP divided by the desired efficiency ratio (with 2 to 3 being the optimal scaling band)",
+      "answer_points": [
+        "CAC target = time-bound lifetime gross profit (e.g. 30/90-day LTGP) / efficiency ratio",
+        "A ratio of 2 to 3 is the scaling band; LTGP deducts COGS, delivery, fees and refunds"
+      ],
+      "type": "structure",
+      "rank": 10,
+      "covered": true,
+      "enough": true,
+      "top": "MEA-6318 Set CAC targets from first purchase gross profit of new customers only: blended AOV includes returning buyers' bigger baskets, so a $100 AOV may be $90 for new buyers and margin lower after entry discounts."
+    },
+    {
+      "id": "q62",
+      "module": "OPS",
+      "q": "Customers say our hoodies feel thinner than the last batch. How can I prove the factory cut corners?",
+      "source": "21-OPS-team-and-management/Complete E-commerce Operations Guide.txt",
+      "quote": "we cut out the designated amount of size of the fabric we weigh it",
+      "answer_points": [
+        "Specify fabric GSM in the tech pack",
+        "Cut a fixed-size swatch and weigh it to prove the supplier used lighter fabric, then get it replaced"
+      ],
+      "type": "rule",
+      "rank": 0,
+      "covered": true,
+      "enough": false,
+      "top": "MCR-6022 US advertisers need a reasonable basis for every objective claim before the ad runs, and a claim like 'tests prove' or 'doctors recommend' needs at least that level of proof."
+    },
+    {
+      "id": "q64",
+      "module": "AMZ",
+      "q": "If I send my own ad traffic to my Amazon listing, do I get anything back from Amazon?",
+      "source": "22-AMZ-amazon-marketplace/FREE Amazon FBA Course _ 12 Hour FULL Step by Step Tutorial 2025.txt",
+      "quote": "when you send traffic to your Amazon listing page, they actually give you back around 10% right here",
+      "answer_points": [
+        "Yes, the Brand Referral Bonus (Brand Registry) pays back about 10% on sales from external traffic",
+        "Effectively cuts the usual 15% referral fee to about 5%"
+      ],
+      "type": "number",
+      "rank": 0,
+      "covered": false,
+      "enough": true,
+      "top": "AMZ-7135 Amazon's Brand Referral Bonus pays brands an average of 10% of sales from traffic they send to Amazon from outside ads, including other products bought within 14 days of the click."
+    }
+  ],
+  "wrongly_answered": [
+    {
+      "id": "q71",
+      "module": "FIN",
+      "q": "We sell cotton t-shirts in India priced under Rs 1,000. Which GST slab applies, and do I also charge GST on the shipping fee?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers GST slabs or GST on shipping charges"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "AMZ-7144"
+    },
+    {
+      "id": "q72",
+      "module": "OPS",
+      "q": "What RTO rate on cash-on-delivery orders is normal for an Indian D2C brand, and does adding a COD fee bring it down?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers COD return-to-origin rates or COD fees"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "SET-6186"
+    },
+    {
+      "id": "q73",
+      "module": "SET",
+      "q": "We ship to California. Do our product pages need a Prop 65 warning, and where exactly does it have to appear?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers California Prop 65 warnings"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "COG-6395"
+    },
+    {
+      "id": "q74",
+      "module": "COG",
+      "q": "We are launching wooden toys for toddlers in the US. What lab testing and children's product certificate do we need before we can sell?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers CPSIA testing or children's product certificates"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "PRD-7169"
+    },
+    {
+      "id": "q75",
+      "module": "PRD",
+      "q": "Do I need an FSSAI licence to sell protein bars on my own Shopify store in India, and which licence category applies?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers FSSAI licensing"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "LPG-7000"
+    },
+    {
+      "id": "q77",
+      "module": "EML",
+      "q": "What do I have to register on DLT, and how do TRAI template rules work, before sending promotional SMS to Indian customers?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers DLT registration or TRAI SMS rules"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "EML-6324"
+    },
+    {
+      "id": "q78",
+      "module": "BRD",
+      "q": "What does it cost a startup to file a trademark in India, and which class covers clothing?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers Indian trademark fees or classes"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "BRD-6485"
+    },
+    {
+      "id": "q79",
+      "module": "AMZ",
+      "q": "On Amazon.in, is Easy Ship cheaper than FBA for a 500 g product?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers Amazon India Easy Ship or Amazon.in fees"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "AMZ-7142"
+    },
+    {
+      "id": "q80",
+      "module": "MEA",
+      "q": "Under India's DPDP Act, do I need a consent banner before firing the Meta pixel for Indian visitors?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers the DPDP Act or India-specific consent rules"
+      ],
+      "type": "absent",
+      "absent": true,
+      "refused": false,
+      "top": "ADC-7009"
+    }
+  ]
+}

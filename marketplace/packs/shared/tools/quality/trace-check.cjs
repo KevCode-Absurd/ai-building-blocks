@@ -9,10 +9,10 @@
 //
 // It fails when:
 // - the trace is missing or empty;
-// - it has fewer queries than the spec's signals plus its decisions (the "Signal pass" items, and the items under a
-//   "Decisions" label when the spec has one);
 // - it cites a card id that is not in the pack's knowledge files (knowledge/<vertical>/*.md);
 // - the deliverable (--final) names a card id: card ids stay in the trace.
+// Query count is an advisory, not evidence coverage: one lookup may support several decisions, and supplied
+// business records may answer a signal directly. A reviewer must assess source-to-decision support.
 // It warns when the trace names no card at all (fine only when every lookup came back weak: say so in the trace).
 // Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error.
 const fs = require('fs');
@@ -110,7 +110,7 @@ function check({ trace, spec, pack, final }) {
   const decisions = blockItems(spec, /^\s*(?:[-*]\s+|#{1,6}\s+)?(?:major )?decisions\b/i);
   if (!signals.found) warns.push('the spec has no "Signal pass": write the signals that change the decision in context/spec.md');
   const need = signals.items + decisions.items;
-  if (queries && queries < need) fails.push(`the trace has ${queries} quer${queries === 1 ? 'y' : 'ies'} for ${signals.items} signal${signals.items === 1 ? '' : 's'} and ${decisions.items} decision${decisions.items === 1 ? '' : 's'}: run one query per signal and per major decision`);
+  if (queries && queries < need) warns.push(`the trace has ${queries} quer${queries === 1 ? 'y' : 'ies'} for ${signals.items} signal${signals.items === 1 ? '' : 's'} and ${decisions.items} decision${decisions.items === 1 ? '' : 's'}: review source-to-decision coverage, including supplied business records; query count cannot establish evidence completeness`);
   const cited = [...new Set(trace.match(CARD_ID) || [])];
   const known = packCardIds(pack);
   const unknown = cited.filter(id => !known.has(id));
@@ -122,7 +122,7 @@ function check({ trace, spec, pack, final }) {
       if (ids) fails.push(`deliverable line ${i + 1} names card id ${[...new Set(ids)].join(', ')}: card ids stay in the trace. In: ${line.trim().slice(0, 120)}`);
     });
   }
-  return { fails, warns, queries, signals: signals.items, decisions: decisions.items, cited: cited.length, known: known.size };
+  return { fails, warns, queries, signals: signals.items, decisions: decisions.items, cited: cited.length, known: known.size, evidence_coverage: 'REQUIRES_REVIEW' };
 }
 
 function main(argv) {
@@ -140,7 +140,7 @@ function main(argv) {
   if (a.final && final === null) { console.error(`Cannot read the deliverable ${a.final}`); return 2; }
   const trace = read(tracePath);
   const r = trace === null
-    ? { fails: [`no trace at ${tracePath}: before drafting, run ask-knowledge once per signal and per major decision and log each query there`], warns: [], queries: 0, signals: 0, decisions: 0, cited: 0, known: 0 }
+    ? { fails: [`no trace at ${tracePath}: before drafting, retrieve relevant reference knowledge and log each query with the decisions it supports`], warns: [], queries: 0, signals: 0, decisions: 0, cited: 0, known: 0 }
     : check({ trace, spec, pack, final });
   if (r.warns.length) console.log(`WARN (${r.warns.length}, does not fail):\n` + r.warns.join('\n'));
   console.log(r.fails.length

@@ -6,7 +6,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { KnowledgeIndex, answerText, chunkMarkdown, glossaryOf, indexedPath, knowledgeExcerpt, knowledgeMap, parseSourcesMd, passageUnits, questionKind, stem, tokens, unitKind } from "../src/modules/packs/retrieve.ts";
 
 /** Plain-JS modules (scripts and pack tools) have no type declarations: load them untyped. */
@@ -127,7 +127,7 @@ test("tools/ask-knowledge.mjs is generated from retrieve.ts and answers the same
   writeFileSync(path.join(dir, "sources.md"), "# Sources\n\n1. [Status](https://status.search.google.com/), Google. Checked 2026-11-06.\n");
   writeFileSync(path.join(dir, "pack.json"), JSON.stringify({ name: "Nova", knowledge: { review_every_days: 14 } }));
   writeFileSync(path.join(dir, "tools", "ask-knowledge.mjs"), readFileSync(TARGET, "utf8"));
-  const tool = await import(`${new URL(`file:///${path.join(dir, "tools", "ask-knowledge.mjs").replace(/\\/g, "/")}`).href}?t=${Date.now()}`);
+  const tool = await import(`${pathToFileURL(path.join(dir, "tools", "ask-knowledge.mjs")).href}?t=${Date.now()}`);
   const fromTool = new tool.KnowledgeIndex([{ path: "knowledge.md", text: KNOWLEDGE }]).ask("core update drop");
   const fromTs = new KnowledgeIndex([{ path: "knowledge.md", text: KNOWLEDGE }]).ask("core update drop");
   assert.deepEqual(fromTool.passages.map((p: { id: string }) => p.id), fromTs.passages.map(p => p.id));

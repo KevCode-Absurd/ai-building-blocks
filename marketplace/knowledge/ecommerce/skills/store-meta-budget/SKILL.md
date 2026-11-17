@@ -1,6 +1,6 @@
 ---
 name: store-meta-budget
-description: "A full Meta media-buying plan read on store profit, not platform ROAS. Checks tracking per ad set against store orders, finds past winners (paused ones too) to relaunch first, ranks every audience segment on the data and funds the one that wins, weights new creative to the proven format and message with enough volume to feed the budget, then plans the whole budget: winners funded from day one, a reserve of 15% or less with a release rule, learning-phase limits (about 50 events in 7 days), stock and cash ceilings. Each ad set gets a Scale, Hold, Trim or Cut verdict that matches its number and one rule read on store numbers. Use weekly, before raising spend, when results slip, and before sale periods."
+description: "A full Meta media-buying plan read on store profit, not platform ROAS. Checks tracking per ad set against store orders, finds past winners (paused ones too) to relaunch first, ranks every audience segment on the data and funds the one that wins, weights new creative to the proven format and message with enough volume to feed the budget, then accounts for the whole budget: supported profitable opportunities funded within cash and stock limits, unspent cash with an evidence-based release rule, learning-phase limits (about 50 events in 7 days), stock and cash ceilings. Each ad set gets a Scale, Hold, Trim or Cut verdict that matches its number and one rule read on store numbers. Use weekly, before raising spend, when results slip, and before sale periods."
 ---
 
 # Meta media buying from store profit
@@ -80,9 +80,9 @@ Follow the house rules, chiefly **Org context first**, **Map every signal to an 
 
 ### 5. Budget
 
-The plan uses the whole budget (house rule **Spend plans add up**).
+Account for the whole available budget: proposed spend plus explicitly unspent cash must add up. Available budget is a ceiling, never an obligation to spend.
 - Fund proven winners from day one where tracking works. No zero-spend setup days unless tracking is missing, and then only the days the fix needs.
-- A reserve is at most 15% of the budget, with a release rule on store numbers the account will hit within the period, for example "release to the scale ad set once its store-basis cost stays under target for 7 days".
+- Unspent cash may be up to 100% when tracking, contribution, inventory or cash evidence does not support spend. Give a release rule on verified store numbers, for example "release to the scale ad set once its store-basis cost stays under target for 7 days".
 - About 70% on proven ads and 30% on new ads when the account is profitable; 90/10 when it is not [ADC-0053]. Under about 50,000 a month, run one concept campaign, one scaling campaign and small customer retargeting [ADC-0041].
 - Learning: an ad set needs about 50 optimisation events in the 7 days after a significant edit. Weekly budget to leave learning = 50 x cost per purchase. If the store cannot fund that per ad set, run fewer ad sets. Concept ad sets can be read on 3 times target cost [ADC-0039] or a budget set from 20 conversions [ADC-0066].
 - Ceilings: no push on a product with less cover than lead time [ADC-0023]; the total fits cash. Scale stops where the marginal cost of the last raise reaches break-even, even if the average looks fine [ADC-0049].
@@ -92,7 +92,7 @@ The plan uses the whole budget (house rule **Spend plans add up**).
 ### 6. Verdicts
 
 One label per ad set, and it matches its number in every table and note:
-- **Scale** (budget goes up): store-basis cost at or under target on 7 and 28 days, not in learning, last raise's marginal cost under break-even, cover longer than lead time. A small ad set far above target is under-spent; scale it toward break-even [ADC-0034].
+- **Scale** (budget goes up): store-basis cost at or under target on 7 and 28 days, not in learning, last raise's marginal cost under break-even, cover longer than lead time. A small ad set with cost below target is only a scaling candidate; validate marginal economics, attribution maturity and inventory/cash capacity. Cost above target is not evidence of under-spending.
 - **Hold** (same budget): between target and break-even, in learning, at a ceiling, or under 7 days of data.
 - **Trim** (lower, above zero): above target with marginal cost rising, or a hero product kept alive at less spend.
 - **Cut** (zero): store-basis cost above break-even for 14 days after spend of 3 times target, a concept at 3 times target with 0 or 1 purchases [ADC-0039], or a product about to sell out.
@@ -133,7 +133,7 @@ Structure traps to check before a budget move:
 - Every past winner is relaunched or has a one-line reason.
 - Every segment is ranked; the winner has its own ad set or creative; no unsupported age or interest floor.
 - At least half the new creative is in the proven style, with the weekly ad count named.
-- The whole budget is planned, rows add up, any reserve is 15% or less with a release rule.
+- Proposed spend plus unspent cash reconciles to the available budget; every release rule is evidence-based and fits stock/cash limits.
 - Every verdict label matches its number; every ad set has one rule on store numbers.
 - `numbers.cjs` shows no FAIL; each decision reads in two plain lines.
 - Each scenario adds to the same total budget, and freed money is placed before new money.
@@ -161,7 +161,7 @@ Structure traps to check before a budget move:
 - **Leaving paused winners paused.** Step 2 relaunches them first.
 - **Guessing an age floor.** Step 3 ranks segments on the data.
 - **Too little creative in the style that works.** Step 4 sizes weekly volume to the budget.
-- **Parking budget in a big reserve.** Step 5 caps it at 15% with a release rule.
+- **Spending because budget exists.** Step 5 permits holding all cash when no supported opportunity exists and records the evidence needed to release it.
 - **A Cut label on an ad set that still spends.** Step 6 ties labels to numbers.
 - **Splitting a placement or age band off a breakdown report.** Its high ROAS rarely survives more spend [ADC-6233].
 - **Budget optimisation on a big-ticket product with a handful of orders a day.** It optimises on clicks, not return [ADC-6183].

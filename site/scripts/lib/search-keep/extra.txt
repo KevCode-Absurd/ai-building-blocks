@@ -1,0 +1,2 @@
+# Item pages brought back into Google after a real upgrade (scripts/lib/search-keep.mjs, rule 4).
+# One path per line, e.g. /skills/ten-percent-cutter. Add at most 25 a week, each with a line saying what changed.

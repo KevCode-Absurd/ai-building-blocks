@@ -32,6 +32,7 @@ import { FORMAT_PAGE_URLS, formatIntro, formatLinks, formatPages } from "./lib/f
 import { factsLine, itemTopHtml, otherWaysHtml } from "./lib/item-top.mjs";
 import { agentsSection, loadItemAgents } from "./lib/item-agents.mjs";
 import { FORMATS, TOOL_FORMAT, formatOfKind } from "../src/lib/formats.mjs";
+import { searchKeep } from "./lib/search-keep.mjs";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
@@ -350,7 +351,7 @@ function pageFor(url) {
     const [t, d] = STATIC[url];
     let extra = "";
     // The mind directory links every profile through bounded pages; tools retain their complete list.
-    if (url === "/minds") extra = formatIntro(formatOfKind("mind")) + (mindDirectory(url, directoryMinds)?.body ?? "");
+    if (url === "/minds") extra = formatIntro(formatOfKind("mind")) + (mindDirectory(url, directoryMinds)?.body ?? "") + mostReadMinds();
     if (url === "/tools") extra = formatIntro(TOOL_FORMAT) + `<p><a href="/ai-tools">Read the AI tool guides</a>: find the right AI product for the job.</p>` + list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
     const [documentTitle, seoDesc] = SEO_PAGES[url] ?? [];
     if (url === "/how-it-works") extra = howItWorksBody();
@@ -689,6 +690,16 @@ const homeTypes = [["", "All", "Explore the library"], ["skill", "Skills", "Run 
 const homeMinds = cat.blocks.filter(b => b.type === "mind");
 const homeFlows = cat.blocks.filter(b => kindPath(b) === "workflows" && hasPage(b));
 const homeAgents = cat.blocks.filter(b => b.type === "agent" && hasPage(b) && !isThin(b)).sort((a, b) => (b.tested ? 1 : 0) - (a.tested ? 1 : 0));
+// Which item pages ask to be in Google (scripts/lib/search-keep.mjs): the ones that earned impressions, the ones the home
+// page features, and upgraded ones. Every other item page is served, linked and followed, but noindex and out of the sitemaps.
+const homeFeatured = new Set([...cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16), ...homeMinds.slice(0, 8), ...homeFlows.slice(0, 6), ...homeAgents.slice(0, 4),
+  ...[...starterPicks, ...homePicks("FLOW_PICKS"), ...homePicks("MIND_PICKS")].map((s) => bySlug[s]).filter((b) => b && hasPage(b))].map(hrefOf));
+const keepInSearch = searchKeep(homeFeatured);
+// /minds links every mind that asks to be in Google, since the directory's page 2 and on are noindex.
+function mostReadMinds() {
+  const kept = directoryMinds.filter((b) => keepInSearch(hrefOf(b)));
+  return kept.length ? `<h2 class="hub-h2">Most-read minds</h2><ul class="hub-list">${kept.map((b) => `<li><a href="${hrefOf(b)}">${esc(b.name)}</a><span>${esc(b.summary)}</span></li>`).join("")}</ul>` : "";
+}
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
   title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Use AI like the top 1%",
@@ -780,8 +791,9 @@ write("/jobs", render("/jobs", {
 }, { plain: true }));
 for (const [t, bs] of tasks) {
   const name = TASK_NAMES[t] ?? t;
-  // Keep the same existing recommendation order across the intro and paginated list.
-  const ranked = bestOf(bs, bs.length);
+  // Keep the same existing recommendation order across the intro and paginated list, with the pages that ask to be in
+  // Google first, so each is linked from the hub's page 1 (page 2 and on are noindex).
+  const ranked = bestOf(bs, bs.length).map((x, i) => [x, i]).sort(([a, i], [b, j]) => (keepInSearch(hrefOf(b)) - keepInSearch(hrefOf(a))) || i - j).map(([x]) => x);
   for (let pg = 0; pg * PER < bs.length; pg++) {
     const url = jobHref(t) + (pg ? `/${pg + 1}` : "");
     const items = ranked.slice(pg * PER, (pg + 1) * PER);
@@ -792,8 +804,9 @@ for (const [t, bs] of tasks) {
       crumbs: [["All skills by job", "/jobs"]], collection: true, hub: true,
       body: `${pg ? `<p class="bp-sub">Page ${pg + 1} of ${pages}: more free AI skills and workflows to ${esc(lowerFirst(name))}. <a href="${jobHref(t)}">Start with the best ${esc(lowerFirst(name))} skills on page 1</a>.</p>` : hubIntro(t, name, bs)}<h2 class="hub-h2">${pg ? `More to ${esc(lowerFirst(name))}` : `Every ${esc(lowerFirst(name))} skill and workflow`}</h2>${nav}<ul class="hub-list">${items.map((x) => `<li><a href="${hrefOf(x)}">${esc(x.name)}</a>${testedBadge(x)}<span>${esc(x.summary)}</span></li>`).join("")}</ul>${nav}`,
       main: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: pg * PER + i + 1, url: `${SITE}${hrefOf(x)}`, name: x.name })) },
-    }, { plain: true, noindex: isIndexableHub(t) ? false : "follow" }));
-    if (isIndexableHub(t)) hubUrls.push(url);
+    }, { plain: true, noindex: isIndexableHub(t) && !pg ? false : "follow" }));
+    // Page 2 and on stay reachable but are not indexed: page 1 is the hub (search recovery plan, 17 Nov 2026).
+    if (isIndexableHub(t) && !pg) hubUrls.push(url);
   }
 }
 
@@ -813,7 +826,7 @@ for (const url of urls) {
   const p = crawlPage(url, pageFor(url));
   if (p && sameJobAgents.has(url)) p.canonical = sameJobAgents.get(url);
   if (!p) { problems.push(`no page data for ${url}`); continue; }
-  const html = render(url, p);
+  const html = render(url, p, keepInSearch(url) ? {} : { noindex: "follow" });
   const t = html.match(/<title>([^<]*)<\/title>/)[1];
   if (titles.has(t)) problems.push(`same title on ${titles.get(t)} and ${url}: ${t}`);
   titles.set(t, url);
@@ -833,6 +846,15 @@ fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not 
   body: `<p class="bp-sub">The address may have a typo, or the page may have moved. Pick a format, or start from a job.</p><p>${[...FORMATS, TOOL_FORMAT].map((x) => `<a href="${x.path}">${x.plural}</a>`).join(" · ")} · <a href="/which-one">Which one do I need?</a></p>${list(tasks.map(([t]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>`))}` }, { plain: true, noindex: true }));
 // The hub addresses go into their own sitemap, read by build-index's sitemap index, each with its items' newest date.
 jobsSitemap(hubUrls);
+// The served sitemaps list only the pages that ask to be indexed (scripts/lib/search-keep.mjs). public/ keeps every
+// address, since the list of pages to build is read from there.
+let leftOut = 0;
+for (const file of fs.readdirSync(DIST).filter((f) => /^sitemap-.+\.xml$/.test(f))) {
+  const full = path.join(DIST, file), xml = fs.readFileSync(full, "utf8");
+  const kept = xml.replace(/\s*<url><loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>[\s\S]*?<\/url>/g,(block, u) => (keepInSearch(u || "/") ? block : (leftOut++, "")));
+  if (kept !== xml) fs.writeFileSync(full, kept);
+}
+console.log(`search keep: ${leftOut.toLocaleString("en-US")} item and page-2 addresses left out of the sitemaps (noindex, follow)`);
 console.log(`prerender: ${wrote} pages (${thinUrls.size} imported without the Tested label), ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);
 // The saved, non-writing example is part of this deployment. This avoids a
 // separate unconfigured host; its files count against the same capacity guard.

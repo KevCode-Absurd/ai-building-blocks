@@ -10,7 +10,8 @@
 //  * valid JSON-LD per page type: Organization, WebSite, WebPage or CollectionPage, a BreadcrumbList that ends on this
 //    page, and a CreativeWork, HowTo, WebApplication or ItemList only where the page is that
 //  * the sitemap index lists every indexable page once, lists no noindex page, robots.txt points to it and blocks none
-//    of it; only the private pages, /people, the saved example app and the utility pages are noindex
+//    of it; only the private pages, /people, the saved example app, the utility pages and the item and page-2 pages the
+//    search keep rule leaves out (scripts/lib/search-keep.mjs: noindex, follow) are noindex; pages that earned impressions stay indexed
 //  * every internal link in the prerendered body goes to a real page (not to a redirect); no item page is an orphan
 //  * the prerendered body holds the page's real content, including "Is it for you?" and the output sample when the
 //    page has them, and enough words
@@ -19,6 +20,7 @@
 //  * each job hub opens with its own counts and a "Start with these" list, and the home page links to every hub; the home
 //    page carries Organization and WebSite data with a SearchAction
 import { validLastmod } from "./lib/content-stamps.mjs";
+import { EARNED, EXTRA, decidedByKeepRule } from "./lib/search-keep.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { DESC, TITLE, itemSeo } from "../src/lib/seo-meta.mjs";
@@ -105,7 +107,12 @@ for (const pg of pages) {
   const thinHub = /^\/jobs\/[^/]+$/.test(url) && ((body.match(/<ul class="hub-list">([\s\S]*?)<\/ul>/)?.[1] ?? "").match(/<li>/g) ?? []).length < 3;
   if (noindex && thinHub && /nofollow/.test(robots)) bad("a thin job hub must stay noindex, follow", url);
   if (!noindex && thinHub) bad("a job hub with fewer than 3 items should be noindex, follow", url);
-  if (noindex && !NOINDEX.has(url) && !thinHub) bad("noindex on a page that should be indexed", url);
+  // Item pages and page 2 and on: the search keep rule decides (scripts/lib/search-keep.mjs). Left out means noindex, follow.
+  const keepRule = decidedByKeepRule(url);
+  if (keepRule && noindex && /nofollow/.test(robots)) bad("a page the search keep rule leaves out must stay noindex, follow", url);
+  if (keepRule && noindex && (EARNED.has(url) || EXTRA.has(url))) bad("a page that earned impressions or was upgraded is noindex", url);
+  if (!noindex && /^\/(minds\/page\/\d+|jobs\/[^/]+\/\d+)$/.test(url)) bad("page 2 and on of a list should be noindex, follow", url);
+  if (noindex && !NOINDEX.has(url) && !thinHub && !keepRule) bad("noindex on a page that should be indexed", url);
   if (!noindex && NOINDEX.has(url)) bad("a private page that is not noindex", url);
   if (NOINDEX.has(url) || noindex) continue;
   indexable.push(pg);

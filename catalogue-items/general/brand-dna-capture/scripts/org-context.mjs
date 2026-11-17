@@ -41,6 +41,8 @@
 //   node org-context.mjs resolve --key <fact-key> --action correct|revoke --source <direct-owner-reference>
 //                       [--value <corrected-fact>] [--supersedes <decision-id>] --owner <id> --workspace <id>
 //   node org-context.mjs memory --owner <id> --workspace <id> [--keys <comma-separated-fact-keys>] [--json]
+//   node org-context.mjs intervention-check <jobs/run/intervention.json> --owner <id> --workspace <id>
+//                       --brand <id> --platform <name> --account <id>   read-only evidence eligibility
 //   node org-context.mjs ads <file.json|csv> --source library|account|competitor:<name>
 //   node org-context.mjs reviews <file.json|csv>
 //   node org-context.mjs segments <breakdown.csv> [more.csv ...]
@@ -1542,6 +1544,124 @@ function sectionLines(ctx, now) {
     'Store numbers and lessons: ../MEMORY.md (the store memory). They are linked here, never copied.', ''];
 }
 
+// Intervention-memory design informed by NotFair, deed0436d0c68cbc20a78523fffc67edd12aa25c.
+// MIT License
+//
+// Copyright (c) 2026 Toprank Contributors
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+// This validates local evidence consistency, not connector authenticity, causal impact or permissions.
+export function validateInterventionEpisode(episode, { scope, root, now = new Date() } = {}) {
+  const issues = [], artifacts = {}, fields = ['owner_id', 'workspace_id', 'brand_id', 'platform', 'account_id'];
+  const text = value => typeof value === 'string' && value.trim().length > 0;
+  // Date.parse normalizes impossible days and accepts ambiguous local times; neither is evidence.
+  const date = value => {
+    if (typeof value !== 'string') return false;
+    const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d{1,3})?(Z|[+-]\d{2}:\d{2})$/.exec(value);
+    if (!m) return false;
+    const [, y, mo, d, h, mi, se, offset] = m, year = +y, month = +mo;
+    const days = [31, year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (year < 1 || month < 1 || month > 12 || +d < 1 || +d > days[month - 1] || +h > 23 || +mi > 59 || +se > 59) return false;
+    if (offset !== 'Z' && (+offset.slice(1, 3) > 14 || +offset.slice(4) > 59 || (+offset.slice(1, 3) === 14 && +offset.slice(4) !== 0))) return false;
+    return Number.isFinite(Date.parse(value));
+  };
+  const timezone = value => { try { if (!text(value)) return false; new Intl.DateTimeFormat('en', { timeZone: value }); return true; } catch { return false; } };
+  const object = value => !!value && typeof value === 'object' && !Array.isArray(value);
+  const target = value => object(value) && text(value.type) && text(value.id);
+  const matchesTarget = value => target(value) && target(episode.change?.target) && value.type === episode.change.target.type && value.id === episode.change.target.id;
+  const stateMatches = (expected, observed, depth = 0) => {
+    if (depth > 20) return false;
+    if (expected === null || typeof expected !== 'object') return expected === observed && (typeof expected !== 'number' || Number.isFinite(expected));
+    if (Array.isArray(expected)) return Array.isArray(observed) && expected.length === observed.length && expected.every((v, i) => stateMatches(v, observed[i], depth + 1));
+    return object(observed) && Object.keys(expected).every(key => Object.hasOwn(observed, key) && stateMatches(expected[key], observed[key], depth + 1));
+  };
+  const sameScope = value => fields.every(key => text(scope?.[key]) && value?.[key] === scope[key]);
+  const issue = (code, detail) => issues.push({ code, detail });
+  if (!Number.isFinite(+now)) throw new Error('A valid review time is required.');
+  if (!fields.every(key => text(scope?.[key]))) throw new Error('Explicit owner, workspace, brand, platform and account scope is required.');
+  if (!episode || typeof episode !== 'object' || Array.isArray(episode)) throw new Error('An intervention record is required.');
+  if (!sameScope(episode.scope)) return { schema_version: 'intervention-review/v1', episode_id: null, eligible_for_review: false,
+    status: 'unresolved', issues: [{ code: 'scope_mismatch', detail: 'Episode does not match the requested client and account; content withheld.' }],
+    source_hashes: {}, confounders: [], counterevidence: [], lesson_status: 'proposed', limitation: 'Foreign-scope evidence was not inspected or disclosed.' };
+  if (episode.schema_version !== 'intervention/v1') issue('invalid_schema', 'Expected intervention/v1.');
+  for (const key of ['id', 'hypothesis', 'success_metric', 'guardrail_metric']) if (!text(episode[key])) issue('missing_field', key);
+  for (const key of ['summary', 'authorization_ref']) if (!text(episode.change?.[key])) issue('missing_field', `change.${key}`);
+  if (!target(episode.change?.target)) issue('invalid_target', 'change.target requires explicit type and id.');
+  if (!object(episode.change?.expected) || !Object.keys(episode.change.expected).length || !stateMatches(episode.change.expected, episode.change.expected)) issue('invalid_expected_state', 'change.expected requires a nonempty bounded JSON object.');
+  if (!date(episode.change?.at) || Date.parse(episode.change.at) > +now) issue('invalid_change_date', 'Change time is invalid or in the future.');
+  if (!date(episode.maturity?.not_before) || !text(episode.maturity?.rule)) issue('invalid_maturity', 'An explicit outcome maturity date and rule are required.');
+  else if (Date.parse(episode.maturity.not_before) < Date.parse(episode.change?.at)) issue('invalid_maturity', 'Maturity cannot precede the change.');
+  else if (Date.parse(episode.maturity.not_before) > +now) issue('immature', 'The outcome review date has not arrived.');
+  for (const key of ['confounders', 'counterevidence']) if (!Array.isArray(episode[key]) || !episode[key].every(text)) issue('missing_review', `${key} must be an array; [] explicitly records none observed.`);
+  if (episode.lesson?.status && episode.lesson.status !== 'proposed') issue('unreviewed_promotion', 'An episode cannot promote a lesson or change semantic memory.');
+  const base = root ? fs.realpathSync(root) : null;
+  for (const kind of ['baseline', 'receipt', 'readback', 'outcome']) {
+    const ref = episode.evidence?.[kind];
+    try {
+      if (!base || !ref || !/^[a-f0-9]{64}$/.test(ref.sha256 ?? '')) throw new Error('A pinned local artifact and SHA-256 are required.');
+      if (typeof ref.path !== 'string' || path.isAbsolute(ref.path) || ref.path.includes('\\') || ref.path.includes(':') || ref.path.split('/').some(p => !p || p === '.' || p === '..' || p.startsWith('.'))) throw new Error('Artifact must be a safe relative path inside this job.');
+      let file = base;
+      for (const part of ref.path.split('/')) { file = path.join(file, part); if (fs.lstatSync(file).isSymbolicLink()) throw new Error('Artifact links are not followed.'); }
+      const relative = path.relative(base, fs.realpathSync(file));
+      if (relative.startsWith('..') || path.isAbsolute(relative) || !fs.statSync(file).isFile() || fs.statSync(file).size > 1024 * 1024) throw new Error('Artifact must be a regular bounded job file.');
+      const raw = fs.readFileSync(file);
+      if (createHash('sha256').update(raw).digest('hex') !== ref.sha256) throw new Error('Artifact hash changed.');
+      const data = JSON.parse(raw.toString('utf8'));
+      if (!sameScope(data.scope)) throw new Error('Artifact client/account scope does not match.');
+      if (data.intervention_id !== episode.id || !matchesTarget(data.target)) throw new Error('Artifact intervention or target does not match this change.');
+      if (!text(data.source?.locator) || !date(data.source?.captured_at) || Date.parse(data.source.captured_at) > +now) throw new Error('Artifact source locator and valid capture time are required.');
+      artifacts[kind] = data;
+    } catch (error) { issue('invalid_artifact', `${kind}: ${error.message}`); }
+  }
+  if (artifacts.receipt) for (const key of ['accepted', 'success', 'partial_failure']) {
+    if (Object.hasOwn(artifacts.receipt, key) && typeof artifacts.receipt[key] !== 'boolean') issue('invalid_receipt_status', `${key} must be a boolean when present.`);
+  }
+  if (artifacts.receipt && (artifacts.receipt.accepted !== true || artifacts.receipt.success === false || artifacts.receipt.partial_failure === true)) issue('change_not_accepted', 'A change ID alone does not establish acceptance; failed or partial writes need separate episodes.');
+  if (artifacts.receipt && Date.parse(artifacts.receipt.source.captured_at) < Date.parse(episode.change?.at)) issue('receipt_before_change', 'An older receipt cannot verify this intervention.');
+  if (artifacts.readback && (artifacts.readback.matches_expected !== true || !stateMatches(episode.change?.expected, artifacts.readback.observed) || Date.parse(artifacts.readback.source.captured_at) < Date.parse(episode.change?.at))) issue('readback_unverified', 'Fresh object readback must match the expected change.');
+  for (const kind of ['baseline', 'outcome']) {
+    const data = artifacts[kind]; if (!data) continue;
+    const window = data.window;
+    if (!date(window?.start) || !date(window?.end) || Date.parse(window.start) >= Date.parse(window.end) || Date.parse(window.end) > Date.parse(data.source.captured_at) || !timezone(window?.timezone)) issue('invalid_window', `${kind}: valid offset timestamps and reporting timezone required.`);
+    if (kind === 'baseline' && Date.parse(window?.end) > Date.parse(episode.change?.at)) issue('baseline_after_change', 'Baseline must precede the intervention.');
+    if (kind === 'outcome' && Date.parse(window?.start) < Date.parse(episode.change?.at)) issue('outcome_before_change', 'Outcome window must follow the intervention.');
+    if (kind === 'outcome' && (data.mature !== true || Date.parse(data.source.captured_at) < Date.parse(episode.maturity?.not_before))) issue('immature', 'Outcome data is not demonstrated mature at its capture time.');
+    const coverage = data.coverage;
+    if (coverage?.complete !== true || !Number.isFinite(coverage?.represented) || !Number.isFinite(coverage?.total) || coverage.total <= 0 || coverage.represented !== coverage.total) issue('partial_data', `${kind}: partial or unknown coverage requires further evidence before outcome review.`);
+    for (const key of [episode.success_metric, episode.guardrail_metric]) {
+      const metric = data.metrics?.[key];
+      if (!Number.isFinite(metric?.value) || !text(metric?.unit) || !text(metric?.definition)) issue('missing_metric', `${kind}.${key}: finite value, unit and definition required; undefined ratios are not zero.`);
+    }
+  }
+  if (artifacts.baseline && artifacts.outcome) {
+    if (artifacts.baseline.window?.timezone !== artifacts.outcome.window?.timezone) issue('incomparable_windows', 'Timezone differs; normalize before review.');
+    for (const key of [episode.success_metric, episode.guardrail_metric]) {
+      const a = artifacts.baseline.metrics?.[key], b = artifacts.outcome.metrics?.[key];
+      if (a?.unit !== b?.unit || a?.definition !== b?.definition) issue('incomparable_metric', key);
+    }
+  }
+  return { schema_version: 'intervention-review/v1', episode_id: episode.id ?? null, eligible_for_review: issues.length === 0,
+    status: issues.length ? 'unresolved' : 'review_ready', issues, source_hashes: Object.fromEntries(Object.keys(artifacts).map(key => [key, episode.evidence[key].sha256])),
+    confounders: episode.confounders ?? [], counterevidence: episode.counterevidence ?? [], lesson_status: 'proposed',
+    limitation: 'Local consistency and hash checks only. No connector authenticity, causal improvement, permission grant or lesson promotion is established. Keep raw receipts and review confounders; persist corrections as new episode revisions.' };
+}
+
 // ---------- the command line ----------
 function parseArgs(argv) {
   const a = { _: [] };
@@ -1552,7 +1672,7 @@ function parseArgs(argv) {
   return a;
 }
 const STORE_COMMANDS = new Set(['status', 'slice', 'learn', 'migrate', 'import']);
-export const COMMANDS = Object.freeze(['template', 'status', 'slice', 'build', 'check', 'gate', 'ask', 'learn', 'migrate', 'import', 'source', 'ads', 'reviews', 'segments', 'creatives', 'plan', 'voice-check', 'bind', 'remember', 'resolve', 'memory']);
+export const COMMANDS = Object.freeze(['template', 'status', 'slice', 'build', 'check', 'gate', 'ask', 'learn', 'migrate', 'import', 'source', 'ads', 'reviews', 'segments', 'creatives', 'plan', 'voice-check', 'bind', 'remember', 'resolve', 'memory', 'intervention-check']);
 export function main(argv = process.argv.slice(2), print = console.log) {
   const a = parseArgs(argv), [cmd, ...rest] = a._;
   if (a.help || a.h) { print(ORG_HELP); return 0; }
@@ -1573,6 +1693,12 @@ export function main(argv = process.argv.slice(2), print = console.log) {
     }
     if (STORE_COMMANDS.has(cmd)) return storeMain(argv, print);
     switch (cmd) {
+      case 'intervention-check': {
+        if (!rest[0]) throw new Error('intervention-check <jobs/run/intervention.json>');
+        const file = path.resolve(rest[0]);
+        const result = validateInterventionEpisode(JSON.parse(fs.readFileSync(file, 'utf8')), { scope: { ...scope, brand_id: a.brand, platform: a.platform, account_id: a.account }, root: path.dirname(file), now });
+        print(JSON.stringify(result, null, 2)); return result.eligible_for_review ? 0 : 1;
+      }
       case 'bind': print(JSON.stringify(bindContextScope(ctx, scope))); return 0;
       case 'remember': { if (!rest[0]) throw new Error('remember <record.json>'); print(JSON.stringify(rememberFact(ctx, JSON.parse(fs.readFileSync(rest[0], 'utf8')), { scope, now }))); return 0; }
       case 'resolve': print(JSON.stringify(resolveFact(ctx, { scope, now, factKey: a.key, action: a.action, value: a.value, source: a.source, kind: a.kind || null, supersedes: a.supersedes || null }))); return 0;

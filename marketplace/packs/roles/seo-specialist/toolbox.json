@@ -1,8 +1,18 @@
 {
   "schema": "ai-blocks-toolbox/1",
   "role": "seo-specialist",
-  "reviewed": "2026-11-10",
+  "reviewed": "2026-11-17",
   "tasks": [
+    {
+      "id": "store-release-regression",
+      "task": "Check store releases for discovery and purchase-path regressions",
+      "kind": "audit",
+      "items": [
+        { "ref": "kit:workflows/store-release-regression", "use": "build", "when": "Before and after a theme, catalogue, variant, feed or market change on an ecommerce store" },
+        { "ref": "library:seo-change-tracker", "type": "skill", "use": "check", "when": "To retain a comparable baseline and inspect changes without overwriting the reviewed state" },
+        { "ref": "kit:skills/technical-seo-audit", "use": "check", "when": "When a release reveals crawl, indexing or template defects that need deeper diagnosis" }
+      ]
+    },
     {
       "id": "technical-audit",
       "task": "Run a technical SEO audit and rank the fixes",

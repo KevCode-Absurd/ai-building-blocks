@@ -20,8 +20,8 @@ const sources = source("../knowledge/ecommerce/sources.json") as Source[];
 const cards = readdirSync(new URL("../knowledge/ecommerce/cards/", import.meta.url)).filter(f => f.endsWith(".json")).flatMap(f => source(`../knowledge/ecommerce/cards/${f}`)) as Card[];
 const bundle = verticalBundle(verticalData as Vertical, cards, sources);
 
-test("all 76 role contracts preserve actual outcomes and canonical module routing backed by public sources", () => {
-  assert.equal(team.length, 76);
+test("all current role contracts preserve actual outcomes and canonical module routing backed by public sources", () => {
+  assert.equal(team.length, 78);
   const workSignatures = new Set<string>();
   for (const p of team) {
     const ctx = ecommerceRoleContext(p)!;
@@ -51,7 +51,7 @@ test("all 76 role contracts preserve actual outcomes and canonical module routin
     assert.match(pkg.skill.instructions, /same-name tool may differ; do not invent unsupported arguments/);
     assert.equal(pkg.files.find(f => f.path === "reference/ecommerce-role-context.md")?.content, renderEcommerceRoleContext(p) + "\n");
   }
-  assert.equal(workSignatures.size, 76);
+  assert.equal(workSignatures.size, team.length);
 });
 
 test("support and channel specialists get selective evidence needs; lead scope is constraints, not all modules", () => {
@@ -70,7 +70,7 @@ test("support and channel specialists get selective evidence needs; lead scope i
   assert.match(text, /top-five result count is not proof of completeness/);
 });
 
-test("all 76 downloadable and training packs wire the role prompt and machine scope to real bundled knowledge", async () => {
+test("all current downloadable and training packs wire the role prompt and machine scope to real bundled knowledge", async () => {
   for (const p of team) for (const kind of ["agent", "train"] as const) {
     const pack = await buildPack({ persona: p, role: null, kit: null, jobTypes: listJobTypes(), vertical: bundle,
       options: { kind, version: "2026.11.17", updated: "2026-11-17" } });

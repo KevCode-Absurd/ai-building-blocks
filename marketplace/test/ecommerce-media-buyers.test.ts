@@ -52,10 +52,10 @@ function libraryFor(box: ToolboxJson): Record<string, LibraryItem> {
   }));
 }
 
-test("ecommerce keeps 76 agents and routes each media-buying role to its distinct buyer", () => {
+test("ecommerce keeps 78 agents and preserves the original four media-buying owners", () => {
   const source = JSON.parse(read(ROOT, "src/modules/directory/data/personas-ecommerce.json"));
-  assert.equal(source.length, 76);
-  assert.equal(new Set(source.map((p: { id: string }) => p.id)).size, 76);
+  assert.equal(source.length, 78);
+  assert.equal(new Set(source.map((p: { id: string }) => p.id)).size, source.length);
   for (const buyer of buyers) {
     const p = ecommerce.find(p => p.id === buyer.id)!;
     assert.ok(p);

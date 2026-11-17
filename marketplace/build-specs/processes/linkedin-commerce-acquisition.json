@@ -1,0 +1,110 @@
+{
+  "id": "linkedin-commerce-acquisition",
+  "kind": "making",
+  "name": "LinkedIn acquisition for a commerce brand",
+  "goal": "A useful evidence-backed LinkedIn campaign package, bounded by merchant contribution, cash and stock, with provider execution only when actually supported and authorized.",
+  "folder": "jobs",
+  "starts_from": "An explicit LinkedIn commerce brief; this process is not a default addition to other channels.",
+  "metrics": [
+    "Requested native artifacts and reproducible source-backed decisions",
+    "Kept-order contribution and cash/stock constraints, not unqualified platform leads"
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Confirm merchant and channel fit",
+      "agent": "esmee-b2b-commerce-ads",
+      "access": "read",
+      "gate": "none",
+      "say": "Read brand/product/customer evidence and actual source definitions. Discover available LinkedIn account capabilities or use exports; do not invent channel data. A qualified-company to quote/order/contribution map and a commercial handoff to Mei.",
+      "needs": [
+        "context/org-context/",
+        "The user brief, current authority and dated source exports"
+      ],
+      "makes": [
+        "linkedin/fit.md",
+        "linkedin/sources.json"
+      ],
+      "checks": [
+        "fit-review"
+      ],
+      "done_when": "The channel hypothesis, source limitations, offer qualifications and real account scope are explicit."
+    },
+    {
+      "id": "package",
+      "name": "Make the campaign and measurement files",
+      "agent": "esmee-b2b-commerce-ads",
+      "access": "draft",
+      "gate": "none",
+      "say": "Follow workflows/commerce-wholesale-acquisition.md. Deliver editable campaign, creative and measurement files within the approved channel share, contribution/cash/stock constraints. Reuse existing authority and expose unsupported operations. A qualified-company to quote/order/contribution map and a commercial handoff to Mei.",
+      "needs": [
+        "linkedin/fit.md",
+        "context/limits.json"
+      ],
+      "makes": [
+        "linkedin/build-sheet.csv",
+        "linkedin/creative.md",
+        "linkedin/measurement.md",
+        "linkedin/handoff.md"
+      ],
+      "checks": [
+        "package-review"
+      ],
+      "done_when": "The actual files are reviewable, arithmetic is traceable and every unsupported provider step is labeled."
+    },
+    {
+      "id": "execute",
+      "name": "Apply only a supported authorized provider change",
+      "agent": "esmee-b2b-commerce-ads",
+      "access": "publish",
+      "optional": true,
+      "gate": "none",
+      "say": "Only if the requested LinkedIn operation has an available verified tool and valid account-scoped authority, execute the concrete diff and read it back. Otherwise finish the local package without claiming provider completion.",
+      "needs": [
+        "linkedin/build-sheet.csv",
+        "Valid exact-account operation and budget authority"
+      ],
+      "makes": [
+        "linkedin/provider-receipt.md"
+      ],
+      "publish": "Only through a verified available LinkedIn interface within existing account-scoped authority; no connector is included or assumed.",
+      "done_when": "Returned object IDs and fresh readback support any claimed change; local-only work is explicitly distinguished."
+    },
+    {
+      "id": "review",
+      "name": "Return the business decision and next observation",
+      "agent": "esmee-b2b-commerce-ads",
+      "access": "read",
+      "gate": "none",
+      "say": "Recompute comparable metrics and preserve attribution and period differences. A qualified-company to quote/order/contribution map and a commercial handoff to Mei. Separate proposed tests, provider status, observed delivery and actual business outcomes.",
+      "needs": [
+        "linkedin/measurement.md",
+        "linkedin/handoff.md"
+      ],
+      "makes": [
+        "linkedin/readout.md"
+      ],
+      "checks": [
+        "results-review"
+      ],
+      "done_when": "The owner receives a specific supported decision, usable artifacts and the exact remaining gap or next observation."
+    }
+  ],
+  "checks": {
+    "fit-review": {
+      "kind": "reviewer",
+      "agent": "mei-wholesale-sales",
+      "passes_when": "The intended customer and offer fit the merchant evidence; unsupported account facts are marked missing."
+    },
+    "package-review": {
+      "kind": "reviewer",
+      "agent": "jared-performance-marketing",
+      "passes_when": "The campaign stays inside channel allocation and business limits, and arithmetic, units and source qualifications are checked."
+    },
+    "results-review": {
+      "kind": "reviewer",
+      "agent": "callum-reporting",
+      "passes_when": "Material calculations are reproducible and the report does not confuse platform claims with kept orders or realized contribution."
+    }
+  }
+}

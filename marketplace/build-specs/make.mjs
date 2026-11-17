@@ -75,6 +75,7 @@ const PLATFORM = [
   [/Search Console/, "google-search-console.md"], [/GA4|Google Analytics/, "google-analytics.md"], [/CrUX|PageSpeed|Lighthouse/, "pagespeed-crux.md"],
   [/Google Ads|Merchant Center|Performance Max/, "google-ads.md"], [/TikTok/, "tiktok-ads.md"], [/Pinterest/, "pinterest-ads.md"],
   [/Snapchat/, "snapchat-ads.md"], [/Amazon|Seller Central|SP-API/, "amazon.md"], [/organic|community|Buffer/i, "social-platforms.md"],
+  [/Reddit/, "reddit-ads.md"], [/LinkedIn/, "linkedin-ads.md"],
 ];
 function accessFor(list) {
   const out = new Set();

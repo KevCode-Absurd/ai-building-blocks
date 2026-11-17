@@ -1405,9 +1405,11 @@
           "id": "linkedin-ads-specialist",
           "name": "LinkedIn ads specialist",
           "persona_ids": [
-            "dilnoza-linkedin-ads"
+            "dilnoza-linkedin-ads",
+            "esmee-b2b-commerce-ads"
           ],
           "seat_suitability": [
+            "fact_checker",
             "maker",
             "strategist"
           ]
@@ -1831,6 +1833,18 @@
           "seat_suitability": [
             "fact_checker",
             "strategist"
+          ]
+        },
+        {
+          "id": "reddit-ads-media-buyer",
+          "name": "Reddit ads media buyer",
+          "persona_ids": [
+            "nadiya-reddit-ads"
+          ],
+          "seat_suitability": [
+            "strategist",
+            "maker",
+            "fact_checker"
           ]
         }
       ]
@@ -23252,10 +23266,73 @@
       "department": "finance",
       "stance": "True hourly cost",
       "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "nadiya-reddit-ads",
+      "name": "Nadiya",
+      "title": "Reddit ads media buyer",
+      "roles": [
+        "ecommerce-analyst",
+        "marketing-analyst",
+        "reddit-ads-media-buyer"
+      ],
+      "families": [
+        "budget-pacing",
+        "experiments",
+        "instrumentation",
+        "growth-routes"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist",
+        "maker",
+        "fact_checker"
+      ],
+      "department": "ecommerce",
+      "stance": "Community fit must survive a product-proof check",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "esmee-b2b-commerce-ads",
+      "name": "Esmee",
+      "title": "LinkedIn wholesale and gifting ads buyer",
+      "roles": [
+        "ecommerce-analyst",
+        "linkedin-ads-specialist",
+        "marketing-analyst"
+      ],
+      "families": [
+        "budget-pacing",
+        "entry-offers",
+        "experiments",
+        "funnel-repair",
+        "instrumentation"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist",
+        "maker",
+        "fact_checker"
+      ],
+      "department": "ecommerce",
+      "stance": "Qualified kept orders beat cheap form fills",
+      "provenance": "deterministic-existing-profile"
     }
   ],
   "coverage": {
-    "personas": 581,
+    "personas": 583,
     "linked_families": 198,
     "approach_index_available": true
   }

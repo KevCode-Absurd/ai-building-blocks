@@ -29,18 +29,26 @@ Better: partner access with **View performance** on the ad account and **Use eve
 
 ## Steps
 
-Work in this order. Each layer depends on the one before it.
+Work in this order. Flag which decisions depend on uncertain upstream evidence.
+
+### Evidence contract before diagnosis
+
+Reuse the shared brand brain and the account's existing context; ask only for missing facts. Record an evidence ledger: source/export ID, account/store ID, fetched time, completed date range, timezone, currency, reporting time basis, conversion action and counting rule, attribution window, revenue/refund definition, rows/pages fetched, filters and inaccessible breakdowns. Reconcile retrieved spend to the account aggregate; report covered spend and the uninspected residual. A top-N extract is a partial audit, never the whole account.
+
+For every comparison, show aligned numerators and denominators. Calculate CPA as total eligible spend / total eligible conversions and ROAS as total eligible conversion value / total eligible spend; do not average row ratios. Keep Meta, Google, store revenue and blended marketing efficiency in separate columns. Do not add platform-attributed sales together as unique store sales. Label unavailable data **Unknown**, not zero or broken. Split measured facts, hypotheses and decisions; a customer's inferred intent is not a verified customer fact.
+
+
 
 ### 1. Business frame (10 minutes)
 Write down expected contribution before ads per acquired order after landed COGS, fulfilment, payment fees, returns/refunds and other variable costs. That is the contribution break-even CPA. Break-even ROAS is the same purchase-value definition reported by the ad platform divided by that contribution; use 1 / contribution rate only when its revenue denominator matches exactly. A 40% product gross margin alone gives a product-cost-only threshold of 2.5, not profit break-even. Missing costs block a scaling verdict. Keep first-order economics separate from mature-cohort value and cash.
 
 ### 2. Tracking truth
-- Compare platform purchases (or leads) to shop or CRM for the same dates. A gap is normal; the question is whether it is stable and explainable. Platform higher than the shop usually means double counting or view-through credit. Platform far lower usually means missing events.
-- Events Manager: are browser and server events both present for the main conversion? Is deduplication working (shared event name and event ID, within 48 hours)? What is the event coverage ratio against Meta's 75% guide? What is event match quality for the main event?
+- Reconcile comparable platform and store/CRM periods after recording reporting time, timezone, attribution windows, outcome definitions, lag and refunds. A count mismatch is an unresolved difference, not proof of duplicate purchases or missing events. Trace a privacy-safe sample of order/event IDs before diagnosing duplication; never derive a corrected ROAS by scaling platform ROAS with the order-count ratio.
+- Events Manager: are browser and server events both present for the main conversion? Inspect matched event names and IDs, current deduplication diagnostics, event coverage and event match quality. Missing shared IDs are a deduplication risk, not a measured duplicate rate. Verify current requirements against Meta documentation; no fixed coverage or match-quality score proves revenue accuracy.
 - Does the purchase event carry value and currency? Are test or staging events polluting the data?
 - Note the attribution model (standard, incremental, custom) and windows on each ad set. Flag mixed models in one comparison.
 
-If tracking fails badly, stop the audit here and make tracking the first and only recommendation. Everything else is noise until it is fixed.
+When measurement is unreliable, block dependent scale/profitability verdicts and prioritize verification. Continue independent supported findings (broken links, disapprovals, unavailable products, missing creative assets); say which decisions remain blocked.
 
 ### 3. Goal and value
 - What performance goal does each ad set optimise for? Flag any that optimise for clicks, landing page views or reach when the business wants sales or leads.
@@ -48,13 +56,13 @@ If tracking fails badly, stop the audit here and make tracking the first and onl
 - For shops with varied margins: is value optimisation or a ROAS goal in use, and are values correct?
 
 ### 4. Structure and learning
-- Count active campaigns and ad sets. For each ad set, estimate weekly results against the ~50 needed to leave learning. Weekly spend needed is about 50 times cost per result.
+- Count active campaigns and ad sets; record observed delivery/learning status, outcome volume and maturity. Check current platform guidance for the actual optimization event rather than treating one conversion count as a universal budget requirement.
 - How many ad sets show Learning limited? What share of spend sits in them?
-- Overlap: several ad sets chasing the same people with the same goal? Recommend combining and using breakdowns for reporting.
+- Investigate overlap using observable audience, objective, geography and product scope. Consolidation is a hypothesis: protect intentional exclusions, separate economics and active experiments; require evidence of fragmentation before proposing a scoped test.
 - Advantage+ levers: are campaign budget, Advantage+ audience and Advantage+ placements on? If not, is there a stated reason (for example, a Special Ad Category or a brand placement restriction)?
 
 ### 5. Edits and stability
-From the activity history, count significant edits per ad set per week (targeting, creative, optimisation event, new ads, bid strategy, big budget jumps, pauses of 7 days or more). More than one a week on a core ad set is a stability problem.
+From activity history, align targeting, creative, optimization, bidding, budget and pause changes with delivery and outcome trends. Record observed learning resets and confounders; edit frequency alone does not prove instability.
 
 ### 6. Creative
 - Group live ads by concept (person, problem, promise, proof, format), not by file. Count distinct concepts.
@@ -64,7 +72,7 @@ From the activity history, count significant edits per ad set per week (targetin
 - Advantage+ creative enhancements: which are on, and has the client approved them?
 
 ### 7. Budget and bidding
-- Bid strategy per campaign. Caps or ROAS goals that under-spend for days in a row are set too tight.
+- Record bid strategy and constraints per campaign. Under-spend can reflect targets, audience size, eligibility, inventory or measurement; distinguish supported causes before proposing a budget or bid change.
 - Budget split across prospecting, retargeting and existing customers. Large retargeting share with high ROAS needs an incrementality question, not more budget.
 
 ### 8. Measurement maturity
@@ -72,6 +80,10 @@ Has the account ever run a Conversion Lift or a proper A/B test? Is there any ch
 
 ### 9. Policy and risk
 Special Ad Category needed but missing? Rejected ads in the last 90 days? Account Quality warnings? Claims in ads that cannot be proven?
+
+### Close the loop on each intervention
+
+Read existing interventions before recommending changes. Keep the canonical intervention episode beside the existing job receipts in `jobs/<run-id>/`; `context/media-buying/meta/<account-id>/` is an index linking to those episodes, not a second copy of their state. Record the stable intervention ID, entity scope, evidence IDs, hypothesis, baseline period, primary outcome, guardrail, maturity/lag rule, current experiment collisions, authorized scope, rollback and review trigger in that episode. For a material executed change, use the optional shared `intervention/v1` contract and `org-context.mjs intervention-check` described in `MEMORY-ARCHITECTURE.md`; passing it means eligible for outcome review, not causal success. Keep proposed, executed, provider-verified and outcome-reviewed states distinct. Existing authorization remains valid within its scope; ask only for genuinely new consequential actions. Review comparable mature periods, note promotions, stock, traffic mix and other concurrent changes, and choose keep, revert, iterate or collect more evidence. A before/after improvement alone is not a causal lift estimate. Feed the verified result back into scoped memory without overwriting canonical brand facts.
 
 ## Checks before you send it
 
@@ -85,19 +97,75 @@ Special Ad Category needed but missing? Rejected ads in the last 90 days? Accoun
 ## Output format
 
 1. **Verdict in three lines:** can this account take more spend now, after fixes, or not yet?
-2. **Scorecard:** Tracking, Goal and value, Structure, Stability, Creative, Bidding, Measurement, Policy. Each rated Good, Needs work or Broken, with one line of evidence.
+2. **Scorecard:** Tracking, Goal and value, Structure, Stability, Creative, Bidding, Measurement, Policy. Each rated Good, Needs work, Broken or Unknown, with one line of evidence.
 3. **Findings table:** rank, finding, evidence, monthly money at stake (estimate, with the method), fix, effort, risk.
-4. **Change list for approval:** numbered, each item small enough to say yes or no to.
+4. **Intervention list:** scope, evidence, hypothesis, outcome, guardrail, authorization status, rollback and review trigger. Identify only decisions requiring new approval.
 5. **What I need from you:** access, exports, decisions.
 6. **Review date.**
 
 ## Example of good output (short)
 
-> **Verdict:** Not ready to scale. Purchases are counted twice on about a third of orders, so reported ROAS of 3.1 is closer to 2.2 against shop revenue. Break-even is 2.5.
->
-> | # | Finding | Evidence | At stake / month | Fix | Risk |
-> |---|---|---|---|---|---|
-> | 1 | Purchase events double-counted | 412 Meta purchases vs 301 shop orders, 1 to 30 Sep; server events have no event ID | Decisions made on wrong ROAS | Add matching event ID to pixel and server purchase events | None to delivery |
-> | 2 | 9 ad sets, 7 Learning limited | 64% of spend in Learning limited; cost per purchase 34 USD there vs 26 USD in the rest | About 1,100 USD (8 USD extra on about 140 purchases) | Combine into 2 ad sets after fix 1 | Restarts learning for about a week |
->
-> **For your approval:** 1) Developer adds event ID (I will write the spec). 2) After 7 clean days, merge ad sets as listed. Reply yes or no to each.
+*Illustrative figures, not a real account. Use the client's evidence, never these values.*
+
+**Verdict:** Scaling decision is unresolved. The platform reports 412 attributed purchases while the store reports 301 orders. The raw difference is 111; it does not establish 111 duplicates. The export lacks reporting-time and attribution alignment, and contribution costs are incomplete. No corrected ROAS or profit break-even claim is supported.
+
+| Finding | Evidence | Conclusion / next step |
+|---|---|---|
+| Measurement discrepancy | 412 platform purchases; 301 store orders; server sample lacks shared event IDs | Deduplication risk plus unresolved attribution difference. Inspect privacy-safe event/order traces and aligned periods before quantifying impact. |
+| Fragmentation hypothesis | 64% of retrieved spend is in ad sets marked Learning limited | Inspect goals, volumes, exclusions and current tests. Status alone does not prove recoverable spend or justify merging. |
+
+**Scope:** Account-level spend is not supplied; coverage is unknown. Retrieve aggregate totals before extrapolating the inspected rows. Continue checking destination links and product availability now.
+
+Primary reference: [Meta event ID and event-name deduplication fields](https://github.com/facebookarchive/Facebook-Server-Side-API-Swagger/blob/main/server-side-api.yaml). Consult current Events Manager diagnostics and supported API documentation for the live integration.
+
+## Ecommerce arithmetic check (illustrative, independent of the audit above)
+
+These are deliberately complete hypothetical inputs, not Gehna or account evidence. All values use USD, the same completed period, purchase definition and revenue basis. Refund impact is a variable-cost allowance here, not also deducted from the revenue numerator.
+
+| Input | Value |
+|---|---:|
+| Attributed purchase value | 36000 |
+| Eligible spend | 12000 |
+| Attributed purchases | 300 |
+| Value per order | 120 |
+| Landed COGS per order | 60 |
+| Fulfillment per order | 8 |
+| Payment fees per order | 4 |
+| Expected returns/refunds per order | 6 |
+| Contribution before ads per order | 42 |
+| CPA | 40 |
+| ROAS | 3 |
+| Break-even ROAS (rounded) | 2.86 |
+
+Contribution is 120 - 60 - 8 - 4 - 6 = 42. CPA is 12000 / 300 = 40; ROAS is 36000 / 12000 = 3; break-even ROAS is 120 / 42, about 2.86. This is a first-order arithmetic illustration, not proof of incrementality or permission to scale. Check stock, delivery capacity, cash and retention/cohort evidence before proposing expansion. Missing any material cost reopens the profitability decision.
+
+## Method attribution
+
+Adapted measurement, evidence and deliverable procedures from NotFair: [Measurement framework](https://github.com/nowork-studio/notfair-plugin/blob/deed0436d0c68cbc20a78523fffc67edd12aa25c/paid-ads/shared/measurement-framework.md); [Intervention memory](https://github.com/nowork-studio/notfair-plugin/blob/deed0436d0c68cbc20a78523fffc67edd12aa25c/google-ads/manage/references/intervention-memory.md). Pinned source reviewed 2026-11-17. Platform claims must be checked against current official documentation and observed account settings; source heuristics are not universal thresholds.
+
+<details>
+<summary>NotFair MIT notice</summary>
+
+MIT License
+
+Copyright (c) 2026 Toprank Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+</details>

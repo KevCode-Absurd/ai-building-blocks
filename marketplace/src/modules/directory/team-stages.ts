@@ -20,8 +20,8 @@ export const ECOMMERCE_STAGES: readonly TeamStage[] = [
     "aurelio-product-photos", "juliet-merchandising", "brendan-offers", "gretchen-store-testing", "larissa-store-ux", "yaroslav-shopify-dev"] },
   { id: "creative", label: "Make the ads", summary: "Creative strategy, ad graphics, video and ad copy.", agents: [
     "tendai-ad-creative", "howard-copy-chief", "ayaka-ad-design", "devon-video-ugc", "kofi-ad-copy", "cody-video-editor", "tanvi-listing-images"] },
-  { id: "ads", label: "Buy ads", summary: "Meta, Google, TikTok, Snapchat, Pinterest and Amazon, read against store orders.", agents: [
-    "lindsey-meta-media-buyer", "dustin-ad-deployment", "raymond-google-ads", "zara-tiktok-ads", "kelsey-snapchat-ads", "junaid-amazon-ads", "marnie-pinterest-ads"] },
+  { id: "ads", label: "Buy ads", summary: "Consumer channels, Reddit and LinkedIn commerce acquisition, checked against business outcomes.", agents: [
+    "lindsey-meta-media-buyer", "dustin-ad-deployment", "raymond-google-ads", "zara-tiktok-ads", "kelsey-snapchat-ads", "junaid-amazon-ads", "marnie-pinterest-ads", "nadiya-reddit-ads", "esmee-b2b-commerce-ads"] },
   { id: "organic", label: "Grow without ads", summary: "Creators, social, SEO and AI search.", agents: [
     "pilar-creators", "ritika-influencer-outreach", "tomas-social-community", "stuart-store-seo", "rustam-ai-answers", "margot-pr"] },
   { id: "channels", label: "Sell on more channels", summary: "Amazon, TikTok Shop, marketplaces, chat, wholesale and India.", agents: [

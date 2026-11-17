@@ -4,6 +4,24 @@
   "reviewed": "2026-11-10",
   "tasks": [
     {
+      "id": "commerce-wholesale",
+      "task": "Acquire qualified wholesale and corporate gifting buyers",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:workflows/commerce-wholesale-acquisition",
+          "use": "build",
+          "when": "For commerce acquisition, measure qualified companies through kept orders and hand commercial selling to Mei"
+        },
+        {
+          "ref": "library:lead-handoff-designer",
+          "type": "skill",
+          "use": "check",
+          "when": "Define qualified company, quote and order stages with Mei; do not optimize only for cheap form fills"
+        }
+      ]
+    },
+    {
       "id": "intake",
       "task": "Take in a new B2B client before touching the account",
       "kind": "plan",

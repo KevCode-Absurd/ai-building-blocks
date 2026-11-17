@@ -1,0 +1,26 @@
+[
+  {
+    "n": 1,
+    "title": "Understanding audience targeting on Reddit",
+    "publisher": "Reddit for Business",
+    "url": "https://www.business.reddit.com/learning-hub/articles/everything-about-audience-targeting-reddit",
+    "checked": "2026-11-17",
+    "supports": "Opened official guide. Community, interest and keyword targeting; community engagement is not a promise of exclusive subreddit placement. Verify current account settings."
+  },
+  {
+    "n": 2,
+    "title": "Automated targeting",
+    "publisher": "Reddit Business Help",
+    "url": "https://business.reddithelp.com/articles/Knowledge/automated-targeting",
+    "checked": "2026-11-17",
+    "supports": "Official search result distinguishes audience suggestions from constraints. Current account behavior still requires verification."
+  },
+  {
+    "n": 3,
+    "title": "Reddit Ads API reference",
+    "publisher": "Reddit",
+    "url": "https://ads-api.reddit.com/docs/v3/",
+    "checked": "2026-11-17",
+    "supports": "Opened but interactive schema was not readable. No field-unit, reporting-lag or write-access claim is verified by this reference review."
+  }
+]

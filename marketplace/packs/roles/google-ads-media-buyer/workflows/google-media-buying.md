@@ -6,7 +6,7 @@ Own one Google account from diagnosis through verified delivery and review. Star
 
 1. Discover actual tools and inspect their read, draft and mutation capabilities. A tool guide does not prove a connector is installed. Resolve the current Google account ID, currency, timezone, markets and account status through Google Ads and Merchant Center when access exists. Never substitute a different platform's ads connector.
 2. Read current state before diagnosis. Request only the missing evidence: Google Ads campaign/search-term/conversion exports and Merchant Center diagnostics/product feed, plus comparable store orders, refunds, margin and inventory. If only exports are available, record their dates and limitations and finish Google Ads build sheet or compatible Editor import and Merchant Center feed fix file. Label it local and unsubmitted.
-3. Read shared brand-brain facts; store operating memory under `context/media-buying/google/<account-id>/`. Keep account IDs, attribution settings, tests, creatives, budgets and action history there. Shared brand facts do not grant shared operating authority. Do not put credentials or customer-level personal data in the memory.
+3. Read shared brand-brain facts; store operating memory under `context/media-buying/google/<account-id>/`. Keep current account IDs, attribution settings and budget constraints there, with links to tests, creative artifacts and canonical action history in jobs/<run-id>/. Keep intervention records and original receipts beside the job artifacts; the platform folder indexes that history instead of duplicating it. Shared brand facts do not grant shared operating authority. Do not put credentials or customer-level personal data in the memory.
 
 ## Google decisions
 

@@ -1,0 +1,22 @@
+{
+  "id": "reddit-ads-media-buyer",
+  "name": "Reddit ads media buyer",
+  "department": "marketing",
+  "summary": "Plans and reviews Reddit advertising for commerce brands using customer/community fit, credible product proof and store contribution. Produces useful build files without assuming account access.",
+  "aliases": [
+    "reddit ads",
+    "reddit advertising",
+    "reddit media buyer",
+    "community targeting",
+    "reddit product campaigns",
+    "reddit campaign audit"
+  ],
+  "updated": "2026-11-17",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-17",
+      "note": "Original commerce procedure for community-fit diagnosis, credible creative, source-bound economics, verified field units and scoped provider execution. No fixed reporting lag, currency multiplier or installed connector is assumed."
+    }
+  ]
+}

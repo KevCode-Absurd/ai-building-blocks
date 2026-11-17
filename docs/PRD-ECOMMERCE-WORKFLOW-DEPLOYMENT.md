@@ -143,6 +143,18 @@ The completed earlier 76-agent candidate scored 59 PASS, 8 NEEDS_REPAIR and 9 LI
 
 ## Engineering basis
 
+### Ecommerce deliverable upgrades after the foundation
+
+Review of [NotFair](https://github.com/nowork-studio/notfair-plugin), pinned at `deed0436d0c68cbc20a78523fffc67edd12aa25c`, informed the following implementation. Its hosted MCP backend is not included in that repository and has not been installed or authenticated here. Adapted shipped materials carry the source's MIT notice. Historical source policy thresholds are not treated as current platform facts.
+
+- Meta and Google audit methods preserve the actual account, window, attribution, rows fetched and coverage denominator. They calculate contribution economics explicitly and no longer infer duplicate purchases or a corrected ROAS from an unexplained platform/store count difference.
+- Creative, landing-page and CRO methods require the finished requested artifact and a traceable connection from customer evidence through product claims, creative, destination and purchase journey. Product/variant/stock/shipping examples replace generic lead-generation examples where the role serves a D2C store. Screenshots and write receipts describe observed checks, not claimed conversion improvement.
+- Material interventions use the existing canonical job history, with baseline, accepted change, independently inspected readback, mature outcome and guardrail evidence. The optional local validator checks consistency; it neither authenticates connector responses nor proves causal improvement or promotes a lesson.
+- The existing SEO specialist gains an ecommerce release-regression workflow covering theme, catalogue, variant, feed and market changes. It retains the reviewed baseline, quantifies sampled coverage, checks product-to-cart consistency and separates expected changes, verified regressions and missing evidence. No blanket facet canonicalization or discontinued-product redirects are prescribed.
+- Reddit acquisition and LinkedIn wholesale/corporate-gifting acquisition extend the ecommerce team to 78 specialists. These roles judge channel fit and feasible economics before recommending spend, and require platform-specific source definitions. A missing connector produces an honest export-backed plan or draft, not a fabricated campaign launch. Wholesale outcomes follow qualified companies through quotes, orders and contribution rather than optimizing cheap leads.
+
+The new roles do not replace the original 76-agent historical evaluation denominator. The next paired evaluation includes all current roles, with the same GPT Sol generator model, common merchant inputs and host capabilities in both the specialist and plain-Sol arms. Sol and Terra independently judge actual artifacts. New-role cases, Gehna-backed work and synthetic/public work are reported separately. Passing implementation tests is a prerequisite for those trials, not an output-quality result.
+
 The cached Stanford course manifest covers all 14 slide PDFs linked on the course page at the audit date, 1,284 pages. The implementation applies selected principles; it does not reproduce or claim validation by the course.
 
 - [CS329Z lecture 3](https://web.stanford.edu/class/cs329z/slides/lecture03.pdf), pages 11-13, 24, 32 and 50: just-in-time evidence, chunk boundaries, multi-level retrieval and reranking. Our local implementation uses lexical retrieval and bounded source expansion, not an unimplemented dense-vector service.

@@ -17,7 +17,7 @@ Not for: pages whose main job is to rank in search (use a content brief), or bra
 
 ## What you need
 
-**Access:** level 1 to read the page and the research. Level 2 to write the copy into a draft or staging page. Level 3 to publish it on the pages you named, within your limits, after the compliance pass in step 13. Prices, offers, guarantees and deadlines always need your confirmation first.
+**Access:** level 1 to read the page and the research. Level 2 to write the copy into a draft or staging page. Level 3 to publish it on the pages you named, within your limits, after the compliance pass in step 13. Reuse current verified prices, offers, guarantees and deadlines within the existing authorization. Ask only when facts are missing, conflicting, changed, or the requested action exceeds that scope.
 
 - **The live page and site** (the address), so the copy starts from the client's own words and facts.
 - **The one action** (book, buy, start trial, request quote) and what happens after the click.
@@ -63,6 +63,14 @@ If research is missing, say so and either run the voice-of-customer-mining skill
 12. **Edit.** Do the five-second test (could a stranger say what this is and what to do?). Cut lines with no job. Swap jargon for customer words. Aim for short sentences; simpler pages tended to convert better in Unbounce's 2024 data, though that is a correlation, not a rule. Read it on a phone-sized screen.
 13. **Compliance pass.** Every claim provable. Reviews real, permissioned, typical or qualified, with connections disclosed. Any deadline or stock claim true and honoured. Prices complete, with no fees added later.
 
+## Ad-to-page contract and implementation
+
+Before choosing copy, capture the actual query/customer intent, incoming ad or email promise, destination hero/offer, SKU or variant availability, and CTA/post-click outcome. Build a short message-chain table with evidence IDs and mark each link matched, drift or broken. Verify prices, offer conditions and delivery promises against current shared brand facts. A persuasive hero cannot fix an unavailable advertised product.
+
+Choose the experiment to fit the question: ad-only with page fixed, page-only with ad fixed, or a paired ad-and-page change to test the entire chain. A paired change cannot isolate which component caused an outcome. Use a factorial design only when tracking and sample planning support its interaction comparisons; otherwise test a coherent chain and state the limit. Predeclare the primary business outcome, guardrail, eligible traffic, allocation, baseline, maturity rule and stopping rule with the CRO specialist.
+
+If the user asks to build a landing page, execute through the available site/repository tools: deliver the implemented page and editable source, not only a copy table. Use approved product assets and observed brand components, implement real variant/CTA states or explicitly labeled local test behavior, and inspect mobile and desktop renders. Check navigation, offer consistency, form validation, error states and destination actions. A local preview or simulated checkout is not a deployed page or a verified store transaction. Use existing publication authority when available; report the actual deployed URL and verified state, or the precise unfinished integration.
+
 ## Checks
 
 - One primary action, one button label, repeated.
@@ -81,33 +89,54 @@ If research is missing, say so and either run the voice-of-customer-mining skill
 4. **Headline shortlist:** three options, each with its formula and why it fits.
 5. **Page copy** as a table or ordered sections: section, job, copy, evidence IDs.
 6. **Notes for design:** what must be visible on the first screen on mobile.
-7. **What to test first**, with the hypothesis.
+7. **Message-chain and experiment plan:** exact source promise, destination mapping, changed/fixed variables, hypothesis, primary outcome, guardrail and attribution limits.
+8. **When building:** working page/preview URL, editable files, mobile/desktop inspection evidence, tested CTA states and any remaining integration gaps.
 
 ## Example of good output (short)
 
-*Illustrative structure, not a real business: a two-person bookkeeping service for self-employed plumbers and electricians; the research IDs stand for the client's own VoC bank. Copy the shape, never the content: every fact comes from the client's own context.*
+*Illustrative ecommerce brief, not Gehna or another real brand. Evidence IDs below are placeholders; do not publish these claims without the actual product and policy sources.*
 
-**Brief:** Tradespeople who do their books late at night will book a free 20-minute call because we take receipts by photo and send a monthly summary, once we answer "I'll lose control of my numbers."
+**Brief:** A buyer shopping for an everyday silver pendant will choose a verified in-stock variant because the page shows scale, material and complete delivered price, once we answer the concern about size and returns.
 
-**Read:** problem aware (they hate the paperwork, few know a trade-only service exists). Rivals all say "stress-free bookkeeping", so lead with who it is for and how it works, not a bigger claim.
+**Message chain:** search intent "small silver pendant" → ad "See the pendant at actual wearing scale" → hero with approved on-model photo and dimension diagram → chosen pendant variant → add to cart. If no on-model photograph exists, mark that promise needs production and use verified dimensions instead; do not synthesize a product size as evidence.
 
-**First screen**
+| Section | Copy direction | Required evidence |
+|---|---|---|
+| Hero | "An everyday pendant, shown at real wearing scale" only if the actual scaled photo exists | Approved product asset and dimension source |
+| Product selection | Exact verified material, chain inclusion, variant availability and price | Current product/variant record |
+| Near CTA | Delivery estimate for the buyer's destination and concise return conditions | Current shipping and returns policy; no invented promise |
+| Objection answer | Dimension diagram and real review addressing size, if permissioned | Product specification and review ID |
+| CTA | "Add selected pendant to cart"; disabled with an explicit reason for unavailable variants | Verified cart behavior or clearly labeled local simulation |
 
-- Headline (who it is for): **Bookkeeping for plumbers and electricians who'd rather be on the tools**
-- Subhead (how it works): Snap your receipts on your phone. We do the rest and send you one clear summary each month.
-- Proof: one real, permissioned review with name and trade. For example, a review in the client's VoC bank (R9) that reads like "I got my Sunday evenings back."
-- Button: **Book my free 20-minute call**
-- Microcopy: No contract. If it is not for you, you have lost 20 minutes, not money.
+**Test first:** hold ad and offer fixed while testing the size-proof placement. Primary outcome is purchase rate among eligible product-page visitors; cart additions are a diagnostic and return rate is a later guardrail. If the ad promise changes too, measure the paired chain and do not attribute the result to page copy alone.
 
-**Section: answers "I'll lose control of my numbers" (VoC: S4, R9, C2)**
+## Method attribution
 
-Heading: **You see every number. You just don't type them.**
-Each month you get a one-page summary: money in, money out, what to set aside for tax. Every receipt we log links back to your photo, so you can check any line in seconds.
+Adapted measurement, evidence and deliverable procedures from NotFair: [Message-chain testing](https://github.com/nowork-studio/notfair-plugin/blob/deed0436d0c68cbc20a78523fffc67edd12aa25c/google-ads/landing/references/message-chain-testing.md). Pinned source reviewed 2026-11-17. Platform claims must be checked against current official documentation and observed account settings; source heuristics are not universal thresholds.
 
-**Headline shortlist**
+<details>
+<summary>NotFair MIT notice</summary>
 
-1. Who it is for (above): fits a crowded market where "stress-free" is worn out.
-2. Problem in their words: "Still doing your books at 10pm after a full day on site?" Fits problem-aware readers from search ads.
-3. How to: "How to keep your books up to date without giving up your evenings." Fits readers comparing apps and bookkeepers.
+MIT License
 
-**Test first:** headline 1 against headline 2 on paid search traffic, because the ad copy can be matched to each and search gives the most volume.
+Copyright (c) 2026 Toprank Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+</details>

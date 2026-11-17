@@ -1,0 +1,275 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "reddit-ads-media-buyer",
+  "reviewed": "2026-11-17",
+  "tasks": [
+    {
+      "id": "reddit-commerce",
+      "task": "Decide Reddit community fit and build a commerce campaign test",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:skills/reddit-commerce-plan",
+          "use": "build",
+          "when": "When the merchant explicitly wants a Reddit product campaign or channel-fit decision"
+        },
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "check",
+          "when": "For Reddit audit, measurement, creative testing or supported account execution"
+        }
+      ]
+    },
+    {
+      "id": "reddit-review",
+      "task": "Audit Reddit spend and attributed conversions against store evidence",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "build",
+          "when": "When actual Reddit exports exist or source gaps must be identified before a budget decision"
+        },
+        {
+          "ref": "library:claim-fact-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before a report treats an attributed order or product claim as verified merchant evidence"
+        }
+      ]
+    },
+    {
+      "id": "community-fit",
+      "task": "Find buyer needs and test community fit before targeting",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "library:ideal-buyer-profiler",
+          "type": "skill",
+          "use": "brief",
+          "when": "When reviews and product evidence can establish the buyer problem without demographic guesses"
+        },
+        {
+          "ref": "library:best-customer-finder",
+          "type": "skill",
+          "use": "build",
+          "when": "When a permitted customer export exists; do not infer customer value from subreddit membership"
+        },
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "check",
+          "when": "Before targeting, separate community affinity from actual buying intent and placement eligibility"
+        }
+      ]
+    },
+    {
+      "id": "test-budget",
+      "task": "Size a Reddit test against contribution, cash and stock",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "library:ad-test-budget-calculator",
+          "type": "skill",
+          "use": "build",
+          "when": "When the merchant supplies allowable acquisition cost and enough order economics to size a test"
+        },
+        {
+          "ref": "library:two-plan-shapes",
+          "type": "skill",
+          "use": "explore",
+          "when": "When comparing a narrow proof test with a broader test under the same approved spending cap"
+        },
+        {
+          "ref": "library:buyer-can-act-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Before committing budget, verify the actual product variants, stock, price and purchase path"
+        },
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "check",
+          "when": "Use actual Reddit reporting maturity; do not substitute another platform learning threshold"
+        }
+      ]
+    },
+    {
+      "id": "concepts",
+      "task": "Develop distinct product arguments for Reddit shoppers",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:ad-angle-multiplier",
+          "type": "skill",
+          "use": "explore",
+          "when": "When product proof supports different buyer objections or use cases, beyond headline variations"
+        },
+        {
+          "ref": "library:make-ad-concept-spread",
+          "type": "skill",
+          "use": "build",
+          "when": "When comparing tangible concept candidates with honest Reddit-native wording and approved product media"
+        },
+        {
+          "ref": "library:claim-fact-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before a concept uses testimonials, community endorsement, product performance or comparisons"
+        }
+      ]
+    },
+    {
+      "id": "ad-copy",
+      "task": "Write candid Reddit ad copy from verified product proof",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:five-angle-ad-headline-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When one product needs contrasting promises that can each be supported by merchant evidence"
+        },
+        {
+          "ref": "library:ad-first-line-writer-and-scorer",
+          "type": "skill",
+          "use": "build",
+          "when": "When writing an opening for a real buyer problem rather than imitating a community member"
+        },
+        {
+          "ref": "library:claim-fact-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before shipping copy, verify claims and disclose unknowns instead of inventing social proof"
+        },
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "check",
+          "when": "Check current Reddit format limits and policy against official sources before creating upload fields"
+        }
+      ]
+    },
+    {
+      "id": "image-brief",
+      "task": "Build and inspect a Reddit product-image creative brief",
+      "kind": "ad_creative",
+      "items": [
+        {
+          "ref": "library:make-ad-concept-spread",
+          "type": "skill",
+          "use": "explore",
+          "when": "Before choosing a visual, compare different product arguments using approved brand assets"
+        },
+        {
+          "ref": "library:single-image-ad-planner",
+          "type": "skill",
+          "use": "build",
+          "when": "Use the layout and proof method; replace Meta-specific copy limits with verified Reddit requirements"
+        },
+        {
+          "ref": "library:static-ad-critic",
+          "type": "skill",
+          "use": "check",
+          "when": "When actual creative can be inspected for product identity, clarity, brand fit and landing-page continuity"
+        },
+        {
+          "ref": "library:ad-reading-flow-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When checking legibility and eye path at the intended feed size"
+        }
+      ]
+    },
+    {
+      "id": "landing-continuity",
+      "task": "Match a Reddit product promise to a usable landing page",
+      "kind": "web_page",
+      "items": [
+        {
+          "ref": "library:make-three-first-screens",
+          "type": "skill",
+          "use": "explore",
+          "when": "When an authorized landing-page draft needs visibly different ways to answer the ad promise"
+        },
+        {
+          "ref": "library:conversion-page-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the campaign needs product proof, objections and purchase terms explained on its destination"
+        },
+        {
+          "ref": "library:page-design-gate",
+          "type": "skill",
+          "use": "check",
+          "when": "When local page files can be inspected at phone and desktop widths; do not claim live deployment"
+        },
+        {
+          "ref": "library:buyer-can-act-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Before spending, confirm the advertised SKU, offer and order path are available"
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "task": "Prepare traceable campaign links and a measurement contract",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "library:campaign-link-tracker",
+          "type": "skill",
+          "use": "build",
+          "when": "For a Shopify merchant, prepare tagged links and verify current store naming rules before installation"
+        },
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "check",
+          "when": "Verify actual Reddit event identifiers, units, timezone, deduplication and attribution from available evidence"
+        },
+        {
+          "ref": "library:claim-fact-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When documenting which conversion claims can be reconciled and which require missing account exports"
+        }
+      ]
+    },
+    {
+      "id": "launch-review",
+      "task": "Review a Reddit build and record any authorized execution",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:workflows/reddit-media-buying",
+          "use": "build",
+          "when": "When preparing a reviewable build sheet or executing only within verified host capability and existing authority"
+        },
+        {
+          "ref": "library:buyer-can-act-check",
+          "type": "skill",
+          "use": "check",
+          "when": "Immediately before an authorized launch, verify stock, price, destination and purchasing availability"
+        },
+        {
+          "ref": "library:claim-fact-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "Before the final handoff, separate prepared artifacts, attempted writes and verified platform readbacks"
+        }
+      ]
+    }
+  ],
+  "always": [],
+  "helpers": [
+    {
+      "role": "marketing-analyst",
+      "when": "When an attribution discrepancy needs a deeper measurement investigation"
+    },
+    {
+      "role": "ad-creative-strategist",
+      "when": "When the Reddit brief needs a broader concept development task"
+    }
+  ],
+  "gaps": [
+    "No connector is included; inspect actual host capabilities and official field schemas before provider work."
+  ]
+}

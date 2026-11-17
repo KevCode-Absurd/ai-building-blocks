@@ -14,7 +14,7 @@
 
 3. **Map old to new.** One row per old URL: old URL, new URL, status (same, moved, merged, removed), reason. Every old URL with traffic, links or conversions must map to its closest new equivalent. Removed pages with no equivalent return 404 or 410, never a mass redirect to the home page. Flag any mapping that changes the page's topic.
 
-4. **Check the new site on staging** (run the **technical-seo-audit** skill on staging). Look for: noindex or password left on purpose for staging (and a plan to remove it), canonicals pointing at the staging host, missing titles or H1s, content dropped from templates, internal links pointing at old URLs, structured data lost, worse Core Web Vitals in lab tests, hreflang errors, JavaScript-only content or links.
+4. **Check the new site on staging** (run the **technical-seo-audit** skill on staging). Look for: noindex or password left on purpose for staging (and a plan to remove it), canonicals pointing at the staging host, missing titles or H1s, content dropped from templates, internal links pointing at old URLs, structured data lost, worse lab performance (not a field Core Web Vitals verdict), hreflang errors, JavaScript-only content or links.
 
 5. **Compare crawls.** Crawl old live and new staging. Compare page counts per template, titles, word counts, internal links to money pages and structured data. Explain every big difference.
 
@@ -24,9 +24,9 @@
 
 ### Launch day
 
-8. **Go live and test immediately.** The switch itself always needs a new yes, and the team named in the launch plan flips it unless the plan names me. robots.txt allows crawling; no sitewide noindex; canonicals use the live host; the redirect list returns 301 to 200 with no chains or 404s; key pages render; analytics fires.
+8. **Go live and test immediately.** Verify that the current authorization covers this exact release and switch; reuse that grant while its scope remains valid. The team named in the launch plan flips it unless the plan names me. robots.txt allows crawling; no sitewide noindex; canonicals use the live host; the redirect list returns 301 to 200 with no chains or 404s; key pages render; analytics fires.
 
-9. **Tell Google and Bing** (level 3 for sitemaps; the Change of Address tool always needs a new yes). Submit the new XML sitemap in Search Console and Bing Webmaster Tools; verify the new property if the domain changed; use the Change of Address tool only for a domain or subdomain move. Keep the old sitemap available for a short time so Google sees the redirects.
+9. **Tell Google and Bing** (level 3 for sitemaps; the Change of Address tool requires explicit authority for this move, reusing an existing valid grant). Submit the new XML sitemap in Search Console and Bing Webmaster Tools; verify the new property if the domain changed; use the Change of Address tool only for a domain or subdomain move. Keep the old sitemap available for a short time so Google sees the redirects.
 
 ### After launch
 
@@ -48,7 +48,7 @@
 
 At level 3, after the client confirms the action list and limits once, I can load the agreed redirect list, submit sitemaps, and fix missing redirects and broken internal links after launch, all within the URL map. I log each change.
 
-Always a new yes:
+Confirm these decisions before acting if they are not already explicitly covered by the current valid authorization. Ask again only when scope, consequences or conditions materially change:
 
 - The URL map, especially removed and merged pages.
 - The launch date, the rollback plan and the switch itself.

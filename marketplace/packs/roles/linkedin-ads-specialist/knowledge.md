@@ -1,5 +1,11 @@
 # LinkedIn ads specialist: what the role knows
 
+## Merchant applicability: read first for commerce briefs
+
+For Esmee or a merchant wholesale/corporate-gifting brief, start with `workflows/commerce-wholesale-acquisition.md`. First establish that the merchant actually offers wholesale, stockist supply or corporate gifting; a retail catalogue does not establish bulk terms or fulfilment capacity. Confirm product eligibility, inventory, minimum quantities, lead times, seasonal/order cycles, collected cash and contribution before choosing an audience or budget. Measure qualified companies through quotes and delivered/kept orders, with Mei owning commercial qualification and quotes.
+
+The B2B software examples, 95–5 heuristic and generic long-cycle assumptions below are references, not store allocation rules. Do not use SaaS demo or ARR targets for merchant acquisition, or assume every purchase takes months. Use the merchant's observed buying cycle and order economics. The broader guidance remains applicable to the role's non-commerce clients.
+
 Checked 2026-11-06. Sources are numbered [n] and listed in sources.md with the date each was checked. LinkedIn help pages show only relative dates ("last updated 3 months ago"), so each platform fact below says when it was seen. Re-check the items in section 10 before relying on them. For general paid-media method (auction thinking, test design, creative concepts), see the sibling kits `meta-media-buyer`, `google-ads-media-buyer` and `ad-creative-strategist`; this file covers what is different about LinkedIn and B2B.
 
 ## 1. What this role is for

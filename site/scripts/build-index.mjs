@@ -506,7 +506,8 @@ if (fs.existsSync(aiToolsRoot)) {
 // The blog (src/content/blog, src/lib/blog.mjs): its own sitemap, each article dated by its updated or published day.
 const blogPosts = fs.existsSync("src/content/blog") ? fs.readdirSync("src/content/blog").filter((f) => f.endsWith(".json")).sort().map((f) => JSON.parse(fs.readFileSync(path.join("src/content/blog", f), "utf8"))) : [];
 // The data study is a research page, not a blog post, so it gets its own line under the blog in llms.txt.
-const study = studyPage(JSON.parse(fs.readFileSync("src/trust-pages/agent-skills-2026.json", "utf8")));
+const STUDY_JSON = "src/trust-pages/agent-skills-2026.json";
+const study = fs.existsSync(STUDY_JSON) ? studyPage(JSON.parse(fs.readFileSync(STUDY_JSON, "utf8"))) : null;
 if (blogPosts.length) {
   SITEMAPS.blog = ["/blog", "/guides", ...blogPosts.map((p) => `/blog/${p.slug}`)];
   for (const p of blogPosts) lastmod[`/blog/${p.slug}`] = p.updated ?? p.published ?? "2026-11-05";
@@ -580,7 +581,7 @@ const intro = [
   `- [Train your own AI agent](${SITE}/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way`,
   `- [Blog](${SITE}/blog): step-by-step guides to using AI for real business work, each with prompts to copy and the free skills that do the job`,
   ...blogPosts.map((p) => `  - [${p.title}](${SITE}/blog/${p.slug}): ${p.description}`),
-  `- [${study.h1}](${SITE}${study.url}): ${study.desc} Data as CSV under CC BY 4.0.`,
+  ...(study ? [`- [${study.h1}](${SITE}${study.url}): ${study.desc} Data as CSV under CC BY 4.0.`] : []),
   `- [API and MCP](${SITE}/api-and-mcp): connect an AI and read the public API documentation`,
   `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,
   `- [How it works](${SITE}/how-it-works): from one prompt to your own AI app`,

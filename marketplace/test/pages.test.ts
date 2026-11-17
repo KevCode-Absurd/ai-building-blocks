@@ -98,6 +98,43 @@ test("unknown addresses and agents are real 404s; app-only pages are served but 
   assert.equal(head.status, 200);
 });
 
+// Production's assets answer a missing file with the app's index.html and a 200 (not_found_handling
+// "single-page-application"). Pack-file viewers end in .md, so before 17 Nov 2026 they all reached Google as copies of
+// the home page: no canonical, no noindex.
+const SPA_ASSETS = { fetch: async (req: Request) => {
+  const path = new URL(req.url).pathname;
+  if (path === "/favicon.ico") return new Response("icon", { headers: { "content-type": "image/x-icon" } });
+  return new Response(SHELL, { headers: { "content-type": "text/html" } });
+} };
+
+test("a pack file's viewer page says noindex and names the file, though its address ends in .md", async () => {
+  const t = await testEnv({ ...PROD, ASSETS: SPA_ASSETS as unknown as Fetcher });
+  for (const file of ["SKILL.md", "skills/research/SKILL.md", "LICENSE.md"]) {
+    const res = await t.api("GET", `/agents/${agent.id}/files/${file}`);
+    assert.equal(res.status, 200, file);
+    assert.equal(res.res.headers.get("x-robots-tag"), "noindex", file);
+    const html = String(res.body);
+    assert.match(html, /<meta name="robots" content="noindex, follow" \/>/, file);
+    assert.ok(html.includes(`<title>${esc(`${file}: ${agent.name}'s pack files`)} |`), file);
+    assert.match(html, new RegExp(`<link rel="canonical" href="https://agents\\.test/agents/${agent.id}/files/${file.replace(/[.]/g, "\\.")}" />`), file);
+    assert.ok(!html.includes("Old title"), "not the shell's own title");
+  }
+  const noAgent = await t.api("GET", "/agents/no-such-agent/files/SKILL.md");
+  assert.equal(noAgent.status, 404);
+});
+
+test("a made-up address with a file extension is a 404, not a copy of the home page; real files still load", async () => {
+  const t = await testEnv({ ...PROD, ASSETS: SPA_ASSETS as unknown as Fetcher });
+  for (const path of ["/nothing.md", "/agents/x.json", "/skills/a/SKILL.md"]) {
+    const res = await t.api("GET", path);
+    assert.equal(res.status, 404, path);
+    assert.equal(res.res.headers.get("x-robots-tag"), "noindex", path);
+  }
+  const icon = await t.api("GET", "/favicon.ico");
+  assert.equal(icon.status, 200);
+  assert.equal(icon.body, "icon");
+});
+
 test("a role page has its own title and canonical address", async () => {
   const t = await testEnv(PROD);
   const res = await t.api("GET", `/agents?role=${agent.role}`);

@@ -447,10 +447,12 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
   if (m) return isShelfKind(m[1]) ? shelfItemPage(env, m[1], m[2]) : notFound();
   m = path.match(/^\/agents\/([a-z0-9-]+)$/);
   if (m) return agentPage(env, m[1]);
-  m = path.match(/^\/agents\/([a-z0-9-]+)\/files\/.+$/);
+  m = path.match(/^\/agents\/([a-z0-9-]+)\/files\/(.+)$/);
   if (m) {
     const payload = await agentPayload(env, m[1]);
-    return payload ? { status: 200, index: false, path, title: `${payload.agent.name}'s pack files | ${SITE}`, description: `A file from ${payload.agent.name}'s free agent pack.` } : notFound();
+    let file = m[2];
+    try { file = decodeURIComponent(file); } catch { /* shown as written */ }
+    return payload ? { status: 200, index: false, path, title: `${file}: ${payload.agent.name}'s pack files | ${SITE}`, description: `A file from ${payload.agent.name}'s free agent pack.` } : notFound();
   }
   m = path.match(/^\/guides\/([a-z0-9-]+)$/);
   if (m) return guidePage(m[1]);

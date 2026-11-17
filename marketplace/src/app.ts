@@ -28,15 +28,30 @@ export async function handleFetch(req: Request, env: Env, exec: ExecutionContext
     // An expert's share link: count the visit, set the first-party cookie, go to their profile.
     const share = /^\/e\/([a-z0-9-]{2,60})\/?$/.exec(url.pathname);
     if (share) return (await shareRedirect(env, req, share[1]!)) ?? errorResponse(404, "not_found", "There is no expert at this address.");
-    // A page (no file extension): its own head tags and plain content, and a real 404 for unknown addresses.
-    if (!/\.[A-Za-z0-9]+$/.test(url.pathname)) {
+    // A page: its own head tags and plain content, and a real 404 for unknown addresses. A pack file's viewer
+    // (/agents/<id>/files/SKILL.md) is a page too, though its address ends in the file's extension: it says noindex.
+    if (!/\.[A-Za-z0-9]+$/.test(url.pathname) || FILE_VIEWER.test(url.pathname)) {
       const page = await cachedPage(req, env, exec, url);
       if (page) return page;
+    }
+    // Any other address with an extension is a built file. The app's fallback answers a missing one with the home
+    // page's HTML and a 200, so search engines would see a copy of the home page at every made-up address: send the
+    // 404 page instead.
+    if (env.ASSETS) {
+      const res = await env.ASSETS.fetch(req);
+      if (res.ok && !/\.html?$/i.test(url.pathname) && (res.headers.get("content-type") ?? "").startsWith("text/html")) {
+        const missing = await pageResponse(req, env);
+        if (missing) return missing;
+      }
+      return res;
     }
   }
   if (env.ASSETS) return env.ASSETS.fetch(req);
   return errorResponse(404, "not_found", "There is nothing at this address.");
 }
+
+/** The viewer page for one file of an agent's pack: src/ui/pages/directory/file.tsx. */
+const FILE_VIEWER = /^\/agents\/[a-z0-9-]+\/files\/.+$/;
 
 /** How long a public page is kept at the edge. Agents and profiles change rarely, and each deploy starts a fresh copy. */
 const EDGE_PAGE_SECONDS = 300;

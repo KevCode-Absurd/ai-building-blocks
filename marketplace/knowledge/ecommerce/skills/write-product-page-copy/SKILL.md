@@ -42,6 +42,10 @@ Missing reviews: use tickets and chats; if those are thin, leave the proof slots
 3. **Claims are cleared.** Every health, safety, environmental or "best" claim has evidence on the claims sheet. Fail: drop the claim or narrow it to what the proof says.
 4. **Rules that apply.** US: the FTC review rule bans fake, insider-undisclosed or sentiment-bought reviews [MCR-6021]. UK and EU: show the total price including VAT and the seller's identity and address; in the EU a price cut must show the lowest price of the past 30 days, and in the UK a former price must be genuine. Packaged goods show the net quantity, origin and maker details your market's labelling rules require. Ask a professional where unsure.
 
+## Product and voice scope
+
+Approved voice examples demonstrate tone, not a reusable factual claim. Recheck implied size choice, range, fit, policy and offer conditions against current product data. Colour variants do not establish size options. With one supplied size, ask buyers to check dimensions; do not offer a choice of sizes. Run `node tools/quality/copy-check.cjs <customer-copy.md> --product-source <current-product.json>` on the actual copy. The bounded size-choice check does not replace a claim-by-claim review.
+
 ## Steps
 
 1. **Bank buyer words.** Read the reviews by hand and paste exact phrases into four columns: outcome wanted, what they tried before, what almost stopped them, how it felt once it worked. A tool summary strips the words you need [AVT-0007]. Count how often each theme appears. A theme needs 3 or more mentions to lead a block. The counts are for choosing; they go in the summary, not the copy. Read the one to three star reviews first, and search all the text for "but", "however", "worried", "almost" and "wasn't sure": those words sit next to the doubts the page must answer. Note the word buyers repeat most for the result; it is a strong headline candidate.

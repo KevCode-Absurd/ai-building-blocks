@@ -123,7 +123,7 @@
       "agent": "arjun-page-speed",
       "access": "draft",
       "gate": "owner",
-      "say": "Runs the same lab test, same pages, same settings, same run count, on the theme copy's preview and on the live theme, and puts the medians side by side. Renders each changed page at phone and desktop sizes from saved copies, so a fix that broke the look is caught. Then writes the release plan it will show you: which files go live and how, and how to undo.",
+      "say": "Runs the same lab test, same pages, same settings, same run count, on the theme copy's preview and on the live theme, and puts the medians side by side. Renders each changed page at phone and desktop sizes from saved copies, so a fix that broke the look is caught. If delivering a patch, run node tools/verify-patch.mjs <patch> <before-directory> <after-directory>: apply the exact diff to an isolated baseline and verify the resulting file bytes match the delivered fixed files. A missing Git executable means this check did not run. Then writes the release plan it will show you: which files go live and how, and how to undo.",
       "needs": [
         "build-record.md",
         "baseline/lab.md",
@@ -140,7 +140,7 @@
         "visual-review"
       ],
       "signoff": "You see the before and after table, the page pictures and the release plan. Reply yes with the code to send it to publish, or say what to change.",
-      "done_when": "before-after.md shows the median of the same number of runs for each page before and after, every fix is shown to help or is dropped, and the renders show no visual change except the planned ones."
+      "done_when": "before-after.md shows the median of the same number of runs for each page before and after, every fix is shown to help or is dropped, and the renders show no visual change except the planned ones. Any delivered patch has a successful applicability and exact-result check; browser measurements alone cannot establish that a diff applies."
     },
     {
       "id": "publish",

@@ -69,7 +69,7 @@ This book is for the retention trade: the people who plan and write the emails, 
 
 **Why it works:** Intent and memory of the first order fade fast. A reminder timed to when the customer runs out lands on a real need, so vendor data shows replenishment reminders converting 8 to 15% against 1 to 3% for promotions.
 
-**How to apply:** Read the store's median days to second order and the share within 30 days. Build the run: a thank-you with one relevant cross-sell about 10 minutes after the order, reassurance around day 2, how-to help about 48 hours after delivery, and a second-purchase nudge about 10 days after delivery. For consumables, send the reorder reminder at about 75% of the usage cycle counted from delivery: a 30-day supply with 7-day delivery means about day 35 after the order. Once a customer has two orders, use their own interval.
+**How to apply:** Read the store's median days to second order and the share within 30 days. Build the run: a thank-you with one relevant cross-sell about 10 minutes after the order, reassurance around day 2, how-to help about 48 hours after delivery, and a second-purchase nudge about 10 days after delivery. For consumables, send the reorder reminder at about 75% of the usage cycle counted from delivery: a 30-day supply with 7-day delivery gives 7 + 0.75 x 30 = 29.5 days after the order (about day 30). Trigger from the actual delivery event, and delay promotional reminders for unresolved delivery/support issues. Once a customer has two orders, use their own interval.
 
 **Judge it by:** Every message has an order, delivery or usage trigger and a day, and the reorder day is worked out from pack size and delivery time. Weak work sends the same "you might also like" on day 7 for every product.
 

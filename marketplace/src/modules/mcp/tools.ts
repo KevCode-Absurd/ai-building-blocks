@@ -260,8 +260,8 @@ async function packFor(c: ToolCtx, agentId: string): Promise<{ persona: Persona;
   return { persona: p, index };
 }
 
-async function fileText(c: ToolCtx, f: PackIndexFile): Promise<{ text: string; trimmed: boolean }> {
-  try { return await readPackFile(c.env, f); }
+async function fileText(c: ToolCtx, f: PackIndexFile, offset = 0): ReturnType<typeof readPackFile> {
+  try { return await readPackFile(c.env, f, undefined, offset); }
   catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
 }
 
@@ -481,10 +481,11 @@ export const TOOLS: ToolDef[] = [
   },
   {
     name: "get_agent_file", title: "Get an agent file", scope: "marketplace:read", costly: false,
-    description: "Read one file from a free AI Blocks agent's pack by its path: a skill (skills/<name>/SKILL.md), a prompt, a workflow, a toolbox item (toolbox/<type>/<name>.md) or knowledge.md. Use the paths that toolbox.md and load_agent give. This reads one named file; it does not search.",
+    description: "Read one file from a free AI Blocks agent's pack by its path: a skill (skills/<name>/SKILL.md), a prompt, a workflow, a toolbox item (toolbox/<type>/<name>.md) or knowledge.md. Use the paths that toolbox.md and load_agent give. This reads one named file; it does not search. For long files, follow next_offset until null to read the complete text.",
     inputSchema: schema({
       agent_id: { type: "string", maxLength: 128, description: "The agent_id, such as nova-seo." },
       path: { type: "string", maxLength: 300, description: "The file's path in the pack, such as knowledge.md, skills/keyword-research/SKILL.md or toolbox/skill/layout-default-breaker.md." },
+          offset: { type: "integer", minimum: 0, description: "Character offset returned as next_offset by the previous page; default 0." },
     }, ["agent_id", "path"]),
     annotations: read("Get an agent file"),
     async run(c, args) {
@@ -495,10 +496,12 @@ export const TOOLS: ToolDef[] = [
         const paths = index.files.map(x => x.path);
         return no(`${path} is not in ${p.name}'s pack. Files: ${paths.slice(0, 60).join(", ")}${paths.length > 60 ? `, and ${paths.length - 60} more (call load_agent for the full list)` : ""}.`);
       }
-      const { text: body, trimmed } = await fileText(c, f);
+      const rawOffset = args.offset ?? 0;
+      if (typeof rawOffset !== "number" || !Number.isSafeInteger(rawOffset) || rawOffset < 0) return no("offset must be a nonnegative whole number.");
+      const { text: body, trimmed, offset, next_offset, total_chars } = await fileText(c, f, rawOffset);
       return {
-        text: `===== ${f.path} (${p.name}, ${f.purpose}) =====\n${body}${trimmed ? "\n[Cut short here. The full file is in the download.]" : ""}`,
-        data: { agent_id: p.id, path: f.path, purpose: f.purpose, kind: f.kind, text: body, trimmed },
+        text: `===== ${f.path} (${p.name}, ${f.purpose}) =====\n${body}${next_offset !== null ? `\n[Continue with get_agent_file, same agent_id and path, offset ${next_offset}; ${total_chars} total characters.]` : ""}`,
+        data: { agent_id: p.id, path: f.path, purpose: f.purpose, kind: f.kind, text: body, trimmed, offset, next_offset, total_chars },
       };
     },
   },
@@ -527,7 +530,7 @@ export const TOOLS: ToolDef[] = [
       try { answer = await askPack(c.env, index, questions, { k, today: nowIso().slice(0, 10), paths }); }
       catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
       return {
-        text: answerText(answer, p.name),
+        text: `${answerText(answer, p.name)}\n\nIndex coverage: ${answer.index_coverage.indexed_files}/${answer.index_coverage.expected_files} eligible files, complete. Reference knowledge only: enough describes a lexical match, not current business evidence or task readiness.`,
         data: { agent_id: p.id, version: index.version, ...answer, passages: answer.passages.map(x => ({ id: x.id, path: x.path, lines: x.lines, context: x.context, text: x.text, score: x.score, matched: x.matched, cites: x.cites })) } as unknown as Record<string, unknown>,
       };
     },
@@ -557,7 +560,7 @@ export const TOOLS: ToolDef[] = [
       const answer = v.index.ask(questions, { ...cardQuery(v.file.vertical, a), today: nowIso().slice(0, 10) });
       return {
         text: cardAnswerText(answer, v.file.vertical.name),
-        data: { library: v.file.vertical.id, enough: answer.enough, coverage: answer.coverage, missing: answer.missing, cards: answer.hits.map(h => ({ id: h.card.id, modules: h.card.modules, claim: h.card.claim, scope: h.card.scope, tier: h.card.tier, stale: h.stale, source: h.source ? { id: h.source.id, title: h.source.title, url: /^https?:/.test(h.source.url) ? h.source.url : null, date: h.source.date } : null })) },
+        data: { library: v.file.vertical.id, enough: answer.enough, coverage: answer.coverage, missing: answer.missing, evidence_scope: answer.evidence_scope, business_data_ready: answer.business_data_ready, cards: answer.hits.map(h => ({ id: h.card.id, modules: h.card.modules, claim: h.card.claim, scope: h.card.scope, tier: h.card.tier, stale: h.stale, source: h.source ? { id: h.source.id, title: h.source.title, url: /^https?:/.test(h.source.url) ? h.source.url : null, date: h.source.date } : null })) },
       };
     },
   },

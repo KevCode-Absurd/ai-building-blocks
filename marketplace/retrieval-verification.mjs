@@ -1,0 +1,18 @@
+import { writeFileSync } from 'node:fs';
+import { loadVertical, evaluateVertical } from './scripts/eval-vertical.mjs';
+import { readFileSync } from 'node:fs';
+import { moduleMarkdown } from './src/modules/knowledge/cards.ts';
+import { packKnowledgeIndex } from './src/modules/mcp/pack-files.ts';
+import { evaluate } from './scripts/eval-retrieval.mjs';
+const {vertical,cards,sources}=loadVertical('ecommerce',{publicOnly:true});
+const byId=new Map(sources.map(s=>[s.id,s]));
+const files=vertical.modules.map(m=>({path:`knowledge/ecommerce/${m.code}.md`,text:moduleMarkdown(vertical,m.code,cards.filter(c=>c.modules[0]===m.code),byId)}));
+const map=new Map(files.map(f=>[`/packs/probe/${f.path}`,f.text]));
+const manifest={agent_id:'coverage-probe',version:'2026-11-17',updated:'2026-11-17',knowledge:null,files:files.map(f=>({path:f.path,url:`/packs/probe/${f.path}`,bytes:Buffer.byteLength(f.text),purpose:'coverage probe',kind:'knowledge'}))};
+const env={APP_ORIGIN:'https://coverage.test',ASSETS:{fetch:async r=>map.has(new URL(r.url).pathname)?new Response(map.get(new URL(r.url).pathname)):new Response('',{status:404})}};
+global.gc?.();const before=process.memoryUsage().heapUsed;const start=performance.now();
+const index=await packKnowledgeIndex(env,manifest);const constructed=process.memoryUsage().heapUsed;global.gc?.();
+const reached=new Set(index.chunks.flatMap(c=>[...c.text.matchAll(/\bCard ([A-Z]{3}-\d{4})\./g)].map(m=>m[1])));
+const report={schema:'ecommerce-retrieval-check/1',created:new Date().toISOString(),pack_coverage:index.coverage,public_cards:cards.length,card_markers_reached:reached.size,missing:cards.filter(c=>!reached.has(c.id)).map(c=>c.id),chunks:index.chunks.length,build_ms:Math.round(performance.now()-start),heap_mb:{before:before/1e6,after_construction:constructed/1e6,after_gc:process.memoryUsage().heapUsed/1e6},role_golden:evaluate(JSON.parse(readFileSync('test/fixtures/retrieval-golden.json','utf8'))),vertical_golden:evaluateVertical('ecommerce',JSON.parse(readFileSync('test/fixtures/ecommerce-golden.json','utf8')),{publicOnly:true}),limitations:['Marker coverage is not semantic recall.','Heap samples are Node measurements, not a Worker load test.','Vertical absent labels are stale; refusal rate is not an hallucination score.']};
+writeFileSync('test-results/ecommerce-retrieval-implementation.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({cards:cards.length,reached:reached.size,missing:report.missing.length,chunks:report.chunks,heap_mb:report.heap_mb,build_ms:report.build_ms,role_hit5:report.role_golden.hit5,vertical_hit5:report.vertical_golden.hit5}));

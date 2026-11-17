@@ -181,7 +181,7 @@ test('slice prints only what the level needs, newest first, with stale lines set
   assert.match(recheck, /- STALE stock: Runner: in stock/);
   assert.doesNotMatch(facts, /VOICE|LOOK \(/);
   const voice = run(ctx, 'slice', 'voice', '--today', '2026-11-10').text;
-  assert.match(voice, /VOICE: real lines to match by ear[^\n]*\n- "Shoes made from trees" \(headline, shop\.example\.test, 2026-11-10\)/);
+  assert.match(voice, /VOICE: match tone, never paste as new copy[^\n]*\n- "Shoes made from trees" \(headline, shop\.example\.test, 2026-11-10\)/);
   assert.match(voice, /- Button words: SHOP NOW \/ ADD TO CART/); assert.doesNotMatch(voice, /LOOK \(/);
   const look = run(ctx, 'slice', 'look', '--today', '2026-11-10').text;
   assert.match(look, /LOOK \(measured 2026-11-10 from shop\.example\.test;/);
@@ -225,8 +225,9 @@ test('learn records what the client kept, killed or asked for more of, newest fi
   assert.equal(run(ctx, 'learn', '--job', 'six Meta ads', '--killed', 'lifestyle shots with no product', '--today', '2026-11-08').code, 0);
   assert.equal(read(ctx, 'worked.md'), '# What worked\n\nWhat this client kept, killed or asked for more of, newest first. Read it before you write the next spec.\n\n## 2026-11-08 | six Meta ads\n\n- Killed: lifestyle shots with no product\n\n## 2026-11-03 | welcome emails\n\n- Kept: the plain subject lines\n- Killed: the discount opener\n- More of: founder stories\n');
   const slice = bf.sliceText(ctx, 'facts', { now: at('2026-11-08') }).text.split('\n');
-  assert.equal(slice[3], 'WHAT WORKED BEFORE (read first; worked.md, newest first)');
-  assert.equal(slice[4], '- 2026-11-08 | six Meta ads: Killed: lifestyle shots with no product');
+  const workedAt = slice.indexOf('WHAT WORKED BEFORE (read first; worked.md, newest first)');
+  assert.ok(workedAt >= 0);
+  assert.equal(slice[workedAt + 1], '- 2026-11-08 | six Meta ads: Killed: lifestyle shots with no product');
   assert.match(read(ctx, 'index.md'), /Latest from worked\.md:\n- 2026-11-08 \| six Meta ads: Killed: lifestyle shots with no product/);
   assert.equal(bf.statusOf(ctx, { now: at('2026-11-08') }).parts.find((p) => p.id === 'worked').state, 'kept');
   assert.equal(run(ctx, 'learn', '--kept', 'x').code, 2, 'a job name is required');
@@ -334,12 +335,16 @@ test('a banned claim is kept on file, never handed over as a fact, and shown as 
   fs.writeFileSync(file, JSON.stringify(doc, null, 1));
   const slice = bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text;
   assert.match(slice, /NOT CONFIRMED: never use as fact\n- BANNED: Cures back pain/);
-  assert.doesNotMatch(slice.split('NOT CONFIRMED')[0], /Cures back pain/);
+  assert.match(slice, /MANDATORY RESTRICTIONS[^\n]*\n- BANNED: Cures back pain/);
+  assert.doesNotMatch(slice.split('FACTS (fresh for 90 days)')[1]?.split('NOT CONFIRMED')[0] || '', /Cures back pain/);
   assert.equal(bf.statusOf(ctx, { now: at('2026-11-01') }).parts.find((p) => p.id === 'facts').count, 3, 'a banned line is not counted as a live fact');
 });
 
 test('a job saves its slice as context/facts.md; that file is never read back in as a source', () => {
   const { ctx } = built();
+  // An older capture alone is insufficient; establish the mandatory dated restriction records.
+  fs.mkdirSync(path.join(ctx, 'org-context', 'foundation'), { recursive: true });
+  for (const name of ['claims', 'dos-donts']) fs.writeFileSync(path.join(ctx, 'org-context', 'foundation', `${name}.md`), '# Rules\nUpdated 2026-11-01\n- rule one | fixture\n- rule two | fixture\n- rule three | fixture\n- rule four | fixture\n- rule five | fixture\n');
   const before = [read(ctx, 'facts.json'), read(ctx, 'offers.json')];
   const out = path.join(ctx, 'facts.md'), saved = run(ctx, 'slice', 'facts', '--out', out, '--today', '2026-11-01');
   assert.equal(saved.code, 0); assert.match(saved.text, /^Wrote the facts slice to .*facts\.md \(\d+ words\)\. Read that file, not the whole org context\.$/);
@@ -380,6 +385,6 @@ test('the command line explains itself and refuses what it does not know', () =>
   assert.equal(run(tempContext(), 'publish').code, 2);
   // Self-contained: no package imports, and no network.
   const src = fs.readFileSync(new URL('../../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs', import.meta.url), 'utf8');
-  assert.deepEqual([...src.matchAll(/^import .* from '([^']+)';$/gm)].map((m) => m[1]), ['node:fs', 'node:path', 'node:url']);
+  assert.deepEqual([...src.matchAll(/^import .* from '([^']+)';$/gm)].map((m) => m[1]), ['node:fs', 'node:path', 'node:url', 'node:crypto']);
   assert.doesNotMatch(src, /\bfetch\(|https?\.request|child_process/);
 });

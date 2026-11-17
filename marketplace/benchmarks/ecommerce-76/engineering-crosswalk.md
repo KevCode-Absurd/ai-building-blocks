@@ -1,0 +1,32 @@
+# Engineering principles applied to the 20 improvements
+
+The implementation applies relevant principles from Stanford CS329Z, Standard Agent Specification v0.2.0 and Hamel Husain/Shreya Shankar’s evals FAQ. It does not claim to implement every proposal in those materials or to be a conforming Standard Agent runtime. The code and observed outputs decide whether a change works.
+
+| Principle | Implemented change | Evidence and boundary |
+|---|---|---|
+| Evaluate the compound system, not just a persona prompt | Inspect sources, retrieval, context, tools, calculations, artifact and handoff separately | 76 frozen human-style tasks; completed executions are recorded separately from preparation |
+| Retrieval is indexing, ranking and reading | Complete eligible public pack index; source/file-index hashes; parent conditions; unique-card top-k; shared synonyms | Completeness repaired; ranking metrics mixed. No claim that every relevant passage is always retrieved |
+| Distinguish business evidence from procedural knowledge | Retrieval reports reference-knowledge scope and business-data readiness separately; supplied-file inventory precedes absence claims | A good ecommerce card cannot establish a merchant’s actual profit, stock or account state |
+| Maintain memory with provenance and correction | Explicit fact kinds/dates, preserved conflicts and full qualifications; owner/workspace binding; append-only corrections and revocations | Host authenticates scope; local files are not an authenticated multi-user database |
+| Separate capability declarations from executed tools | Agent contract, real pack file inventory, explicit unavailable states and host model identity | Contract checker does not install providers, create children or enforce runtime limits |
+| Separate a turn from terminal session completion | Ordered receipt events and explicit success/failure/cancellation/exhaustion reasons | Structural receipt checks do not attest that an action happened |
+| Scope delegation and state transfer | Explicit side-owned child relationships, context/memory allowlists and declared isolation needs | Actual filesystem isolation, durable queues, hooks and provider adapters remain deployment work |
+| Prefer deterministic checks for exact work | Source-linked typed arithmetic, additive-unit checks, cost/cohort reconciliation, cash summary and inventory/capacity calculations | Source interpretation and completeness still need review; unsupported operations do not receive a false pass |
+| Verify the resulting artifact/environment | Apply patches in a temporary original copy and compare bytes; main quality entry point automatically checks sibling patch artifacts | Local application does not prove production runtime behavior; browser/connector checks remain separate |
+| Use failures to drive repairs | Preserve initial missing-source/capacity/copy/patch failures; update shared mechanisms; rerun fixed evidence | Development reruns are not held-out generalization tests |
+| Distinguish code, model and human judges | Code checks arithmetic/files; root AI reviews commercial meaning; human review interface with identity and first-failure annotations | No human labels means NOT_CALIBRATED, never a synthetic calibration score |
+| Compare multiple agents with a competent baseline | Seven matched host-only tasks completed with identical evidence and user requests, without downloaded specialist packs | All seven matched; provisional AI review does not establish a general pack advantage. Not a Claude Code or designer comparison |
+| Observe actual tools and outcomes | Export allowlisted native tool calls/results, visible messages, lifecycle and observed model identity | Excludes private reasoning and system/developer/account data. Shared-batch traces explicitly cover all cases in that batch |
+| Keep protocols explicit | Initial and repair trials use fresh contexts where recorded; later catalogue cases share batch contexts | Mixed pack snapshots, one task per agent, batch context and illustrative evidence limit causal and reliability claims |
+
+## Source material and scope
+
+- [Stanford CS329Z](https://cs329z.stanford.edu/): all 14 publicly linked slide PDFs available on 17 November 2026 were cached and text-extracted in the prior audit (1,284 pages). The audit’s `stanford/manifest.json` records hashes, source URLs and page counts. Future/unlinked lectures, recordings and every research paper are not included. Lectures 3–8 inform retrieval, tools, context and memory; 9–13 and 15 inform optimization, data and evaluation. The application of those ideas is our engineering judgment.
+- [Standard Agent Specification](https://standardagentspec.org/): 14 v0.2.0 core specification Markdown files were retained with a download manifest in the implementation evidence. See `packs/shared/tools/agent-contract-guide.md` for supported declarations and the explicit NOT_IMPLEMENTED deployed-runtime boundary.
+- [Evals FAQ](https://hamel.dev/blog/posts/evals-faq/): retained source and PDF inform concrete error analysis, dataset integrity and human calibration. Self-scorecards remain diagnostics, not validated outcome scores.
+
+Private purchased-course originals and existing local extraction work were preserved. The complete-index change covers eligible published pack content; it does not publish private Drive folders or prove historical source-to-card reconciliation complete. Rights-aware source publication remains in place.
+
+## What would substantiate a competitive claim
+
+Use additional merchant-approved brands and held-out tasks; fix model/tool budgets, randomize anonymous artifact order, obtain domain-expert labels, repeat trials and report completion reliability alongside useful output quality. Run authenticated connector tests and measure actual retained profit/cost outcomes separately. Creative superiority needs faithful product references, finished assets and a competent designer comparison under the same brief. The current implementation and development evaluation do not establish industry-best performance or superiority to Codex/Claude Code.

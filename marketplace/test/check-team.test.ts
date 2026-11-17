@@ -197,7 +197,7 @@ test("a filled store memory passes; the blank template does not", () => {
   const good = ct.checkMemory(MEMORY, { today: "2026-11-15" });
   assert.ok(good.ok, problems(good));
   assert.match(good.notes.join(" "), /2026-11-02, 13 days old\. Recheck it/);
-  const block = readFileSync(TEMPLATE, "utf8").match(/```markdown\n([\s\S]*?)```/)![1];
+  const block = readFileSync(TEMPLATE, "utf8").replace(/\r\n/g, "\n").match(/```markdown\n([\s\S]*?)```/)![1];
   const blank = ct.checkMemory(block, { today: "2026-11-15" });
   assert.equal(blank.ok, false);
   assert.match(problems(blank), /unfilled placeholder/);
@@ -288,7 +288,7 @@ test("no persona's TEAM.md contradicts its own limits, and maker leads keep one 
 
 test("the general coordinator runs the council only at team depth and ships as packs/coordinator/TEAM.md", () => {
   const md = generalCoordinatorMarkdown();
-  assert.equal(readFileSync(COORDINATOR, "utf8"), md);
+  assert.equal(readFileSync(COORDINATOR, "utf8").replace(/\r\n/g, "\n"), md);
   assert.match(md, /3\. One owner first\./);
   assert.match(md, /Only at team or full depth, with at least two different expert owners/);
   assert.match(md, /At any lower depth there is no council/);

@@ -64,7 +64,7 @@ Work out target and break-even cost per result first (next section). The client 
 - **CPM** = spend / impressions x 1,000. **Link CTR** = link clicks / impressions.
 - **Conversion rate** = conversions / link clicks. **Cost per result** = spend / results.
 - **Frequency** = impressions / reach. Rising frequency with rising cost suggests the audience has seen the ads too often.
-- **ROAS** = conversion value / spend; **break-even ROAS** = 1 / gross margin.
+- **ROAS** = conversion value / spend; **break-even ROAS** = purchase value / expected contribution before ads.
 - **Incremental cost per conversion** = spend / conversions the ads caused, from a lift test [3][10].
 
 ## 5. Tools
@@ -125,3 +125,5 @@ Run Meta or YouTube ads to a free workshop, guide or short call, then follow up 
 8. About Demand Gen campaigns, Google Ads Help. https://support.google.com/google-ads/answer/13695777 Checked 2026-11-06.
 9. The Digital Services Act package (updated 1 October 2026), European Commission. https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package Checked 2026-11-06.
 10. Gordon, Zettelmeyer, Bhargava and Chapsky, A Comparison of Approaches to Advertising Measurement (*Marketing Science*, 2019), Kellogg School of Management. https://www.kellogg.northwestern.edu/academics-research/research/detail/2019/a-comparison-of-approaches-to-advertising-measurement-evidence-from/ Checked 2026-11-06.
+
+Before scaling social or display spend, reconstruct the contribution bridge for the matched purchase cohort. Include fulfilment, payment/platform fees and expected returns in the pre-ad contribution bridge; a product gross-margin percentage cannot establish allowable acquisition cost. Keep platform-attributed purchase values separate from deduplicated store sales. Unresolved cost coverage leaves the scale recommendation unsupported.

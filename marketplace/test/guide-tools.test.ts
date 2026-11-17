@@ -130,8 +130,8 @@ test("check-offers works out effective discounts and fails deep offers past the 
   writeFileSync(ads, "id,text\nW02,\"Buy 2, Get 3rd Free. Pick three for your routine.\"\nM01,Flat 10% off your first order\nG1,Free serum worth ₹249 on orders over ₹799\n");
   const unknown = run("check-offers.mjs", ["--limit", "unknown", ads]);
   assert.equal(unknown.status, 1);
-  assert.match(unknown.stdout, /"Buy 2, Get 3rd Free" is 33% off in effect: a deep offer while the owner's limit is unknown/);
-  assert.match(unknown.stdout, /"Free serum worth ₹249 on orders over ₹799" is 31% off/);
+  assert.match(unknown.stdout, /"Buy 2, Get 3rd Free" is 33\.3333% off in effect: a deep offer while the owner's limit is unknown/);
+  assert.match(unknown.stdout, /"Free serum worth ₹249 on orders over ₹799" is 31\.164% off/);
   assert.doesNotMatch(unknown.stdout, /Flat 10% off.*FAIL|FAIL.*Flat 10% off/);
   const limit = run("check-offers.mjs", ["--limit", "35", ads]);
   assert.equal(limit.status, 0, limit.stdout);

@@ -7,6 +7,8 @@ description: "Write a creator-style video script for a store's product that soun
 
 **You get:** a creator video script table with exact lines, on-screen text and shots, a claims check, delivery notes, a shot list, alternate openers, and a creator brief ready to send once approved.
 
+Approved voice examples show tone; they are not universally true copy. Check each reused phrase against this SKU, available range and current offer. Do not imply a size choice when only one size exists, or transfer another product's performance claim. Preserve the tone while replacing inapplicable facts with verified wording.
+
 ## When to use
 
 - The store is sending product to a creator and needs a script and brief.

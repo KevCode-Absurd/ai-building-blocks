@@ -38,19 +38,20 @@ One row per run:
 
 question | stage | engine | mode | run | date | brand mentioned (yes/no) | brand linked or cited (yes/no) | position in list (if a list) | rivals named | cited domains | sentiment (positive, neutral, negative) | facts stated about the brand | any fact wrong (yes/no, which)
 
-Copy the cited URLs exactly. Mark answers where the engine did not search the web.
+Copy the cited URLs exactly. Mark answers where the engine did not search the web. Keep operational errors, absent AI answers, valid answers without mentions, and unverified factual claims distinct. A failed request is not evidence of brand absence.
 
 ### 5. Calculate the measures
-- **Mention share:** runs mentioning the brand ÷ all runs, by engine and by stage.
-- **Citation share:** runs linking or citing the brand's site ÷ all runs.
+- **Mention share:** valid answers mentioning the brand ÷ valid answer observations, by engine and stage.
+- **Citation share:** valid answers citing the brand's site ÷ valid answer observations. A brand-name link and a supporting citation are separate fields.
+- **Response availability:** valid answer observations ÷ scheduled observations; report operational failures and absent AI answers separately.
 - **Rival shares** on the same basis.
-- **Accuracy rate:** brand answers with no factual errors ÷ brand answers.
+- **Accuracy rate:** fully verified accurate brand answers ÷ brand answers assessed. Report unverified claims separately; lack of detected errors is not verification.
 - **Top cited domains:** count how often each domain is cited across all runs, and mark each as own site, competitor, earned media (independent publisher, review site, directory, forum, encyclopedia) or marketplace.
 
 Report shares with run counts (for example "31%, 19 of 61 runs"). Treat differences of a few runs as noise.
 
 ### 6. Read the platform data
-Add the Search Console Generative AI report (impressions in AI Overviews and AI Mode by page), Bing's AI Performance report (citations and grounding queries) and the GA4 AI Assistant channel (sessions and key events). These show the real-world side of what the sample suggests.
+Inspect available Search Console Generative AI impressions, Bing AI Performance and GA4 AI Assistant reports; use their actual fields and limits. Follow workflows/ai-referral-tracking-setup.md for current documentation and account availability. Record source update dates as well as retrieval dates. Resolve conflicting older general pages against newer feature documentation and release notes; do not silently discard either source. Account exports and a prompt panel have different populations and cannot establish causal revenue by themselves. Zero denominators mean not measurable.
 
 ### 7. Diagnose the gaps
 For each weak area, decide which kind of gap it is:

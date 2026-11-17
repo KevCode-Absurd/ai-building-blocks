@@ -40,6 +40,7 @@ const KIT = [
   ["../packs/shared/tools/integration-readback-guide.md", "tools/integration-readback-guide.md", "how to capture scoped provider readback without confusing mocks with live checks"],
   ["../packs/shared/tools/media-delivery.mjs", "tools/media-delivery.mjs", "checks local media bytes, metadata and self-contained edit sources"],
   ["../packs/shared/AUTOMATION-PRINCIPLES.md", "AUTOMATION-PRINCIPLES.md", "preserves customer signals, judgment, critical skills and relationships"],
+  ["../packs/shared/PRODUCTION-PRINCIPLES.md", "PRODUCTION-PRINCIPLES.md", "business acceptance, source freshness, step contracts, recovery and versioned release evidence"],
   ["kit/settings.json", ".claude/settings.json", "turns the hooks on (copy it in step 9, not before)"],
   ["kit/limits.example.json", "context/limits.example.json", "example money limits; fill context/limits.json from the owner's answers"],
   ["kit/goals.example.json", "context/goals.example.json", "example goals; fill context/goals.json from the owner's answers"],

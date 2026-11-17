@@ -50,6 +50,19 @@ test('a heading shown only in a code example cannot satisfy a native heading req
   const contract=put('heading.json',JSON.stringify({required_headings:['Required heading']}));
   assert.equal(run('quality/check-format.cjs',file,'--contract',contract).status,1);
 });
+
+test('format flags corrupted rendered text and invalid UTF-8 without rejecting ordinary multilingual copy',()=>{
+  const contract=put('encoding-contract.json',JSON.stringify({required_headings:['Collection']}));
+  const good=put('encoding-good.html','<meta charset="utf-8"><h1>Collection</h1><p>São Tomé · Ângela · ₹500 · 70 × 220 mm</p>');
+  assert.equal(run('quality/check-format.cjs',good,'--contract',contract).status,0);
+  const bad=put('encoding-bad.html','<h1>Collection</h1><p>Parts \u00c2\u00b7 70 mm \u00c3\u2014 220 mm; buyer\u00e2\u20ac\u2122s</p>');
+  const result=run('quality/check-format.cjs',bad,'--contract',contract);
+  assert.equal(result.status,1);
+  assert.ok(JSON.parse(result.stdout).failures.some((s:string)=>s.includes('corrupted display')));
+  const bytes=path.join(dir,'invalid-utf8.md');
+  writeFileSync(bytes,Buffer.concat([Buffer.from('# Collection\n'),Buffer.from([0xc3,0x28])]));
+  assert.equal(run('quality/check-format.cjs',bytes,'--contract',contract).status,1);
+});
 test('native field names retain underscores and visible link labels use their own length',()=>{
   const file=put('field-names.md','| field_name | Body |\n|---|---|\n| **order_id** | [Go](https://example.com/long-path) |\n');
   const contract=put('field-names.json',JSON.stringify({tables:[{headers:['field_name','Body'],rows:1,max_chars:{field_name:8,Body:2}}]}));

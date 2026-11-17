@@ -118,7 +118,7 @@ Google explicitly says:
 - **Don't chunk content for AI** — write for people, organize with normal headings and paragraphs
 - **Don't write separate content for AI** — that risks "scaled content abuse" spam policy
 - **Helpful, reliable, people-first content** wins — same E-E-A-T standards as regular Search
-- **No AI-specific Search Console reporting** — use standard SEO metrics
+- **Check current Search Console reporting** — use the Generative AI impressions report where available alongside standard Web performance; do not infer AI-only clicks or revenue.
 
 **Other AI engines (ChatGPT, Claude, Perplexity, Copilot) behave differently:**
 - They actively reward extractable structure — passages, FAQs, comparison tables, definition blocks
@@ -453,7 +453,9 @@ AI answers are **non-deterministic** — one run is an anecdote, not a measureme
 
 ### Search Console expectations
 
-Google's guide is explicit: **there is no AI-specific Search Console reporting**. AI Overviews and AI Mode use core Search ranking, so the standard Search Console reports (Performance, Coverage, Core Web Vitals) are still what you measure with for Google. The third-party tools above are the only way to see cross-platform AI citation behavior.
+Verified 17 November 2026: Google documents a [Generative AI performance report](https://support.google.com/webmasters/answer/16984139) for AI Overviews and AI Mode impressions. The report can be absent when a property has insufficient impressions. Check the connected property's available reports before promising a baseline. Standard Web performance remains useful; inclusion there does not imply that no dedicated report exists. Do not invent AI-only clicks, queries, conversion attribution or a split between AI features. Record the dimensions, aggregation, timezone and unavailable values exposed by the actual export.
+
+Source conflicts require investigation: compare publication/update dates and scope, then inspect current feature documentation and release notes. A recently retrieved older page does not override a newer feature-specific announcement. If the conflict cannot be resolved, preserve both sources and the uncertain claim. Cross-platform answer visibility can be measured with a fixed manual panel or a verified tracker; a paid tool is not required.
 
 ---
 

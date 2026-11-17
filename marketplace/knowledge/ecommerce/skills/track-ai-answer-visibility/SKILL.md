@@ -27,7 +27,7 @@ Required (read access, level 1):
 
 1. **The question panel** (fixed list): from the baseline in `get-recommended-by-ai-assistants`, or built in step 1.
 2. **GA4** access: sessions, purchases and revenue by session source.
-3. **Search Console** access: Performance report (AI Overviews and AI Mode traffic is counted inside it under Web [AEO-6460]).
+3. **Search Console** access: standard Web performance and the Generative AI impressions report where available. The older Web-report guidance [AEO-6460] does not establish that a dedicated report is absent; check [current report documentation](https://support.google.com/webmasters/answer/16984139) and the actual property. Documentation checked 17 November 2026. Preserve conflicting source dates and resolve feature changes before making recommendations.
 4. **How-did-you-hear survey** results for the month, with an answer option naming AI assistants.
 5. **Gross profit per order** by product, to judge which questions matter.
 
@@ -72,7 +72,7 @@ For each run: store named (yes or no), position in the list, products named, des
 
 ### 5. Read traffic and buyers
 
-- **GA4:** create a custom channel group (Admin, Data display, Channel groups) with an "AI assistants" channel matching sources such as chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com and claude.ai. Report sessions, purchases, revenue and gross profit from that channel.
+- **GA4:** inspect the default AI Assistant channel and compare session sources against known assistant referrers. Propose a custom group only for verified gaps; this read-only task does not change analytics settings. Report observed sessions, purchases and revenue with attribution limits; report gross profit only when reconciled cost data supports it.
 - **Survey:** share of buyers answering "AI assistant". AI referral traffic can be a tiny share of visits but a much larger share of sign-ups found only through the survey [AEO-0020]. Check the survey against spend: channels should show up roughly in proportion [MEA-0045].
 - **Search Console:** pages that hold position but lose clicks may be losing them to AI Overviews; check CTR against position [AEO-0005].
 

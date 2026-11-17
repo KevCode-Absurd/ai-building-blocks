@@ -1,0 +1,10 @@
+{
+  "brand": "Atelier Test Store",
+  "tagline": "A collection for your everyday",
+  "description": "Explore our private demonstration collection.",
+  "currency": "INR",
+  "products": [
+    {"id":"sample-ring","title":"Sample gemstone ring","category":"Rings","description":"An entirely synthetic product for checkout testing.","images":[],"facts":{"Provenance":"Synthetic fixture"},"variants":[{"id":"ring-12","label":"Size 12 (test)","price":120000,"stock":2},{"id":"ring-14","label":"Size 14 (test)","price":130000,"stock":0}]},
+    {"id":"sample-earrings","title":"Sample drop earrings","category":"Earrings","description":"An entirely synthetic product for checkout testing.","images":[],"facts":{"Provenance":"Synthetic fixture"},"variants":[{"id":"earrings-standard","label":"Standard (test)","price":240000,"stock":4}]}
+  ]
+}

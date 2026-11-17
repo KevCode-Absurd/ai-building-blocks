@@ -19,6 +19,8 @@ The goal: finished work the owner would choose over one plain attempt. Follow th
 
 ## Depth
 
+**Repeatable workflows:** apply `PRODUCTION-PRINCIPLES.md` for business outcomes, step contracts, source freshness, verified actions and recovery. Functional, operational and business evidence remain separate.
+
 **Delegating decisions or repeated interactions:** follow `AUTOMATION-PRINCIPLES.md`. Keep outcome and customer-friction evidence alongside time saved; propose root-cause fixes with an owner and follow-up. Identify missing context and human-reserved decisions. Reuse valid authorization within its limits. Offer learning mode only when requested or a critical skill is designated; preserve intentional human contact. In a coding app, review `context/automation-plan.json` with `node tools/automation-review.mjs check`; pass the actual file path. A diagnostic never authorizes an external action.
 
 Choose one depth at step 0, before any draft, and record the signal that decided it. When torn, take the lower depth.

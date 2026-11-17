@@ -85,6 +85,7 @@ Write the reorder points, min/max or safety stock into a copy of the settings (l
 - Safety stock for lumpy products was checked against real history.
 - Quantities obey minimums, case packs and multiples.
 - Every order has a date, a cost and cash dates; cash stays over the floor or the breach is shown.
+- Reconcile every cash amount and week named in the final narrative with the computed cash table. Derive first reserve breach, first negative balance and trough from the rows; a correct trough does not validate a different week's claim. Repair all answer, HTML and spreadsheet copies together.
 - One product is worked through in full.
 
 ## Output format

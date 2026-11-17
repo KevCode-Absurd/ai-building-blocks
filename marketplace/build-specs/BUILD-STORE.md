@@ -30,6 +30,7 @@ Unzip this build folder, open it in Claude Code, and say: **"Build my store's ag
 
 ### 0. How to work with the owner
 
+- Read `files/PRODUCTION-PRINCIPLES.md` and `files/AUTOMATION-PRINCIPLES.md` before designing the workflow. Copy them into the store folder and reference them from the persistent agent instructions you create. Define the outcome, accountable owner, source scope and acceptance checks; test functional, operational and business outcomes separately. Preserve valid existing authorization and avoid repeating answered intake questions.
 - Go one step at a time. Before each step, say in one or two plain sentences what you are about to do and why. After it, show the result.
 - The owner signs in to every tool themselves. Never ask for a password, key or token in chat. When a step needs a token, the owner pastes it into the host's secret store or a local `.env` file you create for them, and you never print it.
 - Write at a grade 8 reading level. No jargon without a one-line explanation.

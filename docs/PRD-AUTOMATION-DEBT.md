@@ -112,3 +112,26 @@ Deployment is limited to the approved product release. It does not authorize the
 - Add consent-aware live outcome ingestion, representative case sampling and explicit alert ownership only when the owner requests those integrations.
 - Run repeated held-out tasks and domain-expert reviews, including unnecessary-interruption and missed-context cases.
 - Evaluate learning and relationship effects through owner-selected outcomes; do not infer them from engagement, time spent or a model's self-rating.
+
+## 9 · Production engineering and local commerce test increment
+
+**New owner input:** tutorial transcript supplied 17 November 2026, SHA-256 `9427c061c53c8192df67d1a4b14161640a179ee491c56601bdf64bce6c7b8429`. Relevant sections: knowledge audit 24:36–27:38; workflow contracts 29:06–30:45; three evaluation layers 35:10–37:11; versioning, fallback and refresh 40:39–41:48. This is a design input, not independently verified research. The private attachment is not republished.
+
+**Deliverables:** a portable production reference wired into normal pack export, shared-method invocation, corrected source-conflict guidance, and a deterministic local storefront for agent execution tests. The local store uses generic public code and private brand adapters; supplied brand media, financial records, customer data and test state stay outside published packs.
+
+| Requirement | Acceptance evidence |
+|---|---|
+| Business task and step contracts | Agent output names outcome, owner, inputs, result, acceptance and meaningful failure/handback; no invented baseline or ROI. |
+| Source freshness | A case with an older general page and newer feature documentation preserves both dates/scopes and checks the newer feature before recommending reporting capabilities. |
+| Correct deterministic commerce | Integer minor-unit totals; concurrent reservations cannot oversell; declined/expired holds release stock; retrying payment/refund cannot duplicate charge/order/refund/restock. |
+| Actual local execution | Agent creates an isolated dataset, performs authorized test actions and saves independent GET readback plus meaningful checks. A generated plan alone fails completion. |
+| Consent and lifecycle behavior | Local outbox checks current channel consent, unsubscribe, support, purchase/cart and refund state at processing; no external transmission. Record simulation limits and unsupported workflow features. |
+| Isolation and recovery | Datasets stay separate; state survives restart; loopback-only serving, selected asset allowlist, no cross-origin mutations or copied live checkout/analytics. |
+| Separate evaluation layers | Report functional output checks, operational tests and measured business outcomes separately. Unmeasured business impact stays unknown. |
+| Distribution | Rebuilt packs include the reference and its invocation, bound to exact package hashes; first-attempt outputs and subsequent repair runs remain distinct. |
+
+The owner authorized a local version of Gehna as the integration test environment. This changes the supplemental test scope, not the meaning of previously missing live-provider evidence. It does not authorize actual purchases, customer messages or ad-account writes. Local successful tests do not remove the deployed-runtime limitations in section 8.
+
+**Current implementation boundary:** local Node storefront with simulated approved/declined payments, persisted orders, reservations, full refunds and local-only lifecycle outbox. No partial refunds, real tax, shipping, fulfillment, payment settlement, ESP inbox delivery, public multi-user authentication or hosted agent workers. Those must not be marked verified by local tests.
+
+**Release:** run the applicable code and browser checks, actual agent outputs and independent reviews against frozen candidates. Preserve all failures. Publication still follows section 7; adding design guidance or a local store does not itself satisfy the output release gate.

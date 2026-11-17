@@ -17,6 +17,7 @@ Note: a fixed or sticky bar appears once mid-image in a full-page shot. Check it
 - Body text at least 16px on phone; small print not below 12px; strong contrast.
 - Even spacing and aligned edges; nothing crammed against the screen edge.
 - Nothing broken, overlapping, cut off or scrolling sideways (render.cjs flags horizontal overflow).
+- Read punctuation, currency, dimensions and names in the final render for encoding corruption. Save explicit UTF-8; changing a charset label does not repair already-corrupted text. No-overflow is insufficient: do not split SKU identifiers or ordinary words into unreadable table fragments; use labelled cards or a deliberate scrollable table.
 - No lorem, empty boxes, "image here" or fake placeholders.
 - Images and icons load; no hotlinks to files that are not there.
 - Style matches the brand's own look: colors, type, tone.

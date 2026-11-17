@@ -14,10 +14,13 @@ try {
   if (/\.html?$/i.test(file) && (contract.tables?.length ?? 0)) throw Error('HTML table rules need rendered DOM review; this local checker supports Markdown tables');
   const failures = []; let checks = 0;
   const assert = (ok, message) => { checks++; if (!ok) failures.push(message); };
+  let validUtf8 = true; try { new TextDecoder('utf-8', { fatal: true }).decode(bytes); } catch { validUtf8 = false; }
+  assert(validUtf8, 'Invalid UTF-8 bytes; fix encoding and render the final file again');
   const visible = raw.replace(/<!--[\s\S]*?-->/g, '').replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '');
   const clean = text => text.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/(?<!\w)__([^_]+)__(?!\w)/g, '$1').replace(/\*([^*]+)\*/g, '$1').replace(/(?<!\w)_([^_]+)_(?!\w)/g, '$1').replace(/`([^`]+)`/g, '$1').trim();
   let codeFence = false;
   const native = visible.split(/\r?\n/).filter(line => { if (/^\s*(```|~~~)/.test(line)) { codeFence = !codeFence; return false; } return !codeFence; }).join('\n');
+  assert(!/\u00c2[\u00a0\u00b7]|\u00c3[\u0097\u2014]|\u00e2\u20ac[\u2122\u201c\u201d\u2018\u2019]|\ufffd/.test(clean(native)), 'Possible corrupted display characters; inspect the rendered text and correct the source encoding');
   const headings = [...native.matchAll(/^#{1,6}\s+(.+)$/gm)].map(m => clean(m[1]));
   for (const m of native.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)) headings.push(clean(m[1]));
   for (const heading of contract.required_headings ?? []) assert(headings.includes(heading), `Missing required heading: ${heading}`);

@@ -21,6 +21,8 @@ The implementation applies relevant principles from Stanford CS329Z, Standard Ag
 
 ## Source material and scope
 
+The owner's additional domain-agent tutorial contributes explicit workflow contracts and three distinct evaluation layers: functional, operational and business. These are implemented in the shared production reference and local commerce sandbox. The sandbox's persisted receipts, retry/idempotency, stock and consent tests provide local operational evidence; they do not establish live commerce integration or business lift. The transcript's unsupported statistics and infrastructure prescriptions are not used as evidence. See docs/PRD-AUTOMATION-DEBT.md section 9 for provenance and acceptance.
+
 - [Stanford CS329Z](https://cs329z.stanford.edu/): all 14 publicly linked slide PDFs available on 17 November 2026 were cached and text-extracted in the prior audit (1,284 pages). The audit’s `stanford/manifest.json` records hashes, source URLs and page counts. Future/unlinked lectures, recordings and every research paper are not included. Lectures 3–8 inform retrieval, tools, context and memory; 9–13 and 15 inform optimization, data and evaluation. The application of those ideas is our engineering judgment.
 - [Standard Agent Specification](https://standardagentspec.org/): 14 v0.2.0 core specification Markdown files were retained with a download manifest in the implementation evidence. See `packs/shared/tools/agent-contract-guide.md` for supported declarations and the explicit NOT_IMPLEMENTED deployed-runtime boundary.
 - [Evals FAQ](https://hamel.dev/blog/posts/evals-faq/): retained source and PDF inform concrete error analysis, dataset integrity and human calibration. Self-scorecards remain diagnostics, not validated outcome scores.

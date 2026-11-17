@@ -10,6 +10,7 @@
 4. **Refresh the numbers.** Use the `reorder-points-and-safety-stock` skill: days of cover, reorder points and safety stock with the latest demand and lead times. Run the `rebuild-demand-after-stockouts` prompt first if anything ran out.
 5. **Build the watch list.** Four headings: order now, order this week, watch, too thin to plan. Each line shows days of cover, the reorder point and the suggested quantity after minimums and case packs.
 6. **Build the buy list and cash view.** Cost, order-by date, deposit and balance dates for each suggested order, and the cash balance by week against the floor.
+   Compute the full cash schedule before writing recommendations. Derive the first reserve breach, first negative balance, trough and every named week's amount from those same rows. Verify each occurrence in the final answer, HTML and spreadsheet against its exact row; checking the trough alone is insufficient. If a prose date or amount differs, repair all copies before delivery. Keep new PO liabilities separate until matched to scheduled payments; a deferred payment is not savings.
 7. **Get approval or act within limits.**
    - At level 1 or 2, send the watch list and buy list to the client, with draft purchase orders in the tool at level 2.
    - At level 3, place the orders that fall inside the confirmed suppliers, budget and cap, and log each one. *Approval: the first live run needs the client's yes to the action list; later runs act within the same limits.*

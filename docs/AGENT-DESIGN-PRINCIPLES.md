@@ -76,3 +76,11 @@ Report a small set of measures appropriate to the job, with denominators and obs
 - **Net time saved:** measured baseline effort minus automation operation, review, rework, maintenance and intervention effort over the same scope and period.
 
 Implementation and acceptance criteria are in [the PRD](PRD-AUTOMATION-DEBT.md). Downloaded agents receive the shorter [operating reference](../marketplace/packs/shared/AUTOMATION-PRINCIPLES.md). Production claims require observed deployment and execution evidence, not just the presence of these documents.
+
+## Production engineering extension
+
+The owner also supplied a tutorial transcript on domain-specific agents. We adopt its practical requirements: select a measurable business problem; map knowledge ownership and freshness; separate deterministic tools from model judgment; give workflow steps explicit contracts; integrate and read back actual systems; and evaluate functional correctness, operational reliability and business outcomes separately. These rules are distributed in [Production principles](../marketplace/packs/shared/PRODUCTION-PRINCIPLES.md) and invoked by the shared method.
+
+Its strongest lesson is that a credible answer and a completed business action require different evidence. A replica checkout can prove reservation, failure and refund behavior in that replica. It cannot prove Shopify integration, payment settlement, inbox delivery or commercial lift. Similarly, code tests cannot establish human creative preference.
+
+We do not adopt unsupported project-failure percentages, speed multipliers, workforce-replacement predictions, a requirement for paid cloud/vector infrastructure, or the claim that more agents automatically means a mature system. Audit records should be permissioned and minimized rather than logging all raw personal data. Model selection is task-evaluated; source refresh is not model retraining. Existing human ownership and authorization boundaries remain in force.

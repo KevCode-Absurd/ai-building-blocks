@@ -14,13 +14,13 @@
 
 4. **Add a "How did you hear about us?" question** to forms and checkout (level 3 on the forms the client named, or as a request for their developer), with "AI assistant (ChatGPT, Gemini, Copilot, Perplexity, Claude)" as an option and a free-text box. Many AI-influenced visits arrive as Direct (app clicks often drop the referrer) or come later through branded search.
 
-5. **Connect the first-party AI reports** (level 1; tools: Google Search Console and Bing Webmaster Tools). Confirm the site is verified in both. Record a baseline from the Search Console Generative AI performance report (impressions in AI Overviews and AI Mode, impressions only) and from Bing's AI Performance report (citations).
+5. **Inspect the first-party AI reports** (level 1; tools: Google Search Console and Bing Webmaster Tools). Confirm the site is verified in both and which reports are actually available. Google's [current report documentation](https://support.google.com/webmasters/answer/16984139), checked 17 November 2026, describes Generative AI impressions for AI Overviews and AI Mode; insufficient impressions can hide the report. Record a baseline only from an actual report/export. Do not invent AI-only clicks, queries, revenue or a feature split. Record Bing AI citations only if its report is available. If older general guidance conflicts with newer feature documentation, compare dates and scope and inspect release notes; retrieval date alone is not freshness. Preserve unresolved conflicts rather than silently choosing a source.
 
 6. **Log bot activity** (optional, level 1; tool: server or CDN logs). Set up a monthly count of requests from OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User, Claude-SearchBot and Claude-User, with status codes. User-fetch requests show pages being read for real user questions.
 
 7. **Build the monthly view** (level 2; tool: Data Studio (formerly Looker Studio) or a spreadsheet): AI Assistant sessions and key events, AI Overview and AI Mode impressions, Bing AI citations, form answers mentioning AI, branded search clicks. Put organic search beside it for context.
 
-8. **Write the measurement note** for the client: what each number means, what it misses, and why the true influence of AI answers is larger than the tracked clicks.
+8. **Write the measurement note** for the client: what each number means, its source and denominator, and what remains unmeasured. Untracked influence is possible; do not assert that it is larger than tracked clicks without evidence.
 
 ## Outputs
 

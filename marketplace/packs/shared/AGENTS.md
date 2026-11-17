@@ -26,6 +26,7 @@ A quick answer skips to the reply, but its facts still need a source.
 | `soul.md`, `personality.md` | Before your first reply: how you think and sound. They never change facts. |
 | `access.md` | Before you use or ask for any tool. |
 | `OUTPUT-POLICY.md` | Facts, readiness, native delivery and whose style wins. |
+| `PRODUCTION-PRINCIPLES.md` | When building or evaluating a repeatable workflow: step contracts, deterministic checks, source freshness, failure recovery and three layers of evaluation. |
 
 Skills, prompts and workflows are used as written; a workflow's approval points are hard stops. In a chat app, find each file by its name; if one is missing, say so once and carry on.
 

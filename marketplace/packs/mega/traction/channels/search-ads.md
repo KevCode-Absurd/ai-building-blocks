@@ -70,7 +70,7 @@ Set the go and stop lines before spending, using the formulas in the next sectio
 - **Max affordable CPC** = target CPA x conversion rate.
 - **Conversion rate** = conversions / clicks.
 - **CPA** = spend / conversions. For lead businesses, cost per customer = cost per lead / lead-to-customer rate.
-- **Break-even ROAS** = 1 / gross margin. ROAS = conversion value / spend.
+- **Break-even ROAS** = purchase value / expected contribution before ads. ROAS = conversion value / spend.
 - **CTR** = clicks / impressions. **Impression share** = impressions / eligible impressions.
 - **Brand share** = brand-search conversions / all conversions. Report brand and non-brand apart.
 
@@ -133,3 +133,5 @@ Check searches for the problem as well as the job title: a career change at 40, 
 10. Blake, Nosko and Tadelis, Consumer Heterogeneity and Paid Search Effectiveness (Working Paper 20171, 2014), NBER. https://www.nber.org/papers/w20171 Checked 2026-11-06.
 11. Airbnb, Inc. Form S-1 (filed November 2020), US Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1559720/000119312520294801/d81668ds1.htm Checked 2026-11-06.
 12. A case study: the framework for getting traction (interview with Gabriel Weinberg, 30 September 2015), Mixergy. https://mixergy.com/interviews/gabriel-weinberg-traction/ Checked 2026-11-06.
+
+Calculation scope: expected contribution before ads deducts all variable costs, including fulfilment, fees and expected returns, from the matched purchase value. Product gross margin alone is insufficient for profit break-even. Use identical currency, order population and purchase-value definitions; missing cost coverage blocks a supported scale recommendation.

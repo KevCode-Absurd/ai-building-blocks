@@ -50,7 +50,7 @@ Placing a purchase order is a commitment of money: the agent drafts it (level 2)
 
 For each SKU over the last 90 days (or the last 28 to 56 for a fast-changing product), daily speed = units sold / days the item was in stock. If a product sold 60 units in 30 days but was out of stock for 15, its speed is 4 a day, not 2 [OPS-0014]. Shopify's own days-of-inventory report divides by all 28 days, so it reads low after a stockout [COG-6285].
 
-Also note how much daily sales swing: the standard deviation of weekly sales divided by 7. You need it in step 4.
+Keep variability in its measured time unit. With weekly standard deviation, safety stock under independent comparable period errors is z x weekly standard deviation x square root of (lead time in days / 7). Do not divide weekly standard deviation by 7 to infer daily variability. If independence is not supported, estimate the forecast-error distribution over the actual protection period instead.
 
 If `forecast-demand-per-sku` has given a forecast, use the forecast speed for the lead-time window instead of the past speed. Never apply a flat growth rate to a seasonal product; peak months can run many times the base [OPS-0014].
 
@@ -94,7 +94,7 @@ Example (illustrative): 8 a day, 60 days full lead time, 10 days buffer: 8 x 60 
 
 ### 6. Set the order quantity
 
-Order quantity = daily speed x (lead time + target days of cover) + safety stock minus (on hand + on order), rounded up to the case pack and the minimum order.
+Draft order quantity = max(0, daily speed x (lead time + target days of cover) + safety stock - inventory position over that horizon), then round positive quantities to the case pack and minimum order. Inventory position subtracts committed units and backorders from sellable on-hand stock and adds only confirmed receipts arriving within the horizon. Reconcile reservation definitions to avoid subtracting the same commitment twice. Build a dated projected-stock timeline too: a later receipt cannot cure an earlier stockout. Apply the cash gate after rounding; expose the unfunded shortfall rather than placing an unaffordable order.
 
 Target days of cover: one practitioner holds 4, 8 or 12 weeks by how volatile the product is and how much cash is free [OPS-0014]. Default: A 8 weeks, B 6, C 4. Fit it to supplier float: when the store pays on terms longer than the lead time, stock is partly funded by the supplier [FIN-0005].
 
@@ -196,3 +196,7 @@ What makes this skill ours: speed is measured only on days the product could sel
 ## Selling in India
 
 Selling in India? Ishita (ishita-india-commerce) owns COD, RTO, quick commerce, Indian marketplaces and GST; hand those parts to her. Domestic suppliers in Tiruppur, Surat or Jaipur can run 7 to 21 days, but add festival-season shutdowns around Diwali and transporter delays; imports add customs clearance and possible BIS or labelling checks. For products sold heavily on COD, a share of units come back as RTO after 7 to 15 days; count returned sellable units as incoming, not as stock on hand.
+
+## Reproducible calculation
+
+Use the shared `tools/commerce-math.mjs` operation `safetyStock and stockPlan` for the supported calculation. Run `node tools/commerce-math.mjs <input.json>` with `{ "operation": "<one operation>", "inputs": { ... } }`; inspect the exported function for exact field names and units. Save inputs and result with the deliverable. Unsupported assumptions or missing inputs remain explicit gaps; never substitute a guessed figure. This tool is arithmetic support, not authority to act.

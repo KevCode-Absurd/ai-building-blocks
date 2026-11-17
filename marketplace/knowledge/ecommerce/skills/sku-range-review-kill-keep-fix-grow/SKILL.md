@@ -62,7 +62,7 @@ For each row:
 - **Demand trend** = units per in-stock day in the last 90 days divided by the 90 days before; for seasonal goods, compare with the same 90 days last year.
 - **Revenue class (A, B, C):** A is the top 80% of revenue, B the next 15%, C the last 5%. Shopify's own grading uses only the last 28 days and ignores cost [COG-6285], so rank on 12 months, then add a second rank on contribution.
 - **Steadiness (X, Y, Z):** coefficient of variation of monthly units over 12 months; X under 10%, Y 10 to 25%, Z over 25%. Move the bands to natural breaks if nearly nothing lands in X [MEA-6398].
-- **Stock age grade:** units on hand divided by units per in-stock day. A sells in under 90 days, B in 90 to 180, C in 180 to 365, D in over a year [COG-6290].
+- **Days-of-supply grade (not stock age):** sellable units on hand divided by units per in-stock day. Measure actual stock age separately from receipt/lot dates; coverage cannot reveal how old a unit is. A sells in under 90 days, B in 90 to 180, C in 180 to 365, D in over a year [COG-6290].
 - **Cash tied up** = units on hand x landed cost, plus open purchase orders at cost.
 - **Repeat pull:** share of buyers whose first order held this SKU and who ordered again within 180 days.
 - **Basket role:** share of this SKU's orders that hold another product.
@@ -183,7 +183,7 @@ Routes, cheapest first: bundle with a grow SKU, offer to past buyers of that SKU
 - MEA-6383: returns raise the real cost of winning a buyer.
 - COG-6285: Shopify's ABC grading uses 28 days and ignores cost.
 - MEA-6398: XYZ steadiness bands.
-- COG-6290: stock age grades A to D.
+- COG-6290: historical grading heuristic; coverage and receipt/lot age must be kept separate.
 - OPS-6650: dying SKUs keep old forecasts.
 - AVT-0005: second jobs can become their own SKUs.
 - PRD-0007: the shopping-list test for a diluting range.

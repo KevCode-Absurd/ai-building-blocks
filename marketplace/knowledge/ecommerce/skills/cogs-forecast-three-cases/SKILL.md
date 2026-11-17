@@ -69,7 +69,7 @@ Outside the US, watch your own currency against the US dollar, not the supplier'
 
 ### 3. Build the base case
 
-For each line: base cost at month h = today's cost x (1 + series change expected by month h minus lag) x pass-through share. For the expected series change use, in order: a contract price or index clause; a published forecast (the World Bank issues price forecasts in April and October); otherwise no change from the latest value. Freight base case = the forwarder's contract rate where one exists; spot index otherwise.
+For each line: base cost at month h = today's cost x (1 + lag-adjusted expected series change x pass-through share). The pass-through multiplies the change, not the whole cost. A 100 cost with no index move stays 100 at every pass-through; a 20% index rise with 25% pass-through gives 105. Show the lag-adjusted change as a decimal in its own field. For the expected series change use, in order: a contract price or index clause; a published forecast (the World Bank issues price forecasts in April and October); otherwise no change from the latest value. Freight base case = the forwarder's contract rate where one exists; spot index otherwise.
 
 ### 4. Build the high and low cases
 
@@ -146,3 +146,7 @@ Each month or quarter, compare the last forecast for each SKU with the invoiced 
 - Web sources: IMF, "Patterns in Invoicing Currency in Global Trade" (https://www.imf.org/-/media/files/publications/wp/2020/english/wpiea2020126-print-pdf.pdf); World Bank, "Commodity Markets" (https://www.worldbank.org/en/research/commodity-markets); Shanghai Futures Exchange market data (https://www.shfe.com.cn/eng/); BLS, "Price Adjustment Guide for Contracting Parties" (https://www.bls.gov/ppi/publications/price-adjustment-guide-for-contracting-parties.htm).
 
 What makes this skill ours: every cost line is tied to a named public series with its measured lag and pass-through, the high and low cases come from each series' own volatility, duty changes are listed by market with a legal source and date, every trigger has a move and an owner, and the forecast is graded against real invoices.
+
+## Reproducible calculation
+
+Use the shared `tools/commerce-math.mjs` operation `forecastInputCost` for the supported calculation. Run `node tools/commerce-math.mjs <input.json>` with `{ "operation": "<one operation>", "inputs": { ... } }`; inspect the exported function for exact field names and units. Save inputs and result with the deliverable. Unsupported assumptions or missing inputs remain explicit gaps; never substitute a guessed figure. This tool is arithmetic support, not authority to act.

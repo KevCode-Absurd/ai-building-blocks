@@ -1,6 +1,6 @@
 // Numbers ledger check: every figure has one basis, totals match their rows, and verdict labels match their numbers.
 // Plain Node 18, no dependencies.
-// Usage: node numbers.cjs context/numbers.json [--final <deliverable>] [--brief <brief>]
+// Usage: node numbers.cjs context/numbers.json [--final <deliverable>] [--brief <brief>] [--financial]
 //
 // The ledger (context/numbers.json) is a list of figures, or { "figures": [...] }. Each figure:
 //   { "id": "reorder_saving", "value": 41000 | "formula": "returns_saved * margin_each",
@@ -21,13 +21,15 @@
 // Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error.
 'use strict';
 const fs = require('fs');
+const path = require('path');
+const {validateFinancialLedger} = require('./financial-ledger.cjs');
 
 const args = process.argv.slice(2);
 const flag = name => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : undefined; };
 const ledgerFile = args.find((a, i) => !a.startsWith('--') && !['--final', '--brief'].includes(args[i - 1]));
 const finalFile = flag('--final');
 const briefFile = flag('--brief');
-const usage = 'Usage: node numbers.cjs context/numbers.json [--final <deliverable>] [--brief <brief>]';
+const usage = 'Usage: node numbers.cjs context/numbers.json [--final <deliverable>] [--brief <brief>] [--financial]';
 if (!ledgerFile) { console.error(usage); process.exit(2); }
 const read = (f, what) => { try { return fs.readFileSync(f, 'utf8'); } catch { console.error(`Cannot read ${what} ${f}`); process.exit(2); } };
 
@@ -37,6 +39,12 @@ catch (e) { console.error(`The ledger is not valid JSON: ${e.message}`); process
 const list = Array.isArray(raw) ? raw : Array.isArray(raw.figures) ? raw.figures : Array.isArray(raw.entries) ? raw.entries
   : Object.entries(raw).map(([id, v]) => ({ id, ...(typeof v === 'object' ? v : { value: v }) }));
 const fails = [], warns = [];
+const financial = args.includes('--financial') || raw.mode === 'financial';
+if (financial) {
+  const checked = validateFinancialLedger(raw, {root:path.dirname(path.resolve(ledgerFile))});
+  fails.push(...checked.errors.map(x => 'financial: ' + x));
+  if (!checked.errors.length) console.log(`Financial snapshot check: ${checked.verified} figures verified. ${checked.limitations}`);
+}
 const figures = new Map();
 list.forEach((f, i) => {
   if (!f || typeof f !== 'object' || !f.id) { fails.push(`ledger entry ${i + 1} has no id`); return; }
@@ -51,7 +59,9 @@ const BASES = [[/^(revenue|sales|net revenue|gross revenue|order value|aov|gmv|t
 const PERIODS = [[/^(day|daily|a day|per day|1 day)$/, 'day'], [/^(week|weekly|a week|per week|7 days?)$/, 'week'], [/^(month|monthly|a month|per month|30 days?)$/, 'month'],
   [/^(quarter|quarterly|90 days?|3 months)$/, 'quarter'], [/^(year|yearly|annual|annually|12 months|365 days?)$/, 'year'], [/^(once|one-off|one off|total|none|n\/a|point in time)$/, null]];
 const basisOf = s => norm(s, BASES);
-const periodOf = s => norm(s, PERIODS);
+const periodOf = s => s && typeof s === 'object' ? JSON.stringify([s.start,s.end,s.timezone]) : norm(s, PERIODS);
+const currencyOf = f => f.currency || (/^[A-Z]{3}(?:\/|$)/.test(f.unit || '') ? f.unit.slice(0,3) : null);
+const dependencies = new Map();
 // Money bases that disagree; plain "profit" is compatible with gross profit and contribution.
 const distinct = set => { const s = new Set([...set].filter(Boolean)); if (s.size > 1) s.delete('profit'); return [...s]; };
 const fmt = n => (Math.abs(n) >= 1000 ? Math.round(n).toLocaleString('en-US') : String(Math.round(n * 100) / 100));
@@ -112,7 +122,7 @@ function valueOf(id, stack = []) {
         let v = Object.prototype.hasOwnProperty.call(inputs, name) ? inputs[name] : name;
         if (v && typeof v === 'object') v = v.value ?? v.id;
         if (typeof v === 'number') return v;
-        if (typeof v === 'string' && figures.has(v)) { const r = valueOf(v, next); if (r === undefined) throw new Error(`input "${v}" has no value`); return r; }
+        if (typeof v === 'string' && figures.has(v)) { if (!dependencies.has(id)) dependencies.set(id,new Set()); dependencies.get(id).add(v); const r = valueOf(v, next); if (r === undefined) throw new Error(`input "${v}" has no value`); return r; }
         if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v)) return Number(v);
         throw new Error(`unknown input "${name}"`);
       };
@@ -136,6 +146,7 @@ function valueOf(id, stack = []) {
     }
   } catch (e) { if (!problems.has(id)) problems.set(id, `"${id}": ${e.message}`); return undefined; }
   if (out === undefined && typeof f.value === 'number') out = f.value;
+  if (out !== undefined && !Number.isFinite(out)) { problems.set(id, `"${id}": finite value required`); return undefined; }
   if (out !== undefined) computed.set(id, out);
   return out;
 }
@@ -165,6 +176,18 @@ for (const [id, f] of figures) {
     const bases = distinct(new Set(rows.map(r => basisOf(r.basis))));
     if (periods.length > 1) fails.push(`"${id}": adds rows from two periods (${periods.join(', ')}); convert them to one period first`);
     if (bases.length > 1) fails.push(`"${id}": adds rows on two money bases (${bases.join(', ')}); use one basis`);
+  }
+  const dependencyIds = [...new Set([...(f.rows || []), ...(dependencies.get(id) || [])])];
+  if (dependencyIds.length) {
+    const parents = dependencyIds.map(x=>figures.get(String(x))).filter(Boolean);
+    const currencies = new Set([f,...parents].map(currencyOf).filter(Boolean));
+    if (currencies.size > 1) fails.push(`"${id}": mixes currencies (${[...currencies].join(', ')}); normalize with a dated FX source first`);
+    const periods = new Set([f,...parents].map(x=>periodOf(x.period)).filter(Boolean));
+    if (f.formula && periods.size > 1) fails.push(`"${id}": formula mixes periods; align source windows first`);
+    if (Array.isArray(f.rows)) {
+      const units = new Set([f,...parents].map(x=>x.unit).filter(Boolean));
+      if (units.size > 1) fails.push(`"${id}": sum mixes units (${[...units].join(', ')})`);
+    }
   }
   if (f.label && v !== undefined) {
     const before = f.before ?? f.from ?? f.current;
@@ -235,13 +258,42 @@ const periodsInText = s => {
 };
 const BASIS_TEXT = [[/\b(?:revenue|sales|order value|aov|gmv|turnover)\b/i, 'revenue'], [/\bgross (?:profit|margin)\b/i, 'gross profit'], [/\bcontribution\b/i, 'contribution']];
 const basesInText = s => { const out = new Set(); for (const [re, b] of BASIS_TEXT) if (re.test(s)) out.add(b); return out; };
+// Numeric equality alone cannot bind a count to a percentage or money amount.
+// These are conservative metadata hints, not source/metric identity verification.
+const unitKind = f => {
+  const unit = String(f.unit || '').trim();
+  if (/^(%|pct|percent|percentage)$/i.test(unit)) return 'pct';
+  if (/^[A-Z]{3}(?:\/|$)/.test(unit) || /^(money|money_per_order|currency)$/i.test(unit) || f.currency) return 'money';
+  return unit && !/^(ratio|rate|percentage[ _-]?points?|pp)$/i.test(unit) ? 'count' : undefined;
+};
+const ambiguousMetadata = new Set();
 const ledgerBasis = fig => {
   if (Math.abs(fig.value) < 10 && fig.kind !== 'pct') return {};
-  const hits = [...figures].filter(([id]) => computed.has(id) && matches(fig, computed.get(id))).map(([, f]) => f);
-  const bases = new Set(hits.map(f => (f.basis ? String(f.basis).toLowerCase().trim() : null)).filter(Boolean));
-  const periods = new Set(hits.map(f => periodOf(f.period)).filter(Boolean));
-  return { basis: bases.size === 1 ? [...bases][0] : undefined, period: periods.size === 1 ? [...periods][0] : undefined };
+  const numericHits = [...figures].filter(([id]) => computed.has(id) && matches(fig, computed.get(id))).map(([, f]) => f);
+  if (numericHits.some(f => !unitKind(f) && (f.period || f.basis))) {
+    const key = `unit:${fig.kind}:${fig.value}`;
+    if (!ambiguousMetadata.has(key)) {
+      ambiguousMetadata.add(key);
+      warns.push(`table figure ${fig.raw}: value-matching ledger metadata has a missing or unsupported unit; period/basis association is unknown, not verified`);
+    }
+    return {};
+  }
+  const hits = numericHits.filter(f => unitKind(f) === fig.kind);
+  if (hits.length > 1) {
+    const key = `${fig.kind}:${fig.value}`;
+    if (!ambiguousMetadata.has(key)) {
+      ambiguousMetadata.add(key);
+      warns.push(`table figure ${fig.raw}: multiple compatible ledger figures share this value; period/basis association is unknown, not verified`);
+    }
+    return {};
+  }
+  if (!hits.length) return {};
+  const f = hits[0];
+  return { basis: f.basis ? String(f.basis).toLowerCase().trim() : undefined, period: periodOf(f.period) || undefined };
 };
+// An absolute source/cohort window and a metric duration (e.g. repeat within 14 days)
+// are different dimensions. Do not label them contradictory merely for co-occurring.
+const datedPeriod = p => /^\d{4}-\d{2}-\d{2}\b/.test(p) || /^\["\d{4}-\d{2}-\d{2}/.test(p);
 
 function checkTable(rows, startLine) {
   const [head, ...body] = rows;
@@ -249,23 +301,38 @@ function checkTable(rows, startLine) {
   const width = head.length;
   const rowWise = head[0] === '' || /^(measure|metric|kpi)s?$/i.test(head[0]);
   const isTotal = r => /^\W*(grand\s+)?total\b/i.test(r[0] || '');
+  const comparison = rowWise && head.some(h => /\b(earlier|before|previous|prior|baseline)\b/i.test(h)) && head.some(h => /\b(later|after|current|follow[ -]?up)\b/i.test(h));
   // One measure per column (or per row, when rows are the measures): one period and one money basis.
   const lanes = rowWise
     ? body.map(r => ({ name: `row "${r[0]}"`, title: r[0], cells: r.slice(1) }))
     : head.slice(1).map((h, c) => ({ name: `column "${h}"`, title: h, cells: body.map(r => r[c + 1] ?? '') }));
   for (const lane of lanes) {
-    const periods = new Set(), bases = new Set(), ledgerBases = new Set();
-    for (const p of periodsInText(lane.title)) periods.add(p);
+    const bases = new Set(), ledgerBases = new Set(), comparisonDurations = new Set();
+    let durationConflict = false;
+    const groups = comparison ? lane.cells.map((cell, i) => ({name: `${lane.name}, column "${head[i + 1]}"`, title: `${lane.title} ${head[i + 1]}`, cells: [cell]})) : [{...lane}];
     for (const b of basesInText(lane.title)) bases.add(b);
-    for (const cell of lane.cells) {
-      const figs = figuresIn(cell);
-      if (!figs.length) continue;
-      for (const p of periodsInText(cell)) periods.add(p);
-      for (const b of basesInText(cell)) bases.add(b);
-      for (const f of figs) { const lb = ledgerBasis(f); if (lb.basis) ledgerBases.add(lb.basis); if (lb.period) periods.add(lb.period); }
+    for (const group of groups) {
+      const periods = new Set(periodsInText(group.title));
+      for (const cell of group.cells) {
+        const figs = figuresIn(cell);
+        if (!figs.length) continue;
+        for (const p of periodsInText(cell)) periods.add(p);
+        for (const b of basesInText(cell)) bases.add(b);
+        for (const f of figs) { const lb = ledgerBasis(f); if (lb.basis) ledgerBases.add(lb.basis); if (lb.period) periods.add(lb.period); }
+      }
+      const dated = distinct(new Set([...periods].filter(datedPeriod)));
+      const durations = distinct(new Set([...periods].filter(p => !datedPeriod(p))));
+      for (const p of durations) comparisonDurations.add(p);
+      if (durations.length > 1) durationConflict = true;
+      // Comparisons intentionally separate earlier/later columns. Within a cell,
+      // contradictory reporting periods still fail, as do ordinary mixed columns.
+      for (const p of [durations, dated]) if (p.length > 1) fails.push(`${where}, ${group.name}: mixes two periods (${p.join(', ')}); give one period per column`);
+      if (dated.length && durations.length) warns.push(`${where}, ${group.name}: a metric duration/reporting rate and an absolute source window coexist; their relationship needs review, not an inferred period mismatch`);
     }
-    const p = distinct(periods), b = distinct(new Set([...bases, ...[...ledgerBases].map(x => basisOf(x) ?? x)]));
-    if (p.length > 1) fails.push(`${where}, ${lane.name}: mixes two periods (${p.join(', ')}); give one period per column`);
+    // Different calendar/cohort windows belong in before/after columns, but a
+    // monthly amount and a daily amount are not a like-for-like comparison.
+    if (comparison && !durationConflict && comparisonDurations.size > 1) fails.push(`${where}, ${lane.name}: comparison mixes reporting periods (${[...comparisonDurations].join(', ')}); normalize the before/after values to one reporting period`);
+    const b = distinct(new Set([...bases, ...[...ledgerBases].map(x => basisOf(x) ?? x)]));
     if (b.length > 1) fails.push(`${where}, ${lane.name}: mixes two money bases (${b.join(', ')}); give one basis per column`);
   }
   if (rowWise) return;

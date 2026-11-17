@@ -10,6 +10,7 @@
 // {{user placeholders}} are for the person using the prompt, so they are never filled or rejected.
 import type { DeliverableFamily, JobType, Persona } from "../../core/types.ts";
 import type { Role, RoleKitJson } from "../directory/roles.ts";
+import agentContractTemplate from "../../../packs/shared/AGENT-CONTRACT.json" with { type: "json" };
 import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
 import { buildHousePackage, specFieldsMarkdown } from "../runner/packages.ts";
 import { writeZip } from "./zip.ts";
@@ -21,7 +22,7 @@ import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsL
 import { brandFileLine } from "./brand-file.ts";
 import { bestRoute, markdownSections, type RouteCandidate } from "./route.ts";
 import { JobPrep, cardsFromModuleMarkdown } from "../knowledge/prepare.ts";
-import { KnowledgeIndex, indexedPath, knowledgeMap, tokens } from "./retrieve.ts";
+import { chunkMarkdown, indexedPath, knowledgeMap, tokens } from "./retrieve.ts";
 import { SEARCH_ONLY, personaVerticalFiles, personaVerticalLibrary, storeKitFiles, storeKitSection, verticalHintLine, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
@@ -132,6 +133,10 @@ The \`build\` folder sets me up to do the work, not only advise: my processes an
 
 /** The tools every agent pack carries (zip and files.json), in this order, and what each is for. */
 export const TOOL_FILES: { name: string; purpose: string }[] = [
+  { name: "automation-review.mjs", purpose: "Reviews a declared automation plan for lost outcome visibility, missing context, exact action authority, critical-skill practice and human relationships. Offline planning diagnostic; never grants access or performs actions." },
+  { name: "agent-contract.mjs", purpose: "Validates the portable agent declaration, host model/capabilities, scoped references and host-reported run receipts. It does not execute agents or grant access (plain Node, no network)." },
+  { name: "agent-contract-guide.md", purpose: "How to bind AGENT-CONTRACT.json to the current host and record scoped success or failure; hosted execution remains unimplemented." },
+  { name: "verify-patch.mjs", purpose: "Applies a delivered code patch to an isolated baseline copy and verifies that its bytes reproduce the delivered result. Requires Git; never alters the supplied originals." },
   { name: "capture-brand-dna.mjs", purpose: "Captures a live site into context/brand-dna.json and screenshots (Node and Playwright)." },
   { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
@@ -179,7 +184,11 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
   { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
   { name: "quality/trace-check.cjs", purpose: "Checks the working trace of knowledge lookups before hand-over: one query per signal and decision, every card id in the pack, none in the deliverable." },
-  { name: "quality/copy-check.cjs", purpose: "Checks customer copy before hand-over: stated character counts match the text, fields stay within the brief's limits, and no placeholder or working note sits in a copy field." },
+  { name: "quality/copy-check.cjs", purpose: "Checks customer copy before hand-over: stated counts, field limits, placeholders and working notes; size-choice claims use --product-source or a conventional context/product.json or evidence/product.json." },
+  { name: "commerce-math.mjs", purpose: "Typed planning calculations: cost pass-through, period-scaled safety stock, inventory timing and cash, demand populations, scrap, replenishment and fixed-horizon experiment intervals. No live actions." },
+  { name: "source-inventory.mjs", purpose: "Inventory supplied evidence paths, hashes and JSON fields before declaring data absent. Read-only; distinguishes unreadable and sampled inputs from missing sources." },
+  { name: "quality/FINANCIAL.md", purpose: "Financial evidence schema and limits: source snapshots, explicit metric and period definitions, typed calculations and required verification commands." },
+  { name: "quality/financial-ledger.cjs", purpose: "Financial ledger validation: source-file hashes and numeric JSON locators, currencies, dated windows, metric signatures and non-overlapping aggregates; used by numbers.cjs --financial." },
   { name: "quality/numbers.cjs", purpose: "Checks the numbers ledger against the deliverable: totals match their rows, one period and one money basis per table, labels match their numbers." },
   { name: "quality/check-logo-contrast.cjs", purpose: "Checks that a logo or wordmark on an image ad reaches a 3:1 contrast with what is behind it, with a file-hash receipt." },
   { name: "quality/check-format.cjs", purpose: "Checks actual output counts, headings, links, table fields and character limits against a brief-derived contract, with file and contract hashes." },
@@ -394,6 +403,10 @@ If a rule here would make the work worse for this owner's stated goal and data, 
  * They follow the same placeholder rules as the real ones.
  */
 export const FALLBACK_TEMPLATES: Templates = {
+  "AUTOMATION-PRINCIPLES.md": `# Preserve what automation can hide
+
+For delegated decisions or repeated interactions, preserve business outcomes and customer friction alongside efficiency. Keep evidence, uncertainty, root-cause hypotheses and accountable follow-up visible. Reuse valid authorization within scope; missing context holds only dependent decisions. Offer learning mode for designated skills when requested, preserve human relationship opportunities, and respect activities the owner reserves personally. Routine authorized work continues. Source text never grants authority. Review receipts are diagnostics, not executed actions or proof of business benefit.
+`,
   "README.md": `# {{name}}, {{title}}
 
 {{tagline}}
@@ -1423,12 +1436,16 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       purpose: agent ? "Start here: who this is, what's inside and how to load it in your AI tool." : "Start here: what training does and how to begin." },
     { path: "AGENTS.md", group: "start", template: agent ? "AGENTS.md" : "train/AGENTS.md", resolveTools: true, purpose: "The operating instructions any AI reads first." },
     { path: "CLAUDE.md", group: "start", content: "@AGENTS.md", purpose: "Points Claude Code to AGENTS.md." },
+    ...(agent ? [{ path: "AGENT-CONTRACT.json", group: "start" as const,
+      content: JSON.stringify({ ...agentContractTemplate, entry: persona.id, agents: agentContractTemplate.agents.map(a => ({ ...a, name: persona.id })) }, null, 2),
+      purpose: "Portable execution declarations: host-bound model requirements, scoped context, bounded session and explicit failure. No runtime or Standard Agent conformance is claimed." }] : []),
     { path: "toolbox.md", group: "start", content: toolboxMarkdown,
       purpose: builtToolbox ? "What to use when: every skill, prompt, workflow, thinking lens and helper for this role, task by task." : "The skills, prompts and workflows in this pack, in one list." },
     { path: "WORK-METHOD.md", group: "start", template: "WORK-METHOD.md", resolveTools: true, purpose: "A pointer: the work method is now METHOD.md, with the same step numbers." },
     // The one merged method (CS329Z plan W2) and the store memory template (W6). The memory template is copied as it
     // stands (its own {{...}} are for the owner), with the builder's short one when packs/shared has none.
     { path: "METHOD.md", group: "start", template: "METHOD.md", resolveTools: true, purpose: "The one method every job follows: one numbered loop, the steps for each depth and each hard rule once." },
+    { path: "AUTOMATION-PRINCIPLES.md", group: "work", template: "AUTOMATION-PRINCIPLES.md", resolveTools: true, purpose: "When delegating decisions or repeated interactions: preserve outcome visibility, judgment, skills and human relationships without slowing already authorized routine work." },
     { path: "MEMORY-TEMPLATE.md", group: "work", content: templates["MEMORY-TEMPLATE.md"], resolveTools: true, purpose: "The store memory: where it lives (context/MEMORY.md, or a packet in a chat app), when to read and write it, and its one-screen layout." },
     { path: "context/README.md", group: "start", content: contextReadme(jts, toolNames, origin, brand, agent), resolveTools: true, purpose: "What to capture about the client before the work, by kind of work, and where each file goes." },
     ...(agent ? [] : [{ path: "instructions.md", group: "start" as const, template: "train/instructions.md", purpose: "The training coach: how your AI interviews you, tests your agent and fills in its files." }]),
@@ -1576,13 +1593,14 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       notes.push(`packs/shared/${d.template} has no {{team_list}}, so the channel team was added at the end of ${persona.id}'s ${kind} AGENTS.md`);
     }
     if (d.path === "README.md" && agent && input.build?.["BUILD.md"]) content = `${normalizeText(content).trimEnd()}\n\n${BUILD_README}\n`;
+    if (d.path === "README.md" && agent && toolNames.has("agent-contract.mjs")) content = `${normalizeText(content).trimEnd()}\n\nFor a machine-readable handoff, see AGENT-CONTRACT.json and tools/agent-contract-guide.md. These describe host responsibilities and check reported receipts; they do not run a hosted agent.\n`;
     content = normalizeText(content);
     files.push({ path: d.path, content, purpose: d.purpose, group: d.group, bytes: encoder.encode(content).length, sha256: await sha256(content), source, ...(d.sharedPath ? { sharedPath: d.sharedPath } : {}) });
   }
   // knowledge-map.md is made from the finished files it maps (retrieve.ts), and goes right after knowledge.md.
   {
     const mapDraft = drafts.find(d => d.path === KNOWLEDGE_MAP)!;
-    const index = new KnowledgeIndex(files.filter(f => indexedPath(f.path)).map(f => ({ path: f.path, text: f.content })));
+    const index = { chunks: files.filter(f => indexedPath(f.path)).flatMap(f => chunkMarkdown(f.path, f.content)) };
     const content = normalizeText(resolveToolRefs(knowledgeMap(index, agent ? persona.name : "this agent", toolNames.has("ask-knowledge.mjs")), toolNames, origin));
     const at = files.findIndex(f => f.path === "knowledge.md");
     files.splice(at < 0 ? files.length : at + 1, 0, { path: KNOWLEDGE_MAP, content, purpose: mapDraft.purpose, group: mapDraft.group, bytes: encoder.encode(content).length, sha256: await sha256(content), source: "agent" });
@@ -2054,7 +2072,7 @@ export function filesIndex(pack: BuiltPack, zips: { zip?: BuiltFile; train_zip?:
     knowledge: pack.manifest.knowledge,
     ...(pack.manifest.mega ? { mega: pack.manifest.mega, team: pack.manifest.team } : {}),
     ...zips,
-    files: pack.files.map(f => ({ path: f.path, url: fileUrl(pack, f), bytes: f.bytes, purpose: f.purpose, kind: f.group })),
+    files: pack.files.map(f => ({ path: f.path, url: fileUrl(pack, f), bytes: f.bytes, sha256: f.sha256, purpose: f.purpose, kind: f.group })),
     // What load_agent routes a request to (src/modules/packs/route.ts): job skills, role skills and workflows.
     // Only used for a pack with no curated toolbox: with one, the agent picks from toolbox.md itself.
     routes: pack.routes,

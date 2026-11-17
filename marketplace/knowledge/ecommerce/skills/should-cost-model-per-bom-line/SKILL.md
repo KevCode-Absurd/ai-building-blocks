@@ -49,7 +49,7 @@ List every line with its quoted or estimated cost and sort high to low. A few li
 
 ### 2. Gross up each material quantity for scrap
 
-Required quantity x (1 + scrap rate). 100 pieces at 10% component scrap means costing 110. Scrap compounds across levels: 10% assembly scrap then 10% component scrap on 200 units needs 242 components, not 240. Do not load assembly scrap onto parts fitted after faulty units are pulled out; in one example 1,000 units at 10% assembly scrap needed 1,100 of an early part but only 1,010 of a late part. Take scrap rates from the factory or past invoices; if none, write "assumed" beside the rate.
+Require the scrap denominator before calculating. For a net allowance expressed as a markup on desired good units, use good units x (1 + allowance). For a measured loss fraction of input, use good units / (1 - loss fraction): 100 good units with 10% of input lost requires 111.11 input units before unit rounding. Apply each stage on its declared basis; two 10% input-loss stages need 200 / 0.9 / 0.9 = 246.91 inputs, whereas two 10% net allowances give 242. Never silently interpret one convention as the other. Do not load assembly scrap onto parts fitted after faulty units are pulled out; in one example 1,000 units at 10% assembly scrap needed 1,100 of an early part but only 1,010 of a late part. Take scrap rates from the factory or past invoices; if none, write "assumed" beside the rate.
 
 ### 3. Price each material from a named series, with its date
 
@@ -143,3 +143,7 @@ Every price change gets a date, a source and a version number. Hand a dated COGS
 - QualityInspection.org, When a Chinese Factory Quote Is Too Low: https://qualityinspection.org/when-a-chinese-factory-quote-is-too-low-the-hidden-risks-for-buyers/
 
 What makes this skill ours: lines are ranked before they are priced; every material price names the market the factory really buys in, with a date; scrap compounds by level; conversion is built the factory's way (press time or sewing minutes); a quote below should-cost is read as a risk; and each gap becomes one exact question for the negotiator.
+
+## Reproducible calculation
+
+Use the shared `tools/commerce-math.mjs` operation `materialInput` for the supported calculation. Run `node tools/commerce-math.mjs <input.json>` with `{ "operation": "<one operation>", "inputs": { ... } }`; inspect the exported function for exact field names and units. Save inputs and result with the deliverable. Unsupported assumptions or missing inputs remain explicit gaps; never substitute a guessed figure. This tool is arithmetic support, not authority to act.

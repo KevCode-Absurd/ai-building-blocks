@@ -142,7 +142,7 @@ export interface CardQuery {
   today?: string;
 }
 export interface CardHit { card: Card; source: Source | null; score: number; stale: boolean; matched: string[] }
-export interface CardAnswer { question: string; hits: CardHit[]; coverage: number; enough: boolean; missing: string[] }
+export interface CardAnswer { question: string; hits: CardHit[]; coverage: number; enough: boolean; missing: string[]; evidence_scope: "reference_knowledge"; business_data_ready: false }
 
 /**
  * Tier prior on the fused rank score: a tie-breaker toward better sources, not an override of relevance. On the
@@ -202,6 +202,7 @@ export class CardIndex {
     const k = Math.max(1, Math.min(10, q.k ?? 6));
     const answer = this.index.ask(questions, {
       k,
+      uniquePath: true,
       adjust: (chunk: Chunk, score: number) => {
         const card = this.byPath.get(chunk.path);
         if (!card || !this.fits(card, q)) return null;
@@ -219,7 +220,7 @@ export class CardIndex {
     }
     const wild = (h: CardHit) => this.modules.get(h.card.modules[0])?.never_outranks_baseline === true;
     if (hits.some(h => h.card.scope === "baseline")) hits = [...hits.filter(h => !wild(h)), ...hits.filter(wild)];
-    return { question: answer.question, hits, coverage: answer.coverage, enough: answer.enough && hits.length > 0, missing: answer.missing };
+    return { question: answer.question, hits, coverage: answer.coverage, enough: answer.enough && hits.length > 0, missing: answer.missing, evidence_scope: "reference_knowledge", business_data_ready: false };
   }
 
   /** Cards per module, for pages and pack builders. */
@@ -234,7 +235,7 @@ export class CardIndex {
 export function cardAnswerText(a: CardAnswer, verticalName: string): string {
   if (!a.hits.length) return `The ${verticalName} library has no card on this. Say so, then ask the client or research it, and never answer from memory as if it were the library's.`;
   const head = a.enough
-    ? `${a.hits.length} card${a.hits.length === 1 ? "" : "s"} from the ${verticalName} library, best first. Use only what they say, check each card's "Holds when" against this business, and name the card id when you use it.`
+    ? `${a.hits.length} card${a.hits.length === 1 ? "" : "s"} from the ${verticalName} library, best first. Use only what they say, check each card's "Holds when" against this business, and name the card id when you use it. These are reference methods, not this business's current facts or account data; enough measures retrieval relevance only.`
     : `Weak match: the best card covers ${Math.round(a.coverage * 100)}% of the question${a.missing.length ? ` (nothing on: ${a.missing.slice(0, 8).join(", ")})` : ""}. Treat it as not in the library: ask the client or research it, and say which.`;
   return [head, ...a.hits.map((h, i) => `--- ${i + 1}. ${h.card.id} (${h.card.modules.join(", ")})${h.stale ? " STALE: past its review window, recheck before use" : ""} ---\n${cardMarkdown(h.card, h.source ?? undefined)}`)].join("\n\n");
 }

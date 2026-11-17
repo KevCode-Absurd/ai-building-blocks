@@ -26,7 +26,7 @@ const money = "(?:₹|rs\\.?|inr|\\$|£|€)\\s?([\\d,]+(?:\\.\\d+)?)";
 export function findOffers(text) {
   const t = String(text || "").replace(/\s+/g, " ");
   const found = [];
-  const add = (m, pct, kind) => found.push({ text: m.trim(), pct: pct == null ? null : Math.round(pct), kind });
+  const add = (m, pct, kind) => found.push({ text: m.trim(), pct: pct == null ? null : pct, kind });
   let m;
   // Buy N get M free / Buy N get the (N+1)th free / BOGO.
   const bng = /\bbuy\s+(\d+|one|two|three|four|five|an?)\b[\s,&+-]*(?:and\s+)?get\s+(?:the\s+)?(?:(\d+|one|two|three|a|an)\s+(?:more\s+)?(?:free|at\s+no\s+cost)|(\d+(?:st|nd|rd|th)|second|third|fourth|fifth)\s+(?:\w+\s+)?free)/gi;
@@ -39,7 +39,7 @@ export function findOffers(text) {
   for (const re of [/\bbogo\b/gi, /\bbuy\s+1\s*get\s*1\b/gi, /\b(?:buy\s+one,?\s+get\s+one)\b(?!\s+(?:\d+|half)\s*%)/gi])
     while ((m = re.exec(t))) if (!found.some(f => f.text.toLowerCase().includes(m[0].toLowerCase()))) add(m[0], 50, "buy-get-free");
   // Percent off.
-  const pct = /\b(?:(?:up\s*to|upto|flat|extra|save|get)\s+)?(\d{1,2}(?:\.\d+)?)\s?%\s?(?:off|discount)\b|\b(?:save|discount of)\s+(\d{1,2}(?:\.\d+)?)\s?%/gi;
+  const pct = /\b(?:(?:up\s*to|upto|flat|extra|save|get)\s+)?(\d+(?:\.\d+)?)\s?%\s?(?:off|discount)\b|\b(?:save|discount of)\s+(\d+(?:\.\d+)?)\s?%/gi;
   while ((m = pct.exec(t))) add(m[0], Number(m[1] ?? m[2]), "percent-off");
   // Money off on a minimum order.
   const MIN = `(?:on|over|above|with|for)\\b[^.;|₹$£€]{0,25}?${money}`;
@@ -56,7 +56,31 @@ export function findOffers(text) {
     const worth = n(m[2] ?? w?.[1]), min = n(m[3]);
     add(m[0], worth > 0 && min > 0 ? (100 * worth) / min : null, "gift");
   }
+  const percents = found.filter(o=>o.kind === "percent-off");
+  if (percents.length > 1 && /\b(?:plus|stack(?:ed|ing)?|both savings apply|additional|extra)\b/i.test(t)) {
+    // Prose cannot establish basket eligibility or exclusions. Do not approve separate
+    // discounts as if that proved the combined offer stayed within the limit.
+    found.push({text:"Combined discounts need basket-level verification",pct:null,kind:"unresolved-stacking"});
+  }
   return found;
+}
+
+// Arithmetic for an explicitly defined, single-currency basket. This validates the
+// stated rules only; a source adapter/owner must verify eligibility and reference price.
+export function evaluateOffer({referenceSubtotal,discounts,currency,limit,variableCosts,contributionFloor=0}) {
+  if (!Number.isFinite(referenceSubtotal) || referenceSubtotal <= 0 || !/^[A-Z]{3}$/.test(currency || "") || !Array.isArray(discounts) || !Number.isFinite(limit) || limit<0 || limit>100) throw Error("Valid basket subtotal, currency, discounts and percent limit required");
+  if (!Number.isFinite(variableCosts) || variableCosts<0 || !Number.isFinite(contributionFloor)) throw Error("Variable costs and contribution floor required");
+  let payable=referenceSubtotal;
+  for(const rule of discounts) {
+    if (rule.currency && rule.currency!==currency) throw Error("Mixed-currency discount");
+    if (!Number.isFinite(rule.value) || rule.value<0 || rule.eligible!==true) throw Error("Each discount needs a nonnegative value and verified eligibility");
+    if(rule.type==="percent" && rule.value<=100) payable*=1-rule.value/100;
+    else if(rule.type==="fixed" && rule.value<=payable) payable-=rule.value;
+    else throw Error("Invalid discount type/value or fixed discount exceeds payable subtotal");
+  }
+  const effectivePercent=100*(referenceSubtotal-payable)/referenceSubtotal;
+  const contribution=payable-variableCosts;
+  return {payable,effectivePercent,contribution,ok:effectivePercent<=limit+1e-10 && contribution>=contributionFloor,authority:"arithmetic_only",limitations:"Reference price, eligibility, shipping/tax treatment and actual platform rules require external verification; this is not publish authorization."};
 }
 
 const isHtml = f => /\.html?$/i.test(f);
@@ -71,15 +95,23 @@ const files = p => {
 // Judge offers against a limit: a number (percent), or null when the owner has not given one.
 export function judgeOffers(offers, limit) {
   const out = [];
+  if (limit != null && (!Number.isFinite(limit) || limit < 0 || limit > 100)) throw Error("Offer limit must be between 0 and 100");
   for (const o of offers) {
+    if (o.kind === "unresolved-stacking") {
+      out.push({level:"FAIL",o,msg:"Multiple discounts may stack; individual percentages do not verify the combined basket.",fix:"Calculate all eligible rules on the same basket with evaluateOffer before approval."});
+      continue;
+    }
+    if (o.pct != null && (!Number.isFinite(o.pct) || o.pct < 0 || o.pct > 100)) {
+      out.push({level:"FAIL",o,msg:"Invalid effective discount percentage."}); continue;
+    }
     if (o.pct == null) {
       const what = o.kind === "gift" ? "the gift's worth or the order it needs is" : "the order it needs is";
       out.push({ level: "WARN", o, msg: `"${o.text}": ${what} not stated, so its effective discount is unknown.`, fix: "Work out what it costs against the order it needs, and keep it within the owner's limit." });
       continue;
     }
-    if (limit != null && o.pct > limit) out.push({ level: "FAIL", o, msg: `"${o.text}" is ${o.pct}% off in effect, past the owner's ${limit}% limit.`, fix: "Take it out of the copy; offer it in the plan as an option that needs their yes." });
-    else if (limit == null && o.pct > DEEP) out.push({ level: "FAIL", o, msg: `"${o.text}" is ${o.pct}% off in effect: a deep offer while the owner's limit is unknown.`, fix: "Keep it out of the copy until they give a limit; put it in the plan as an option that needs their yes, and ask the most money off they allow." });
-    else out.push({ level: "OK", o, msg: `"${o.text}" is ${o.pct}% off in effect${limit != null ? `, within ${limit}%` : ""}.` });
+    if (limit != null && o.pct > limit) out.push({ level: "FAIL", o, msg: `"${o.text}" is ${Number(o.pct.toFixed(4))}% off in effect, past the owner's ${limit}% limit.`, fix: "Take it out of the copy; offer it in the plan as an option that needs their yes." });
+    else if (limit == null && o.pct > DEEP) out.push({ level: "FAIL", o, msg: `"${o.text}" is ${Number(o.pct.toFixed(4))}% off in effect: a deep offer while the owner's limit is unknown.`, fix: "Keep it out of the copy until they give a limit; put it in the plan as an option that needs their yes, and ask the most money off they allow." });
+    else out.push({ level: "OK", o, msg: `"${o.text}" is ${Number(o.pct.toFixed(4))}% off in effect${limit != null ? `, within ${limit}%` : ""}.` });
   }
   return out;
 }
@@ -90,7 +122,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   const rawLimit = li >= 0 ? args[li + 1] : undefined;
   const targets = args.filter((a, i) => !a.startsWith("--") && !(li >= 0 && i === li + 1));
   if (!targets.length) { console.log("Usage: node tools/check-offers.mjs --limit <percent|unknown> <file|folder>..."); process.exit(2); }
-  if (li >= 0 && (!rawLimit || (rawLimit !== "unknown" && !Number.isFinite(Number(rawLimit))))) { console.error("--limit needs a percent or the word unknown."); process.exit(2); }
+  if (li >= 0 && (!rawLimit || (rawLimit !== "unknown" && (!Number.isFinite(Number(rawLimit)) || Number(rawLimit)<0 || Number(rawLimit)>100)))) { console.error("--limit needs a percent or the word unknown."); process.exit(2); }
   const limit = rawLimit == null || rawLimit === "unknown" ? null : Number(rawLimit);
   const res = [];
   if (li < 0) res.push({ level: "WARN", msg: "No --limit given: judged as if the owner's limit were unknown.", fix: "Ask the most money off they allow, then pass --limit <percent>." });

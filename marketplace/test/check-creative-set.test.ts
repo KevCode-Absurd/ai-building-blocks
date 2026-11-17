@@ -23,6 +23,25 @@ function png(w: number, h: number, px: (x: number, y: number) => [number, number
   return Buffer.concat([Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]), chunk("IHDR", ihdr), chunk("IDAT", zlib.deflateSync(raw)), chunk("IEND", Buffer.alloc(0))]);
 }
 const S = 120;
+test("an empty or SVG-only folder never passes raster verification", async () => {
+  const m = await load(tool);
+  const dir = mkdtempSync(path.join(tmpdir(), "cset-empty-"));
+  writeFileSync(path.join(dir, "concept.svg"), '<svg xmlns="http://www.w3.org/2000/svg"/>');
+  const r = m.checkSet(dir);
+  assert.equal(r.ok, false);
+  assert.equal(r.status, "NOT_RUN");
+  assert.deepEqual(r.coverage, { found: 0, pixels_read: 0 });
+  assert.match(m.reportText(r), /NOT_RUN/);
+});
+test("unreadable pixels cannot establish a visual pass", async () => {
+  const m = await load(tool);
+  const dir = mkdtempSync(path.join(tmpdir(), "cset-corrupt-"));
+  writeFileSync(path.join(dir, "broken.png"), 'not image data');
+  const r = m.checkSet(dir, { buttons: false, type: false });
+  assert.equal(r.ok, false);
+  assert.equal(r.coverage.pixels_read, 0);
+  assert.ok(r.per[0].fails.some((x: string) => /pixels not read/.test(x)));
+});
 // Four templates. The "photo" inside each is a soft gradient whose colour changes per creative.
 const tint = (k: number): [number, number, number] => [60 + ((k * 53) % 150), 70 + ((k * 31) % 140), 80 + ((k * 71) % 120)];
 const T: Record<string, (k: number) => (x: number, y: number) => [number, number, number]> = {
@@ -109,7 +128,7 @@ test("absolute claims need a source; everyday words do not", async () => {
   const m = await load(tool);
   assert.match(m.claimIssues({ headline: "Every stone we set is natural." }).fails[0], /absolute claim \("Every stone"\)/);
   assert.match(m.claimIssues({ body: "Every Gehna piece has all three." }).fails[0], /"Every Gehna piece"/);
-  assert.deepEqual(m.claimIssues({ headline: "Every stone we set is natural.", claim_source: "FAQ: all gemstones natural; lab-grown line is diamonds only" }).fails, []);
+  assert.ok(m.claimIssues({ headline: "Every stone we set is natural.", claim_source: "FAQ: all gemstones natural; lab-grown line is diamonds only" }).fails.length, "arbitrary manifest prose cannot approve a claim");
   assert.deepEqual(m.claimIssues({ headline: "Light gold for every day.", body: "All three checks, before you pay." }).fails, []);
   assert.match(m.claimIssues({ headline: "A snowflake that never melts." }).notes[0], /"never"/);
 });

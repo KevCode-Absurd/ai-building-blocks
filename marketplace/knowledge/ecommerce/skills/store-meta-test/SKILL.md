@@ -106,7 +106,7 @@ Expected value = chance of winning x lift x gross profit per purchase x purchase
 ### 7. Read it and log it
 
 - **Win:** the primary metric wins at the planned confidence, and the Shopify check points the same way. Roll it out at level 3 with the owner's yes.
-- **Inconclusive at full size:** the real effect is smaller than your lift. Stop and keep the cheaper or simpler option [CRO-0015].
+- **Inconclusive at full size:** the interval crosses zero; it may still include the target lift. Report the estimate, interval and practical threshold. Stop as planned. Keeping the cheaper or simpler option is an operational choice, not proof that the effect is small.
 - **Lose:** log it. Most tests lose; a 30 to 35% win rate is very good [CRO-0020].
 - Log every test: date, hypothesis, cells, purchases per cell, result, decision, what we learned.
 

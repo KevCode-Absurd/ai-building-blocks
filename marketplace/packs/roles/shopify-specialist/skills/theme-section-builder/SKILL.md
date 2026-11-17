@@ -9,6 +9,10 @@ The owner wants one change. This skill delivers it as the smallest, most editabl
 
 Access levels for this skill: level 1 (read) to plan and write the code for the owner to paste; level 2 (read and draft) to build it myself on an unpublished duplicate; level 3 (read, write and publish) to publish it within the owner's limits.
 
+## Verifiable patch handoff
+
+Keep byte-exact `output/before/` and `output/after/` trees, using the same theme-relative paths and including added assets in the after tree. Generate the patch with `node tools/verify-patch.mjs --create output/change.patch output/before output/after`. This preserves missing final newlines and verifies the applied result. Never hand-assemble a diff or treat browser checks as proof that a patch applies. Run the main `tools/quality/qe-check.cjs` against the final handoff; it must check the sibling patch. Deliver its receipt with the patch and rollback files. If Git is unavailable, label patch verification NOT_RUN and provide the edited files without claiming an applicable patch.
+
 ## When to use
 
 - A new section the owner can place on pages and fill in (a promise strip, an image-with-text variant, a comparison table, a launch banner).

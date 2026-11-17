@@ -67,7 +67,7 @@ Review search terms weekly in the first 30 days; that is when campaigns wander m
 ### 3. Set the budget for each month
 
 Work the money first:
-- Break-even CPA = gross profit per purchase; break-even ROAS = 1 / gross margin [GAD-0023].
+- Contribution break-even CPA = expected contribution before ads per purchase; break-even ROAS = purchase value / expected contribution before ads [GAD-0023].
 - **Month 1 budget** = break-even CPA x 20 purchases, plus the brand budget (practitioner default, test it). This buys enough data to reach the first bidding switch.
 - **Month 2 budget** = month 1 budget, raised by up to 20% at a time only where campaigns spend their full budget and sit at or under target CPA [GAD-0023].
 - **Month 3 budget** = month 2, plus the first new campaign type unlocked in step 4, each with its own test budget.
@@ -169,3 +169,5 @@ What makes this skill ours: it first asks whether Google should lead at all for 
 
 - Set billing with GST details so invoices are usable, and add GST on Google invoices to ad cost when judging profit.
 - Note which pin codes the store ships to and how cash on delivery is handled.
+
+Use `tools/quality/FINANCIAL.md` at each budget review. Scale only against contribution after fulfilment, fees and expected returns, with matched currency and order cohorts. If those inputs are missing, assign their reconciliation before increasing the next month's spend.

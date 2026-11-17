@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// org-context.mjs (AI Blocks, brand-dna-capture) - version 3.0.0
+// org-context.mjs (AI Blocks, brand-dna-capture) - version 3.1.0
 //
 // Keeps one org context for a business in its own project folder: context/org-context/. Every agent applies its
 // knowledge, its rules and its craft to it. It was called the brand brain and the brand file; brand-brain.mjs and
@@ -36,6 +36,11 @@
 //   node org-context.mjs migrate [--from <old folder>]     moves context/brand-file/ here; builds from a capture
 //   node org-context.mjs import <file or folder>           keep a brand guide, file or folder the client has
 //   node org-context.mjs source <what> <where> --status provided|public|no-access [--note "<fix>"]
+//   node org-context.mjs bind --owner <id> --workspace <id>  bind this folder; legacy facts still need review
+//   node org-context.mjs remember <record.json> --owner <id> --workspace <id>  append scoped source evidence
+//   node org-context.mjs resolve --key <fact-key> --action correct|revoke --source <direct-owner-reference>
+//                       [--value <corrected-fact>] [--supersedes <decision-id>] --owner <id> --workspace <id>
+//   node org-context.mjs memory --owner <id> --workspace <id> [--keys <comma-separated-fact-keys>] [--json]
 //   node org-context.mjs ads <file.json|csv> --source library|account|competitor:<name>
 //   node org-context.mjs reviews <file.json|csv>
 //   node org-context.mjs segments <breakdown.csv> [more.csv ...]
@@ -47,6 +52,9 @@
 //   --for <kind>       ad_creative, copy, email, web_page, audit, strategy, plan, analysis, code, ops_doc, other;
 //                      plain words work too for build, check, gate and ask (ads, page, email, dashboard)
 //   --today <date>     YYYY-MM-DD, for tests
+//   --owner, --workspace  trusted caller identity, required when this context is bound
+//   --verified         scoped facts only in a slice; legacy source notes remain on disk
+//   --keys <keys>      fact keys this job depends on; other conflicts do not block local drafts
 //
 // Freshness: prices, offers, stock and shipping go stale after 7 days; data after 30; look, voice and the
 // foundation after 90; anything with no date is stale. A stale line is rechecked, never handed over as a fact.
@@ -54,8 +62,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
-export const VERSION = '3.0.0';
+export const VERSION = '3.1.0';
 /** The folder new work writes. The old one is still read, and migrate moves it. */
 export const FOLDER = 'org-context';
 export const OLD_FOLDER = 'brand-file';
@@ -229,13 +238,13 @@ export function checkBrain(ctx, { now = new Date(), kind: asked = null } = {}) {
   const kind = kindOf(asked).kind;
   const need = kind && NEEDS[kind] ? new Set(NEEDS[kind]) : null;
   const parts = PARTS.map((p) => {
-    const { text, at: fileAt } = readPart(ctx, p.file);
+    const { text } = readPart(ctx, p.file);
     const have = text === null ? 0 : p.id === 'customers' ? (text.match(/^## /gm) || []).length : ['voice-bank', 'customer-words'].includes(p.id) ? (text.match(/^- "/gm) || []).length : contentLines(text).length;
-    // A file written by hand has no stamp: its saved date counts.
-    const updated = updatedOf(text) || (text !== null ? day(fs.statSync(fileAt).mtime) : null);
+    // A copied or freshly saved file is not newly checked evidence. Require its explicit review date.
+    const updated = updatedOf(text);
     const age = updated ? Math.floor((now.getTime() - Date.parse(updated)) / DAY) : null;
-    const stale = text !== null && p.days !== null && (age === null || age > p.days);
-    const state = text === null || have === 0 ? 'missing' : have < p.min ? 'thin' : stale ? 'stale' : 'ok';
+    const stale = text !== null && p.days !== null && (age === null || !Number.isFinite(age) || age < 0 || age > p.days);
+    const state = text === null || have === 0 ? 'missing' : stale ? 'stale' : have < p.min ? 'thin' : 'ok';
     const got = state === 'ok' ? p.points : state === 'missing' ? 0 : Math.round(p.points * Math.min(1, have / p.min) * (stale ? 0.5 : 1));
     return { id: p.id, file: p.file, layer: p.layer, state, have, min: p.min, unit: p.unit, updated, points: got, of: p.points, needed: need ? need.has(p.id) : true, from: p.from, ask: p.ask };
   });
@@ -330,18 +339,20 @@ export function adPatterns(ads) {
     caps_words: share(/\b[A-Z]{4,}\b/), discount: share(/(\d+\s?%|off\b|sale\b|flat\s+\d)/i),
     ctas: Object.entries(ctas).sort((a, b) => b[1] - a[1]).slice(0, 6),
     openers: Object.entries(openers).filter(([, n]) => n > 1).sort((a, b) => b[1] - a[1]).slice(0, 8),
-    proven: ads.filter((a) => (a.days || 0) >= 30).length,
+    long_running: ads.filter((a) => (a.days || 0) >= 30).length,
+    // Legacy field retained, but duration alone can never establish a winner.
+    proven: 0, performance_status: 'unknown',
   };
 }
-/** Takes ads into the voice bank (word for word) and writes their patterns. Long-running ads are marked proven. */
+/** Takes ads into the voice bank (word for word) and writes their patterns. Long-running ads are observations, never proof of performance. */
 export function ingestAds(ctx, rows, { source = 'library', now = new Date() } = {}) {
   const competitor = /^competitor:/.test(source) ? source.slice('competitor:'.length) : null;
   const ads = rows.map((r) => adOf(r, now)).filter((a) => a.body.length || a.title.length);
   const p = adPatterns(ads);
-  const runs = (a) => (a.days ? `${a.days} days${a.active ? ', still running' : ''}${a.days >= 30 ? ', PROVEN' : ''}` : 'dates unknown');
+  const runs = (a) => (a.days ? `${a.days} days${a.active ? ', still running' : ''}${a.days >= 30 ? ', LONG-RUNNING; performance unknown' : ''}` : 'dates unknown');
   const ranked = [...ads].sort((a, b) => (b.days || 0) - (a.days || 0));
   const summary = [
-    `- ${p.ads} ads, ${p.proven} ran 30 days or more (likely winners: advertisers keep what sells).`,
+    `- ${p.ads} ads, ${p.long_running} ran 30 days or more; duration does not establish sales, profit or a winning creative.`,
     `- Primary text: median ${p.body_words_median} words; first line median ${p.first_line_words_median} words; headline median ${p.title_words_median} words.`,
     `- ${pct(p.question_hooks)} open with a question; ${pct(p.emoji)} use emoji; ${pct(p.line_breaks)} use line breaks; ${pct(p.caps_words)} use a word in capitals.`,
     `- ${pct(p.price_shown)} show a price; ${pct(p.discount)} mention a discount or sale; ${pct(p.hindi_words)} use Hindi words in Latin script.`,
@@ -445,7 +456,7 @@ export function ingestReviews(ctx, rows, { now = new Date() } = {}) {
   out.push('', '## Objections and complaints (answer these in copy and on the page)', ...themes.flatMap((t) => t.neg.slice(0, 3).map((r) => `${q(r)} [${t.id}]`)).filter((v, i, a) => a.indexOf(v) === i).slice(0, 12), '', stamp(now));
   write(path.join(brain(ctx), 'foundation', 'why-they-buy.md'), out.join('\n'));
   const bf = path.join(brain(ctx), 'foundation', 'voice-bank.md'), bank = readBank(bf);
-  for (const r of reviews.filter((x) => !neg(x)).slice(0, 60)) addBank(bank, 'Customer words', cut(r.text, 240), `review${r.rating !== null ? ` ${r.rating}★` : ''}${r.date ? `, ${String(r.date).slice(0, 10)}` : ''}`);
+  for (const r of reviews.filter((x) => !neg(x)).slice(0, 60)) addBank(bank, 'Customer words', String(r.text || '').trim(), `review${r.rating !== null ? ` ${r.rating}★` : ''}${r.date ? `, ${String(r.date).slice(0, 10)}` : ''}`);
   writeBank(bf, bank, now);
   return { reviews: reviews.length, themes: themes.map((t) => ({ id: t.id, n: t.n })), occasions };
 }
@@ -584,7 +595,13 @@ export function voiceCheck(ctx, draftText, { ads = false } = {}) {
     .flatMap((l) => [...l.matchAll(/"([^"]{2,40})"/g)].map((m) => m[1].toLowerCase()));
   const sentences = bankLines.flatMap((l) => l.split(/(?<=[.!?])\s+| \/ /)).filter((s) => words(s) >= 2);
   const typical = median(sentences.map(words)) || 12;
-  const lines = String(draftText || '').split(/\n+/).map((l) => l.replace(/^\s*(?:[-*>]|\d+\.)\s*/, '').trim()).filter((l) => words(l) >= 3 && !/^#/.test(l) && !/^\|/.test(l));
+  // Check short headlines, headings and table cells too. Markdown is a normal copy deliverable.
+  const lines = String(draftText || '').replace(/<!--[\s\S]*?-->/g, '').split(/\n+/).flatMap((line) => {
+    const l = line.trim();
+    if (!l || /^(```|~~~)/.test(l) || /^\|?[\s:|\-]+\|?$/.test(l)) return [];
+    const cells = /^\|/.test(l) ? l.replace(/^\||\|$/g, '').split(/(?<!\\)\|/) : [l];
+    return cells.map((c) => c.replace(/^\s*(?:#{1,6}\s+|[-*>]\s+|\d+\.\s+)/, '').replace(/\*\*|__|`/g, '').trim()).filter((c) => words(c) > 0);
+  });
   const results = lines.map((line) => {
     const fails = [], warns = [];
     for (const [re, why] of AI_TELLS) if (re.test(line)) fails.push(why);
@@ -605,7 +622,7 @@ export function voiceCheck(ctx, draftText, { ads = false } = {}) {
   const text = [`VOICE CHECK: ${results.length} lines | ${failed.length} fail | ${warned.length} to look at | brand lines in the bank: ${bankLines.length}${bankLines.length < 40 ? ' (THIN: fill the voice bank first, or this check is weak)' : ''}`,
     ...results.filter((r) => r.fails.length || r.warns.length).map((r) => `${r.fails.length ? 'FAIL' : 'LOOK'} "${r.line}"\n     ${[...r.fails, ...r.warns].join('; ')}`),
     '', 'Then read each line aloud next to 5 real lines from the voice bank. If it would not sit among them, rewrite it.'].join('\n');
-  return { ok: failed.length === 0, results, text, bank: bankLines.length };
+  return { ok: results.length > 0 && failed.length === 0, status: results.length ? (failed.length ? 'FAIL' : 'CHECKED') : 'NOT_RUN', results, text: results.length ? text : `VOICE CHECK: NOT_RUN; no copy found.\n${text}`, bank: bankLines.length };
 }
 
 
@@ -690,18 +707,141 @@ export function buildBrain(ctx, { from, site = null, now = new Date() } = {}) {
 }
 
 // ---------- gate: pass or fail before buyer-facing work ----------
-/** The parts buyer-facing work cannot go without. Anything else thin is listed, not blocking. */
-const GATE = Object.freeze({ ad_creative: ['voice-bank', 'customer-words', 'claims', 'customers', 'design'], copy: ['voice-bank', 'customer-words', 'claims'], email: ['voice-bank', 'customer-words', 'claims', 'customers'], web_page: ['voice-bank', 'customer-words', 'claims', 'design'] });
-export function gateBrain(ctx, { now = new Date(), kind: asked = null } = {}) {
+/** Require the task's foundation to be present, sufficiently filled and explicitly reviewed. Data gaps remain separate. */
+const GATE = Object.freeze(Object.fromEntries([...BUYER_FACING].map((kind) => [kind, NEEDS[kind].filter((id) => PARTS.find((p) => p.id === id)?.layer === 'foundation')])));
+export function gateBrain(ctx, { now = new Date(), kind: asked = null, scope = null, requiredKeys = [] } = {}) {
+  const memory = readFactMemory(ctx, { now, scope, requiredKeys });
+  if (memory.scope_error) return { ok: false, text: `GATE: FAIL. ${memory.scope_error}`, blocking: [{ id: 'scope', state: 'mismatch' }] };
+  const conflicts = [...memory.unresolved, ...memory.restrictions].filter((r) => r.needed);
+  if (conflicts.length) return { ok: false, text: `GATE: FAIL for dependent claims: ${conflicts.map((r) => `${r.fact_key} (${r.state})`).join(', ')}. Continue local drafts that omit these facts.`, blocking: conflicts, memory };
   const { kind } = kindOf(asked);
   if (!GATE[kind]) return { ok: true, text: `GATE: pass. ${kind ? kind.replace('_', ' ') : 'This job'} is not buyer-facing, so it does not wait on the org context.` };
   const r = checkBrain(ctx, { now, kind });
-  const block = r.parts.filter((p) => GATE[kind].includes(p.id) && p.state === 'missing');
+  const block = r.parts.filter((p) => GATE[kind].includes(p.id) && p.state !== 'ok');
   const thin = r.parts.filter((p) => p.needed && p.state !== 'ok' && !block.includes(p));
   const lines = [`GATE: ${block.length ? 'FAIL' : 'pass'} for ${kind.replace('_', ' ')} | org context ${r.score}/100`];
-  if (block.length) lines.push(`Missing: ${block.map((p) => p.file).join(', ')}. Write no buyer-facing line until each exists: run build --from <the client's material>, then write the starter files. A part with no material at all: write what the public sources give, mark it "public", and say so.`);
-  if (thin.length) lines.push(`Thin or stale, fill when you can: ${thin.map((p) => `${p.id} ${p.have}/${p.min}`).join(', ')}.`);
-  return { ok: block.length === 0, text: lines.join('\n'), score: r.score };
+  if (block.length) lines.push(`Not ready: ${block.map((p) => `${p.file} (${p.state})`).join(', ')}. Refresh dated evidence and fill the required sections before final buyer-facing work. A restricted draft may omit unsupported claims; never invent examples to meet a count.`);
+  if (thin.length) lines.push(`Other context gaps (do not use affected evidence as fact): ${thin.map((p) => `${p.id} ${p.have}/${p.min}`).join(', ')}.`);
+  return { ok: block.length === 0, text: lines.join('\n'), score: r.score, blocking: block.map((p) => ({ id: p.id, file: p.file, state: p.state })) };
+}
+
+/** Complete task foundation, including restrictions. Never silently compress a business rule away. */
+export function foundationSlice(ctx, level, { now = new Date(), kind: asked = null } = {}) {
+  const kind = kindOf(asked).kind;
+  if (level === 'none') return { blocks: [], missing: [], stale: [], thin: [], included: [] };
+  const ids = new Set(['claims', 'dos-donts']);
+  if (level === 'full') for (const p of PARTS.filter((p) => p.layer === 'foundation' && p.id !== 'sources')) ids.add(p.id);
+  if (level === 'voice') for (const id of ['voice-bank', 'customer-talk', 'brand-dna']) ids.add(id);
+  if (level === 'look') ids.add('design');
+  for (const id of NEEDS[kind] || []) if (PARTS.find((p) => p.id === id)?.layer === 'foundation') ids.add(id);
+  const checked = checkBrain(ctx, { now, kind });
+  const selected = [...ids].map((id) => checked.parts.find((p) => p.id === id));
+  const blocks = selected.flatMap((p) => {
+    const { text } = readPart(ctx, p.file);
+    if (text === null) return [];
+    return [{ id: p.id, file: p.file, state: p.state, text: `FOUNDATION ${p.id}: ${p.file} | ${p.state.toUpperCase()} | checked ${p.updated || 'unknown'}\n${p.state === 'stale' ? 'RECHECK factual assertions before use. Keep restrictions in force until the owner resolves them.\n' : ''}${text.trim()}` }];
+  });
+  return { blocks, included: blocks.map((b) => b.file), missing: selected.filter((p) => p.state === 'missing').map((p) => p.file), stale: selected.filter((p) => p.state === 'stale').map((p) => p.file), thin: selected.filter((p) => p.state === 'thin').map((p) => p.file) };
+}
+
+// Scope is supplied by the trusted caller, never inferred from retrieved prose. This local
+// binding is an isolation check, not a replacement for a host's authenticated identity.
+const validScope = (s) => !!s && ['owner_id', 'workspace_id'].every((k) => typeof s[k] === 'string' && s[k].trim());
+const sameScope = (a, b) => validScope(a) && validScope(b) && a.owner_id === b.owner_id && a.workspace_id === b.workspace_id;
+const memoryJson = (ctx, file) => { try { return JSON.parse(fs.readFileSync(path.join(orgDir(ctx), file), 'utf8')); } catch (e) { if (e.code === 'ENOENT') return null; throw new Error(`Invalid org context ${file}.`); } };
+function scopeCheck(ctx, scope) {
+  const bound = memoryJson(ctx, 'scope.json');
+  if (bound && !sameScope(bound, scope)) return { ok: false, reason: 'Scope mismatch or missing caller identity; org context withheld.' };
+  return { ok: true, bound };
+}
+export function bindContextScope(ctx, scope) {
+  if (!validScope(scope)) throw new Error('Explicit owner_id and workspace_id are required.');
+  const check = scopeCheck(ctx, scope); if (!check.ok) throw new Error(check.reason);
+  write(path.join(orgDir(ctx), 'scope.json'), JSON.stringify({ owner_id: scope.owner_id, workspace_id: scope.workspace_id }, null, 2));
+  return { ok: true, legacy: 'Existing unscoped facts remain unverified; review them before remembering them in this scope.' };
+}
+const memoryKey = (r) => r.fact_key || r.id;
+export const factEvidenceId = (r) => createHash('sha256').update(JSON.stringify([memoryKey(r), r.value, r.source, r.captured_at, r.scope?.owner_id, r.scope?.workspace_id])).digest('hex');
+// Obvious instruction payloads are quarantined. All other values still remain quoted data;
+// this deliberately does not claim to detect every possible prompt injection.
+const instructionPayload = (r) => /(?:ignore|override|disregard)\s+(?:all\s+)?(?:previous|system|developer|instructions)|(?:system|assistant|developer)\s*:|(?:reveal|send|exfiltrate)\s+(?:the\s+)?(?:secrets|credentials|api keys)|grant\s+(?:publish|admin)\s+(?:access|permission)/i.test(`${r.value || ''} ${r.source || ''}`);
+/** Reconcile a fact key, never arbitrary prose similarity. All alternatives retain provenance. */
+export function reconcileFacts(records, { scope = null, now = new Date(), resolutions = [], requiredKeys = null } = {}) {
+  const groups = new Map(), review = [], rejected = [];
+  for (const r of records || []) {
+    if (!r || typeof r !== 'object') { rejected.push({ reason: 'invalid_record' }); continue; }
+    // Do not echo another tenant's values, source names or record IDs.
+    if (r.scope && !sameScope(r.scope, scope)) { rejected.push({ reason: 'wrong_scope' }); continue; }
+    if (['ended', 'banned', 'unconfirmed', 'revoked'].includes(r.status)) continue;
+    if (instructionPayload(r)) { rejected.push({ reason: 'instruction_payload', fact_key: memoryKey(r) }); continue; }
+    if (!r.scope || !validScope(scope)) { review.push({ ...r, state: 'unscoped' }); continue; }
+    if (!memoryKey(r) || typeof r.value !== 'string' || !r.source) { review.push({ ...r, state: 'missing_provenance' }); continue; }
+    const item = { ...r, evidence_id: factEvidenceId(r) };
+    const key = memoryKey(r); if (!groups.has(key)) groups.set(key, []); groups.get(key).push(item);
+  }
+  const decisions = resolutions.filter((r) => sameScope(r.scope, scope));
+  for (const d of decisions) if (!groups.has(d.fact_key)) groups.set(d.fact_key, []);
+  const facts = [], unresolved = [], restrictions = [];
+  for (const [key, rows] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {
+    const active = decisions.filter((d) => d.fact_key === key && !decisions.some((later) => later.fact_key === key && later.supersedes === d.id));
+    const alternatives = [...new Map(rows.map((r) => [r.evidence_id, r])).values()].sort((a, b) => a.evidence_id.localeCompare(b.evidence_id));
+    const needed = requiredKeys === null || requiredKeys.includes(key);
+    if (active.length > 1) { unresolved.push({ fact_key: key, state: 'conflicting_owner_decisions', needed, alternatives }); continue; }
+    if (active.length === 1) {
+      const d = active[0];
+      if (d.action === 'revoke') { restrictions.push({ fact_key: key, state: 'revoked', needed, source: d.source, decision_id: d.id }); continue; }
+      const corrected = { ...d, id: d.id, value: d.value, kind: d.kind || 'fact', status: 'live', captured_at: d.at, source: d.source, volatile: d.volatile, evidence_id: d.id };
+      if (isStale(corrected, now)) unresolved.push({ fact_key: key, state: 'stale_owner_correction', needed, alternatives: [corrected] });
+      else facts.push(corrected);
+      continue;
+    }
+    const current = alternatives.filter((r) => !isStale(r, now));
+    const stale = alternatives.filter((r) => isStale(r, now));
+    review.push(...stale.map((r) => ({ ...r, state: 'stale' })));
+    const values = new Set(current.map((r) => r.value.trim().replace(/\s+/g, ' ')));
+    if (values.size > 1) unresolved.push({ fact_key: key, state: 'contradiction', needed, alternatives: current });
+    else if (current.length) facts.push({ ...current[0], provenance: current.map((r) => ({ evidence_id: r.evidence_id, source: r.source, captured_at: r.captured_at })) });
+    else if (stale.length) unresolved.push({ fact_key: key, state: 'stale', needed, alternatives: stale });
+  }
+  for (const key of requiredKeys || []) if (!facts.some((r) => memoryKey(r) === key) && !unresolved.some((r) => r.fact_key === key) && !restrictions.some((r) => r.fact_key === key)) unresolved.push({ fact_key: key, state: 'missing_scoped_evidence', needed: true, alternatives: [] });
+  return { facts, unresolved, restrictions, review, rejected, ready: ![...unresolved, ...restrictions].some((r) => r.needed), local_draft_allowed: true };
+}
+export function readFactMemory(ctx, options = {}) {
+  const checked = scopeCheck(ctx, options.scope);
+  if (!checked.ok) return { facts: [], unresolved: [], restrictions: [], review: [], rejected: [{ reason: 'wrong_scope' }], ready: false, scope_error: checked.reason, local_draft_allowed: true };
+  const records = [...(memoryJson(ctx, 'facts.json')?.facts || []), ...(memoryJson(ctx, 'offers.json')?.offers || [])];
+  return reconcileFacts(records, { ...options, resolutions: memoryJson(ctx, 'owner-resolutions.json')?.resolutions || [] });
+}
+/** Trusted caller operation: source text cannot manufacture an owner decision. Append only. */
+export function resolveFact(ctx, { scope, factKey, action, value, source, kind = null, supersedes = null, now = new Date() } = {}) {
+  if (!validScope(scope) || !scopeCheck(ctx, scope).bound) throw new Error('Bind the context to the explicit owner/workspace before resolving a fact.');
+  if (!scopeCheck(ctx, scope).ok) throw new Error('Scope mismatch.');
+  if (!factKey || !source || !['correct', 'revoke'].includes(action) || (action === 'correct' && (typeof value !== 'string' || !value.trim()))) throw new Error('A fact key, direct owner source, and correct/value or revoke are required.');
+  if (instructionPayload({ value, source })) throw new Error('Instruction payload cannot become a business fact.');
+  const priorEvidence = [...(memoryJson(ctx, 'facts.json')?.facts || []), ...(memoryJson(ctx, 'offers.json')?.offers || [])].find((r) => memoryKey(r) === factKey && sameScope(r.scope, scope));
+  kind = priorEvidence?.kind || kind || factKindOf(value || '');
+  const file = 'owner-resolutions.json', doc = memoryJson(ctx, file) || { resolutions: [] };
+  const active = doc.resolutions.filter((d) => d.fact_key === factKey && sameScope(d.scope, scope) && !doc.resolutions.some((n) => n.supersedes === d.id));
+  if (active.length && (active.length !== 1 || active[0].id !== supersedes)) throw new Error('Explicitly supersede the current owner decision; no latest-write-wins.');
+  if (supersedes && !active.some((d) => d.id === supersedes)) throw new Error('Unknown superseded owner decision.');
+  const decision = { fact_key: factKey, action, ...(action === 'correct' ? { value } : {}), source, kind, scope, at: now.toISOString(), supersedes };
+  decision.id = createHash('sha256').update(JSON.stringify(decision)).digest('hex');
+  doc.resolutions.push(decision); write(path.join(orgDir(ctx), file), JSON.stringify(doc, null, 2));
+  return decision;
+}
+export function rememberFact(ctx, record, { scope, now = new Date() } = {}) {
+  const checked = scopeCheck(ctx, scope);
+  if (!checked.ok || !checked.bound || !validScope(scope)) throw new Error('A matching bound owner/workspace is required.');
+  if (record.scope && !sameScope(record.scope, scope)) throw new Error('Record scope mismatch.');
+  if (!['fact', 'price', 'offer', 'stock', 'shipping', 'guarantee', 'review'].includes(record.kind)) throw new Error('Explicit kind required: fact, price, offer, stock, shipping, guarantee or review.');
+  const keyedKind = String(memoryKey(record) || '').split(':')[0];
+  if (FAST_KINDS.includes(keyedKind) && record.kind !== keyedKind) throw new Error('A volatile fact key must retain its matching kind and freshness window.');
+  if (!memoryKey(record) || typeof record.value !== 'string' || !record.source || !record.captured_at || instructionPayload(record)) throw new Error('A fact key, value, source and evidence date are required; instruction payloads are rejected.');
+  const row = { id: record.id || record.fact_key, fact_key: memoryKey(record), value: record.value, kind: record.kind, source: record.source, captured_at: record.captured_at, scope: { owner_id: scope.owner_id, workspace_id: scope.workspace_id }, status: 'live' };
+  const file = FAST_KINDS.includes(row.kind) ? 'offers.json' : 'facts.json', part = file.slice(0, -5), doc = memoryJson(ctx, file) || { [part]: [] };
+  if (!doc[part].some((r) => factEvidenceId(r) === factEvidenceId(row))) doc[part].push(row);
+  write(path.join(orgDir(ctx), file), JSON.stringify(doc, null, 2));
+  return { evidence_id: factEvidenceId(row), state: isStale(row, now) ? 'stale' : 'recorded' };
 }
 
 // ---------- the store part (was brand-file.mjs): facts, offers, look, voice, references, worked ----------
@@ -752,11 +892,11 @@ const pct = (n) => `${Math.round((n || 0) * 1000) / 10}%`;
 const aJob = (kind) => `${/^[aeiou]/.test(kind) ? 'an' : 'a'} ${kind} job`;
 const day = (d) => { const t = d instanceof Date ? d : new Date(d); return Number.isNaN(t.getTime()) ? null : t.toISOString().slice(0, 10); };
 /** Whole days between a date and now. null when the date is missing or unreadable. */
-function ageDays(date, now) { const t = Date.parse(date || ''); return Number.isNaN(t) ? null : Math.max(0, Math.floor((now.getTime() - t) / 864e5)); }
+function ageDays(date, now) { const t = Date.parse(date || ''); return Number.isNaN(t) ? null : Math.floor((now.getTime() - t) / 864e5); }
 const volatileOf = (kind) => (FAST_KINDS.includes(kind) ? 'fast' : 'slow');
 /** A line is stale with no date, or when it is older than its class allows. */
 function isStale(rec, now) {
-  const age = ageDays(rec?.captured_at, now); if (age === null) return true;
+  const age = ageDays(rec?.captured_at, now); if (age === null || age < 0) return true;
   const limit = FRESH_DAYS[rec.volatile in FRESH_DAYS ? rec.volatile : volatileOf(rec.kind)];
   return limit !== null && age > limit;
 }
@@ -785,7 +925,7 @@ function kindOf(line, fallback = 'fact') {
   if (/\breviews?\b|\bratings?\b|\brated\b|\bstars?\b|★/i.test(t)) return 'review';
   return fallback;
 }
-const record = (kind, id, value, source, captured_at, extra = {}) => ({ id, kind, value: cut(value, 240), source: source || null, captured_at: captured_at || null, volatile: volatileOf(kind), status: 'live', ...extra });
+const record = (kind, id, value, source, captured_at, extra = {}) => ({ id, kind, value: String(value || '').trim(), source: source || null, captured_at: captured_at || null, volatile: volatileOf(kind), status: 'live', ...extra });
 
 // ---------- markdown files: a head, then sections of "- " lines ----------
 function readMd(file, head, sections) {
@@ -831,7 +971,7 @@ const STOCK = (a) => { const t = String(a || '').split('/').pop(); return /^InSt
 /** Every dated line a capture holds, as org context records. */
 function recordsFromCapture(dna) {
   const offers = [], facts = [], seen = new Set();
-  const push = (r) => { if (!r.value || seen.has(r.id)) return; seen.add(r.id); (FAST_KINDS.includes(r.kind) ? offers : facts).push({ ...r, from: 'capture' }); };
+  const push = (r) => { const identity = JSON.stringify([r.id, r.source, r.value, r.captured_at]); if (!r.value || seen.has(identity)) return; seen.add(identity); (FAST_KINDS.includes(r.kind) ? offers : facts).push({ ...r, from: 'capture' }); };
   for (const p of capturePages(dna)) {
     const f = p.d.facts || {}, page = slug(p.path) || 'home', at = p.captured_at || f.captured_at;
     const named = (f.structured || []).some((s) => s.name && s.price != null && s.price !== '');
@@ -874,7 +1014,7 @@ function voiceFromCapture(dna) {
   const lines = [], buttons = [];
   for (const p of capturePages(dna)) {
     const date = day(p.captured_at || '') || null;
-    for (const s of p.d.voice?.samples || []) if (s.kind !== 'cta') lines.push({ text: cut(s.text, 220), kind: s.kind === 'headline' ? 'headline' : 'body', source: p.url, date });
+    for (const s of p.d.voice?.samples || []) if (s.kind !== 'cta') lines.push({ text: String(s.text || '').trim(), kind: s.kind === 'headline' ? 'headline' : 'body', source: p.url, date });
     for (const c of (p.d.voice?.ctas || []).slice(0, 10)) buttons.push({ text: cut(c, 60), kind: 'button', source: p.url, date });
   }
   return { lines, buttons };
@@ -895,12 +1035,13 @@ const CHANGE_GONE = { price: 'Price no longer shown', offer: 'Offer ended', stoc
  * `report` is false on the first build, when everything would be "new".
  */
 function mergeRecords(existing, incoming, { recaptured = new Set(), now = new Date(), report = true, known = null } = {}) {
-  const out = (existing || []).map((r) => ({ ...r })), byId = new Map(out.map((r) => [r.id, r])), changes = [], got = new Set(), newPages = new Map();
+  const identity = (r) => JSON.stringify([r.id, r.source, r.scope?.owner_id, r.scope?.workspace_id]);
+  const out = (existing || []).map((r) => ({ ...r })), byId = new Map(out.map((r) => [identity(r), r])), changes = [], got = new Set(), newPages = new Map();
   const note = (text, source) => { if (report) changes.push({ at: day(now), text, source: source || null }); };
   for (const r of incoming) {
-    got.add(r.id); const old = byId.get(r.id);
+    got.add(identity(r)); const old = byId.get(identity(r));
     if (!old) {
-      out.push({ ...r, first_seen: r.captured_at }); byId.set(r.id, out.at(-1));
+      out.push({ ...r, first_seen: r.captured_at }); byId.set(identity(r), out.at(-1));
       // A page read for the first time is one change, not one per line on it.
       if (known && isUrl(r.source) && !known.has(r.source)) newPages.set(r.source, (newPages.get(r.source) || 0) + 1); else note(`New ${r.kind}: ${r.value}`, r.source);
       continue;
@@ -914,7 +1055,7 @@ function mergeRecords(existing, incoming, { recaptured = new Set(), now = new Da
     delete old.ended_at;
   }
   for (const r of out) {
-    if (got.has(r.id) || r.status !== 'live' || r.from !== 'capture' || !recaptured.has(r.source)) continue;
+    if (got.has(identity(r)) || r.status !== 'live' || r.from !== 'capture' || !recaptured.has(r.source)) continue;
     r.status = 'ended'; r.ended_at = now.toISOString();
     note(`${CHANGE_GONE[r.kind] || 'No longer on the page'}: ${r.value}`, r.source);
   }
@@ -972,8 +1113,11 @@ const newest = (dates) => dates.filter(Boolean).sort().at(-1) || null;
 const levelFor = (kind, level) => (SLICES.includes(level) ? level : kind ? SLICE_BY_KIND[kind] ?? 'none' : 'full');
 
 /** What exists, how old each part is, what is stale and what is missing, as of `now`. */
-function statusOf(ctx, { now = new Date(), kind = null, level = null } = {}) {
+function statusOf(ctx, { now = new Date(), kind = null, level = null, scope = null, requiredKeys = [] } = {}) {
+  const memory = readFactMemory(ctx, { now, scope, requiredKeys });
+  if (memory.scope_error) return { ok: false, exists: false, dir: slash(brandDir(ctx)), next: [memory.scope_error], parts: [], memory };
   const all = readAll(ctx), need = levelFor(kind, level), needed = SLICE_PARTS[need], stale = [], parts = [];
+  for (const part of ['facts', 'offers']) if (all[part]) all[part][part] = (all[part][part] || []).filter((r) => !r.scope || sameScope(r.scope, scope));
   for (const p of PARTS) {
     const row = { id: p.id, file: p.file, exists: false, state: 'missing', count: 0, stale_count: 0, newest: null, age_days: null, limit_days: p.fresh ? FRESH_DAYS[p.fresh] : null, needed: needed.includes(p.id) };
     if (p.id === 'offers' || p.id === 'facts') {
@@ -1007,7 +1151,7 @@ function statusOf(ctx, { now = new Date(), kind = null, level = null } = {}) {
   const unsynced = all.exists && !Number.isNaN(raw) && (Number.isNaN(taken) || raw > taken);
   return { schema: SCHEMA, dir: slash(path.relative(process.cwd(), all.dir) || all.dir), exists: all.exists, business, site, today: day(now), kind, level: need, needed,
     parts, stale, missing: parts.filter((p) => p.needed && p.state === 'missing').map((p) => p.id), stale_parts: parts.filter((p) => p.needed && p.state === 'stale').map((p) => p.id), unsynced,
-    ok: need === 'none' || (all.exists && blocking.length === 0 && !unsynced), next: nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) };
+    memory, ok: (need === 'none' || (all.exists && blocking.length === 0 && !unsynced)) && memory.ready, next: nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) };
 }
 const toolPath = (name) => { const rel = slash(path.join(path.relative(process.cwd(), HERE) || '.', name)); return rel.startsWith('../../') || path.isAbsolute(rel) ? slash(path.join(HERE, name)) : rel; };
 function nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) {
@@ -1132,7 +1276,7 @@ function syncBrandFile(ctx, { now = new Date(), dna, everything = false, from = 
     const voiceMd = md('voice.md');
     if (voiceMd) {
       const fileDate = findDate(voiceMd.split(/\r?\n/).slice(0, 6).join(' ')); let customer = false; const mine = [], theirs = [];
-      for (const l of voiceMd.split(/\r?\n/)) { if (/^#/.test(l)) { customer = /customer|review|buyer|their/i.test(l); continue; } const t = l.replace(/^\s*(?:[-*]|\d+[.)])\s+/, '').trim(); if (t.length < 4) continue; const quoted = /["“]([^"”]{4,})["”]/.exec(t); (customer ? theirs : mine).push({ text: cut(quoted ? quoted[1] : t.replace(/\s*\((?:source|from)[^)]*\)\s*$/i, ''), 220), kind: customer ? 'customer' : 'line', source: /https?:\/\/[^\s)|]+/.exec(t)?.[0] || 'context/voice.md', date: findDate(t) || fileDate }); }
+      for (const l of voiceMd.split(/\r?\n/)) { if (/^#/.test(l)) { customer = /customer|review|buyer|their/i.test(l); continue; } const t = l.replace(/^\s*(?:[-*]|\d+[.)])\s+/, '').trim(); if (t.length < 4) continue; const quoted = /["“]([^"”]{4,})["”]/.exec(t); (customer ? theirs : mine).push({ text: (quoted ? quoted[1] : t.replace(/\s*\((?:source|from)[^)]*\)\s*$/i, '')).trim(), kind: customer ? 'customer' : 'line', source: /https?:\/\/[^\s)|]+/.exec(t)?.[0] || 'context/voice.md', date: findDate(t) || fileDate }); }
       upsertEntries(sectionOf(voice, 'Brand lines'), mine); upsertEntries(sectionOf(voice, 'Customer words'), theirs); voiceTouched = true;
       mapping.push(`context/voice.md -> voice.md (${mine.length} brand lines, ${theirs.length} customer lines)`);
     }
@@ -1209,18 +1353,26 @@ function lookLines(look) {
   ].filter(Boolean);
 }
 /** The text of one slice. Stale and unconfirmed lines are listed apart, so they are rechecked and not used as facts. */
-function sliceText(ctx, level, { now = new Date(), kind = null } = {}) {
+function sliceText(ctx, level, { now = new Date(), kind = null, scope = null, requiredKeys = [], verifiedOnly = false } = {}) {
   if (!SLICES.includes(level)) throw new Error(`Unknown slice "${level}". Use one of: ${SLICES.join(', ')}.`);
-  if (level === 'none') return { ok: true, text: `ORG CONTEXT SLICE: none${kind ? ` (for ${aJob(kind)})` : ''}\nThis job needs no org context. Skip capture. Work from the system, files or data.` };
-  const all = readAll(ctx), s = statusOf(ctx, { now, kind, level });
-  if (!all.exists) return { ok: false, text: [`ORG CONTEXT SLICE: ${level}`, `There is no org context at ${s.dir} yet, so there is nothing to take.`, ...s.next.map((n) => `- ${n}`)].join('\n') };
+  const memory = readFactMemory(ctx, { now, scope, requiredKeys });
+  if (memory.scope_error) return { ok: false, text: memory.scope_error, memory };
+  if (level === 'none') {
+    const rules = ['foundation/dos-donts.md', 'foundation/claims.md'].map((f) => readPart(ctx, f).text).filter(Boolean).join('\n');
+    const bans = [...(readAll(ctx).facts?.facts || []), ...(readAll(ctx).offers?.offers || [])].filter((r) => r.status === 'banned' && (!r.scope || sameScope(r.scope, scope)));
+    return { ok: memory.ready, text: [`ORG CONTEXT SLICE: none${kind ? ` (for ${aJob(kind)})` : ''}`, 'This job needs no org context. Skip capture. Standing restrictions still apply.', ...(rules ? ['MANDATORY RESTRICTIONS', rules] : []), ...bans.map((r) => `- BANNED: ${r.value}`), ...memory.restrictions.map((r) => `- REVOKED FACT: ${r.fact_key}`)].join('\n'), memory };
+  }
+  const all = readAll(ctx), s = statusOf(ctx, { now, kind, level, scope, requiredKeys }), foundation = foundationSlice(ctx, level, { now, kind });
+  if (!all.exists && !foundation.included.length) return { ok: false, text: [`ORG CONTEXT SLICE: ${level}`, `There is no org context at ${s.dir} yet, so there is nothing to take.`, ...s.next.map((n) => `- ${n}`)].join('\n') };
   const caps = CAPS[level], sells = SELLING_KINDS.includes(kind), rank = (r) => (sells ? ['stock', 'price', 'offer', 'shipping'].indexOf(r.kind) : 0);
   // Newest day first. Within a day: a named product line, then a full sentence, then bare prices and menu labels.
   const weight = (r) => (/^(price|stock|review):[^:]+$/.test(r.id || '') ? 0 : words(r.value) >= 4 ? 1 : 2);
   const byNewest = (a, b) => String(day(b.captured_at || '') || '').localeCompare(String(day(a.captured_at || '') || '')) || weight(a) - weight(b) || rank(a) - rank(b);
   const once = (list) => { const seen = new Set(); return [...list].sort(byNewest).filter((r) => !seen.has(r.value) && seen.add(r.value)); };
-  const offers = once(live(all.offers?.offers)), facts = once(live(all.facts?.facts)), stale = [...offers, ...facts].filter((r) => isStale(r, now));
-  const unconfirmed = [...(all.offers?.offers || []), ...(all.facts?.facts || [])].filter((r) => r.status === 'unconfirmed' || r.status === 'banned');
+  const ownerDecided = new Set([...memory.restrictions.map((r) => r.fact_key), ...memory.facts.filter((r) => r.action === 'correct').map(memoryKey), ...memory.unresolved.filter((r) => /owner/.test(r.state)).map((r) => r.fact_key)]);
+  const usableLegacy = (rows) => verifiedOnly ? [] : live(rows).filter((r) => !r.scope && !instructionPayload(r) && !ownerDecided.has(memoryKey(r)));
+  const offers = once(usableLegacy(all.offers?.offers)), facts = once(usableLegacy(all.facts?.facts)), stale = [...offers, ...facts].filter((r) => isStale(r, now));
+  const unconfirmed = [...(all.offers?.offers || []), ...(all.facts?.facts || [])].filter((r) => (r.status === 'unconfirmed' || r.status === 'banned') && (!r.scope || sameScope(r.scope, scope)));
   const blocks = [];
   const add = (id, head, lines, file) => { if (lines.length && caps[id]) blocks.push({ id, head, lines, file }); };
   add('worked', 'WHAT WORKED BEFORE (read first; worked.md, newest first)', (all.worked?.sections || []).slice(0, 4).map((x) => `- ${x.title}: ${x.lines.map((l) => l.replace(/^- /, '')).join('; ')}`), 'worked.md');
@@ -1231,7 +1383,7 @@ function sliceText(ctx, level, { now = new Date(), kind = null } = {}) {
     const dated = lines.filter((e) => e.date && !isStale({ captured_at: e.date, volatile: 'slow' }, now)), old = lines.filter((e) => !dated.includes(e));
     const full = (list) => [...list.filter((e) => words(e.text) >= 3), ...list.filter((e) => words(e.text) < 3)]; // one-word menu labels last
     const pick = [...full(dated.filter((e) => e.kind === 'headline')).slice(0, 4), ...full(dated.filter((e) => e.kind !== 'headline')).slice(0, 5)];
-    add('voice', 'VOICE: real lines to match by ear, never to paste as new copy', [
+    add('voice', 'VOICE: match tone, never paste as new copy; recheck implied SKU, size/range and offer facts', [
       ...pick.map((e) => `- "${e.text}" (${e.kind}, ${shortSource(e.source)}, ${e.date})`),
       sec('Button words').length && `- Button words: ${sec('Button words').slice(0, 10).map((e) => e.text).join(' / ')}`,
       ...sec('Customer words').slice(0, 3).map((e) => `- Customer, not the brand: "${cut(e.text, 140)}" (${shortSource(e.source)}, ${e.date || 'no date'})`),
@@ -1246,22 +1398,38 @@ function sliceText(ctx, level, { now = new Date(), kind = null } = {}) {
   }
   add('recheck', `RECHECK BEFORE USE: stale or undated, so not facts yet (${stale.length})`, stale.sort(byNewest).map((r) => `- STALE ${r.kind}: ${cut(r.value, 110)} (${shortSource(r.source)}, ${r.captured_at ? `${day(r.captured_at)}, ${ageDays(r.captured_at, now)} days old` : 'no date'})`), 'offers.json and facts.json');
   add('unconfirmed', 'NOT CONFIRMED: never use as fact', unconfirmed.map((r) => `- ${r.status === 'banned' ? 'BANNED: ' : ''}${cut(r.value, 100)} ${r.status === 'banned' ? '' : r.note || ''}`.trim()), 'facts.json');
-  const head = [`ORG CONTEXT SLICE: ${level}${kind ? ` for ${aJob(kind)}` : ''} | ${s.business || s.site || 'unnamed'} | read ${s.today}`, 'Use only what is below. Every line has its source and the date it was read.'];
+  const head = [`ORG CONTEXT SLICE: ${level}${kind ? ` for ${aJob(kind)}` : ''} | ${s.business || s.site || 'unnamed'} | read ${s.today}`, 'Use dated, supported facts only. Read coverage gaps and recheck stale assertions; restrictions still apply.'];
+  if (memory.review.some((r) => r.state === 'unscoped')) head.push('LEGACY UNSCOPED EVIDENCE: legacy FACTS/LIVE OFFERS below are readable local source notes, not verified durable facts. Review ownership before cross-job reuse. Use --verified for scoped facts only.');
+  const safe = (value) => JSON.stringify(value).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+  const memoryLines = [
+    ...memory.facts.map((r) => `VERIFIED FACT DATA: ${safe({ key: memoryKey(r), value: r.value, source: r.source, captured_at: r.captured_at, evidence_id: r.evidence_id, provenance: r.provenance })}`),
+    ...memory.unresolved.map((r) => `UNRESOLVED ${r.needed ? 'DEPENDENT' : 'OPTIONAL'} FACT: ${safe({ key: r.fact_key, state: r.state, alternatives: r.alternatives.map((a) => ({ value: a.value, source: a.source, captured_at: a.captured_at, evidence_id: a.evidence_id })) })}. Omit this claim; unrelated local drafts can proceed.`),
+    ...memory.restrictions.map((r) => `REVOKED FACT: ${safe(r)}. Do not use until an explicit owner correction supersedes this decision.`),
+    ...(memory.rejected.length ? [`WITHHELD: ${memory.rejected.length} out-of-scope or instruction-bearing records; no content imported as authority.`] : []),
+  ];
   const fastStale = stale.filter((r) => FAST_KINDS.includes(r.kind)).length;
   if (fastStale && sells) head.push(`STOP: ${fastStale} price, offer, stock or shipping line${fastStale === 1 ? ' is' : 's are'} stale. ${s.next[0]}`);
   const missing = SLICE_PARTS[level].filter((id) => s.parts.find((p) => p.id === id).state === 'missing');
   if (missing.length) head.push(`MISSING: ${missing.join(', ')}. ${s.next.find((n) => /capture|by hand/i.test(n)) || ''}`.trim());
-  const out = [...head]; let left = SLICE_WORDS[level] - words(head.join(' ')), carry = 0;
+  // Mandatory foundation and all disallowed facts precede optional compact legacy context.
+  const restrictions = unconfirmed.filter((r) => r.status === 'banned').map((r) => `- ${String(r.status).toUpperCase()}: ${r.value}${r.note ? ` (${r.note})` : ''}`);
+  const out = [...head, ...foundation.blocks.flatMap((b) => ['', b.text]), ...memoryLines, ...(restrictions.length ? ['', 'MANDATORY RESTRICTIONS (never treat as live facts)', ...restrictions] : [])];
+  if (foundation.missing.length || foundation.stale.length || foundation.thin.length) out.push('', `FOUNDATION GAPS: ${[...foundation.missing.map((f) => `${f} missing`), ...foundation.stale.map((f) => `${f} stale`), ...foundation.thin.map((f) => `${f} thin`)].join('; ')}. Retrieve or refresh these before relying on them.`);
+  const mandatoryWords = words(out.join(' '));
+  let left = Math.max(0, SLICE_WORDS[level] - mandatoryWords), carry = 0;
+  const omitted = [];
   for (const b of blocks) {
-    let room = Math.min(left, caps[b.id] + carry) - words(b.head), shown = 0; if (room < 12) continue;
+    let room = Math.min(left, caps[b.id] + carry) - words(b.head), shown = 0; if (room < 12) { omitted.push({ file: b.file, lines: b.lines.length }); continue; }
     const lines = [];
     for (const l of b.lines) { const w = words(l); if (w > room - 6) break; lines.push(l); room -= w; shown++; }
-    if (!shown) continue;
-    if (shown < b.lines.length) { lines.push(`- (${b.lines.length - shown} more in ${b.file})`); room -= 5; }
+    if (!shown) { omitted.push({ file: b.file, lines: b.lines.length }); continue; }
+    if (shown < b.lines.length) { omitted.push({ file: b.file, lines: b.lines.length - shown }); lines.push(`- (${b.lines.length - shown} more in ${b.file})`); room -= 5; }
     const used = words(b.head) + lines.reduce((n, l) => n + words(l), 0);
     carry = Math.max(0, caps[b.id] + carry - used); left -= used; out.push('', b.head, ...lines);
   }
-  return { ok: true, text: out.join('\n'), words: words(out.join(' ')) };
+  const overflow = mandatoryWords > SLICE_WORDS[level];
+  if (overflow) out.push('', `CONTEXT OVERFLOW: required foundation is ${mandatoryWords} words, above the ${SLICE_WORDS[level]}-word compact budget. It is retained in full; narrow task scope or use the full files. Do not discard restrictions.`);
+  return { ok: s.ok && !foundation.missing.length && !foundation.stale.length && !foundation.thin.length && !overflow, text: out.join('\n'), words: words(out.join(' ')), memory, coverage: { included: foundation.included, missing: foundation.missing, stale: foundation.stale, thin: foundation.thin, omitted }, overflow };
 }
 
 // ---------- ask and import: the org context question at intake ----------
@@ -1278,7 +1446,8 @@ function askText(ctx, { now = new Date(), kind = null } = {}) {
 }
 function importsOf(ctx) { const d = path.join(orgDir(ctx), 'imported'); return fs.existsSync(d) ? fs.readdirSync(d).filter((f) => !f.startsWith('.')).sort() : []; }
 /** Keeps what the client already has. An org-context or brand-file folder (facts.json, voice.md...) is taken in whole; any other file is kept under imported/. */
-function importBrand(ctx, src, { now = new Date() } = {}) {
+function importBrand(ctx, src, { now = new Date(), scope = null } = {}) {
+  const destination = scopeCheck(ctx, scope); if (!destination.ok) throw new Error(destination.reason);
   if (!src) throw new Error('Say what to import: node org-context.mjs import <file or folder>.');
   if (/^https?:\/\//i.test(src)) throw new Error('This tool opens no network connection. Open the link, save the page or file, then import that. If the link is the store itself, run capture-brand-dna.mjs on it instead.');
   const from = path.resolve(src);
@@ -1288,6 +1457,8 @@ function importBrand(ctx, src, { now = new Date() } = {}) {
   const known = PARTS.map((p) => p.file);
   if (fs.statSync(from).isDirectory()) {
     const inner = [FOLDER, OLD_FOLDER].map((f) => path.join(from, f)).find((d) => fs.existsSync(d)) || from;
+    const sourceScope = readJson(path.join(inner, 'scope.json'));
+    if (fs.existsSync(path.join(inner, 'scope.json')) && !sameScope(sourceScope, scope)) throw new Error('Imported org context scope mismatch; no source content copied.');
     const parts = fs.readdirSync(inner).filter((f) => known.includes(f));
     if (parts.length) {
       for (const f of parts) { const to = path.join(dir, f); if (fs.existsSync(to)) { fs.mkdirSync(path.join(dir, 'history'), { recursive: true }); fs.copyFileSync(to, path.join(dir, 'history', `${stamp}-before-import-${f}`)); } fs.copyFileSync(path.join(inner, f), to); done.push(f); }
@@ -1310,8 +1481,8 @@ function parseArgs(argv) {
   const o = { _: [], dir: 'context' };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === '--help' || a === '-h') o.help = true; else if (a === '--json') o.json = true;
-    else if (['--dir', '--for', '--today', '--job', '--kept', '--killed', '--more', '--from', '--out'].includes(a)) { if (argv[i + 1] === undefined) throw new Error(`${a} needs a value.`); o[a.slice(2)] = argv[++i]; }
+    if (a === '--help' || a === '-h') o.help = true; else if (a === '--json') o.json = true; else if (a === '--verified') o.verified = true;
+    else if (['--dir', '--for', '--today', '--job', '--kept', '--killed', '--more', '--from', '--out', '--owner', '--workspace', '--keys'].includes(a)) { if (argv[i + 1] === undefined) throw new Error(`${a} needs a value.`); o[a.slice(2)] = argv[++i]; }
     else if (a.startsWith('--')) throw new Error(`Unknown option ${a}. Run with --help.`);
     else o._.push(a);
   }
@@ -1323,18 +1494,19 @@ function storeMain(argv = process.argv.slice(2), print = console.log) {
   const cmd = o._[0];
   if (o.help || !cmd) { print(HELP); return o.help ? 0 : 2; }
   const ctx = path.resolve(o.dir), asOf = o.today, now = asOf ? new Date(/T/.test(asOf) ? asOf : `${asOf}T12:00:00Z`) : new Date();
+  const scope = o.owner && o.workspace ? { owner_id: o.owner, workspace_id: o.workspace } : null, requiredKeys = o.keys ? o.keys.split(',').filter(Boolean) : [];
   if (Number.isNaN(now.getTime())) { console.error('--today must be a date such as 2026-11-10.'); return 2; }
   if (o.for && !(o.for in SLICE_BY_KIND)) { console.error(`Unknown kind "${o.for}". Use one of: ${Object.keys(SLICE_BY_KIND).join(', ')}.`); return 2; }
   try {
     if (cmd === 'status') {
-      const s = statusOf(ctx, { now, kind: o.for || null });
-      if (s.exists) writeIndex(ctx, now);
+      const s = statusOf(ctx, { now, kind: o.for || null, scope, requiredKeys });
+      if (s.exists && !scope) writeIndex(ctx, now);
       print(o.json ? JSON.stringify(s, null, 1) : statusText(s)); return s.ok ? 0 : 1;
     }
     if (cmd === 'slice') {
       const level = o._[1] || (o.for ? SLICE_BY_KIND[o.for] : null);
       if (!level) { console.error(`Say which slice: ${SLICES.join(', ')}. Or give --for <kind> and the right one is chosen.`); return 2; }
-      const r = sliceText(ctx, level, { now, kind: o.for || null });
+      const r = sliceText(ctx, level, { now, kind: o.for || null, scope, requiredKeys, verifiedOnly: !!o.verified });
       if (!o.out || !r.ok) { print(r.text); return r.ok ? 0 : 1; }
       // --out writes the slice as UTF-8 itself, so a shell redirect cannot change its encoding.
       fs.mkdirSync(path.dirname(path.resolve(o.out)), { recursive: true }); fs.writeFileSync(path.resolve(o.out), `${r.text}\n`);
@@ -1348,7 +1520,7 @@ function storeMain(argv = process.argv.slice(2), print = console.log) {
       print([`Org context at ${r.dir} (${r.written.length ? `wrote ${r.written.join(', ')}` : 'already up to date'}). What went where:`, ...r.mapping.map((m) => `- ${m}`), ...(r.changes.length ? ['Changed since last time:', ...r.changes.slice(0, 12).map((c) => `- ${c.text}`)] : []), `Now run: node ${toolPath('org-context.mjs')} status`].join('\n')); return 0;
     }
     if (cmd === 'ask') { const r = askText(ctx, { now, kind: o.for || null }); print(o.json ? JSON.stringify(r, null, 1) : r.text); return 0; }
-    if (cmd === 'import') { const r = importBrand(ctx, o._[1], { now }); print([`Kept in ${r.dir}: ${r.done.join(', ') || 'nothing'}.`, r.next].join('\n')); return r.done.length ? 0 : 1; }
+    if (cmd === 'import') { const r = importBrand(ctx, o._[1], { now, scope }); print([`Kept in ${r.dir}: ${r.done.join(', ') || 'nothing'}.`, r.next].join('\n')); return r.done.length ? 0 : 1; }
     console.error(`Unknown command "${cmd}". Use status, slice, learn, migrate, ask or import.`); return 2;
   } catch (e) { console.error(e.message); return 2; }
 }
@@ -1379,15 +1551,18 @@ function parseArgs(argv) {
   return a;
 }
 const STORE_COMMANDS = new Set(['status', 'slice', 'learn', 'migrate', 'import']);
-export const COMMANDS = Object.freeze(['template', 'status', 'slice', 'build', 'check', 'gate', 'ask', 'learn', 'migrate', 'import', 'source', 'ads', 'reviews', 'segments', 'creatives', 'plan', 'voice-check']);
+export const COMMANDS = Object.freeze(['template', 'status', 'slice', 'build', 'check', 'gate', 'ask', 'learn', 'migrate', 'import', 'source', 'ads', 'reviews', 'segments', 'creatives', 'plan', 'voice-check', 'bind', 'remember', 'resolve', 'memory']);
 export function main(argv = process.argv.slice(2), print = console.log) {
   const a = parseArgs(argv), [cmd, ...rest] = a._;
   if (a.help || a.h) { print(ORG_HELP); return 0; }
   const ctx = path.resolve(String(a.dir || 'context')), now = a.today ? new Date(`${a.today}T12:00:00Z`) : new Date(), kind = typeof a.for === 'string' ? a.for : null;
+  const scope = typeof a.owner === 'string' && typeof a.workspace === 'string' ? { owner_id: a.owner, workspace_id: a.workspace } : null, requiredKeys = typeof a.keys === 'string' ? a.keys.split(',').filter(Boolean) : [];
   // An older context/brand-file/ folder keeps working; say once how to move it (on stderr, so --json stays clean).
   const note = cmd && cmd !== 'migrate' && cmd !== 'template' ? moveNote(ctx) : null;
   if (note) console.error(note);
   try {
+    // A bound context never exposes or modifies another owner's material through the CLI.
+    if (!['template', 'bind'].includes(cmd)) { const checked = scopeCheck(ctx, scope); if (!checked.ok) throw new Error(checked.reason); }
     if (cmd === 'migrate') {
       const m = moveOldFolder(ctx);
       if (m.moved) print(['MOVED:', ...m.done.map((d) => `- ${d}`), ''].join('\n'));
@@ -1397,13 +1572,17 @@ export function main(argv = process.argv.slice(2), print = console.log) {
     }
     if (STORE_COMMANDS.has(cmd)) return storeMain(argv, print);
     switch (cmd) {
+      case 'bind': print(JSON.stringify(bindContextScope(ctx, scope))); return 0;
+      case 'remember': { if (!rest[0]) throw new Error('remember <record.json>'); print(JSON.stringify(rememberFact(ctx, JSON.parse(fs.readFileSync(rest[0], 'utf8')), { scope, now }))); return 0; }
+      case 'resolve': print(JSON.stringify(resolveFact(ctx, { scope, now, factKey: a.key, action: a.action, value: a.value, source: a.source, kind: a.kind || null, supersedes: a.supersedes || null }))); return 0;
+      case 'memory': { const memory = readFactMemory(ctx, { scope, now, requiredKeys }); print(JSON.stringify(memory, null, 2)); return memory.ready ? 0 : 1; }
       case 'template': print(templateText()); return 0;
       case 'build': { const r = buildBrain(ctx, { from: typeof a.from === 'string' ? a.from : null, site: typeof a.site === 'string' ? a.site : null, now }); print(['BUILT:', ...r.done.map((d) => `- ${d}`), ...(r.skipped.length ? ['SKIPPED:', ...r.skipped.map((d) => `- ${d}`)] : []), '', checkText(r.check)].join('\n')); return 0; }
-      case 'gate': { const r = gateBrain(ctx, { now, kind }); print(r.text); return r.ok ? 0 : 1; }
+      case 'gate': { const r = gateBrain(ctx, { now, kind, scope, requiredKeys }); print(r.text); return r.ok ? 0 : 1; }
       case 'check': { const r = checkBrain(ctx, { now, kind }); print(a.json ? JSON.stringify(r, null, 2) : checkText(r)); return r.ready ? 0 : 1; }
       case 'ask': { const r = askBrain(ctx, { now, kind }); print(a.json ? JSON.stringify(r, null, 1) : r.text); return 0; }
       case 'source': { if (rest.length < 2) throw new Error('source <what> <where> --status provided|public|no-access'); print(addSource(ctx, rest[0], rest[1], { status: String(a.status || 'provided'), note: typeof a.note === 'string' ? a.note : '', now })); return 0; }
-      case 'ads': { if (!rest[0]) throw new Error('ads <file> --source library|account|competitor:<name>'); const r = ingestAds(ctx, readRows(rest[0]), { source: String(a.source || 'library'), now }); print(`Took ${r.ads} ads into ${r.file}. ${r.patterns.proven} ran 30 days or more. Median primary text ${r.patterns.body_words_median} words.`); return 0; }
+      case 'ads': { if (!rest[0]) throw new Error('ads <file> --source library|account|competitor:<name>'); const r = ingestAds(ctx, readRows(rest[0]), { source: String(a.source || 'library'), now }); print(`Took ${r.ads} ads into ${r.file}. ${r.patterns.long_running} ran 30 days or more; performance is unknown. Median primary text ${r.patterns.body_words_median} words.`); return 0; }
       case 'reviews': { if (!rest[0]) throw new Error('reviews <file>'); const r = ingestReviews(ctx, readRows(rest[0]), { now }); print(`Read ${r.reviews} reviews into foundation/why-they-buy.md and the voice bank. Top themes: ${r.themes.slice(0, 4).map((t) => `${t.id} ${t.n}`).join(', ')}.`); return 0; }
       case 'segments': { if (!rest.length) throw new Error('segments <breakdown.csv> [more.csv ...]'); const r = ingestSegments(ctx, rest, { now }); print(`Wrote data/segments.md: ${r.tables.join('; ')}. Under-spent winners: ${r.winners.length}. Over-spent: ${r.over.length}.`); return 0; }
       case 'creatives': { if (!rest[0]) throw new Error('creatives <ad_results.csv> [--copy <creatives file>]'); const r = ingestCreatives(ctx, rest[0], { copyFile: typeof a.copy === 'string' ? a.copy : null, now }); print(`Wrote data/creatives.md: ${r.judged} of ${r.ads} ads had enough data to judge.`); return 0; }

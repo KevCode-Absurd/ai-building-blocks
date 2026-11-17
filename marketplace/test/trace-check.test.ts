@@ -66,11 +66,13 @@ test("a trace with one query per signal and decision, citing pack cards, passes"
   assert.match(r.out, /clean: 5 queries for 3 signals and 2 decisions/);
 });
 
-test("a short trace fails: fewer queries than signals plus decisions", () => {
+test("fewer queries than signals prompts evidence review without forcing redundant retrieval", () => {
   const short = GOOD.split("\n").slice(0, 4).join("\n");
   const r = run(pack({ ...base, "context/trace.md": short }));
-  assert.equal(r.code, 1);
+  assert.equal(r.code, 0);
   assert.match(r.out, /2 queries for 3 signals and 2 decisions/);
+  assert.match(r.out, /review source-to-decision coverage, including supplied business records/);
+  assert.match(r.out, /query count cannot establish evidence completeness/);
 });
 
 test("Q-style blocks count as queries too", () => {

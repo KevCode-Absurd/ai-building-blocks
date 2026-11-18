@@ -132,8 +132,11 @@ const BUILD_README = `## Run me end to end
 
 The \`build\` folder sets me up to do the work, not only advise: my processes and the agents I hand work to, an approval gate that holds every send, spend and publish until you say yes, step by step access guides, and a daily data pipeline. Open the \`build\` folder in Claude Code and say: **"Build my store's agent team from BUILD.md."** Claude does it with you, one step at a time. Start with \`build/BUILD.md\`, the part for you, the owner.`;
 
-/** The tools every agent pack carries (zip and files.json), in this order, and what each is for. */
-export const TOOL_FILES: { name: string; purpose: string }[] = [
+/** Available pack tools, in order. personaIds restricts optional tools; absent means the existing shared-tool rules apply. */
+export const TOOL_FILES: { name: string; purpose: string; personaIds?: readonly string[] }[] = [
+  { name: "email-draft-preflight.mjs", personaIds: ["lucia-email-copy"], purpose: "Offline local-preview-v1 email field, fallback, escaping and URL checks. Produces editable synthetic previews and separate local, provider and activation statuses. Never verifies a sending provider; read EMAIL-DRAFT-PREFLIGHT.md first." },
+  { name: "EMAIL-DRAFT-PREFLIGHT.md", personaIds: ["lucia-email-copy"], purpose: "Run the local email draft check, understand its limits and prepare a reviewable provider handoff." },
+  { name: "email-draft-example.json", personaIds: ["lucia-email-copy"], purpose: "Synthetic local-preview-v1 manifest example; copy into context and replace with the authorized draft and field contract." },
   { name: "performance-review.mjs", purpose: "Checks comparable measured performance runs and guardrail regressions. Local lab evidence does not establish field performance or business lift." },
   { name: "integration-readback.mjs", purpose: "Compares expected external settings with captured provider readback and explicit execution evidence. Diagnostic only; never grants permission or makes external changes." },
   { name: "integration-readback-guide.md", purpose: "How to capture and compare exact scoped provider settings without treating local mocks as live verification." },
@@ -721,7 +724,7 @@ function contextReadme(jts: JobType[], tools: Set<string>, origin: string, brand
   // The org context is every pack's client memory (EVERY_PACK_TOOLS); the site capture stays with brand-facing work.
   const capture = brand || [...BRAND_TOOLS].some(t => tools.has(t) && !EVERY_PACK_TOOLS.has(t));
   const brandFile = capture || tools.has("org-context.mjs") || tools.has("brand-file.mjs");
-  const listed = TOOL_FILES.filter(t => brand || tools.has(t.name));
+  const listed = TOOL_FILES.filter(t => t.personaIds ? tools.has(t.name) : brand || tools.has(t.name));
   const out = [
     "# Context: what to capture before the work",
     "",
@@ -1383,12 +1386,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const brand = brandFacing(department, families);
   const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? "", ...personaVerticalFiles(persona, input.vertical).map(f => f.content)].join("\n");
   const toolDrafts: Draft[] = agent
-    ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || EVERY_PACK_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
+    ? TOOL_FILES.filter(t => (!t.personaIds || t.personaIds.includes(persona.id)) && input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || EVERY_PACK_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
       .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))
     : [];
   const toolNames = new Set(toolDrafts.map(d => d.path.slice("tools/".length)));
   /** The tools this build has at all: what a brand-facing agent pack carries. */
-  const allTools = new Set(agent ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim()).map(t => t.name) : []);
+  const allTools = new Set(agent ? TOOL_FILES.filter(t => (!t.personaIds || t.personaIds.includes(persona.id)) && input.tools?.[t.name]?.trim()).map(t => t.name) : []);
 
   // The toolbox (toolbox.ts): with a toolbox.json in the role kit, toolbox.md is the curated "when this, use that"
   // list and the pack carries the full text of every library item it names. Without one, toolbox.md is the plain

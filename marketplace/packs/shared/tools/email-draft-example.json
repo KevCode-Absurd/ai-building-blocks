@@ -1,0 +1,29 @@
+{
+  "schema": "local-preview-v1",
+  "notice": "Synthetic example only. No actual brand, customer, offer or sender is represented.",
+  "fields": {
+    "first_name": { "type": "string", "required": false, "fallback": "there" },
+    "product_name": { "type": "string", "required": true }
+  },
+  "profiles": [
+    { "id": "full", "synthetic": true, "values": { "first_name": "Sample & Friend", "product_name": "Example bottle" } },
+    { "id": "missing_name", "synthetic": true, "values": { "product_name": "Example bottle" } }
+  ],
+  "messages": [
+    {
+      "id": "welcome_one",
+      "subject": "Welcome, {{first_name}}",
+      "preheader": "Get to know {{product_name}}.",
+      "body": "Hi {{first_name}},\n\nStart with the product details and choose what fits your routine.",
+      "cta": { "label": "View the example", "url": "https://example.test/products/example-bottle" },
+      "source_refs": ["Synthetic example; replace with authorized brand/product evidence before using real copy"]
+    }
+  ],
+  "sender": { "provider": "not connected", "state": "disconnected", "source_ref": "Synthetic fixture: no ESP connection" },
+  "activation_dependencies": [
+    "Actual sender and provider field mapping",
+    "Approved product destination and current product facts",
+    "Business identity, footer and unsubscribe endpoint",
+    "Consent and sequence eligibility; no send list supplied"
+  ]
+}

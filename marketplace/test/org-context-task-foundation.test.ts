@@ -26,6 +26,42 @@ function supportFoundation(f: ReturnType<typeof fixture>) {
   f.put('foundation/dos-donts.md', ['Protect customer identifiers.', 'Never request passwords.', 'Never publish addresses.', 'Escalate exceptions to the owner.', 'Sending requires authorization.']);
   f.put('sources.md', ['Synthetic owner policy fixture.', 'Synthetic approved reply fixture.', 'Synthetic case record fixture.']);
 }
+
+test('existing prose produces actionable format diagnostics without relaxing evidence gates', t => {
+  const f = fixture(t); supportFoundation(f);
+  const file = path.join(f.ctx, 'org-context/foundation/claims.md');
+  const valid = fs.readFileSync(file, 'utf8');
+  const prose = valid.split('\n').filter(line => line.startsWith('- ')).map(line => line.slice(2)).join(' ');
+  fs.writeFileSync(file, `Reviewed 2026-11-18. ${prose}\n`);
+  const claims = () => m.checkBrain(f.ctx, { now, kind: 'support' }).parts.find((p: any) => p.id === 'claims');
+  assert.equal(claims().file_exists, true);
+  assert.match(claims().format_issue, /file exists.*bullet or table records/);
+  assert.equal(claims().review_date_missing, true);
+  const gate = m.gateBrain(f.ctx, { now, kind: 'support' });
+  assert.equal(gate.ok, false);
+  assert.match(gate.text, /foundation\/claims\.md \(file present; no recognized records\)/);
+  assert.match(gate.text, /template claims/);
+  assert.match(gate.text, /after actually reviewing/);
+  assert.match(gate.text, /Never invent records/);
+  assert.doesNotMatch(gate.text, /foundation\/claims\.md \(missing\)/);
+  const packet = m.foundationSlice(f.ctx, 'facts', { now, kind: 'support' }).blocks.find((p: any) => p.id === 'claims');
+  assert.ok(packet.text.includes(prose), 'unrecognized source text and restrictions remain available');
+  assert.match(packet.text, /FILE PRESENT; NO RECOGNIZED RECORDS/);
+  const script = fileURLToPath(new URL('../../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs', import.meta.url));
+  const cli = spawnSync(process.execPath, [script, 'gate', '--for', 'support', '--dir', f.ctx, '--today', '2026-11-18'], { encoding: 'utf8' });
+  assert.equal(cli.status, 1);
+  assert.match(cli.stdout, /file present; no recognized records/);
+  fs.writeFileSync(file, valid.replace('Updated ', 'Reviewed '));
+  assert.equal(claims().format_issue, null, 'recognized records do not acquire a formatting failure');
+  assert.equal(claims().state, 'stale');
+  assert.equal(m.gateBrain(f.ctx, { now, kind: 'support' }).ok, false);
+  fs.writeFileSync(file, valid);
+  assert.equal(m.gateBrain(f.ctx, { now, kind: 'support' }).ok, true, 'the same reviewed facts pass in the documented format');
+  fs.unlinkSync(file);
+  assert.equal(claims().file_exists, false);
+  assert.equal(claims().format_issue, null);
+  assert.equal(claims().state, 'missing');
+});
 test('support needs policy, communication and sources without ad material; unknown kinds stay conservative', t => {
   const f = fixture(t);
   const report = m.checkBrain(f.ctx, { now, kind: 'customer response' });

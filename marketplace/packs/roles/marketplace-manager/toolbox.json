@@ -66,6 +66,7 @@
       "task": "Work out what the seller keeps on each channel",
       "kind": "analysis",
       "items": [
+        { "ref": "kit:workflows/channel-cost-coverage", "use": "check", "when": "Before comparing channels, reconcile supplied shipping, packaging, return and fee assumptions" },
         { "ref": "kit:prompts/what-you-keep-sheet", "use": "build", "when": "Before listing on a new marketplace or app, or when payouts feel thin" },
         { "ref": "kit:skills/channel-profit-sheet", "use": "build", "when": "When you need profit per item on each channel, on the fee base each one really uses" },
         { "ref": "library:product-margin-checker", "type": "skill", "use": "check", "when": "When one item's price is in doubt and you need its true margin from price and every cost" },

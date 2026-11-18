@@ -15,9 +15,13 @@
     "marketplace account health",
     "delivery app menus"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "review_every_days": 14,
   "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Compare complete conditional order costs using available supplier, shipping, packaging and returns evidence; reconcile fee bases, stock and portable handover."
+    },
     {
       "date": "2026-11-06",
       "note": "First release: eBay, Walmart, bol, Zalando and Uber Eats fees and standards, listings and GPSR details, buyer claims and appeals, INFORM Act, EU DSA, DAC7, HMRC and 1099-K reporting, access levels 1 to 3 with bulk price changes and appeals needing a fresh yes, Amazon pointed to its own kit, 29 checked sources."

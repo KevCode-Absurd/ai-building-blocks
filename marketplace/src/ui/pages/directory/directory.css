@@ -343,6 +343,14 @@
 .dir-ecom-stages { margin-top: 28px; }
 .dir-ecom-stage .dir-ecom-subhead { margin-bottom: 4px; }
 .dir-ecom-stage-summary { margin: 0 0 16px; color: var(--text-2); max-width: 44em; }
+@media (max-width: 520px) {
+  /* The one-column phone roster has dozens of offscreen cards. Let the browser defer
+     their layout/paint while retaining every card for find-in-page and keyboard focus.
+     480px estimates the compact portrait/head, tagline, three outcomes and footer;
+     auto retains each card's measured height after its first render. Contain individual
+     cards rather than whole stages so initial height corrections stay small. */
+  .dir-ecom-stage .dir-card { content-visibility: auto; contain-intrinsic-block-size: auto 480px; }
+}
 .dir-ecom-note { max-width: 44em; padding: 18px 20px; background: var(--panel); border: 1px dashed var(--line-2); border-radius: var(--radius); }
 .dir-ecom-note strong { display: block; margin-bottom: 4px; }
 .dir-ecom-note p { margin: 0; color: var(--text-2); }

@@ -41,6 +41,13 @@ test("an agent pack carries its build folder under build/, with BUILD.md its own
   writeFileSync(fixture, JSON.stringify({ figures: [{ id: "orders", value: 10, formula: "7 + 3", unit: "orders", source: "synthetic fixture" }] }));
   const numericOutput = execFileSync(process.execPath, [path.join(DIR, "files/tools/quality/numbers.cjs"), fixture], { encoding: "utf8", windowsHide: true });
   assert.match(numericOutput, /clean/);
+  const dateDir = mkdtempSync(path.join(tmpdir(), "build-date-evidence-"));
+  const dated = path.join(dateDir, "report.md"), source = path.join(dateDir, "source.md"), brief = path.join(dateDir, "brief.md");
+  writeFileSync(dated, "Publication date: 3 June 2026.");
+  writeFileSync(source, "Published 2026-06-03.");
+  writeFileSync(brief, "Review the available research.");
+  const dateOutput = execFileSync(process.execPath, [path.join(DIR, "files/tools/quality/leakcheck.cjs"), dated, "--brief", brief, "--date-source", source], { encoding: "utf8", windowsHide: true });
+  assert.match(dateOutput, /clean/i);
   assert.ok(build["files/tools/verify-patch.mjs"]);
   assert.ok(build["files/tools/automation-review.mjs"]);
   for (const name of ["performance-review.mjs", "integration-readback.mjs", "integration-readback-guide.md", "media-delivery.mjs"]) {

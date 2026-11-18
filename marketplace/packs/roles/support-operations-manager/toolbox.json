@@ -101,6 +101,7 @@
       "id": "serious-complaint",
       "task": "Reply to a serious complaint",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:crisis-response-planner", "type": "skill", "use": "brief", "when": "When the complaint shows a defect or failure that needs a plan beyond one reply" },
         { "ref": "kit:prompts/serious-complaint-reply", "use": "build", "when": "When the reply needs an apology that fits the facts, a clear next step and no excuses" },
@@ -124,6 +125,7 @@
       "id": "apology-templates",
       "task": "Write a set of apology and complaint templates",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:prompts/serious-complaint-reply", "use": "brief", "when": "Before the set, to fix what a good serious reply contains so templates follow it" },
         { "ref": "library:apology-email-writer", "type": "skill", "use": "build", "when": "When each common failure needs its own plain apology with what happens next" },
@@ -135,6 +137,7 @@
       "id": "outage-updates",
       "task": "Prepare customer updates for an outage or delay",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:outage-incident-leader", "type": "skill", "use": "brief", "when": "When the outage is live and severity, roles and a timeline must be set first" },
         { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When customers need a first notice, progress updates and an all-clear" },
@@ -147,6 +150,7 @@
       "id": "client-service-levels",
       "task": "Write a client-facing service level schedule",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:skills/service-levels-and-staffing", "use": "brief", "when": "Before promising anything, to check the team can meet the targets from its own volume" },
         { "ref": "kit:prompts/client-service-level-schedule", "use": "build", "when": "When clients must be told response times, what is in scope and what happens on a miss" },

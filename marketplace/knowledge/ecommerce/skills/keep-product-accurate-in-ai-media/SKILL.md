@@ -25,7 +25,7 @@ description: "A pass or fail check that catches wrong logos, shapes, colours, la
 Required:
 
 1. **The assets** at full resolution, each with an ID, the prompt used and the tool.
-2. **Real product photos** of the version that ships today: front, back, sides, label close-up, in hand for scale. If none exist, photograph the product on a phone in daylight first.
+2. **Real product photos** with exact source paths, hashes, dimensions and any merchant evidence linking them to the variant: front, back, sides, label close-up, in hand for scale as available. Use the supplied view for what it actually shows; missing views block only the shots or claims that need them. A filename or visual resemblance does not confirm a current SKU.
 3. **Product facts:** size, colours, materials, parts list and the exact label text, from `product-claims-profile`.
 4. **The logo file** and brand colour values.
 5. **Where each asset will run** and the live product page URL.
@@ -36,22 +36,22 @@ Access: read only. Nothing is uploaded or published by this skill; a pass hands 
 
 ## Before you start: the gates
 
-1. **Truth source exists.** Real photos of the current product are on hand. Fail: no check is possible; photograph the product first.
+1. **Truth source exists.** A real source photograph is on hand for the view being checked. No photograph blocks visual comparison; make the capture brief instead. Missing current-SKU mapping blocks that SKU claim or release, not a private layout that explicitly preserves the supplied source.
 2. **Rights and people.** Any person in the asset is a consenting model or a fictional character; no real person's likeness without consent. Fail: block.
 3. **Disclosure plan.** Realistic generated scenes or people are marked for each platform's AI disclosure [MCR-6064]; Meta may label assets it detects as AI or that the uploader discloses [MCR-6063].
-4. **Money.** Gross profit per order is known from delivered costs [MEA-0037]. Generation and repair time count as production cost [MCR-0023]; a product that looks different in the ad drives returns that eat that margin.
+4. **Tool and cost boundary.** Respect the authorized tools and spending limit. Use the host's authorized image tools and their instructions, including the installed imagegen skill where available. If the user requires native subscription tools, keep that restriction; do not switch to a paid API when forbidden. Profit data can inform production priorities but is not required to check fidelity or deliver a local source-preserving layout.
 
 ## Steps
 
 ### 1. Build the truth card
 
-**Admit only honest photos first.** Check each candidate reference photo at full size with three questions, and keep it only if all three are yes: is it this exact variant (not a sibling size, colour or flavour, a mock-up, a render or a generated picture); can you read the smallest word you will need; is the colour honest (even, neutral light, no filter, no coloured backdrop throwing colour onto the product)? A photo you would have to edit is out, except for cropping away a sticker or caption. One wrong photo leaks into every generated picture, so leave it out rather than keep it "for angles".
+**Admit evidence for the feature it can establish.** Inspect each reference at full size: what links it to this variant, which details are readable, and whether lighting permits colour assessment. Reject sibling variants, mock-ups and generated pictures as product-truth references. Preserve a supplied real photograph even if SKU mapping, fine detail or colour calibration is absent; label those limits and use it only for the visible appearance and source-preserving layouts it supports. Do not claim a current SKU, physical colour or public-use rights from appearance alone.
 
 One page per product variant, with a source tag on every line (the photo's file name, a brand fact, or `MISSING`):
 
 - Three to five reference photos.
 - Size, with a common object for scale (hand, phone, cup).
-- Colours by name and value, sampled from real photos in daylight (`product-claims-profile` stores them).
+- Colours by observed name and sampled image value, with calibration limits; a hex sample from an uncalibrated photograph does not establish physical product colour (`product-claims-profile` stores verified facts separately).
 - Material and finish: matte, gloss, brushed, transparent, fabric weave.
 - Parts count: buttons, straps, holes, compartments, pieces in a set.
 - Label text transcribed letter by letter, including small print, and logo position.
@@ -68,7 +68,7 @@ One page per product variant, with a source tag on every line (the photo's file 
 
 ### 2. Sample the frames
 
-- **Images:** the whole image at full size and at phone size.
+- **Images:** the whole image at native size, matched source/output crops of the critical features, and the final composition at phone size. For jewellery inspect outer/inner silhouette, perspective, settings/prongs/bezel thickness, connectors, visible stone count and arrangement, facet boundaries, metal edges and finish. Mark hidden or blurred features uncheckable; do not infer total count from a partial view. A phone view or broadly similar outline cannot establish fine-feature fidelity.
 - **Video:** the first frame, the last frame, one frame every half second, and every frame where the product moves, rotates, opens, or is touched, or where a face turns. Export these as stills and put them beside the truth card.
 
 ### 3. Run the twelve checks
@@ -90,9 +90,9 @@ One page per product variant, with a source tag on every line (the photo's file 
 
 ### 4. Grade each defect
 
-- **Block:** checks 1, 5, 6, 7, 8, 9, 11 or 12 fail, or colour is clearly wrong. The asset cannot ship as is.
+- **Block:** any product-identity check fails, including altered fine settings/facets, material, finish, proportions, label, logo, count or colour; also block invented claims or unsafe/unconsented context. The asset cannot ship as is or count as a finished product-preserving private-review variant. Mark observed changes **fail**, and missing/unclear evidence **blocked**; these are different findings.
 - **Fix:** background artefacts, small hand errors away from the product, minor colour drift in the scene (not on the product).
-- **Pass:** no defects at full size or phone size.
+- **Pass:** the inspected features match at full size, critical detail crops and phone size, with no unresolved required fidelity check. Record scope; this is not proof of SKU, rights, physical colour or channel acceptance. If no independent reviewer is available, say SAME-CONTEXT and leave independent review pending without withholding useful local source-preserving work.
 
 A blocked asset with a generated seal, rating or "clinically proven" badge is a false claim, not a design flaw. A review or rating made up by a generator breaks the US fake review rule [MCR-6045].
 
@@ -101,16 +101,18 @@ A blocked asset with a generated seal, rating or "clinically proven" badge is a 
 | Defect | Repair |
 |---|---|
 | Label, logo or text wrong | Remove generated text; set real text as type in an editor, or composite the real label photo |
-| Product shape or colour wrong, scene fine | Composite the real product photo over the generated scene; match light and shadow |
+| Product shape, settings, facets or colour wrong, scene fine | Exclude the drifted version from finished deliverables; compose with the untouched source and re-check. If a faithful cutout is unavailable under the allowed tools, put the full original photo in an editable layout panel |
 | Product wrong across a video | Replace the shot with real phone footage, or regenerate from an approved still |
 | Extra objects or seals | Crop, mask or paint out; re-check the edges |
 | Person problem | Remove the person or use a consented reference; no patching |
 
 Re-run all twelve checks after any repair.
 
+An instruction to preserve pixels does not guarantee that a generative editor will do so, even for a crop-only edit. Do not spend repeated attempts disguising the same drift as a new private draft. Keep failed generations only as separate rejected evidence if useful. Lead the handoff with the actual source-preserving artifacts and exact unmet shots, not disclaimers beside changed products. A separate product-free generated background can be useful where permitted, but never generate a new product angle, worn scale, macro detail or material evidence. Capture those photographs for real. Keep source assets untouched in editable HTML/SVG/layout files, preserve aspect ratio, and report display scaling and effective source resolution. Extra output pixels are not extra captured detail.
+
 ### 6. Use two reviewers
 
-The maker checks first. A second person who did not make it checks again, on a phone held at reading distance and on a large screen at full size. Both sign. Disagreement means block until resolved.
+The maker checks first. When available, a second person who did not make it checks again, on a phone held at reading distance and on a large screen at full size. Record both reviewers; disagreement means block until resolved. When independent review is unavailable, mark it pending and identify the actual maker review as SAME-CONTEXT. Complete useful private source-preserving layouts without inventing a sign-off or calling them cleared for commercial release.
 
 ### 7. Log the prompts
 
@@ -125,13 +127,13 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 ## Checks before you hand it over
 
 - A truth card exists for the exact variant in the asset.
-- Every reference photo passed the three admission questions, and every truth card line has a source or `MISSING`.
+- Every reference's supported features and limits are recorded, and every truth card line has a source or `MISSING`.
 - The lock lines appear word for word in every prompt used for the asset.
 - Video frames were sampled by the rule, including every frame where the product moves.
 - All twelve checks have a result per asset.
 - No asset with a block defect is marked pass.
 - Repaired assets were re-checked in full.
-- Two reviewers signed, one of them not the maker.
+- Reviewer identity and independence are recorded; an unavailable second reviewer remains pending, never fabricated.
 - Assets with realistic generated people or scenes are marked for AI disclosure.
 - Drifting prompts are logged.
 
@@ -147,6 +149,8 @@ For every blocked asset, record the prompt, tool and what drifted. Mark the prom
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 **Defect log:** Asset ID, Frame or area, Defect, Grade, Repair route, Re-check result.
+
+**Fidelity evidence and delivery:** exact source/output paths and SHA-256, compared region, observed feature, pass/fail/blocked and final disposition. Finished source-preserving layouts and any permitted exports are separate from rejected attempts. Give a remaining-shot brief mapping each unsupported buyer question to the real angle/detail, lighting/colour target, required resolution and merchant fact or rights evidence needed. Honest missing evidence is not a reason to substitute generated product features.
 
 **Sign-off:** Maker, Second reviewer, Date, AI disclosure needed (Y or N).
 

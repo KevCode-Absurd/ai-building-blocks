@@ -7,6 +7,7 @@
       "id": "commercial-proposal",
       "task": "Write a commercial proposal for one deal",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:skills/client-proposal", "use": "build", "when": "When you have call notes, the buyer's brief and the price list and need the full proposal" },
         { "ref": "library:turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature", "type": "workflow", "use": "brief", "when": "When you start from a sales call and want the follow-up, costing, margin check and dates in order" },
@@ -20,6 +21,7 @@
       "id": "tender-answers",
       "task": "Draft answers to tender and RFP questions",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:skills/tender-and-rfp-answers", "use": "build", "when": "When the questions are listed and you must answer each from the client's own facts" },
         { "ref": "library:rfp-response-builder", "type": "skill", "use": "brief", "when": "Before drafting, to sort requirements into must-have and scored and see where proof is thin" },
@@ -68,6 +70,7 @@
       "id": "executive-summary",
       "task": "Write the executive summary a decision maker reads first",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:prompts/executive-summary", "use": "build", "when": "When the answers are drafted and you need the one or two pages that carry the whole case" },
         { "ref": "library:agency-sales-proposal-strategist", "type": "agent", "use": "explore", "when": "When you want a second five-part summary draft to compare with your own" },
@@ -104,6 +107,7 @@
       "id": "grant-draft",
       "task": "Draft a grant application or letter of inquiry",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:skills/grant-application", "use": "build", "when": "When the plan is agreed and each section must be written to the funder's headings and limits" },
         { "ref": "library:nonprofit-grant-proposal-writer", "type": "skill", "use": "explore", "when": "When you want a second draft built straight from the funder rules, programme facts and budget" },
@@ -117,6 +121,7 @@
       "id": "freelance-bid-replies",
       "task": "Write short replies to freelance job posts",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:prompts/freelance-bid-reply", "use": "build", "when": "When you paste a job post from a marketplace and need a short reply that shows fit fast" },
         { "ref": "library:capability-pitch-letter-writer", "type": "skill", "use": "explore", "when": "When you want a different shape to try: a numbered offer that ends in a proof you will run" },
@@ -253,6 +258,7 @@
       "id": "follow-up-and-negotiation",
       "task": "Follow up a sent proposal and prepare the price talk",
       "kind": "email",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "library:follow-up-email-sequence-writer", "type": "prompt", "use": "build", "when": "When a proposal has gone quiet and each follow-up needs a new reason and a stop rule" },
         { "ref": "library:stalled-deal-indecision-checker", "type": "skill", "use": "brief", "when": "Before chasing, to work out if the buyer doubts you, is still comparing or fears a mistake" },

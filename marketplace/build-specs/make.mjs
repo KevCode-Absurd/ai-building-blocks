@@ -30,7 +30,7 @@ const KIT = [
   ["kit/transitions.mjs", "agent/transitions.mjs", "the failure table: per process, the last step that went well against the first thing that went wrong"],
   ["kit/trace.test.mjs", "agent/trace.test.mjs", "tests for the trace, its checks and the failure table"],
   ["agents.json", "agent/agents.json", "the agents' ids and names, so process pages show names"],
-  ...["copy-check.cjs", "check-logo-contrast.cjs", "numbers.cjs", "financial-ledger.cjs", "readability.cjs", "proof.cjs", "leakcheck.cjs", "render.cjs"].map(f =>
+  ...["copy-check.cjs", "check-logo-contrast.cjs", "numbers.cjs", "financial-ledger.cjs", "readability.cjs", "proof.cjs", "leakcheck.cjs", "date-evidence.cjs", "render.cjs"].map(f =>
     [`../packs/shared/tools/quality/${f}`, `tools/quality/${f}`, "a quality check the processes run (plain Node, no packages)"]),
   ["../packs/shared/tools/quality/FINANCIAL.md", "tools/quality/FINANCIAL.md", "source-pinned financial ledger contract and limits"],
   ["../packs/shared/tools/commerce-math.mjs", "tools/commerce-math.mjs", "deterministic commerce and capacity calculations"],

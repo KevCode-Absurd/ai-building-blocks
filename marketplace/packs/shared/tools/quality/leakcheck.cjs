@@ -5,7 +5,7 @@
 // --options-requested accepts alternates (a "Runner-up:" line, "(test: ...)" in a subject or headline) only when the
 //   brief asks for options.
 // --customer-copy treats every line as copy a customer or candidate reads (for the evidence warning).
-// --date-source <file> accepts exact ISO dates occurring in a declared evidence file; repeat for multiple files.
+// --date-source <file> accepts unambiguous full dates across formats, preserving the year; repeat for multiple files.
 // --brief checks the work against the brief it answers. It fails on a calendar date the brief does not give, on a
 //   "Bolder move" heading or bold label in a copy job (--profile names a copy family, or --customer-copy), and on
 //   describe-not-write lines ("use a real", "a real ticket from the last", "pick one from", "take the quiz", "[X]",
@@ -17,6 +17,7 @@
 // and brief rules.
 const fs = require('fs');
 const path = require('path');
+const { dateOccurrences, sourceDateKeys, dateEvidenceForMatch } = require('./date-evidence.cjs');
 const usage = 'Usage: node leakcheck.cjs <file> [--requested-template] [--options-requested] [--customer-copy] [--brief <brief>] [--numbers <numbers.json>] [--profile <family>]';
 const args = process.argv.slice(2);
 const flags = new Set(), values = {}, files = [], dateSources = [];
@@ -37,14 +38,14 @@ if (!file) { console.error(usage); process.exit(2); }
 let brief = null;
 if (values.brief) { try { brief = fs.readFileSync(values.brief, 'utf8'); } catch { console.error('Cannot read the brief ' + values.brief); process.exit(2); } }
 if (values.numbers && !fs.existsSync(values.numbers)) { console.error('Cannot read the numbers ledger ' + values.numbers); process.exit(2); }
-// Exact source dates are evidence, not invented deadlines. This occurrence check
+// Unambiguous full source dates match across formats, preserving the year. This occurrence check
 // does not authenticate the source or prove the date's meaning in the deliverable.
 const sourceDates = new Set();
 for (const source of dateSources) {
   try {
     const stat = fs.statSync(source);
     if (!stat.isFile() || stat.size > 4_000_000) throw Error('date source must be a file of at most 4 MB');
-    for (const m of fs.readFileSync(source, 'utf8').matchAll(/\b20\d{2}-\d{2}-\d{2}\b/g)) sourceDates.add(m[0]);
+    for (const key of sourceDateKeys(fs.readFileSync(source, 'utf8'))) sourceDates.add(key);
   } catch (e) { console.error(`Cannot read date source ${source}: ${e.message}`); process.exit(2); }
 }
 let text;
@@ -75,9 +76,11 @@ const DATE_FINDERS = [
 ];
 const datesIn = line => {
   const out = [];
+  const occurrences = dateOccurrences(line);
   for (const [re, pick] of DATE_FINDERS) for (const m of line.matchAll(re)) for (const [d, mo] of pick(m)) {
     const day = +d, month = mo === null ? null : /^\d+$/.test(mo) ? MONTHS[+mo - 1] : mo.slice(0, 3).toLowerCase();
-    if (day >= 1 && day <= 31 && month !== undefined) out.push({ day, month, text: m[0].trim().replace(/\.$/, '') });
+    const evidence = dateEvidenceForMatch(occurrences, m.index, m[0].length);
+    if (day >= 1 && day <= 31 && month !== undefined) out.push({ day, month, sourceKey: evidence?.key, text: evidence?.text || m[0].trim().replace(/\.$/, '') });
   }
   return out;
 };
@@ -137,8 +140,8 @@ const briefChecks = ({ lines, brief, ledger, copy }) => {
     const where = `line ${i + 1}`, show = line.trim().slice(0, 100);
     // A bracketed value such as "[Tue 18 Nov]" is a merge field the system fills, not a date the plan sets.
     const unbracketed = line.replace(/\[[^\]]*\](?!\()/g, ' ');
-    const invented = [...new Set(datesIn(unbracketed).filter(d => !sourceDates.has(d.text.trim()) && !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
-    if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": use days relative to the start (Day 1, Week 2) unless the brief gives the date. In: ${show}`);
+    const invented = [...new Set(datesIn(unbracketed).filter(d => !sourceDates.has(d.sourceKey) && !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
+    if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": for a sourced date, include its year and a --date-source file; for an unprovided schedule, use relative days (Day 1, Week 2). In: ${show}`);
     for (const m of line.matchAll(WEEKDAY)) {
       const before = line.slice(0, m.index), after = line.slice(m.index + m[0].length);
       if (briefLower.includes(m[0].toLowerCase()) || /\b(?:every|each|per|any)\s+$/i.test(before) || /^\s+(?:after|before)\b/i.test(after)) continue;

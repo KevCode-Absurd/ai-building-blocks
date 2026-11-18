@@ -189,6 +189,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
   { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
   { name: "quality/trace-check.cjs", purpose: "Checks the working trace of knowledge lookups before hand-over: one query per signal and decision, every card id in the pack, none in the deliverable." },
+  { name: "quality/date-evidence.cjs", purpose: "Shared date occurrence matching for handover checks: unambiguous full dates, preserving the year; not source authentication or action authority." },
   { name: "quality/copy-check.cjs", purpose: "Checks customer copy before hand-over: stated counts, field limits, placeholders and working notes; size-choice claims use --product-source or a conventional context/product.json or evidence/product.json." },
   { name: "commerce-math.mjs", purpose: "Typed planning calculations: cost pass-through, period-scaled safety stock, inventory timing and cash, demand populations, scrap, replenishment and fixed-horizon experiment intervals. No live actions." },
   { name: "source-inventory.mjs", purpose: "Inventory supplied evidence paths, hashes and JSON fields before declaring data absent. Read-only; distinguishes unreadable and sampled inputs from missing sources." },

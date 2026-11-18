@@ -50,6 +50,10 @@ test("the top of the file: schema, role, date and unknown fields", () => {
 });
 
 test("tasks: count, ids, wording, kind and item count", () => {
+  assert.deepEqual(run(b => { b.tasks[0].kind = 'email'; b.tasks[0].foundation_kind = 'support'; }).errors, []);
+  assert.deepEqual(run(b => { b.tasks[0].kind = 'copy'; b.tasks[0].foundation_kind = 'proposal'; }).errors, []);
+  assert.match(errorsOf(b => { b.tasks[0].foundation_kind = 'support'; }), /foundation_kind/);
+  assert.match(errorsOf(b => { b.tasks[0].kind = 'copy'; b.tasks[0].foundation_kind = 'other'; }), /foundation_kind/);
   assert.match(errorsOf(b => { b.tasks.length = 9; }), /9 tasks; the spec asks for 10 to 24/);
   assert.match(errorsOf(b => { for (let i = 11; i <= 25; i++) b.tasks.push({ ...b.tasks[5], id: `task-${i}` }); }), /25 tasks; the spec asks for 10 to 24/);
   assert.match(errorsOf(b => { b.tasks[3].id = "task-1"; }), /task 4 \(task-1\): the id "task-1" is used twice/);

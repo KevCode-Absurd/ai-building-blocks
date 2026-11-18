@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, writeFileSync, cpSync, symlinkSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, truncateSync, cpSync, symlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -12,12 +12,13 @@ test("standalone bundle help carries detailed scope, privacy and relocation rule
   const result = spawnSync(process.execPath, [TOOL, "--bundle-help"], { encoding: "utf8" });
   assert.equal(result.status, 0, result.stdout + result.stderr);
   for (const pattern of [/relocated copy/, /input contract, source locator\/hash/, /Never copy all working context, credentials/, /Creator-only checks are historical/, /does not run delivered code/, /Root-relative \/assets/, /dynamic routes/]) assert.match(result.stdout, pattern);
+  for (const pattern of [/valid UTF-8/, /64 MB/, /without a leading BOM/, /not schema/, /binary assets are not decoded/]) assert.match(result.stdout, pattern);
 });
 function fixture() {
   const workspace = mkdtempSync(path.join(tmpdir(), "handover-bundle-"));
   const bundle = path.join(workspace, "delivery");
   mkdirSync(bundle);
-  const put = (relative: string, content: string) => {
+  const put = (relative: string, content: string | Uint8Array) => {
     const file = path.join(bundle, relative);
     mkdirSync(path.dirname(file), { recursive: true });
     writeFileSync(file, content);
@@ -189,4 +190,90 @@ test("legacy no-flag behavior does not acquire bundle checks", () => {
   const invalid = spawnSync(process.execPath, [TOOL, entry, "--bundle-root"], { encoding: "utf8" });
   assert.equal(invalid.status, 2);
   assert.match(invalid.stderr, /needs a value/);
+});
+
+test("reachable UTF-8 non-ASCII text and strict JSON pass without decoding binary images", () => {
+  const f = fixture();
+  const entry = f.put("answer.md", "Résumé — [données](data.json), [table](rows.csv), [notes](notes.txt), [page](page.html), [image](pixel.png).\n");
+  f.put("data.json", JSON.stringify({ city: "東京", currency: "₹", literal: '<img src="not-a-dependency.png">' }));
+  f.put("rows.csv", "city,label\nParis,café\n");
+  f.put("notes.txt", "Crème brûlée\n");
+  f.put("page.html", '<link href="style.css" rel="stylesheet"><h1>Été</h1><img src="icon.svg"><a href="rows.tsv">Table</a>');
+  f.put("style.css", '/* été */ body { font-family: "日本語"; }');
+  f.put("icon.svg", '<svg xmlns="http://www.w3.org/2000/svg"><text>été</text></svg>');
+  f.put("rows.tsv", "city\tlabel\nParis\tcafé\n");
+  const binary = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=", "base64");
+  assert.throws(() => new TextDecoder("utf-8", { fatal: true }).decode(binary));
+  const image = f.put("pixel.png", binary);
+  const result = run(entry, f.bundle);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout, /JSON syntax without a leading BOM/);
+  assert.match(result.stdout, /not schema, semantic or visual validation/);
+  assert.deepEqual(readFileSync(image), binary);
+  // Binary assets are linked from a text entry, never replacement-decoded as prose entry points.
+  fails(run(image, f.bundle), /entry point must be a supported text file/);
+});
+
+test("unsupported entry extensions fail actionably instead of silently checking empty prose", () => {
+  const f = fixture();
+  const entry = f.put("answer.unknown", "TODO PRIVATE-UNKNOWN-ENTRY-SENTINEL");
+  const result = run(entry, f.bundle);
+  fails(result, /entry point must be a supported text file.*link binary\/code assets/);
+  assert.doesNotMatch(result.stdout, /Clean:|0 words|PRIVATE-UNKNOWN-ENTRY-SENTINEL/);
+});
+
+for (const extension of ["csv", "tsv", "json", "md", "html", "css", "svg", "txt"]) {
+  test(`reachable CP1252 ${extension} fails strict UTF-8 without rewriting bytes`, () => {
+    const f = fixture();
+    const entry = f.put("answer.md", `[Data](data.${extension})`);
+    const bytes = Buffer.from('{"name":"caf\xe9"}', "latin1");
+    const data = f.put(`data.${extension}`, bytes);
+    fails(run(entry, f.bundle), new RegExp(`data\\.${extension}: text is not valid UTF-8`));
+    assert.deepEqual(readFileSync(data), bytes);
+  });
+}
+
+test("JSON syntax and BOM failures are explicit and do not expose document contents", () => {
+  const f = fixture();
+  const entry = f.put("answer.md", "[Data](data.json) and [manifest](manifest.json)");
+  const malformed = '{"private":"PRIVATE-SYNTAX-SENTINEL",}';
+  const bom = Buffer.from('\uFEFF{"valid":true}', "utf8");
+  const data = f.put("data.json", malformed);
+  const manifest = f.put("manifest.json", bom);
+  const result = run(entry, f.bundle);
+  fails(result, /data\.json: invalid JSON syntax/);
+  assert.match(result.stdout, /manifest\.json: JSON has a leading BOM/);
+  assert.doesNotMatch(result.stdout, /PRIVATE-SYNTAX-SENTINEL/);
+  assert.equal(readFileSync(data, "utf8"), malformed);
+  assert.deepEqual(readFileSync(manifest), bom);
+});
+
+test("invalid UTF-8 entry stops before replacement decoding or prose checks", () => {
+  const f = fixture();
+  const entry = f.put("answer.md", Buffer.from('PRIVATE-ENCODING-SENTINEL caf\xe9', "latin1"));
+  const result = run(entry, f.bundle);
+  fails(result, /answer\.md: text is not valid UTF-8/);
+  assert.doesNotMatch(result.stdout, /PRIVATE-ENCODING-SENTINEL|Hand-over check:/);
+});
+
+test("unlinked invalid text is not scanned and JSON string values do not become dependencies", () => {
+  const f = fixture();
+  const entry = f.put("answer.md", "[Data](data.json)");
+  f.put("data.json", '{"path":"missing.csv","text":"[link](missing.md)"}');
+  f.put("unlinked.csv", Buffer.from([0xe9]));
+  f.put("unlinked.json", "{broken}");
+  const result = run(entry, f.bundle);
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout, /2 local files/);
+});
+
+test("text above the 64 MB bound fails for linked JSON and for an entry without reading prose", () => {
+  const f = fixture();
+  const entry = f.put("answer.md", "[Data](large.json)");
+  const large = f.put("large.json", "");
+  truncateSync(large, 64_000_001);
+  fails(run(entry, f.bundle), /large\.json: text file exceeds 64 MB/);
+  const direct = run(large, f.bundle);
+  fails(direct, /large\.json: text file exceeds 64 MB/);
+  assert.doesNotMatch(direct.stdout, /invalid JSON syntax|Hand-over check:/);
 });

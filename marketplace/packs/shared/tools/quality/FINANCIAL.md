@@ -1,6 +1,8 @@
 # Financial evidence and arithmetic
 
-For money decisions run `node tools/quality/numbers.cjs context/numbers.json --financial --final <deliverable>`. `qe-check.cjs ... --financial` also requires the ledger and forwards the mode. A ledger object with `"mode":"financial"` enables the same checks. Keep the full data snapshot local to the job; do not embed customer records in the deliverable.
+For observed financial claims, including period/cohort sales, costs, margins and ROAS/MER, run `node tools/quality/numbers.cjs context/numbers.json --financial --final <deliverable>`. `qe-check.cjs ... --financial` also requires the ledger and forwards the mode. A ledger object with `"mode":"financial"` enables the same checks. Keep the full data snapshot local to the job; do not embed customer records in the deliverable.
+
+Explicit hypothetical budgets, quote comparisons and operating scenarios use supported `commerce-math.mjs` calculations below. That route checks conditional arithmetic, not observed financial results. A snapshot date is not a transaction window, quoted unit costs are not observed period costs, and orders are not stock units. Mixed deliverables require both paths: verify observed inputs/claims with the financial ledger where applicable, and check the separately identified projections as scenarios. Preserve the exact source bytes, hashes, numeric locators, units, currency and population; keep a reproducible adapter and label every assumed value and cost exclusion. The planning tool does not verify those source bindings: review and test the adapter against the pinned source and independently recompute the result. Never create observations from assumptions, add invented periods or relabel an unsupported financial operation to obtain a pass. Incomplete costs allow only an explicitly partial scenario, never a complete contribution/profit claim; required cost coverage in the financial ledger is unchanged.
 
 Each figure has `id`, finite `value`, `metric`, `unit`, `period` (`start`, `end`, `timezone`) and monetary `currency`. Windows use valid ISO dates and an IANA time zone. Units are `money`, `money_per_order`, `orders`, `sessions` or `ratio` as appropriate. The precise meaning and grain of each metric must agree with the export. Period net sales divided by orders is a custom KPI; it is not native Shopify purchase AOV.
 
@@ -34,4 +36,24 @@ Illustrative ledger (replace the placeholder hash with the actual SHA-256; the f
 }
 ```
 
-For supply/experiment arithmetic use `node tools/commerce-math.mjs input.json`, where the JSON is `{ "operation": "forecastInputCost", "inputs": { "currentCost": 100, "indexChange": 0.2, "passThrough": 0.25 } }` for an illustrative result of 105. Other exported operations are `safetyStock`, `materialInput`, `forecastUnits`, `stockPlan`, `replenishmentDay`, and `experimentReadout`; their explicit parameters and assumptions are in the tool. Save the input and result with the work. An inconclusive completed experiment is not proof of a small effect; inspect the interval against the practical threshold without extending until significant.
+For supported planning/experiment arithmetic use `node tools/commerce-math.mjs input.json`, where the JSON is `{ "operation": "forecastInputCost", "inputs": { "currentCost": 100, "indexChange": 0.2, "passThrough": 0.25 } }` for an illustrative result of 105. Save the input, result and source/assumption adapter with the work. The complete operation list is:
+
+| Operation | Scope and required distinction |
+|---|---|
+| `forecastInputCost` | Applies pass-through only to the index-change delta; this is a forecast, not an invoice. |
+| `safetyStock` | Scales independent comparable period errors to lead time; requires explicit independence and supplied z. |
+| `materialInput` | Uses declared scrap basis: markup on good units or fraction of input lost. It does not establish material prices or a complete should-cost. |
+| `forecastUnits` | Keeps all-customer and new-customer baselines separate; avoids counting repeat demand twice. |
+| `stockPlan` | Reconciles commitments, backorders, confirmed receipt timing, case packs, MOQ and cash; drafts a stock plan without placing orders. |
+| `replenishmentDay` | Separates days from ordering and days from delivery for the declared usage fraction. |
+| `experimentReadout` | Completed fixed-horizon, independent-randomization, large-count interval only; does not establish causality or equivalence. |
+| `capacityPlan` | Compares owner/period task hours with sourced availability; does not model order queues. |
+| `backlogRecovery` | Daily order-queue recurrence under explicit constant rates and disjoint new arrivals; conditional overtime cost and clearance only. |
+| `cashForecast` | Ordered period-end receipts less payments, reserve gaps and lowest cash; one currency, explicit timing and no double-counted flows. |
+| `toleranceFit` | Worst-case total dimensional clearance in one common unit; not radial clearance, measured fit or manufacturing safety. |
+
+`backlogRecovery` requires `backlogOrders`, `arrivalsPerDay`, `baseCapacityPerDay`, `overtimeCapacityPerDay`, `overtimeCostPerDay`, `horizonDays` (1-3650), `currency`, a nonempty `population`, `unit: "orders"`, `constantRates: true` and `arrivalsExcludeBacklog: true`. Counts/rates are nonnegative safe integers in orders and orders per operating day; currency and overtime cost must be explicit even when no overtime is proposed. New arrivals enter before dispatch once per day; closing backlog = opening backlog + arrivals - min(capacity, available orders). Full daily overtime cost applies through first clearance, including a partially used final day; overtime then stops and does not restart. The full horizon continues at base capacity so renewed backlog is visible. `firstClearanceDay: null` means not cleared within the horizon; day 0 means only that the opening queue was empty. Check ending backlog and base capacity against arrivals before describing a stable recovery. No calendar date, SLA, real dispatch, roster or spending authorization follows from a calculation.
+
+For example, 120 opening orders, 40 new orders/day, capacity 50/day plus 20/day overtime at USD 60/day clears in four operating days for USD 240 under those assumptions. Base capacity alone takes twelve days. These are illustrative conditional results, not observed outcomes. An inconclusive completed experiment is not proof of a small effect; inspect the interval against the practical threshold without extending until significant.
+
+Product price-minus-cost, quoted landed-cost totals, marketplace fee envelopes, complete should-cost and freight break-even contribution are not supported operations. Preserve their complete inputs and independently reproducible calculations for review; they remain outside typed-tool coverage. Do not omit quote allowances, scrap basis, fee rates or fixed fees to fit an existing signature. A working planning calculation does not clear an unsupported observed-financial ledger.

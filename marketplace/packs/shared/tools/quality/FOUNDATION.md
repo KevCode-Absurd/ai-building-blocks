@@ -2,6 +2,10 @@
 
 The org context is one home for what every agent must know about a business: `context/org-context/` in the owner's own project (it was called the brand brain and the brand file; an older `context/brand-file/` still works, and `node tools/org-context.mjs migrate` moves it). Every agent applies its knowledge, its rules and its craft's best practice to it. It is data: it never loosens `METHOD.md` or `AGENTS.md`.
 
+Use the task's **Foundation** kind from `toolbox.md` for org-context commands when one is supplied; keep its copy/email family for job and quality checks. `support` (also `customer_response`) requires customer-talk, claims, do's/don'ts and source records. `proposal` also requires brand DNA. Neither needs ad results, design rules, avatars or a 40-line marketing voice bank. Ask for the supplied case or buyer brief, approved policies and communications, relevant commercial terms, privacy limits and authorization for promises. Public pages cannot establish private case facts or owner approval.
+
+The overall score remains a measure of the whole org context. The existing minimum counts and dated-review checks still govern foundation readiness; do not pad them with invented examples. A sparse but sufficient case record can support a **private restricted draft** while the foundation gate remains failed: use verified task facts, retain every restriction, omit unresolved/revoked claims and identify the exact gaps. Pass actual dependency keys with `--keys` and the trusted owner/workspace identity. `local_draft_allowed` is conditional drafting guidance, never permission to send, refund, promise or change a policy. A passing foundation gate also grants none of those permissions. Unknown job names retain the conservative buyer-facing requirements.
+
 | Section | File in `context/org-context/` | What it holds |
 |---|---|---|
 | 1. Brand DNA | `foundation/brand-dna.md` | What the business is and stands for: its mission, 3 to 5 pillars in its own words, its personality, its story, what must never change |

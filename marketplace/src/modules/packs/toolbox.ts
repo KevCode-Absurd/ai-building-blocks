@@ -28,7 +28,7 @@ export const LIBRARY_PATHS: Record<LibraryType, string> = { skill: "skills", wor
 export const TYPE_LABELS: Record<LibraryType | "kit", string> = { kit: "role skill", skill: "skill", workflow: "workflow", prompt: "prompt", agent: "helper agent", mind: "thinking lens", tool: "AI tool guide" };
 
 export interface ToolboxItemRef { ref: string; type?: LibraryType; use: ToolboxUse; when: string }
-export interface ToolboxTask { id: string; task: string; kind: DeliverableFamily; items: ToolboxItemRef[] }
+export interface ToolboxTask { id: string; task: string; kind: DeliverableFamily; foundation_kind?: 'support' | 'proposal'; items: ToolboxItemRef[] }
 export interface ToolboxHelper { role: string; when: string }
 export interface ToolboxJson {
   schema: typeof TOOLBOX_SCHEMA;
@@ -381,6 +381,7 @@ export function checkToolbox(value: unknown, roleId: string, kitPaths: Iterable<
       if (!str(t.task)) return fail(`${name}: needs a task, in plain words`);
       if (t.task.length > 70) warn(`${name}: the task is ${t.task.length} characters; the most is 70`);
       if (!(DELIVERABLE_FAMILIES as readonly unknown[]).includes(t.kind)) return fail(`${name}: kind must be one of ${DELIVERABLE_FAMILIES.join(", ")}`);
+      if (t.foundation_kind !== undefined && (!['support', 'proposal'].includes(t.foundation_kind as string) || !['copy', 'email'].includes(t.kind as string))) return fail(`${name}: foundation_kind must be support or proposal on a copy or email task`);
       if (!Array.isArray(t.items) || !t.items.length) return fail(`${name}: needs a list of items`);
       const items = t.items.map((it, j) => checkItem(it, `${name}, item ${j + 1}`)).filter((x): x is ToolboxItemRef => !!x);
       if (t.items.length < 2 || t.items.length > 7) warn(`${name}: has ${t.items.length} item(s); the rule is 2 to 7`);
@@ -389,7 +390,7 @@ export function checkToolbox(value: unknown, roleId: string, kitPaths: Iterable<
       if (["web_page", "ad_creative", "copy", "email"].includes(t.kind as string)) {
         for (const use of ["explore", "check"] as const) if (!items.some(x => x.use === use)) warn(`${name}: a buyer sees this work, but it has no "${use}" item (add one, or write a gap)`);
       }
-      tasks.push({ id: t.id, task: t.task.trim(), kind: t.kind as DeliverableFamily, items });
+      tasks.push({ id: t.id, task: t.task.trim(), kind: t.kind as DeliverableFamily, ...(t.foundation_kind ? { foundation_kind: t.foundation_kind as 'support' | 'proposal' } : {}), items });
     });
     if (v.tasks.length < 10 || v.tasks.length > 24) warn(`has ${v.tasks.length} task(s); the rule is 10 to 24`);
   }
@@ -576,6 +577,7 @@ export function buildToolbox(input: ToolboxInput): BuiltToolbox {
     `Everything a ${input.roleName.toLowerCase()} is hired for, and what to use for each task. ${kind === "agent" ? "Every file named here is already in this pack" : "Role files are in this pack, and each library item is one named page at the address given"}: choose what fits the task at your own discretion, open only what you chose, and never search for more.`,
     "",
     "The word in brackets says what an item is for: brief (understand or plan the piece), explore (make clearly different options), build (make the thing), check (test or review it), think (a lens to look through).",
+    ...(tasks.some(t => t.foundation_kind) ? ["", "Foundation cues select the org-context ask, check, gate, status and slice kind; keep the listed job/quality family. A failed foundation gate blocks release, not restricted drafts that omit unsupported claims. Policy, privacy, source checks and owner authorization still apply."] : []),
   ];
   const tail: string[] = [];
   if (extras.length) tail.push("", "## Also in this pack", "", ...extras.map(f => `- ${f.name} \`${f.path}\``));
@@ -596,6 +598,7 @@ export function buildToolbox(input: ToolboxInput): BuiltToolbox {
       for (const t of list) {
         const { kept, rest } = keepBest(t.lines, cap);
         main.push("", `### ${stripEnd(t.task)}`, "", ...kept.map(full));
+        if (t.foundation_kind) main.push(`Foundation: \`--for ${t.foundation_kind}\`; job/quality: \`${t.kind}\`.`);
         if (rest.length) more.push(`- ${stripEnd(t.task)}: ${rest.map(short).join("; ")}`);
       }
     };

@@ -41,6 +41,16 @@
 .blog-page th { font-weight: 600; color: var(--muted); }
 .blog-page figure { margin: 24px 0; }
 .blog-page figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.blog-page .benchmark-case { border: 1px solid var(--line); border-radius: 8px; margin: 14px 0; padding: 16px 20px; scroll-margin-top: 84px; min-width: 0; }
+.blog-page .benchmark-case summary { font-weight: 600; line-height: 1.5; cursor: pointer; }
+.blog-page .benchmark-case summary:focus-visible { outline: 2px solid var(--text); outline-offset: 5px; }
+.blog-page .benchmark-output { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; }
+.blog-page .benchmark-case figure { margin-inline: 0; min-width: 0; }
+.blog-page .benchmark-case figure img { display: block; max-width: 100%; height: auto; }
+.blog-page .benchmark-case figcaption { overflow-wrap: anywhere; }
+.blog-page .benchmark-attempt { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 24px; }
+.blog-page .benchmark-provenance { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.blog-page table caption { text-align: left; color: var(--muted); padding-bottom: 12px; font-size: 13px; }
 .post-related { border-top: 1px solid var(--line); margin-top: 56px; }
 .post-related h2 { margin-top: 40px; }
 .post-back { margin-top: 32px; font-size: 15px; }

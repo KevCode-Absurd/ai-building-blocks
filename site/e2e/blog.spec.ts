@@ -1,4 +1,7 @@
 import { test, expect } from "@playwright/test";
+import fs from "node:fs";
+
+const articleCount = fs.readdirSync(new URL("../src/content/blog/", import.meta.url)).filter(name => name.endsWith(".json")).length;
 
 test.beforeEach(async ({ page }) => {
   await page.route("**/api/auth*", route => route.fulfill({ json: { configured: false } }));
@@ -9,7 +12,7 @@ test("the blog lists every article and guide, and an article opens with its cont
   await page.goto("/blog");
   const blog = page.getByTestId("blog-page");
   await expect(blog.getByRole("heading", { level: 1 })).toBeVisible();
-  await expect(blog.locator('.blog-card a[href^="/blog/"]')).toHaveCount(38);
+  await expect(blog.locator('.blog-card a[href^="/blog/"]')).toHaveCount(articleCount);
   for (const href of ["/train-your-own-ai-agent", "/me-md", "/industries", "/how-we-test"]) await expect(blog.locator(`.blog-card a[href="${href}"]`)).toHaveCount(1);
   await blog.locator('.blog-card a[href="/blog/landing-page-checklist"]').click();
   await expect(page).toHaveURL(/\/blog\/landing-page-checklist$/);

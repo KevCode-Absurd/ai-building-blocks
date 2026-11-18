@@ -62,6 +62,30 @@ test("agent packs carry the capture tools under tools/; the one file links to th
   assert.deepEqual(lintPack(bare), []);
 });
 
+test("published capture tools and default-pattern guidance exclude private client examples", async () => {
+  const source = (path: string) => readFileSync(new URL(`../../catalogue-items/general/${path}`, import.meta.url), "utf8");
+  const productionTools = {
+    "capture-brand-dna.mjs": source("brand-dna-capture/scripts/capture-brand-dna.mjs"),
+    "ai-default-patterns.md": source("ai-default-patterns/patterns.md"),
+  };
+  const pack = await build({ tools: { ...TOOLS, ...productionTools } });
+  const publicMaterial = [
+    ...Object.keys(productionTools).map(name => file(pack, `tools/${name}`)!),
+    source("ai-default-patterns/patterns.json"),
+    source("ai-default-patterns/SKILL.md"),
+    source("brand-dna-capture/item.yaml"),
+  ];
+  for (const text of publicMaterial) {
+    assert.doesNotMatch(text, /gehna(?:india)?/i,
+      "public tools, guidance and credits must not expose private client examples");
+  }
+  const patterns = JSON.parse(source("ai-default-patterns/patterns.json"));
+  for (const pattern of patterns.patterns) {
+    assert.ok(productionTools["ai-default-patterns.md"].includes(pattern.why),
+      `machine-readable and published rationale must agree: ${pattern.id}`);
+  }
+});
+
 test("the pack linter fails missing files, conflicting limits, repeated paragraphs and made-up businesses", async () => {
   const pack = await build();
   const long = "This paragraph is long enough to count as boilerplate when it shows up twice in the same pack, which is exactly what the linter stops.";

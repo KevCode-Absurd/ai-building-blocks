@@ -46,17 +46,17 @@ In `context/taste-brief.md`, under **Defaults to avoid**:
 3. Keep the 5 to 8 this job is most at risk of, by id, each with one line tying it to this brand.
 4. For each, write what to do instead, citing the capture.
 
-Example for Gehna (gehnaindia.com, captured 9 Nov 2026):
+Template for the current brand (fill from its approved capture; these are instructions, not observed brand facts):
 
 ```
 Defaults to avoid
-- web-font-swap: headings stay Nanum Myeongjo, body and buttons stay Lato (both load from the site).
-- web-sentence-case-buttons: buttons stay UPPERCASE Lato with 0 to 4 px corners, marigold #F6B74D fill.
-- web-accent-promoted: wine #702E3E stays a band and badge colour; it never becomes the top bar or the main button.
-- web-cream-premium: the page stays white with #FAFAFA panels; no ivory bands.
-- web-thin-merchandising: keep the product grids and photo density (about 10 images per 1000 px on home).
-- web-dropped-chrome: keep the menu, cart and the dark six-column footer.
-- copy-any-competitor: lead with BIS hallmarking, 7-day return and exchange, 20+ years, not "exquisite craftsmanship".
+- web-font-swap: retain the captured font families for each text role and verify that they load.
+- web-sentence-case-buttons: retain the captured button case, radius, spacing and fill.
+- web-accent-promoted: preserve each accent's measured role and area share.
+- web-cream-premium: keep the captured page and panel surfaces unless a change is approved.
+- web-thin-merchandising: preserve the product-grid and photography density relevant to the page.
+- web-dropped-chrome: retain the working navigation, cart and footer.
+- copy-any-competitor: use verified product and policy evidence instead of generic premium language.
 ```
 
 Example for Allbirds (allbirds.com, captured 9 Nov 2026), where one default is the brand's own choice:

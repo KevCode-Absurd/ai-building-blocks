@@ -116,7 +116,7 @@ The client's header and footer replaced by a minimal logo bar and a thin footer 
 
 Cream, ivory or beige backgrounds swapped in to look 'premium', 'artisan' or 'luxury'.
 
-- **Why it reads as default:** The model's idea of premium for jewellery, food, wellness and craft. In the Gehna test, one page put 30% of its area in cream against 2.9% on the live site.
+- **Why it reads as default:** The model can substitute its idea of premium for the measured brand palette, overusing cream even when the source site uses it sparingly.
 - **Fine on purpose when:** Cream is a measured brand surface at a similar share.
 - **How a critic checks:** Area share of near-cream colours against the brand's share.
 
@@ -124,7 +124,7 @@ Cream, ivory or beige backgrounds swapped in to look 'premium', 'artisan' or 'lu
 
 A minor brand colour (a badge or seasonal accent) promoted to the top bar, the main button or whole bands.
 
-- **Why it reads as default:** Colour lists without area shares make every colour look equal, and the model picks the 'prettier', higher-contrast one. In the Gehna test, wine went from about 1% to the top bar and the main button.
+- **Why it reads as default:** Colour lists without area shares make every colour look equal, which can promote a minor accent into a dominant surface or primary action.
 - **Fine on purpose when:** The client asked for it for a campaign and it is in the change list.
 - **How a critic checks:** palette area-share drift: an accent growing past twice its measured share.
 
@@ -164,7 +164,7 @@ Placeholder chips, dashed boxes, 'to shoot' image slots or 'client to supply' la
 
 Sale prices, countdowns and dated offers written straight into the markup.
 
-- **Why it reads as default:** The model copies what it saw on the day. In the Gehna test the sale price went stale within a day.
+- **Why it reads as default:** The model can copy a temporary sale price from a capture without preserving its expiry or checking the current offer.
 - **Fine on purpose when:** The offer is held in one dated data block with an end date.
 - **How a critic checks:** Prices and offers against the capture date (brand-fidelity-check, facts).
 

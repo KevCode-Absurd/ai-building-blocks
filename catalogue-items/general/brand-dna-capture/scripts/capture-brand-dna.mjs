@@ -13,7 +13,7 @@
 //
 // Usage:
 //   node capture-brand-dna.mjs <url | file.html> [extra paths...] [options]
-//   node capture-brand-dna.mjs https://www.gehnaindia.com /collections/earrings /products/some-product
+//   node capture-brand-dna.mjs https://example.com /collections/products /products/example-product
 //   node capture-brand-dna.mjs ./site/index.html about.html
 // Options:
 //   --paths a,b        extra paths, comma separated (same as listing them after the URL)

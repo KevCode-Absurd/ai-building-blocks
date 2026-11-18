@@ -9,7 +9,7 @@ export default defineConfig({
   timeout: 30_000,
   fullyParallel: true,
   reporter: [["list"]],
-  use: { baseURL: process.env.PW_BASE_URL || "http://127.0.0.1:5180", colorScheme: "dark", trace: "retain-on-failure", ...(channel ? { channel } : {}) },
+  use: { baseURL: process.env.PW_BASE_URL || "http://127.0.0.1:5180", colorScheme: "dark", trace: "retain-on-failure", launchOptions: { chromiumSandbox: true }, ...(channel ? { channel } : {}) },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 900 }, ...(channel ? { channel } : {}) }, grepInvert: /@mobile/ },
     { name: "mobile", use: { ...devices["Pixel 7"], ...(channel ? { channel } : {}) }, grep: /@mobile/ },

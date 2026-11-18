@@ -7,6 +7,7 @@ import { checkInputContract } from '../../tools/qa/contract-evidence.mjs';
 import { PublicCatalogueService } from '../src/server/public-catalogue.ts';
 import { handlePublicApi } from '../src/server/public-api.ts';
 import { handlePublicMcp } from '../src/server/public-mcp.ts';
+import { publishedSourceBytes } from '../scripts/lib/published-source-bytes.mjs';
 
 const id = 'personal-agent-builder';
 const source = new URL(`../../catalogue-items/general/${id}/`, import.meta.url);
@@ -59,7 +60,9 @@ test('REST, MCP resource and complete source retrieval expose the same real priv
   const detail = await s.callTool('get_skill', { slug: id, response_format: 'detailed', revision_sha256: rest.revision_sha256 });
   assert.equal(detail.url, `https://useaiblocks.com/skills/${id}`);
   assert.equal(detail.skill_uri, `skill://${id}/SKILL.md`);
-  const actual = readSource('SKILL.md');
+  // Public resources use canonical UTF-8 text bytes regardless of checkout EOLs.
+  // Compare all complete retrieval paths and the digest against that exact export.
+  const actual = publishedSourceBytes('SKILL.md', fs.readFileSync(new URL('SKILL.md', source))).toString('utf8');
   assert.equal(detail.instructions_complete, true);
   assert.equal(detail.instructions, actual);
   assert.equal(rest.instructions, actual);

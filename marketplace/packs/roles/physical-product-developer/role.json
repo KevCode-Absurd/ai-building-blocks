@@ -15,12 +15,16 @@
     "cost of goods",
     "factory quote"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 29 sources (EU GPSR, product liability, CE marking; UK OPSS and UKCA; US CPSC certificates, labs and duty to report; ICC Incoterms; tariff tools; textile labels; DFM guides), four skills, five prompts, two workflows, training. Level 3 covers routine supplier messages within limits; purchase orders, supplier contracts and binding quotes need a fresh yes; tooling payments stay with the client."
+    },
+    {
+      "date": "2026-11-18",
+      "note": "Added SKU-specific demand and stock reconciliation before sourcing decisions, including paid commitments, observation windows, concept separation and evidence-coverage checks."
     }
   ]
 }

@@ -20,6 +20,7 @@
       "task": "Check a product idea against real buyer complaints",
       "kind": "analysis",
       "items": [
+        { "ref": "kit:workflows/demand-and-stock-evidence", "use": "check", "when": "Before sourcing, reconcile the exact SKU across sales, paid commitments, stock and concept evidence" },
         { "ref": "library:find-a-product-idea-in-buyer-complaints-and-score-it", "type": "workflow", "use": "build", "when": "When the idea is loose and you want the complaints that sell and a score for the gap" },
         { "ref": "library:review-insight-finder", "type": "skill", "use": "brief", "when": "When you have rival product reviews and need complaints ranked with real quotes" },
         { "ref": "library:competitor-product-analyst", "type": "skill", "use": "brief", "when": "When rival products must be set beside the idea on price, features and gaps" },

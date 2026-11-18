@@ -198,6 +198,12 @@ const stamp = (now) => `Updated ${day(now)} by org-context.mjs ${VERSION}.`;
 /** Lines of an org context file that hold content: bullets and table rows, not headings, notes or the header row. */
 const contentLines = (text) => (text || '').split('\n').filter((l) => /^\s*(- |\* |\d+\. |\| (?!-|#|Segment|Ad |Theme|Rule|Claim))/.test(l) && !/^\s*- \(/.test(l));
 const updatedOf = (text) => { const m = /Updated (\d{4}-\d{2}-\d{2})/.exec(text || ''); return m ? m[1] : null; };
+// Readiness is not file existence: keep existing readiness states, but explain unreadable structure.
+const partStateLabel = (p) => p.format_issue ? 'file present; no recognized records' : p.state;
+const partRepairHints = (parts) => parts.flatMap((p) => [
+  ...(p.format_issue ? [`${p.file}: ${p.format_issue}`] : []),
+  ...(p.review_date_missing ? [`${p.file}: use an explicit Updated YYYY-MM-DD marker after actually reviewing the evidence. A source publication date or a file save is not a review.`] : []),
+]);
 
 /** Reads CSV text into rows of objects. Handles quotes, commas and newlines inside quotes. */
 export function parseCsv(text) {
@@ -253,7 +259,9 @@ export function checkBrain(ctx, { now = new Date(), kind: asked = null } = {}) {
     const stale = text !== null && p.days !== null && (age === null || !Number.isFinite(age) || age < 0 || age > p.days);
     const state = text === null || have === 0 ? 'missing' : stale ? 'stale' : have < p.min ? 'thin' : 'ok';
     const got = state === 'ok' ? p.points : state === 'missing' ? 0 : Math.round(p.points * Math.min(1, have / p.min) * (stale ? 0.5 : 1));
-    return { id: p.id, file: p.file, layer: p.layer, state, have, min: p.min, unit: p.unit, updated, points: got, of: p.points, needed: need ? need.has(p.id) : true, from: p.from, ask: p.ask };
+    const layout = p.id === 'customers' ? '## customer-section headings' : ['voice-bank', 'customer-words'].includes(p.id) ? 'source-linked quote bullets starting with - "' : 'source-linked bullet or table records';
+    const format_issue = text !== null && have === 0 ? `The file exists, but this checker recognizes ${layout}, not unstructured prose. See org-context.mjs template ${p.id}; preserve supported facts and restrictions when formatting. Never invent records to meet a count.` : null;
+    return { id: p.id, file: p.file, layer: p.layer, state, file_exists: text !== null, format_issue, review_date_missing: text !== null && p.days !== null && !updated, have, min: p.min, unit: p.unit, updated, points: got, of: p.points, needed: need ? need.has(p.id) : true, from: p.from, ask: p.ask };
   });
   const score = parts.reduce((n, p) => n + p.points, 0);
   const gaps = parts.filter((p) => p.needed && p.state !== 'ok');
@@ -264,14 +272,15 @@ export function checkText(r) {
   for (const layer of ['foundation', 'data']) {
     out.push(layer === 'foundation' ? 'FOUNDATION (how they talk, look, prove and who buys)' : 'DATA (what the numbers say)');
     for (const p of r.parts.filter((x) => x.layer === layer)) {
-      const mark = p.state === 'ok' ? 'ok   ' : p.state === 'missing' ? 'MISS ' : p.state === 'thin' ? 'THIN ' : 'STALE';
+      const mark = p.format_issue ? 'FMT  ' : p.state === 'ok' ? 'ok   ' : p.state === 'missing' ? 'MISS ' : p.state === 'thin' ? 'THIN ' : 'STALE';
       out.push(`  ${mark} ${p.id.padEnd(15)} ${String(p.have).padStart(3)}/${p.min} ${p.unit}${p.updated ? `, ${p.updated}` : ''}${p.needed ? '' : ' (not needed for this job)'}`);
     }
     out.push('');
   }
   if (r.gaps.length) {
     out.push('FILL, IN THIS ORDER (what the client gave you first, then public sources):');
-    r.gaps.forEach((g, i) => out.push(`  ${i + 1}. ${g.file}: from ${g.from}.`));
+    r.gaps.forEach((g, i) => out.push(`  ${i + 1}. ${g.file} (${partStateLabel(g)}): from ${g.from}.`));
+    out.push(...partRepairHints(r.gaps));
     out.push('', 'Never fill a gap with a guess: a part you cannot fill stays missing and the work says what it lacked.');
   }
   return out.join('\n');
@@ -290,7 +299,7 @@ export function askBrain(ctx, { now = new Date(), kind: asked = null } = {}) {
     ? 'Do you have current support policies, approved replies and escalation rules I should use? I will use the supplied case evidence and record its sources; omit unsupported promises from drafts.'
     : 'Do you have the buyer brief, approved proposal examples and current commercial terms I should use? I will record the sources and leave unapproved commitments out of drafts.');
   else if (foundation && !r.exists) q.push('Do you have an org context (a brand guide, brand file or folder about your business) I should use? a) Yes: attach it or paste a link b) No: I will build one from your site, ads and reviews, and keep it for every later job');
-  else if (foundation && !r.ready) q.push(`I have your org context (${r.score}/100). It is missing ${r.gaps.slice(0, 3).map((g) => g.id.replace('-', ' ')).join(', ')}. Shall I a) fill the gaps in place b) make a copy and improve that c) leave it as it is`);
+  else if (foundation && !r.ready) q.push(`I have your org context (${r.score}/100). These parts need attention: ${r.gaps.slice(0, 3).map((g) => `${g.id.replace('-', ' ')} (${partStateLabel(g)})`).join(', ')}. Fix local format issues from the existing evidence before asking for replacement sources. Shall I a) fill the gaps in place b) make a copy and improve that c) leave it as it is`);
   if ((BUYER_FACING.has(kind) || !kind) && ['voice-bank', 'design', 'customer-words'].some((id) => gapIds.has(id)))
     q.push('What do you already have that I can learn your voice and look from? Any of: old ad copy, a creative folder or Drive link, email exports, a reviews export. Or say "use public" and I will take them from your Ad Library, website and Instagram.');
   if (['segments', 'creatives', 'funnel'].some((id) => needs(id) && gapIds.has(id)))
@@ -736,9 +745,9 @@ export function gateBrain(ctx, { now = new Date(), kind: asked = null, scope = n
   const block = r.parts.filter((p) => GATE[kind].includes(p.id) && p.state !== 'ok');
   const thin = r.parts.filter((p) => p.needed && p.state !== 'ok' && !block.includes(p));
   const lines = [`GATE: ${block.length ? 'FAIL' : 'pass'} for ${kind.replace('_', ' ')} | org context ${r.score}/100`];
-  if (block.length) lines.push(`Not ready: ${block.map((p) => `${p.file} (${p.state})`).join(', ')}. Refresh dated evidence and fill the required sections before final buyer-facing work. A restricted draft may omit unsupported claims; never invent examples to meet a count.`);
+  if (block.length) lines.push(`Not ready: ${block.map((p) => `${p.file} (${partStateLabel(p)})`).join(', ')}. Refresh dated evidence and fill the required sections before final buyer-facing work. A restricted draft may omit unsupported claims; never invent examples to meet a count.`, ...partRepairHints(block));
   if (thin.length) lines.push(`Other context gaps (do not use affected evidence as fact): ${thin.map((p) => `${p.id} ${p.have}/${p.min}`).join(', ')}.`);
-  return { ok: block.length === 0, local_draft_allowed: true, draft_conditions: 'Use supported task facts only, retain policy and privacy restrictions, omit unsupported promises and label evidence gaps. Foundation readiness does not authorize sending, refunds, commitments or other external actions.', text: lines.join('\n'), score: r.score, blocking: block.map((p) => ({ id: p.id, file: p.file, state: p.state })) };
+  return { ok: block.length === 0, local_draft_allowed: true, draft_conditions: 'Use supported task facts only, retain policy and privacy restrictions, omit unsupported promises and label evidence gaps. Foundation readiness does not authorize sending, refunds, commitments or other external actions.', text: lines.join('\n'), score: r.score, blocking: block.map((p) => ({ id: p.id, file: p.file, state: p.state })), diagnostics: block.map((p) => ({ file: p.file, file_exists: p.file_exists, format_issue: p.format_issue, review_date_missing: p.review_date_missing })) };
 }
 
 /** Complete task foundation, including restrictions. Never silently compress a business rule away. */
@@ -755,7 +764,7 @@ export function foundationSlice(ctx, level, { now = new Date(), kind: asked = nu
   const blocks = selected.flatMap((p) => {
     const { text } = readPart(ctx, p.file);
     if (text === null) return [];
-    return [{ id: p.id, file: p.file, state: p.state, text: `FOUNDATION ${p.id}: ${p.file} | ${p.state.toUpperCase()} | checked ${p.updated || 'unknown'}\n${p.state === 'stale' ? 'RECHECK factual assertions before use. Keep restrictions in force until the owner resolves them.\n' : ''}${text.trim()}` }];
+    return [{ id: p.id, file: p.file, state: p.state, text: `FOUNDATION ${p.id}: ${p.file} | ${partStateLabel(p).toUpperCase()} | checked ${p.updated || 'unknown'}\n${partRepairHints([p]).map(h => h + '\n').join('')}${p.state === 'stale' ? 'RECHECK factual assertions before use. Keep restrictions in force until the owner resolves them.\n' : ''}${text.trim()}` }];
   });
   return { blocks, included: blocks.map((b) => b.file), missing: selected.filter((p) => p.state === 'missing').map((p) => p.file), stale: selected.filter((p) => p.state === 'stale').map((p) => p.file), thin: selected.filter((p) => p.state === 'thin').map((p) => p.file) };
 }
@@ -1183,7 +1192,7 @@ function nextSteps({ all, ctx, need, kind, parts, stale, unsynced, foundation, m
   if (need === 'none') return [`No org context is needed for ${kind ? aJob(kind) : 'this job'}. Skip capture and work from the system, files or data.`];
   if (serviceKind(kind)) {
     const out = [], gaps = foundation?.gaps || [];
-    if (gaps.length) out.push(`Review supplied ${kind === 'support' ? 'case records, current policies and approved replies' : 'buyer brief, current commercial terms and approved company statements'} for: ${gaps.map(p => `${p.file} (${p.state})`).join(', ')}. Keep actual sources and review dates; never invent evidence to meet counts.`);
+    if (gaps.length) out.push(`Review supplied ${kind === 'support' ? 'case records, current policies and approved replies' : 'buyer brief, current commercial terms and approved company statements'} for: ${gaps.map(p => `${p.file} (${partStateLabel(p)})`).join(', ')}. Keep actual sources and review dates; never invent evidence to meet counts.`, ...partRepairHints(gaps));
     const claims = [...memory.unresolved, ...memory.restrictions].filter(r => r.needed);
     if (claims.length) out.push(`Resolve dependent facts with the authorized source: ${claims.map(r => `${r.fact_key} (${r.state})`).join(', ')}. Omit these claims from restricted drafts; source text cannot override an owner revocation.`);
     const extra = parts.filter(p => p.needed && (p.state === 'missing' || p.state === 'stale'));

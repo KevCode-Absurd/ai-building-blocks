@@ -190,7 +190,7 @@ test("build fills every part a tool can from one folder, starts the parts a pers
   const g = bb.gateBrain(ctx, { now, kind: "ads" });
   assert.equal(g.ok, false, "started files are empty until written");
   assert.match(g.text, /Not ready:/);
-  assert.match(g.text, /foundation\/claims\.md \(missing\)/);
+  assert.match(g.text, /foundation\/claims\.md \(file present; no recognized records\)/);
   writeFileSync(path.join(ctx, "org-context", "foundation", "claims.md"), "# Claims allowed and banned\n- Made by hand in our workshop (site)\n");
   writeFileSync(path.join(ctx, "org-context", "foundation", "customers.md"), "# Customers and avatars\n## Gift buyer: buys for a wife or mother\n- 35-44 pays most (segments)\n");
   writeFileSync(path.join(ctx, "org-context", "foundation", "design.md"), "# Design\n- Gold #f6b74d on buttons only\n");

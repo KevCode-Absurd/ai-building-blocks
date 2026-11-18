@@ -3,7 +3,7 @@
 //
 // Checks a set of static ad creatives before hand-over, from the pixels and from the set's manifest.
 //   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--fonts "Lato,Nanum Myeongjo"]
-//     [--claims <reviewed-claims.json>] [--type <type-report.json>] [--domain gehnaindia.com] [--no-buttons] [--no-type] [--json]
+//     [--claims <reviewed-claims.json>] [--type <type-report.json>] [--domain example.com] [--no-buttons] [--no-type] [--json]
 //     [--sizes 1080x1080,1080x1350] [--concept-plan <brief-derived-plan.json>]
 //   Concept mode is opt-in: plan = { "brief": "brief.md#deliverables", "concepts": [
 //     { "id": "gift", "sizes": ["1080x1080", "1080x1350"] } ] }; each manifest entry needs concept_id.
@@ -439,7 +439,7 @@ export function typeIssues(p, { fonts = null, rules = RULES } = {}) {
   const words = texts.reduce((s, t) => s + (t.words ?? String(t.text).split(/\s+/).filter(Boolean).length), 0);
   if (words > rules.maxImageWords) fails.push(`${words} words on the image: a feed ad reads in a second or two. Cut to ${rules.noteImageWords} or fewer, and move the rest to the ad text`);
   else if (words > rules.noteImageWords) notes.push(`${words} words on the image; ${rules.noteImageWords} or fewer reads faster`);
-  // A comma that is nearly all dot: "15,710" reads as "15.710" (the Gehna round 5 judges saw it in Bodoni Moda).
+  // A comma that is nearly all dot: "15,710" reads as "15.710" (a reviewed example showed this in Bodoni Moda).
   for (const t of texts) {
     if (!/\d,\d/.test(t.text)) continue;
     const fo = meta(t);
@@ -562,7 +562,7 @@ export async function matchPages(entries, { fetcher = globalThis.fetch, timeoutM
     else if (page.status >= 400) checks.push(`the page answers ${page.status}`);
     else {
       checks = look(page.text);
-      // Many stores draw the product in the browser (Gehna's do), so a plain fetch sees no name or price: render it.
+      // Many stores draw the product in the browser, so a plain fetch sees no name or price: render it.
       if (checks.length && render) {
         if (!page.rendered) page.rendered = render(url).catch((err) => ({ error: err.message }));
         const r = await page.rendered;

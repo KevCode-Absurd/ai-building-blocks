@@ -123,7 +123,7 @@ Primary reference: [Meta event ID and event-name deduplication fields](https://g
 
 ## Ecommerce arithmetic check (illustrative, independent of the audit above)
 
-These are deliberately complete hypothetical inputs, not Gehna or account evidence. All values use USD, the same completed period, purchase definition and revenue basis. Refund impact is a variable-cost allowance here, not also deducted from the revenue numerator.
+These are deliberately complete hypothetical inputs, not real brand or account evidence. All values use USD, the same completed period, purchase definition and revenue basis. Refund impact is a variable-cost allowance here, not also deducted from the revenue numerator.
 
 | Input | Value |
 |---|---:|

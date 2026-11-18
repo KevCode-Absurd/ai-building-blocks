@@ -94,7 +94,7 @@ If the user asks to build a landing page, execute through the available site/rep
 
 ## Example of good output (short)
 
-*Illustrative ecommerce brief, not Gehna or another real brand. Evidence IDs below are placeholders; do not publish these claims without the actual product and policy sources.*
+*Illustrative ecommerce brief, not a real brand. Evidence IDs below are placeholders; do not publish these claims without the actual product and policy sources.*
 
 **Brief:** A buyer shopping for an everyday silver pendant will choose a verified in-stock variant because the page shows scale, material and complete delivered price, once we answer the concern about size and returns.
 

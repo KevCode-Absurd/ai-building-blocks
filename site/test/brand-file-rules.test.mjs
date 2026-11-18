@@ -19,7 +19,9 @@ test('the shared org context lists are identical in the library, the agents app 
   assert.deepEqual(plain(tool.STORE_PARTS), plain(rules.BRAND_FILE_PARTS));
   assert.deepEqual(plain(packs.SLICE_LINES), plain(SLICE_LINES));
   assert.deepEqual(plain(packs.BRAND_FILE), plain(BRAND_FILE));
-  assert.deepEqual(plain(tool.SLICE_BY_KIND), plain(SLICE_BY_KIND));
+  // The tool also takes the two service kinds that agent toolboxes name as foundation_kind (18 Nov 2026).
+  // The library never asks for them, so they are the only extra entries allowed.
+  assert.deepEqual(plain(tool.SLICE_BY_KIND), { ...plain(SLICE_BY_KIND), support: 'facts', proposal: 'facts' });
   assert.deepEqual(plain(tool.SELLING_KINDS), plain(SELLING_KINDS));
   assert.equal(tool.SCHEMA, BRAND_FILE.schema); assert.equal(`context/${tool.FOLDER}`, BRAND_FILE.folder); assert.equal(`${BRAND_FILE.folder}/${tool.INDEX_FILE}`, BRAND_FILE.index);
   for (const level of SLICES) assert.equal(packs.brandFileLine(level), SLICE_LINES[level]);

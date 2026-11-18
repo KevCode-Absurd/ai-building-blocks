@@ -27,6 +27,7 @@
 // It exits 1 when anything fails, so it can gate a hand-over. Plain Node, no packages.
 import fs, { readFileSync } from "node:fs";
 import path from "node:path";
+import { dateOccurrences, sourceDateKeys, dateEvidenceForMatch } from './quality/date-evidence.cjs';
 
 const args = process.argv.slice(2);
 if (args.includes("--bundle-help")) {
@@ -41,6 +42,11 @@ if (args.includes("--bundle-help")) {
     "",
     "The optional check follows reachable static Markdown/HTML/SVG/CSS references. Missing files, absolute local paths,",
     "out-of-folder paths and linked files/directories fail. It does not run delivered code or fetch remote resources.",
+    "Reachable MD/Markdown, HTML, CSS, SVG, CSV, TSV, JSON and TXT files must be valid UTF-8 and at most 64 MB each.",
+    "JSON must also parse as strict JSON without a leading BOM. Bytes are never rewritten; binary assets are not decoded.",
+    "Other file extensions receive path checks only. JSON values and CSV/TSV/TXT contents are not treated as dependency links.",
+    "Choose a supported text file as the entry point and link binary/code assets from it; unsupported entry types fail.",
+    "These are encoding and JSON syntax checks, not schema, data meaning, image fidelity or visual validation.",
     "Root-relative /assets paths fail the portable-file boundary; use relative paths or test a separately declared hosted artifact.",
     "Remote destinations, including //host/path, are counted without fetching; verify them in the intended hosting environment.",
     "This is not a full Markdown/HTML/CSS parser. JavaScript/module imports, dynamic routes, archive contents, anchor IDs,",
@@ -56,14 +62,14 @@ const valueOf = flag => { const i = args.indexOf(flag); if (i < 0) return null; 
 const briefFile = valueOf("--brief"), numbersFile = valueOf("--numbers"), bundleRoot = valueOf("--bundle-root");
 const dateSources = args.flatMap((a, i) => a === '--date-source' ? [args[i + 1]] : []);
 if (dateSources.some(f => !f || f.startsWith('--'))) { console.error('--date-source needs a file'); process.exit(2); }
-// Exact source dates are evidence, not invented deadlines. This occurrence check
+// Unambiguous full source dates match across formats, preserving the year. This occurrence check
 // does not authenticate the source or prove the date's meaning in the deliverable.
 const sourceDates = new Set();
 for (const source of dateSources) {
   try {
     const stat = fs.statSync(source);
     if (!stat.isFile() || stat.size > 4_000_000) throw Error('date source must be a file of at most 4 MB');
-    for (const m of fs.readFileSync(source, 'utf8').matchAll(/\b20\d{2}-\d{2}-\d{2}\b/g)) sourceDates.add(m[0]);
+    for (const key of sourceDateKeys(fs.readFileSync(source, 'utf8'))) sourceDates.add(key);
   } catch (e) { console.error(`Cannot read date source ${source}: ${e.message}`); process.exit(2); }
 }
 
@@ -98,7 +104,8 @@ const words = text => (text.replace(/[|#*_>`~-]+/g, " ").match(/[\p{L}\p{N}$%€
 function checkBundle(rootName, entryName) {
   const root = path.resolve(rootName), entry = path.resolve(entryName);
   const problems = [], pending = [], visited = new Set(), checked = new Set();
-  let references = 0, remote = 0, readable = false;
+  let references = 0, remote = 0, readable = false, entryText = '';
+  const isText = target => /\.(?:md|markdown|html?|css|svg|csv|tsv|json|txt)$/i.test(target);
   const inside = target => { const rel = path.relative(root, target); return rel === '' || (!path.isAbsolute(rel) && rel !== '..' && !rel.startsWith('..' + path.sep)); };
   const show = target => path.relative(root, target).split(path.sep).join('/') || '.';
   const issue = message => { if (problems.length < 50) problems.push('bundle: ' + message); };
@@ -121,6 +128,10 @@ function checkBundle(rootName, entryName) {
     if (!fs.lstatSync(root).isDirectory() || fs.lstatSync(root).isSymbolicLink()) throw Error();
   } catch { issue('root must be an existing, unlinked directory'); return { problems, readable, references, remote, files: 0 }; }
   if (!checkFile(entry, 'entry point')) return { problems, readable, references, remote, files: checked.size };
+  if (!isText(entry)) {
+    issue('entry point must be a supported text file (MD/Markdown, HTML, CSS, SVG, CSV, TSV, JSON or TXT); link binary/code assets from that entry');
+    return { problems, readable, references, remote, files: checked.size };
+  }
   readable = true; pending.push(entry);
   const decodeHtml = value => value.replace(/&(?:#(x[0-9a-f]+|\d+)|(amp|quot|apos|lt|gt));/gi, (all, numeric, named) => {
     if (!numeric) return ({ amp:'&', quot:'"', apos:"'", lt:'<', gt:'>' })[named.toLowerCase()];
@@ -142,7 +153,7 @@ function checkBundle(rootName, entryName) {
     if (!ref) return;
     if (/[\0\r\n]/.test(ref) || path.isAbsolute(ref) || path.win32.isAbsolute(ref)) { issue(from + ': absolute or invalid local path is not portable'); return; }
     const target = path.resolve(path.dirname(source), ref.replace(/\\/g, path.sep));
-    if (checkFile(target, from) && /\.(?:md|markdown|html?|css|svg)$/i.test(target) && !visited.has(target)) pending.push(target);
+    if (checkFile(target, from) && isText(target) && !visited.has(target)) pending.push(target);
   };
   const css = (content, source) => {
     content = content.replace(/\/\*[\s\S]*?\*\//g, '');
@@ -192,14 +203,31 @@ function checkBundle(rootName, entryName) {
     if (visited.has(source)) continue;
     visited.add(source);
     if (visited.size > 2_000) { issue('document limit reached; split the handoff into smaller checked entry points'); break; }
-    if (!/\.(?:md|markdown|html?|css|svg)$/i.test(source)) continue;
-    if (fs.statSync(source).size > 64_000_000) { issue(show(source) + ': static document exceeds 64 MB; split or inspect separately'); continue; }
-    const content = fs.readFileSync(source, 'utf8');
+    if (!isText(source)) continue;
+    let content;
+    try {
+      if (fs.statSync(source).size > 64_000_000) throw Error('text file exceeds 64 MB; split or inspect separately');
+      const bytes = fs.readFileSync(source);
+      if (bytes.length > 64_000_000) throw Error('text file exceeds 64 MB; split or inspect separately');
+      // Preserve a BOM for JSON.parse rather than silently accepting bytes strict consumers reject.
+      try { content = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes); }
+      catch { throw Error('text is not valid UTF-8'); }
+      if (/\.json$/i.test(source)) {
+        if (content.startsWith('\uFEFF')) throw Error('JSON has a leading BOM; deliver UTF-8 JSON without a BOM');
+        try { JSON.parse(content); }
+        catch { throw Error('invalid JSON syntax'); }
+      }
+    } catch (error) {
+      issue(show(source) + ': ' + error.message);
+      if (source === entry) readable = false;
+      continue;
+    }
+    if (source === entry) entryText = content;
     if (/\.css$/i.test(source)) css(content, source);
     else if (/\.(?:md|markdown)$/i.test(source)) markdown(content, source);
-    else html(content, source);
+    else if (/\.(?:html?|svg)$/i.test(source)) html(content, source);
   }
-  return { problems, readable, references, remote, files: checked.size };
+  return { problems, readable, references, remote, files: checked.size, entryText };
 }
 const bundle = bundleRoot ? checkBundle(bundleRoot, file) : null;
 if (bundle && !bundle.readable) {
@@ -207,7 +235,7 @@ if (bundle && !bundle.readable) {
   process.exit(1);
 }
 
-const raw = readFileSync(file, "utf8");
+const raw = bundle ? bundle.entryText : readFileSync(file, "utf8");
 const text = visibleText(file, raw);
 const problems = [...(bundle?.problems ?? [])];
 
@@ -232,9 +260,11 @@ const DATE_FINDERS = [
 ];
 const datesIn = line => {
   const out = [];
+  const occurrences = dateOccurrences(line);
   for (const [re, pick] of DATE_FINDERS) for (const m of line.matchAll(re)) for (const [d, mo] of pick(m)) {
     const day = +d, month = mo === null ? null : /^\d+$/.test(mo) ? MONTHS[+mo - 1] : mo.slice(0, 3).toLowerCase();
-    if (day >= 1 && day <= 31 && month !== undefined) out.push({ day, month, text: m[0].trim().replace(/\.$/, '') });
+    const evidence = dateEvidenceForMatch(occurrences, m.index, m[0].length);
+    if (day >= 1 && day <= 31 && month !== undefined) out.push({ day, month, sourceKey: evidence?.key, text: evidence?.text || m[0].trim().replace(/\.$/, '') });
   }
   return out;
 };
@@ -294,8 +324,8 @@ const briefChecks = ({ lines, brief, ledger, copy }) => {
     const where = `line ${i + 1}`, show = line.trim().slice(0, 100);
     // A bracketed value such as "[Tue 18 Nov]" is a merge field the system fills, not a date the plan sets.
     const unbracketed = line.replace(/\[[^\]]*\](?!\()/g, ' ');
-    const invented = [...new Set(datesIn(unbracketed).filter(d => !sourceDates.has(d.text.trim()) && !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
-    if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": use days relative to the start (Day 1, Week 2) unless the brief gives the date. In: ${show}`);
+    const invented = [...new Set(datesIn(unbracketed).filter(d => !sourceDates.has(d.sourceKey) && !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
+    if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": for a sourced date, include its year and a --date-source file; for an unprovided schedule, use relative days (Day 1, Week 2). In: ${show}`);
     for (const m of line.matchAll(WEEKDAY)) {
       const before = line.slice(0, m.index), after = line.slice(m.index + m[0].length);
       if (briefLower.includes(m[0].toLowerCase()) || /\b(?:every|each|per|any)\s+$/i.test(before) || /^\s+(?:after|before)\b/i.test(after)) continue;
@@ -434,7 +464,7 @@ if (plain) {
 if (onePage && n > 450) problems.push(`length: ${n} words is more than one page (about 450)`);
 
 console.log(`Hand-over check: ${lengthNote}.`);
-if (bundle) console.log(`Bundle static check: ${bundle.files} local files, ${bundle.references} references; ${bundle.remote} remote/embedded destinations not fetched. Checks only reachable Markdown/HTML/SVG/CSS references; not JavaScript imports, dynamic routes, archive contents, anchor IDs, remote availability or browser behavior. Run each separate entry point and open the relocated deliverable.`);
+if (bundle) console.log(`Bundle static check: ${bundle.files} local files, ${bundle.references} references; ${bundle.remote} remote/embedded destinations not fetched. Follows only reachable Markdown/HTML/SVG/CSS references. Checks UTF-8 for recognized MD/Markdown, HTML, CSS, SVG, CSV, TSV, JSON and TXT files (64 MB each), plus JSON syntax without a leading BOM; binary assets are not decoded. This is not schema, semantic or visual validation; not JavaScript imports, dynamic routes, archive contents, anchor IDs, remote availability or browser behavior. Run each separate entry point and open the relocated deliverable.`);
 if (briefNote) console.log(briefNote);
 if (requestedTemplate) console.log(`Requested-template mode: ${acceptedTemplateFields} intentional field matches accepted; field completion is not claimed.`);
 if (optionsRequested) console.log(`Options-requested mode: ${acceptedOptions} alternate matches accepted.`);

@@ -123,6 +123,31 @@ function build(agentId: string, over: Partial<PackInput> = {}, kind: "agent" | "
 }
 const file = (pack: BuiltPack, p: string) => pack.files.find(f => f.path === p)?.content;
 
+test('support and proposal toolboxes route foundation checks separately from copy/email quality', async () => {
+  for (const [role, task, foundation, family] of [
+    ['customer-support-specialist', 'batch-replies', 'support', 'email'],
+    ['support-operations-manager', 'apology-templates', 'support', 'copy'],
+    ['proposal-writer', 'commercial-proposal', 'proposal', 'copy'],
+    ['business-development-manager', 'quote-scope', 'proposal', 'copy'],
+  ]) {
+    const raw = JSON.parse(read(ROOT, 'packs', 'roles', role, 'toolbox.json')), kit = kitOf(role, raw);
+    const parsed = checkToolbox(raw, role, Object.keys(kit.files));
+    assert.deepEqual(parsed.errors, []);
+    const routed = parsed.toolbox!.tasks.find(t => t.id === task)!;
+    assert.equal(routed.kind, family); assert.equal(routed.foundation_kind, foundation);
+    const agent = housePersonas().find(p => p.role === role && p.kind === 'house' && p.status === 'live')!;
+    const text = file(await build(agent.id, { kit }), 'toolbox.md')!;
+    assert.ok(text.includes(`Foundation: \`--for ${foundation}\`; job/quality: \`${family}\`.`));
+    assert.equal(text.match(/Foundation cues select/g)?.length, 1, 'explain the override once per toolbox');
+    assert.equal(text.match(/Policy, privacy, source checks and owner authorization still apply/g)?.length, 1);
+    assert.match(text, /failed foundation gate blocks release/);
+    for (const invalid of ['other', 'code', 'unknown']) {
+      const changed = structuredClone(raw); changed.tasks[0].foundation_kind = invalid;
+      assert.match(checkToolbox(changed, role, Object.keys(kit.files)).errors.join('\n'), /foundation_kind/);
+    }
+  }
+});
+
 // ---------- The fixtures and the library reader ----------
 
 test("the fixture toolboxes follow the spec, and every slug they name is a real library item", () => {

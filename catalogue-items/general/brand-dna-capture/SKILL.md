@@ -76,7 +76,7 @@ Every slice retains standing restrictions, including `none`. A scope mismatch wi
 node scripts/org-context.mjs status --for <kind>
 ```
 
-`<kind>` is one of `web_page`, `ad_creative`, `copy`, `email`, `audit`, `analysis`, `strategy`, `plan`, `code`, `ops_doc`, `other`. Then do only what it lists:
+`<kind>` is one of `web_page`, `ad_creative`, `copy`, `email`, `support`, `proposal`, `audit`, `analysis`, `strategy`, `plan`, `code`, `ops_doc`, `other`. Use the task's Foundation kind from its toolbox when supplied, retaining copy/email for content-quality checks. Support requires customer-talk, claims, do's/don'ts and sources; proposals also require brand DNA. These jobs do not require advertising metrics, design or marketing voice-bank coverage. Current case facts, policy restrictions, privacy and owner authorization remain necessary. Then do only what it lists:
 
 | It says | You do |
 |---|---|

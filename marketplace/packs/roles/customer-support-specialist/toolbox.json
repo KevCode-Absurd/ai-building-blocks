@@ -7,6 +7,7 @@
       "id": "inbox-triage",
       "task": "Sort an inbox by urgency and draft a reply for each message",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:workflows/daily-support-run", "use": "brief", "when": "Once or twice each working day, to run the inbox in the same order every time" },
         { "ref": "library:customer-message-tone-and-urgency-review", "type": "skill", "use": "brief", "when": "When a batch arrives, to read tone, urgency and warning signs before you rank it" },
@@ -20,6 +21,7 @@
       "id": "batch-replies",
       "task": "Draft replies to a batch of customer emails",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:order-lookup-assistant", "type": "skill", "use": "brief", "when": "When a reply depends on the order's items, payment and shipping history" },
         { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When up to 30 emails need short, clear replies that stay true to policy" },
@@ -33,6 +35,7 @@
       "id": "returns-batch",
       "task": "Handle a batch of return and refund requests",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:gorgias-refund-review-brief", "type": "skill", "use": "brief", "when": "When the request sits in Gorgias and you need the refund facts and policy checks in one brief" },
         { "ref": "kit:skills/returns-and-refunds", "use": "build", "when": "When each request must be checked against order date, item state and the rule that applies" },
@@ -46,6 +49,7 @@
       "id": "angry-customer",
       "task": "Reply to an angry customer without over-promising",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:prompts/angry-customer-reply", "use": "build", "when": "When a customer is upset for the second or third time and the reply must calm and fix" },
         { "ref": "library:angry-customer-reply-writer", "type": "prompt", "use": "explore", "when": "When you want a second draft that names the feeling first, to compare" },
@@ -59,6 +63,7 @@
       "id": "reply-templates",
       "task": "Build a library of reply templates",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:research-theme-synthesizer", "type": "skill", "use": "brief", "when": "Before writing, to rank past tickets by the questions that come up most" },
         { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When the team answers the same questions all day and needs templates with fill-in fields" },
@@ -72,6 +77,7 @@
       "id": "returns-policy",
       "task": "Write a plain returns and refunds policy",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:returns-policy-designer", "type": "skill", "use": "brief", "when": "When the rules themselves are not settled: refund timing, keep-it limits and cost" },
         { "ref": "kit:prompts/plain-returns-policy", "use": "build", "when": "When the policy is long, scattered or contradicts itself and needs one plain page" },
@@ -98,6 +104,7 @@
       "id": "warranty-claims-batch",
       "task": "Reply to a batch of warranty claims",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:customer-history-exporter", "type": "skill", "use": "brief", "when": "When a claim depends on the customer's past orders, returns and notes" },
         { "ref": "kit:skills/warranty-claims", "use": "build", "when": "When each claim needs an approve, decline or send-evidence reply with the reason" },
@@ -109,6 +116,7 @@
       "id": "warranty-terms",
       "task": "Write plain warranty terms and a claim form",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:skills/warranty-claims", "use": "build", "when": "When the business's warranty rules must become plain terms, a form and an evidence list" },
         { "ref": "library:make-a-long-form-easier-to-finish", "type": "workflow", "use": "check", "when": "When customers give up on the claim form, to cut fields and test the new flow" },
@@ -175,6 +183,7 @@
       "id": "chat-scripts",
       "task": "Write live chat opening, holding and closing scripts",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When chat staff need short openers, hold lines and closers with fill-in fields" },
         { "ref": "library:chatbot-conversation-designer", "type": "skill", "use": "build", "when": "When a chat needs a flow with questions, recovery from mistakes and a handover" },
@@ -186,6 +195,7 @@
       "id": "whatsapp-setup",
       "task": "Set up WhatsApp quick replies, greetings and order updates",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:whatsapp-marketing-planner", "type": "skill", "use": "brief", "when": "When the shop is new to WhatsApp Business and needs replies, broadcasts and flows planned" },
         { "ref": "kit:skills/reply-template-library", "use": "build", "when": "When the owner answers every chat by hand and needs labelled quick replies" },
@@ -199,6 +209,7 @@
       "id": "price-rise-notice",
       "task": "Tell customers about a price rise",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:price-rise-readiness-checker", "type": "prompt", "use": "brief", "when": "Before writing, to score how ready the offer is for a rise and what to add first" },
         { "ref": "library:price-rise-letter-writer", "type": "prompt", "use": "build", "when": "When you have the old price, the new price and the reason and need the letter" },
@@ -210,6 +221,7 @@
       "id": "policy-change-notice",
       "task": "Write a notice for a policy, hours or service change",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:rule-change-policy-keeper", "type": "agent", "use": "brief", "when": "When a rule changed, to find every policy page the notice must agree with" },
         { "ref": "library:prepare-a-service-outage-communication-pack", "type": "workflow", "use": "build", "when": "When a service stops or changes and needs a first notice, updates and an all-clear" },
@@ -222,6 +234,7 @@
       "id": "help-pages",
       "task": "Turn repeat questions into help pages and an FAQ",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:help-article-from-ticket-writer", "type": "prompt", "use": "build", "when": "When several tickets ask the same thing and one short article would answer them" },
         { "ref": "library:solved-ticket-help-page-writer", "type": "skill", "use": "build", "when": "When one solved ticket has the full fix and should become a page with steps" },
@@ -233,6 +246,7 @@
       "id": "delivery-questions",
       "task": "Answer where-is-my-order questions and cut them down",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:order-lookup-assistant", "type": "skill", "use": "brief", "when": "When a customer asks where an order is and you need its shipping history" },
         { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "build", "when": "When late-delivery messages need replies that state what is known and what happens next" },
@@ -244,6 +258,7 @@
       "id": "public-reviews",
       "task": "Reply to public reviews",
       "kind": "copy",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:review-reply-batch-writer", "type": "prompt", "use": "build", "when": "When a batch of reviews needs a specific public reply each, with risky ones listed" },
         { "ref": "library:review-request-and-reply-planner", "type": "skill", "use": "brief", "when": "When the shop also needs to know when and how to ask for reviews" },
@@ -254,6 +269,7 @@
       "id": "other-language-reply",
       "task": "Reply to a customer who writes in another language",
       "kind": "email",
+      "foundation_kind": "support",
       "items": [
         { "ref": "library:customer-support-message-translator", "type": "skill", "use": "build", "when": "When a message is not in English and you need its meaning and a reply in their language" },
         { "ref": "kit:skills/inbox-triage-and-policy-replies", "use": "brief", "when": "Before translating, to settle the answer from policy in plain English first" },

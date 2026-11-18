@@ -95,7 +95,7 @@ export function validateToolbox(box, ctx) {
     box.tasks.forEach((task, i) => {
       const at = `task ${i + 1}${isObject(task) && typeof task.id === "string" ? ` (${task.id})` : ""}`;
       if (!isObject(task)) { errors.push(`${at}: must be an object`); return; }
-      for (const key of Object.keys(task)) if (!["id", "task", "kind", "items"].includes(key)) errors.push(`${at}: unknown field "${key}"`);
+      for (const key of Object.keys(task)) if (!["id", "task", "kind", "foundation_kind", "items"].includes(key)) errors.push(`${at}: unknown field "${key}"`);
       if (typeof task.id !== "string" || !KEBAB.test(task.id)) errors.push(`${at}: id must be kebab-case`);
       else if (ids.has(task.id)) errors.push(`${at}: the id "${task.id}" is used twice`);
       else ids.add(task.id);
@@ -106,6 +106,7 @@ export function validateToolbox(box, ctx) {
         if (NOT_A_VERB.test(first) || /ing$/i.test(first) || !/^[A-Z]/.test(first)) warnings.push(`${at}: "task" should start with a verb, such as "Make", "Check" or "Plan" (it starts "${first}")`);
       }
       if (!KINDS.includes(task.kind)) errors.push(`${at}: kind must be one of ${KINDS.join(", ")}`);
+      if (task.foundation_kind !== undefined && (!['support', 'proposal'].includes(task.foundation_kind) || !['copy', 'email'].includes(task.kind))) errors.push(`${at}: foundation_kind must be support or proposal on a copy or email task`);
       const rows = checkRows(task.items, at, LIMITS.items, "items");
       for (const item of rows) if (isObject(item) && typeof item.ref === "string" && item.ref.startsWith("kit:")) kitInTasks.add(item.ref);
       const uses = new Set(rows.filter(isObject).map(item => item.use));

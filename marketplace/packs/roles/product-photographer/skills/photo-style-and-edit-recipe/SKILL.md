@@ -36,6 +36,8 @@ Most "bad" product photos come from light, not from the camera. This skill fixes
 8. **Write three test shots.** One white or light product, one dark product, one shiny or clear product. For each, what it should look like: whites white but not blown, details visible in dark areas, reflections soft and placed.
 9. **Plan the check-in.** After the first batch, compare ten photos side by side for consistency, and adjust one thing at a time.
 
+For requests to make finished variants, use `workflows/verified-media-delivery.md`. Start with editable layouts referencing the untouched photograph; record actual source/display resolution and preserve aspect ratio. If generating or editing, use the host's authorized image tools and their instructions, including the installed imagegen skill where available, within the user's tool boundary. A generative editor can redraw fine product features despite a preserve-pixels prompt. Compare the actual export to matched source detail crops, including jewellery settings, connectors, visible stone count and facets. Reject changed product features from the finished set instead of delivering them as private-review variants with a caveat. Finish feasible source-preserving layouts now; brief a real capture for missing angles, material detail or scale. Do not claim physical colour, SKU or rights from appearance alone.
+
 ## Checks
 
 - Every setting is a number with a unit; nothing says "a bit brighter".

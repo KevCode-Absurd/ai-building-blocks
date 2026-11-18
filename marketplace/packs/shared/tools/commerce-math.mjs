@@ -93,6 +93,33 @@ export function capacityPlan({availability,assignments}) {
   const periods=[...buckets.values()].map(r=>({...r,remaining:r.available-r.assigned}));
   return {feasible:periods.every(r=>r.remaining>=-1e-9),periods,violations:periods.filter(r=>r.remaining< -1e-9),limitations:'Checks allocation against declared sourced limits; does not authenticate availability or verify estimates. Include existing commitments before adding work.'};
 }
+/** Conditional queue arithmetic: new arrivals occur before dispatch; overtime stops at first clearance. */
+export function backlogRecovery({backlogOrders,arrivalsPerDay,baseCapacityPerDay,overtimeCapacityPerDay,overtimeCostPerDay,horizonDays,currency,population,unit,constantRates,arrivalsExcludeBacklog}) {
+  const counts={backlogOrders,arrivalsPerDay,baseCapacityPerDay,overtimeCapacityPerDay,horizonDays};
+  nonnegative({...counts,overtimeCostPerDay});
+  if(!Object.values(counts).every(Number.isSafeInteger)||horizonDays<1||horizonDays>3650)throw Error('Safe integer order counts and a horizon of 1 to 3650 operating days required');
+  if(constantRates!==true||arrivalsExcludeBacklog!==true)throw Error('Explicit constant rates and new arrivals disjoint from the opening backlog required');
+  if(unit!=='orders'||typeof population!=='string'||!population.trim())throw Error('One explicit order population and unit orders required; do not mix stock units or tickets');
+  if(typeof currency!=='string'||!(/^[A-Z]{3}$/).test(currency))throw Error('Explicit common three-letter currency required for overtime costs');
+  let backlog=backlogOrders,firstClearanceDay=backlogOrders===0?0:null,overtimeDays=0,overtimeCost=0;
+  let clearedAndStayedClearThroughHorizon=backlogOrders===0;
+  const timeline=[];
+  for(let day=1;day<=horizonDays;day++) {
+    const openingBacklog=backlog,overtimeActive=firstClearanceDay===null&&overtimeCapacityPerDay>0;
+    const capacity=baseCapacityPerDay+(overtimeActive?overtimeCapacityPerDay:0),available=openingBacklog+arrivalsPerDay;
+    if(!Number.isSafeInteger(capacity)||!Number.isSafeInteger(available))throw Error('Order arithmetic exceeds safe integer range');
+    const dispatched=Math.min(capacity,available),dayOvertimeCost=overtimeActive?overtimeCostPerDay:0;
+    backlog=available-dispatched;
+    overtimeDays+=overtimeActive?1:0;overtimeCost+=dayOvertimeCost;
+    if(!Number.isFinite(overtimeCost))throw Error('Overtime cost arithmetic overflow');
+    if(firstClearanceDay===null&&backlog===0){firstClearanceDay=day;clearedAndStayedClearThroughHorizon=true;}
+    if(firstClearanceDay!==null&&backlog>0)clearedAndStayedClearThroughHorizon=false;
+    timeline.push({day,openingBacklog,arrivals:arrivalsPerDay,capacity,dispatched,closingBacklog:backlog,overtimeActive,overtimeCost:dayOvertimeCost});
+  }
+  return {status:'conditional_scenario',population,unit,currency,firstClearanceDay,endingBacklog:backlog,overtimeDays,overtimeCost,baseCapacityCoversArrivals:baseCapacityPerDay>=arrivalsPerDay,clearedAndStayedClearThroughHorizon,timeline,
+    assumptions:'Constant daily arrivals and capacities for one order population; new arrivals exclude the opening backlog and arrive before dispatch. Full daily overtime cost is charged while overtime is active, including the clearance day. Overtime stops at first clearance and is not restarted; the remaining horizon uses base capacity.',
+    limitations:'Arithmetic only, not observed clearance, an SLA, calendar dates, staffing availability, source authentication or spending approval. Day-zero clearance describes an empty opening queue, not future capacity stability. Cost covers only declared incremental overtime, not total fulfilment or profit.'};
+}
 export function cashForecast({openingCash,reserve,periods}) {
   if(!Number.isFinite(openingCash))throw Error('openingCash must be finite');
   nonnegative({reserve});
@@ -115,7 +142,7 @@ export function toleranceFit({productMin,productMax,openingMin,openingMax,requir
   const clearanceMin=openingMin-productMax,clearanceMax=openingMax-productMin;
   return {unit,clearanceMin,clearanceMax,withinTarget:clearanceMin>=requiredMin-1e-9&&clearanceMax<=requiredMax+1e-9,limitations:'Worst-case total dimensional clearance, not radial clearance. Declared ranges only; does not verify measurements, cushioning, material deformation or manufacturing safety.'};
 }
-const operations={forecastInputCost,safetyStock,materialInput,forecastUnits,stockPlan,replenishmentDay,experimentReadout,capacityPlan,cashForecast,toleranceFit};
+const operations={forecastInputCost,safetyStock,materialInput,forecastUnits,stockPlan,replenishmentDay,experimentReadout,capacityPlan,backlogRecovery,cashForecast,toleranceFit};
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
   try{
     const doc=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));

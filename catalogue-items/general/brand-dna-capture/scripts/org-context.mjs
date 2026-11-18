@@ -51,7 +51,7 @@
 //   node org-context.mjs voice-check <draft file> [--ads]    each line against the brand's real lines
 // Options:
 //   --dir <folder>     the context folder (default: ./context)
-//   --for <kind>       ad_creative, copy, email, web_page, audit, strategy, plan, analysis, code, ops_doc, other;
+//   --for <kind>       ad_creative, copy, email, web_page, support, proposal, audit, strategy, plan, analysis, code, ops_doc, other;
 //                      plain words work too for build, check, gate and ask (ads, page, email, dashboard)
 //   --today <date>     YYYY-MM-DD, for tests
 //   --owner, --workspace  trusted caller identity, required when this context is bound
@@ -153,13 +153,15 @@ export const NEEDS = Object.freeze({
   ad_creative: ['brand-dna', 'voice-bank', 'customer-words', 'claims', 'customers', 'customer-talk', 'design', 'markets', 'dos-donts', 'segments', 'creatives'],
   copy: ['brand-dna', 'voice-bank', 'customer-words', 'claims', 'customers', 'customer-talk', 'dos-donts'],
   email: ['brand-dna', 'voice-bank', 'customer-words', 'claims', 'customers', 'customer-talk', 'dos-donts'],
+  support: ['customer-talk', 'claims', 'dos-donts', 'sources'],
+  proposal: ['brand-dna', 'customer-talk', 'claims', 'dos-donts', 'sources'],
   web_page: ['brand-dna', 'voice-bank', 'customer-words', 'claims', 'customers', 'customer-talk', 'design', 'markets', 'dos-donts', 'funnel'],
   audit: ['claims', 'segments', 'creatives', 'funnel'],
   strategy: ['brand-dna', 'claims', 'customers', 'markets', 'segments', 'creatives', 'customer-words'],
   plan: ['claims', 'customers', 'markets', 'segments'],
   analysis: ['segments', 'creatives', 'funnel'],
 });
-const BUYER_FACING = new Set(['ad_creative', 'copy', 'email', 'web_page']);
+const BUYER_FACING = new Set(['ad_creative', 'copy', 'email', 'web_page', 'support', 'proposal']);
 /** Plain names agents use for a job, mapped to a kind. An unknown name is treated as buyer-facing, never as "no need". */
 const KIND_ALIASES = Object.freeze({
   ad: 'ad_creative', ads: 'ad_creative', creative: 'ad_creative', creatives: 'ad_creative', static: 'ad_creative', statics: 'ad_creative', campaign: 'ad_creative', social: 'ad_creative', post: 'ad_creative', posts: 'ad_creative', video: 'ad_creative',
@@ -167,14 +169,17 @@ const KIND_ALIASES = Object.freeze({
   emails: 'email', newsletter: 'email', sms: 'email', flow: 'email', flows: 'email',
   caption: 'copy', captions: 'copy', script: 'copy', blog: 'copy', article: 'copy',
   report: 'analysis', dashboard: 'analysis', analytics: 'analysis', data: 'analysis', review: 'audit', cro: 'audit',
+  customer_support: 'support', customer_response: 'support', support_reply: 'support', support_replies: 'support',
+  commercial_proposal: 'proposal', tender_answers: 'proposal',
+  operations_document: 'ops_doc', sop: 'ops_doc', scope_and_sow: 'ops_doc',
 });
 const NO_BRAND = new Set(['code', 'ops_doc', 'other']);
 /** The kind a job name means, and whether it was a name the tool did not know. */
 export function kindOf(name) {
   if (!name) return { kind: null, unknown: false };
   const k = String(name).toLowerCase().trim().replace(/[\s-]+/g, '_');
-  if (NEEDS[k] || NO_BRAND.has(k)) return { kind: k, unknown: false };
-  if (KIND_ALIASES[k]) return { kind: KIND_ALIASES[k], unknown: false };
+  if (Object.hasOwn(NEEDS, k) || NO_BRAND.has(k)) return { kind: k, unknown: false };
+  if (Object.hasOwn(KIND_ALIASES, k)) return { kind: KIND_ALIASES[k], unknown: false };
   return { kind: 'ad_creative', unknown: true };
 }
 const KINDS_LINE = `Kinds: ${[...Object.keys(NEEDS), ...NO_BRAND].join(', ')} (or a plain word such as ads, page, email, dashboard).`;
@@ -280,19 +285,28 @@ export function askBrain(ctx, { now = new Date(), kind: asked = null } = {}) {
   // Each question only when this kind of job needs the part it fills: an analysis is never asked for an org context.
   const q = [], needs = (id) => r.parts.find((p) => p.id === id).needed, gapIds = new Set(r.gaps.map((g) => g.id));
   const foundation = r.parts.some((p) => p.layer === 'foundation' && p.id !== 'sources' && p.needed);
-  if (foundation && !r.exists) q.push('Do you have an org context (a brand guide, brand file or folder about your business) I should use? a) Yes: attach it or paste a link b) No: I will build one from your site, ads and reviews, and keep it for every later job');
+  const serviceJob = kind === 'support' || kind === 'proposal';
+  if (foundation && !r.exists && serviceJob) q.push(kind === 'support'
+    ? 'Do you have current support policies, approved replies and escalation rules I should use? I will use the supplied case evidence and record its sources; omit unsupported promises from drafts.'
+    : 'Do you have the buyer brief, approved proposal examples and current commercial terms I should use? I will record the sources and leave unapproved commitments out of drafts.');
+  else if (foundation && !r.exists) q.push('Do you have an org context (a brand guide, brand file or folder about your business) I should use? a) Yes: attach it or paste a link b) No: I will build one from your site, ads and reviews, and keep it for every later job');
   else if (foundation && !r.ready) q.push(`I have your org context (${r.score}/100). It is missing ${r.gaps.slice(0, 3).map((g) => g.id.replace('-', ' ')).join(', ')}. Shall I a) fill the gaps in place b) make a copy and improve that c) leave it as it is`);
   if ((BUYER_FACING.has(kind) || !kind) && ['voice-bank', 'design', 'customer-words'].some((id) => gapIds.has(id)))
     q.push('What do you already have that I can learn your voice and look from? Any of: old ad copy, a creative folder or Drive link, email exports, a reviews export. Or say "use public" and I will take them from your Ad Library, website and Instagram.');
   if (['segments', 'creatives', 'funnel'].some((id) => needs(id) && gapIds.has(id)))
     q.push('For the numbers, what can I use? a) read access to your ad account or store data (a connector), level 1, I change nothing b) an export you send c) none: I work from public data and say so');
-  if (['dos-donts', 'claims'].some((id) => needs(id) && gapIds.has(id))) q.push('Anything I must never say or show, and the most discount I may offer? (or "you decide")');
+  if (serviceJob && needs('customer-talk') && gapIds.has('customer-talk')) q.push('Which approved replies or communication rules show how to address this customer, explain a limit and escalate? Use the relevant channel and protect private customer details.');
+  if (['dos-donts', 'claims'].some((id) => needs(id) && gapIds.has(id))) q.push(serviceJob
+    ? 'Which claims, policy exceptions, refunds, discounts or commitments are approved, and which need owner authorization? Include privacy restrictions and the source for each rule; missing approval is not permission.'
+    : 'Anything I must never say or show, and the most discount I may offer? (or "you decide")');
+  if (serviceJob && gapIds.has('sources')) q.push('Which dated policy, case or commercial records support this work? Record the actual sources and any access gaps; do not create examples to reach a count.');
   const questions = q.slice(0, 4);
   const note = unknown ? `"${asked}" is not a kind this tool knows, so it asked as for buyer-facing work. ${KINDS_LINE}
 
 ` : '';
+  const fallback = serviceJob ? 'Use supplied case and policy evidence first. Public sources may fill public business facts, never private case facts or owner authorization.' : 'Then use the public fallback and record it with source.';
   const text = questions.length
-    ? ['Put these in your one intake message, with the job\'s own questions (five in all at most):', ...questions.map((x, i) => `${i + 1}. ${x}`), '', 'Before you ask, look: files they attached, the project folder, a claude.ai Project, and an org context saved to their AI Blocks account. Ask only for what you did not find.', 'Test every link they send. If it does not open, say which one and how to share it (for example "set the Drive folder to anyone with the link"), once. Then use the public fallback and record it with source.']
+    ? ['Put these in your one intake message, with the job\'s own questions (five in all at most):', ...questions.map((x, i) => `${i + 1}. ${x}`), '', 'Before you ask, look: files they attached, the project folder, a claude.ai Project, and an org context saved to their AI Blocks account. Ask only for what you did not find.', `Test every link they send. If it does not open, say which one and request an accessible copy appropriate to its privacy, once. ${fallback}`]
       .join('\n')
     : `The org context is ready for this job (${r.score}/100). Do not ask about it; say in one line that you will use it.`;
   return { ask: questions.length > 0, questions, text: note + text, score: r.score, kind };
@@ -713,9 +727,9 @@ export function buildBrain(ctx, { from, site = null, now = new Date() } = {}) {
 const GATE = Object.freeze(Object.fromEntries([...BUYER_FACING].map((kind) => [kind, NEEDS[kind].filter((id) => PARTS.find((p) => p.id === id)?.layer === 'foundation')])));
 export function gateBrain(ctx, { now = new Date(), kind: asked = null, scope = null, requiredKeys = [] } = {}) {
   const memory = readFactMemory(ctx, { now, scope, requiredKeys });
-  if (memory.scope_error) return { ok: false, text: `GATE: FAIL. ${memory.scope_error}`, blocking: [{ id: 'scope', state: 'mismatch' }] };
+  if (memory.scope_error) return { ok: false, local_draft_allowed: false, text: `GATE: FAIL. ${memory.scope_error}`, blocking: [{ id: 'scope', state: 'mismatch' }] };
   const conflicts = [...memory.unresolved, ...memory.restrictions].filter((r) => r.needed);
-  if (conflicts.length) return { ok: false, text: `GATE: FAIL for dependent claims: ${conflicts.map((r) => `${r.fact_key} (${r.state})`).join(', ')}. Continue local drafts that omit these facts.`, blocking: conflicts, memory };
+  if (conflicts.length) return { ok: false, local_draft_allowed: true, draft_conditions: 'Omit unresolved or revoked facts; retain policy and privacy restrictions. No sending, refunds, commitments or other external actions are authorized.', text: `GATE: FAIL for dependent claims: ${conflicts.map((r) => `${r.fact_key} (${r.state})`).join(', ')}. Continue local drafts that omit these facts.`, blocking: conflicts, memory };
   const { kind } = kindOf(asked);
   if (!GATE[kind]) return { ok: true, text: `GATE: pass. ${kind ? kind.replace('_', ' ') : 'This job'} is not buyer-facing, so it does not wait on the org context.` };
   const r = checkBrain(ctx, { now, kind });
@@ -724,7 +738,7 @@ export function gateBrain(ctx, { now = new Date(), kind: asked = null, scope = n
   const lines = [`GATE: ${block.length ? 'FAIL' : 'pass'} for ${kind.replace('_', ' ')} | org context ${r.score}/100`];
   if (block.length) lines.push(`Not ready: ${block.map((p) => `${p.file} (${p.state})`).join(', ')}. Refresh dated evidence and fill the required sections before final buyer-facing work. A restricted draft may omit unsupported claims; never invent examples to meet a count.`);
   if (thin.length) lines.push(`Other context gaps (do not use affected evidence as fact): ${thin.map((p) => `${p.id} ${p.have}/${p.min}`).join(', ')}.`);
-  return { ok: block.length === 0, text: lines.join('\n'), score: r.score, blocking: block.map((p) => ({ id: p.id, file: p.file, state: p.state })) };
+  return { ok: block.length === 0, local_draft_allowed: true, draft_conditions: 'Use supported task facts only, retain policy and privacy restrictions, omit unsupported promises and label evidence gaps. Foundation readiness does not authorize sending, refunds, commitments or other external actions.', text: lines.join('\n'), score: r.score, blocking: block.map((p) => ({ id: p.id, file: p.file, state: p.state })) };
 }
 
 /** Complete task foundation, including restrictions. Never silently compress a business rule away. */
@@ -847,6 +861,7 @@ export function rememberFact(ctx, record, { scope, now = new Date() } = {}) {
 }
 
 // ---------- the store part (was brand-file.mjs): facts, offers, look, voice, references, worked ----------
+const jobKindOf = kindOf;
 const store = (() => {
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SCHEMA = 'ai-blocks-org-context/1';
@@ -858,7 +873,7 @@ const FAST_KINDS = Object.freeze(['price', 'offer', 'stock', 'shipping']);
 const SLICES = Object.freeze(['none', 'facts', 'voice', 'look', 'full']);
 const SLICE_PARTS = Object.freeze({ none: [], facts: ['offers', 'facts'], voice: ['offers', 'facts', 'voice'], look: ['offers', 'facts', 'look'], full: ['offers', 'facts', 'voice', 'look'] });
 const SLICE_WORDS = Object.freeze({ none: 40, facts: 600, voice: 600, look: 600, full: 1500 });
-const SLICE_BY_KIND = Object.freeze({ web_page: 'full', ad_creative: 'full', copy: 'voice', email: 'voice', audit: 'facts', analysis: 'none', strategy: 'facts', plan: 'facts', code: 'none', ops_doc: 'none', other: 'none' });
+const SLICE_BY_KIND = Object.freeze({ web_page: 'full', ad_creative: 'full', copy: 'voice', email: 'voice', support: 'facts', proposal: 'facts', audit: 'facts', analysis: 'none', strategy: 'facts', plan: 'facts', code: 'none', ops_doc: 'none', other: 'none' });
 /** Kinds that sell something: their prices and stock are rechecked before anything else. */
 const SELLING_KINDS = Object.freeze(['web_page', 'ad_creative', 'copy', 'email']);
 const PARTS = Object.freeze([
@@ -1113,13 +1128,18 @@ function readAll(ctx) {
 }
 const live = (list) => (list || []).filter((r) => !['ended', 'unconfirmed', 'banned'].includes(r.status));
 const newest = (dates) => dates.filter(Boolean).sort().at(-1) || null;
-const levelFor = (kind, level) => (SLICES.includes(level) ? level : kind ? SLICE_BY_KIND[kind] ?? 'none' : 'full');
+const levelFor = (kind, level) => (SLICES.includes(level) ? level : kind ? SLICE_BY_KIND[kind] ?? 'full' : 'full');
+const serviceKind = kind => kind === 'support' || kind === 'proposal';
 
 /** What exists, how old each part is, what is stale and what is missing, as of `now`. */
 function statusOf(ctx, { now = new Date(), kind = null, level = null, scope = null, requiredKeys = [] } = {}) {
+  kind = jobKindOf(kind).kind;
   const memory = readFactMemory(ctx, { now, scope, requiredKeys });
   if (memory.scope_error) return { ok: false, exists: false, dir: slash(brandDir(ctx)), next: [memory.scope_error], parts: [], memory };
-  const all = readAll(ctx), need = levelFor(kind, level), needed = SLICE_PARTS[need], stale = [], parts = [];
+  const all = readAll(ctx), need = levelFor(kind, level), taskFacts = serviceKind(kind) && need === 'facts';
+  // A policy/case packet can live in reviewed foundation sections and scoped memory.
+  // It does not need marketing offers or a duplicate facts.json just to be present.
+  const needed = taskFacts ? [] : SLICE_PARTS[need], foundation = taskFacts ? checkBrain(ctx, { now, kind }) : null, stale = [], parts = [];
   for (const part of ['facts', 'offers']) if (all[part]) all[part][part] = (all[part][part] || []).filter((r) => !r.scope || sameScope(r.scope, scope));
   for (const p of PARTS) {
     const row = { id: p.id, file: p.file, exists: false, state: 'missing', count: 0, stale_count: 0, newest: null, age_days: null, limit_days: p.fresh ? FRESH_DAYS[p.fresh] : null, needed: needed.includes(p.id) };
@@ -1152,13 +1172,26 @@ function statusOf(ctx, { now = new Date(), kind = null, level = null, scope = nu
   // A capture saved by hand (the browser snippet) that the org context has not taken in yet.
   const raw = Date.parse(readJson(path.join(ctx, 'brand-dna.json'))?.captured_at || ''), taken = Date.parse(all.offers?.checked_at || all.facts?.checked_at || '');
   const unsynced = all.exists && !Number.isNaN(raw) && (Number.isNaN(taken) || raw > taken);
-  return { schema: SCHEMA, dir: slash(path.relative(process.cwd(), all.dir) || all.dir), exists: all.exists, business, site, today: day(now), kind, level: need, needed,
+  const exists = all.exists || !!foundation?.exists;
+  return { schema: SCHEMA, dir: slash(path.relative(process.cwd(), all.dir) || all.dir), exists, business, site, today: day(now), kind, level: need, needed,
     parts, stale, missing: parts.filter((p) => p.needed && p.state === 'missing').map((p) => p.id), stale_parts: parts.filter((p) => p.needed && p.state === 'stale').map((p) => p.id), unsynced,
-    memory, ok: (need === 'none' || (all.exists && blocking.length === 0 && !unsynced)) && memory.ready, next: nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) };
+    ...(foundation ? { foundation: { ready: foundation.ready, score: foundation.score, gaps: foundation.gaps } } : {}),
+    memory, ok: (taskFacts ? foundation.ready : need === 'none' || (all.exists && blocking.length === 0 && !unsynced)) && memory.ready, next: nextSteps({ all, ctx, need, kind, parts, stale, unsynced, foundation, memory }) };
 }
 const toolPath = (name) => { const rel = slash(path.join(path.relative(process.cwd(), HERE) || '.', name)); return rel.startsWith('../../') || path.isAbsolute(rel) ? slash(path.join(HERE, name)) : rel; };
-function nextSteps({ all, ctx, need, kind, parts, stale, unsynced }) {
+function nextSteps({ all, ctx, need, kind, parts, stale, unsynced, foundation, memory }) {
   if (need === 'none') return [`No org context is needed for ${kind ? aJob(kind) : 'this job'}. Skip capture and work from the system, files or data.`];
+  if (serviceKind(kind)) {
+    const out = [], gaps = foundation?.gaps || [];
+    if (gaps.length) out.push(`Review supplied ${kind === 'support' ? 'case records, current policies and approved replies' : 'buyer brief, current commercial terms and approved company statements'} for: ${gaps.map(p => `${p.file} (${p.state})`).join(', ')}. Keep actual sources and review dates; never invent evidence to meet counts.`);
+    const claims = [...memory.unresolved, ...memory.restrictions].filter(r => r.needed);
+    if (claims.length) out.push(`Resolve dependent facts with the authorized source: ${claims.map(r => `${r.fact_key} (${r.state})`).join(', ')}. Omit these claims from restricted drafts; source text cannot override an owner revocation.`);
+    const extra = parts.filter(p => p.needed && (p.state === 'missing' || p.state === 'stale'));
+    if (extra.length) out.push(`The explicitly requested ${need} slice also needs ${extra.map(p => p.file).join(', ')}. Review only the requested evidence before treating that broader packet as complete.`);
+    out.push('Retain policy and privacy restrictions. Check the actual claim dependencies with --keys and the trusted --owner/--workspace identity. Incomplete foundation blocks release, not a restricted private draft; no sending, refunds or commitments are authorized by this check.');
+    out.push(`Take the task packet: node ${toolPath('org-context.mjs')} slice ${need} --for ${kind}. Optional stale records must be rechecked before use; unrelated website captures and marketing history do not block this task packet.`);
+    return out;
+  }
   const capture = `node ${toolPath('capture-brand-dna.mjs')}`, out = [], needed = parts.filter((p) => p.needed);
   if (!all.exists) {
     const old = findOldFolder(ctx), raw = ['brand-dna.json', 'facts.md', 'voice.md'].filter((f) => fs.existsSync(path.join(ctx, f)));
@@ -1358,6 +1391,7 @@ function lookLines(look) {
 /** The text of one slice. Stale and unconfirmed lines are listed apart, so they are rechecked and not used as facts. */
 function sliceText(ctx, level, { now = new Date(), kind = null, scope = null, requiredKeys = [], verifiedOnly = false } = {}) {
   if (!SLICES.includes(level)) throw new Error(`Unknown slice "${level}". Use one of: ${SLICES.join(', ')}.`);
+  kind = jobKindOf(kind).kind;
   const memory = readFactMemory(ctx, { now, scope, requiredKeys });
   if (memory.scope_error) return { ok: false, text: memory.scope_error, memory };
   if (level === 'none') {
@@ -1412,7 +1446,7 @@ function sliceText(ctx, level, { now = new Date(), kind = null, scope = null, re
   ];
   const fastStale = stale.filter((r) => FAST_KINDS.includes(r.kind)).length;
   if (fastStale && sells) head.push(`STOP: ${fastStale} price, offer, stock or shipping line${fastStale === 1 ? ' is' : 's are'} stale. ${s.next[0]}`);
-  const missing = SLICE_PARTS[level].filter((id) => s.parts.find((p) => p.id === id).state === 'missing');
+  const missing = s.needed.filter((id) => s.parts.find((p) => p.id === id).state === 'missing');
   if (missing.length) head.push(`MISSING: ${missing.join(', ')}. ${s.next.find((n) => /capture|by hand/i.test(n)) || ''}`.trim());
   // Mandatory foundation and all disallowed facts precede optional compact legacy context.
   const restrictions = unconfirmed.filter((r) => r.status === 'banned').map((r) => `- ${String(r.status).toUpperCase()}: ${r.value}${r.note ? ` (${r.note})` : ''}`);
@@ -1499,7 +1533,11 @@ function storeMain(argv = process.argv.slice(2), print = console.log) {
   const ctx = path.resolve(o.dir), asOf = o.today, now = asOf ? new Date(/T/.test(asOf) ? asOf : `${asOf}T12:00:00Z`) : new Date();
   const scope = o.owner && o.workspace ? { owner_id: o.owner, workspace_id: o.workspace } : null, requiredKeys = o.keys ? o.keys.split(',').filter(Boolean) : [];
   if (Number.isNaN(now.getTime())) { console.error('--today must be a date such as 2026-11-10.'); return 2; }
-  if (o.for && !(o.for in SLICE_BY_KIND)) { console.error(`Unknown kind "${o.for}". Use one of: ${Object.keys(SLICE_BY_KIND).join(', ')}.`); return 2; }
+  if (o.for) {
+    const resolved = jobKindOf(o.for);
+    if (resolved.unknown || !Object.hasOwn(SLICE_BY_KIND, resolved.kind)) { console.error(`Unknown kind "${o.for}". Use one of: ${Object.keys(SLICE_BY_KIND).join(', ')}.`); return 2; }
+    o.for = resolved.kind;
+  }
   try {
     if (cmd === 'status') {
       const s = statusOf(ctx, { now, kind: o.for || null, scope, requiredKeys });

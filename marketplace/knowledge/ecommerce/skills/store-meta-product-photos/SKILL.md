@@ -38,7 +38,7 @@ Product photos do two jobs for a store: they stop the scroll in an ad, and they 
 - Brand guide or the store's photo style notes.
 - The image tool the store already uses, and the owner's limit on paid generation.
 
-**When something is missing.** No usable real photo: AI cannot fix that, because it has nothing true to copy. Plan a phone shoot (step 4, path 1) first. No product facts: ask once for dimensions and box contents; without them, no scale or contents shot.
+**When something is missing.** No usable real photo: plan a phone shoot (step 4, path 1). One usable supplied view is enough to make an honest local layout at its supported resolution; missing other angles, SKU mapping or profit data does not block that work. No dimensions or box contents: hold those scale/contents claims and list the exact evidence needed. Do not infer material, SKU or rights from appearance. If intake is unavailable, finish supported artifacts and name the remaining dependencies.
 
 **Access.** Level 1, read, for planning and making images locally. Replacing images on the live product page is a store change: prepare it at level 2 and the owner publishes. Never spend on a paid image tool or a photographer without the owner's yes and a stated cost.
 
@@ -88,9 +88,9 @@ Shoot what the next concepts need first. A new photo with the same message is on
 
 **Path 1, phone shoot (free, default for Red products).** Daylight from a window, white foam board as a reflector, phone on a stand, the same spot and settings for every variant. Put a white card or grey card in one test frame to check colour. Shoot each shot on the plan, plus a few spare angles. Edit only exposure, white balance and dust; do not reshape or recolour the product.
 
-**Path 2, real product in a made scene (Amber).** Cut out the real product photo. Generate or source a background with matching camera angle, light direction and colour temperature, with "no products, no text, no people" in any prompt. Place the product, match shadow and reflection, and keep its size honest.
+**Path 2, real product in a made scene (Amber).** Preserve the source photograph first in an editable layout. If a new scene is useful and permitted, generate a separate product-free background with matching camera angle, light direction and colour temperature, with "no products, no text, no people" in the prompt. Follow the host's authorized image tools and their instructions, including the installed imagegen skill where available; retain any native-subscription-only restriction and never substitute a paid API when forbidden. Place the source with its geometry and aspect ratio intact. If the allowed tools cannot produce a faithful cutout, use the entire untouched photo in a designed panel. Do not redraw the product to make light or shadows fit the scene. No invented scale cues.
 
-**Path 3, AI generation from a reference (Green, some Amber).** Only when the tool reproduces the product exactly, which most do not: labels get respelled and shapes soften. Expect to fall back to path 2. Never describe the product in words and let a tool invent it.
+**Path 3, AI generation from a reference.** An optional scene experiment when authorized, not a promise of product fidelity. Even a crop-only prompt can redraw settings, facets or text. Inspect the actual return; reject identity drift and switch to path 2, rather than continuing to deliver changed products with caveats. Green permits graphic scenes, not invented merchandise. New product angles, worn-scale shots, macro details and material proof require actual source photography and supporting facts.
 
 For sensitive health or body problems, an illustration can show the problem without a graphic photo [MCR-0020]; keep the real product photo on it.
 
@@ -99,18 +99,18 @@ For sensitive health or body problems, an illustration can show the problem with
 Side by side with the reference at 100% zoom, pass or fail:
 
 1. Label text spelled and placed the same.
-2. Colours match; sample a flat area and compare hex values.
-3. Shape and proportions match, including caps, handles and seams.
+2. Visible colours match the source; image samples can detect shifts but cannot certify physical colour without a calibrated reference.
+3. Shape and proportions match, including caps, handles and seams. For jewellery compare outer/inner silhouette, bezel/prong thickness, connectors, visible stone count/arrangement and facet boundaries in matched full-size source/output crops. Record obscured or soft details as blocked, never guessed.
 4. Size against hands or objects is honest.
 5. Finish and texture match (matte stays matte, knit stays knit).
 6. The variant is the one it will be linked to.
 7. Only real box contents are shown.
 
-Any fail: redo or drop. A misleading photo comes back as returns, and returns come straight off gross profit per purchase [MEA-0023].
+Any visible product change is a fail: remove that attempt from the finished product set, even for private review. An AI/draft disclaimer does not fulfill a product-preservation request. Keep failed attempts separately only as rejected evidence if useful. Deliver the untouched photograph in useful editable square/portrait layouts or supported detail views instead, with source paths/hashes, output paths/hashes, observed feature checks, actual dimensions and effective source resolution. Ratio variants are not new angles; enlargement is not new captured detail. List the real capture needed for each unmet slot. A misleading photo comes back as returns, and returns come straight off gross profit per purchase [MEA-0023].
 
 ### 6. Record how each image was made
 
-Tag each image **Real**, **Real product in made scene** or **Fully made**. Fully made images are allowed only for Green. Store the tag in the manifest so `store-meta-ad-images` and anyone uploading later knows what may be used where.
+Tag each image **Real**, **Real product in made scene** or **Fully made graphic**. Fully made graphics are allowed only for Green and cannot stand in for a photo of the actual product. Store the tag and disposition (finished source-preserving layout, rejected experiment, or blocked shot) in the manifest so `store-meta-ad-images` and anyone uploading later knows what may be used where. Visual fidelity, commercial rights, SKU confirmation and channel acceptance remain separate checks.
 
 ## Checks before you hand it over
 

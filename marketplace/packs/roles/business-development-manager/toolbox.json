@@ -70,6 +70,7 @@
       "id": "quote-scope",
       "task": "Turn a site walk into a quote scope and proposal",
       "kind": "copy",
+      "foundation_kind": "proposal",
       "items": [
         { "ref": "kit:skills/site-walk-and-first-visit", "use": "build", "when": "When visit notes must become an accurate scope with what is in and out" },
         { "ref": "library:quote-and-proposal-builder", "type": "skill", "use": "build", "when": "When you have call notes and photos and need a costed quote in the firm's template" },

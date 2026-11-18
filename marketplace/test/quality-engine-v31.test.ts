@@ -120,7 +120,7 @@ const packCopy=(stubs:Record<string,string>)=>{
   const root=mkdtempSync(path.join(tmpdir(),'qe-pack-'));
   const q=path.join(root,'tools','quality');
   mkdirSync(q,{recursive:true});
-  for(const f of ['qe-check.cjs','wordcount.cjs','readability.cjs','leakcheck.cjs','proof.cjs','check-format.cjs','profiles.json'])copyFileSync(path.join(tools,'quality',f),path.join(q,f));
+  for(const f of ['qe-check.cjs','wordcount.cjs','readability.cjs','leakcheck.cjs','date-evidence.cjs','proof.cjs','check-format.cjs','profiles.json'])copyFileSync(path.join(tools,'quality',f),path.join(q,f));
   for(const [name,body] of Object.entries(stubs))writeFileSync(path.join(q,name),body);
   writeFileSync(path.join(root,'pack.json'),'{}');
   mkdirSync(path.join(root,'context'));

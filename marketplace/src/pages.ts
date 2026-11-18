@@ -477,60 +477,6 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
 
 /** The built index.html, once per isolate (assets don't change within a deploy). */
 let shellCache: { origin: string; html: string } | null = null;
-let connectShellCache: { origin: string; shell: string; html: Promise<string> } | null = null;
-
-/** Only the ordinary Vite stylesheet link: preserve every other link's loading/security semantics. */
-function builtStylesheetPath(link: string): string | null {
-  const text = link.slice(5, -1).replace(/\/\s*$/, "");
-  const attributes = new Map<string, string | undefined>();
-  const pattern = /\s+([a-zA-Z][\w:-]*)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g;
-  let end = 0;
-  for (const match of text.matchAll(pattern)) {
-    if (text.slice(end, match.index).trim()) return null;
-    end = match.index! + match[0].length;
-    const name = match[1].toLowerCase();
-    if (!["rel", "href", "crossorigin"].includes(name) || attributes.has(name)) return null;
-    attributes.set(name, match[2] ?? match[3] ?? match[4]);
-  }
-  if (text.slice(end).trim() || attributes.get("rel") !== "stylesheet") return null;
-  if (attributes.has("crossorigin") && ![undefined, "", "anonymous"].includes(attributes.get("crossorigin"))) return null;
-  const href = attributes.get("href");
-  return href && /^\/assets\/[A-Za-z0-9_-]+\.css$/.test(href) ? href : null;
-}
-
-/** Keep CSS bytes unchanged inside HTML, or retain the external link when that is not unambiguous. */
-function canInlineBuiltCss(css: string): boolean {
-  if (!css.trim() || new TextEncoder().encode(css).byteLength > 128 * 1024) return false;
-  // HTML raw-text closers cannot be HTML-escaped without changing CSS. CSS escapes/imports and relative URLs
-  // likewise need their original resource location, so fall back instead of rewriting their meaning.
-  if (/<\/style/i.test(css) || /\\|@import\b|@charset\b/i.test(css)) return false;
-  for (const match of css.matchAll(/\burl\s*\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*))\s*\)/gi)) {
-    const value = (match[1] ?? match[2] ?? match[3]).trim();
-    if (!/^\/(?!\/)/.test(value) && !/^data:/i.test(value)) return false;
-  }
-  return true;
-}
-
-/** Inline trusted built CSS for the connect page's cold navigation. Other pages retain the external stylesheet:
- * including all CSS in their documents regressed measured LCP. No styles change. */
-async function inlineBuiltStylesheets(html: string, env: Env, url: URL): Promise<string> {
-  if (!env.ASSETS) return html;
-  let out = html;
-  for (const match of html.matchAll(/<link\b[^>]*>/gi)) {
-    const pathname = builtStylesheetPath(match[0]);
-    if (!pathname) continue;
-    try {
-      const response = await env.ASSETS.fetch(new Request(new URL(pathname, url.origin)));
-      if (!response.ok || response.headers.get("content-type")?.split(";", 1)[0].trim().toLowerCase() !== "text/css") continue;
-      const declaredSize = Number(response.headers.get("content-length"));
-      if (Number.isFinite(declaredSize) && declaredSize > 128 * 1024) continue;
-      const css = await response.text();
-      if (!canInlineBuiltCss(css)) continue;
-      out = out.replace(match[0], () => `<style data-built-stylesheet="${esc(pathname)}">${css}</style>`);
-    } catch { /* The original stylesheet link remains usable when the asset read fails. */ }
-  }
-  return out;
-}
 
 async function shell(env: Env, url: URL): Promise<string | null> {
   if (shellCache?.origin === url.origin) return shellCache.html;
@@ -542,17 +488,8 @@ async function shell(env: Env, url: URL): Promise<string | null> {
   return html;
 }
 
-/** Cache only the built connect variant, never page content, cookies or boot data. Keep the raw shell unchanged
- * so its deploy fingerprint and every other route are independent of which page was requested first. */
-function connectShell(html: string, env: Env, url: URL): Promise<string> {
-  if (connectShellCache?.origin !== url.origin || connectShellCache.shell !== html) {
-    connectShellCache = { origin: url.origin, shell: html, html: inlineBuiltStylesheets(html, env, url) };
-  }
-  return connectShellCache.html;
-}
-
 /** Tests only. */
-export function clearShellCache(): void { shellCache = null; connectShellCache = null; }
+export function clearShellCache(): void { shellCache = null; }
 
 /** A short fingerprint of the built shell. It changes with every deploy that changes the app's asset names. */
 export async function shellVersion(env: Env, url: URL): Promise<string | null> {
@@ -627,8 +564,7 @@ export async function pageResponse(req: Request, env: Env): Promise<Response | n
     const hit = await recordShareVisit(env, req, via.toLowerCase()).catch(() => null);
     if (hit?.setCookie) headers["set-cookie"] = hit.setCookie;
   }
-  const pageHtml = req.method !== "HEAD" && view.path === "/connect" ? await connectShell(html, env, url) : html;
-  return new Response(req.method === "HEAD" ? null : renderShell(pageHtml, env, view), { status: view.status, headers });
+  return new Response(req.method === "HEAD" ? null : renderShell(html, env, view), { status: view.status, headers });
 }
 
 // ---------- robots.txt, sitemap.xml, llms.txt ----------

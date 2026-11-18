@@ -1,0 +1,20 @@
+{
+  "schema": "cash-report-v1",
+  "currency": "USD",
+  "minorUnitDigits": 2,
+  "scope": "Illustrative example only. Replace with the authorized, dated forecast population.",
+  "sourceRefs": ["Synthetic example: receipts and payments below are not merchant records."],
+  "scenarios": [
+    {
+      "id": "base",
+      "label": "Base scenario",
+      "openingCash": 100,
+      "reserve": 40,
+      "periods": [
+        { "period": "Period 1", "receipts": 10, "payments": 20 },
+        { "period": "Period 2", "receipts": 0, "payments": 60 },
+        { "period": "Period 3", "receipts": 80, "payments": 10 }
+      ]
+    }
+  ]
+}

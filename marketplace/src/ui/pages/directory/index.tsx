@@ -4,7 +4,9 @@ import type { NavItem, PageDef } from "../types.ts";
 import { AgentsPage } from "./browse.tsx";
 import { AgentProfilePage } from "./profile.tsx";
 import { AgentFilePage } from "./file.tsx";
-import { GuidePage, GuidesPage } from "./guides.tsx";
+import { lazy } from "preact/compat";
+const GuidePage = lazy(() => import("./guides.tsx").then(m => ({ default: m.GuidePage })));
+const GuidesPage = lazy(() => import("./guides.tsx").then(m => ({ default: m.GuidesPage })));
 import { EcommercePage } from "./ecommerce.tsx";
 import { ShelfItemPage } from "./shelf.tsx";
 

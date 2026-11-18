@@ -15,12 +15,16 @@
     "incoterms",
     "warehouse operations"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "review_every_days": 14,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (ICC Incoterms, CBP, HMRC and EU customs pages, USPS, FTC and EU delivery rules), four skills (shipping cost review, carrier claims, delivery routes, international shipping prep), six prompts, three workflows, training interview and test briefs, and access levels per tool. Reviewed every 14 days while US and EU low-value import rules change."
+    },
+    {
+      "date": "2026-11-18",
+      "note": "Added chronological stock-out contribution comparison with separate readiness and open-PO scenarios, reproducible timelines and a lost-sales calculator. Future receipts cannot recover earlier lost sales."
     }
   ]
 }

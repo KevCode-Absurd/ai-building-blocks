@@ -45,6 +45,7 @@ For supported planning/experiment arithmetic use `node tools/commerce-math.mjs i
 | `materialInput` | Uses declared scrap basis: markup on good units or fraction of input lost. It does not establish material prices or a complete should-cost. |
 | `forecastUnits` | Keeps all-customer and new-customer baselines separate; avoids counting repeat demand twice. |
 | `stockPlan` | Reconciles commitments, backorders, confirmed receipt timing, case packs, MOQ and cash; drafts a stock plan without placing orders. |
+| `stockoutRisk` | Simulates lost demand in chronological day intervals for one SKU. Later receipts cannot recover earlier lost sales. Declares receipt assumptions, residual stock and contribution at risk; this is not the backlog model in `stockPlan`. |
 | `replenishmentDay` | Separates days from ordering and days from delivery for the declared usage fraction. |
 | `experimentReadout` | Completed fixed-horizon, independent-randomization, large-count interval only; does not establish causality or equivalence. |
 | `capacityPlan` | Compares owner/period task hours with sourced availability; does not model order queues. |

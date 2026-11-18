@@ -7,7 +7,7 @@ const require = createRequire(new URL('../../site/package.json', import.meta.url
 const {chromium} = require('@playwright/test');
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? null : process.argv[i + 1]; };
 const origin = arg('--origin') ?? 'https://useaiblocks.com';
-if (!['https://useaiblocks.com', 'http://127.0.0.1:5191'].includes(origin)) throw Error('Use production or the local production preview.');
+if (!['https://useaiblocks.com', 'https://agents.useaiblocks.com', 'https://agents-staging.useaiblocks.com', 'http://127.0.0.1:5191', 'http://127.0.0.1:5290'].includes(origin)) throw Error('Use an approved site or local production preview.');
 const runtime = arg('--runtime');
 if (!runtime) throw Error('Pass --runtime with a directory containing the official web-vitals package.');
 const vitals = await fs.readFile(path.join(runtime, 'node_modules/web-vitals/dist/web-vitals.iife.js'), 'utf8');
@@ -18,7 +18,7 @@ const repeats = Number(arg('--repeats') ?? 3);
 if (!Number.isInteger(repeats) || repeats < 1 || repeats > 5) throw Error('Use one to five repetitions.');
 const profiles = (arg('--profiles') ?? 'mobile,desktop').split(',');
 const report = {checkedOn: new Date().toISOString(), origin, scope: 'Cold Chrome lab sessions. Mobile uses 4x CPU and a 1.6 Mbps/150 ms network; desktop is unthrottled. Sampled INP includes explicit interactions, not a field percentile. No production writes or model calls.', runs: []};
-const browser = await chromium.launch({channel: 'chrome', headless: true});
+const browser = await chromium.launch({channel: 'chrome', headless: true, chromiumSandbox: true});
 try {
   for (const profile of profiles) for (const route of routes) for (let repeat = 1; repeat <= repeats; repeat++) {
     const mobile = profile === 'mobile';
@@ -37,7 +37,16 @@ try {
       const before = await page.evaluate(() => ({vitals: {...window.__vitals}, navigation: performance.getEntriesByType('navigation')[0].toJSON(), paint: performance.getEntriesByType('paint').map(e => ({name: e.name, ms: e.startTime})), bytes: performance.getEntriesByType('resource').reduce((n,e)=>n+e.transferSize, 0)}));
       const menu = page.getByTestId('menu-btn');
       if (await menu.isVisible()) { await menu.click(); await page.waitForTimeout(200); await menu.click(); }
-      if (route === '/') {
+      if (route === '/e-commerce') {
+        const search = page.locator('#ecom-find'); await search.fill('Meta ads');
+        await page.waitForTimeout(1600); await search.press('End'); await search.press('s'); await search.press('Backspace');
+        await search.fill(''); await page.waitForTimeout(500);
+        const tab = page.locator('#ecom-tab-skills'); await tab.click();
+        await page.locator('#ecom-tab-agents').click();
+      } else if (route.startsWith('/agents/')) {
+        const tabs = page.locator('.dir-start-tabs [role="tab"]');
+        if (await tabs.count() > 1) { await tabs.nth(1).click(); await tabs.first().click(); }
+      } else if (route === '/') {
         const search = page.getByTestId('library-search'); await search.fill('meeting notes');
         await page.waitForTimeout(1600); await search.press('End'); await search.press('s'); await search.press('Backspace');
       } else if (route === '/compose') {

@@ -12,7 +12,7 @@ const {default: lighthouse} = await import(pathToFileURL(require.resolve('lighth
 const {launch} = await import(pathToFileURL(require.resolve('chrome-launcher')).href);
 const {default: desktop} = await import(pathToFileURL(require.resolve('lighthouse/core/config/desktop-config.js')).href);
 const origin = arg('--origin') ?? 'https://useaiblocks.com';
-if (!['https://useaiblocks.com', 'http://127.0.0.1:5191'].includes(origin)) throw Error('Use production or the local production preview.');
+if (!['https://useaiblocks.com', 'https://agents.useaiblocks.com', 'https://agents-staging.useaiblocks.com', 'http://127.0.0.1:5191', 'http://127.0.0.1:5290'].includes(origin)) throw Error('Use an approved site or local production preview.');
 const routes = (arg('--routes') ?? '/,/jobs/make-video-ads,/skills/voice-and-tone-guide-writer,/compose').split(',');
 const profiles = (arg('--profiles') ?? 'mobile,desktop').split(',');
 const repeats = Number(arg('--repeats') ?? 3);
@@ -36,4 +36,8 @@ try {
     await fs.writeFile(path.join(out, 'summary.json'), JSON.stringify(report, null, 2) + '\n');
   }
   report.status = 'complete';
-} finally { if (chrome) await chrome.kill(); await fs.writeFile(path.join(out, 'summary.json'), JSON.stringify(report, null, 2) + '\n'); }
+} finally {
+  try { if (chrome) await chrome.kill(); }
+  catch (error) { report.cleanupError = String(error); throw error; }
+  finally { await fs.writeFile(path.join(out, 'summary.json'), JSON.stringify(report, null, 2) + '\n'); }
+}

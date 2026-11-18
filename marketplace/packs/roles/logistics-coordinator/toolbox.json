@@ -186,6 +186,7 @@
       "task": "Track inbound shipments and compare freight quotes",
       "kind": "ops_doc",
       "items": [
+        { "ref": "kit:workflows/freight-stockout-decision", "use": "check", "when": "When speed changes stock-out risk, to compare chronological lost sales for each goods-ready and open-PO scenario" },
         { "ref": "library:inbound-shipment-tracker-builder", "type": "skill", "use": "build", "when": "When purchase orders are on the water, to build a shared tracker and a warehouse notice" },
         { "ref": "library:compare-freight-quotes-with-all-charges", "type": "workflow", "use": "build", "when": "When freight quotes differ in what they include, to compare them with every charge counted" },
         { "ref": "library:prepare-a-goods-receipt-discrepancy-brief", "type": "workflow", "use": "check", "when": "When goods arrive short or wrong, to match order, receipt and invoice line by line" }

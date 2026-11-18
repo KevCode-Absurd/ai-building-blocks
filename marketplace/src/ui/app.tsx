@@ -2,7 +2,8 @@
 // The header, menu and footer are ports of the library's own (site/src/SiteHeader.tsx, SiteFooter.tsx and
 // site/src/lib/site-nav.mjs): same markup, class names and CSS (site-header.css, styles.css), so moving between
 // useaiblocks.com and this site feels like one product. "Agents" is this site's section in that header.
-import type { JSX } from "preact";
+import { Component, type ComponentChildren, type JSX } from "preact";
+import { Suspense } from "preact/compat";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { signInHref, useAuth, type Me } from "./lib/auth.tsx";
 import { Link, matchPath, useLocation } from "./lib/router.tsx";
@@ -206,6 +207,18 @@ function Gate(props: { access: Access; children: JSX.Element }) {
   );
 }
 
+// Keep a failed route download inside the page; navigation and account checks remain available.
+class PageLoadBoundary extends Component<{ children: ComponentChildren }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (this.state.failed) return <Page title="We could not load this page" intro="Check your connection, then try again.">
+      <Button onClick={() => location.reload()}>Reload the page</Button>
+    </Page>;
+    return this.props.children;
+  }
+}
+
 export function App() {
   const { path, query } = useLocation();
   let matched: { page: (typeof PAGES)[number]; params: Record<string, string> } | null = null;
@@ -219,7 +232,13 @@ export function App() {
       <a class="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader />
       <div id="main-content" tabIndex={-1}>
-        <Gate access={matched!.page.access}><Comp params={matched!.params} query={query} /></Gate>
+        <Gate access={matched!.page.access}>
+          <PageLoadBoundary key={path}>
+            <Suspense fallback={<main class="page"><Spinner label="Loading the page…" /></main>}>
+              <Comp params={matched!.params} query={query} />
+            </Suspense>
+          </PageLoadBoundary>
+        </Gate>
       </div>
       <SiteFooter />
     </>

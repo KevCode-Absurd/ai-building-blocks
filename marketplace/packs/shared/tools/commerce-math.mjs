@@ -63,6 +63,40 @@ export function replenishmentDay({deliveryDays,usageDays,usageFraction}) {
   nonnegative({deliveryDays,usageDays}); fraction(usageFraction,'usageFraction');
   return {daysFromOrder:deliveryDays+usageDays*usageFraction,daysFromDelivery:usageDays*usageFraction};
 }
+/** Lost demand is discarded in its interval; later receipts cannot recover it. */
+export function stockoutRisk({sku,availableUnits,dailyDemand,horizonDays,receipts=[],stockoutPolicy,constantDemand,contributionPerUnit,currency}) {
+  nonnegative({availableUnits,dailyDemand,horizonDays,contributionPerUnit});
+  if(!Number.isSafeInteger(availableUnits)||!Number.isSafeInteger(horizonDays)||horizonDays>3650)throw Error('Safe integer opening available units and elapsed horizon days from 0 to 3650 required');
+  if(typeof sku!=='string'||!sku.trim()||typeof currency!=='string'||!(/^[A-Z]{3}$/).test(currency))throw Error('One explicit SKU and three-letter currency required');
+  if(stockoutPolicy!=='lost_sales'||constantDemand!==true)throw Error('Explicit lost_sales policy and constant expected daily demand required; this is not a backlog model');
+  if(!Array.isArray(receipts)||receipts.length>10000)throw Error('Provide at most 10000 explicit receipts');
+  const seen=new Set(),dailyReceipts=new Map(),included=[],excluded=[];
+  for(const r of receipts) {
+    if(!r||typeof r.receiptId!=='string'||!r.receiptId.trim()||seen.has(r.receiptId)||r.sku!==sku)throw Error('Unique receipt IDs for the same SKU required; never count one PO twice');
+    seen.add(r.receiptId);
+    if(!Number.isSafeInteger(r.day)||r.day<0||!Number.isSafeInteger(r.units)||r.units<0||!['confirmed','assumed','excluded'].includes(r.status))throw Error('Receipt needs nonnegative integer elapsed day/units and explicit confirmed, assumed or excluded status');
+    if(r.status==='excluded'||r.day>=horizonDays){excluded.push({...r,reason:r.status==='excluded'?'excluded_by_scenario':'at_or_after_horizon'});continue;}
+    const units=(dailyReceipts.get(r.day)??0)+r.units;
+    if(!Number.isSafeInteger(units))throw Error('Receipt sum exceeds safe integer range');
+    dailyReceipts.set(r.day,units);included.push(r);
+  }
+  let stock=availableUnits,lostUnits=0,servedUnits=0,receivedUnits=0,firstShortageElapsedDay=null;
+  const timeline=[];
+  for(let day=0;day<horizonDays;day++) {
+    const openingUnits=stock,receiptUnits=dailyReceipts.get(day)??0;
+    stock+=receiptUnits;receivedUnits+=receiptUnits;
+    const served=Math.min(stock,dailyDemand),lost=dailyDemand-served;
+    stock-=served;servedUnits+=served;lostUnits+=lost;
+    if(lost>0&&firstShortageElapsedDay===null)firstShortageElapsedDay=day;
+    if(![stock,receivedUnits,servedUnits,lostUnits].every(x=>Number.isFinite(x)&&x<=Number.MAX_SAFE_INTEGER))throw Error('Stock-flow arithmetic exceeds safe range');
+    timeline.push({elapsedDay:day,openingUnits,receiptUnits,demandUnits:dailyDemand,servedUnits:served,lostUnits:lost,closingUnits:stock,cumulativeLostUnits:lostUnits});
+  }
+  const demandUnits=dailyDemand*horizonDays,contributionAtRisk=lostUnits*contributionPerUnit;
+  if(!Number.isFinite(demandUnits)||demandUnits>Number.MAX_SAFE_INTEGER||!Number.isFinite(contributionAtRisk))throw Error('Demand or contribution arithmetic overflow');
+  return {status:'conditional_scenario',sku,currency,availableUnits,receivedUnits,demandUnits,servedUnits,lostUnits,endingUnits:stock,contributionPerUnit,contributionAtRisk,firstShortageElapsedDay,timeline,includedReceipts:included,excludedReceipts:excluded,
+    assumptions:'Elapsed interval [0, horizonDays): demand is consumed once in each day interval; receipts arrive at the start of their elapsed day. A receipt exactly at the horizon cannot serve earlier demand. Opening available units already exclude reservations. Lost demand is not backordered. Assumed receipt dates and quantities are scenario inputs, not confirmed delivery.',
+    limitations:'Conditional expected units for one SKU, not observed lost sales, guaranteed demand, a customer backlog, source authentication or approval to spend. Per-unit contribution and all cost exclusions must be independently sourced. Future stock cannot erase earlier losses; do not substitute a net cumulative-demand formula.'};
+}
 export function experimentReadout({controlVisitors,controlOrders,variantVisitors,variantOrders,practicalAbsoluteLift,plannedHorizonComplete,independentRandomization}) {
   nonnegative({controlVisitors,controlOrders,variantVisitors,variantOrders,practicalAbsoluteLift});
   if(![controlVisitors,controlOrders,variantVisitors,variantOrders].every(Number.isInteger)||controlOrders>controlVisitors||variantOrders>variantVisitors)throw Error('Valid integer independent visitor/conversion counts required');
@@ -142,7 +176,7 @@ export function toleranceFit({productMin,productMax,openingMin,openingMax,requir
   const clearanceMin=openingMin-productMax,clearanceMax=openingMax-productMin;
   return {unit,clearanceMin,clearanceMax,withinTarget:clearanceMin>=requiredMin-1e-9&&clearanceMax<=requiredMax+1e-9,limitations:'Worst-case total dimensional clearance, not radial clearance. Declared ranges only; does not verify measurements, cushioning, material deformation or manufacturing safety.'};
 }
-const operations={forecastInputCost,safetyStock,materialInput,forecastUnits,stockPlan,replenishmentDay,experimentReadout,capacityPlan,backlogRecovery,cashForecast,toleranceFit};
+const operations={forecastInputCost,safetyStock,materialInput,forecastUnits,stockPlan,stockoutRisk,replenishmentDay,experimentReadout,capacityPlan,backlogRecovery,cashForecast,toleranceFit};
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
   try{
     const doc=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));

@@ -1,11 +1,15 @@
 // Pages for the experts module. Register each page here; src/ui/pages/index.ts collects them.
 import type { NavItem, PageDef } from "../types.ts";
-import { ApplyPage } from "./apply.tsx";
-import { ExpertHome } from "./expert.tsx";
-import { InvitePage } from "./invite.tsx";
-import { ExpertProfilePage } from "./profile.tsx";
-import { MyPostsPage, NewPostPage, PostPage } from "./posts.tsx";
-import { OpsInvites, OpsPosts } from "./ops-pages.tsx";
+import { lazy } from "preact/compat";
+const ApplyPage = lazy(() => import("./apply.tsx").then(m => ({ default: m.ApplyPage })));
+const ExpertHome = lazy(() => import("./expert.tsx").then(m => ({ default: m.ExpertHome })));
+const InvitePage = lazy(() => import("./invite.tsx").then(m => ({ default: m.InvitePage })));
+const ExpertProfilePage = lazy(() => import("./profile.tsx").then(m => ({ default: m.ExpertProfilePage })));
+const MyPostsPage = lazy(() => import("./posts.tsx").then(m => ({ default: m.MyPostsPage })));
+const NewPostPage = lazy(() => import("./posts.tsx").then(m => ({ default: m.NewPostPage })));
+const PostPage = lazy(() => import("./posts.tsx").then(m => ({ default: m.PostPage })));
+const OpsInvites = lazy(() => import("./ops-pages.tsx").then(m => ({ default: m.OpsInvites })));
+const OpsPosts = lazy(() => import("./ops-pages.tsx").then(m => ({ default: m.OpsPosts })));
 import "./experts.css";
 
 export const pages: PageDef[] = [

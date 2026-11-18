@@ -102,6 +102,16 @@ export function EcommercePage() {
   const params = typeof location === "undefined" ? new URLSearchParams() : new URLSearchParams(location.search);
   const [q, setQ] = useState(() => (params.get("q") ?? "").slice(0, 120));
   const [tab, setTab] = useState<Tab>(() => readTab(params.get("tab")));
+  const onTabKey = (e: KeyboardEvent) => {
+    const i = TABS.indexOf(tab), last = TABS.length - 1;
+    const next = e.key === "ArrowRight" ? (i + 1) % TABS.length
+      : e.key === "ArrowLeft" ? (i + last) % TABS.length
+      : e.key === "Home" ? 0 : e.key === "End" ? last : -1;
+    if (next < 0) return;
+    e.preventDefault();
+    setTab(TABS[next]);
+    document.getElementById(`ecom-tab-${TABS[next]}`)?.focus();
+  };
   const search = useDebounced(q.trim(), 220);
   // Keep the address in step, so a search or a tab can be shared or reloaded.
   useEffect(() => {
@@ -150,9 +160,9 @@ export function EcommercePage() {
         {!search && (
           <p class="dir-ecom-quick">Try: {QUICK_FINDS.map((t, i) => <>{i > 0 && " · "}<button type="button" class="dir-link-button" onClick={() => setQ(t)}>{t}</button></>)}</p>
         )}
-        <div class="dir-ecom-tabs" role="tablist" aria-label="What to show">
+        <div class="dir-ecom-tabs" role="tablist" aria-label="What to show" onKeyDown={onTabKey}>
           {TABS.map(t => (
-            <button type="button" role="tab" id={`ecom-tab-${t}`} aria-controls="ecom-panel" aria-selected={tab === t} class={`dir-ecom-tab${tab === t ? " is-on" : ""}`} onClick={() => setTab(t)}>
+            <button type="button" role="tab" id={`ecom-tab-${t}`} aria-controls="ecom-panel" aria-selected={tab === t} tabIndex={tab === t ? 0 : -1} class={`dir-ecom-tab${tab === t ? " is-on" : ""}`} onClick={() => setTab(t)}>
               {t === "agents" ? "Agents" : SHELF_WORDS[t].tab}
               {tabCount(t) !== null && <span class="dir-ecom-tab-n">{tabCount(t)}</span>}
             </button>

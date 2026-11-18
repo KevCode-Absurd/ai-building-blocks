@@ -1,13 +1,14 @@
 // Pages for the ops module. Register each page here; src/ui/pages/index.ts collects them.
 import type { NavItem, PageDef } from "../types.ts";
 import "./ops.css";
-import { OpsHome } from "./home.tsx";
-import { OpsJob } from "./job.tsx";
-import { OpsAgents } from "./agents.tsx";
-import { OpsExperts } from "./experts.tsx";
-import { OpsBeta } from "./beta.tsx";
-import { OpsCosts } from "./costs.tsx";
-import { OpsReview } from "./review.tsx";
+import { lazy } from "preact/compat";
+const OpsHome = lazy(() => import("./home.tsx").then(m => ({ default: m.OpsHome })));
+const OpsJob = lazy(() => import("./job.tsx").then(m => ({ default: m.OpsJob })));
+const OpsAgents = lazy(() => import("./agents.tsx").then(m => ({ default: m.OpsAgents })));
+const OpsExperts = lazy(() => import("./experts.tsx").then(m => ({ default: m.OpsExperts })));
+const OpsBeta = lazy(() => import("./beta.tsx").then(m => ({ default: m.OpsBeta })));
+const OpsCosts = lazy(() => import("./costs.tsx").then(m => ({ default: m.OpsCosts })));
+const OpsReview = lazy(() => import("./review.tsx").then(m => ({ default: m.OpsReview })));
 
 export const pages: PageDef[] = [
   { path: "/ops", access: "ops", component: OpsHome },

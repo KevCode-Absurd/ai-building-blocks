@@ -1,31 +1,11 @@
 // Agent pack pieces for the profile, the file viewer and the guides: "Start in your AI" (the download block), the grouped file list and
 // a markdown renderer for pack files and guides. Data and pure helpers are in packs.ts.
-import { useMemo, useState } from "preact/hooks";
-import { marked } from "marked";
-import DOMPurify from "dompurify";
+import { useState } from "preact/hooks";
+import { lazy, Suspense } from "preact/compat";
 import { Link, navigate } from "../../lib/router.tsx";
 import { formatBytes, groupPackFiles, isAppPath, isStartApp, knowledgeLine, plainFileName, startGuides, tidyPurpose, viewerHref, type PackFile, type PackInfo, type StartApp } from "./packs.ts";
 
-/** Tags a pack file never needs. Media would load from other sites; forms and styles could dress up as the page. */
-const FORBID_TAGS = ["img", "picture", "source", "video", "audio", "track", "iframe", "frame", "object", "embed", "style", "link", "meta", "base", "form", "input", "button", "textarea", "select", "svg", "math"];
-const FORBID_ATTR = ["style", "srcset", "ping", "background", "poster", "formaction"];
-
-/**
- * Markdown to safe HTML, the app's way (marked, then DOMPurify; see Markdown in components.tsx), stricter for files
- * anyone can write: no images or other media, so a file never makes the browser fetch from another site. Links to
- * other sites open in a new tab without a referrer.
- */
-export function renderSafeMarkdown(md: string): string {
-  const html = DOMPurify.sanitize(marked.parse(md, { async: false }) as string, { FORBID_TAGS, FORBID_ATTR });
-  const box = document.createElement("template");
-  box.innerHTML = html;
-  for (const a of Array.from(box.content.querySelectorAll("a[href]"))) {
-    let url: URL;
-    try { url = new URL(a.getAttribute("href") ?? "", location.href); } catch { a.removeAttribute("href"); continue; }
-    if (url.origin !== location.origin) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener noreferrer"); }
-  }
-  return box.innerHTML;
-}
+const MarkdownContent = lazy(() => import("../../lib/markdown-content.tsx"));
 
 /** A link to one of the app's own pages stays in the app, like <Link>. Files, downloads and other sites load as usual. */
 function stayInApp(e: MouseEvent) {
@@ -40,8 +20,9 @@ function stayInApp(e: MouseEvent) {
 }
 
 export function SafeMarkdown(props: { text: string; class?: string }) {
-  const html = useMemo(() => renderSafeMarkdown(props.text), [props.text]);
-  return <div class={`prose ${props.class ?? ""}`} onClick={stayInApp} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <Suspense fallback={<div class={`prose ${props.class ?? ""}`} aria-busy="true">Loading the text…</div>}>
+    <MarkdownContent {...props} safe onClick={stayInApp} />
+  </Suspense>;
 }
 
 const START_KEY = "aib-start-app";

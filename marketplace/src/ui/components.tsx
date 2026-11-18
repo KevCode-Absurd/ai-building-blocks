@@ -1,8 +1,8 @@
 // Shared UI pieces. Use these instead of one-off styles so every page looks like one product.
-import { useEffect, useMemo, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+import { lazy, Suspense } from "preact/compat";
 import type { ComponentChildren, JSX } from "preact";
-import { marked } from "marked";
-import DOMPurify from "dompurify";
+const MarkdownContent = lazy(() => import("./lib/markdown-content.tsx"));
 import { Link } from "./lib/router.tsx";
 
 export function Page(props: { title: string; intro?: ComponentChildren; actions?: ComponentChildren; children: ComponentChildren; wide?: boolean }) {
@@ -87,8 +87,9 @@ export function Empty(props: { title: string; children?: ComponentChildren; acti
 
 /** Renders model-written markdown safely (sanitised HTML). */
 export function Markdown(props: { text: string; class?: string }) {
-  const html = useMemo(() => DOMPurify.sanitize(marked.parse(props.text ?? "", { async: false }) as string), [props.text]);
-  return <div class={`prose ${props.class ?? ""}`} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <Suspense fallback={<div class={`prose ${props.class ?? ""}`} aria-busy="true">Loading the text…</div>}>
+    <MarkdownContent {...props} />
+  </Suspense>;
 }
 
 export function Table(props: { head: ComponentChildren[]; rows: ComponentChildren[][]; empty?: string }) {

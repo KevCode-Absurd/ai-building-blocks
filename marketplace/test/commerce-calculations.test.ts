@@ -44,6 +44,40 @@ test('inventory respects reservations, receipt timing, minimums and cash while e
   const dayZero=math.stockPlan({...input,onHand:0,committed:0,dailyDemand:1,receipts:[{day:0,units:50,confirmed:true}]});
   assert.equal(dayZero.firstShortageDay,null);
 });
+test('freight risk consumes stock in time order and changes the decision when goods are not ready',()=>{
+  const inputs={sku:'B500',availableUnits:20,dailyDemand:10,stockoutPolicy:'lost_sales',constantDemand:true,contributionPerUnit:11.2,currency:'USD',receipts:[{receiptId:'separate-po',sku:'B500',day:45,units:200,status:'assumed'}]};
+  const results=[10,40,50,80].map(horizonDays=>math.stockoutRisk({...inputs,horizonDays}));
+  assert.deepEqual(results.map(r=>r.lostUnits),[80,380,430,580]);
+  assert.deepEqual(results.map(r=>r.endingUnits),[0,0,150,0]);
+  near(results[1].contributionAtRisk-results[0].contributionAtRisk-1700,1660);
+  near(results[3].contributionAtRisk-results[2].contributionAtRisk-1700,-20);
+  for(const r of results){near(r.demandUnits,r.servedUnits+r.lostUnits);near(r.availableUnits+r.receivedUnits,r.servedUnits+r.endingUnits);}
+});
+
+test('future stock never erases lost sales and elapsed arrival boundaries are explicit',()=>{
+  const input={sku:'X',availableUnits:0,dailyDemand:5,horizonDays:3,stockoutPolicy:'lost_sales',constantDemand:true,contributionPerUnit:2,currency:'USD'};
+  const receipt={receiptId:'one',sku:'X',day:2,units:100,status:'confirmed'};
+  const late=math.stockoutRisk({...input,receipts:[receipt]});
+  assert.equal(late.lostUnits,10);assert.equal(late.endingUnits,95);
+  assert.equal(math.stockoutRisk({...input,receipts:[{...receipt,day:0}]}).lostUnits,0);
+  assert.equal(math.stockoutRisk({...input,receipts:[{...receipt,day:3}]}).lostUnits,15);
+  assert.equal(math.stockoutRisk({...input,receipts:[{...receipt,status:'excluded'}]}).lostUnits,15);
+  assert.equal(math.stockoutRisk({...input,horizonDays:0,receipts:[{...receipt,day:0}]}).lostUnits,0);
+  for(let day=0;day<6;day++){
+    const r=math.stockoutRisk({...input,horizonDays:6,receipts:[{...receipt,day}]});
+    assert.equal(r.lostUnits,day*5);
+    assert.ok(r.timeline.every((row:any,i:number)=>i===0||row.cumulativeLostUnits>=r.timeline[i-1].cumulativeLostUnits));
+  }
+});
+
+test('stockout risk rejects mixed SKUs, duplicate receipts, backlog semantics and invalid units',()=>{
+  const input={sku:'X',availableUnits:2,dailyDemand:.5,horizonDays:5,receipts:[],stockoutPolicy:'lost_sales',constantDemand:true,contributionPerUnit:2,currency:'USD'};
+  assert.equal(math.stockoutRisk(input).lostUnits,.5);
+  const receipt={receiptId:'one',sku:'X',day:2,units:5,status:'assumed'};
+  for(const change of [{stockoutPolicy:'backorder'},{constantDemand:false},{horizonDays:3651},{horizonDays:NaN},{availableUnits:-1},{currency:''},{contributionPerUnit:Infinity},{receipts:[receipt,receipt]},{receipts:[{...receipt,sku:'Y'}]},{receipts:[{...receipt,status:'unknown'}]},{receipts:[{...receipt,day:2.5}]}])
+    assert.throws(()=>math.stockoutRisk({...input,...change}));
+});
+
 test('replenishment timing and experiment intervals contradict the former erroneous examples',()=>{
   near(math.replenishmentDay({deliveryDays:7,usageDays:30,usageFraction:.75}).daysFromOrder,29.5);
   const r=math.experimentReadout({controlVisitors:19600,controlOrders:392,variantVisitors:19600,variantOrders:431,practicalAbsoluteLift:.004,plannedHorizonComplete:true,independentRandomization:true});

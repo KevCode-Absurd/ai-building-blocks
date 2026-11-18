@@ -477,6 +477,7 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
 
 /** The built index.html, once per isolate (assets don't change within a deploy). */
 let shellCache: { origin: string; html: string } | null = null;
+let connectShellCache: { origin: string; shell: string; html: Promise<string> } | null = null;
 
 /** Only the ordinary Vite stylesheet link: preserve every other link's loading/security semantics. */
 function builtStylesheetPath(link: string): string | null {
@@ -510,8 +511,8 @@ function canInlineBuiltCss(css: string): boolean {
   return true;
 }
 
-/** Inline the trusted built CSS once per isolate. Cold pages avoid a render-blocking request; the tradeoff is
- * including the stylesheet in each document instead of reusing its separate HTTP cache entry. No styles change. */
+/** Inline trusted built CSS for the connect page's cold navigation. Other pages retain the external stylesheet:
+ * including all CSS in their documents regressed measured LCP. No styles change. */
 async function inlineBuiltStylesheets(html: string, env: Env, url: URL): Promise<string> {
   if (!env.ASSETS) return html;
   let out = html;
@@ -536,13 +537,22 @@ async function shell(env: Env, url: URL): Promise<string | null> {
   if (!env.ASSETS) return null;
   const res = await env.ASSETS.fetch(new Request(new URL("/", url)));
   if (!res.ok) return null;
-  const html = await inlineBuiltStylesheets(await res.text(), env, url);
+  const html = await res.text();
   shellCache = { origin: url.origin, html };
   return html;
 }
 
+/** Cache only the built connect variant, never page content, cookies or boot data. Keep the raw shell unchanged
+ * so its deploy fingerprint and every other route are independent of which page was requested first. */
+function connectShell(html: string, env: Env, url: URL): Promise<string> {
+  if (connectShellCache?.origin !== url.origin || connectShellCache.shell !== html) {
+    connectShellCache = { origin: url.origin, shell: html, html: inlineBuiltStylesheets(html, env, url) };
+  }
+  return connectShellCache.html;
+}
+
 /** Tests only. */
-export function clearShellCache(): void { shellCache = null; }
+export function clearShellCache(): void { shellCache = null; connectShellCache = null; }
 
 /** A short fingerprint of the built shell. It changes with every deploy that changes the app's asset names. */
 export async function shellVersion(env: Env, url: URL): Promise<string | null> {
@@ -617,7 +627,8 @@ export async function pageResponse(req: Request, env: Env): Promise<Response | n
     const hit = await recordShareVisit(env, req, via.toLowerCase()).catch(() => null);
     if (hit?.setCookie) headers["set-cookie"] = hit.setCookie;
   }
-  return new Response(req.method === "HEAD" ? null : renderShell(html, env, view), { status: view.status, headers });
+  const pageHtml = req.method !== "HEAD" && view.path === "/connect" ? await connectShell(html, env, url) : html;
+  return new Response(req.method === "HEAD" ? null : renderShell(pageHtml, env, view), { status: view.status, headers });
 }
 
 // ---------- robots.txt, sitemap.xml, llms.txt ----------

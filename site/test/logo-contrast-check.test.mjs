@@ -16,7 +16,7 @@ const ad = color => `<body style="margin:0"><div style="width:400px;height:500px
 
 test('a wordmark that blends into its panel fails, and a readable one passes', async t => {
   let browser;
-  try { browser = await chromium.launch(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}); }
+  try { browser = await chromium.launch({ chromiumSandbox: true, ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}) }); }
   catch (error) { t.skip(`Chromium is not installed: ${error.message.split('\n')[0]}`); return; }
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'logo-contrast-'));
   try {

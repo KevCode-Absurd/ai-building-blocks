@@ -28,6 +28,8 @@ export const GUIDES = [
     description: "What prompts, skills, workflows, agents and apps are, which one fits your job, and how to add each to your AI." },
   { href: "/api-and-mcp", category: "Get started with AI", title: "Connect your AI to AI Blocks with MCP or the API",
     description: "Connect ChatGPT, Claude, Codex or your own app once. Then your AI can find and get any skill or workflow when it needs one." },
+  { href: "/research/agent-skills-2026", category: "Get started with AI", title: "The state of open-source AI agent skills, 2026",
+    description: "Our data study of public AI skills on GitHub: how fast they spread, how many break the format, copies, licences, safety flags and missing business jobs." },
   { href: "/industries", category: "Run your business", title: "AI help by business",
     description: "The jobs owners in online stores, software, local services and creator businesses bring to AI, with the skills and specialists for each." },
   { href: "/how-we-test", category: "Run your business", title: "How we test the AI job planner",

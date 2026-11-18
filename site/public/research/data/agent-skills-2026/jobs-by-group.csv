@@ -1,0 +1,20 @@
+group,kind,hand_sample_count_of_300,hand_sample_pct,hand_sample_ci95,keyword_corrected_pct,keyword_raw_pct
+Finance & accounting,business function,4,1.3,0.5-3.4,1,1.6
+Legal & compliance,business function,4,1.3,0.5-3.4,1.7,1.3
+HR & recruiting,business function,1,0.3,0.1-1.9,0.3,0.8
+Sales & CRM,business function,3,1,0.3-2.9,1.6,0.8
+Customer support & success,business function,1,0.3,0.1-1.9,0.1,0.2
+Marketing & SEO,business function,13,4.3,2.5-7.3,3,2.8
+"Operations, e-commerce & management",business function,8,2.7,1.4-5.2,1.7,1.5
+Writing & content,business function,3,1,0.3-2.9,1,1.6
+Documents & office files,other domain,6,2,0.9-4.3,1.7,1.5
+Design & media,other domain,13,4.3,2.5-7.3,4.1,5.4
+Research & knowledge,other domain,29,9.7,6.8-13.5,7.8,4.1
+Education & learning,other domain,0,0,0-1.3,0,0.5
+Health & wellbeing,other domain,2,0.7,0.2-2.4,0.7,0.6
+Personal productivity,other domain,7,2.3,1.1-4.7,1.7,1.4
+Security,security,63,21,16.8-26,19.5,17.4
+Data & analytics,other domain,15,5,3.1-8.1,5.2,3.3
+AI & agent tooling,AI/agent tooling,22,7.3,4.9-10.9,7.8,7.5
+Software engineering,software engineering,100,33.3,28.2-38.8,39.5,46.8
+Other / unclassified,other domain,6,2,0.9-4.3,1.6,0.9

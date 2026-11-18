@@ -1,0 +1,1042 @@
+{
+  "title": "The state of open-source AI agent skills, 2026",
+  "documentTitle": "State of AI agent skills 2026: data study | AI Blocks",
+  "description": "Data study of public AI agent skills on GitHub: growth, format errors, copies, licences, scanner false alarms and the business jobs skills miss.",
+  "author": "Kevin Mark D'Rozario",
+  "snapshot": "2026-11-17",
+  "published": "2026-11-18",
+  "modified": "2026-11-18",
+  "temporalCoverage": "2025-01-01/2026-11-17",
+  "lede": "An AI agent skill is a folder of instructions, and sometimes scripts, that teaches an AI like Claude, Codex or Copilot to do one job. Anyone can publish one on GitHub. We found 36,556 public repos that hold skills and read 75,610 skill files from 799 of them. Here is what is out there, how much of it works as the format says, how much is copied, how risky it is, and which business jobs nobody has written skills for yet.",
+  "tiles": [
+    {
+      "value": "36,556",
+      "line": "public GitHub repos we confirmed hold skills. We estimate about 91,400 among the repos we found."
+    },
+    {
+      "value": "15,357",
+      "line": "new skill repos in October 2026, up from about 93 a month in January 2025 (our estimate)."
+    },
+    {
+      "value": "23%",
+      "line": "of skills in popular repos break a required rule of the skill format."
+    },
+    {
+      "value": "79%",
+      "line": "of serious safety-scanner flags were false alarms when an AI reviewer read them in context."
+    },
+    {
+      "value": "14%",
+      "line": "of public skills do business work like sales, support, finance or hiring, in a random sample we read one by one."
+    }
+  ],
+  "findings": [
+    {
+      "head": "Skills spread fast.",
+      "text": "In January 2025, about 93 new repos were created that now hold skills; by October 2026 that monthly figure had grown to about 15,357. Before Anthropic launched Agent Skills on 16 October 2025, only 2 of the 286 popular older skill repos we checked already had a skill file, and both were Anthropic's own."
+    },
+    {
+      "head": "A few big collections hold most of the files.",
+      "text": "172 repos with 1,000 or more skill files each hold 54% of the 1,090,985 skill files we counted, and most of them are collections, mirrors and registries that gather other people's skills."
+    },
+    {
+      "head": "About 1 in 4 skills in popular repos breaks the format.",
+      "text": "23% of distinct skills in the 600 most-starred repos fail at least one required rule of the specification, compared with 15% in small repos. A single large security collection accounts for much of this, and without it 92% of popular-repo skills pass."
+    },
+    {
+      "head": "Most skills add fields the format doesn't define.",
+      "text": "Only 39% of popular-repo skills and 60% of small-repo skills stick to the six fields in the specification. Claude Code quietly ignores extra fields such as version, tags and author, but Anthropic's documentation says they make an upload to claude.ai or the Skills API fail."
+    },
+    {
+      "head": "A third of skill files repeat, but mostly inside one repo.",
+      "text": "34% of the skill files we could read repeat another file, but 87% of those repeats sit inside the same repository, usually because one project ships the same skill to several AI tools. Only 4.5% of files repeat a file from another repo. Counting near copies too, 17% of distinct skills, about 1 in 6, have a twin in another repo in our sample."
+    },
+    {
+      "head": "Copies often don't say where they came from.",
+      "text": "In a sample of 99 skills copied by a different owner, 53% to 65% had no credit, no licence file and no licence line, depending on whether you count one company copying between its own two accounts. About 25 repos hold copies of Anthropic's document skills, and at least 21 of them still carry its old \"Proprietary\" licence line."
+    },
+    {
+      "head": "Half of small skill repos have no licence.",
+      "text": "51% of the 200 randomly chosen small repos have no licence that GitHub can detect, which means nobody has permission to reuse their skills. Among repos with 10 or more stars the figure is 14%. Few skills fill in the format's own licence field, which travels with a skill when it is copied: 26% in popular repos and 12% in small ones."
+    },
+    {
+      "head": "Most scanner flags are false alarms.",
+      "text": "About 1 in 20 skills triggers a serious rule of the safety scanner we use, and about half of all repos contain at least one such skill. When an AI reviewer read 579 randomly sampled flags in their surrounding context, 79% turned out to be false alarms. The reviewer found none that was clearly an attack on the person who installs the skill, though 14 could not be judged. About 1 in 5 pointed at a real risk that the skill states openly, such as an installer that downloads and runs a script from the web."
+    },
+    {
+      "head": "Skills are mostly about writing software.",
+      "text": "In a random sample of 450 distinct skills we read one by one, about a third (33%) were for software work and about a fifth for security. Business work such as marketing, sales, support, finance, legal or hiring was 14% (95% range 11% to 17%)."
+    },
+    {
+      "head": "Many everyday small-business jobs have almost no skills.",
+      "text": "For 13 of 29 common jobs we looked for, we found 5 or fewer usable public skills. We found none for menu costing, and no skill made for a staff rota or a refund policy."
+    }
+  ],
+  "census": {
+    "confirmed": 36556,
+    "byMonth": [
+      [
+        "2025-01",
+        93
+      ],
+      [
+        "2025-02",
+        82
+      ],
+      [
+        "2025-03",
+        104
+      ],
+      [
+        "2025-04",
+        102
+      ],
+      [
+        "2025-05",
+        155
+      ],
+      [
+        "2025-06",
+        154
+      ],
+      [
+        "2025-07",
+        180
+      ],
+      [
+        "2025-08",
+        206
+      ],
+      [
+        "2025-09",
+        182
+      ],
+      [
+        "2025-10",
+        417
+      ],
+      [
+        "2025-11",
+        485
+      ],
+      [
+        "2025-12",
+        777
+      ],
+      [
+        "2026-01",
+        2140
+      ],
+      [
+        "2026-02",
+        3516
+      ],
+      [
+        "2026-03",
+        6207
+      ],
+      [
+        "2026-04",
+        6691
+      ],
+      [
+        "2026-05",
+        7061
+      ],
+      [
+        "2026-06",
+        7416
+      ],
+      [
+        "2026-07",
+        9064
+      ],
+      [
+        "2026-08",
+        10175
+      ],
+      [
+        "2026-09",
+        10950
+      ],
+      [
+        "2026-10",
+        15357
+      ]
+    ],
+    "growthText": "We count each repo by the month it was created, so a repo created in 2025 that added skills in 2026 still counts in 2025. Early in 2025, fewer than 200 repos created each month went on to hold skills. From late 2025 the line climbs steeply, and by October 2026 about 15,357 new repos a month held them, more than a hundred times the January 2025 figure.",
+    "growthCaption": "New public GitHub repos that hold AI agent skills, by the month the repo was made",
+    "growthNote": "Estimate: repos confirmed to hold a SKILL.md, plus repos found by topic search that we didn't check one by one, counted at 89% because that share held one in a random sample of 400. November 2026 is left out because it was partial. A lower bound, since GitHub search can't list every repo.",
+    "launchText": "Anthropic launched Agent Skills on 16 October 2025 and made the format an open standard on 18 December 2025. We looked back at the 300 most-starred skill repos that already existed before the launch. 286 of them had any history by then, and on 15 October 2025 only 2 had a skill file, both Anthropic's. The data shows the rise came after these dates. It can't show they caused it, since Codex, Copilot, Cursor and others added skills in the same months.",
+    "whoText": "Most skill repos are small personal projects: 81% belong to individual developers and only 19% to companies or other organisations. The typical confirmed repo has 5 stars, a third have none at all, and 34% haven't been updated in the last 90 days, so many are experiments that their authors have already left behind.",
+    "stars": [
+      [
+        "No stars",
+        12171
+      ],
+      [
+        "1 to 9 stars",
+        10431
+      ],
+      [
+        "10 to 99 stars",
+        9276
+      ],
+      [
+        "100 to 999 stars",
+        3591
+      ],
+      [
+        "1,000 stars or more",
+        1087
+      ]
+    ],
+    "starsCaption": "How many GitHub stars skill repos have (36,556 confirmed repos)",
+    "starsNote": "Stars read on 17 Nov 2026. Repos with few stars are under-counted, because we confirmed only those that code search returned.",
+    "concentrationText": "Skill files pile up in a few places. 172 repos with 1,000 or more skill files hold 54% of all the files we counted, and the ten largest repos alone hold 14%. These are mostly collections, mirrors and registries that gather skills from many authors, so a raw count of files says little about how many people actually write skills. The folders where people keep their skills are more telling, because each AI tool looks in its own folder.",
+    "where": [
+      [
+        "A plain skills folder",
+        6909,
+        36.6
+      ],
+      [
+        "One SKILL.md at the top of the repo",
+        6035,
+        31.9
+      ],
+      [
+        "Claude Code folder (.claude/skills)",
+        2301,
+        12.2
+      ],
+      [
+        "Shared agents folder (.agents/skills)",
+        1841,
+        9.7
+      ],
+      [
+        "Inside a plugins folder",
+        1612,
+        8.5
+      ],
+      [
+        "GitHub Copilot folder (.github/skills)",
+        299,
+        1.6
+      ],
+      [
+        "Codex folder (.codex/skills)",
+        278,
+        1.5
+      ],
+      [
+        "Cursor folder (.cursor/skills)",
+        281,
+        1.5
+      ],
+      [
+        "OpenCode folder (.opencode)",
+        236,
+        1.2
+      ],
+      [
+        "Gemini folder (.gemini/skills)",
+        103,
+        0.5
+      ]
+    ],
+    "whereCaption": "Where skill repos keep their skill files (share of repos; a repo can use more than one)",
+    "whereNote": "18,897 repos with 5 or more stars whose full file list we read. Each file counts once, in the first matching folder.",
+    "licences": [
+      [
+        "MIT",
+        8387,
+        60.1
+      ],
+      [
+        "No licence",
+        1941,
+        13.9
+      ],
+      [
+        "Apache 2.0",
+        1600,
+        11.5
+      ],
+      [
+        "A licence GitHub can't read",
+        1227,
+        8.8
+      ],
+      [
+        "AGPL 3.0",
+        288,
+        2.1
+      ],
+      [
+        "Other licences",
+        511,
+        3.7
+      ]
+    ]
+  },
+  "corpus": {
+    "text": "A skill is a SKILL.md file that starts with a short header, called front matter. The open specification at agentskills.io says the header must contain a name and a description. The name may use only lower-case letters, numbers and hyphens, up to 64 characters, and it must match the name of the skill's folder. We checked every rule on the distinct skills in our two samples: the 600 most-starred skill repositories, and 200 small repositories picked at random. Almost every file has a header that reads cleanly, so the problems come in the details.",
+    "rows": [
+      [
+        "Front matter that reads as YAML",
+        "99%",
+        "99%"
+      ],
+      [
+        "Has a name",
+        "98%",
+        "97%"
+      ],
+      [
+        "Name uses only a-z, 0-9 and hyphens",
+        "81%",
+        "94%"
+      ],
+      [
+        "Name matches its folder",
+        "93%",
+        "85%"
+      ],
+      [
+        "Has a description",
+        "98%",
+        "98%"
+      ],
+      [
+        "Description is 1,024 characters or less",
+        "98%",
+        "98%"
+      ],
+      [
+        "Passes every required rule",
+        "77%",
+        "85%"
+      ],
+      [
+        "Uses only the fields the spec defines",
+        "39%",
+        "60%"
+      ],
+      [
+        "Would pass the official checker (our estimate)",
+        "33%",
+        "49%"
+      ],
+      [
+        "Under 500 lines, as the spec advises",
+        "96%",
+        "90%"
+      ]
+    ],
+    "rules": [
+      {
+        "label": "Front matter that reads as YAML",
+        "pass": 98.6,
+        "small": 98.7
+      },
+      {
+        "label": "Has a name",
+        "pass": 98.5,
+        "small": 96.8
+      },
+      {
+        "label": "Name uses only a-z, 0-9 and hyphens",
+        "pass": 80.9,
+        "small": 94.2
+      },
+      {
+        "label": "Name matches its folder",
+        "pass": 92.7,
+        "small": 85
+      },
+      {
+        "label": "Has a description",
+        "pass": 97.9,
+        "small": 98.5
+      },
+      {
+        "label": "Description is 1,024 characters or less",
+        "pass": 97.7,
+        "small": 98.3
+      },
+      {
+        "label": "Passes every required rule",
+        "pass": 77.2,
+        "small": 84.6
+      },
+      {
+        "label": "Uses only the fields the spec defines",
+        "pass": 39,
+        "small": 60.3
+      },
+      {
+        "label": "Would pass the official checker (our estimate)",
+        "pass": 32.8,
+        "small": 48.7
+      }
+    ],
+    "rulesCaption": "Share of distinct skills in the 600 most-starred repos that pass each rule (38,482 skills)",
+    "rulesNote": "Rules from the Agent Skills spec, read on 17 Nov 2026. The official checker is skills-ref; we didn't run it, so its line is our estimate from its source code.",
+    "more": [
+      "In popular repositories, 23% of skills fail at least one required rule, compared with 15% in the randomly chosen small repositories. One security collection with 7,667 distinct skills holds 1 in 5 of the popular-repo skills and most of the invalid names, because its names contain dots and capital letters. Without that collection, 92% of popular-repo skills pass. In small repositories, the most common mistake is a name that doesn't match its folder.",
+      "The stricter test is whether a skill sticks to the six fields the spec defines. Only 39% of popular-repo skills and 60% of small-repo skills do. The usual extras are version, tags, author and category. Claude Code ignores them, but Anthropic's docs say an upload to claude.ai or the Skills API fails on them. By our estimate, 33% of popular-repo skills and 49% of small-repo skills would pass the official checker.",
+      "Most skills are short enough to read in a few minutes. The typical skill in popular repos is 114 lines long, compared with 164 lines in small repos. The specification advises keeping a SKILL.md under 500 lines, and 3.8% of popular-repo skills and 9.7% of small-repo skills go over that.",
+      "Some skills ask for broad permissions up front. A skill can list the tools your AI may use without asking you first, and among skills that do, 34% in popular repos and 62% in small repos approve any shell command at all. Counted by repo, about 6 in 10 repos that use this field do it somewhere."
+    ]
+  },
+  "copies": {
+    "text": "Skills are easy to copy, and people copy them a lot. Of the 75,136 skill files we could read, 25,157 (34%) repeat another file once you ignore spaces and line breaks. Most of that repetition comes from a single project shipping the same skill to several folders, such as .claude, .codex and .agents, so that each AI tool can find it.",
+    "split": [
+      {
+        "label": "First copy of each skill",
+        "value": 49979
+      },
+      {
+        "label": "Repeat in the same repo",
+        "value": 21803
+      },
+      {
+        "label": "Repeat in another repo",
+        "value": 3354
+      }
+    ],
+    "splitCaption": "What the 75,136 skill files in our sample are",
+    "splitNote": "Exact copies after ignoring whitespace, line endings and the case of the name.",
+    "more": [
+      "Copying between repos is rarer but real. 17% of distinct skills, originals included, have an exact or lightly edited twin in another repo in our sample (we count two skills as twins when 80% of their five-word runs match; at 90% it is 14%, at 50% it is 21%). Small repos have more twins, 30% against 15% in popular repos, though a few collections drive much of that gap. The most-copied skills come from a few famous sources: Anthropic's own skills, obra's superpowers, Vercel's React guides and Matt Pocock's skills. Other studies with larger samples find far more reuse, because they compare against the whole of GitHub.",
+      "Copies often don't say where they came from. We read 99 pairs where a different owner copied a skill, and 65% had no credit, no licence file in the folder and no licence line. That share falls to 53% to 58% if you leave out one company copying between its own two accounts and one very active copier, so the true figure is probably about half. Names don't help you tell skills apart either: 3,623 names (9.6%) belong to two or more different skills, and \"code-review\" names 32 different skills in 38 repos."
+    ],
+    "mostCopied": [
+      [
+        "webapp-testing",
+        13
+      ],
+      [
+        "skill-creator",
+        13
+      ],
+      [
+        "theme-factory",
+        13
+      ],
+      [
+        "canvas-design",
+        13
+      ],
+      [
+        "verification-before-completion",
+        12
+      ],
+      [
+        "brand-guidelines",
+        11
+      ],
+      [
+        "internal-comms",
+        11
+      ],
+      [
+        "doc-coauthoring",
+        11
+      ]
+    ],
+    "mostCopiedCaption": "Skills copied word for word into the most repos in our 799-repo sample"
+  },
+  "licences": {
+    "text": "A licence is what gives you permission to reuse someone else's work, and without one the author keeps all rights, even when the repo is public. Among skill repos with 10 or more stars, 14% have no licence that GitHub can detect. The long tail is worse: in our random sample of 200 small repos the figure was 51%, and 60% of their skills sit in a repo with no licence.",
+    "caption": "Licences of skill repos with 10 or more stars (13,954 repos)",
+    "note": "Licence as GitHub detects it from the repo's LICENSE file, 17 Nov 2026.",
+    "more": [
+      "The specification lets each skill name its own licence in a license line, but few skills use it: 26% of popular-repo skills and 12% of small-repo skills. That matters most when someone copies a skill out of its original repository, because the repository's licence file usually stays behind.",
+      "Some copies carry terms that no longer match their source. About 25 repos in our sample hold copies of Anthropic's document skills (pdf, docx, xlsx, pptx), and at least 21 still carry the line \"license: Proprietary\". In 103 skill folders the copy sits next to Anthropic's 2025 \"All rights reserved\" licence file. Anthropic's current versions of these skills carry different licence text, so these copies may show out-of-date terms. If you reuse a copied skill, check the licence at its source."
+    ]
+  },
+  "safety": {
+    "text": "We ran the same static scanner we use on our own catalogue over every skill folder in the sample: 355,669 files. It looks for patterns like code that downloads and runs other code, hidden text aimed at your AI, and links to drop boxes. Nothing was run. 4.5% of skills in popular repos and 5.4% in small repos had at least one serious match. Because big repos hold many skills, about half of repos had one: 51% of popular repos and 54% of small ones.",
+    "rules": [
+      {
+        "id": "credential-in-file",
+        "label": "A secret key saved in a file",
+        "n": 30,
+        "fa": 30,
+        "falseAlarm": 100,
+        "ci": [
+          88.6,
+          100
+        ],
+        "disclosed": 0
+      },
+      {
+        "id": "concealed-action",
+        "label": "Tells the AI to hide what it does",
+        "n": 30,
+        "fa": 30,
+        "falseAlarm": 100,
+        "ci": [
+          88.6,
+          100
+        ],
+        "disclosed": 0
+      },
+      {
+        "id": "unknown-binary",
+        "label": "A file nobody can read",
+        "n": 30,
+        "fa": 29,
+        "falseAlarm": 96.7,
+        "ci": [
+          83.3,
+          99.4
+        ],
+        "disclosed": 1
+      },
+      {
+        "id": "symlink",
+        "label": "A shortcut (symlink) to another file",
+        "n": 30,
+        "fa": 29,
+        "falseAlarm": 96.7,
+        "ci": [
+          83.3,
+          99.4
+        ],
+        "disclosed": 0
+      },
+      {
+        "id": "hidden-text-instruction",
+        "label": "Hidden comment with orders for the AI",
+        "n": 30,
+        "fa": 29,
+        "falseAlarm": 96.7,
+        "ci": [
+          83.3,
+          99.4
+        ],
+        "disclosed": 1
+      },
+      {
+        "id": "destructive-command",
+        "label": "Wipes files or code history",
+        "n": 30,
+        "fa": 29,
+        "falseAlarm": 96.7,
+        "ci": [
+          83.3,
+          99.4
+        ],
+        "disclosed": 1
+      },
+      {
+        "id": "encoded-blob",
+        "label": "A long scrambled block of text",
+        "n": 30,
+        "fa": 28,
+        "falseAlarm": 93.3,
+        "ci": [
+          78.7,
+          98.2
+        ],
+        "disclosed": 2
+      },
+      {
+        "id": "credential-theft",
+        "label": "Reads saved passwords or keys",
+        "n": 30,
+        "fa": 25,
+        "falseAlarm": 83.3,
+        "ci": [
+          66.4,
+          92.7
+        ],
+        "disclosed": 5
+      },
+      {
+        "id": "instruction-override",
+        "label": "Tells the AI to ignore its rules",
+        "n": 30,
+        "fa": 24,
+        "falseAlarm": 80,
+        "ci": [
+          62.7,
+          90.5
+        ],
+        "disclosed": 6
+      },
+      {
+        "id": "approval-bypass",
+        "label": "Skips the user's approval",
+        "n": 30,
+        "fa": 23,
+        "falseAlarm": 76.7,
+        "ci": [
+          59.1,
+          88.2
+        ],
+        "disclosed": 7
+      },
+      {
+        "id": "remote-shell",
+        "label": "Downloads code and runs it at once",
+        "n": 30,
+        "fa": 15,
+        "falseAlarm": 50,
+        "ci": [
+          33.2,
+          66.9
+        ],
+        "disclosed": 15
+      },
+      {
+        "id": "exfil-host",
+        "label": "Links to drop boxes or tunnels",
+        "n": 30,
+        "fa": 13,
+        "falseAlarm": 43.3,
+        "ci": [
+          27.4,
+          60.8
+        ],
+        "disclosed": 17
+      },
+      {
+        "id": "persistence",
+        "label": "Sets itself to start again later",
+        "n": 30,
+        "fa": 12,
+        "falseAlarm": 40,
+        "ci": [
+          24.6,
+          57.7
+        ],
+        "disclosed": 18
+      },
+      {
+        "id": "reverse-shell",
+        "label": "Opens a back door",
+        "n": 30,
+        "fa": 6,
+        "falseAlarm": 20,
+        "ci": [
+          9.5,
+          37.3
+        ],
+        "disclosed": 24
+      }
+    ],
+    "rulesCaption": "How often each serious scanner rule raised a false alarm (sample of flags read in context)",
+    "rulesNote": "Up to 30 random flags per rule, read in context by an AI reviewer (Claude). Each bar shows the false-alarm share and how many flags we read. The CSV has 95% ranges.",
+    "more": [
+      "Then an AI reviewer read 579 randomly picked serious flags in context and sorted each one. Weighted back to all 10,085 distinct flagged lines, 79% were false alarms (95% range 74% to 83%). The usual causes were tests and sample data, security skills that describe attacks, data files, and rules that forbid the very thing the scanner looks for, like \"never hide what you did from the user\".",
+      "About 1 in 5 flags (21%) pointed at something real that the skill states openly. About 4 in 10 of those were attack tools inside security-testing skills, such as reverse shells for an authorised penetration test, and openly stated doesn't mean safe to install without reading. Others were installers that send a script from the web straight into the shell, which 502 skills in 150 repositories do. Our reviewer found no sampled flag that was clearly an attack on the person installing the skill. 14 of the 579 could not be judged, most of them from one project that deliberately scrambles its code. From the sample, the share of skills with a real attack among these patterns is well under 1%: our 95% upper bound is 0.3% to 0.5%, depending on the assumptions.",
+      "Most skills are plain text. 80% of popular-repo skills and 71% of small-repo skills contain no scripts, no unreadable files and no shell or network code. Hidden characters and unreadable files are rare: we found 33 and 100 skills with them out of 75,610."
+    ],
+    "capabilities": [
+      {
+        "label": "Writes files",
+        "pct": 22.3
+      },
+      {
+        "label": "Uses API keys or tokens",
+        "pct": 20.6
+      },
+      {
+        "label": "Installs packages",
+        "pct": 11.9
+      },
+      {
+        "label": "Connects to the internet",
+        "pct": 12.1
+      },
+      {
+        "label": "Reads outside text (web pages, emails)",
+        "pct": 9.8
+      },
+      {
+        "label": "Runs shell commands",
+        "pct": 4.2
+      },
+      {
+        "label": "Drives a web browser",
+        "pct": 2.6
+      },
+      {
+        "label": "Sends email or messages",
+        "pct": 0.8
+      }
+    ],
+    "capabilitiesCaption": "What skills' files can do, in the 600 most-starred repos (56,000 skills)",
+    "capabilitiesNote": "From patterns in scripts and code blocks. Can do is not the same as harmful: most of these are what the skill is for. The CSV has the small-repo shares too.",
+    "reviewNote": "How far to trust this: the reviewer was Claude, not a human expert. A second, blind Claude pass agreed on 114 of 116 re-checked labels, which shows the labelling guide was applied the same way, not that every label is right. A pattern scanner only finds what it looks for, so a quiet, well-hidden attack can pass it. On our own catalogue, which had already dropped unlicensed and risky imports and was reviewed a different way, the same rules gave 65% false alarms per distinct flag, so the two figures aren't directly comparable."
+  },
+  "jobs": {
+    "text": "To see what public skills are for, we picked 300 distinct skills at random from the 43,532 left after removing copies, and an AI reviewer read and labelled each one by its job. A second, blind sample of 150 gave similar shares. Because each group rests on a few dozen skills at most, read the smaller groups as rough.",
+    "groups": [
+      {
+        "label": "Software engineering",
+        "pct": 33.3,
+        "count": 100,
+        "business": false
+      },
+      {
+        "label": "Security",
+        "pct": 21,
+        "count": 63,
+        "business": false
+      },
+      {
+        "label": "Research and knowledge",
+        "pct": 9.7,
+        "count": 29,
+        "business": false
+      },
+      {
+        "label": "AI and agent tooling",
+        "pct": 7.3,
+        "count": 22,
+        "business": false
+      },
+      {
+        "label": "Data and analytics",
+        "pct": 5,
+        "count": 15,
+        "business": false
+      },
+      {
+        "label": "Design and media",
+        "pct": 4.3,
+        "count": 13,
+        "business": false
+      },
+      {
+        "label": "Marketing and SEO",
+        "pct": 4.3,
+        "count": 13,
+        "business": true
+      },
+      {
+        "label": "Operations, e-commerce and management",
+        "pct": 2.7,
+        "count": 8,
+        "business": true
+      },
+      {
+        "label": "Personal productivity",
+        "pct": 2.3,
+        "count": 7,
+        "business": false
+      },
+      {
+        "label": "Documents and office files",
+        "pct": 2,
+        "count": 6,
+        "business": false
+      },
+      {
+        "label": "Other, not sorted",
+        "pct": 2,
+        "count": 6,
+        "business": false
+      },
+      {
+        "label": "Finance and accounting",
+        "pct": 1.3,
+        "count": 4,
+        "business": true
+      },
+      {
+        "label": "Legal and compliance",
+        "pct": 1.3,
+        "count": 4,
+        "business": true
+      },
+      {
+        "label": "Sales and CRM",
+        "pct": 1,
+        "count": 3,
+        "business": true
+      },
+      {
+        "label": "Writing and content",
+        "pct": 1,
+        "count": 3,
+        "business": true
+      },
+      {
+        "label": "Health and wellbeing",
+        "pct": 0.7,
+        "count": 2,
+        "business": false
+      },
+      {
+        "label": "Customer support and success",
+        "pct": 0.3,
+        "count": 1,
+        "business": true
+      },
+      {
+        "label": "HR and recruiting",
+        "pct": 0.3,
+        "count": 1,
+        "business": true
+      }
+    ],
+    "groupsCaption": "What public skills are for: a random sample of 300 distinct skills, each read and labelled (business groups in bold)",
+    "groupsNote": "Labels by an AI reviewer (Claude). Groups with no skills in the sample are left out. One large security collection makes Security look bigger than it is in most repos. The CSV also has shares from keyword rules over every distinct skill.",
+    "more": [
+      "Pooling both samples, business work makes up about 14% of public skills (95% range 11% to 17%), against about 33% for software. That business share includes some skills about personal investing and job hunting, so the share made for running a business is a little lower. Marketing and search is the largest business group, while customer support, human resources, finance and writing are each about 1% or less.",
+      "To see what this means for a small business, we picked 29 jobs that owners do every week, searched every distinct skill for each one, and then read the matches. For 13 of those jobs we found 5 or fewer skills that would actually do the job."
+    ],
+    "gaps": [
+      {
+        "job": "Menu costing for a cafe or restaurant",
+        "count": 0
+      },
+      {
+        "job": "Schedule a staff rota / shifts",
+        "count": 0
+      },
+      {
+        "job": "Write a refund / returns policy",
+        "count": 0
+      },
+      {
+        "job": "Bookings, appointments and reminders",
+        "count": 2
+      },
+      {
+        "job": "Grant or small-business loan application",
+        "count": 2
+      },
+      {
+        "job": "Prepare a VAT / GST / sales-tax return",
+        "count": 2
+      },
+      {
+        "job": "Reply to a bad online review",
+        "count": 2
+      },
+      {
+        "job": "Write a job ad",
+        "count": 2
+      },
+      {
+        "job": "Write a quote or job estimate for a customer",
+        "count": 2
+      },
+      {
+        "job": "Prepare payroll / timesheets",
+        "count": 3
+      },
+      {
+        "job": "Write a business plan",
+        "count": 3
+      },
+      {
+        "job": "Write product descriptions for a shop",
+        "count": 3
+      },
+      {
+        "job": "Chase an unpaid or overdue invoice",
+        "count": 4
+      }
+    ],
+    "gapsCaption": "Small-business jobs with 5 or fewer usable public skills in our sample",
+    "gapsNote": "Estimated from keyword matches, of which we read up to 8 per job. A few broader skills touch a rota or a refund policy as one small part of a bigger job. Social posts, newsletters, contract review, bookkeeping and local SEO each had 20 or more."
+  },
+  "advice": [
+    {
+      "who": "If you use skills",
+      "points": [
+        "Get a skill from its original repo, and check that the repo has a licence.",
+        "Read the SKILL.md before you add it. It's plain text and takes a few minutes.",
+        "Check what the skill can do. A skill that ships scripts, installs packages or pipes a web script into your shell needs more care than a text-only one.",
+        "Don't panic at a scanner warning. Most are false alarms, so read the flagged line in context."
+      ]
+    },
+    {
+      "who": "If you publish skills",
+      "points": [
+        "Give each skill a lower-case, hyphenated name that matches its folder.",
+        "Keep to the six fields the spec defines. Put anything else under metadata.",
+        "Add a license line to each skill and a LICENSE file in its folder, so the terms travel with copies.",
+        "When you copy a skill, say where it came from and keep its licence.",
+        "Pin installers to a fixed version, and say in plain words what each script does."
+      ]
+    },
+    {
+      "who": "If you build scanners or skill stores",
+      "points": [
+        "Publish how often each rule raises a false alarm. A flag that's wrong 3 times in 4 teaches people to ignore flags.",
+        "Read a match in context before you show it as a threat.",
+        "Group copies, so one skill copied 20 times isn't counted as 20 findings or 20 choices."
+      ]
+    }
+  ],
+  "method": {
+    "steps": [
+      {
+        "head": "1. Finding skill repos",
+        "text": "On 17 November 2026 we searched GitHub's code search for files named SKILL.md (1,330 requests in 133 slices), its repo search for 13 skill topics and keywords, and 11 popular \"awesome\" lists. That found 99,921 public repos. 36,556 are confirmed to hold a SKILL.md: code search returned one, or we read the repo's full file list. GitHub reports about 7,946,240 SKILL.md files in all, but its search lists only 1,000 results per query, so ours is a lower bound."
+      },
+      {
+        "head": "2. Counting skill files",
+        "text": "For every repo with 5 or more stars, we read the complete list of files through GitHub's API and counted every file named SKILL.md, which gave 1,090,985 files in 18,900 repos. Forks are left out, because both search methods skip them."
+      },
+      {
+        "head": "3. Reading a sample",
+        "text": "We downloaded two samples to read in full: the 600 most-starred skill repos, and 200 repos with fewer than 10 stars picked at random (seed 20261117). 799 of them downloaded cleanly, and together they hold 75,610 SKILL.md files. Nothing in them was installed or run, because we only needed to read the files."
+      },
+      {
+        "head": "4. Format, copies and licences",
+        "text": "We checked each skill's header against the specification at agentskills.io. We found exact copies by comparing content, and near copies by comparing runs of five words. Each repo's licence came from GitHub."
+      },
+      {
+        "head": "5. Safety",
+        "text": "We ran our open rule set (version 2026-11-05.1) over every file in each skill folder. Then an AI reviewer (Claude) read 579 random serious flags in context, up to 30 per rule, and labelled each as a real risk to the user, a real but openly stated risk, a false alarm or unclear. A blind second pass re-checked 1 in 5."
+      },
+      {
+        "head": "6. Jobs",
+        "text": "An AI reviewer read 300 distinct skills picked at random and labelled each by its job, and a second, blind sample of 150 checked the shares. For small-business jobs, we searched every distinct skill for each job and read up to 8 matches per job."
+      },
+      {
+        "head": "7. Checking our own numbers",
+        "text": "Separate AI agents recounted every headline number from the raw files using their own code. We fixed what they found before publishing."
+      }
+    ],
+    "limits": [
+      "GitHub search can't list every repo, so our counts are lower bounds. Private repos and skills shipped in packages are out of scope.",
+      "The 600 popular repos are a full count of that group, not a sample of all repos. The 200 small repos are a random sample with sampling error.",
+      "A repo's date is when it was made, not when it first added a skill.",
+      "The safety and job labels were made by Claude, not human experts.",
+      "A static scanner reads files but doesn't run them, and finds only the patterns it looks for.",
+      "Job shares come from a sample of a few hundred skills, so the smaller groups are rough.",
+      "Everything is a snapshot of 17 November 2026. Stars, files and licences keep changing."
+    ],
+    "prior": [
+      {
+        "id": "2608.10906",
+        "name": "GitSkills",
+        "finding": "counted 3.8 million SKILL.md files in 282,200 repos (July 2026)"
+      },
+      {
+        "id": "2608.08453",
+        "name": "What keeps Agent Skills from being reusable?",
+        "finding": "checked 138,133 skill files against the spec"
+      },
+      {
+        "id": "2603.22447",
+        "name": "Latent reuse in Agent Skills",
+        "finding": "found copied or near-copied pairs involving two thirds of 137,470 skills, mostly across authors"
+      },
+      {
+        "id": "2603.16572",
+        "name": "Context matters",
+        "finding": "measured how many scanner flags hold up in context"
+      },
+      {
+        "id": "2610.37901",
+        "name": "Scan before you install",
+        "finding": "had human analysts check scanner findings on popular repos"
+      },
+      {
+        "id": "2601.10338",
+        "name": "Agent skills in the wild",
+        "finding": "scanned 31,132 marketplace skills for vulnerabilities"
+      },
+      {
+        "id": "2610.11647",
+        "name": "One skill too many",
+        "finding": "found near-duplicate skills installed side by side, and how they get in each other's way"
+      }
+    ],
+    "priorText": "Other researchers have counted and checked public skills before us, and some of their samples are larger. This study adds four things: false-alarm rates for each rule of one open scanner, how often skills use their own licence line, what happens to licences when skills are copied, and a map of which small-business jobs have skills at all."
+  },
+  "dataText": "The numbers behind every chart are in the CSV files below, and you may reuse the data and charts under the CC BY 4.0 licence if you credit AI Blocks and link to this page. The list of repos holds only public facts read from GitHub's API. We don't publish safety labels for individual repos, because a label without its context could unfairly harm an author.",
+  "licenceText": "Data and charts: CC BY 4.0. Text: all rights reserved, but quote it freely with a link.",
+  "keywords": [
+    "AI agent skills",
+    "Agent Skills",
+    "SKILL.md",
+    "Claude skills",
+    "Codex skills",
+    "open source",
+    "GitHub",
+    "software supply chain",
+    "AI safety scanning",
+    "licences"
+  ],
+  "variables": [
+    "skill repos per month",
+    "SKILL.md files per repo",
+    "format rule pass rate",
+    "exact and near copy share",
+    "repo licence",
+    "per-skill licence field",
+    "scanner false-alarm rate per rule",
+    "skill capabilities",
+    "job group share",
+    "small-business job coverage"
+  ],
+  "techniques": [
+    "GitHub code and repository search",
+    "git tree listing",
+    "YAML parsing against the agentskills.io spec",
+    "MinHash near-duplicate detection",
+    "static pattern scanning",
+    "AI-assisted labelling of a stratified random sample with a blind second pass",
+    "independent recount"
+  ],
+  "files": [
+    {
+      "file": "skill-repos-10-stars.csv",
+      "text": "13,954 confirmed skill repos with 10 or more stars: stars, dates, licence, language and SKILL.md count."
+    },
+    {
+      "file": "new-skill-repos-by-month.csv",
+      "text": "New skill repos by month: confirmed, unchecked and estimated."
+    },
+    {
+      "file": "where-skills-live.csv",
+      "text": "Which folders repos keep skills in."
+    },
+    {
+      "file": "repo-licences.csv",
+      "text": "Licences of skill repos with 10 or more stars."
+    },
+    {
+      "file": "format-rules.csv",
+      "text": "Pass rates for each format rule, popular and small repos."
+    },
+    {
+      "file": "copies.csv",
+      "text": "First copies, same-repo repeats and cross-repo repeats."
+    },
+    {
+      "file": "most-copied-skills.csv",
+      "text": "The most-copied skills and where they come from."
+    },
+    {
+      "file": "scanner-false-alarms-by-rule.csv",
+      "text": "Each scanner rule: flags read, false alarms, real risks and 95% ranges."
+    },
+    {
+      "file": "capabilities.csv",
+      "text": "What skills' files can do."
+    },
+    {
+      "file": "jobs-by-group.csv",
+      "text": "Share of skills in each job group."
+    },
+    {
+      "file": "small-business-jobs.csv",
+      "text": "29 small-business jobs and how many public skills do each."
+    }
+  ]
+}

@@ -23,7 +23,11 @@ test('a wordmark that blends into its panel fails, and a readable one passes', a
     const page = await browser.newPage({ viewport: { width: 400, height: 500 } });
     for (const [name, color] of [['dark', '#1a1a1a'], ['light', '#ffffff']]) {
       await page.setContent(ad(color));
-      await page.screenshot({ path: path.join(dir, `${name}.png`) });
+      // Under the full parallel suite, headless Chromium sometimes cannot capture a frame. Retry only that error.
+      for (let attempt = 1; ; attempt++) {
+        try { await page.screenshot({ path: path.join(dir, `${name}.png`) }); break; }
+        catch (error) { if (attempt === 3 || !/Unable to capture screenshot/.test(error.message)) throw error; await page.waitForTimeout(250 * attempt); }
+      }
     }
   } finally { await browser.close(); }
   const run = (file, ...extra) => spawnSync(process.execPath, [TOOL, path.join(dir, file), '--box', '4%,3%,45%,12%', ...extra], { cwd: SITE, encoding: 'utf8' });

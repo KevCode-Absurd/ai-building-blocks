@@ -27,7 +27,7 @@ export const MENU_GROUPS = [
 ];
 
 /** Pages built only as plain HTML (scripts/lib/trust-pages.mjs): the app opens them with a normal page load. */
-export const STATIC_PAGES = ["/industries", "/how-we-test", "/how-we-check-safety"];
+export const STATIC_PAGES = ["/industries", "/how-we-test", "/how-we-check-safety", "/research"];
 /** Plain pages with app pages under them: /skills is plain, /skills/<item> opens in the app (scripts/lib/format-pages.mjs). */
 export const STATIC_EXACT = ["/skills", "/prompts", "/workflows", "/agents", "/which-one"];
 export const isStaticPage = (to) => STATIC_PAGES.some((p) => to === p || to.startsWith(`${p}/`)) || STATIC_EXACT.includes(String(to).split(/[?#]/)[0]);

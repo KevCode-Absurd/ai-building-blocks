@@ -17,6 +17,7 @@ import { rankSpecialists } from "../../src/roles/specialist-matching.mjs";
 import { INDUSTRIES, INDUSTRIES_PATH, START_JOB, FALLBACK_JOB_PATH } from "../../src/trust-pages/industries.mjs";
 import { HOW_WE_TEST_PATH, howWeTestPage } from "../../src/trust-pages/how-we-test.mjs";
 import { safetyPage } from "../../src/trust-pages/safety-check.mjs";
+import { studyPage } from "../../src/trust-pages/agent-skills-study.mjs";
 import { BOARDS, KEPT_PAGES } from "../../src/trust-pages/boards.mjs";
 import { boardPages } from "./board-pages.mjs";
 import { readFixes } from "./board-map.mjs";
@@ -26,6 +27,8 @@ const SITE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..
 const EVALS = path.join(SITE_ROOT, "src/outcomes/evals");
 // The safety scan's results (tools/safety-scan.mjs write), read for /how-we-check-safety.
 const SAFETY_FILE = path.resolve(process.env.CATALOGUE_ROOT || path.join(SITE_ROOT, "../catalogue-items"), "_safety.json");
+// The agent skills study's numbers (src/trust-pages/agent-skills-study.mjs), read for /research/agent-skills-2026.
+export const STUDY_FILE = path.join(SITE_ROOT, "src/trust-pages/agent-skills-2026.json");
 
 const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 export const kindPath = b => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
@@ -137,6 +140,7 @@ export async function trustPages({ cat, readPage, roles, tools, routeExists = ()
   const scoreFor = id => { const n = card.cases.filter(c => c.industry === id && typeof c.score === "number").length; return n && typeof card.industries?.[id] === "number" ? { count: n, average: card.industries[id] } : null; };
   const pages = [{ ...test, crumbs: [], hub: true }];
   if (fs.existsSync(SAFETY_FILE)) pages.push({ ...safetyPage(JSON.parse(fs.readFileSync(SAFETY_FILE, "utf8"))), crumbs: [], hub: true });
+  pages.push({ ...studyPage(JSON.parse(fs.readFileSync(STUDY_FILE, "utf8"))), crumbs: [["Blog", "/blog"]], hub: true });
   // The business boards own /industries and the industry pages they replaced; finance and engineering keep theirs.
   const byIndustry = Object.fromEntries(industries.map((ind) => [ind.slug, ind]));
   const kept = industries.filter((ind) => KEPT_PAGES.includes(ind.slug));
@@ -168,7 +172,9 @@ export const bodyLinks = html => [...String(html).matchAll(/href="(\/[^"]*)"/g)]
 /** Links that go nowhere: each must be a catalogue page, a role, a mini tool, a guide page or a known site path. */
 export function brokenLinks(pages, { cat, roles, tools, sitePaths = [] }) {
   const known = new Set([...cat.blocks.filter(b => b.headline !== "").map(hrefOf), ...roles.roles.map(r => `/roles/${r.id}`), ...tools.map(t => `/tools/${t.slug}`), ...pages.map(p => p.url), ...sitePaths]);
-  return pages.flatMap(p => bodyLinks(p.body).filter(l => !known.has(l.path)).map(l => `${p.url} -> ${l.href}`));
+  // A download (a file with an extension, such as a research page's CSV) is fine when it ships from public/.
+  const publicFile = (p) => /\.[a-z0-9]+$/i.test(p) && fs.existsSync(path.join(SITE_ROOT, "public", p));
+  return pages.flatMap(p => bodyLinks(p.body).filter(l => !known.has(l.path) && !publicFile(l.path)).map(l => `${p.url} -> ${l.href}`));
 }
 
 /** dist/sitemap-guides.xml: the guide pages, listed once (build-index's sitemap index points to it). */

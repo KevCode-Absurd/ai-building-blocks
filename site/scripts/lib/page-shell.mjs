@@ -18,8 +18,11 @@ function quiet(html) {
  *  and the first subhead of the prerendered body. Returns "" when there is no heading to show. */
 export function pageShell({ logo, h1, body = "", content = "", mainClass = "" }) {
   const contentHero = content.match(/<section class="hero"[\s\S]*?<\/section>/)?.[0];
+  const blogHero = mainClass === "blog-page" ? content.match(/<header class="(?:blog|post)-hero"[\s\S]*?<\/header>/)?.[0] : null;
   const sub = body.match(/<p class="bp-sub">([\s\S]*?)<\/p>/)?.[1];
-  const hero = contentHero
+  const hero = blogHero
+    ? `<div class="wrap blog-page"><div class="${blogHero.includes('class="post-hero"') ? "blog-post" : "blog-index"}">${quiet(blogHero)}</div></div>`
+    : contentHero
     ? `<div class="wrap ${mainClass}">${quiet(contentHero)}</div>`
     : h1 ? `<div class="wrap bp-hero"><p class="bp-h1 page-shell-h1">${h1}</p>${sub ? `<p class="bp-sub">${quiet(sub)}</p>` : ""}</div>` : "";
   if (!hero) return "";

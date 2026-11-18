@@ -8,6 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { build } from 'esbuild';
+import { importEvaluationBundle } from './lib/import-evaluation-bundle.mjs';
 import crypto from 'node:crypto';
 import { buildLibrarySearchIndex, searchLibraryIndex } from '../src/lib/library-search-core.ts';
 import { makeSearchDocument } from '../src/lib/search-document.mjs';
@@ -39,7 +40,7 @@ const catalogue = { ...raw, blocks, bySlug };
 async function bundle(entry) {
   const out = path.join(os.tmpdir(), `abb-eval-${path.basename(entry, '.ts')}-${process.pid}.mjs`);
   await build({ entryPoints: [path.join(SITE, entry)], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent', jsx: 'automatic' });
-  try { return await import('file://' + out.replace(/\\/g, '/')); } finally { fs.rmSync(out, { force: true }); }
+  return await importEvaluationBundle(out);
 }
 
 const round = (n, d = 3) => Number(n.toFixed(d));

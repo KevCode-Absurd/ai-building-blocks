@@ -1,3 +1,9 @@
 # Keep executable pack sources identical to LF-normalized exports on every checkout.
 /marketplace/packs/shared/tools/*.mjs text eol=lf
 /marketplace/src/modules/packs/retrieve.ts text eol=lf
+
+# Public download and inline-script bytes must be stable across checkouts.
+/site/public/playbooks/*.md text eol=lf
+/site/index.html text eol=lf
+/site/src/PageRecovery.tsx text eol=lf
+/catalogue-items/general/grounded-job-protocol/SKILL.md text eol=lf

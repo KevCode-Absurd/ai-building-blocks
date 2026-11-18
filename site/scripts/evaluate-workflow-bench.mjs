@@ -27,6 +27,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { build } from 'esbuild';
+import { importEvaluationBundle } from './lib/import-evaluation-bundle.mjs';
 
 const SITE = path.resolve(import.meta.dirname, '..');
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1]; };
@@ -43,8 +44,7 @@ const half = id => Number(id.replace(/\D/g, '')) % 2 ? 'dev' : 'test';
 // evaluate-builder-goals.mjs. One bundle: both paths share the same ranking code.
 const out = path.join(os.tmpdir(), `abb-workflow-bench-${process.pid}.mjs`);
 await build({ stdin: { contents: ["export { startPicks, decodeCatalogue } from './src/lib/composer-core.ts';", "export { suggestNext } from './src/lib/suggest.ts';", "export { suggestBefore } from './src/lib/suggest-before.ts';", "export { firstSteps, around } from './src/lib/step-graph.ts';", "export { handsOver, isLoosePort } from './src/lib/next-steps.mjs';"].join('\n'), resolveDir: SITE, loader: 'ts' }, bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent', jsx: 'automatic' });
-let m;
-try { m = await import('file://' + out.replace(/\\/g, '/')); } finally { fs.rmSync(out, { force: true }); }
+const m = await importEvaluationBundle(out);
 const { startPicks, decodeCatalogue, suggestNext, suggestBefore, firstSteps, around, handsOver, isLoosePort } = m;
 
 // The browser's Block shape (lib/data.ts), as the builder sees it.

@@ -2,6 +2,7 @@
 // plus each block's SKILL.md under public/skills/<slug>/ (fetched only when a block page opens), and a zip for a skill with extra files.
 import fs from "node:fs";
 import { primarySkillFile } from "./lib/skill-file.mjs";
+import { publishedSourceBytes } from "./lib/published-source-bytes.mjs";
 import { loadFactChecks } from "./lib/fact-checks.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import path from "node:path";
@@ -145,7 +146,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     const skill = fs.readFileSync(skillPath, "utf8");
   sourceFactRows.set(path.basename(folder), factChecks.forItem(path.basename(folder), skill));
     fs.mkdirSync(path.join(OUT_SKILLS, slug), { recursive: true });
-    fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
+    const publishedSkill = publishedSourceBytes('SKILL.md', fs.readFileSync(skillPath));
+    fs.writeFileSync(path.join(OUT_SKILLS, slug, "SKILL.md"), publishedSkill);
     // Reference files and a licence travel with the skill, so a download installs complete.
     const refDir = path.join(folder, "references");
     const candidateFiles = imported || item.package_files === "all" ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
@@ -160,8 +162,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     // They ship as one zip per skill (skills/<slug>.zip, the folder Claude installs), not one file each: the site stays
     // under Cloudflare Pages' file limit, and a download is one request. The skill's own files are never changed.
     if (files.length) {
-      const tree = { [`${slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
-      for (const f of files) tree[`${slug}/${f}`] = fs.readFileSync(path.join(folder, f));
+      const tree = { [`${slug}/SKILL.md`]: publishedSkill };
+      for (const f of files) tree[`${slug}/${f}`] = publishedSourceBytes(f, fs.readFileSync(path.join(folder, f)));
       // Our guardrails ride along as their own file; an upstream SAFETY.md, if any, is kept as it is.
       if (safety.scanned && !tree[`${slug}/SAFETY.md`]) tree[`${slug}/SAFETY.md`] = new TextEncoder().encode(safetyMarkdown(item.name ?? slug, safety.items[slug], safety.scanned));
       fs.writeFileSync(path.join(OUT_SKILLS, `${slug}.zip`), zipSync(tree, { level: 6, mtime: ZIP_DATE }));
@@ -273,13 +275,14 @@ for (const r of roster.minds) {
   const skill = fs.readFileSync(skillPath, "utf8");
   sourceFactRows.set(path.basename(folder), factChecks.forItem(path.basename(folder), skill));
   fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
-  fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
+  const publishedSkill = publishedSourceBytes('SKILL.md', fs.readFileSync(skillPath));
+  fs.writeFileSync(path.join(OUT_SKILLS, r.slug, "SKILL.md"), publishedSkill);
   // The parts go too, so a mind's pack can carry its playbook, personality, knowledge and sources as their own files.
   // Like a skill's files, they ship as one zip (skills/<slug>.zip: <slug>/SKILL.md plus the parts), not one file each.
   const mindFiles = ["playbook.md", "personality.md", "knowledge.md"].filter((f) => fs.existsSync(path.join(folder, f)));
   const srcList = (m.sources ?? []).filter((s) => s.title).map((s) => `${s.n}. ${s.title}${s.by ? `, ${s.by}` : ""} (${s.kind ?? "source"})${s.url ? `: ${s.url}` : ""}`);
-  const mindTree = { [`${r.slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
-  for (const f of mindFiles) mindTree[`${r.slug}/${f}`] = fs.readFileSync(path.join(folder, f));
+  const mindTree = { [`${r.slug}/SKILL.md`]: publishedSkill };
+  for (const f of mindFiles) mindTree[`${r.slug}/${f}`] = publishedSourceBytes(f, fs.readFileSync(path.join(folder, f)));
   mindTree[`${r.slug}/sources.md`] = new TextEncoder().encode([`# Sources: ${m.name}`, "", "The public work this mind was built from. knowledge.md cites them as [S1], [S2] and so on.", "", ...srcList, ""].join("\n"));
   if (safety.scanned) mindTree[`${r.slug}/SAFETY.md`] = new TextEncoder().encode(safetyMarkdown(m.name, safety.items[r.slug], safety.scanned));
   fs.writeFileSync(path.join(OUT_SKILLS, `${r.slug}.zip`), zipSync(mindTree, { level: 6, mtime: ZIP_DATE }));

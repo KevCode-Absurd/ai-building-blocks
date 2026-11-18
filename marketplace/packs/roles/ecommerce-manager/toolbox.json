@@ -1,8 +1,17 @@
 {
   "schema": "ai-blocks-toolbox/1",
   "role": "ecommerce-manager",
-  "reviewed": "2026-11-10",
+  "reviewed": "2026-11-18",
   "tasks": [
+    {
+      "id": "growth-plan-feasibility",
+      "task": "Build a growth plan that fits each owner's weekly capacity",
+      "kind": "plan",
+      "items": [
+        { "ref": "kit:prompts/weekly-trading-review", "use": "brief", "when": "Before choosing plays, to ground priorities in current sales, margin, stock and cash evidence" },
+        { "ref": "kit:workflows/period-capacity-and-dependencies", "use": "check", "when": "Before delivery, to verify each owner's period allocation, dated dependencies, stock and cash" }
+      ]
+    },
     {
       "id": "bundles-and-add-ons",
       "task": "Plan bundles and add-ons that raise order value",
@@ -252,6 +261,7 @@
     }
   ],
   "always": [
+    { "ref": "kit:workflows/period-capacity-and-dependencies", "use": "check", "when": "Whenever a plan assigns team hours or dates, to check every source period before aggregate totals" },
     { "ref": "library:analysis-checker", "type": "skill", "use": "check", "when": "Before any margin, threshold or sell-through figure goes to the owner, to test the sums" },
     { "ref": "library:marketing-claims-checker", "type": "skill", "use": "check", "when": "Before any shopper-facing wording goes live, to sort each claim as fine, needs proof or cut" }
   ],

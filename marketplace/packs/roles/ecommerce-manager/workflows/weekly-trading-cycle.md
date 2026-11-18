@@ -8,7 +8,7 @@
 
 1. **Pull the exports (level 1; tools: store inventory and sales reports, cost list).** Stock on hand, units sold by week for 4 weeks, cost and price, and price history for the last 30 days for anything on sale or due for markdown.
 2. **Run the review (prompt: weekly-trading-review).** Weeks of cover, sell-through, margin and trend per product; hero, push, clear, cut and reorder groups.
-3. **Update the plan (skill: merchandising-and-markdown-plan).** This week's home page slots, collection tops and email features; markdown steps due; reorder list for the buyer.
+3. **Update the plan (skill: merchandising-and-markdown-plan).** This week's home page slots, collection tops and email features; markdown steps due; reorder list for the buyer. Before the plan is ready, run **period-capacity-and-dependencies**: allocate every task to its owner and source week, verify each week and the whole plan with `capacityPlan`, and preserve stock, cash and launch prerequisites.
 4. **Check prices before they change (prompt: price-reduction-check).** EU "was" prices against the 30-day low; UK deadlines real and delivery included; US former prices genuine.
    **Approval point:** the owner approves the week's plan. Price changes inside the approved markdown plan, above its floors, can run at level 3 without a new yes; anything outside it needs one.
 5. **Make the changes (level 2 to schedule; level 3 to apply within limits).** Reorder collections and home page slots; schedule markdown steps; send email features to whoever runs email.
@@ -18,7 +18,7 @@
 ## Outputs
 
 - Product table with groups.
-- Trading calendar for the week and the next three.
+- Trading calendar for the week and the next three, with owner-by-week hours, remaining capacity and saved calculation inputs/results.
 - Markdown steps applied or scheduled, with price checks.
 - Reorder list for the buyer.
 - Change log and a weekly note.

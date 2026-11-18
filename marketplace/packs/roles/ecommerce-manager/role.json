@@ -15,9 +15,13 @@
     "product data manager",
     "digital product shop"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "review_every_days": 30,
   "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Growth and trading plans now reconcile task hours against each owner's source-period capacity with the existing calculator, preserve dated stock and cash dependencies, and separate planned outcomes from measured results."
+    },
     {
       "date": "2026-11-06",
       "note": "First release: category trees, attributes, filters and variants; Google and Meta feed data rules; sell-through and markdown planning; bundles and delivery thresholds; digital products; EU 30-day prior price (Aldi Süd), UK DMCC drip pricing, fake urgency and fake reviews, and FTC price and review rules, with 30 checked sources."

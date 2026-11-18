@@ -60,12 +60,12 @@
     "updated": "2026-11-18"
   },
   "agata-product-feeds": {
-    "hash": "3e0bfad6de911dd11814746121e3f415b8e7c70ef7c746fff4779b8b64c4d77d",
+    "hash": "9a7c56a119bec884764a426b5882324e4537235789545ec21e1c8aea1ba8a928",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "agata-product-feeds-train": {
-    "hash": "42c8777475d2b4332cc181658c600b98ac7b04e2ef865ffce41453ff90489670",
+    "hash": "b9104167d252a73d5e9517a83759bd280ab7d2862f8d7476292e4b1f81e00eab",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -1580,12 +1580,12 @@
     "updated": "2026-11-18"
   },
   "estelle-order-value": {
-    "hash": "83002c07e82f2188ff9b0fcae4dc9e268c5bf5d76020f8c5bb5217c183e8eb8c",
+    "hash": "e0220a1c2166ca91afaa58dde9bac8e9691cb0e10439402a063b3b166de79276",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "estelle-order-value-train": {
-    "hash": "10030a6fc03d389cd8ba958893eedff470f2ae596516cbb3a4f82cb7b410343c",
+    "hash": "e2dce0d39a1586ff49abc704a1db8095864f3e6ec0c20833c34d9587dca94080",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -2220,12 +2220,12 @@
     "updated": "2026-11-18"
   },
   "houda-catalogue": {
-    "hash": "f7926887c000ff632700af053c617c952358bff85c68f2b24c8a93d6d9593070",
+    "hash": "1719c9c759d0747fa452235c3c7fcfaf82f3bb8a0a44118b5ac75b4349452208",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "houda-catalogue-train": {
-    "hash": "775ad4e4d440d5e6ed3d623734120dbecff58ec95b60237647c40d0e8567c401",
+    "hash": "9dd034aaafa13bce191f0159436d00f99300c24482f92261e5574320ad6d5672",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -2340,12 +2340,12 @@
     "updated": "2026-11-18"
   },
   "imelda-merchandising": {
-    "hash": "c45fd926a5f3b7935ead740618607dd782ec2913a1002e5a79b5ae15372854f8",
+    "hash": "179aaa219f57dcc5e060832dc03d63ab23a230842c74643031631b61e7ab797f",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "imelda-merchandising-train": {
-    "hash": "d9c5b7f972ced821922240c42d1079bda904ee1c91dc11ee20503ee0bcfa7466",
+    "hash": "400470c508ef497d29447473cc2b1a05cd44226f046433a0b80b054492fd38df",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -3290,12 +3290,12 @@
     "updated": "2026-11-18"
   },
   "malcolm-ecommerce-growth": {
-    "hash": "8a51f11cae8b598ae4bda8251d7611ca88b85878744bdb6e23fa32a323c34df8",
+    "hash": "eb4c93bd5eff279f953da05a2df1c291b9b29d199f17eaa9531167ade0f04fbc",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "malcolm-ecommerce-growth-train": {
-    "hash": "d92e1dab16ae7b857ebc04f8e865f288ccc41713f1dc37b24ed168bdcf3795cb",
+    "hash": "0b5c0115251ac6f6113181f7eb329321b08e0ec1df8a7453eb2e1940e735c3f9",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -3350,12 +3350,12 @@
     "updated": "2026-11-18"
   },
   "marivic-fulfilment": {
-    "hash": "659e07d8a62e0777ba5228b2ddb78831f2f52b2216f4682fd32b3da21b5b311c",
+    "hash": "0376d94eb3632c40bc2c83da8bce30957648edf70fca3e0cd3c4d8112fde2844",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "marivic-fulfilment-train": {
-    "hash": "c77ccddc2f8f6e89cfc3ec006e190b26d53892b671570c8e4f3b7557d2fd4ded",
+    "hash": "4155dae4359e8e7066023f7bf3c538e8ddf54b93a68a648490cf4530f2e698a9",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
@@ -5220,12 +5220,12 @@
     "updated": "2026-11-18"
   },
   "tilly-digital-products": {
-    "hash": "4ca6891bbc44692067c9cafe16c8900e3a14d4ad6c57b6b4a4331084fef04687",
+    "hash": "52d9b350e0e98e2fa6a22908ed0ed4a8513c2fb183d9d2de5760c8e080702dc2",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },
   "tilly-digital-products-train": {
-    "hash": "aa3b2dfffa6c56994b4d4e835456f7ae0e98a58e6b6426ac882e3816825ba404",
+    "hash": "5672f0792b43071b7f499840811638bae7f56781024669dccdc4f1c55b4f36de",
     "version": "2026.11.18",
     "updated": "2026-11-18"
   },

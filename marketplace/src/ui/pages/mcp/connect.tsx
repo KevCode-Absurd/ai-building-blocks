@@ -70,7 +70,7 @@ export function Connect() {
   useEffect(() => { document.title = CONNECT_TITLE; }, []);
   return (
     <Page title="Connect your AI" intro="Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.">
-      <div class="stack">
+      <div class="stack mcp-connect-content">
         <Card title="1. Copy this address">
           <CopyAddress address={address} />
           <p class="muted small mcp-gap">This is the connector address. You paste it into your AI app once.</p>

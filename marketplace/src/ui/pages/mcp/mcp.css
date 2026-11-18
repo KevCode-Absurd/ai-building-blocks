@@ -26,3 +26,14 @@
 .mcp-api { margin: 12px 0; display: grid; gap: 4px; }
 .mcp-api dt { margin-top: 8px; overflow-wrap: anywhere; }
 .mcp-api dd { margin: 0; color: var(--muted); }
+
+/* Keep the hero and copy-address card eager. On phones, avoid laying out distant instructions before first
+   paint. Auto keeps their DOM searchable/focusable and remembers measured heights when they scroll away. */
+@media (max-width: 520px) {
+  .mcp-connect-content > :nth-child(n + 2) {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 480px;
+  }
+  .mcp-connect-content > :nth-child(2) { contain-intrinsic-block-size: auto 1040px; }
+  .mcp-connect-content > :last-child { contain-intrinsic-block-size: auto 160px; }
+}

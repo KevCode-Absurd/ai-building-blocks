@@ -117,6 +117,15 @@ test("which pack files are indexed, and the knowledge map lists them with and wi
   assert.doesNotMatch(knowledgeMap(index, "Nova", false), /ask-knowledge/);
 });
 
+test("retrieval tool generation is byte-identical for LF and CRLF source checkouts", async () => {
+  const { generate, SOURCE } = await load("../scripts/gen-ask-knowledge.mjs");
+  const lf = readFileSync(SOURCE, "utf8").replace(/\r\n?/g, "\n");
+  const fromLf = generate(lf);
+  const fromCrlf = generate(lf.replace(/\n/g, "\r\n"));
+  assert.equal(fromCrlf, fromLf);
+  assert.doesNotMatch(fromCrlf, /\r/);
+});
+
 test("tools/ask-knowledge.mjs is generated from retrieve.ts and answers the same way from a pack folder", async () => {
   const { generate, TARGET } = await load("../scripts/gen-ask-knowledge.mjs");
   assert.equal(readFileSync(TARGET, "utf8"), generate(), "out of date: run node scripts/gen-ask-knowledge.mjs");

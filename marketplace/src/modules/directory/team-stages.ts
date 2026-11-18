@@ -15,8 +15,8 @@ export const ECOMMERCE_STAGES: readonly TeamStage[] = [
   { id: "source", label: "Source and make the product", summary: "Suppliers, BOM and cost, negotiation, quality, freight, packaging and stock.", agents: [
     "tunde-supplier-search", "zhenyu-sourcing", "wenhao-procurement", "douglas-should-cost", "akosua-cost-forecast",
     "maxine-tech-packs", "phuong-quality-control", "sheila-inbound-freight", "omar-inventory-planning", "alistair-packaging"] },
-  { id: "store", label: "Build the store", summary: "Brand, Shopify, pages, photos, offers and tests.", agents: [
-    "philippa-brand", "facundo-store-setup", "arjun-page-speed", "annabel-landing-pages", "georgia-product-copy",
+  { id: "store", label: "Build the store", summary: "Brand, stores, speed, pages, photos, offers and tests.", agents: [
+    "philippa-brand", "facundo-store-setup", "arjun-page-speed", "nico-ecommerce-speed", "vera-woocommerce-speed", "annabel-landing-pages", "georgia-product-copy",
     "aurelio-product-photos", "juliet-merchandising", "brendan-offers", "gretchen-store-testing", "larissa-store-ux", "yaroslav-shopify-dev"] },
   { id: "creative", label: "Make the ads", summary: "Creative strategy, ad graphics, video and ad copy.", agents: [
     "tendai-ad-creative", "howard-copy-chief", "ayaka-ad-design", "devon-video-ugc", "kofi-ad-copy", "cody-video-editor", "tanvi-listing-images"] },

@@ -1071,7 +1071,8 @@
     ],
     "agents": [
       "facundo-store-setup",
-      "yaroslav-shopify-dev"
+      "yaroslav-shopify-dev",
+      "vera-woocommerce-speed"
     ],
     "stage": "store",
     "connect": "MCP through the WordPress MCP Adapter plugin (products: query, create, update, delete; orders: query, update status, add notes), a developer preview. Start at level 1 read; drafts at level 2; nothing goes live without the owner's yes.",
@@ -1462,7 +1463,9 @@
     "agents": [
       "larissa-store-ux",
       "gretchen-store-testing",
-      "arjun-page-speed"
+      "arjun-page-speed",
+      "nico-ecommerce-speed",
+      "vera-woocommerce-speed"
     ],
     "stage": "store",
     "connect": "Official Microsoft MCP server (scroll depth, traffic, engagement by device, browser or country, with a Data Export token; 10 requests a day per project). Start at level 1 read.",

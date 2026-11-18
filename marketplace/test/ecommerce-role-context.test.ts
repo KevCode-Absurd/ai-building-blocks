@@ -21,7 +21,7 @@ const cards = readdirSync(new URL("../knowledge/ecommerce/cards/", import.meta.u
 const bundle = verticalBundle(verticalData as Vertical, cards, sources);
 
 test("all current role contracts preserve actual outcomes and canonical module routing backed by public sources", () => {
-  assert.equal(team.length, 78);
+  assert.equal(team.length, 80);
   const workSignatures = new Set<string>();
   for (const p of team) {
     const ctx = ecommerceRoleContext(p)!;
@@ -52,6 +52,24 @@ test("all current role contracts preserve actual outcomes and canonical module r
     assert.equal(pkg.files.find(f => f.path === "reference/ecommerce-role-context.md")?.content, renderEcommerceRoleContext(p) + "\n");
   }
   assert.equal(workSignatures.size, team.length);
+});
+
+test("new speed roles retrieve the same narrow speed module with distinct platform responsibilities", () => {
+  const owners = [
+    ["arjun-page-speed", "shopify-specialist"],
+    ["nico-ecommerce-speed", "ecommerce-performance-specialist"],
+    ["vera-woocommerce-speed", "wordpress-commerce-performance-specialist"],
+  ];
+  for (const [id, role] of owners) {
+    const ctx = ecommerceRoleContext(team.find(p => p.id === id)!)!;
+    assert.equal(ctx.role_id, role);
+    assert.deepEqual(resolveEcommerceRole(id)?.modules, ["SPD"]);
+    assert.deepEqual(ctx.primary_modules, ["SPD"]);
+    assert.deepEqual(ctx.conditional_modules.map(m => m.code), ["CRO"]);
+    assert.deepEqual(ctx.unknown_modules, []);
+  }
+  assert.match(renderEcommerceRoleContext(team.find(p => p.id === "nico-ecommerce-speed")!), /headless and custom/i);
+  assert.match(renderEcommerceRoleContext(team.find(p => p.id === "vera-woocommerce-speed")!), /WordPress and WooCommerce/);
 });
 
 test("support and channel specialists get selective evidence needs; lead scope is constraints, not all modules", () => {

@@ -52,10 +52,17 @@ function libraryFor(box: ToolboxJson): Record<string, LibraryItem> {
   }));
 }
 
-test("ecommerce keeps 78 agents and preserves the original four media-buying owners", () => {
+test("ecommerce has 80 agents and preserves the original four media-buying owners", () => {
   const source = JSON.parse(read(ROOT, "src/modules/directory/data/personas-ecommerce.json"));
-  assert.equal(source.length, 78);
+  assert.equal(source.length, 80);
   assert.equal(new Set(source.map((p: { id: string }) => p.id)).size, source.length);
+  for (const [id, role] of [
+    ["nico-ecommerce-speed", "ecommerce-performance-specialist"],
+    ["vera-woocommerce-speed", "wordpress-commerce-performance-specialist"],
+  ]) {
+    assert.equal(ecommerce.find(p => p.id === id)?.role, role);
+    assert.equal(leadAgentOfRole(ecommerce, role)?.id, id);
+  }
   for (const buyer of buyers) {
     const p = ecommerce.find(p => p.id === buyer.id)!;
     assert.ok(p);

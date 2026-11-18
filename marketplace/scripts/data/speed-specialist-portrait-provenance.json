@@ -1,0 +1,32 @@
+{
+  "created": "2026-11-18T09:48:47.194Z",
+  "generator": "built-in image_gen",
+  "api_credits_used": false,
+  "style_reference": "public/agents/arjun-page-speed.webp",
+  "subjects": "Original fictional agent characters, not real people.",
+  "encoding": "512x512 WebP quality82; original images preserved in the local image-generation output.",
+  "assets": [
+    {
+      "id": "nico-ecommerce-speed",
+      "path": "public/agents/nico-ecommerce-speed.webp",
+      "sha256": "7b4ef636d28065dd7dad7042d10a33cb1c438e790c3d5cd8508fc508b8d065ae",
+      "source_sha256": "ac710e538796330221da41e79c2722e8306cca97cc444274644a3e33005efdc3",
+      "bytes": 19316,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "vera-woocommerce-speed",
+      "path": "public/agents/vera-woocommerce-speed.webp",
+      "sha256": "3052d93bbd4c47856904e4508c969684dd532eb825a0336565ae0a828f11d931",
+      "source_sha256": "d8fd55ae58acd64e60970d431dd1e4d758796888888ede1974ecf0ff51ca85d6",
+      "bytes": 27058,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "prompts": {
+    "nico-ecommerce-speed": "Create one square standalone fictional AI-agent avatar, matching the polished stylized 3D animated character rendering, friendly oversized expressive eyes, bust framing, clean studio lighting and saturated single-color backdrop of the reference. The reference is STYLE ONLY, not the person to reproduce. New character Nico: calm Latino man in his thirties, short neat dark hair, navy crew-neck shirt, holding one small smartphone with a simple abstract performance line chart (no readable words or numbers). Solid teal background. Face centered and clearly legible in a small circular crop; hands and phone below chin. Friendly capable expression, elegant high-quality stylized proportions. No text, no labels, no logo, no border, no other characters. Output only this one character portrait.",
+    "vera-woocommerce-speed": "Create one square standalone fictional AI-agent avatar, matching the polished stylized 3D animated character rendering, friendly oversized expressive eyes, bust framing, clean studio lighting and saturated single-color backdrop of the reference. The reference is STYLE ONLY, not the person to reproduce. New character Vera: capable central European woman in her thirties with a short brown bob, practical dark sweater, holding a compact laptop below her chin with a simple abstract storefront diagram (no readable words or numbers). Solid muted purple background. Face centered and clearly legible in a small circular crop; laptop low enough to leave face and shoulders clear. Warm focused expression, elegant high-quality stylized proportions. No text, no labels, no logo, no border, no other characters. Output only this one character portrait."
+  }
+}

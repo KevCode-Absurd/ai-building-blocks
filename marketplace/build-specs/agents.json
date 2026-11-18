@@ -466,5 +466,17 @@
   "name": "Esmee",
   "title": "LinkedIn wholesale and gifting ads buyer",
   "role": "linkedin-ads-specialist"
+ },
+ {
+  "id": "nico-ecommerce-speed",
+  "name": "Nico",
+  "title": "E-commerce site speed specialist",
+  "role": "ecommerce-performance-specialist"
+ },
+ {
+  "id": "vera-woocommerce-speed",
+  "name": "Vera",
+  "title": "WordPress and WooCommerce speed specialist",
+  "role": "wordpress-commerce-performance-specialist"
  }
 ]

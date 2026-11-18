@@ -1,0 +1,3 @@
+# Keep executable pack sources identical to LF-normalized exports on every checkout.
+/marketplace/packs/shared/tools/*.mjs text eol=lf
+/marketplace/src/modules/packs/retrieve.ts text eol=lf

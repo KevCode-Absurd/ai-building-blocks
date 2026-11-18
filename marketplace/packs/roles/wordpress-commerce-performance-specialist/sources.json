@@ -1,0 +1,74 @@
+[
+  {
+    "n": 1,
+    "title": "Optimize Largest Contentful Paint",
+    "publisher": "web.dev",
+    "url": "https://web.dev/articles/optimize-lcp",
+    "checked": "2026-11-18",
+    "supports": "LCP resource and render-delay diagnosis; lab versus field evidence."
+  },
+  {
+    "n": 2,
+    "title": "Optimize Interaction to Next Paint",
+    "publisher": "web.dev",
+    "url": "https://web.dev/articles/optimize-inp",
+    "checked": "2026-11-18",
+    "supports": "Interaction diagnosis and field responsiveness; not substituting TBT for INP."
+  },
+  {
+    "n": 3,
+    "title": "Optimize Cumulative Layout Shift",
+    "publisher": "web.dev",
+    "url": "https://web.dev/articles/optimize-cls",
+    "checked": "2026-11-18",
+    "supports": "Investigating visual instability across the page lifecycle."
+  },
+  {
+    "n": 4,
+    "title": "Lighthouse performance scoring",
+    "publisher": "Chrome for Developers",
+    "url": "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring",
+    "checked": "2026-11-18",
+    "supports": "Metric weighting and environmental score variability."
+  },
+  {
+    "n": 5,
+    "title": "HTTP caching",
+    "publisher": "MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+    "checked": "2026-11-18",
+    "supports": "Private versus shared caches and personalized-response isolation."
+  },
+  {
+    "n": 6,
+    "title": "WordPress optimization",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/advanced-administration/performance/optimization/",
+    "checked": "2026-11-18",
+    "supports": "Host, application, database and cache diagnostic layers."
+  },
+  {
+    "n": 7,
+    "title": "Debugging in WordPress",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/",
+    "checked": "2026-11-18",
+    "supports": "Diagnostic controls and profiling overhead."
+  },
+  {
+    "n": 8,
+    "title": "Configure caching plugins for WooCommerce",
+    "publisher": "WooCommerce developer docs",
+    "url": "https://developer.woocommerce.com/docs/best-practices/performance/configuring-caching-plugins",
+    "checked": "2026-11-18",
+    "supports": "Dynamic commerce pages, cookies and host-specific session-cache behavior."
+  },
+  {
+    "n": 9,
+    "title": "Background processing at scale",
+    "publisher": "Action Scheduler",
+    "url": "https://actionscheduler.org/perf/",
+    "checked": "2026-11-18",
+    "supports": "Queue processing capacity and the risk of increasing concurrency."
+  }
+]

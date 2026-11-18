@@ -72,21 +72,6 @@ export function tokens(text        )           {
   return out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** Target and ceiling for a passage, in words. Lecture 3: 100 to 500 tokens; a word is about 1.3 tokens. */
 export const CHUNK_TARGET_WORDS = 180;
 export const CHUNK_MAX_WORDS = 260;
@@ -262,7 +247,6 @@ class Bm25 {
  */
 export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true, aliases: true, aliasWeight: 0.7, lines: true, lineWeight: 1.5, lineContext: "context", numBoost: 1.4, ruleBoost: 1.4 };
 
-
 /**
  * What a question asks for, read from its words: a quantity ("how long", "what share", "how many", "roughly") or a
  * call ("should I", "can we", "is it OK", "what do I do"). The line ranker then favours units of the same kind: a
@@ -347,7 +331,6 @@ export function aliasesOf(q          , groups             = ALIAS_GROUPS)       
  * vertical with no file searches exactly as before.
  */
 
-
 function synonymIndex(s                  )                      {
   if (!s || (!s.groups?.length && !s.phrases?.length)) return null;
   const phrase = (p        ) => tokens(p).join(" ");
@@ -406,25 +389,6 @@ export function questionFacets(question        )           {
   }).slice(0, 8);
   return result.length > 1 ? result : [];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export class KnowledgeIndex {
            chunks         ;

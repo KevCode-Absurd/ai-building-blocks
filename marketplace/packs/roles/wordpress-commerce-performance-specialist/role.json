@@ -1,0 +1,23 @@
+{
+  "id": "wordpress-commerce-performance-specialist",
+  "name": "WordPress and WooCommerce speed specialist",
+  "department": "ecommerce",
+  "summary": "Makes WordPress and WooCommerce stores faster through measured theme, plugin, cache and server fixes while protecting carts, customer sessions and checkout.",
+  "aliases": [
+    "WooCommerce speed",
+    "WordPress speed",
+    "WordPress performance",
+    "WooCommerce caching",
+    "slow WooCommerce checkout",
+    "plugin performance",
+    "PHP database performance"
+  ],
+  "updated": "2026-11-18",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Dedicated commerce performance kit: platform diagnosis, reversible implementation, paired measurements and buyer-flow proof."
+    }
+  ]
+}

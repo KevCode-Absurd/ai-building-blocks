@@ -163,8 +163,9 @@ const invoked = typeof process !== "undefined" && !!process.argv?.[1] && (await 
 if (invoked) { try { process.exitCode = await main(process.argv.slice(2)); } catch(error) { console.error("ask-knowledge: " + error.message); process.exitCode = 2; } }
 `;
 
-export function generate() {
-  const ts = readFileSync(SOURCE, "utf8");
+export function generate(source = readFileSync(SOURCE, "utf8")) {
+  // Type stripping preserves source newlines; exports must be identical across checkouts.
+  const ts = source.replace(/\r\n?/g, "\n");
   const js = stripTypeScriptTypes(ts, { mode: "strip" })
     // Blank runs left where type-only lines were.
     .replace(/[ \t]+$/gm, "").replace(/\n{3,}/g, "\n\n");

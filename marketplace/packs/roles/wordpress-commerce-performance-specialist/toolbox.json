@@ -1,0 +1,380 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "wordpress-commerce-performance-specialist",
+  "reviewed": "2026-11-18",
+  "tasks": [
+    {
+      "id": "scope",
+      "task": "Define the buyer problem and measurement contract",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:prompts/performance-brief",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:bug-root-cause-finder",
+          "type": "skill",
+          "use": "check",
+          "when": "When symptoms need a testable cause before editing"
+        },
+        {
+          "ref": "library:brand-dna-capture",
+          "type": "skill",
+          "use": "brief",
+          "when": "When shared brand requirements are missing or stale"
+        },
+        {
+          "ref": "library:speed-fix-ranker",
+          "type": "skill",
+          "use": "build",
+          "when": "When competing fixes need business and effort priorities"
+        }
+      ]
+    },
+    {
+      "id": "paired-proof",
+      "task": "Compare baseline and candidate without cherry-picking",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/paired-speed-proof",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:agency-testing-evidence-collector",
+          "type": "agent",
+          "use": "check",
+          "when": "When raw run receipts must support a measured claim"
+        },
+        {
+          "ref": "library:find-what-is-slow-fix-it-and-show-the-numbers",
+          "type": "workflow",
+          "use": "build",
+          "when": "When a reproducible implementation and measurement loop is needed"
+        },
+        {
+          "ref": "library:bug-evidence-plan-writer",
+          "type": "prompt",
+          "use": "brief",
+          "when": "When a competing explanation needs a discriminating experiment"
+        }
+      ]
+    },
+    {
+      "id": "buyer-regression",
+      "task": "Verify buying still works after the change",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:browser-test-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the affected buyer interaction needs a repeatable browser check"
+        },
+        {
+          "ref": "library:browser-test-reviewer",
+          "type": "skill",
+          "use": "check",
+          "when": "When a test may pass despite a missing feature or assertion"
+        },
+        {
+          "ref": "library:payments-and-checkout-settings-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When authorized sandbox payment settings affect functional proof"
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "task": "Review release evidence and rollback",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:release-day-rollback-planner",
+          "type": "prompt",
+          "use": "check",
+          "when": "When the authorized release needs a concrete rollback"
+        },
+        {
+          "ref": "library:deploy-verifier",
+          "type": "skill",
+          "use": "check",
+          "when": "When deployed content and assets must match the tested revision"
+        },
+        {
+          "ref": "library:site-qa-sweep-runner",
+          "type": "skill",
+          "use": "check",
+          "when": "When the changed pages need a targeted final quality check"
+        }
+      ]
+    },
+    {
+      "id": "wp-diagnosis",
+      "task": "Locate the slow WordPress execution layer",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:skills/diagnose-wordpress-commerce",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:wordpress-health-fixer",
+          "type": "skill",
+          "use": "check",
+          "when": "When Site Health and platform versions guide diagnosis"
+        },
+        {
+          "ref": "library:error-and-log-debugger",
+          "type": "skill",
+          "use": "check",
+          "when": "When PHP or request logs may explain the observed delay"
+        },
+        {
+          "ref": "library:bug-root-cause-finder",
+          "type": "skill",
+          "use": "check",
+          "when": "When a plugin hypothesis needs falsifying evidence"
+        }
+      ]
+    },
+    {
+      "id": "cache",
+      "task": "Fix cache exclusions and prove session isolation",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/protect-woocommerce-cache",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:woocommerce-code-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When cache behavior depends on installed WooCommerce code"
+        },
+        {
+          "ref": "library:bug-and-security-code-reviewer",
+          "type": "skill",
+          "use": "check",
+          "when": "When shared responses could disclose customer content"
+        },
+        {
+          "ref": "library:docs-backed-coder",
+          "type": "skill",
+          "use": "build",
+          "when": "When the host or plugin requires version-specific configuration"
+        }
+      ]
+    },
+    {
+      "id": "plugin-theme",
+      "task": "Repair the proven plugin or theme bottleneck",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/repair-wordpress-bottleneck",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:wordpress-code-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When a child-theme or extension patch needs platform review"
+        },
+        {
+          "ref": "library:theme-script-and-style-loader",
+          "type": "skill",
+          "use": "build",
+          "when": "When conditional assets have verified dependencies on the affected pages"
+        },
+        {
+          "ref": "library:small-change-keeper",
+          "type": "skill",
+          "use": "build",
+          "when": "When the repair must avoid unrelated plugin or design changes"
+        }
+      ]
+    },
+    {
+      "id": "media-layout",
+      "task": "Improve product rendering and visual stability",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/repair-wordpress-bottleneck",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:hero-image-loading-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the actual product hero is the measured bottleneck"
+        },
+        {
+          "ref": "library:image-compressor",
+          "type": "skill",
+          "use": "build",
+          "when": "When product image bytes can fall without losing useful detail"
+        },
+        {
+          "ref": "library:layout-shift-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When product blocks shift during loading or interaction"
+        }
+      ]
+    },
+    {
+      "id": "php-database",
+      "task": "Prepare a reversible server or database repair",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/repair-wordpress-bottleneck",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:backup-and-recovery-planner",
+          "type": "skill",
+          "use": "brief",
+          "when": "When server or database changes require a tested restore path"
+        },
+        {
+          "ref": "library:build-a-backup-recovery-rehearsal",
+          "type": "workflow",
+          "use": "check",
+          "when": "When the backup must be demonstrated on an isolated target"
+        },
+        {
+          "ref": "library:major-upgrade-planner",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the measured fix requires PHP or dependency compatibility work"
+        }
+      ]
+    },
+    {
+      "id": "scheduled-work",
+      "task": "Diagnose a commerce job backlog without replaying orders",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:skills/diagnose-wordpress-commerce",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:schedule-timing-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When due times and runner health may explain delayed work"
+        },
+        {
+          "ref": "library:api-connector-builder",
+          "type": "skill",
+          "use": "check",
+          "when": "When an external dependency blocks a specific scheduled hook"
+        }
+      ]
+    },
+    {
+      "id": "access-seo",
+      "task": "Check layout access and indexability after the repair",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:accessibility-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When render or asset changes affect keyboard use and forms"
+        },
+        {
+          "ref": "library:technical-seo-auditor",
+          "type": "skill",
+          "use": "check",
+          "when": "When template changes affect crawlable product information"
+        },
+        {
+          "ref": "library:brand-fidelity-check",
+          "type": "skill",
+          "use": "check",
+          "when": "When design and product assets must match approved brand references"
+        }
+      ]
+    },
+    {
+      "id": "maintenance",
+      "task": "Hand over a repeatable WordPress performance check",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:workflows/paired-speed-proof",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:page-speed-gate-builder",
+          "type": "skill",
+          "use": "build",
+          "when": "When later plugin updates need a comparable regression check"
+        },
+        {
+          "ref": "library:code-documentation-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When platform constraints and rollback need durable notes"
+        },
+        {
+          "ref": "library:website-quality-keeper",
+          "type": "agent",
+          "use": "check",
+          "when": "When the merchant explicitly requests an ongoing maintenance procedure"
+        }
+      ]
+    }
+  ],
+  "always": [],
+  "helpers": [
+    {
+      "role": "wordpress-developer",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    },
+    {
+      "role": "ecommerce-performance-specialist",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    },
+    {
+      "role": "accessibility-specialist",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    }
+  ],
+  "gaps": [
+    "No browser, host, database or commerce connector is granted by this pack; discover actual capabilities.",
+    "Library advice is conditional: follow this kit's installed-platform, commerce-integrity and paired-proof requirements."
+  ]
+}

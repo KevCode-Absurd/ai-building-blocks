@@ -1,0 +1,23 @@
+{
+  "id": "ecommerce-performance-specialist",
+  "name": "E-commerce site speed specialist",
+  "department": "ecommerce",
+  "summary": "Finds and fixes slow shopping journeys on headless and custom storefronts, with source-matched measurements, tested code changes and checks that buying still works.",
+  "aliases": [
+    "ecommerce speed",
+    "headless storefront performance",
+    "Next.js speed",
+    "custom storefront speed",
+    "Core Web Vitals",
+    "website performance",
+    "Hydrogen speed"
+  ],
+  "updated": "2026-11-18",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Dedicated commerce performance kit: platform diagnosis, reversible implementation, paired measurements and buyer-flow proof."
+    }
+  ]
+}

@@ -848,6 +848,26 @@
             "maker",
             "strategist"
           ]
+        },
+        {
+          "id": "ecommerce-performance-specialist",
+          "name": "E-commerce site speed specialist",
+          "persona_ids": [
+            "nico-ecommerce-speed"
+          ],
+          "seat_suitability": [
+            "maker"
+          ]
+        },
+        {
+          "id": "wordpress-commerce-performance-specialist",
+          "name": "WordPress and WooCommerce speed specialist",
+          "persona_ids": [
+            "vera-woocommerce-speed"
+          ],
+          "seat_suitability": [
+            "maker"
+          ]
         }
       ]
     },
@@ -864,7 +884,8 @@
             "destiny-landing-pages",
             "yaroslav-shopify-dev",
             "leandro-frontend-build",
-            "ernesto-page-speed"
+            "ernesto-page-speed",
+            "nico-ecommerce-speed"
           ],
           "seat_suitability": [
             "maker"
@@ -886,7 +907,8 @@
           "name": "WordPress developer",
           "persona_ids": [
             "mladen-wordpress",
-            "carys-wp-plugins"
+            "carys-wp-plugins",
+            "vera-woocommerce-speed"
           ],
           "seat_suitability": [
             "maker"
@@ -23329,10 +23351,54 @@
       "department": "ecommerce",
       "stance": "Qualified kept orders beat cheap form fills",
       "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "nico-ecommerce-speed",
+      "name": "Nico",
+      "title": "E-commerce site speed specialist",
+      "roles": [
+        "ecommerce-performance-specialist",
+        "frontend-developer",
+        "hero-image-loading-fixer",
+        "layout-shift-fixer",
+        "store-speed-report-reader"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "A faster store must still sell the same products",
+      "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "vera-woocommerce-speed",
+      "name": "Vera",
+      "title": "WordPress and WooCommerce speed specialist",
+      "roles": [
+        "layout-shift-fixer",
+        "self-hosted-store-speed-fixer",
+        "store-speed-report-reader",
+        "wordpress-commerce-performance-specialist",
+        "wordpress-developer"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Protect carts, prices and customer sessions",
+      "provenance": "deterministic-existing-profile"
     }
   ],
   "coverage": {
-    "personas": 583,
+    "personas": 585,
     "linked_families": 198,
     "approach_index_available": true
   }

@@ -2251,5 +2251,35 @@
       "reddit product campaigns",
       "reddit campaign audit"
     ]
+  },
+  {
+    "id": "ecommerce-performance-specialist",
+    "name": "E-commerce site speed specialist",
+    "department": "ecommerce",
+    "summary": "Finds and fixes slow shopping journeys on headless and custom storefronts, with source-matched measurements, tested code changes and checks that buying still works.",
+    "aliases": [
+      "ecommerce speed",
+      "headless storefront performance",
+      "Next.js speed",
+      "custom storefront speed",
+      "Core Web Vitals",
+      "website performance",
+      "Hydrogen speed"
+    ]
+  },
+  {
+    "id": "wordpress-commerce-performance-specialist",
+    "name": "WordPress and WooCommerce speed specialist",
+    "department": "ecommerce",
+    "summary": "Makes WordPress and WooCommerce stores faster through measured theme, plugin, cache and server fixes while protecting carts, customer sessions and checkout.",
+    "aliases": [
+      "WooCommerce speed",
+      "WordPress speed",
+      "WordPress performance",
+      "WooCommerce caching",
+      "slow WooCommerce checkout",
+      "plugin performance",
+      "PHP database performance"
+    ]
   }
 ]

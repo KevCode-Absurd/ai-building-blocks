@@ -1,8 +1,8 @@
 {
   "id": "speed-fix",
-  "name": "Store speed fix, from field data to a checked release",
+  "name": "Shopify theme speed fix, from field data to a checked release",
   "goal": "Your store's slowest page types made faster for real visitors: a baseline from Chrome's real-visitor data, the causes found, the fixes you picked built on an unpublished theme copy, proven before and after, published on your yes, and re-checked with real-visitor data 28 days later.",
-  "starts_from": "A monthly speed review, a site results readout that flagged speed, a new app or theme update that slowed the store, or you asking why the store feels slow.",
+  "starts_from": "A speed job on a verified Shopify Liquid storefront: a monthly review, a recent app/theme regression, or a shopper complaint. Route headless/custom frontends to headless-store-speed, WordPress/WooCommerce to woocommerce-store-speed, and unknown stacks to Nico for diagnosis before choosing a platform workflow.",
   "folder": "site",
   "metrics": [
     "Main number from context/goals.json first. For a speed job, the target is the share of phone visits that pass all three Core Web Vitals.",

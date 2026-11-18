@@ -1,8 +1,8 @@
-# Store speed fix, from field data to a checked release
+# Shopify theme speed fix, from field data to a checked release
 
 Your store's slowest page types made faster for real visitors: a baseline from Chrome's real-visitor data, the causes found, the fixes you picked built on an unpublished theme copy, proven before and after, published on your yes, and re-checked with real-visitor data 28 days later.
 
-**Starts from:** A monthly speed review, a site results readout that flagged speed, a new app or theme update that slowed the store, or you asking why the store feels slow.
+**Starts from:** A speed job on a verified Shopify Liquid storefront: a monthly review, a recent app/theme regression, or a shopper complaint. Route headless/custom frontends to headless-store-speed, WordPress/WooCommerce to woocommerce-store-speed, and unknown stacks to Nico for diagnosis before choosing a platform workflow.
 
 | # | Stage | Who | Makes | Checked by | You sign off | Access |
 |---|---|---|---|---|---|---|

@@ -1,0 +1,368 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "ecommerce-performance-specialist",
+  "reviewed": "2026-11-18",
+  "tasks": [
+    {
+      "id": "scope",
+      "task": "Define the buyer problem and measurement contract",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:prompts/performance-brief",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:bug-root-cause-finder",
+          "type": "skill",
+          "use": "check",
+          "when": "When symptoms need a testable cause before editing"
+        },
+        {
+          "ref": "library:brand-dna-capture",
+          "type": "skill",
+          "use": "brief",
+          "when": "When shared brand requirements are missing or stale"
+        },
+        {
+          "ref": "library:speed-fix-ranker",
+          "type": "skill",
+          "use": "build",
+          "when": "When competing fixes need business and effort priorities"
+        }
+      ]
+    },
+    {
+      "id": "paired-proof",
+      "task": "Compare baseline and candidate without cherry-picking",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/paired-speed-proof",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:agency-testing-evidence-collector",
+          "type": "agent",
+          "use": "check",
+          "when": "When raw run receipts must support a measured claim"
+        },
+        {
+          "ref": "library:find-what-is-slow-fix-it-and-show-the-numbers",
+          "type": "workflow",
+          "use": "build",
+          "when": "When a reproducible implementation and measurement loop is needed"
+        },
+        {
+          "ref": "library:bug-evidence-plan-writer",
+          "type": "prompt",
+          "use": "brief",
+          "when": "When a competing explanation needs a discriminating experiment"
+        }
+      ]
+    },
+    {
+      "id": "buyer-regression",
+      "task": "Verify buying still works after the change",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:browser-test-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the affected buyer interaction needs a repeatable browser check"
+        },
+        {
+          "ref": "library:browser-test-reviewer",
+          "type": "skill",
+          "use": "check",
+          "when": "When a test may pass despite a missing feature or assertion"
+        },
+        {
+          "ref": "library:payments-and-checkout-settings-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When authorized sandbox payment settings affect functional proof"
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "task": "Review release evidence and rollback",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:release-day-rollback-planner",
+          "type": "prompt",
+          "use": "check",
+          "when": "When the authorized release needs a concrete rollback"
+        },
+        {
+          "ref": "library:deploy-verifier",
+          "type": "skill",
+          "use": "check",
+          "when": "When deployed content and assets must match the tested revision"
+        },
+        {
+          "ref": "library:site-qa-sweep-runner",
+          "type": "skill",
+          "use": "check",
+          "when": "When the changed pages need a targeted final quality check"
+        }
+      ]
+    },
+    {
+      "id": "trace",
+      "task": "Diagnose rendering and slow buyer interactions",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:skills/diagnose-commerce-performance",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:page-speed-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the trace identifies a browser performance bottleneck"
+        },
+        {
+          "ref": "library:error-and-log-debugger",
+          "type": "skill",
+          "use": "check",
+          "when": "When errors or request traces may explain the delay"
+        },
+        {
+          "ref": "library:browser-page-debugger",
+          "type": "skill",
+          "use": "check",
+          "when": "When the visible behavior differs from the source expectation"
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "task": "Fix hero media without losing product fidelity",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/fix-commerce-delivery",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:hero-image-loading-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When the actual LCP resource is discovered or loaded late"
+        },
+        {
+          "ref": "library:image-and-video-pipeline-planner",
+          "type": "skill",
+          "use": "brief",
+          "when": "When responsive delivery must preserve required product detail"
+        },
+        {
+          "ref": "library:image-compressor",
+          "type": "skill",
+          "use": "build",
+          "when": "When measured image bytes justify a fidelity-checked asset change"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "task": "Reduce layout work without hiding store content",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/fix-commerce-delivery",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:layout-shift-fixer",
+          "type": "skill",
+          "use": "build",
+          "when": "When shifts occur at load, scroll or buyer interactions"
+        },
+        {
+          "ref": "library:accessibility-checker",
+          "type": "skill",
+          "use": "check",
+          "when": "When containment or rendering changes affect focus or navigation"
+        },
+        {
+          "ref": "library:brand-fidelity-check",
+          "type": "skill",
+          "use": "check",
+          "when": "When faster rendering must preserve the merchant's design"
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "task": "Repair API and cache delivery bottlenecks",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/fix-commerce-delivery",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:api-connector-builder",
+          "type": "skill",
+          "use": "build",
+          "when": "When an existing API integration has proven redundant or serial calls"
+        },
+        {
+          "ref": "library:bug-and-security-code-reviewer",
+          "type": "skill",
+          "use": "check",
+          "when": "When a cache change could expose personalized content"
+        },
+        {
+          "ref": "library:docs-backed-coder",
+          "type": "skill",
+          "use": "build",
+          "when": "When installed framework and host versions determine the implementation"
+        }
+      ]
+    },
+    {
+      "id": "third-parties",
+      "task": "Reduce unnecessary third-party startup work",
+      "kind": "code",
+      "items": [
+        {
+          "ref": "kit:skills/fix-commerce-delivery",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:tracking-plan-builder",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the role of a script must be preserved before changing delivery"
+        },
+        {
+          "ref": "library:conversion-tracking-fixer",
+          "type": "skill",
+          "use": "check",
+          "when": "When an optimization could alter consent or purchase measurement"
+        },
+        {
+          "ref": "library:small-change-keeper",
+          "type": "skill",
+          "use": "build",
+          "when": "When the fix should stay limited to the measured cause"
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "task": "Set performance limits for the next storefront release",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:skills/commerce-performance-handoff",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:page-speed-gate-builder",
+          "type": "skill",
+          "use": "build",
+          "when": "When a reproducible performance check should guard future changes"
+        },
+        {
+          "ref": "library:speed-budget-and-sale-check",
+          "type": "skill",
+          "use": "check",
+          "when": "When a promotion adds load or new storefront dependencies"
+        }
+      ]
+    },
+    {
+      "id": "seo",
+      "task": "Check indexable content after a rendering change",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/release-evidence-review",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:technical-seo-auditor",
+          "type": "skill",
+          "use": "check",
+          "when": "When server/client changes may alter crawlable content"
+        },
+        {
+          "ref": "library:search-indexing-auditor",
+          "type": "skill",
+          "use": "check",
+          "when": "When routing, canonical or robots behavior may have changed"
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "task": "Hand developers verified fixes and scoped learning",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:skills/commerce-performance-handoff",
+          "use": "build",
+          "when": "When this task needs the role-specific procedure and proof"
+        },
+        {
+          "ref": "library:developer-handoff-spec-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When another team owns the deployment or dependency"
+        },
+        {
+          "ref": "library:code-documentation-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When a non-obvious performance constraint needs maintenance notes"
+        }
+      ]
+    }
+  ],
+  "always": [],
+  "helpers": [
+    {
+      "role": "frontend-developer",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    },
+    {
+      "role": "shopify-specialist",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    },
+    {
+      "role": "wordpress-commerce-performance-specialist",
+      "when": "When the measured cause crosses into this specialist's implementation scope"
+    }
+  ],
+  "gaps": [
+    "No browser, host, database or commerce connector is granted by this pack; discover actual capabilities.",
+    "Library advice is conditional: follow this kit's installed-platform, commerce-integrity and paired-proof requirements."
+  ]
+}

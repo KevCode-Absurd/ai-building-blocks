@@ -37,7 +37,13 @@ const cards = readdirSync(new URL("../knowledge/ecommerce/cards/",import.meta.ur
 const bundle = verticalBundle(json("knowledge/ecommerce/vertical.json") as Vertical,cards,json("knowledge/ecommerce/sources.json") as Source[]);
 
 test("new commerce buyers are registered with preserved conditional ownership and selective source scope", () => {
-  assert.equal(team.length,78);
+  assert.equal(team.length,80);
+  const speedOwners = new Map([
+    ["nico-ecommerce-speed", "ecommerce-performance-specialist"],
+    ["vera-woocommerce-speed", "wordpress-commerce-performance-specialist"],
+  ]);
+  assert.equal(team.filter(p => !speedOwners.has(p.id)).length,78);
+  for (const [id, role] of speedOwners) assert.equal(team.find(p => p.id === id)?.role,role);
   const org = json("src/modules/directory/data/team-org-chart.json");
   const build = json("build-specs/agents.json");
   for (const c of cases) {

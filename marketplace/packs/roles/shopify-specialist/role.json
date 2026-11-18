@@ -15,9 +15,13 @@
     "shopify speed fixes",
     "shopify metafields"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "review_every_days": 30,
   "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Added buyer-trial scope checks for browser initialization, resource creation, transaction replay and final request-log reconciliation."
+    },
     {
       "date": "2026-11-06",
       "note": "First release: theme architecture and safe editing, speed and Core Web Vitals, app code clean-up, access levels 1 to 3 per tool (read, draft, publish within limits), launch and sale-day checks, checkout and Scripts deadlines, and US, UK and EU rules on prices, cookies and accessibility, with 30 checked sources."

@@ -67,6 +67,7 @@
       "task": "Check a store before it goes live",
       "kind": "audit",
       "items": [
+        { "ref": "kit:workflows/scoped-buyer-trial", "use": "check", "when": "Before buyer-flow tests or replay, bind browser sessions and writes to the authorized test resource" },
         { "ref": "kit:workflows/launch-and-sale-readiness", "use": "brief", "when": "When a new store is about to go live or is moving platform or theme" },
         { "ref": "kit:skills/store-launch-check", "use": "check", "when": "When you walk the buyer path on a phone, then policies, prices, test orders and tracking" },
         { "ref": "library:pre-launch-store-checker", "type": "agent", "use": "check", "when": "When fixes come in over days and each needs a re-check until a clear go or no-go" },

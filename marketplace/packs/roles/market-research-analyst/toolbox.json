@@ -33,6 +33,7 @@
       "task": "Rank the risks in an idea and pick one cheap test",
       "kind": "plan",
       "items": [
+        { "ref": "kit:workflows/opportunity-decision-check", "use": "check", "when": "Before recommending a product, reconcile contribution scenarios, thresholds and the final decision" },
         { "ref": "kit:skills/idea-validation-test", "use": "build", "when": "When an idea must be tested for whether anyone will pay before money is spent building" },
         { "ref": "library:leap-of-faith-assumption-finder", "type": "skill", "use": "brief", "when": "Before choosing a test, to find the few guesses the idea stands on and rank them" },
         { "ref": "library:pretotype-experiment-designer", "type": "skill", "use": "explore", "when": "When you want several cheap test types to compare, each with a pass mark" },

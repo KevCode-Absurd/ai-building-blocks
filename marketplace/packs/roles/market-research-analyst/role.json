@@ -15,9 +15,13 @@
     "pricing research",
     "export market research"
   ],
-  "updated": "2026-11-07",
+  "updated": "2026-11-18",
   "review_every_days": 60,
   "changelog": [
+    {
+      "date": "2026-11-18",
+      "note": "Added deterministic per-unit opportunity economics and final decision consistency checks across base and stress scenarios."
+    },
     {
       "date": "2026-11-07",
       "note": "First release: role knowledge with 29 sources (official US, UK and EU data, research codes of ethics, survey methods, AI and synthetic data rules), four skills (market sizing, survey design and analysis, competitor research, idea validation test), six prompts, two workflows, training interview and test briefs."

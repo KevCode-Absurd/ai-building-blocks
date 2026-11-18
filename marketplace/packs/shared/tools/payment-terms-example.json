@@ -1,0 +1,21 @@
+{
+  "schema": "payment-terms-v1",
+  "currency": "USD",
+  "minorUnitDigits": 2,
+  "scope": "Illustrative goods-only comparison; replace with authorized quote and payment-event details.",
+  "sourceRefs": ["Synthetic example only; no real supplier commitment."],
+  "before": {
+    "basisRef": "same-specification-and-order-deposit",
+    "orderQuantity": 100,
+    "depositQuantity": 100,
+    "unitPrice": 10,
+    "depositRateBps": 4000
+  },
+  "after": {
+    "basisRef": "same-specification-and-order-deposit",
+    "orderQuantity": 100,
+    "depositQuantity": 100,
+    "unitPrice": 9,
+    "depositRateBps": 2500
+  }
+}

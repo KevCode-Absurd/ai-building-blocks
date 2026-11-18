@@ -134,6 +134,9 @@ The \`build\` folder sets me up to do the work, not only advise: my processes an
 
 /** Available pack tools, in order. personaIds restricts optional tools; absent means the existing shared-tool rules apply. */
 export const TOOL_FILES: { name: string; purpose: string; personaIds?: readonly string[] }[] = [
+  { name: "payment-terms.mjs", personaIds: ["wenhao-procurement"], purpose: "Compare declared goods prices, deposit bases and rates with exact minor-unit arithmetic. Separates total price savings, initial deposit relief and remaining payments; refuses unlike quantity bases. Read PAYMENT-TERMS.md." },
+  { name: "PAYMENT-TERMS.md", personaIds: ["wenhao-procurement"], purpose: "Keep goods-price savings distinct from deposit timing, state release quantity bases and verify final numerical prose." },
+  { name: "payment-terms-example.json", personaIds: ["wenhao-procurement"], purpose: "Synthetic goods-only payment-terms-v1 input; replace all values and scope with the authorized comparable quotes." },
   { name: "cash-report.mjs", personaIds: ["sipho-product-hunter"], purpose: "Generate cash summaries and ledgers from one declared source manifest, then verify the unchanged generated section in final HTML or Markdown. Does not verify unbound prose, source completeness or spending readiness; read CASH-REPORT.md." },
   { name: "CASH-REPORT.md", personaIds: ["sipho-product-hunter"], purpose: "Keep cash breach dates, balances and funding gaps tied to one calculated ledger and compare every delivered format." },
   { name: "cash-report-example.json", personaIds: ["sipho-product-hunter"], purpose: "Synthetic cash-report-v1 input. Replace its values and source references with the authorized forecast before use." },
@@ -1624,6 +1627,10 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       content = `${normalizeText(content).trimEnd()}\n\n## Cash report consistency\n\nWhen an opportunity decision depends on cash, use tools/cash-report.mjs and tools/CASH-REPORT.md to derive the cash section and ledger from one explicit input. Insert its generated section unchanged and run its check against every delivered HTML or Markdown file. Generate cash headlines and narrative values from the same facts.json instead of typing dates and amounts again. The section check does not cover other prose: independently compare every cash claim in the final headline, answer, table and caption against that ledger and keep the comparison receipt. A correct CSV does not excuse a contradictory HTML cell. Keep opening shortfall, first reserve breach, first negative cash, lowest closing period and peak funding gap distinct. Unknown source scope or unchecked claims block a verified cash recommendation.\n`;
     }
     if (agent && persona.id === "sipho-product-hunter" && d.path === "AGENTS.md") content = resolveToolRefs(content, toolNames, origin);
+    if (agent && persona.id === "wenhao-procurement" && d.path === "AGENTS.md") {
+      content = `${normalizeText(content).trimEnd()}\n\n## Payment-change arithmetic\n\nWhen price or payment terms change, use tools/payment-terms.mjs with tools/PAYMENT-TERMS.md. Declare each full order quantity and the quantity used for its deposit or release payment. Keep total goods-price reduction, initial deposit reduction, its price/rate decomposition and remaining goods payments separate. A whole-order price saving is not the price effect on its deposit. Never add deposit relief to savings or invent a residual rate effect by subtracting full price savings. Generate numbers from the saved result and compare every final headline, table and explanation against it; the calculator does not verify report prose. Unlike order, release or commercial bases cannot establish a like-for-like saving. State the quantity and invoice base of every later instalment and reconcile the dated funding schedule before commitment.\n`;
+      content = resolveToolRefs(content, toolNames, origin);
+    }
     if (d.path === "AGENTS.md" && verticalHints.length) {
       const hint = verticalHints.join("\n\n");
       const at = /\n## Access levels\b/.exec(content) ?? /\n## How you work\b/.exec(content);

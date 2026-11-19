@@ -832,8 +832,8 @@
     },
     "catalogue-items/general/ai-default-patterns/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude)",
-      "reviewed_on": "2026-11-15",
-      "method_sha256": "dd0fc38e142f351225b0640f8f520ab42bf8873cef67c61cd6057598b10b61e4",
+      "reviewed_on": "2026-11-19",
+      "method_sha256": "845ef6ebc5f51c0ed3d3f60bee788729175e8d7723c78e8adbf3f354bdfc4ee7",
       "inputs": [
         {
           "type": "copy_draft",

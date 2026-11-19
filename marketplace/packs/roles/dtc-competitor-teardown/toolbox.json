@@ -338,6 +338,11 @@
           "when": "When the report is drafted and needs citations, inferences and unknowns reviewed before delivery"
         },
         {
+          "ref": "kit:prompts/report-writing",
+          "use": "check",
+          "when": "When the report needs its voice, its 10 moves and its mode rules checked before rendering"
+        },
+        {
           "ref": "library:brand-fidelity-check",
           "type": "skill",
           "use": "check",

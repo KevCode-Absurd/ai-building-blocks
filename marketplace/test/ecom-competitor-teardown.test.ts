@@ -71,7 +71,8 @@ test("the teardown tools ship in Hattie's pack and not in another e-commerce pac
 });
 
 test("the teardown check asks for a mode and keeps briefs to the owner's own facts", async () => {
-  const { check } = await import("../packs/shared/tools/teardown-report.mjs");
+  // A plain .mjs tool with no type declarations: load it by URL so the compiler treats it as untyped.
+  const { check } = await import(new URL("../packs/shared/tools/teardown-report.mjs", import.meta.url).href) as { check: (ev: unknown, md: string) => { errors: string[] } };
   const ev = {
     evidence: [
       { id: "E1", kind: "observation", area: "catalogue", label: "Every public product", data: { products: [{ title: "Miracle Balm Tint", price: 40 }] } },

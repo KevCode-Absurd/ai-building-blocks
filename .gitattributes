@@ -7,3 +7,6 @@
 /site/index.html text eol=lf
 /site/src/PageRecovery.tsx text eol=lf
 /catalogue-items/general/grounded-job-protocol/SKILL.md text eol=lf
+
+# Published benchmark downloads: their SHA-256 values are printed in the article and results.json.
+/site/public/blog-assets/** -text

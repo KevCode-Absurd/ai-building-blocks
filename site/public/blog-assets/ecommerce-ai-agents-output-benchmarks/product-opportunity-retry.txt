@@ -1,0 +1,157 @@
+# Research replacement caps first; buy no new inventory
+
+**Decision:** prioritize the $8 replacement cap as an existing-customer accessory hypothesis, retain the $12 carry sleeve as a secondary research candidate, and reject a larger-bottle purchase. None clears all four purchase gates. This is a private draft using illustrative synthetic records, not real business performance or customer testimony.
+
+This week, the owner should freeze new candidate purchase commitments and reconcile the existing supplier balance before allocating product-development cash. The researcher can complete a no-spend cap compatibility and willingness-to-pay study; no messages, purchases or live tests were executed.
+
+Working assumptions: US DTC, USD, owned-customer research rather than paid acquisition. Proposed research thresholds are at least $3 contribution and 30% of net selling revenue per unit; these are not owner-approved financial policy. Scenario costs below are explicit planning assumptions, not verified quotes.
+
+## Candidate decisions
+
+All candidate facts below come from [opportunities.json](../evidence/opportunities.json), candidates P1–P3, current fixture date 2026-11-17.
+
+| Priority | Product | Requests / interest index | Price / landed | MOQ / indicative landed exposure | Decision |
+|---|---|---|---|---|---|
+| 1 | P1 replacement cap | 8 / 30 | $8 / $2 | 100 / $200 | Research first; reject standalone-order launch under modeled costs; no stock order |
+| 2 | P3 carry sleeve | 6 / 45 | $12 / $4 | 200 / $800 | Research second; conditional parcel add-on economics; no stock order |
+| 3 | P2 larger bottle | 3 / 90 | $38 / $15 | 1,000 / $15,000 | Reject purchase: weakest request signal and largest exposure |
+
+Exposure = listed landed cost × MOQ; it excludes development, inspection and other unknown commitments and is not a deposit schedule. No candidate is mapped to S1 or S2. The supplier offers must not replace candidate costs or MOQs without a written product-specific quote.
+
+The cap addresses maintenance for existing bottle owners and has the strongest request count. The sleeve is adjacent to commuter carrying and the scratch complaint in synthetic review R3; protection is a hypothesis requiring abrasion testing. A larger bottle may worsen the narrow-pocket concern in interview I1. These are inferred buyer fits from [customers.json](../evidence/customers.json), interviews I1/I3 and review R3, not verified demand.
+
+The supplied monthly index spikes to 85 and falls to 40; it does not establish durable growth. Paid preorders are zero. No interview denominator, independent search volumes, rival listing IDs or verified market size exists in the supplied opportunity record. The high larger-bottle index is insufficient to override cash and demand weakness.
+
+## Hard gates before inventory
+
+| Gate | P1 cap | P3 sleeve | P2 larger bottle |
+|---|---|---|---|
+| Contribution | Add-on conditional only; separate order fails | Add-on conditional only; separate order fails | Add-on conditional; separate-order stress fails; costs incomplete |
+| Supply | Blocked: compatibility, quote and acceptance terms absent | Blocked: dimensions, materials and quote absent | Blocked: candidate supplier and quality proof absent |
+| Claims | Blocked for launch: fit and food-contact evidence absent | Blocked for protection promises: no abrasion/fit proof | Blocked: no candidate specifications or test evidence |
+| Cash | Fail for new commitment | Fail for new commitment | Fail for new commitment |
+
+Unknown is not a pass. [Supply records](../evidence/supply.json), supplier_offers S1/S2, are unverified: S1's 1,000-unit FOB illustration is $8,000 goods + $900 freight + $400 duty + $100 broker + $200 inland = $9,600, or $9.60/unit. S2's 1,000-unit DDP illustration is $10,500, or $10.50/unit; importer/tax and quality claims remain unverified. S2 MOQ is 500, but that is not a candidate quote. Do not infer a complete candidate lead time from the 40/25-day supplier assertions.
+
+For a cap, require exact B500 thread/seal drawings, food-contact composition and applicable substantiation, retained sample fit across multiple B500 units, opening/closing and spill testing. For a sleeve, require measured fit around the actual 70 mm × 220 mm B500, seam/load testing, dye transfer and abrasion comparison. Exclude leakproof, waterproof, dishwasher-safe, insulation, medical and environmental superiority claims from launch copy. Existing B500 claims do not transfer to new products ([brand claims](../evidence/brand.json), [product specifications](../evidence/product.json), dated 2026-11-17).
+
+Proposed sample acceptance: zero sharp edges or contamination, all tested caps fit the specified B500, no seam failure in the agreed use test, and signed defect/inspection and remedy terms before any production commitment. These are proposed screening requirements, not an AQL certification. No samples have been obtained or tested.
+
+## Contribution screen
+
+Contribution = net selling revenue − landed cost − handling/dispatch − percentage fees − return-loss allowance − acquisition − other variable costs. Ratio denominator is net selling revenue. Both thresholds must pass before rounding.
+
+Base assumes 3% payment fees, 5% return-loss allowance, $1 incremental parcel handling or $7 separate-order dispatch/handling. Incremental acquisition is $0 only for the owned-customer research route. Other costs are $0 solely as an incomplete preliminary screen; packaging overlap, incremental postage, duties completeness, taxes, defects and development still require reconciliation. Fixed overhead is excluded. Stress assumes 10% lower price and 20% higher landed cost, with the other assumptions unchanged. No historical cohort economics are mislabeled as candidate economics.
+
+| Candidate | Fulfilment | Case | Revenue | Contribution | Ratio | Arithmetic gate |
+|---|---|---|---|---|---|---|
+| P1 | incremental parcel | base | $8.00 | $4.36 | 54.5% | Conditional pass |
+| P1 | incremental parcel | stress | $7.20 | $3.22 | 44.8% | Conditional pass |
+| P1 | separate order | base | $8.00 | $-1.64 | -20.5% | Fail |
+| P1 | separate order | stress | $7.20 | $-2.78 | -38.6% | Fail |
+| P2 | incremental parcel | base | $38.00 | $18.96 | 49.9% | Conditional pass |
+| P2 | incremental parcel | stress | $34.20 | $12.46 | 36.4% | Conditional pass |
+| P2 | separate order | base | $38.00 | $12.96 | 34.1% | Conditional pass |
+| P2 | separate order | stress | $34.20 | $6.46 | 18.9% | Fail |
+| P3 | incremental parcel | base | $12.00 | $6.04 | 50.3% | Conditional pass |
+| P3 | incremental parcel | stress | $10.80 | $4.14 | 38.3% | Conditional pass |
+| P3 | separate order | base | $12.00 | $0.04 | 0.3% | Fail |
+| P3 | separate order | stress | $10.80 | $-1.86 | -17.3% | Fail |
+
+All pass labels are conditional arithmetic only. The separate-order cap fails even without acquisition expense. At the base add-on case, maximum incremental acquisition before the binding amount/ratio floor is lost is $1.36 for the cap and $2.44 for the sleeve; positive CAC cannot be assumed affordable outside those conditions. Full inputs/results are in [economics.json](economics.json) and editable [economics.csv](economics.csv).
+
+## Ranking for research only
+
+Weights: request evidence 40% (closest supplied buyer signal), economics robustness 25%, MOQ exposure 25% (cash scarcity), interest index 10% (weak purchase evidence). Scores run 1–5. Request scores: ≥8 = 5; 4–7 = 3; ≤3 = 1. Economics: all routes/cases pass = 5; add-on both cases only = 3; add-on fails = 1. All supplied candidates receive 3 for economics because every candidate passes both add-on cases but fails at least one separate-order case. Exposure: ≤$200 = 5; ≤$1,000 = 3; above = 1. Index: ≥75 = 5; 40–74 = 3; below 40 = 1.
+
+Weighted total = sum(score ÷ 5 × weight). Cap: 5/3/5/1 = 82; sleeve: 3/3/3/3 = 60; larger bottle: 1/3/1/5 = 38. ≥70 prioritizes research, 50–69 is secondary, below 50 stops. Every hard gate still overrides the score. Editable [candidate scorecard](candidates.csv). Examples: eight requests earns 5, three earns 1; $200 exposure earns 5, $15,000 earns 1. No extra candidates were invented to fill a list.
+
+## Cheapest useful test
+
+Idea: existing B500 owners needing a replacement cap may value a compatible $8 cap added to an already planned parcel. Riskiest assumptions are exact compatibility (wrong-likelihood 3 × consequence 5 = 15) and willingness to pay/attach to an order (4 × 4 = 16); channel reach (3 × 3 = 9), full costs (4 × 4 = 16) and reliable supply (4 × 5 = 20) also remain unresolved. Scores are analyst judgments, not observed probabilities. Begin with the supplier/compatibility evidence request, because paying demand cannot rescue an unsafe or unavailable cap.
+
+Then prepare a 7-day, no-payment concept study with 20 eligible B500 owners, recruited only through an authorized research channel. Ask what happened to their last cap, what replacement they used, actual spend, and whether an $8 compatible cap would be selected alongside a planned parcel. Show a clearly labeled concept; make no delivery promise. Proposed learning line: at least 5 of 20 choose the priced add-on and describe a recent replacement problem; 2–4 means revise the problem/offer, 0–1 means stop. This is a research filter, not a population estimate or inventory demand forecast; no stock order follows from it alone. Cash spend cap: $0, using existing staff time; recruitment access and staff capacity remain unverified. If recruitment is unavailable, the test is blocked rather than replaced by invented results.
+
+**Bolder move:** inspect whether the 200 existing CAP units can serve the repair need before creating another SKU ([inventory.json](../evidence/inventory.json), sku_table CAP). First match the actual CAP item to B500 fit and ownership records; do not assume CAP equals P1. This could avoid the proposed 100-unit new MOQ, but misidentification or incompatible parts would create refunds and safety risk. No stock is reserved or sold by this report.
+
+## Cash limits
+
+- Base supplied forecast: opening reserve shortfall $0.00; first reserve breach W5; first negative cash W5; lowest closing $-1500.00 in W5; peak reserve funding gap $3500.00.
+- Downside receipts at 70%: opening reserve shortfall $0.00; first reserve breach W2; first negative cash W5; lowest closing $-6900.00 in W13; peak reserve funding gap $8900.00.
+
+The forecast already contains current ads in operating payments; no historical sales or ad-attributed revenue is added. The existing supplier payments are retained once each. Their relationship to the inventory open PO is unresolved; do not add or remove another PO liability without reconciliation. No candidate launch receipts are assumed. Period-end balances do not prove cash sufficiency within a week.
+
+<!-- CASH-REPORT-V1 0e485b1cf1e68803f2e662823bcaefc6ed71c07e17d36d4947e706180bd61312 BEGIN -->
+## Source-derived cash forecast
+
+Supplied 13-week forecast from 2026-11-17; W1–W13 are relative forecast weeks, not invented payment dates. Existing commitments only; no candidate purchases or speculative sales added.
+
+### Base supplied forecast
+
+| Measure | Computed result |
+| --- | --- |
+| Opening cash | USD 5000.00 |
+| Reserve | USD 2000.00 |
+| Opening reserve shortfall | USD 0.00 |
+| First period-end reserve breach | W5: USD -1500.00 |
+| First negative period-end cash | W5: USD -1500.00 |
+| Lowest period-end closing cash | W5: USD -1500.00 |
+| Peak funding gap including opening | USD 3500.00 |
+| Ending cash | USD 900.00 |
+
+| Period | Opening cash | Receipts | Payments | Closing cash | Reserve gap |
+| --- | --- | --- | --- | --- | --- |
+| W1 | USD 5000.00 | USD 2000.00 | USD 3500.00 | USD 3500.00 | USD 0.00 |
+| W2 | USD 3500.00 | USD 2000.00 | USD 2500.00 | USD 3000.00 | USD 0.00 |
+| W3 | USD 3000.00 | USD 2000.00 | USD 2900.00 | USD 2100.00 | USD 0.00 |
+| W4 | USD 2100.00 | USD 2000.00 | USD 1700.00 | USD 2400.00 | USD 0.00 |
+| W5 | USD 2400.00 | USD 2000.00 | USD 5900.00 | USD -1500.00 | USD 3500.00 |
+| W6 | USD -1500.00 | USD 2000.00 | USD 1700.00 | USD -1200.00 | USD 3200.00 |
+| W7 | USD -1200.00 | USD 2000.00 | USD 1700.00 | USD -900.00 | USD 2900.00 |
+| W8 | USD -900.00 | USD 2000.00 | USD 1700.00 | USD -600.00 | USD 2600.00 |
+| W9 | USD -600.00 | USD 2000.00 | USD 1700.00 | USD -300.00 | USD 2300.00 |
+| W10 | USD -300.00 | USD 2000.00 | USD 1700.00 | USD 0.00 | USD 2000.00 |
+| W11 | USD 0.00 | USD 2000.00 | USD 1700.00 | USD 300.00 | USD 1700.00 |
+| W12 | USD 300.00 | USD 2000.00 | USD 1700.00 | USD 600.00 | USD 1400.00 |
+| W13 | USD 600.00 | USD 2000.00 | USD 1700.00 | USD 900.00 | USD 1100.00 |
+
+### Downside receipts at 70%
+
+| Measure | Computed result |
+| --- | --- |
+| Opening cash | USD 5000.00 |
+| Reserve | USD 2000.00 |
+| Opening reserve shortfall | USD 0.00 |
+| First period-end reserve breach | W2: USD 1800.00 |
+| First negative period-end cash | W5: USD -4500.00 |
+| Lowest period-end closing cash | W13: USD -6900.00 |
+| Peak funding gap including opening | USD 8900.00 |
+| Ending cash | USD -6900.00 |
+
+| Period | Opening cash | Receipts | Payments | Closing cash | Reserve gap |
+| --- | --- | --- | --- | --- | --- |
+| W1 | USD 5000.00 | USD 1400.00 | USD 3500.00 | USD 2900.00 | USD 0.00 |
+| W2 | USD 2900.00 | USD 1400.00 | USD 2500.00 | USD 1800.00 | USD 200.00 |
+| W3 | USD 1800.00 | USD 1400.00 | USD 2900.00 | USD 300.00 | USD 1700.00 |
+| W4 | USD 300.00 | USD 1400.00 | USD 1700.00 | USD 0.00 | USD 2000.00 |
+| W5 | USD 0.00 | USD 1400.00 | USD 5900.00 | USD -4500.00 | USD 6500.00 |
+| W6 | USD -4500.00 | USD 1400.00 | USD 1700.00 | USD -4800.00 | USD 6800.00 |
+| W7 | USD -4800.00 | USD 1400.00 | USD 1700.00 | USD -5100.00 | USD 7100.00 |
+| W8 | USD -5100.00 | USD 1400.00 | USD 1700.00 | USD -5400.00 | USD 7400.00 |
+| W9 | USD -5400.00 | USD 1400.00 | USD 1700.00 | USD -5700.00 | USD 7700.00 |
+| W10 | USD -5700.00 | USD 1400.00 | USD 1700.00 | USD -6000.00 | USD 8000.00 |
+| W11 | USD -6000.00 | USD 1400.00 | USD 1700.00 | USD -6300.00 | USD 8300.00 |
+| W12 | USD -6300.00 | USD 1400.00 | USD 1700.00 | USD -6600.00 | USD 8600.00 |
+| W13 | USD -6600.00 | USD 1400.00 | USD 1700.00 | USD -6900.00 | USD 8900.00 |
+
+Arithmetic from declared inputs only, at period ends in supplied chronological order. Source references are not authenticated. Opening shortfall is separate from the first period-end reserve breach. Lowest closing cash excludes the opening balance; peak funding gap includes it. No source-completeness, intra-period timing, financing, purchasing or overall-report approval.
+
+Declared source references: evidence/cash.json, 2026-11-17, all forecast fields
+<!-- CASH-REPORT-V1 0e485b1cf1e68803f2e662823bcaefc6ed71c07e17d36d4947e706180bd61312 END -->
+
+
+## Owner's next decision
+
+Keep new inventory commitments frozen. Assign procurement to establish a candidate-specific cap specification and full quote, finance to reconcile the existing obligations and reserve funding, and research to prepare the no-spend study. Only reopen a sample budget after the revised cash ledger preserves the reserve and supplier/claims evidence clears. A learning-test result never substitutes for those gates.
+
+Built on the weighted scorecard, idea validation test, opportunity economics, cash report, claim source trace and document proofreader.

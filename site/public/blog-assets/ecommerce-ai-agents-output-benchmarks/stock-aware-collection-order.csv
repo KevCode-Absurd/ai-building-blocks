@@ -1,0 +1,4 @@
+sku,section,proposed_position,status,available,contribution_before_ads_usd,contribution_to_revenue_pct,returns_pct,rule,source
+B750,Bottles,1,Metadata gate before publication,300,700,17.5,14,Lead broad browse only after title capacity dimensions price and return reason review,inventory.json sku_table[1]
+B500,Bottles,2,Draft ready metadata,20,2100,35,4,No hero promotion; blue available and clay sold out; remove from in-stock sort at zero,inventory.json sku_table[0]; product.json
+CAP,Accessories,1,Compatibility gate before publication,200,500,62.5,1,Separate accessory row; never compete for bottle lead position; no compatibility claim,inventory.json sku_table[2]

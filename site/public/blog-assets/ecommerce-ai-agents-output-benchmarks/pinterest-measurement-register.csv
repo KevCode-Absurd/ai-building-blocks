@@ -1,0 +1,7 @@
+metric,definition,source,cadence,decision
+Spend,"Actual Pinterest delivery cost in USD, cumulative cap 560",Future account export,Daily,Pause at cap or any launch gate failure
+Outbound clicks,Clicks leaving Pinterest; saves and Pin opens separate,Future Pinterest export,Weekly,Creative diagnostic only
+Mature new-customer orders,Unique store order IDs; no previous paid order before test start; UTM click cohorts aged 30d; net refunds separate,Future order export + lawful first-party touch log,Weekly cohort age; freeze after lag,"Acquisition diagnostic, not causal"
+Assisted orders,Unique orders with observed Pinterest touch in prior 30d but final known source elsewhere; report click and view separately; overlaps flagged,Future consented path data / survey / platform export,Weekly matured,Evidence of involvement only
+Incremental new-customer orders,"Treatment orders minus preperiod-adjusted control orders in randomized geos; includes all channels, not only tagged sessions",Future store orders + locked geo assignment,Fixed endpoint only,Scale only if interval and incremental contribution support it
+Stock and cash,Saleable stock after reservations; forward cash minimum versus $2000 reserve,Updated inventory and cash forecast,Daily stock; weekly cash,Pause on projected shortage or reserve breach

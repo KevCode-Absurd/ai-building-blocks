@@ -1,0 +1,9 @@
+﻿id,source,source_date,type,segment,code,evidence_kind,text
+I1,evidence/customers.json#interviews/I1,2026-11-17,interview,commuter,fit,pre-purchase uncertainty,I need to know the diameter before buying; my bag pocket is narrow.
+I2,evidence/customers.json#interviews/I2,2026-11-17,interview,gift buyer,delivery,pre-purchase uncertainty,I cannot tell when it will arrive.
+I3,evidence/customers.json#interviews/I3,2026-11-17,interview,commuter,operation,pre-purchase uncertainty,"The photos look nice, but I cannot see how the cap opens."
+I4,evidence/customers.json#interviews/I4,2026-11-17,interview,repeat buyer,delivery;support,reported past experience,My last order was late and I did not hear from support.
+R1,evidence/customers.json#review_sample/R1,2026-11-17,review,unassigned,fit praise,reported experience,The size fits my bag.
+R2,evidence/customers.json#review_sample/R2,2026-11-17,review,unassigned,delivery,reported experience,It arrived six days after the estimated delivery.
+R3,evidence/customers.json#review_sample/R3,2026-11-17,review,unassigned,finish,reported experience,The finish scratched in my bag.
+R4,evidence/customers.json#review_sample/R4,2026-11-17,review,unassigned,support,reported experience,Support has not replied for four days.

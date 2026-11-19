@@ -1,0 +1,33 @@
+{
+  "online_conversion": 0.019,
+  "available_units": 20,
+  "stock_days_at_fixture_demand": 2.0,
+  "full_price_available_revenue_ceiling": 640,
+  "trend_peak_to_last_change": -0.5294117647058824,
+  "cases": [
+    {
+      "case": "low",
+      "reachable_people_assumption": 500,
+      "need_now_assumption": 0.1,
+      "conversion_assumption": 0.01,
+      "units": 0.5,
+      "revenue": 16.0
+    },
+    {
+      "case": "middle",
+      "reachable_people_assumption": 1000,
+      "need_now_assumption": 0.2,
+      "conversion_assumption": 0.02,
+      "units": 4.0,
+      "revenue": 128.0
+    },
+    {
+      "case": "high",
+      "reachable_people_assumption": 2000,
+      "need_now_assumption": 0.3,
+      "conversion_assumption": 0.03,
+      "units": 18.0,
+      "revenue": 576.0
+    }
+  ]
+}

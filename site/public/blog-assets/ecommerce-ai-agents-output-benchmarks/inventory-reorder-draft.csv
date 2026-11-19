@@ -1,0 +1,4 @@
+sku,on_hand,reserved,available,on_order_day45,mean_daily,weekly_sd,mean_lead_days,supplied_lead_sd,review_days,safety_units,weekly_trigger_units,technical_buy_units,moq,assumed_pack,landed_usd,technical_cost_usd,release_now_units,status
+B500,100,80,20,200,10,28,30,0,7,106,476,456,100,1,12,5472,0,Cash hold; supplier/terms unverified
+B750,,,300,,,,,,,,,,,,,,0,No reorder calculation: demand/cost/lead time missing
+CAP,,,200,,,,,,,,,,,,,,0,No reorder calculation: demand/cost/lead time missing

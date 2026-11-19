@@ -1,0 +1,27 @@
+"scenario_id","scenario_label","currency","period","opening_cash","receipts","payments","closing_cash","reserve_gap"
+"base","Base supplied forecast","USD","W1",5000.00,2000.00,3500.00,3500.00,0.00
+"base","Base supplied forecast","USD","W2",3500.00,2000.00,2500.00,3000.00,0.00
+"base","Base supplied forecast","USD","W3",3000.00,2000.00,2900.00,2100.00,0.00
+"base","Base supplied forecast","USD","W4",2100.00,2000.00,1700.00,2400.00,0.00
+"base","Base supplied forecast","USD","W5",2400.00,2000.00,5900.00,-1500.00,3500.00
+"base","Base supplied forecast","USD","W6",-1500.00,2000.00,1700.00,-1200.00,3200.00
+"base","Base supplied forecast","USD","W7",-1200.00,2000.00,1700.00,-900.00,2900.00
+"base","Base supplied forecast","USD","W8",-900.00,2000.00,1700.00,-600.00,2600.00
+"base","Base supplied forecast","USD","W9",-600.00,2000.00,1700.00,-300.00,2300.00
+"base","Base supplied forecast","USD","W10",-300.00,2000.00,1700.00,0.00,2000.00
+"base","Base supplied forecast","USD","W11",0.00,2000.00,1700.00,300.00,1700.00
+"base","Base supplied forecast","USD","W12",300.00,2000.00,1700.00,600.00,1400.00
+"base","Base supplied forecast","USD","W13",600.00,2000.00,1700.00,900.00,1100.00
+"downside","Downside receipts at 70%","USD","W1",5000.00,1400.00,3500.00,2900.00,0.00
+"downside","Downside receipts at 70%","USD","W2",2900.00,1400.00,2500.00,1800.00,200.00
+"downside","Downside receipts at 70%","USD","W3",1800.00,1400.00,2900.00,300.00,1700.00
+"downside","Downside receipts at 70%","USD","W4",300.00,1400.00,1700.00,0.00,2000.00
+"downside","Downside receipts at 70%","USD","W5",0.00,1400.00,5900.00,-4500.00,6500.00
+"downside","Downside receipts at 70%","USD","W6",-4500.00,1400.00,1700.00,-4800.00,6800.00
+"downside","Downside receipts at 70%","USD","W7",-4800.00,1400.00,1700.00,-5100.00,7100.00
+"downside","Downside receipts at 70%","USD","W8",-5100.00,1400.00,1700.00,-5400.00,7400.00
+"downside","Downside receipts at 70%","USD","W9",-5400.00,1400.00,1700.00,-5700.00,7700.00
+"downside","Downside receipts at 70%","USD","W10",-5700.00,1400.00,1700.00,-6000.00,8000.00
+"downside","Downside receipts at 70%","USD","W11",-6000.00,1400.00,1700.00,-6300.00,8300.00
+"downside","Downside receipts at 70%","USD","W12",-6300.00,1400.00,1700.00,-6600.00,8600.00
+"downside","Downside receipts at 70%","USD","W13",-6600.00,1400.00,1700.00,-6900.00,8900.00

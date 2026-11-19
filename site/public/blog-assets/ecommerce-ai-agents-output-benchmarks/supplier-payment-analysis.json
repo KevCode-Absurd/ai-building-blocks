@@ -1,0 +1,55 @@
+{
+  "schema": "payment-terms-result-v1",
+  "status": "COMPARABLE_DECLARED_BASIS",
+  "currency": "USD",
+  "minorUnitDigits": 2,
+  "scope": "Proposed same-spec S1 1000-unit FOB order; initial whole-order deposit",
+  "sourceRefs": [
+    "evidence/supply.json supplier_offers S1",
+    "Proposed target: 7.60/unit and 20% deposit"
+  ],
+  "rounding": "Each deposit is rounded half up to the declared currency minor unit. Counterfactual deposits use the same rule; effects are differences of rounded deposits.",
+  "before": {
+    "basisRef": "S1 unchanged spec FOB initial deposit",
+    "orderQuantity": 1000,
+    "depositQuantity": 1000,
+    "unitPrice": 8,
+    "depositRateBps": 3000,
+    "goodsValue": 8000,
+    "depositGoodsBasis": 8000,
+    "depositRatePercent": 30,
+    "initialDeposit": 2400,
+    "remainingGoodsPayments": 5600
+  },
+  "after": {
+    "basisRef": "S1 unchanged spec FOB initial deposit",
+    "orderQuantity": 1000,
+    "depositQuantity": 1000,
+    "unitPrice": 7.6,
+    "depositRateBps": 2000,
+    "goodsValue": 7600,
+    "depositGoodsBasis": 7600,
+    "depositRatePercent": 20,
+    "initialDeposit": 1520,
+    "remainingGoodsPayments": 6080
+  },
+  "comparison": {
+    "goodsPriceReduction": 400,
+    "initialDepositReduction": 880,
+    "remainingGoodsPaymentsChange": 480,
+    "priceFirst": {
+      "intermediateDepositAtNewPriceOldRate": 2280,
+      "priceEffectOnDeposit": 120,
+      "rateEffectOnDeposit": 760
+    },
+    "rateFirst": {
+      "intermediateDepositAtOldPriceNewRate": 1600,
+      "rateEffectOnDeposit": 800,
+      "priceEffectOnDeposit": 80
+    },
+    "reconciliation": "Each decomposition sums to initialDepositReduction. initialDepositReduction minus remainingGoodsPaymentsChange equals goodsPriceReduction. Negative reduction means an increase; positive remainingGoodsPaymentsChange means more due later."
+  },
+  "noncomparabilityReasons": [],
+  "limitations": "Declared goods-only scope. Source references, equivalent specification, payment event and negotiated acceptance are not authenticated. Excludes freight, tax, fees, financing and other costs. Remaining goods payments are an aggregate, not dated instalments. Deposit reduction is cash timing plus price effect, not profit or verified funding. No overall-report verification or authority to commit.",
+  "inputSha256": "0d1f7da87ba8345cb80490f86cf734e739bf1f63bb80a98a0e595e718a0a970d"
+}

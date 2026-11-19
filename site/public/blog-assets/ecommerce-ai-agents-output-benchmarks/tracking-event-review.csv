@@ -1,0 +1,5 @@
+source_row,event_id,transport,currency,value,status
+ads.json events[0],order-001,browser,USD,32,same ID; delivery unverified
+ads.json events[1],order-001,server,USD,32,same ID; delivery unverified
+ads.json events[2],order-002-browser,browser,USD,32,mismatched pair ID; delivery unverified
+ads.json events[3],order-002-server,server,USD,32,mismatched pair ID; delivery unverified

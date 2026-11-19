@@ -38,6 +38,7 @@ export const GUIDES = [
 
 // Reading order within each topic.
 export const ORDER = [
+  "ecommerce-ai-agents-output-benchmarks",
   "chatgpt-prompts-for-work", "ai-prompts-vs-skills-vs-workflows", "give-ai-context-about-your-business", "make-ai-writing-sound-like-you",
   "stop-ai-making-things-up", "how-to-use-claude-skills", "what-is-mcp", "build-ai-workflow-without-code", "ai-agents-for-small-business",
   "analyse-spreadsheet-with-ai",

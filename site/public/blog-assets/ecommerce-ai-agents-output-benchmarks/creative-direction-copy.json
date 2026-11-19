@@ -1,0 +1,66 @@
+[
+  {
+    "id": "D1",
+    "name": "Measure before you choose",
+    "primary": "Will it fit? B500 is 70 mm wide and 220 mm tall. Check your bag pocket before you choose. 500 mL. $32.",
+    "headline": "Check the fit",
+    "description": "B500 dimensions at a glance.",
+    "onscreen": [
+      "Will it fit?",
+      "70 mm wide",
+      "220 mm tall",
+      "500 mL · $32"
+    ],
+    "cta": "Learn More",
+    "destination": "/products/b500",
+    "status": "Brief ready with supplied technical illustration; no rendered ad supplied",
+    "proof": [
+      "P1",
+      "P2",
+      "P3"
+    ]
+  },
+  {
+    "id": "D2",
+    "name": "See the twist",
+    "primary": "How does it open? B500 has a twist cap. See the opening sequence, then check the details. 500 mL. $32.",
+    "headline": "See the twist",
+    "description": "A closer look at the B500 cap.",
+    "onscreen": [
+      "How does it open?",
+      "Twist cap",
+      "500 mL · $32"
+    ],
+    "cta": "Learn More",
+    "destination": "/products/b500",
+    "status": "Needs real product footage; demonstration copy withheld from publication",
+    "proof": [
+      "P1",
+      "P2",
+      "P3",
+      "P8"
+    ]
+  },
+  {
+    "id": "D3",
+    "name": "Before the gift",
+    "primary": "Buying for a date? Check delivery details before choosing B500. 500 mL. $32. Unused returns within 14 days after delivery.",
+    "headline": "Before the gift",
+    "description": "Check delivery and return details.",
+    "onscreen": [
+      "Buying for a date?",
+      "Check delivery details",
+      "Unused returns: 14 days after delivery",
+      "B500 · 500 mL · $32"
+    ],
+    "cta": "Learn More",
+    "destination": "/products/b500",
+    "status": "Blocked by unverified delivery estimate and unresolved service experience",
+    "proof": [
+      "P1",
+      "P4",
+      "P5",
+      "P7"
+    ]
+  }
+]

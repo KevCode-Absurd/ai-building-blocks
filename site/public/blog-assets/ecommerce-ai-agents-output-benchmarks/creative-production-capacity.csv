@@ -1,0 +1,9 @@
+week,role,capacity,planned,remaining,utilization_pct
+2026-11-16,marketer,16,6,10,37.5
+2026-11-16,designer,8,8,0,100.0
+2026-11-16,editor,6,5,1,83.3
+2026-11-16,developer,12,12,0,100.0
+2026-11-23,marketer,16,6,10,37.5
+2026-11-23,designer,8,2,6,25.0
+2026-11-23,editor,6,2,4,33.3
+2026-11-23,developer,12,0,12,0.0

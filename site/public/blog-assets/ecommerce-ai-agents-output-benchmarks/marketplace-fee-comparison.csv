@@ -1,0 +1,5 @@
+channel,price_USD,platform_fee_USD,shipping_assumption_USD,packaging_assumption_USD,landed_cost_USD,known_cost_subtotal_USD,contribution_before_unpriced_costs_USD
+eBay US no Store,32,4.752,5,0.8,12,22.552,9.448
+Amazon US Individual FBM,32,5.79,5,0.8,12,23.59,8.41
+Amazon US Professional FBM at 20 orders/month,32,6.7995,5,0.8,12,24.5995,7.4005
+Amazon US Professional FBM at 100 orders/month,32,5.1999,5,0.8,12,22.9999,9.0001

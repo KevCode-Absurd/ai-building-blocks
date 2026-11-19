@@ -1,0 +1,16 @@
+Metric,USD,Source or formula
+Gross merchandise sales,10000,commerce.json /gross_merchandise_sales
+Discounts,-1000,commerce.json /discounts
+Current-order refunds,-300,commerce.json /refunds_for_period_orders
+Current cohort net merchandise sales,8700,10000-1000-300
+Prior-order refunds booked,-500,commerce.json /refunds_for_prior_orders
+Period-activity net merchandise sales,8200,10000-1000-800
+Current cohort landed COGS,-3500,commerce.json /landed_cogs_current_cohort
+Restocked cost credit,120,commerce.json /restocked_cost_credit_current_cohort
+Fulfilment,-700,commerce.json /fulfilment_current_cohort
+Payment fees,-261,commerce.json /payment_fees_current_cohort
+Return handling,-60,commerce.json /return_handling_current_cohort
+Net shipping charged,200,commerce.json /net_shipping_charged_current_cohort
+Known-cost cohort contribution before ads,4499,8700-3500+120-700-261-60+200
+Meta plus Google ad spend,-3000,ads.json /meta/spend + /google/spend
+Known-cost cohort contribution after ads,1499,4499-3000

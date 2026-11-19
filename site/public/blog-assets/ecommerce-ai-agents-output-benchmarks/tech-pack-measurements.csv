@@ -1,0 +1,8 @@
+﻿ID,Point,Target,Unit,Plus_minus,Status,Method,Source
+M01,Overall assembled height,220,mm,2,PROPOSED tolerance; supplied target,Base datum A to cap top with cap seated; height gauge; no applied compression,product.json dimensions_mm.height
+M02,Maximum body outside diameter,70,mm,1,PROPOSED tolerance; supplied target,Caliper across body at 3 heights and 2 perpendicular axes; exclude cap; record largest and smallest,product.json dimensions_mm.diameter
+M03,Empty assembly mass,280,g,14,PROPOSED tolerance; supplied target,"Dry body, cap and seal; calibrated 0.1 g balance; exclude packaging",product.json weight_g
+M04,Nominal usable capacity,500,mL,10,PROPOSED tolerance; supplied target,"At 20 C water, record fill mass and fill plane; volume = net water mass / measured water density; final fill plane requires U03",product.json capacity_ml
+M05,Unit carton outside length,100,mm,2,PROPOSED target and tolerance,Closed assembled carton; caliper across outside face; not internal clearance,supply.json packaging.proposed_box_mm[0]
+M06,Unit carton outside width,100,mm,2,PROPOSED target and tolerance,Closed assembled carton; caliper across outside face,supply.json packaging.proposed_box_mm[1]
+M07,Unit carton outside height,260,mm,2,PROPOSED target and tolerance,Closed assembled carton; base to top,supply.json packaging.proposed_box_mm[2]

@@ -1,0 +1,4 @@
+﻿sku,revenue,contribution_before_ads,available,returns_pct,contribution_pct,contribution_share_pct,decision,cash_at_cost_usd,trend_xyz_lifecycle,abc_contribution,source
+B500,6000,2100,20,4,35.0,63.63636363636363,Grow after supply and cash repair,240,Unknown: no dated SKU series or launch history,A,evidence/inventory.json /sku_table/0
+B750,4000,700,300,14,17.5,21.21212121212121,Repair; freeze replenishment,Unknown: SKU cost absent,Unknown: no dated SKU series or launch history,A,evidence/inventory.json /sku_table/1
+CAP,800,500,200,1,62.5,15.151515151515152,Keep; test incremental attach,Unknown: SKU cost absent,Unknown: no dated SKU series or launch history,B,evidence/inventory.json /sku_table/2

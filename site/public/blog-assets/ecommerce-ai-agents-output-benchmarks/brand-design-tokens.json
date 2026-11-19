@@ -1,0 +1,77 @@
+{
+  "status": "Draft reference; synthetic fixture only",
+  "source_date": "2026-11-17",
+  "approved": {
+    "color": {
+      "ink": {
+        "value": "#173247",
+        "source": "evidence/brand.json#/design/ink"
+      },
+      "paper": {
+        "value": "#F5F0E8",
+        "source": "evidence/brand.json#/design/paper"
+      },
+      "accent": {
+        "value": "#C65F3B",
+        "source": "evidence/brand.json#/design/accent"
+      }
+    },
+    "font": {
+      "family": "Arial",
+      "source": "evidence/brand.json#/design/font"
+    },
+    "logo": {
+      "value": null,
+      "rule": "None; do not invent one",
+      "source": "evidence/brand.json#/design/logo"
+    }
+  },
+  "observed_site": {
+    "body_margin": "2rem",
+    "image_max_width": "320px",
+    "font_family": "Arial",
+    "background": "#F5F0E8",
+    "color": "#173247",
+    "source": "evidence/assets/product-page.html <style>",
+    "status": "observed authored CSS, not owner-approved global tokens"
+  },
+  "illustration_only": {
+    "body_fill": "#497A97",
+    "highlight": "#9EBAC8",
+    "stroke_width": "4 SVG units",
+    "source": "evidence/assets/product.svg",
+    "status": "asset-local; not approved palette additions"
+  },
+  "unknown": [
+    "type sizes and weights",
+    "line heights",
+    "spacing scale",
+    "radii",
+    "breakpoints",
+    "button and focus styles",
+    "logo assets"
+  ],
+  "contrast": [
+    {
+      "foreground": "#173247",
+      "background": "#F5F0E8",
+      "ratio": 11.689,
+      "normal_text_4_5": true,
+      "large_text_3": true
+    },
+    {
+      "foreground": "#C65F3B",
+      "background": "#F5F0E8",
+      "ratio": 3.629,
+      "normal_text_4_5": false,
+      "large_text_3": true
+    },
+    {
+      "foreground": "#173247",
+      "background": "#C65F3B",
+      "ratio": 3.221,
+      "normal_text_4_5": false,
+      "large_text_3": true
+    }
+  ]
+}

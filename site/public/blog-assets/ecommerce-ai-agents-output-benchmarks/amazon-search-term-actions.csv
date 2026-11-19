@@ -1,0 +1,3 @@
+term,spend_USD,attributed_sales_USD,ACOS_pct,status,draft_action,execution_gate
+500 ml bottle,120,600,20,Fix / conditional harvest,Keep candidate for exact; do not scale yet,"Map campaign and child ASIN; verify order sample, contribution and sellable stock"
+large flask,80,200,40,Fix / relevance review,Do not increase; negative exact only if purchased/advertised mapping proves irrelevant,Product association missing; do not negative phrase flask account-wide

@@ -1,0 +1,4286 @@
+[
+  {
+    "pair": 1,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:01.872Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 5943.399999976158,
+    "dcl": 6959.300000011921,
+    "load": 6960.199999988079,
+    "lcp": 6260,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 7.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 6.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 12.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 11.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 9.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 47.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 13.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 16
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 14.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 40
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 38.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 38.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 8
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 13.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 12.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 17.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 18
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 38
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 17.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 7.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 5.100000023841858
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 1,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:50:09.786Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 4230.399999976158,
+    "dcl": 4394.600000023842,
+    "load": 4396.800000011921,
+    "lcp": 4720,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 9.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 10.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 10.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 12.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 15.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 16.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 16.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 17.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 19.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 48.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 13.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 13.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 12.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 37.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 41.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 41.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 45
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 45
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 42.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 44.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 47.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 15
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 15.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 17.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 17.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 18.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 18.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 45.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 23.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 5.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 4.200000047683716
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 1,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:15.146Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 4034.300000011921,
+    "dcl": 5075.299999952316,
+    "load": 5076.399999976158,
+    "lcp": 4160,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 10.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 12.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 11.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 10.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 7.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 44
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 9.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 37.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 37.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 43
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 13.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 14.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 10.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 23.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 24.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 23.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 15.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 14.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.800000011920929
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 1,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:50:21.322Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 4020,
+    "dcl": 4145.600000023842,
+    "load": 4161.600000023842,
+    "lcp": 4464,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 9.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 7.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 14.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 18.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 43.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 11.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 34
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 33.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 35.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 38
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 38.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 39.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 39.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 39.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 14.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 16.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 16.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 17
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 17.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 19.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 16
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 35.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 7.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 7.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.699999988079071
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 2,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:26.412Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3800.300000011921,
+    "dcl": 3941.899999976158,
+    "load": 3971,
+    "lcp": 3980,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 7.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 11.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 13.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 15
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 17.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 38
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 37.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 91.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 33.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 12.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 13.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 14.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 13.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 30.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 5.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 5.100000023841858
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 2,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:50:31.380Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3827.899999976158,
+    "dcl": 3951.699999988079,
+    "load": 3968.5,
+    "lcp": 4276,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 9.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 15.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 12.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 8.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 8.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 10.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 45.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 10.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 12.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 33.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 33.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 36.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 37.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 39.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 39.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 40.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 40.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 14.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 16.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 33.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 4.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 5.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.600000023841858
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 2,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:36.353Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3955.899999976158,
+    "dcl": 4054.100000023842,
+    "load": 4079,
+    "lcp": 4096,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 9.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 36.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 10.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 32.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 31.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 34.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 9.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 9.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 13.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 13.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 31.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 3.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 4.400000035762787
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 2,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:50:41.360Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3940.699999988079,
+    "dcl": 4066.399999976158,
+    "load": 4081.899999976158,
+    "lcp": 4384,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 7.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 7.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 9.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 12.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 12.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 14.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 16.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 17.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 46.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 10.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 13.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 32.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 32.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 36.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 37.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 39.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 38.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 39.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 40
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 10.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 15.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 37.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 5.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 5.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 3.800000011920929
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 3,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:46.379Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3846.699999988079,
+    "dcl": 3962.600000023842,
+    "load": 3986.7000000476837,
+    "lcp": 4004,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 11.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 36.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 14.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 14.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 26.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 30.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 34.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 32.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 7.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 7.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 9.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 10.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 9.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 29.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 11.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 5.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 3.800000011920929
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 3,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:50:51.306Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3887.699999988079,
+    "dcl": 4016.600000023842,
+    "load": 4018.5,
+    "lcp": 4340,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 7.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 7.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 12.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 15.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 46.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 13
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 12.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 39
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 40.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 40.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 41.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 42
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 43.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 47.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 44.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 8.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 9.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 9.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 13.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 13.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 16
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 41.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 5.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 17.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 4.199999988079071
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 3,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:50:56.262Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3783.800000011921,
+    "dcl": 3885.300000011921,
+    "load": 3911.600000023842,
+    "lcp": 3924,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 10.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 11.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 13.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 16.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 17.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 40.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 40.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 43.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 37.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 9.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 13.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 12.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 33.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 12.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 5
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 3,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:01.108Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3831.599999964237,
+    "dcl": 3974.399999976158,
+    "load": 3976,
+    "lcp": 4280,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 7.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 10.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 14.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 15.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 47.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 9.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 11.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 11.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 12.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 13.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 35.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 35.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 38.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 40.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 41
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 42
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 15.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 42.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 42.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 16.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 17.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 18.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 18.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 18.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 17
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 35.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 5.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 6.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.800000011920929
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 4,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:06.017Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3708.699999988079,
+    "dcl": 3800.5,
+    "load": 3824.099999964237,
+    "lcp": 3836,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 9.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 10.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 11.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 13.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 16
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 16.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 38.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 35
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 31
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 33.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 11.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 13.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 32.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 9.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 10.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.899999976158142
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 4,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:10.766Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3890.100000023842,
+    "dcl": 4035.899999976158,
+    "load": 4037.399999976158,
+    "lcp": 4340,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 16.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 18.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 19.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 48.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 12.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 41.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 41.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 40.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 39.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 40.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 42
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 47
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 46.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 16.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 16.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 18.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 18.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 19.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 17.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 43.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 4.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 4.399999976158142
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 4,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:15.734Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 4713,
+    "dcl": 5751.900000035763,
+    "load": 5753.100000023842,
+    "lcp": 4832,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 9.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 11.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 13.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 72.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 9.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 31.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 31.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 36
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 7.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 11.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 12.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 13.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 14.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 33.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 10.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 5.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 3.900000035762787
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 4,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:22.436Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 4121.299999952316,
+    "dcl": 4404.900000035763,
+    "load": 4406.5,
+    "lcp": 4700,
+    "cls": 0.0006605765223503112,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 12.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 14.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 17.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 18.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 19.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 45.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 11.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 33.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 36.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 38.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 38.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 37.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 40.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 42.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 43.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 51.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 14.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 13.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 17.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 17.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 13.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 38
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 6.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 6.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 3.699999988079071
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 5,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:27.802Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3887,
+    "dcl": 3994.199999988079,
+    "load": 4019.699999988079,
+    "lcp": 4040,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 7.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 7.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 9.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 13.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 12.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 14.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 15.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 40
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 39.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 42.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 36.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 11.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 11.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 12.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 12.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 33.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 11.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 3.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 4.100000023841858
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 5,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:32.743Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 3763.5,
+    "dcl": 3920.800000011921,
+    "load": 3922.400000035763,
+    "lcp": 4224,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 4.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 9.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 10.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 13
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 13.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 15.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 49.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 11.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 19
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 12.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 39.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 39.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 42.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 44.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 45.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 46.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 47.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 47.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 12.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 17.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 16
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 17.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 18.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 42.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 8.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 12.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 3.5
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 5,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:37.610Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 4766.199999988079,
+    "dcl": 4873.099999964237,
+    "load": 4897.899999976158,
+    "lcp": 4924,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 11.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 14.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 16.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 16.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 38
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 32.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 33.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 36.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 9.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 10.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 12.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 12.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 34.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 17.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 5.299999952316284
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 5,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:43.442Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3944.100000023842,
+    "dcl": 4070.899999976158,
+    "load": 4085.599999964237,
+    "lcp": 4392,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 15.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 16.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 16.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 17.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 19.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 22.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 48.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 38.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 38.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 41.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 44
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 45
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 45.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 45.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 45.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 13.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 14.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 14.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 15.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 17.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 18.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 18.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 19.400000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 42.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 7.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 11.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 24.399999976158142
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 6,
+    "label": "candidate",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:48.452Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3869.599999964237,
+    "dcl": 3962.699999988079,
+    "load": 3987.599999964237,
+    "lcp": 4004,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 8.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 9.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 10
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 11.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 11.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 13.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 14.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 15.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 37.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 37.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 35.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 9
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 34.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 12.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 13.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 13.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 33.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 10.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 12.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 6.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 4.799999952316284
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 6,
+    "label": "candidate",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:51:53.379Z",
+    "failures": [],
+    "status": 200,
+    "candidateHeader": "1",
+    "ttfb": 3848.2999999523163,
+    "dcl": 3998.600000023842,
+    "load": 4000.100000023842,
+    "lcp": 4296,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 10.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 15.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 14.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 15.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 16.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 16.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 19.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 21.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 22.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 44
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 48.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 46.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 41
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 42.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 42.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 42.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 42.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 46
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 12.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 14.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 14.699999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 15.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 15.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 17.599999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 17.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 43.5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 5
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 20.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9493/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 3.800000011920929
+      }
+    ],
+    "emoji": false
+  },
+  {
+    "pair": 6,
+    "label": "baseline",
+    "route": "/shop/",
+    "timestamp": "2026-11-18T15:51:58.325Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 4777.399999976158,
+    "dcl": 4884.699999988079,
+    "load": 4914.899999976158,
+    "lcp": 4924,
+    "cls": 0.0001211121678352356,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 5.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 7.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 11.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-11.3.0",
+        "transferSize": 474,
+        "duration": 12.099999964237213
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 12.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 12.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 15.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 17.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 18.600000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 41.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 41.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 45.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 38.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/catalog-sorting.js?ver=4834bb2b899b3dade49a",
+        "transferSize": 1182,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 11.100000023841858
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 11.800000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 12
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 15.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 14.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 16.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 37
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 16.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 15.700000047683716
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder-768x768.webp",
+        "transferSize": 4540,
+        "duration": 5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 5.400000035762787
+      }
+    ],
+    "emoji": true
+  },
+  {
+    "pair": 6,
+    "label": "baseline",
+    "route": "/product/synthetic-silver-ring/",
+    "timestamp": "2026-11-18T15:52:04.175Z",
+    "failures": [],
+    "status": 200,
+    "ttfb": 4125.800000011921,
+    "dcl": 4321.600000023842,
+    "load": 4337.699999988079,
+    "lcp": 4640,
+    "cls": 0.00007216143608093261,
+    "longTasks": [],
+    "tbt": 0,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/blocks/navigation/style.min.css?ver=7.1.4",
+        "transferSize": 21076,
+        "duration": 6.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.3.0",
+        "transferSize": 14701,
+        "duration": 8.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-11.3.0",
+        "transferSize": 517,
+        "duration": 9.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-11.3.0",
+        "transferSize": 6990,
+        "duration": 9.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image-gallery.css?ver=wc-11.3.0",
+        "transferSize": 770,
+        "duration": 10.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-sku.css?ver=wc-11.3.0",
+        "transferSize": 727,
+        "duration": 11
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-details.css?ver=wc-11.3.0",
+        "transferSize": 2573,
+        "duration": 13.300000011920929
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-11.3.0",
+        "transferSize": 4842,
+        "duration": 14.199999988079071
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.3.0",
+        "transferSize": 20454,
+        "duration": 14.900000035762787
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=11.3.0",
+        "transferSize": 10236,
+        "duration": 72.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.3.0",
+        "transferSize": 93273,
+        "duration": 73.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=11.3.0",
+        "transferSize": 3585,
+        "duration": 74.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=11.3.0",
+        "transferSize": 8253,
+        "duration": 80.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.3.0",
+        "transferSize": 8955,
+        "duration": 109.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "transferSize": 87853,
+        "duration": 69
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "transferSize": 13877,
+        "duration": 69.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.3.0",
+        "transferSize": 9891,
+        "duration": 92.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.3.0",
+        "transferSize": 2020,
+        "duration": 96.5
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.3.0",
+        "transferSize": 4988,
+        "duration": 98.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.3.0",
+        "transferSize": 2973,
+        "duration": 100.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.11.3.0",
+        "transferSize": 21856,
+        "duration": 100.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 31840,
+        "duration": 102
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.11.3.0",
+        "transferSize": 10049,
+        "duration": 101.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.3.0",
+        "transferSize": 13527,
+        "duration": 102.90000003576279
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/add-to-cart-form.js?ver=dcf179e72164a8ccb158",
+        "transferSize": 1733,
+        "duration": 70.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=cc2960f2bc7022413cfc",
+        "transferSize": 4237,
+        "duration": 72
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=70268cd7b81f552b773b",
+        "transferSize": 3931,
+        "duration": 72.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/products.js?ver=d2328963c7e9ed84708e",
+        "transferSize": 1687,
+        "duration": 74.29999995231628
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/store-notices.js?ver=c1eae8d5e518e3fbcf40",
+        "transferSize": 2589,
+        "duration": 73.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/client/blocks/@woocommerce/stores/woocommerce/cart.js?ver=5c8d159af47606787178",
+        "transferSize": 11389,
+        "duration": 74.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=6a43cba92ed701f32cd9",
+        "transferSize": 43148,
+        "duration": 73.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/uploads/woocommerce-placeholder.webp",
+        "transferSize": 10192,
+        "duration": 76.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=1bf28ded04f9f188bdcb",
+        "transferSize": 3333,
+        "duration": 97.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.3.0",
+        "transferSize": 15296,
+        "duration": 68.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.3.0",
+        "transferSize": 2812,
+        "duration": 26.30000001192093
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "transferSize": 53900,
+        "duration": 4.399999976158142
+      },
+      {
+        "name": "http://127.0.0.1:9492/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4",
+        "transferSize": 23052,
+        "duration": 4.400000035762787
+      }
+    ],
+    "emoji": true
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "status": "Private illustrative draft; filming not performed",
+  "duration_seconds": 30,
+  "shape": "9:16",
+  "frame_rate": 30,
+  "hooks": [
+    {
+      "id": "A",
+      "angle": "Fit before style",
+      "format": "Direct-to-camera question with pocket close-up",
+      "source": "customers.json interviews I1",
+      "spoken": "Narrow bag pocket? Start with the bottle diameter.",
+      "text": "Check the diameter first",
+      "visual": "Hold the blue bottle beside an actual narrow bag pocket; show the opening without claiming it fits."
+    },
+    {
+      "id": "B",
+      "angle": "See the mechanism",
+      "format": "Hands-only cap demonstration",
+      "source": "customers.json interviews I3",
+      "spoken": "Here is how this bottle opens. Just twist.",
+      "text": "See the twist cap",
+      "visual": "Start with cap seated; unscrew in one continuous close-up. Repeat the full action in scene 3 for all versions."
+    },
+    {
+      "id": "C",
+      "angle": "Size without guesswork",
+      "format": "Top-down ruler reveal; bolder opening",
+      "source": "product.json dimensions_mm; customers.json I1",
+      "spoken": "Skip the guesswork. Put a ruler beside it.",
+      "text": "Size, shown clearly",
+      "visual": "Slide a ruler into frame beside the upright bottle. No miniature props or perspective tricks."
+    }
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 4,
+      "spoken": "",
+      "text": "",
+      "visual": "Use exactly one hook above.",
+      "camera": "Hook A: medium face-to-camera then pocket. B: close-up level with cap. C: top-down. Static phone.",
+      "transition": "Hard cut"
+    },
+    {
+      "id": 2,
+      "start": 4,
+      "end": 11,
+      "spoken": "This is the B500. Five hundred milliliters, seventy millimeters across, and two hundred twenty millimeters tall.",
+      "text": "B500 | 500 mL / 70 mm across | 220 mm tall",
+      "visual": "Show blue bottle front-on. Film ruler at bottle midline and beside full height in the same plane; retain readable marks. Dimensions are supplied specifications, not a recorded measurement result.",
+      "camera": "Close-up, square-on; two static angles. Never use perspective to exaggerate size.",
+      "transition": "Hard cut"
+    },
+    {
+      "id": 3,
+      "start": 11,
+      "end": 17,
+      "spoken": "The cap twists off. Here is the opening, close up.",
+      "text": "Twist cap",
+      "visual": "One uninterrupted shot from closed cap to cap removed; hold the opening toward camera. Show only what the real sample does.",
+      "camera": "Close-up, slight overhead angle; hands and threads visible.",
+      "transition": "Hard cut"
+    },
+    {
+      "id": 4,
+      "start": 17,
+      "end": 24,
+      "spoken": "Check your own pocket opening; the shape matters too. This bottle needs hand washing.",
+      "text": "Check your pocket opening / Hand wash",
+      "visual": "Film one honest insertion attempt in the presenter’s actual bag, with bag stationary and pocket opening visible. Keep the outcome, including a failure or tight fit. Label this shot “This bag only”. Then show bottle beside a sink; no wash-performance claim.",
+      "camera": "Medium close-up, straight-on pocket; cut to countertop close-up.",
+      "transition": "Hard cut"
+    },
+    {
+      "id": 5,
+      "start": 24,
+      "end": 30,
+      "spoken": "See the full B500 details. Choose the size that fits your routine.",
+      "text": "See B500 details",
+      "visual": "Hold matte blue bottle upright. End on a simple paper-colour card with the product name and CTA. No logo.",
+      "camera": "Close-up, static; hold CTA through final frame.",
+      "transition": "End"
+    }
+  ]
+}

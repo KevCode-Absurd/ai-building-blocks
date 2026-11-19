@@ -1,0 +1,70 @@
+{
+  "schema": "should-cost-comparison-result-v1",
+  "status": "ARITHMETIC_ONLY",
+  "material": {
+    "currency": "USD",
+    "unit": "accepted unit",
+    "basisRef": "B500-planning-only",
+    "basisStatus": "assumed",
+    "sourceRef": "evidence/supply.json bom[0]; monetary and SKU interpretation assumed",
+    "netCost": "10",
+    "scrapFractionOfGrossInput": "0.1",
+    "scrapAdjustedCost": 11.11111111111111,
+    "calculation": "netCost / (1 - scrapFractionOfGrossInput)"
+  },
+  "quotes": [
+    {
+      "currency": "USD",
+      "unit": "accepted unit",
+      "basisRef": "B500-planning-only",
+      "basisStatus": "assumed",
+      "id": "S1",
+      "sourceRef": "evidence/supply.json supplier_offers S1",
+      "amount": "8",
+      "commercialScope": "FOB origin port; specification linkage unconfirmed",
+      "status": "CONDITIONAL_ARITHMETIC",
+      "reasons": [],
+      "comparison": {
+        "netMaterial": {
+          "amount": 10,
+          "relation": "below",
+          "quoteMinusReference": -2
+        },
+        "scrapAdjustedMaterial": {
+          "amount": 11.11111111111111,
+          "relation": "below",
+          "quoteMinusReference": -3.111111111111111
+        }
+      },
+      "narrative": "S1: USD 8 per accepted unit is below net material (USD 10) and below scrap-adjusted material (approximately USD 11.111111). This comparison depends on the declared assumed basis. Commercial scope: FOB origin port; specification linkage unconfirmed. Component comparisons do not establish full-cost coverage, equivalent offers or savings."
+    },
+    {
+      "currency": "USD",
+      "unit": "accepted unit",
+      "basisRef": "B500-planning-only",
+      "basisStatus": "assumed",
+      "id": "S2",
+      "sourceRef": "evidence/supply.json supplier_offers S2",
+      "amount": "10.5",
+      "commercialScope": "DDP named warehouse; specification linkage unconfirmed",
+      "status": "CONDITIONAL_ARITHMETIC",
+      "reasons": [],
+      "comparison": {
+        "netMaterial": {
+          "amount": 10,
+          "relation": "above",
+          "quoteMinusReference": 0.5
+        },
+        "scrapAdjustedMaterial": {
+          "amount": 11.11111111111111,
+          "relation": "below",
+          "quoteMinusReference": -0.6111111111111112
+        }
+      },
+      "narrative": "S2: USD 10.5 per accepted unit is above net material (USD 10) and below scrap-adjusted material (approximately USD 11.111111). This comparison depends on the declared assumed basis. Commercial scope: DDP named warehouse; specification linkage unconfirmed. Component comparisons do not establish full-cost coverage, equivalent offers or savings."
+    }
+  ],
+  "arithmetic": "Relations use exact decimal fractions. Numeric amounts and differences use JavaScript number display; recurring gross costs are approximate. No currency conversion or quantity normalization.",
+  "limitations": "Inputs and source references are declarations, not authenticated evidence. Net material excludes scrap; scrap-adjusted material excludes labor, overhead, packaging, profit and logistics. Quotes can include different services or delivery terms. Neither component is a proven supplier minimum or a complete should-cost; assumptions and quote scope require reconciliation. This tool does not check final report prose.",
+  "inputSha256": "0fec699614654c3e43fcac1eda1614a21ca080dd819857d04d4ca0ef8c92f9d2"
+}

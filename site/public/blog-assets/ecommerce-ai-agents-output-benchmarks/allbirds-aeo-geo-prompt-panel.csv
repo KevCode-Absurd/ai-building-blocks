@@ -1,0 +1,13 @@
+prompt_id,stratum,exact_prompt,evidence_topic,status
+U01,discovery,What everyday sneakers should I consider for a city vacation with lots of walking?,care and fit evidence,"NOT RUN; proposed research question, no volume assigned"
+U02,discovery,Which casual sneakers are easy to clean?,care,"NOT RUN; proposed research question, no volume assigned"
+U03,discovery,What should I compare when choosing wool versus tree-fiber sneakers?,materials,"NOT RUN; proposed research question, no volume assigned"
+U04,discovery,Which sneakers should I consider for warm-weather everyday wear?,materials and model facts,"NOT RUN; proposed research question, no volume assigned"
+U05,discovery,How can I compare the carbon-footprint claims of shoe brands?,methodology,"NOT RUN; proposed research question, no volume assigned"
+U06,discovery,What should I check before buying water-resistant everyday shoes?,model-specific specifications,"NOT RUN; proposed research question, no volume assigned"
+B01,branded,"Does Allbirds still sell shoes, and where is its official store?",identity,"NOT RUN; proposed research question, no volume assigned"
+B02,branded,Who operates the Allbirds shoe website now?,identity,"NOT RUN; proposed research question, no volume assigned"
+B03,branded,What is the Allbirds return policy for US online orders?,policy,"NOT RUN; proposed research question, no volume assigned"
+B04,branded,Can I machine wash Allbirds shoes?,care,"NOT RUN; proposed research question, no volume assigned"
+B05,branded,What is the difference between Allbirds Tree Runner and Tree Runner NZ?,model generation,"NOT RUN; proposed research question, no volume assigned"
+B06,branded,Does the M0.0NSHOT carbon calculation use the same method as other Allbirds shoes?,methodology,"NOT RUN; proposed research question, no volume assigned"

@@ -191,3 +191,35 @@ test('metadata and methodology are ready for normal blog rendering', () => {
   assert.match(body, /id="faq"/); assert.match(body, /data-copy="benchmark-job-brief"/); assert.match(body, /data-copy="benchmark-review-brief"/);
   assert.ok(!/—|&mdash;|<script|<style|style="/.test(body));
 });
+
+test('publishes owner-disclosed non-passing cases as named limitations, never as passes', () => {
+  const data = fixture();
+  data.cases[3].attempts[0].judges.terra.specialistStatus = 'LIMITED_CAPABILITY';
+  data.cases[5].attempts[0].judges.terra.specialistStatus = 'NEEDS_REPAIR';
+  assert.throws(() => publicBenchmark(data), /has not passed both judges/);
+  data.disclosedLimitations = [{ id: 'test-role-3', summary: 'No real store was available to test in.' }, { id: 'test-role-5', summary: 'No matching slow page was available.' }];
+  const { body, totals } = renderBenchmarkArticle(data, '');
+  assert.equal(totals.finalPasses, 78);
+  assert.equal(totals.limited, 2);
+  const opening = body.slice(0, body.indexOf('<h2 id="results">'));
+  assert.ok(opening.includes('78 passed on the selected final attempt. <strong>2 did not pass both judges.</strong>'));
+  assert.ok(opening.includes('<h2 id="not-passed">The 2 agents that did not pass</h2>'));
+  assert.ok(opening.includes('<a href="#case-test-role-3"><strong>Test 3, Test role</strong></a>. No real store was available to test in. Sol passed (80/100); Terra marked it limited by missing tools (80/100).'));
+  assert.ok(opening.includes('Terra asked for a repair (80/100)'));
+  assert.equal(body.split('Did not pass both judges</strong>').length - 1, 2);
+  assert.ok(body.includes('Test 3: Test role (did not pass both judges)</summary>'));
+  const limits = body.slice(body.indexOf('<h2 id="limits">'));
+  assert.ok(limits.includes('Test 5 (Test role) did not pass both judges. No matching slow page was available.'));
+});
+
+test('refuses a disclosed limitation that passed, is unknown, or is listed twice', () => {
+  for (const mutate of [
+    d => { d.disclosedLimitations = [{ id: 'test-role-1', summary: 'Passed anyway.' }]; },
+    d => { d.cases[3].attempts[0].judges.sol.specialistStatus = 'FAIL'; d.disclosedLimitations = [{ id: 'not-an-agent', summary: 'Unknown.' }]; },
+    d => { d.cases[3].attempts[0].judges.sol.specialistStatus = 'FAIL'; d.disclosedLimitations = [{ id: 'test-role-3', summary: 'One.' }, { id: 'test-role-3', summary: 'Two.' }]; },
+    d => { d.cases[3].attempts[0].judges.sol.specialistStatus = 'FAIL'; d.disclosedLimitations = [{ id: 'test-role-3', summary: '' }]; },
+  ]) { const data = fixture(); mutate(data); assert.throws(() => publicBenchmark(data), /publication refused/); }
+  const data = fixture();
+  assert.equal(renderBenchmarkArticle(data, '').totals.limited, 0);
+  assert.ok(!renderBenchmarkArticle(data, '').body.includes('id="not-passed"'));
+});

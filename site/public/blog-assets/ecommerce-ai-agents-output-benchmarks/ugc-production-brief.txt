@@ -1,0 +1,138 @@
+# B500: check the fit
+
+Private illustrative draft • 30 seconds per version • vertical 9:16 • 30 fps
+
+Film hook A first, then capture B and C with the same body. The ad answers the diameter and cap-opening questions in the supplied commuter interviews. It contains no customer testimonial.
+
+Assumptions: US commuter audience; a paid presenter demonstrating the product; one phone shoot in a quiet room.
+
+This is a shootable script, not filmed UGC. The supplied asset is a technical illustration; a physical B500 and cleared presenter footage are still required.
+
+## Three opening hooks — 0:00–0:04
+
+### A. Fit before style
+
+**Say:** “Narrow bag pocket? Start with the bottle diameter.”
+
+**Show:** Hold the blue bottle beside an actual narrow bag pocket; show the opening without claiming it fits.
+
+**On screen:** Check the diameter first
+
+**Approach:** Direct-to-camera question with pocket close-up. Evidence: customers.json interviews I1, supplied 2026-11-17.
+
+### B. See the mechanism
+
+**Say:** “Here is how this bottle opens. Just twist.”
+
+**Show:** Start with cap seated; unscrew in one continuous close-up. Repeat the full action in scene 3 for all versions.
+
+**On screen:** See the twist cap
+
+**Approach:** Hands-only cap demonstration. Evidence: customers.json interviews I3, supplied 2026-11-17.
+
+### C. Size without guesswork
+
+**Say:** “Skip the guesswork. Put a ruler beside it.”
+
+**Show:** Slide a ruler into frame beside the upright bottle. No miniature props or perspective tricks.
+
+**On screen:** Size, shown clearly
+
+**Approach:** Top-down ruler reveal; bolder opening. Evidence: product.json dimensions_mm; customers.json I1, supplied 2026-11-17.
+
+C is the bolder opening: film one extra ruler reveal to learn whether a direct size demonstration draws more qualified interest than a question. Risk: less face-led warmth. This is a creative proposal, not a performance prediction.
+
+## Shared body — use after each hook
+
+### Scene 2 · 0:04–0:11 · 7 seconds
+
+**Say:** “This is the B500. Five hundred milliliters, seventy millimeters across, and two hundred twenty millimeters tall.”
+
+**Show:** Show blue bottle front-on. Film ruler at bottle midline and beside full height in the same plane; retain readable marks. Dimensions are supplied specifications, not a recorded measurement result.
+
+**Camera:** Close-up, square-on; two static angles. Never use perspective to exaggerate size. **Transition:** Hard cut.
+
+**On screen:** B500 | 500 mL; 70 mm across | 220 mm tall.
+
+### Scene 3 · 0:11–0:17 · 6 seconds
+
+**Say:** “The cap twists off. Here is the opening, close up.”
+
+**Show:** One uninterrupted shot from closed cap to cap removed; hold the opening toward camera. Show only what the real sample does.
+
+**Camera:** Close-up, slight overhead angle; hands and threads visible. **Transition:** Hard cut.
+
+**On screen:** Twist cap.
+
+### Scene 4 · 0:17–0:24 · 7 seconds
+
+**Say:** “Check your own pocket opening; the shape matters too. This bottle needs hand washing.”
+
+**Show:** Film one honest insertion attempt in the presenter’s actual bag, with bag stationary and pocket opening visible. Keep the outcome, including a failure or tight fit. Label this shot “This bag only”. Then show bottle beside a sink; no wash-performance claim.
+
+**Camera:** Medium close-up, straight-on pocket; cut to countertop close-up. **Transition:** Hard cut.
+
+**On screen:** Check your pocket opening; Hand wash.
+
+### Scene 5 · 0:24–0:30 · 6 seconds
+
+**Say:** “See the full B500 details. Choose the size that fits your routine.”
+
+**Show:** Hold matte blue bottle upright. End on a simple paper-colour card with the product name and CTA. No logo.
+
+**Camera:** Close-up, static; hold CTA through final frame. **Transition:** End.
+
+**On screen:** See B500 details.
+
+## Presenter and demonstration rules
+
+Use an adult presenter in their own voice, explicitly acting as a demonstrator. Keep “Ad · Paid product demonstration” visible throughout; say “This is a paid product demonstration” in the accompanying post caption. Do not describe the presenter as a customer or add ownership history, a reaction, a review, or a claim of repeated use.
+
+Read the ruler and compare the sample with the supplied 70 mm diameter and 220 mm height before filming. If it differs, stop those specification shots and revise against verified product information; do not fabricate a matching reading. A bag test shows only that sample in that bag. Do not enlarge a pocket off camera, force the bottle in, conceal a failed fit, or add “fits every bag.”
+
+Do not pour liquid or invert the bottle to imply sealing. Do not show a hot/cold comparison, scratch test, dishwasher, safety certificate or environmental comparison. The cap demonstration proves only how it opens. No supplied review or interview is presented as a genuine endorsement.
+
+## Production brief
+
+**People and location:** one paid adult presenter; one operator, or presenter using a tripod. Quiet private room, uncluttered desk near a window, sink for a separate care insert. Owner supplies the physical blue B500, bag, ruler and permission to film there. No recognisable bystanders.
+
+**Kit:** phone, tripod, ruler with millimeter marks, actual bag, physical bottle, plain background, clean cloth. Use window light and a white card for fill. Record at 1080 × 1920, 30 fps; lock focus and exposure for ruler shots. Record close, dry speech; no music or stock footage required. Capture natural cap sound separately.
+
+**Filming order — proposed 60-minute session:**
+
+- Minutes 0–10: check sample, product dimensions, bag, framing, sound and consent. Do not proceed with inaccurate measurement graphics.
+- Minutes 10–25: desk setup; capture scene 2, scene 3 and hook B, hook C, then scene 5. Record two complete takes of cap movement and hold ruler marks readable.
+- Minutes 25–40: bag setup; capture hook A and scene 4’s full fit attempt, with its actual result.
+- Minutes 40–45: sink setup; capture scene 4 care insert with bottle standing beside sink.
+- Minutes 45–60: record all spoken lines and room tone; check focus, readouts and continuity; collect pickups.
+
+**Edit:** create A, B and C as three 30-second drafts; replace only the first four seconds. Use hard cuts with no speed ramps on demonstrations. Keep cap movement real time. Use Arial, ink #173247 on paper #F5F0E8; accent #C65F3B for a small rule. No invented logo. Give large specifications separate lines, not a crowded paragraph.
+
+Use a conservative working text box of x=90–900 and y=300–1100 on a 1080 × 1920 canvas. Keep bottle action and ruler marks clear of captions. This is a draft layout choice; check the actual placement preview before export. Burn in verbatim speech captions, two lines maximum, and stagger feature labels so they do not overlap speech captions. Keep disclosure continuously readable.
+
+**Sound-off check for the editor:** opening action and label explain the angle; scene 2 identifies capacity and dimensions; scene 3 shows the cap opening; scene 4 carries care and bag limitation; scene 5 holds the CTA.
+
+**Delivery:** three H.264 MP4 drafts at 1080 × 1920, 30 fps, named B500_A, B500_B and B500_C; clean masters without captions, captioned masters, editable project, and raw demonstration takes. Caption timings must follow the recorded audio; no final SRT is supplied without audio.
+
+## Post copy and destination
+
+**Primary text:** Ad · Paid product demonstration. See the B500’s dimensions and twist cap before choosing your everyday bottle.
+
+**Headline:** See B500 details
+
+**Button:** Learn more
+
+**Destination:** /products/b500. Only the relative product path is supplied; a merchant domain and live landing-page check are required before distribution. No price, discount, shipping promise or returns claim is used.
+
+## Assets and rights
+
+- Physical B500 and live footage: not supplied; owner provides sample and shoot access.
+- Presenter: proposed paid demonstrator; written appearance consent and paid-ad usage permission required before distribution. No booking or rights agreement made.
+- Location and bag: owner-provided, permission required; hide unrelated marks and personal belongings.
+- Existing C1 proposal: only 30-day organic draft rights; paid usage is not granted. C2 rights are unknown. Neither is treated as cleared talent.
+- Technical illustration: supplied original assets/product.svg; not used as photographic proof. No live product photograph or footage is available.
+- Music, stock and other faces: none planned, no licence purchase needed for this script.
+
+## Evidence notes
+
+All merchant records are illustrative fixture evidence dated 2026-11-17, not real business claims or reviews. Product features: evidence/product.json name, sku, capacity_ml, dimensions_mm, color and care. Voice and design: evidence/brand.json voice and design. Buyer questions: evidence/customers.json interviews I1 and I3, used only to choose the subject. Footage and rights gaps: evidence/creators-and-rights.json footage and candidates[].rights. No live merchant or external public product verification was performed. These facts support a private fixture draft, not publication about a real product.

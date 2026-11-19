@@ -1,0 +1,31 @@
+concept,angle,field,copy,characters,evidence
+A,Dimensions first,Hook,Check the pocket first.,23,"product.json: dimensions_mm, capacity_ml, name, price_usd, color; customers.json: I1"
+A,Dimensions first,Primary short,"Check the pocket first. B500: 70 mm diameter, 220 mm tall. 500 mL twist-cap bottle, $32. Check the dimensions.",110,"product.json: dimensions_mm, capacity_ml, name, price_usd, color; customers.json: I1"
+A,Dimensions first,Primary long,"Check the pocket first. The B500 bottle measures 70 mm across and 220 mm tall. Compare those dimensions with your bag pocket before you buy. 500 mL capacity, twist cap, matte blue finish. $32. Check the dimensions, then shop B500.",230,"product.json: dimensions_mm, capacity_ml, name, price_usd, color; customers.json: I1"
+A,Dimensions first,Headline,Measure before you choose,25,"product.json: dimensions_mm, capacity_ml, name, price_usd, color; customers.json: I1"
+A,Dimensions first,Description,70 mm diameter. 220 mm tall.,28,"product.json: dimensions_mm, capacity_ml, name, price_usd, color; customers.json: I1"
+A,Dimensions first,CTA,Shop Now,8,campaign-draft.json: approved_launch_brief.objective
+B,Cap clarity,Hook,A twist cap. Shown plainly.,27,"product.json: name, capacity_ml, color, price_usd; customers.json: I3"
+B,Cap clarity,Primary short,"A twist cap. Shown plainly. B500 is a 500 mL bottle in matte blue, $32. See the cap and check the details.",106,"product.json: name, capacity_ml, color, price_usd; customers.json: I3"
+B,Cap clarity,Primary long,"A twist cap. Shown plainly. Meet B500: a 500 mL bottle with a twist cap and matte blue finish. Start with the cap, then check the dimensions on the product page. $32. View B500.",177,"product.json: name, capacity_ml, color, price_usd; customers.json: I3"
+B,Cap clarity,Headline,Meet the twist cap,18,"product.json: name, capacity_ml, color, price_usd; customers.json: I3"
+B,Cap clarity,Description,500 mL bottle. $32.,19,"product.json: name, capacity_ml, color, price_usd; customers.json: I3"
+B,Cap clarity,CTA,Shop Now,8,campaign-draft.json: approved_launch_brief.objective
+C,Empty weight,Hook,Know the empty weight.,22,"product.json: weight_g, capacity_ml, dimensions_mm, name, price_usd"
+C,Empty weight,Primary short,"Know the empty weight. B500 weighs 280 g empty and holds 500 mL. Twist-cap bottle, $32. View the details.",105,"product.json: weight_g, capacity_ml, dimensions_mm, name, price_usd"
+C,Empty weight,Primary long,"Know the empty weight. B500 weighs 280 g before you fill it. Its capacity is 500 mL, and its dimensions are 70 mm across by 220 mm tall. A twist cap completes the bottle. $32. Check B500 before you choose.",205,"product.json: weight_g, capacity_ml, dimensions_mm, name, price_usd"
+C,Empty weight,Headline,280 g before filling,20,"product.json: weight_g, capacity_ml, dimensions_mm, name, price_usd"
+C,Empty weight,Description,500 mL capacity. Twist cap.,27,"product.json: weight_g, capacity_ml, dimensions_mm, name, price_usd"
+C,Empty weight,CTA,Shop Now,8,campaign-draft.json: approved_launch_brief.objective
+D,Finish first,Hook,Matte blue. Clear details.,26,"product.json: color, capacity_ml, name, dimensions_mm, price_usd"
+D,Finish first,Primary short,Matte blue. Clear details. B500: a 500 mL twist-cap bottle for $32. Take a closer look.,87,"product.json: color, capacity_ml, name, dimensions_mm, price_usd"
+D,Finish first,Primary long,"Matte blue. Clear details. A 500 mL bottle with a twist cap, 70 mm diameter and 220 mm height. That is B500. $32. Take a closer look at the finish and check the dimensions before you buy.",187,"product.json: color, capacity_ml, name, dimensions_mm, price_usd"
+D,Finish first,Headline,A closer look at blue,21,"product.json: color, capacity_ml, name, dimensions_mm, price_usd"
+D,Finish first,Description,Matte blue. 500 mL. $32.,24,"product.json: color, capacity_ml, name, dimensions_mm, price_usd"
+D,Finish first,CTA,Shop Now,8,campaign-draft.json: approved_launch_brief.objective
+E,Capacity and care,Hook,500 mL. Hand wash.,18,"product.json: capacity_ml, care, name, color, weight_g, price_usd"
+E,Capacity and care,Primary short,500 mL. Hand wash. B500 pairs a twist cap with a matte blue finish. $32. Check the bottle details.,98,"product.json: capacity_ml, care, name, color, weight_g, price_usd"
+E,Capacity and care,Primary long,"500 mL. Hand wash. B500 keeps the product details clear: a twist cap, matte blue finish and 280 g empty weight. $32. Read the specifications and care information, then shop B500.",178,"product.json: capacity_ml, care, name, color, weight_g, price_usd"
+E,Capacity and care,Headline,Capacity meets care,19,"product.json: capacity_ml, care, name, color, weight_g, price_usd"
+E,Capacity and care,Description,500 mL. Hand wash. $32.,23,"product.json: capacity_ml, care, name, color, weight_g, price_usd"
+E,Capacity and care,CTA,Shop Now,8,campaign-draft.json: approved_launch_brief.objective

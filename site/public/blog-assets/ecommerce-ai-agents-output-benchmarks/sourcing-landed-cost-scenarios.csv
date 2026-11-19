@@ -1,0 +1,5 @@
+supplier,quantity,mode,goods,freight,duty,broker,inland,quoted_landed_total,quoted_unit,packaging_if_extra,planning_total,planning_unit,deposit,balance,cost_per_sellable_at_3pct,gross_headroom_at_32
+S1,1000,sea,8000,900,400,100,200,9600,9.6,800.0,10400.0,10.4,2400.0,5600.0,10.7216,21.6
+S1,1000,air,8000,2600,400,100,200,11300,11.3,800.0,12100.0,12.1,2400.0,5600.0,12.4742,19.9
+S2,500,DDP,5250.0,0,0,0,0,5250.0,10.5,400.0,5650.0,11.3,2625.0,2625.0,11.6495,20.7
+S2,1000,DDP,10500.0,0,0,0,0,10500.0,10.5,800.0,11300.0,11.3,5250.0,5250.0,11.6495,20.7

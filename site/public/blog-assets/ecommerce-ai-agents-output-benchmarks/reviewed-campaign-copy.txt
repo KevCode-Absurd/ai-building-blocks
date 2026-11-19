@@ -1,0 +1,10 @@
+Headline: Check the fit.
+
+Primary text: 70 mm across. 220 mm tall. Check your bag pocket before you choose.
+500 mL capacity. Twist cap. Matte blue finish.
+
+Description: 500 mL. Twist cap.
+
+CTA: View product
+
+Destination: /products/b500

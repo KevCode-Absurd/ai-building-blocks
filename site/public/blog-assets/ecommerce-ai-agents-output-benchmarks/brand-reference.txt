@@ -1,0 +1,121 @@
+# Brand reference · B500
+
+Draft · 18 November 2026 · Synthetic illustrative records only. This is not a brand file for Allbirds or any real business.
+
+Use the supplied owner standards as authority. The saved site is evidence of implementation, not approval of every style. Keep the business unbranded: no business name, logo, founder story or certification is supplied.
+
+## Identity and scope
+
+**One line:** A 500 mL twist-cap bottle in matte blue.
+
+**Working description:** B500 is an illustrative bottle with a stainless steel body and polymer twist cap. It holds 500 mL, weighs 280 g empty, and measures 70 mm in diameter by 220 mm high. Hand wash. Material composition and food-contact certification are unverified. Source: [product record](../evidence/product.json), fields `sku`, `name`, `material`, `capacity_ml`, `weight_g`, `dimensions_mm`, `care`; updated 17 November 2026.
+
+Buyer situation: everyday use is suggested by the approved language; buyer demographics, a validated positioning advantage and competitors are unknown. Do not turn this inferred use into a performance promise. Only B500 is in scope.
+
+## Exact design values
+
+| Token | Exact value | Authority and use |
+|---|---|---|
+| Ink | `#173247` | Approved; default text |
+| Paper | `#F5F0E8` | Approved; default background |
+| Accent | `#C65F3B` | Approved; decorative emphasis subject to contrast |
+| Font | `Arial` | Approved family; no approved weight or type scale supplied |
+| Logo | None | Do not invent one |
+
+Source: [brand record](../evidence/brand.json), `design`, updated 17 November 2026. Import [JSON tokens](design-tokens.json) or [CSS tokens](brand-tokens.css). CSS variable names are proposed implementation names; their values are supplied facts.
+
+The saved site explicitly declares Arial, paper background, ink text, `body margin: 2rem`, and `img max-width: 320px`. Only its first three values match approved standards. The margin and image limit are observed local CSS, not a spacing scale. It sets no explicit heading size, line height, button style or breakpoint; browser defaults must not be promoted into approved tokens. Source: [saved site](../evidence/assets/product-page.html), `<style>`.
+
+The technical SVG adds `#497A97` bottle fill and `#9EBAC8` highlight, with a 4-unit stroke. These are illustration colors, not approved brand tokens. Keep the asset unchanged; it is not a photograph or material proof. Source: [technical illustration](../evidence/assets/product.svg) and product record `assets`.
+
+## Contrast and application
+
+Ratios below are calculated from the supplied hex values using sRGB relative luminance, `(lighter + 0.05) / (darker + 0.05)`. These are color checks, not a full accessibility audit.
+
+| Foreground / background | Ratio | Normal text ≥4.5 | Large text ≥3 |
+|---|---:|---|---|
+| `#173247` / `#F5F0E8` | 11.689:1 | Pass | Pass |
+| `#C65F3B` / `#F5F0E8` | 3.629:1 | Fail | Pass |
+| `#173247` / `#C65F3B` | 3.221:1 | Fail | Pass |
+
+Use ink on paper for reading and primary text. Accent on paper fails the 4.5:1 normal-text check; reserve it for large text that meets the 3:1 check or decoration. Ink on accent fails 4.5:1 too. Do not use either pair for small button labels. Proposed safe button treatment: paper label on ink background. Focus treatment, type scale, spacing, radii and responsive rules remain unapproved; this guide's layout does not establish them.
+
+## Voice writers can reproduce
+
+**Voice:** Calm, specific and useful. Name the object, give the fact, then offer one clear action. Source: brand record `voice`.
+
+Only two approved lines exist; channels were not supplied. They are anchors, not evidence of five approved examples:
+
+- “Room for the everyday.”
+- “Choose the size that fits your routine.”
+
+The first is calm and economical; the second addresses the reader directly and offers a useful choice. It does not authorize invented sizes. B500 has one documented capacity, so use “See the bottle details” when there is no genuine size choice.
+
+| Rule | New draft example | Avoid | Boundary |
+|---|---|---|---|
+| Calm: state facts without hype | “500 mL for the everyday.” | “The ultimate bottle.” | No superiority claim |
+| Specific: units beat adjectives | “280 g empty.” | “Effortlessly lightweight.” | No comparative weight inference |
+| Useful: give a truthful next step | “See dimensions and care.” | “Get yours before it’s gone.” | No artificial shortage |
+
+Use: bottle, twist cap, matte blue, capacity, empty weight, hand wash. Write `500 mL`, `280 g`, `70 mm × 220 mm`, `B500`, and `500 mL twist-cap bottle` consistently. Use sentence case. Prefer plain verbs; avoid empty “premium,” “ultimate” and “revolutionary” language as editorial guidance. Those are proposed writing rules, not additional owner bans.
+
+### Five usable draft lines, with provenance
+
+1. Product title: “500 mL twist-cap bottle.” — product record `name`; same factual title as the saved site.
+2. Product detail: “Matte blue. Twist cap. 280 g empty.” — product record `color`, `name`, `weight_g`.
+3. Care: “Hand wash your bottle.” — product record `care`.
+4. Detail-link label: “See dimensions and care.” — new navigation copy; use only when linked details exist.
+5. Return-policy line: “Unused returns within 14 days of delivery. Defective-goods rights are not waived.” — support record `current_policy` and brand record `policy_conflict`.
+
+These are new drafts, not approved brand quotes. No five-sample source set is fabricated.
+
+### Channel and hard-moment rules
+
+Product pages: lead with capacity and cap type, then weight, dimensions and care. Email and social: one useful point and one action, without urgency unsupported by availability. Support: acknowledge the issue, explain the next review step, and avoid humour or premature promises. Proposed damage response: “I’m sorry the cap arrived damaged. Please share a photo of the damage so support can review it.” Source: [support record](../evidence/support-and-consent.json), `current_policy.damage_escalation`. In an actual case use known order details rather than asking again. No refund decision or response time is promised.
+
+### Source-based rewrites
+
+| Supplied wording | Draft treatment | Reason |
+|---|---|---|
+| “Room for the everyday.” | Keep as an approved general line | No added product promise |
+| “Choose the size that fits your routine.” | “See the bottle details.” | One documented capacity; no fictitious size selector |
+| Saved site: “$32” | “$32 USD” | Explicit currency for this US fixture |
+| Saved site: “Add to cart” | Keep for available blue; “Sold out” for unavailable clay | Do not invite purchase of a zero-stock variant |
+| Old policy: “30 days” | “Unused returns within 14 days of delivery.” | Current owner policy controls; preserve defective-goods rights beside it |
+
+## Claim permissions and prohibitions
+
+All permissions below apply only inside this synthetic draft. Fixture timestamps are not independent public substantiation. Before real publication, recheck specifications, policies, price, availability and offer terms against dated authoritative business records.
+
+| Claim | Current evidence | Rule |
+|---|---|---|
+| 500 mL capacity; 280 g empty; twist cap; matte blue finish | Brand `claims.approved`; product specification, 17 November | Allowed for B500 fixture |
+| 70 mm diameter; 220 mm height; hand wash | Product `dimensions_mm`, `care`, 17 November | Allowed fixture details |
+| Stainless steel body; polymer cap | Product `material`, 17 November | Describe components only; no grade, safety or certification implication |
+| $32 USD | Product `price_usd`, 17 November | Recheck at publication; no timeless price promise |
+| Leakproof; waterproof; dishwasher safe; 24-hour insulation | Brand `claims.unsupported`; no lab proof | Do not use, including paraphrases |
+| Medical benefits; sustainability superiority | Brand `claims.unsupported` | Do not use; no inferred health or environmental outcomes |
+| Food-safe / certified / BPA-free / steel grade | Product `material` unverified | Do not use without appropriate specific evidence |
+| Customer results, reviews, awards or endorsements | None supplied for this job | Do not invent or turn synthetic records into testimonials |
+
+**Owner-banned language:** “game changer”; “miracle”; “guaranteed waterproof”; “planet saving”. Ban their meaning as well as exact strings. Sources: brand record `voice.forbidden` and `claims`.
+
+**Offer constraint:** The approved fixture offer is 10% off in-stock B500 units only, expiring 30 November 2026, with no additional coupon stacking. The 15% figure is a ceiling, not an approved offer. Do not promote a shortage. Do not infer an expiration time, timezone, shipping promise or additional terms. Source: brand record `offer`. Keep promotional copy out of evergreen brand defaults.
+
+## Conflicts and unresolved decisions
+
+| Issue | Evidence and status | Working rule and exact next decision |
+|---|---|---|
+| Returns disagree | Old page: 30 days, 1 January 2025; current owner: 14 days unused, 17 November 2026 | Use 14 days after delivery, preserving defective-goods rights. Owner must replace the old page and approve matching checkout/help text before publication. Old-page text is reported in brand record, not independently inspected. |
+| Size-choice line exceeds range | Approved voice example invites size choice; product has only 500 mL | Keep as voice evidence; use details CTA for B500. Owner must supply another capacity before a size-choice campaign. |
+| Saved site offers clay purchase | Product variants: blue 20, clay 0; saved selector and buy handler allow both | Draft messages must reflect variant stock. Site owner must implement availability before launch; no site change performed here. Counts are fixture observations, not live inventory. |
+| Approved palette vs illustration | Approved accent is terracotta; bottle SVG uses blue and pale-blue fills | Treat SVG colors as asset-local. Owner must explicitly authorize any extension of the palette. |
+| Incomplete design system | No approved sizes, weights, spacing scale, radii, focus states or breakpoints | Preserve unknowns. Owner's next design decision is to commission/approve those standards rather than adopting browser defaults. |
+| Missing business and audience foundation | Unbranded fixture; only two approved lines; no channel-tagged sample set | Retain product-based identity. Owner must supply business name, validated audience and five channel-tagged approved samples to expand voice rules. |
+| No production evidence | Local site only; no production URL or independent product tests | Draft scope only. Supply dated real product proof and current public source pages before making real claims. |
+
+**Bolder move — proposal:** Put the four approved B500 facts in one reusable product-facts module used by site, email and social. First step: owner assigns one maintainer and attaches dated proof to each fact. Risk: a stale module spreads stale claims; recheck at every product or policy change. This is a governance proposal, not an observed result.
+
+## Release rule
+
+A writer may reuse approved language and supplied facts within their exact scope. New benefit, safety, environmental or comparative claims stay blocked without evidence. Check the conflict table before each release. Never use this illustrative brand reference as real-business substantiation.

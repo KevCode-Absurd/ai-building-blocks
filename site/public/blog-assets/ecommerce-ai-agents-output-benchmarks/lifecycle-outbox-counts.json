@@ -1,0 +1,99 @@
+{
+  "schema": "reviewed-local-outbox-counts/1",
+  "scope": "Counts derived from an actual synthetic local-provider readback. Recorded is a local record, not sent or delivered. No live email or SMS integration is established.",
+  "total": 42,
+  "statuses": {
+    "recorded": 13,
+    "suppressed": 27,
+    "pending": 2
+  },
+  "allExternalDeliveryFalse": true,
+  "groups": [
+    {
+      "flow": "cart_abandoned",
+      "channel": "email",
+      "status": "recorded",
+      "count": 1
+    },
+    {
+      "flow": "cart_abandoned",
+      "channel": "email",
+      "status": "suppressed",
+      "count": 6
+    },
+    {
+      "flow": "cart_abandoned",
+      "channel": "sms",
+      "status": "recorded",
+      "count": 1
+    },
+    {
+      "flow": "cart_abandoned",
+      "channel": "sms",
+      "status": "suppressed",
+      "count": 6
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "email",
+      "status": "pending",
+      "count": 1
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "email",
+      "status": "recorded",
+      "count": 1
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "email",
+      "status": "suppressed",
+      "count": 1
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "sms",
+      "status": "pending",
+      "count": 1
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "sms",
+      "status": "recorded",
+      "count": 1
+    },
+    {
+      "flow": "post_purchase",
+      "channel": "sms",
+      "status": "suppressed",
+      "count": 1
+    },
+    {
+      "flow": "welcome",
+      "channel": "email",
+      "status": "recorded",
+      "count": 4
+    },
+    {
+      "flow": "welcome",
+      "channel": "email",
+      "status": "suppressed",
+      "count": 7
+    },
+    {
+      "flow": "welcome",
+      "channel": "sms",
+      "status": "recorded",
+      "count": 5
+    },
+    {
+      "flow": "welcome",
+      "channel": "sms",
+      "status": "suppressed",
+      "count": 6
+    }
+  ],
+  "transformation": "Root projected only allowed flow, channel and status values and aggregated counts. Contacts, dataset and record identifiers, dates, message bodies, destinations and merchant fields were omitted.",
+  "sourceArtifactSha256": "8f7f086d0ab0d93535998637250b00d004f5c7b45822f5bd2a55aea6b4334b89"
+}

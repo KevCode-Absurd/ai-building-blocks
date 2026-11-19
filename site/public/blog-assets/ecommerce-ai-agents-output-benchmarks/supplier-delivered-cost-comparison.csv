@@ -1,0 +1,3 @@
+supplier,quantity,currency,incoterm,unit_price,goods,freight,duty,broker,inland,quoted_delivered_total,quoted_delivered_per_unit,moq,deposit,balance,quoted_lead_days,unpriced_costs,source
+S1,1000,USD,FOB origin port,8,8000,900,400,100,200,9600,9.6,1000,2400.0,5600.0,40,insurance; inspection; bank fees; unloading; defect/rework; unconfirmed packing and surcharges,evidence/supply.json#/supplier_offers/0
+S2,1000,USD,DDP named warehouse,10.5,10500.0,0,0,0,0,10500.0,10.5,500,5250.0,5250.0,25,insurance; inspection; bank fees; unloading; defect/rework; unconfirmed packing and surcharges,evidence/supply.json#/supplier_offers/1

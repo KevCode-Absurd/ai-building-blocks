@@ -1,0 +1,23 @@
+id,date,week,owner,estimated_hours,task,depends_on,review_ready_when,status
+C1,2026-11-18,2026-11-16,marketer,2,Copy pack and claim lock,none,Approved launch copy; exact destination; dimension notes; no discount or new claims,proposed; not booked
+D1,2026-11-18,2026-11-16,designer,2,Technical storyboard and layout,C1,Three supplied script beats; unchanged technical SVG; 70 mm diameter and 220 mm height visible before CTA,proposed; not booked
+P1,2026-11-18,2026-11-16,developer,4,Finish landing draft,none,Local draft retains dimensions before CTA; delivery expectations supported or omitted,proposed; not booked
+R0,2026-11-19,2026-11-16,owner,0,Storyboard gate before animation,D1,Written proceed or one consolidated correction list by start of editor slot,proposed; not booked
+D2,2026-11-19,2026-11-16,designer,4,Two static first-pass layouts,R0,Proposed 1080x1350 and 1080x1920 drafts; text legible; technical illustration labelled,proposed; not booked
+V1,2026-11-19,2026-11-16,editor,3,Animate approved storyboard,R0,12-second vertical technical mockup; no UGC or invented footage,proposed; not booked
+C2,2026-11-19,2026-11-16,marketer,2,Creative concept review pack,D2,Copy paired with first-pass graphics; unapproved graphics clearly labelled; meets ledger due date,proposed; not booked
+P2,2026-11-19,2026-11-16,developer,4,Landing tests,P1,Dimension order; destination; responsive layout; delivery wording tested locally,proposed; not booked
+D3,2026-11-20,2026-11-16,designer,2,Design QA and review packaging,D2,Two preview images plus editable design source and claim references,proposed; not booked
+V2,2026-11-20,2026-11-16,editor,2,Rough-cut QA and captions,V1,0-3/3-8/8-12 second beats; muted viewing understandable; caption/source checks,proposed; not booked
+T1,2026-11-20,2026-11-16,developer,4,Tracking audit and landing handoff,P2,Test evidence and unresolved live checks documented; audit prepared ahead of Nov21 due date,proposed; not booked
+C3,2026-11-20,2026-11-16,marketer,2,Round-one consolidated review pack,C2;D3;V2;T1,"One manifest links copy, statics, rough cut and landing test evidence",proposed; not booked
+R1,2026-11-20,2026-11-16,owner,0,Round-one written review,C3,One consolidated list before Nov23 production; no new claims,proposed; not booked
+C4,2026-11-23,2026-11-23,marketer,2,Triage round-one notes and stock check,R1,One bounded correction list; record stock gate as held until evidence resolves it,proposed; not booked
+D4,2026-11-23,2026-11-23,designer,1,Round-one corrections,C4,Dimension and copy corrections applied; no new concept,proposed; not booked
+V3,2026-11-23,2026-11-23,editor,1,Round-one corrections,C4,Bounded caption/timing corrections applied,proposed; not booked
+R2,2026-11-24,2026-11-23,owner,0,Round-two final review,D4;V3,Written disposition before export; new scope returns to estimate,proposed; not booked
+D5,2026-11-24,2026-11-23,designer,1,Static final draft exports,R2,Both placement exports match approved source; draft status retained,proposed; not booked
+V4,2026-11-24,2026-11-23,editor,1,Video final draft export,R2,"1080x1920 MP4 target,12 seconds; play-through and frame checks recorded by editor",proposed; not booked
+C5,2026-11-24,2026-11-23,marketer,2,Review-ready handoff manifest,D5;V4;T1,"Copy, sources, rights, versions and written approvals mapped; launch remains held",proposed; not booked
+C6,2026-11-25,2026-11-23,marketer,1,Readiness exception check,C5,"Owner receives only unresolved stock, targeting and live tracking exceptions",proposed; not booked
+C7,2026-11-26,2026-11-23,marketer,1,Close original window and reforecast,C6,No automatic rollover; propose fresh dates and budget only after stock resolution,proposed; not booked

@@ -1,0 +1,20 @@
+{
+  "record_count": 8,
+  "interviews": 4,
+  "reviews": 4,
+  "objection_counts": {
+    "delivery": 3,
+    "support": 2,
+    "fit": 1,
+    "operation": 1,
+    "finish": 1
+  },
+  "unique_delivery_or_support_records": 4,
+  "interview_segment_counts": {
+    "commuter": 2,
+    "gift buyer": 1,
+    "repeat buyer": 1
+  },
+  "unknown_review_segments": 4,
+  "counts_definition": "One record counted once per code; I4 has two codes. IDs cannot establish unique people across interviews and reviews. Fit praise R1 excluded from fit objection count."
+}

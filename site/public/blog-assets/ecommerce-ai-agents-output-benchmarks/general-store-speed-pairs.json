@@ -1,0 +1,1016 @@
+[
+  {
+    "profile": "mobile",
+    "route": "home",
+    "baseline": {
+      "lcp": 2348,
+      "cls": 0.8549519990278284,
+      "blocking": 0,
+      "hero": 1384.300000011921
+    },
+    "candidate": {
+      "lcp": 1596,
+      "cls": 0.8549519990278284,
+      "blocking": 0,
+      "hero": 203.29999995231628
+    },
+    "pairedMedianDelta": -728,
+    "pairedMedianPercent": -31.217838765008576,
+    "deltaRange": [
+      -784,
+      -720
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 2352,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1382.7999999523163,
+          "lcpElement": {
+            "startTime": 2352,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1576,
+          "cls": 0.8549519990278284,
+          "blocking": 1,
+          "hero": 194.39999997615814,
+          "lcpElement": {
+            "startTime": 1576,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -776,
+        "percent": -32.993197278911566
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 2332,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1388.199999988079,
+          "lcpElement": {
+            "startTime": 2332,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1604,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 198.89999997615814,
+          "lcpElement": {
+            "startTime": 1604,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -728,
+        "percent": -31.217838765008576
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 2348,
+          "cls": 0.8549519990278284,
+          "blocking": 1,
+          "hero": 1384.300000011921,
+          "lcpElement": {
+            "startTime": 2348,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1624,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 208.4000000357628,
+          "lcpElement": {
+            "startTime": 1624,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -724,
+        "percent": -30.834752981260646
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 2368,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1409,
+          "lcpElement": {
+            "startTime": 2368,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1584,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 203.29999995231628,
+          "lcpElement": {
+            "startTime": 1584,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -784,
+        "percent": -33.108108108108105
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 2316,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1374.7000000476837,
+          "lcpElement": {
+            "startTime": 2316,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1596,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 210.10000002384186,
+          "lcpElement": {
+            "startTime": 1596,
+            "size": 85515,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -720,
+        "percent": -31.088082901554404
+      }
+    ]
+  },
+  {
+    "profile": "mobile",
+    "route": "collection",
+    "baseline": {
+      "lcp": 1844,
+      "cls": 0.4009011993367866,
+      "blocking": 0,
+      "hero": 1384.199999988079
+    },
+    "candidate": {
+      "lcp": 1568,
+      "cls": 0.4009011993367866,
+      "blocking": 0,
+      "hero": 201.10000002384186
+    },
+    "pairedMedianDelta": -272,
+    "pairedMedianPercent": -14.750542299349242,
+    "deltaRange": [
+      -292,
+      -236
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 1860,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 1387.1000000238419,
+          "lcpElement": {
+            "startTime": 1860,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-2.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1568,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 195.5999999642372,
+          "lcpElement": {
+            "startTime": 1568,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -292,
+        "percent": -15.698924731182796
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 1844,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 1384.199999988079,
+          "lcpElement": {
+            "startTime": 1844,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-2.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1572,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 198.69999998807907,
+          "lcpElement": {
+            "startTime": 1572,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -272,
+        "percent": -14.750542299349242
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 1832,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 1362.800000011921,
+          "lcpElement": {
+            "startTime": 1832,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-2.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1596,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 204.19999998807907,
+          "lcpElement": {
+            "startTime": 1596,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -236,
+        "percent": -12.882096069868995
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 1852,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 1388.6000000238419,
+          "lcpElement": {
+            "startTime": 1852,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-2.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1564,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 201.10000002384186,
+          "lcpElement": {
+            "startTime": 1564,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -288,
+        "percent": -15.550755939524837
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 1820,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 1359.1000000238419,
+          "lcpElement": {
+            "startTime": 1820,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-2.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1564,
+          "cls": 0.4009011993367866,
+          "blocking": 0,
+          "hero": 206.89999997615814,
+          "lcpElement": {
+            "startTime": 1564,
+            "size": 26732,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -256,
+        "percent": -14.065934065934066
+      }
+    ]
+  },
+  {
+    "profile": "mobile",
+    "route": "product/piece-1",
+    "baseline": {
+      "lcp": 2132,
+      "cls": 0.8549519990278284,
+      "blocking": 0,
+      "hero": 1387.0999999642372
+    },
+    "candidate": {
+      "lcp": 1572,
+      "cls": 0.8549519990278284,
+      "blocking": 0,
+      "hero": 196.30000001192093
+    },
+    "pairedMedianDelta": -564,
+    "pairedMedianPercent": -26.55367231638418,
+    "deltaRange": [
+      -572,
+      -528
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 2144,
+          "cls": 0.8549519990278284,
+          "blocking": 1,
+          "hero": 1388.1000000238419,
+          "lcpElement": {
+            "startTime": 2144,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1572,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 196.30000001192093,
+          "lcpElement": {
+            "startTime": 1572,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -572,
+        "percent": -26.67910447761194
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 2132,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1387.0999999642372,
+          "lcpElement": {
+            "startTime": 2132,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1560,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 194.39999997615814,
+          "lcpElement": {
+            "startTime": 1560,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -572,
+        "percent": -26.829268292682926
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 2136,
+          "cls": 0.8549519990278284,
+          "blocking": 13,
+          "hero": 1391.4000000357628,
+          "lcpElement": {
+            "startTime": 2136,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1588,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 204,
+          "lcpElement": {
+            "startTime": 1588,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -548,
+        "percent": -25.655430711610485
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 2108,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1362.3999999761581,
+          "lcpElement": {
+            "startTime": 2108,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1580,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 204.29999995231628,
+          "lcpElement": {
+            "startTime": 1580,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -528,
+        "percent": -25.047438330170777
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 2124,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 1375.300000011921,
+          "lcpElement": {
+            "startTime": 2124,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1560,
+          "cls": 0.8549519990278284,
+          "blocking": 0,
+          "hero": 188,
+          "lcpElement": {
+            "startTime": 1560,
+            "size": 117992,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -564,
+        "percent": -26.55367231638418
+      }
+    ]
+  },
+  {
+    "profile": "desktop",
+    "route": "home",
+    "baseline": {
+      "lcp": 2240,
+      "cls": 0.42928617229697147,
+      "blocking": 0,
+      "hero": 1287.2000000476837
+    },
+    "candidate": {
+      "lcp": 1484,
+      "cls": 0.42927751186041185,
+      "blocking": 0,
+      "hero": 177.19999998807907
+    },
+    "pairedMedianDelta": -752,
+    "pairedMedianPercent": -33.691756272401435,
+    "deltaRange": [
+      -772,
+      -736
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 2248,
+          "cls": 0.42928617229697147,
+          "blocking": 0,
+          "hero": 1295.5999999642372,
+          "lcpElement": {
+            "startTime": 2248,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1484,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 174.30000001192093,
+          "lcpElement": {
+            "startTime": 1484,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -764,
+        "percent": -33.98576512455516
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 2240,
+          "cls": 0.42928617229697147,
+          "blocking": 0,
+          "hero": 1287.2000000476837,
+          "lcpElement": {
+            "startTime": 2240,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1492,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 177.19999998807907,
+          "lcpElement": {
+            "startTime": 1492,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -748,
+        "percent": -33.392857142857146
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 2232,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 1268.8999999761581,
+          "lcpElement": {
+            "startTime": 2232,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1480,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 178.10000002384186,
+          "lcpElement": {
+            "startTime": 1480,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -752,
+        "percent": -33.691756272401435
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 2244,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 1291.800000011921,
+          "lcpElement": {
+            "startTime": 2244,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1472,
+          "cls": 0.42928617229697147,
+          "blocking": 0,
+          "hero": 173.30000001192093,
+          "lcpElement": {
+            "startTime": 1472,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -772,
+        "percent": -34.40285204991088
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 2232,
+          "cls": 0.42928617229697147,
+          "blocking": 0,
+          "hero": 1273.5999999642372,
+          "lcpElement": {
+            "startTime": 2232,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1496,
+          "cls": 0.42927751186041185,
+          "blocking": 0,
+          "hero": 185.70000004768372,
+          "lcpElement": {
+            "startTime": 1496,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -736,
+        "percent": -32.97491039426523
+      }
+    ]
+  },
+  {
+    "profile": "desktop",
+    "route": "collection",
+    "baseline": {
+      "lcp": 1680,
+      "cls": 0.0470799430941358,
+      "blocking": 0,
+      "hero": 1279.5
+    },
+    "candidate": {
+      "lcp": 1476,
+      "cls": 0.0470712826575762,
+      "blocking": 0,
+      "hero": 176.9000000357628
+    },
+    "pairedMedianDelta": -208,
+    "pairedMedianPercent": -12.293144208037825,
+    "deltaRange": [
+      -276,
+      -196
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 1704,
+          "cls": 0.0470799430941358,
+          "blocking": 0,
+          "hero": 1301.1000000238419,
+          "lcpElement": {
+            "startTime": 1704,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-3.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1496,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 176.9000000357628,
+          "lcpElement": {
+            "startTime": 1496,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -208,
+        "percent": -12.206572769953052
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 1680,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 1272,
+          "lcpElement": {
+            "startTime": 1680,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-3.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1468,
+          "cls": 0.0470799430941358,
+          "blocking": 0,
+          "hero": 178.4000000357628,
+          "lcpElement": {
+            "startTime": 1468,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -212,
+        "percent": -12.619047619047619
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 1692,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 1283.7000000476837,
+          "lcpElement": {
+            "startTime": 1692,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-3.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1484,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 177.39999997615814,
+          "lcpElement": {
+            "startTime": 1484,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -208,
+        "percent": -12.293144208037825
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 1680,
+          "cls": 0.0470799430941358,
+          "blocking": 0,
+          "hero": 1279.5,
+          "lcpElement": {
+            "startTime": 1680,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-3.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1404,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 172.5,
+          "lcpElement": {
+            "startTime": 1404,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -276,
+        "percent": -16.428571428571427
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 1672,
+          "cls": 0.0470799430941358,
+          "blocking": 0,
+          "hero": 1269.5,
+          "lcpElement": {
+            "startTime": 1672,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-3.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1476,
+          "cls": 0.0470712826575762,
+          "blocking": 0,
+          "hero": 170.10000002384186,
+          "lcpElement": {
+            "startTime": 1476,
+            "size": 89401,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -196,
+        "percent": -11.722488038277511
+      }
+    ]
+  },
+  {
+    "profile": "desktop",
+    "route": "product/piece-1",
+    "baseline": {
+      "lcp": 2000,
+      "cls": 0.19000796478648244,
+      "blocking": 0,
+      "hero": 1269.7000000476837
+    },
+    "candidate": {
+      "lcp": 1460,
+      "cls": 0.19000796478648244,
+      "blocking": 0,
+      "hero": 171.19999998807907
+    },
+    "pairedMedianDelta": -540,
+    "pairedMedianPercent": -27.054108216432866,
+    "deltaRange": [
+      -564,
+      -488
+    ],
+    "pairs": [
+      {
+        "pair": 0,
+        "baseline": {
+          "lcp": 1996,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 1259.9000000357628,
+          "lcpElement": {
+            "startTime": 1996,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1456,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 171.19999998807907,
+          "lcpElement": {
+            "startTime": 1456,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -540,
+        "percent": -27.054108216432866
+      },
+      {
+        "pair": 1,
+        "baseline": {
+          "lcp": 2000,
+          "cls": 0.19001662522304205,
+          "blocking": 0,
+          "hero": 1271.1000000238419,
+          "lcpElement": {
+            "startTime": 2000,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1484,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 170.4000000357628,
+          "lcpElement": {
+            "startTime": 1484,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -516,
+        "percent": -25.8
+      },
+      {
+        "pair": 2,
+        "baseline": {
+          "lcp": 2008,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 1272.5999999642372,
+          "lcpElement": {
+            "startTime": 2008,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1460,
+          "cls": 0.19001662522304205,
+          "blocking": 0,
+          "hero": 174.39999997615814,
+          "lcpElement": {
+            "startTime": 1460,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -548,
+        "percent": -27.290836653386453
+      },
+      {
+        "pair": 3,
+        "baseline": {
+          "lcp": 2012,
+          "cls": 0.19001662522304205,
+          "blocking": 0,
+          "hero": 1269.7000000476837,
+          "lcpElement": {
+            "startTime": 2012,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1448,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 177.9000000357628,
+          "lcpElement": {
+            "startTime": 1448,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -564,
+        "percent": -28.031809145129223
+      },
+      {
+        "pair": 4,
+        "baseline": {
+          "lcp": 1976,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 1218.9000000357628,
+          "lcpElement": {
+            "startTime": 1976,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "candidate": {
+          "lcp": 1488,
+          "cls": 0.19000796478648244,
+          "blocking": 0,
+          "hero": 170,
+          "lcpElement": {
+            "startTime": 1488,
+            "size": 123201,
+            "url": "http://127.0.0.1:9497/assets/product-1.jpg",
+            "tag": "IMG"
+          }
+        },
+        "delta": -488,
+        "percent": -24.696356275303643
+      }
+    ]
+  }
+]

@@ -2304,7 +2304,8 @@
     "agents": [
       "tendai-ad-creative",
       "lindsey-meta-media-buyer",
-      "shannon-market-research"
+      "shannon-market-research",
+      "hattie-competitor-teardown"
     ],
     "stage": "research",
     "connect": "The Ad Library API covers social issue, election and political ads plus ads delivered in the EU; for other ads the agent works from screenshots or exports. Start at level 1 read.",
@@ -2329,7 +2330,8 @@
     ],
     "agents": [
       "raymond-google-ads",
-      "shannon-market-research"
+      "shannon-market-research",
+      "hattie-competitor-teardown"
     ],
     "stage": "research",
     "connect": "No API or download seen; the agent works from what the owner screenshots. Start at level 1 read.",

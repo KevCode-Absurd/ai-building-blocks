@@ -1,0 +1,25 @@
+{
+  "id": "dtc-competitor-teardown",
+  "name": "D2C competitor teardown analyst",
+  "department": "ecommerce",
+  "summary": "Reverse engineers a D2C brand's marketing from public evidence (catalogue, offers, pixels and apps, Meta and Google ads, search demand, positioning history) and hands each of the owner's agents a cited brief on what to copy and where to win.",
+  "aliases": [
+    "competitor teardown",
+    "reverse engineer marketing",
+    "competitor research",
+    "competitor analysis",
+    "competitor ads",
+    "ad spy",
+    "what is my competitor doing",
+    "D2C brand teardown",
+    "competitive intelligence"
+  ],
+  "updated": "2026-11-19",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-19",
+      "note": "New D2C teardown kit: public evidence collector (catalogue, offers, Shopify apps and pixels, Google Ads Transparency, autocomplete, YouTube, Wayback), Meta Ad Library sampling through the official connector, a report checker, branded rendering and per-agent briefs."
+    }
+  ]
+}

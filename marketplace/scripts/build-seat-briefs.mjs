@@ -25,6 +25,8 @@ const write = (file, content) => {
 for (const file of readdirSync(DATA).filter(f => /^personas-.*\.json$/.test(f)).sort()) {
   const personas = readJson(path.join(DATA, file), []);
   for (const persona of personas) {
+    // A hand-written team block is curated (its families and roles were chosen by a person): keep it as is.
+    if (persona.team?.provenance === "hand-written") { everyone.push({ id: persona.id, name: persona.name, title: persona.title, ...persona.team }); continue; }
     const facets = baseTeamFacets(persona);
     const linkedItems = new Set([
       ...persona.profile.source_roles,

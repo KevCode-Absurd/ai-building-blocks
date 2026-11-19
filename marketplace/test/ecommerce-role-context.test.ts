@@ -21,7 +21,7 @@ const cards = readdirSync(new URL("../knowledge/ecommerce/cards/", import.meta.u
 const bundle = verticalBundle(verticalData as Vertical, cards, sources);
 
 test("all current role contracts preserve actual outcomes and canonical module routing backed by public sources", () => {
-  assert.equal(team.length, 80);
+  assert.equal(team.length, 81);
   const workSignatures = new Set<string>();
   for (const p of team) {
     const ctx = ecommerceRoleContext(p)!;

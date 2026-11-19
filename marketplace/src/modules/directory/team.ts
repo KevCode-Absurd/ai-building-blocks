@@ -69,6 +69,7 @@ function ecommerceRosterMarkdown(self: string): string[] {
     if (names.length) out.push(`- **${stage.label}.** ${stage.summary.replace(/\.?$/, ".")}`, ...names);
   }
   out.push("", "Work only for stores selling in India (COD, RTO, quick commerce, Indian marketplaces, GST) goes to ishita-india-commerce.", "");
+  out.push("Competitor marketing teardowns (\"reverse engineer a brand\", a rival's ads, offers, prices, apps or positioning) go to hattie-competitor-teardown. Sizing a market or category stays with shannon-market-research.", "");
   out.push("For store speed work, verify the storefront stack before assigning implementation. Shopify Liquid themes and theme apps go to arjun-page-speed. Headless or custom storefronts go to nico-ecommerce-speed, including a headless frontend backed by Shopify; involve Arjun only for a separate Shopify theme/backend part. WordPress and WooCommerce go to vera-woocommerce-speed. When the stack is unknown, Nico diagnoses it first and hands the work to the verified platform owner. Keep the same measurement protocol and commerce checks across any handoff.", "");
   return out;
 }

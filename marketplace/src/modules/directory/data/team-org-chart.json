@@ -868,6 +868,17 @@
           "seat_suitability": [
             "maker"
           ]
+        },
+        {
+          "id": "dtc-competitor-teardown",
+          "name": "D2C competitor teardown analyst",
+          "persona_ids": [
+            "hattie-competitor-teardown"
+          ],
+          "seat_suitability": [
+            "fact_checker",
+            "strategist"
+          ]
         }
       ]
     },
@@ -2463,7 +2474,8 @@
             "keisha-market-research",
             "kojo-competitor-analysis",
             "lewis-idea-validation",
-            "lestari-location-research"
+            "lestari-location-research",
+            "hattie-competitor-teardown"
           ],
           "seat_suitability": [
             "coordinator",
@@ -23395,11 +23407,38 @@
       "department": "ecommerce",
       "stance": "Protect carts, prices and customer sessions",
       "provenance": "deterministic-existing-profile"
+    },
+    {
+      "id": "hattie-competitor-teardown",
+      "name": "Hattie",
+      "title": "D2C competitor teardown analyst",
+      "roles": [
+        "dtc-competitor-teardown",
+        "competitor-white-space-mapper",
+        "market-research-analyst",
+        "monthly-competitor-watcher",
+        "quarterly-battle-card-keeper"
+      ],
+      "families": [
+        "competitor-intelligence"
+      ],
+      "lenses": [
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Study the strategy, ship your own",
+      "provenance": "hand-written"
     }
   ],
   "coverage": {
-    "personas": 585,
-    "linked_families": 198,
+    "personas": 586,
+    "linked_families": 199,
     "approach_index_available": true
   }
 }

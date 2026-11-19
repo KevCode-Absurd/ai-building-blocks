@@ -1,0 +1,30 @@
+{
+  "created": "2026-11-19T07:05:47.077Z",
+  "generator": "scripts/portraits.mjs (OpenAI Images API)",
+  "model": "gpt-image-2.5-flare",
+  "quality": "medium",
+  "size": "1024x1024",
+  "api_credits_used": true,
+  "cost_usd": 0.013965,
+  "usage": {
+    "input_tokens": 159,
+    "output_tokens": 439
+  },
+  "style": "3D animated character portrait on a pastel tint of the persona accent #7A3E9D, from the persona look",
+  "subjects": "Original fictional agent character, not a real person.",
+  "encoding": "512x512 WebP quality82 by sharp; the 1024x1024 PNG returned by the API was not kept.",
+  "assets": [
+    {
+      "id": "hattie-competitor-teardown",
+      "path": "public/agents/hattie-competitor-teardown.webp",
+      "sha256": "972c4574344a6297ebff2fbaebc3c5074265527b09d955a46245406208450e50",
+      "prompt_sha256": "a3dd0e428e2ba917b0b4a32395cb1149969e3c4534f60c74d6bf5281fc379362",
+      "bytes": 33310,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "prompts": {
+    "hattie-competitor-teardown": "A polished 3D animated feature film style character portrait. Stylized proportions with a slightly oversized head, expressive large eyes, soft subsurface scattering on the skin, volumetric hair, soft cinematic studio lighting, high-end 3D render, ultra-detailed textures. Head and shoulders, centred, facing the viewer with a warm, friendly expression. Fictional 3D mascot of a British woman in her late thirties with warm brown skin, short natural curls and round tortoiseshell glasses, wearing a mustard cardigan over a striped top, holding a magnifying glass over a small product box, plum background. Clean seamless background in a soft pastel tint of #7A3E9D. No text, no logos, no watermark, no frame."
+  }
+}

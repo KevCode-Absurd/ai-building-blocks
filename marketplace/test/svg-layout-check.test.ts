@@ -57,7 +57,7 @@ test('layout diagnostic is included only in the finished Ayaka pack', async () =
   const names=['svg-layout-check.mjs','SVG-LAYOUT-CHECK.md'];
   for (const name of names) assert.deepEqual(TOOL_FILES.find(x=>x.name===name)?.personaIds,['ayaka-ad-design']);
   const files=Object.fromEntries(names.map(n=>[n,fs.readFileSync(new URL(`../packs/shared/tools/${n}`,import.meta.url),'utf8')]));
-  const personas=housePersonas().filter(p=>p.vertical==='ecommerce' && p.status==='live');assert.equal(personas.length,80);
+  const personas=housePersonas().filter(p=>p.vertical==='ecommerce' && p.status==='live');assert.equal(personas.length,81);
   for (const persona of personas) {
     const input={persona,role:getRole(persona.role),kit:null,jobTypes:listJobTypes(),options:{kind:'agent' as const,version:'2026.11.18',updated:'2026-11-18'}};
     const before=await buildPack({...input,tools:{}}),after=await buildPack({...input,tools:files});

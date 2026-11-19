@@ -1,0 +1,121 @@
+{
+  "id": "competitor-teardown",
+  "kind": "making",
+  "name": "Competitor marketing teardown, from public evidence to agent briefs",
+  "goal": "One rival's marketing taken apart from public evidence: the growth engine, offers and prices, Meta and Google ads, site, retention, search and positioning, in a cited report in the rival's look, plus one paste-ready brief for each of your agents on what to take and where to win.",
+  "folder": "research",
+  "starts_from": "You naming a competitor (\"reverse engineer this brand\", \"what is X doing\"), a launch into a category with a known leader, or a monthly re-run to see what changed. Sizing a whole market goes to Shannon instead.",
+  "metrics": [
+    "Every claim in the report cites an evidence item, and every unknown is listed with a link to check it.",
+    "Each brief names a real agent, a deliverable with a number and a deadline, and the evidence to read."
+  ],
+  "stages": [
+    {
+      "id": "intake",
+      "name": "Scope the teardown",
+      "agent": "hattie-competitor-teardown",
+      "access": "read",
+      "gate": "none",
+      "say": "Ask first: personalized to your brand, or general? Then confirm the competitor's store link, the main market and any lane you care about most, in one message. For personalized, read your Org context and collect your own store so every brief fits your products, prices, voice and customers.",
+      "needs": [
+        "context/org-context/",
+        "The competitor's store link and your brief"
+      ],
+      "makes": [
+        "scope.md"
+      ],
+      "done_when": "The mode, competitor, market, focus and your store context are written down, with defaults stated."
+    },
+    {
+      "id": "collect",
+      "name": "Collect the public evidence",
+      "agent": "hattie-competitor-teardown",
+      "access": "read",
+      "gate": "none",
+      "say": "Run tools/teardown-collect.mjs on the store: catalogue and price ladder, offers, subscriptions, product pages, pixels and apps, sitemaps, Google Ads Transparency, autocomplete, YouTube, the Wayback Machine and Trustpilot. It follows robots.txt; anything blocked becomes an unknown, never a workaround.",
+      "needs": [
+        "scope.md"
+      ],
+      "makes": [
+        "evidence.json",
+        "evidence.md"
+      ],
+      "blocked_when": {
+        "missing_input": "The store refuses the collector everywhere, so there is too little public evidence for a teardown"
+      },
+      "done_when": "The evidence bundle exists with a scorecard, a lane map and a list of unknowns."
+    },
+    {
+      "id": "ads",
+      "name": "Sample the Meta ads",
+      "agent": "hattie-competitor-teardown",
+      "access": "read",
+      "gate": "none",
+      "say": "Pull a Meta Ad Library sample through your official Meta connector in the fixed order in tools/TEARDOWN.md (brand page per country, hero-product and offer words, stopped ads, partner pages) and add it to the evidence. With no connector, the Meta lane is listed as unknown.",
+      "needs": [
+        "evidence.json",
+        "Your Meta connector (ads_library_search) or your own Ad Library export"
+      ],
+      "makes": [
+        "meta-1.json"
+      ],
+      "done_when": "The ads are in the evidence with start dates, or the Meta lane is recorded as unknown with the reason."
+    },
+    {
+      "id": "report",
+      "name": "Write the report and the briefs",
+      "agent": "hattie-competitor-teardown",
+      "access": "draft",
+      "gate": "none",
+      "say": "Find the engine and the loop first, then write each lane with every claim cited, inferences labelled and unknowns listed. End with 10 ranked moves and one brief per agent in the lanes that matter, written for the owner's own products in personalized mode or with {placeholders} in general mode. Never put revenue or ad spend down as fact, and never tell an agent to copy the rival's words or images.",
+      "needs": [
+        "evidence.json"
+      ],
+      "makes": [
+        "report.md"
+      ],
+      "checks": [
+        "evidence-check",
+        "fact-review"
+      ],
+      "done_when": "tools/teardown-report.mjs check passes and the report names the engine in one sentence."
+    },
+    {
+      "id": "deliver",
+      "name": "Render the page and hand over the briefs",
+      "agent": "hattie-competitor-teardown",
+      "access": "draft",
+      "gate": "owner",
+      "say": "Render the report as one page in the competitor's look and split the briefs into one file per agent. Lead with the verdict and the three moves to make this month, then offer to start any brief with its agent.",
+      "needs": [
+        "report.md"
+      ],
+      "makes": [
+        "report.html",
+        "handoffs/"
+      ],
+      "checks": [
+        "handoff-review"
+      ],
+      "done_when": "The page opens at phone width and every brief file names its agent, a number and a deadline.",
+      "signoff": "you read the verdict and pick which briefs to start"
+    }
+  ],
+  "checks": {
+    "evidence-check": {
+      "kind": "script",
+      "run": "node agents/hattie-competitor-teardown/tools/teardown-report.mjs check <folder>",
+      "passes_when": "Every citation resolves, claims are cited, no money or quotes are invented and every brief names a real agent."
+    },
+    "fact-review": {
+      "kind": "reviewer",
+      "agent": "shannon-market-research",
+      "passes_when": "Three numbers re-derived from the evidence match the report, and inferences and unknowns are labelled as such."
+    },
+    "handoff-review": {
+      "kind": "reviewer",
+      "agent": "margaret-job-orchestrator",
+      "passes_when": "Each brief goes to the right agent for its lane and can be started tomorrow without copying the rival."
+    }
+  }
+}

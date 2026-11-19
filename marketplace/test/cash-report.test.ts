@@ -148,12 +148,12 @@ test('CLI rejects symlink or junction output parents', t => workspace(root => {
   assert.deepEqual(fs.readdirSync(path.join(root, 'target')), []);
 }));
 
-test('cash tools are available only to Sipho; all other 79 packs retain their files and manifests', async () => {
+test('cash tools are available only to Sipho; all other 80 packs retain their files and manifests', async () => {
   const scoped = TOOL_FILES.filter(t => t.personaIds?.includes('sipho-product-hunter'));
   assert.deepEqual(scoped.map(t => t.name), ['cash-report.mjs', 'CASH-REPORT.md', 'cash-report-example.json']);
   const extra = Object.fromEntries(scoped.map(t => [t.name, fs.readFileSync(new URL(`../packs/shared/tools/${t.name}`, import.meta.url), 'utf8')]));
   const personas = housePersonas().filter(p => p.vertical === 'ecommerce' && p.status === 'live');
-  assert.equal(personas.length, 80);
+  assert.equal(personas.length, 81);
   for (const persona of personas) {
     const input = { persona, role: getRole(persona.role), kit: null, jobTypes: listJobTypes(), options: { kind: 'agent' as const, version: '2026.11.18', updated: '2026-11-18' } };
     const before = await buildPack({ ...input, tools: {} });

@@ -10,8 +10,8 @@ export const ECOMMERCE_STAGES: readonly TeamStage[] = [
   { id: "lead", label: "Leads", summary: "They plan the work and hand each part to the right specialist.", agents: [
     "margaret-job-orchestrator", "jared-performance-marketing", "kemal-creative-director", "imogen-retention",
     "thanh-product-sourcing-lead", "malcolm-ecommerce-growth", "barnaby-wild-bets"] },
-  { id: "research", label: "Research the market", summary: "Is the market growing, who buys, what to sell next.", agents: [
-    "shannon-market-research", "revathi-product-research", "sipho-product-hunter", "funmilayo-customer-research", "duncan-category-trends", "sabelo-product-portfolio"] },
+  { id: "research", label: "Research the market", summary: "Is the market growing, who buys, what rivals do, what to sell next.", agents: [
+    "shannon-market-research", "hattie-competitor-teardown", "revathi-product-research", "sipho-product-hunter", "funmilayo-customer-research", "duncan-category-trends", "sabelo-product-portfolio"] },
   { id: "source", label: "Source and make the product", summary: "Suppliers, BOM and cost, negotiation, quality, freight, packaging and stock.", agents: [
     "tunde-supplier-search", "zhenyu-sourcing", "wenhao-procurement", "douglas-should-cost", "akosua-cost-forecast",
     "maxine-tech-packs", "phuong-quality-control", "sheila-inbound-freight", "omar-inventory-planning", "alistair-packaging"] },

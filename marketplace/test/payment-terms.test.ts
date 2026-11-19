@@ -101,11 +101,11 @@ test('CLI rejects junction or symlink input parents', t => workspace(root => {
   catch (e) { const code = (e as NodeJS.ErrnoException).code; if (code && ['EPERM','EACCES','ENOSYS'].includes(code)) { t.skip('Host needs link permission for this check'); return; } throw e; }
   assert.throws(() => runCli(['linked/input.json'], root), /Symlink or junction/);
 }));
-test('only Wenhao receives payment tools and guidance; other79 files and manifests unchanged', async () => {
+test('only Wenhao receives payment tools and guidance; other 80 files and manifests unchanged', async () => {
   const scoped = TOOL_FILES.filter(t => t.personaIds?.includes('wenhao-procurement'));
   assert.deepEqual(scoped.map(t => t.name), ['payment-terms.mjs','PAYMENT-TERMS.md','payment-terms-example.json']);
   const extra = Object.fromEntries(scoped.map(t => [t.name, fs.readFileSync(new URL('../packs/shared/tools/' + t.name, import.meta.url), 'utf8')]));
-  const personas = housePersonas().filter(p => p.vertical === 'ecommerce' && p.status === 'live'); assert.equal(personas.length, 80);
+  const personas = housePersonas().filter(p => p.vertical === 'ecommerce' && p.status === 'live'); assert.equal(personas.length, 81);
   for (const persona of personas) {
     const input = { persona, role: getRole(persona.role), kit: null, jobTypes: listJobTypes(), options: { kind: 'agent' as const, version: '2026.11.18', updated: '2026-11-18' } };
     const before = await buildPack({ ...input, tools: {} }), after = await buildPack({ ...input, tools: extra });

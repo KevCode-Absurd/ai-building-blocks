@@ -59,7 +59,7 @@ export const personaSchema = z.object({
     seat_suitability: z.array(z.enum(["coordinator", "strategist", "maker", "critic", "red_team", "fact_checker", "judge", "mind"])).min(1).max(8),
     department: z.enum(AREAS),
     stance: z.string().min(3).max(200),
-    provenance: z.literal("deterministic-existing-profile"),
+    provenance: z.enum(["deterministic-existing-profile", "hand-written"]),
   }).strict().optional(),
   mega: z.object({ kit: z.literal("traction"), variant: z.enum(MEGA_VARIANTS) }).strict().optional(),
   vertical: z.string().regex(/^[a-z][a-z0-9-]{1,39}$/).optional(),

@@ -1,0 +1,9 @@
+[
+  { "n": 1, "title": "Meta Ad Library", "publisher": "Meta", "url": "https://www.facebook.com/ads/library/", "checked": "2026-11-19", "supports": "Live and inactive ads per page, start dates and estimated live counts." },
+  { "n": 2, "title": "Google Ads Transparency Center", "publisher": "Google", "url": "https://adstransparency.google.com/", "checked": "2026-11-19", "supports": "Creatives, formats and dates per advertiser and domain over the last 30 days." },
+  { "n": 3, "title": "Customize robots.txt", "publisher": "Shopify", "url": "https://shopify.dev/docs/storefronts/themes/seo/robots-txt", "checked": "2026-11-19", "supports": "Default crawl rules on Shopify stores, which the collector obeys." },
+  { "n": 4, "title": "Selling plans", "publisher": "Shopify", "url": "https://shopify.dev/docs/apps/build/purchase-options/subscriptions/selling-plans", "checked": "2026-11-19", "supports": "How subscription plans appear in product data." },
+  { "n": 5, "title": "Web pixels API", "publisher": "Shopify", "url": "https://shopify.dev/docs/api/web-pixels-api", "checked": "2026-11-19", "supports": "How apps load pixels on Shopify storefronts." },
+  { "n": 6, "title": "Wayback CDX server API", "publisher": "Internet Archive", "url": "https://archive.org/developers/wayback-cdx-server.html", "checked": "2026-11-19", "supports": "Homepage snapshots over time." },
+  { "n": 7, "title": "REM: Reverse Engineer Marketing", "publisher": "DansUGC (MIT licence)", "url": "https://github.com/dansugc/reverse-engineer-marketing", "checked": "2026-11-19", "supports": "The evidence-contract approach this kit rebuilds for D2C stores." }
+]

@@ -478,5 +478,11 @@
   "name": "Vera",
   "title": "WordPress and WooCommerce speed specialist",
   "role": "wordpress-commerce-performance-specialist"
+ },
+ {
+  "id": "hattie-competitor-teardown",
+  "name": "Hattie",
+  "title": "D2C competitor teardown analyst",
+  "role": "dtc-competitor-teardown"
  }
 ]

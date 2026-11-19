@@ -1,0 +1,490 @@
+{
+  "schema": "ai-blocks-toolbox/1",
+  "role": "dtc-competitor-teardown",
+  "reviewed": "2026-11-19",
+  "tasks": [
+    {
+      "id": "scope",
+      "task": "Scope the teardown and read the owner's context",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:prompts/teardown-brief",
+          "use": "build",
+          "when": "When the owner names a competitor and the link, market and focus need confirming in one message"
+        },
+        {
+          "ref": "library:brand-dna-capture",
+          "type": "skill",
+          "use": "brief",
+          "when": "When the owner's own store has no current org context for the briefs to fit"
+        },
+        {
+          "ref": "library:research-brief-writer",
+          "type": "skill",
+          "use": "brief",
+          "when": "When a vague ask needs turning into one clear research question before collecting"
+        },
+        {
+          "ref": "library:competitor-profile-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner is unsure which rival to study and needs a quick profile of each"
+        }
+      ]
+    },
+    {
+      "id": "collect",
+      "task": "Collect public evidence into a cited bundle",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When a full teardown starts: run order, collector, Meta sampling, report, check and render"
+        },
+        {
+          "ref": "library:deep-research-reporter",
+          "type": "skill",
+          "use": "explore",
+          "when": "When press, funding or founder interviews add context the store itself does not show"
+        },
+        {
+          "ref": "library:website-design-dna-extractor",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the report should render in the competitor's own colours and fonts"
+        }
+      ]
+    },
+    {
+      "id": "stack",
+      "task": "Read the pixels, apps and tools behind the store",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When the collector's pixel and app scan needs reading as a growth stack"
+        },
+        {
+          "ref": "library:store-app-stack-picker",
+          "type": "skill",
+          "use": "think",
+          "when": "When you need to explain what each detected app category does for their sales"
+        },
+        {
+          "ref": "library:meta-pixel-capi-fix",
+          "type": "skill",
+          "use": "think",
+          "when": "When pixel and server-event signals need reading without calling them live campaigns"
+        }
+      ]
+    },
+    {
+      "id": "ads",
+      "task": "Sample and rank the competitor's Meta and Google ads",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:skills/read-competitor-ads",
+          "use": "build",
+          "when": "When the Ad Library sample and Google transparency results need ranking by run length"
+        },
+        {
+          "ref": "library:ad-library-teardown-counter",
+          "type": "skill",
+          "use": "build",
+          "when": "When an Ad Library export needs counting by format, age, page and awareness stage"
+        },
+        {
+          "ref": "library:competitor-ad-swipe-file-builder",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the live ads need sorting into types so the team can study each kind"
+        },
+        {
+          "ref": "library:competitor-ad-teardown-writer",
+          "type": "skill",
+          "use": "check",
+          "when": "When ad claims need separating what was seen from what is guessed"
+        }
+      ]
+    },
+    {
+      "id": "angles",
+      "task": "Classify creative angles and find the untested gaps",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:skills/read-competitor-ads",
+          "use": "build",
+          "when": "When the long-running winners need their angle, format, offer and landing page recorded"
+        },
+        {
+          "ref": "library:competitor-ad-theme-and-gap-mapper",
+          "type": "skill",
+          "use": "build",
+          "when": "When ads need grouping by theme to rank the gaps worth testing"
+        },
+        {
+          "ref": "library:competitor-ad-gap-finder",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner wants gaps and starter briefs scored from pasted competitor ads"
+        },
+        {
+          "ref": "library:ad-angle-multiplier",
+          "type": "skill",
+          "use": "explore",
+          "when": "When one competitor angle should become several original angles for the owner"
+        }
+      ]
+    },
+    {
+      "id": "offers",
+      "task": "Decode the offers, price ladder and subscriptions",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:skills/decode-offer-architecture",
+          "use": "build",
+          "when": "When the catalogue evidence needs turning into a price ladder and offer system"
+        },
+        {
+          "ref": "library:order-threshold-planner",
+          "type": "skill",
+          "use": "check",
+          "when": "When a free-shipping or bundle threshold needs testing against typical order sizes"
+        },
+        {
+          "ref": "library:subscription-offer-designer",
+          "type": "skill",
+          "use": "think",
+          "when": "When their subscribe-and-save terms need judging against what the owner can afford"
+        },
+        {
+          "ref": "library:store-offer-picker",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner asks which of the rival's offer types to test first"
+        },
+        {
+          "ref": "library:value-ladder-planner",
+          "type": "skill",
+          "use": "think",
+          "when": "When the entry product, core range and premium anchor need reading as one ladder"
+        }
+      ]
+    },
+    {
+      "id": "site",
+      "task": "Read the conversion path and ad landing pages",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When product pages, hidden offer pages and the cart path need reading from the evidence"
+        },
+        {
+          "ref": "library:landing-page-auditor",
+          "type": "skill",
+          "use": "check",
+          "when": "When a landing page their ads send traffic to needs its conversion choices named"
+        },
+        {
+          "ref": "library:rival-store-comparer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the rival's store needs setting beside the owner's on channels, prices and messages"
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "task": "Read retention, reviews and creator programmes",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When email, SMS, loyalty, reviews and affiliate tools in the evidence need reading as a loop"
+        },
+        {
+          "ref": "library:crm-and-email-strategist",
+          "type": "skill",
+          "use": "think",
+          "when": "When a detected email or SMS tool needs explaining as a likely flow, labelled as inference"
+        },
+        {
+          "ref": "library:creator-partnership-planner",
+          "type": "skill",
+          "use": "think",
+          "when": "When partner-page ads or affiliate apps point to a creator programme worth describing"
+        },
+        {
+          "ref": "library:comment-mining-analyst",
+          "type": "skill",
+          "use": "explore",
+          "when": "When public reviews and comments show what buyers praise and complain about"
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "task": "Read search demand, SEO and AI answers",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When autocomplete, sitemaps, YouTube and llms.txt evidence need reading as search strategy"
+        },
+        {
+          "ref": "library:rival-seo-comparer",
+          "type": "skill",
+          "use": "build",
+          "when": "When search overlap, content depth and brand presence need comparing with the owner's site"
+        },
+        {
+          "ref": "library:rival-keyword-gap-finder",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner has Ahrefs and wants the keywords the rival ranks for and they do not"
+        },
+        {
+          "ref": "library:ai-recommendation-panel-runner",
+          "type": "skill",
+          "use": "check",
+          "when": "When you need to see whether AI assistants name the rival or the owner for shopper questions"
+        }
+      ]
+    },
+    {
+      "id": "positioning",
+      "task": "Trace the pitch over time and map the white space",
+      "kind": "strategy",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When Wayback snapshots show how the homepage pitch and hero product changed"
+        },
+        {
+          "ref": "library:competitor-white-space-mapper",
+          "type": "skill",
+          "use": "build",
+          "when": "When the lanes need a grid of where nobody is strong and where to stop fighting"
+        },
+        {
+          "ref": "library:positioning-grid-builder",
+          "type": "skill",
+          "use": "think",
+          "when": "When the owner needs one corner of the market they can own against this rival"
+        },
+        {
+          "ref": "library:competitor-messaging-comparer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When several rivals' messages need comparing to find words nobody owns"
+        },
+        {
+          "ref": "library:michael-porter",
+          "type": "mind",
+          "use": "think",
+          "when": "When the rival's choices need reading as a position with activities that support it"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "task": "Write the cited teardown report",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When the engine, the loop and each lane are ready to write from the report template"
+        },
+        {
+          "ref": "library:cited-research-report-writer",
+          "type": "skill",
+          "use": "check",
+          "when": "When each claim needs checking against the quote in its source"
+        },
+        {
+          "ref": "library:market-research-report-writer",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner also wants category context, kept apart from the teardown's evidence"
+        },
+        {
+          "ref": "library:decision-research-investigator",
+          "type": "skill",
+          "use": "think",
+          "when": "When a big call rests on the teardown and needs the counter-arguments written down"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "task": "Check the report against its evidence and render it",
+      "kind": "audit",
+      "items": [
+        {
+          "ref": "kit:prompts/handoff-review",
+          "use": "check",
+          "when": "When the report is drafted and needs citations, inferences and unknowns reviewed before delivery"
+        },
+        {
+          "ref": "library:brand-fidelity-check",
+          "type": "skill",
+          "use": "check",
+          "when": "When the rendered page must match the competitor's captured look at phone width"
+        },
+        {
+          "ref": "library:ai-default-patterns",
+          "type": "skill",
+          "use": "check",
+          "when": "When the report reads generic and needs the stock AI phrases and layouts taken out"
+        }
+      ]
+    },
+    {
+      "id": "handoffs",
+      "task": "Brief each agent on what to take and where to win",
+      "kind": "ops_doc",
+      "items": [
+        {
+          "ref": "kit:skills/brief-agent-team",
+          "use": "build",
+          "when": "When the lane map is ready and each agent needs one paste-ready brief"
+        },
+        {
+          "ref": "kit:prompts/handoff-review",
+          "use": "check",
+          "when": "When each brief needs checking for the right agent, a number, a deadline and no copying"
+        },
+        {
+          "ref": "library:task-handoff-writer",
+          "type": "skill",
+          "use": "build",
+          "when": "When a brief needs clear checks and stop rules for the agent that picks it up"
+        },
+        {
+          "ref": "library:funnel-stage-creative-brief-builder",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the creative brief should become full production briefs by funnel stage"
+        },
+        {
+          "ref": "library:the-head-agent-strategic-oversight-implementation-planner",
+          "type": "skill",
+          "use": "think",
+          "when": "When many briefs overlap and need merging into one ranked list of who does what"
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "task": "Plan the owner's moves for the next 30 days",
+      "kind": "plan",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When the report needs its 10 ranked moves built from the strongest gaps"
+        },
+        {
+          "ref": "library:sales-led-content-planner",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the owner wants the 30 days laid out as what to push and which offers to run"
+        },
+        {
+          "ref": "library:beat-bigger-rival",
+          "type": "workflow",
+          "use": "think",
+          "when": "When the rival is much bigger and the plan needs a model the leader cannot copy"
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "task": "Compare two to four competitors lane by lane",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When several rivals are torn down and need a table of who wins each lane"
+        },
+        {
+          "ref": "library:competitor-battle-card-builder",
+          "type": "skill",
+          "use": "build",
+          "when": "When each rival needs a card with product, pricing and buyer views side by side"
+        },
+        {
+          "ref": "library:crowded-category-white-space-finder",
+          "type": "skill",
+          "use": "explore",
+          "when": "When the category is crowded and the gap none of the rivals fills must be found"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "task": "Report what changed at a competitor this month",
+      "kind": "analysis",
+      "items": [
+        {
+          "ref": "kit:workflows/competitor-teardown",
+          "use": "build",
+          "when": "When a dated re-run must be compared with the last one for new ads, launches and prices"
+        },
+        {
+          "ref": "library:monthly-competitor-watcher",
+          "type": "agent",
+          "use": "build",
+          "when": "When the owner wants the monthly change report kept on a schedule"
+        },
+        {
+          "ref": "library:quarterly-battle-card-keeper",
+          "type": "agent",
+          "use": "think",
+          "when": "When monthly changes add up to a battle card that needs refreshing"
+        }
+      ]
+    }
+  ],
+  "always": [],
+  "helpers": [
+    {
+      "role": "market-research-analyst",
+      "when": "When the owner needs the whole market or category sized rather than one rival taken apart"
+    },
+    {
+      "role": "meta-media-buyer",
+      "when": "When the ad findings become a Meta test plan with budgets in the owner's own account"
+    },
+    {
+      "role": "ad-creative-strategist",
+      "when": "When winning competitor angles need turning into the owner's own original concepts"
+    },
+    {
+      "role": "pricing-strategist",
+      "when": "When the rival's price ladder raises a pricing decision for the owner's range"
+    },
+    {
+      "role": "seo-specialist",
+      "when": "When the search findings need a page and keyword plan for the owner's site"
+    }
+  ],
+  "gaps": [
+    "Meta ads come only through the owner's official Meta connector or their own export; without one the Meta lane is an unknown.",
+    "No paid traffic, revenue or ad spend data is used; the library has no source that makes these facts, so they stay proxies.",
+    "The library has no item that reads a D2C catalogue or Shopify app stack end to end; the kit's own tools do that work."
+  ]
+}

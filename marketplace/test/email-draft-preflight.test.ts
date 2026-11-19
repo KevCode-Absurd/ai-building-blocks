@@ -182,7 +182,7 @@ test('optional tool files and every generated reference apply only to Lucia', as
   assert.deepEqual(scoped.map(t => t.name), ['email-draft-preflight.mjs', 'EMAIL-DRAFT-PREFLIGHT.md', 'email-draft-example.json']);
   const extra = Object.fromEntries(scoped.map(t => [t.name, fs.readFileSync(path.join(toolsDir, t.name), 'utf8')]));
   const personas = housePersonas().filter(p => p.vertical === 'ecommerce' && p.status === 'live');
-  assert.equal(personas.length, 80);
+  assert.equal(personas.length, 81);
   for (const persona of personas) {
     const input = { persona, role: getRole(persona.role), kit: null, jobTypes: listJobTypes(), options: { kind: 'agent' as const, version: '2026.11.18', updated: '2026-11-18' } };
     const before = await buildPack({ ...input, tools: {} });

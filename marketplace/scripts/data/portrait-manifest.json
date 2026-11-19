@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 8.265,
+  "spent_usd": 8.278965,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -2914,5 +2914,10 @@
     "sha256": "d2935d4deda5715b722adc578d4c365e9c1d9ca308507a6492d2449966d2c33b",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-15T09:07:36.933Z"
+  },
+  "hattie-competitor-teardown": {
+    "sha256": "a3dd0e428e2ba917b0b4a32395cb1149969e3c4534f60c74d6bf5281fc379362",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-19T07:05:47.077Z"
   }
 }

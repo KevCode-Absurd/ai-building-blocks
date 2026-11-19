@@ -6,14 +6,14 @@ import { setPersonasForTests } from '../src/modules/directory/index.ts';
 import { seedPersonas, personaHash, getPersona, forgetPersonas } from '../src/modules/directory/service.ts';
 import { testEnv } from './helpers.ts';
 
-test('release refresh upgrades a seeded 78-agent directory to current 80 profiles without changing an expert', async () => {
+test('release refresh upgrades a seeded 80-agent directory to current 81 profiles without changing an expert', async () => {
   const current = ecommerce as Persona[];
-  const added = new Set(['nico-ecommerce-speed', 'vera-woocommerce-speed']);
+  const added = new Set(['hattie-competitor-teardown']);
   const previous = structuredClone(current.filter(p => !added.has(p.id)));
   previous.find(p => p.id === 'malcolm-ecommerce-growth')!.profile.method = 'Previous deployed growth method.';
-  assert.equal(previous.length, 78);
-  assert.equal(current.length, 80);
-  for (const id of ['nadiya-reddit-ads', 'esmee-b2b-commerce-ads', 'arjun-page-speed']) assert.ok(previous.some(p => p.id === id), `${id} must remain in the prior release`);
+  assert.equal(previous.length, 80);
+  assert.equal(current.length, 81);
+  for (const id of ['nadiya-reddit-ads', 'esmee-b2b-commerce-ads', 'arjun-page-speed', 'nico-ecommerce-speed', 'vera-woocommerce-speed']) assert.ok(previous.some(p => p.id === id), `${id} must remain in the prior release`);
   setPersonasForTests(previous);
   const t = await testEnv({ HOSTED_JOBS: 'off' });
   await t.makeOps('release_ops');
@@ -25,16 +25,16 @@ test('release refresh upgrades a seeded 78-agent directory to current 80 profile
   await seedPersonas(t.env, 'release_ops');
   setPersonasForTests(current);
   forgetPersonas(t.env);
-  assert.equal((await t.api('GET', '/api/agents?vertical=ecommerce')).body.total, 78);
+  assert.equal((await t.api('GET', '/api/agents?vertical=ecommerce')).body.total, 80);
   for (const id of added) assert.equal((await t.api('GET', '/api/agents/' + id)).status, 404);
   assert.equal((await getPersona(t.env, 'malcolm-ecommerce-growth'))!.profile.method, 'Previous deployed growth method.');
 
   const refreshed = await t.api('POST', '/api/ops/seed', { user: 'release_ops' });
   assert.equal(refreshed.status, 200);
-  assert.equal(refreshed.body.personas.created, 2);
+  assert.equal(refreshed.body.personas.created, 1);
   assert.equal(refreshed.body.personas.updated, 1);
   const publicTeam = await t.api('GET', '/api/agents?vertical=ecommerce');
-  assert.equal(publicTeam.body.total, 80);
+  assert.equal(publicTeam.body.total, 81);
   assert.deepEqual(publicTeam.body.agents.map((p: Persona) => p.id).sort(), current.map(p => p.id).sort());
   for (const p of current) {
     const rows = await t.sql('SELECT kind,status,content_hash FROM personas WHERE id = ?', p.id);

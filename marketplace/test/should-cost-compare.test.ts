@@ -54,7 +54,7 @@ test('CLI binds read-only local input and rejects traversal, device names and ov
 test('comparison tools and guidance are Douglas-agent-only; all other agent/train contents stay unchanged',async()=>{
   const names=['should-cost-compare.mjs','SHOULD-COST-COMPARE.md'];for(const name of names)assert.deepEqual(TOOL_FILES.find(x=>x.name===name)?.personaIds,['douglas-should-cost']);
   const tools=Object.fromEntries(names.map(name=>[name,fs.readFileSync(new URL('../packs/shared/tools/'+name,import.meta.url),'utf8')]));
-  const personas=housePersonas().filter(p=>p.vertical==='ecommerce'&&p.status==='live');assert.equal(personas.length,80);
+  const personas=housePersonas().filter(p=>p.vertical==='ecommerce'&&p.status==='live');assert.equal(personas.length,81);
   for(const persona of personas)for(const kind of ['agent','train'] as const){
     const input={persona,role:getRole(persona.role)??null,kit:null,jobTypes:listJobTypes(),options:{kind,version:'test',updated:'2026-11-19'}};
     const pack=await buildPack({...input,tools});const expected=persona.id==='douglas-should-cost'&&kind==='agent';

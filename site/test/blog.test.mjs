@@ -41,7 +41,7 @@ test('article metadata is complete and fits search results', () => {
   }
 });
 
-test('article bodies follow the house rules: sections, prompts, FAQ, plain words, prose at grade 8 to 9', () => {
+test('article bodies follow the house rules: sections, prompts, FAQ, plain words, prose at grade 8 to 9 or its own range', () => {
   for (const [slug, html] of bodies) {
     assert.ok(!/<h1|<script|<style|style="/i.test(html), `${slug}: no h1, script or inline style`);
     const h2 = (html.match(/<h2/g) ?? []).length, ids = sections(html).map(s => s.id);
@@ -58,8 +58,10 @@ test('article bodies follow the house rules: sections, prompts, FAQ, plain words
     const words = text(html), editorialWords = text(editorial);
     assert.ok(!BANNED.test(editorialWords), `${slug}: banned word "${editorialWords.match(BANNED)?.[0]}"`);
     assert.ok(words.split(' ').length >= 1500, `${slug}: in depth (${words.split(' ').length} words)`);
+    // Most articles read at grade 8 to 9. An article may set its own range (readingGrade: [low, high]) when the owner asks for it.
+    const [lo, hi] = posts.find(p => p.slug === slug)?.readingGrade ?? [8, 9];
     const level = grade(prose(html));
-    assert.ok(level >= 8 && level <= 9, `${slug}: prose reads at grade ${level}; keep it between 8 and 9`);
+    assert.ok(level >= lo && level <= hi, `${slug}: prose reads at grade ${level}; keep it between ${lo} and ${hi}`);
   }
 });
 

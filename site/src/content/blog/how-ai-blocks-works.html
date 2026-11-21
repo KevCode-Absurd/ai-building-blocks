@@ -1,0 +1,123 @@
+<h2 id="short">The short version</h2>
+<p>General AI tools are trained to give the most likely answer, which is usually the most common one. That works for everyday tasks, but on work that makes or loses money, the most common answer is rarely good enough. AI Blocks adds an expert layer on top of general AI agents, so the knowledge and methods of people who are strong at a job travel with the agent.</p>
+<p>The model has five parts:</p>
+<ul>
+<li>We publish free base agents for real job roles, such as a Meta ads media buyer or an SEO specialist, that anyone can download, read and change.</li>
+<li>Experts copy a base agent and add their own know-how, voice, rules and examples, much as a developer copies and adapts a project on GitHub.</li>
+<li>Each expert agent is tested against plain AI on the same briefs, and training ends only when it wins at least four of five.</li>
+<li>A coordinator, which we are building now, will split each job into small parts and give each part to the expert agent that is best at that exact part.</li>
+<li>When buyers start paying for jobs, the expert who built the agent will keep most of the fee, and AI Blocks will keep a share for finding the work and running it.</li>
+</ul>
+<p>The rest of this guide explains each part in plain words, shows two worked examples, and marks clearly which parts are live today and which we are still building.</p>
+
+<h2 id="average">Why general AI gives you average work</h2>
+<p>A general AI model learns from a huge amount of public writing, and it then predicts the answer that best fits your question. Because most of that writing comes from ordinary practice, the model tends to land in the middle. Ask it for a marketing plan and you'll get the plan it has seen most often, written clearly and confidently, but without the judgement of someone who has run hundreds of campaigns.</p>
+<p>This matters most when the details decide the result. A media buyer who has spent years inside ad accounts knows which numbers to distrust, when to leave a campaign alone and when a good-looking result is hiding a loss. A general model has read about these things, yet it doesn't carry one person's tested method, and it can't tell which of the many opinions it has read works for a business like yours.</p>
+<p>General AI is strong, but its skill is spread evenly across everything, while most business jobs need depth in one narrow area. Our earlier guide on <a href="/blog/ai-team-of-experts">putting a team of AI experts on one job</a> shows the same pattern from the user's side, because one chat gives you one way of thinking.</p>
+
+<h2 id="layer">What we mean by an expert layer</h2>
+<p>Think of a general AI agent as a capable new hire who is smart, fast and willing, but who has never done this exact job for a business like yours. The expert layer is everything an experienced professional would hand that new hire on day one. It includes the questions they always ask first, the steps they follow, the checks they run before anything reaches a client, and the mistakes they have learned to avoid.</p>
+<p>On AI Blocks, that layer is a pack, which is a folder of plain text files that any AI can read. A pack holds the role's researched knowledge, with a source and a date for each fact, along with a playbook, ready-made skills and prompts, and a list of the tools the role may ask you to connect. An expert's version adds their own know-how, a description of how they think, their writing voice, and examples from past work with every private detail removed.</p>
+<p>Because the layer is written down in files, you can read it, question it and improve it. With a hidden prompt inside an app, you can't see why the AI did what it did, and you can't change it.</p>
+
+<h2 id="base">Free base agents anyone can use and change</h2>
+<p>The foundation is a set of base agents that we research and publish for free. Today the <a href="https://agents.useaiblocks.com" rel="noopener">AI Blocks Agents</a> site lists 505 named agents across business roles, and our library has more than 1,000 <a href="/roles">AI specialists</a> you can download and give to the AI you already use. Each one works in ChatGPT, Claude, Gemini or a coding tool, so you don't need a new app.</p>
+<p>The packs are shared under the AI Blocks Agent Pack Licence. You can use and change them free of charge, including for client work, and you can share free copies as long as you keep the credit line. You can't sell a pack yourself, because selling happens through the marketplace, where experts will be paid once paid jobs start.</p>
+<p>A good base agent should already handle most of a job out of the box, and that gives every expert a strong starting point. Experts can then spend their time on the part that only they can add, which is their own judgement, instead of rebuilding the basics from nothing. Keeping the base free also means more people try the agents, which brings more jobs to the experts who improve them.</p>
+
+<h2 id="experts">How experts add their know-how</h2>
+<p>Every agent comes with a free "Train your own" pack, which turns your AI into a coach. The coach interviews the expert one question at a time, studies writing samples they choose to share, and turns their most common workflow into a reusable skill. It then plays a demanding client and runs test rounds, in which the expert compares their agent's answer with plain AI's answer without knowing which is which. Training finishes only when the expert's agent wins at least four of five difficult briefs. Our guide to <a href="/train-your-own-ai-agent">training your own AI agent</a> walks through every stage.</p>
+<p>An expert who wants buyers to hire their agent then applies on the <a href="https://agents.useaiblocks.com/experts/apply" rel="noopener">expert application page</a>. We check the links they give for each professional claim, and once they are approved, they upload their pack in the studio. The studio runs the agent on sample briefs next to plain AI, suggests new rules based on how the expert edits the drafts, and keeps some briefs back for our own checks. Our team then tests the agent with test jobs before it goes live, and buyers can hire live agents for free while we test the marketplace.</p>
+<p>The expert also keeps ownership of their method. They can use their trained agent with their own clients, outside AI Blocks, and list it with us only if they want more reach. This is close to how a host on Airbnb still owns the house, while the platform brings the guests.</p>
+
+<h2 id="subtasks">The right expert for each part of a job</h2>
+<p>The coordinator described in this section is not live yet. We are building it first for Meta ads for online stores, with a small number of pilot brands, and the examples below show how it will work once it is ready.</p>
+<p>Most marketplaces match one job to one person, but real jobs are made of parts, and nobody is the best at every part. Someone can be excellent at financial models and only average at telling the story behind them. So instead of picking one person for the whole job, the coordinator will split the job into parts and pick the best expert agent for each part.</p>
+<h3>Example: valuing a healthcare business</h3>
+<p>Say a private equity firm wants a valuation of a healthcare company it might buy. A single general agent would write the model, the market view and the summary in one voice, at one level of skill. With an expert layer, the coordinator will split the job into separate parts and staff each one:</p>
+<ul>
+<li>An agent trained by a strong financial modeller builds the forecast and the cash flow model.</li>
+<li>An agent trained by a healthcare specialist checks the assumptions that only an insider would catch, such as how payment rules and patient numbers behave over time.</li>
+<li>An agent trained by a valuation expert chooses the methods and the ranges that fit this kind of deal.</li>
+<li>An agent trained by a skilled storyteller turns the numbers into a clear case that a partner can read in ten minutes.</li>
+</ul>
+<p>The coordinator will then join the parts into one piece of work and send it to an independent checker before the firm sees it. Each part is done by the agent with the most skill in that part, rather than by one agent that is average at all of them.</p>
+<h3>Example: running Meta ads for an online store</h3>
+<p>Media buying looks like one job, but people who do it for a living know it has several distinct skills. One buyer is strongest at account structure, another at bidding strategy, a third at judging which creative will work, and a fourth at scaling spend without losing profit. Today most brands get one person, or one agency team, who is strong at some of these skills and weaker at the rest.</p>
+<p>With an expert layer, each of those parts can go to the agent whose expert is best at it, while the coordinator keeps them working toward the same goal for that brand. We chose this area first because the gap between average and expert work shows up quickly in sales and ad spend. Our guide on <a href="/blog/why-facebook-ads-stopped-working">why Facebook ads stopped working</a> covers some of the traps an average approach falls into.</p>
+
+<h2 id="coordinator">How the coordinator will split and join the work</h2>
+<p>The coordinator is the part of the system that plans the work instead of doing it. Its first task will be to understand the request, ask the few questions that change the answer, and write down what a finished result looks like. Then it will break the job into parts that are small enough for one specialist to own completely.</p>
+<p>Next, it will pick an expert agent for each part. The choice will depend on the skill the part needs, the industry, the size of the business and how each agent has performed on similar work. Each agent will work in its own space with only the brief, the facts and the files it needs, so the agents can't copy each other or drift toward the same idea.</p>
+<p>Finally, the coordinator will join the parts, check that they fit together, and pass the whole piece to a checker that made none of it. Inside each tool, the client stays in control of how far an agent may go. They can let it read only, build drafts that they publish themselves, or make live changes within limits they set, such as a budget cap and an end date. You can already plan this kind of team by hand with <a href="/teams">Plan an AI team</a>.</p>
+
+<h2 id="checks">How we check the work</h2>
+<p>An expert layer is only worth paying for if it beats what you would get from plain AI. During training, the expert compares their agent's answers with plain AI's answers without knowing which is which, and the agent must win at least four of five. In the studio, the agent runs again on sample briefs next to plain AI, and our team checks it with test jobs before it goes live.</p>
+<p>We have also published a <a href="/blog/ecommerce-ai-agents-output-benchmarks">side-by-side test of 80 ecommerce agents</a> against plain AI, with real output excerpts and notes from the judges. Next, we plan to let experts add their own test questions, which we call golden questions, along with the answers a strong professional would give. Those questions will show quickly when a model update makes an agent worse. You can read more about our methods on the <a href="/how-we-test">how we test</a> page.</p>
+
+<h2 id="money">How the business makes money</h2>
+<p>AI Blocks is a two-sided marketplace. Businesses bring jobs, and experts bring agents that can do those jobs well. Our role is to find the buyers, run the work and check it, and once the coordinator is ready, to match each part of a job to the right expert agent. An app store or a freelance marketplace plays the same role, where the platform brings the customers and the maker keeps most of each sale.</p>
+<p>Hiring is free for buyers while we test the marketplace, so nobody is paying or being paid yet. When paid jobs start, the price will be set per job rather than as a monthly retainer, and bigger jobs for bigger businesses will cost more. Under the current draft agreement, experts earn 70% of the net amount from jobs on the platform, and the first 100 approved experts get a founding rate of 75%. A lawyer will review that agreement before any payouts begin, and the final wording may change.</p>
+<p>We also want to be fair to both sides. Experts keep ownership of their method and their examples, and we won't take their know-how to build competing agents of our own. As more jobs come in, more experts have a reason to list agents, and a wider choice of experts brings in more businesses.</p>
+
+<h2 id="now">What is live today, and what we are still building</h2>
+<p>Today you can download free agents and specialists, use them in your own AI, plan a team by hand, train your own agent with the coach, and apply to list it as an expert. Buyers can hire live agents for free while we test the marketplace.</p>
+<p>The automatic coordinator that splits a job into parts and staffs each one with the best expert agent is not live yet. We are building it first for Meta ads for online stores, with a small number of pilot brands, before we open it to other kinds of work. We have not set a date for paid jobs and expert payouts, which will start only once the agreement is final.</p>
+
+<h2 id="try">Try the idea in your own AI today</h2>
+<p>You don't have to wait for the automatic version to work this way. The three prompts below let you split a job into parts, brief one specialist for each part, and then join and check the result, using the AI you already have.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Split a job into parts and name the skill each part needs</p><pre id="prompt-1">You are a coordinator. Don't do the job yourself. Plan who should do each part.
+
+The job: [what I need, in one or two sentences]
+My business: [what we sell, to whom, roughly how big we are]
+What done looks like: [the file, plan or decision I want at the end]
+
+Do this:
+1. Ask me up to three questions that would change the plan, and wait for my answers before you go on. Mark anything you still have to guess as [assumed].
+2. Split the job into 3 to 6 parts. Each part must be small enough for one specialist to own completely.
+3. For each part, name the exact skill it needs (for example, "financial modelling", not "finance"), what the specialist needs from me, and what they hand back.
+4. Say which parts depend on others, and the order to run them in.
+5. Write a checklist of 5 to 8 points the joined result must pass. Each point must be something a stranger could check.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Then give each part to its own specialist in a fresh chat or project. You can find a specialist pack for most skills in <a href="/roles">AI specialists</a>, and our guide on <a href="/blog/hire-ai-specialists">hiring an AI specialist</a> explains how to brief one well. Add the pack's files to the chat before you paste the next prompt.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Brief one specialist for one part of the job</p><pre id="prompt-2">You are a specialist on a team, and you own one part of a bigger job. Other specialists are doing the other parts in other chats.
+
+Your skill: [the exact skill, for example "bidding strategy for Meta ads"]
+Your part: [paste the part from the coordinator's plan]
+What you get: [paste the facts and files for this part only]
+What you hand back: [paste what the coordinator said this part must produce]
+
+Rules:
+1. Before you start, read the specialist pack I've attached for this skill and follow its playbook and checks.
+2. Stay inside your part. If you need something another part owns, say what you need instead of guessing.
+3. Say which method you used and why it fits this business.
+4. List every assumption you made, and mark any number you could not check.
+5. Before you finish, check your work against the team checklist below and fix anything that fails.
+
+Team checklist: [paste the checklist]</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<p>When every part is back, join them in one chat, and then ask a fresh chat that made none of the work to check the result.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Join the parts and check the result</p><pre id="prompt-3">You are the checker for a job that several specialists worked on. You made none of this work.
+
+The job: [paste the one-line job]
+The parts: [paste each specialist's work, labelled Part 1, Part 2 and so on]
+The checklist: [paste the checklist from the coordinator]
+
+Do this:
+1. Join the parts into one piece of work. Keep each specialist's content, and fix only gaps and clashes between parts.
+2. List every place where two parts disagree, and say which one you kept and why.
+3. Check the joined work against each checklist point. Mark each one pass or fail, with the line that proves it.
+4. List every claim or number that no part supported with a source or a fact from me.
+5. End with the three changes that would most improve the result.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Is AI Blocks open source?</h3>
+<p>The base packs are free to download, read and change, including for client work, and you can share free copies. They use the AI Blocks Agent Pack Licence rather than a standard open-source licence, because it doesn't allow reselling a pack outside the marketplace. That rule protects the experts who will earn from the agents they train.</p>
+<h3>Do I need a new AI app to use the agents?</h3>
+<p>No. The packs are plain text files that work in ChatGPT, Claude, Gemini and coding tools such as Claude Code, Codex and Cursor. You give the pack to the AI you already use, and your AI does the work.</p>
+<h3>Can I use the coordinator today?</h3>
+<p>Not yet in its automatic form. You can plan a team by hand with Plan an AI team, or use the three prompts in this guide to split a job, brief a specialist for each part and check the result. The automatic coordinator is being built first for Meta ads for online stores.</p>
+<h3>How will you decide which expert is best at a part of a job?</h3>
+<p>The coordinator will look at how each agent performed against plain AI on similar briefs, which skills and industries its expert trained it for, and how buyers rated its past work. A published agent version never changes, so every job can be traced back to the exact agent that did it.</p>
+<h3>What does an expert earn?</h3>
+<p>Nothing yet, because hiring is free while we test the marketplace. When paid jobs start, the current draft agreement gives experts 70% of the net amount from platform jobs, and 75% for the first 100 approved experts. The agreement is still a draft and may change before payouts begin.</p>
+<h3>Will AI Blocks copy an expert's know-how into its own agents?</h3>
+<p>No. Experts keep ownership of their method, their voice and their examples, and we won't use them to build competing agents of our own. Either side can end the agreement, and the expert's agent comes down within seven days.</p>

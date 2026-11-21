@@ -1,0 +1,23 @@
+{
+  "slug": "how-ai-blocks-works",
+  "title": "How AI Blocks works: an expert layer on top of AI agents",
+  "seoTitle": "How AI Blocks works: experts on top of AI agents",
+  "description": "General AI gives average work. See how AI Blocks adds an expert layer: free base agents, trained experts, and the best agent for each part of a job.",
+  "lede": "General AI agents tend to give the most common answer, which is rarely the best one. This guide explains how AI Blocks adds an expert layer on top: free base agents anyone can change, experts who train them, and a coordinator we are building that gives each part of a job to the agent best at it.",
+  "category": "Use AI Blocks well",
+  "keywords": [
+    "expert layer for AI agents",
+    "AI agent marketplace",
+    "AI orchestration by subtask",
+    "expert AI agents",
+    "how AI Blocks works"
+  ],
+  "related": [
+    "ai-team-of-experts",
+    "hire-ai-specialists",
+    "ecommerce-ai-agents-output-benchmarks",
+    "why-facebook-ads-stopped-working"
+  ],
+  "minutes": 12,
+  "published": "2026-11-21"
+}

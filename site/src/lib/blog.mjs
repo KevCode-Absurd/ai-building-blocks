@@ -38,7 +38,7 @@ export const GUIDES = [
 
 // Reading order within each topic.
 export const ORDER = [
-  "ecommerce-ai-agents-output-benchmarks",
+  "how-ai-blocks-works", "ecommerce-ai-agents-output-benchmarks",
   "chatgpt-prompts-for-work", "ai-prompts-vs-skills-vs-workflows", "give-ai-context-about-your-business", "make-ai-writing-sound-like-you",
   "stop-ai-making-things-up", "how-to-use-claude-skills", "what-is-mcp", "build-ai-workflow-without-code", "ai-agents-for-small-business",
   "analyse-spreadsheet-with-ai",
@@ -124,7 +124,7 @@ export const GUIDES_TITLE = "Guides to getting the best work from AI Blocks";
 export const GUIDES_DESCRIPTION = "How to put a team of AI experts on one job, run an AI council, get real variety, and use skills, workflows, prompts, specialists and minds well.";
 export const GUIDE_SECTIONS = [
   { id: "team", name: "Work like a team of experts", line: "Get several specialists on one job, make them argue it out, and ask for real variety instead of one idea twenty times.",
-    items: ["ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai"] },
+    items: ["how-ai-blocks-works", "ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai"] },
   { id: "blocks", name: "Use each kind of block", line: "What each part of the library is for, and how to get the most from it in ChatGPT, Claude or Gemini.",
     items: ["use-ai-blocks-skills", "use-ai-blocks-workflows", "use-ai-blocks-prompts", "hire-ai-specialists", "use-ai-minds"] },
   { id: "setup", name: "Set up your AI", line: "Connect your AI once, tell it who you are, and train it to do a job your way.",

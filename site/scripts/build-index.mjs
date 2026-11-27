@@ -583,7 +583,7 @@ const intro = [
   `- [Your me.md](${SITE}/me-md): prepare reusable context for your AI`,
   `- [Train your own AI agent](${SITE}/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way`,
   `- [Blog](${SITE}/blog): step-by-step guides to using AI for real business work, each with prompts to copy and the free skills that do the job`,
-  ...blogPosts.map((p) => `  - [${p.title}](${SITE}/blog/${p.slug}): ${p.description}`),
+  ...blogPosts.filter((p) => !p.noindex).map((p) => `  - [${p.title}](${SITE}/blog/${p.slug}): ${p.description}`),
   ...(study ? [`- [${study.h1}](${SITE}${study.url}): ${study.desc} Data as CSV under CC BY 4.0.`] : []),
   `- [API and MCP](${SITE}/api-and-mcp): connect an AI and read the public API documentation`,
   `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,

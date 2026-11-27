@@ -11,6 +11,8 @@
 //      industries, job hubs (their own rule: 3 items or more) and the other core pages;
 //   3. the home page features it (passed in by the build);
 //   4. it is in search-keep/extra.txt.
+// A blog article can ask to stay out of Google with "noindex": true in its JSON (src/content/blog/<slug>.json). It is
+// still served, linked from the blog and followed, but served noindex, follow, out of the sitemaps and out of llms.txt.
 // Pagination (/minds/page/2, /jobs/<job>/2) is never indexed: page 1 is the page.
 import fs from "node:fs";
 
@@ -24,16 +26,22 @@ const listFile = (name) => {
 };
 
 export const EARNED = new Set(listFile("impressions.txt"));
+
+const BLOG_DIR = new URL("../../src/content/blog/", import.meta.url);
+/** Blog articles whose metadata asks to stay out of Google. */
+export const BLOG_NOINDEX = new Set(fs.existsSync(BLOG_DIR)
+  ? fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".json")).map((f) => JSON.parse(fs.readFileSync(new URL(f, BLOG_DIR), "utf8"))).filter((p) => p.noindex === true).map((p) => `/blog/${p.slug}`)
+  : []);
 export const EXTRA = new Set(listFile("extra.txt"));
 
 /** The keep rule for one URL path. `featured` holds the item paths the home page features. */
 export function searchKeep(featured = new Set()) {
   return (url) => {
-    if (PAGINATION.test(url)) return false;
+    if (PAGINATION.test(url) || BLOG_NOINDEX.has(url)) return false;
     if (!ITEM.test(url)) return true;
     return EARNED.has(url) || EXTRA.has(url) || featured.has(url);
   };
 }
 
 /** Whether a path is an item page or pagination page the keep rule decides (the rest are always indexed). */
-export const decidedByKeepRule = (url) => ITEM.test(url) || PAGINATION.test(url);
+export const decidedByKeepRule = (url) => ITEM.test(url) || PAGINATION.test(url) || BLOG_NOINDEX.has(url);

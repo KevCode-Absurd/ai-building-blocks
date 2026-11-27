@@ -1,7 +1,7 @@
 // The search keep rule (scripts/lib/search-keep.mjs): which library pages ask to be in Google after the 8 Nov 2026 drop.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { EARNED, decidedByKeepRule, searchKeep } from '../scripts/lib/search-keep.mjs';
+import { BLOG_NOINDEX, EARNED, decidedByKeepRule, searchKeep } from '../scripts/lib/search-keep.mjs';
 
 test('pages that earned impressions stay indexed, including the old top pages', () => {
   const keep = searchKeep();
@@ -32,4 +32,14 @@ test('page 2 and on of a list is never indexed', () => {
   assert.equal(keep('/minds/page/2'), false);
   assert.equal(keep('/jobs/build-software/2'), false);
   assert.equal(keep('/jobs/build-software'), true);
+});
+
+test('a blog article that asks for noindex is left out; the other articles stay in', () => {
+  const keep = searchKeep();
+  assert.ok(BLOG_NOINDEX.size >= 1, 'at least one article asks for noindex');
+  for (const url of BLOG_NOINDEX) {
+    assert.equal(keep(url), false, url);
+    assert.ok(decidedByKeepRule(url), url);
+  }
+  assert.ok(keep('/blog/how-ai-blocks-works'));
 });

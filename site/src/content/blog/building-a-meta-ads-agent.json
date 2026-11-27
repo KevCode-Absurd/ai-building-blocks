@@ -1,0 +1,28 @@
+{
+  "slug": "building-a-meta-ads-agent",
+  "title": "How we're building an AI media buyer for Meta ads",
+  "seoTitle": "How we're building a Meta ads AI agent",
+  "description": "How we're building an AI media buyer for Meta ads: clean data, profit maths, tracking checks, rules, approvals, testing, and buyers' own versions.",
+  "lede": "We are building an AI media buyer for Meta ads that judges every campaign on profit, follows firm rules and asks before it changes anything. This article walks through each layer of the build, what media buyers asked for, how we test it, and what is still unfinished.",
+  "category": "Ads and marketing",
+  "keywords": [
+    "AI media buyer",
+    "Meta ads AI agent",
+    "break-even ROAS",
+    "AI agent for Facebook ads",
+    "D2C media buying"
+  ],
+  "related": [
+    "why-facebook-ads-stopped-working",
+    "plan-ad-creative-tests",
+    "how-ai-blocks-works",
+    "facebook-ad-copy-with-ai"
+  ],
+  "minutes": 16,
+  "published": "2026-11-26",
+  "readingGrade": [
+    12,
+    13
+  ],
+  "noindex": true
+}

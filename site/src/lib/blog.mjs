@@ -44,7 +44,7 @@ export const ORDER = [
   "analyse-spreadsheet-with-ai",
   "ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai", "use-ai-blocks-skills", "use-ai-blocks-workflows", "use-ai-blocks-prompts",
   "hire-ai-specialists", "use-ai-minds",
-  "facebook-ad-copy-with-ai", "why-facebook-ads-stopped-working", "plan-ad-creative-tests", "video-ad-script-template", "turn-reviews-into-ads",
+  "facebook-ad-copy-with-ai", "why-facebook-ads-stopped-working", "building-a-meta-ads-agent", "plan-ad-creative-tests", "video-ad-script-template", "turn-reviews-into-ads",
   "ai-product-photos", "google-ads-with-ai",
   "landing-page-checklist", "product-descriptions-that-sell", "seo-content-with-ai", "get-found-in-ai-search",
   "welcome-email-series", "cold-emails-with-ai", "social-media-content-calendar", "repurpose-content-with-ai",
